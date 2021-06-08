@@ -14,7 +14,11 @@ class PricingController extends Controller
      */
     public function index()
     {
-        //
+        try{
+            return response()->json(['success'=>pricing::where('status',1)->get()]);
+        }catch(\Exception $e){
+            return response()->json(['error'=>$e->getMessage()]);
+        }
     }
 
     /**
@@ -35,7 +39,30 @@ class PricingController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        try{
+            $validation=\Validator($request->all(),[
+                'name'=>'required',
+                'pay_status'=>'required|integer',
+                'price_in_month'=>'required|numeric',
+                'price_in_year'=>'required|numeric',
+                'boost_product'=>'required|integer',
+                'boost_duration'=>'required|integer',
+                'upload_product'=>'required|integer',
+                'upload_product_duration'=>'required|integer',
+            ]);
+            if($validation->fails()){
+                return response()->json(['error'=>$validation->getMessageBag()]);
+            }
+            $data=$request->all();
+            $data['updated_by']=1;
+            if(pricing::create($data)){
+                return response()->json(['success'=>'Pricing is inserted !!']);
+            }else{
+                return response()->json(['error'=>'Pricing is not inserted !!']);
+            }
+        }catch(\Exception $e){
+            return response()->json(['error'=>$e->getMessage()]);
+        }
     }
 
     /**
@@ -57,7 +84,11 @@ class PricingController extends Controller
      */
     public function edit(pricing $pricing)
     {
-        //
+        try{
+            return response()->json(['success'=>$pricing]);
+        }catch(\Exception $e){
+            return response()->json(['error'=>$e->getMessage()]);
+        }
     }
 
     /**
@@ -69,7 +100,30 @@ class PricingController extends Controller
      */
     public function update(Request $request, pricing $pricing)
     {
-        //
+        try{
+            $validation=\Validator($request->all(),[
+                'name'=>'required',
+                'pay_status'=>'required|integer',
+                'price_in_month'=>'required|numeric',
+                'price_in_year'=>'required|numeric',
+                'boost_product'=>'required|integer',
+                'boost_duration'=>'required|integer',
+                'upload_product'=>'required|integer',
+                'upload_product_duration'=>'required|integer',
+            ]);
+            if($validation->fails()){
+                return response()->json(['error'=>$validation->getMessageBag()]);
+            }
+            $data=$request->all();
+            $data['updated_by']=1;
+            if(pricing::where('id',$pricing['id'])->update($data)){
+                return response()->json(['success'=>'Pricing is updated !!']);
+            }else{
+                return response()->json(['error'=>'Pricing is not updated !!']);
+            }
+        }catch(\Exception $e){
+            return response()->json(['error'=>$e->getMessage()]);
+        }
     }
 
     /**
@@ -80,6 +134,14 @@ class PricingController extends Controller
      */
     public function destroy(pricing $pricing)
     {
-        //
+        try{
+            if(pricing::where('id',$pricing['id'])->delete()){
+                return response()->json(['success'=>'Pricing is deleted !!']);
+            }else{
+                return response()->json(['error'=>'Pricing is not deleted !!']);
+            }
+        }catch(\Exception $e){
+            return response()->json(['error'=>$e->getMessage()]);
+        }
     }
 }
