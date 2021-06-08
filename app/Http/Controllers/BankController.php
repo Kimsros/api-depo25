@@ -14,7 +14,7 @@ class BankController extends Controller
      */
     public function index()
     {
-        //
+        echo "index";
     }
 
     /**
@@ -24,7 +24,7 @@ class BankController extends Controller
      */
     public function create()
     {
-        //
+        echo "create";
     }
 
     /**
