@@ -13,7 +13,32 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+Route::resource('bank', BankController::class);
+Route::resource('brand', BrandController::class);
+Route::resource('cart', CartController::class);
+Route::resource('category', CategoryController::class);
+Route::resource('comment', CommentController::class);
+Route::resource('comment-type', CommentTypeController::class);
+Route::resource('delivery', DeliveryController::class);
+Route::resource('delivery-location', DeliveryLocationController::class);
+Route::resource('invoice', InvoiceController::class);
+Route::resource('invoice-detail', InvoiceDetailController::class);
+Route::resource('payment', PaymentController::class);
+Route::resource('permission', PermisionController::class);
+Route::resource('permission-type', PermissionTypeController::class);
+Route::resource('picing', PricingController::class);
+Route::resource('product', ProductColorController::class);
+Route::resource('product-image', ProductImageController::class);
+Route::resource('product-tag', ProductTagController::class);
+Route::resource('product-varial', ProductVariationConditionController::class);
+Route::resource('product-variation', ProductVariationController::class);
+Route::resource('product-video', ProductVideoController::class);
+Route::resource('quote', QuoteController::class);
+Route::resource('quote-detail', QuoteDetailController::class);
+Route::resource('role', RoleController::class);
+Route::resource('shop', ShopController::class);
+Route::resource('unit', UnitController::class);
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
+Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
