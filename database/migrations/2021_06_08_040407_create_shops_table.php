@@ -23,7 +23,6 @@ class CreateShopsTable extends Migration
             $table->string('village');
             $table->string('district');
             $table->string('commune');
-            $table->string('district');
             $table->string('province');
             $table->string('phone_one');
             $table->string('phone_two');
