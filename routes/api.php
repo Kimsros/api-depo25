@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\LoginController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+
 Route::resource('bank', BankController::class);
 Route::resource('brand', BrandController::class);
 Route::resource('cart', CartController::class);
@@ -42,3 +43,6 @@ Route::resource('unit', UnitController::class);
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('login',[LoginController::class,'login']);
+Route::get('register',[LoginController::class,'register']);
