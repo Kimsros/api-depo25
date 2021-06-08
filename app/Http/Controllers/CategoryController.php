@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\category;
+// use Dotenv\Validator;
 use Illuminate\Http\Request;
+
 
 class CategoryController extends Controller
 {
@@ -14,7 +16,11 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        //
+        try {
+            return response()->json(['success'=>category::where('status',1)->get()]);
+        } catch (\Exception $e) {
+            return response()->json(['error'=>$e->getMessage()]);
+        }
     }
 
     /**
@@ -35,7 +41,25 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        try {
+            $validation=\Validator::make($request->all(), [
+                'name'=>'required',
+                'icon'=>'required'
+            ]);
+            if($validation->fails()){
+                return response()->json(['error'=>$validation->messages()]);
+            }
+            $data=$request->all();
+            $data['updated_by']=1;
+            if(category::create($data)){
+                return response()->json(['success'=>'Category is inserted !!']);
+            }else{
+                return response()->json(['error'=>'Category is not inserted !!']);
+            }
+        } catch (\Exception $e) {
+            return response()->json(['error'=>$e->getMessage()]);
+        }
+
     }
 
     /**
@@ -57,7 +81,12 @@ class CategoryController extends Controller
      */
     public function edit(category $category)
     {
-        //
+        try {
+            return response()->json(['success'=>$category]);
+        } catch (\Exception $e) {
+            return response()->json(['error'=>$e->getMessage()]);
+        }
+
     }
 
     /**
@@ -69,7 +98,25 @@ class CategoryController extends Controller
      */
     public function update(Request $request, category $category)
     {
-        //
+        try {
+            $validation=\Validator::make($request->all(), [
+                'name'=>'required',
+                'icon'=>'required'
+            ]);
+            if($validation->fails()){
+                return response()->json(['erroe'=>$validation->messages()]);
+            }
+            $data=$request->all();
+            $data['updated_by']=1;
+            if(category::where('id',$category['id'])->update($data)){
+                return response()->json(['success'=>'Category is updated !!']);
+            }else{
+                return response()->json(['error'=>'Category is not updated !!']);
+            }
+        } catch (\Exception $e) {
+            return response()->json(['error'=>$e->getMessage()]);
+        }
+
     }
 
     /**
@@ -80,6 +127,15 @@ class CategoryController extends Controller
      */
     public function destroy(category $category)
     {
-        //
+        try {
+            if(category::where('id',$category['id'])->delete()){
+                return response()->json(['success'=>'Category is deleted !!']);
+            }else{
+                return response()->json(['error'=>'Category is not deleted !!']);
+            }
+        } catch (\Exception $e) {
+            return response()->json(['error'=>$e->getMessage()]);
+        }
+
     }
 }

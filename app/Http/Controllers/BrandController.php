@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\brand;
 use Illuminate\Http\Request;
+use Psr\Http\Message\ResponseInterface;
 
 class BrandController extends Controller
 {
@@ -14,7 +15,11 @@ class BrandController extends Controller
      */
     public function index()
     {
-        //
+        try{
+            return response()->json(['success'=>brand::where('status',1)->get()]);
+        }catch(\Exception $e){
+            return response()->json(['error'=>$e->getMessage()]);
+        }
     }
 
     /**
@@ -35,7 +40,24 @@ class BrandController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        try{
+            $validation=\Validator::make($request->all(), [
+                'name'=>'required',
+                'logo'=>'required'
+            ]);
+            if($validation->fails()){
+                return response()->json(['error'=>$validation->messages()]);
+            }
+            $data=$request->all();
+            $data['updated_by']=1;
+            if(brand::create($data)){
+                return response()->json(['success'=>'Brand is inserted !!']);
+            }else{
+                return response()->json(['error'=>'Brand is not inserted !!']);
+            }
+        }catch(\Exception $e){
+            return response()->json(['error'=>$e->getMessage()]);
+        }
     }
 
     /**
@@ -57,7 +79,11 @@ class BrandController extends Controller
      */
     public function edit(brand $brand)
     {
-        //
+        try{
+            return response()->json(['success'=>$brand]);
+        }catch(\Exception $e){
+            return response()->json(['error'=>$e->getMessage()]);
+        }
     }
 
     /**
@@ -69,7 +95,24 @@ class BrandController extends Controller
      */
     public function update(Request $request, brand $brand)
     {
-        //
+        try{
+            $validation=\Validator::make($request->all(), [
+                'name'=>'required',
+                'logo'=>'required'
+            ]);
+            if($validation->fails()){
+                return response()->json(['error'=>$validation->messages()]);
+            }
+            $data=$request->all();
+            $data['updated_by']=1;
+            if(brand::where('id',$brand['id'])->update($data)){
+                return response()->json(['success'=>'Brand is updated !!']);
+            }else{
+                return response()->json(['error'=>'Brand is not updated !!']);
+            }
+        }catch(\Exception $e){
+            return response()->json(['error'=>$e->getMessage()]);
+        }
     }
 
     /**
@@ -80,6 +123,14 @@ class BrandController extends Controller
      */
     public function destroy(brand $brand)
     {
-        //
+        try{
+            if(brand::where('id',$brand['id'])->delete()){
+                return response()->json(['success'=>'Brand is deleted !!']);
+            }else{
+                return response()->json(['error'=>'Brand is not deleted !!']);
+            }
+        }catch(\Exception $e){
+            return response()->json(['error'=>$e->getMessage()]);
+        }
     }
 }

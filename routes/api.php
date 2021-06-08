@@ -27,7 +27,7 @@ Route::resource('invoice-detail', InvoiceDetailController::class);
 Route::resource('payment', PaymentController::class);
 Route::resource('permission', PermisionController::class);
 Route::resource('permission-type', PermissionTypeController::class);
-Route::resource('picing', PricingController::class);
+Route::resource('pricing', PricingController::class);
 Route::resource('product', ProductColorController::class);
 Route::resource('product-image', ProductImageController::class);
 Route::resource('product-tag', ProductTagController::class);

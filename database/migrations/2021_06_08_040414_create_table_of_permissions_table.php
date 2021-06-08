@@ -15,6 +15,7 @@ class CreateTableOfPermissionsTable extends Migration
     {
         Schema::create('table_of_permissions', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
             $table->boolean('status')->default(1);
             $table->bigInteger('updated_by');
             $table->timestamps();

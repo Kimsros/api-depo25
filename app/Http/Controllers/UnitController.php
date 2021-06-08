@@ -14,7 +14,11 @@ class UnitController extends Controller
      */
     public function index()
     {
-        //
+        try{
+            return response()->json(['success'=>unit::where('status',1)->get()]);
+        }catch(\Exception $e){
+            return response()->json(['error'=>$e->getMessage()]);
+        }
     }
 
     /**
@@ -24,7 +28,7 @@ class UnitController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
@@ -35,7 +39,23 @@ class UnitController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        try {
+            $validation=\Validator::make($request->all(), [
+                'name'=>'required'
+            ]);
+            if($validation->fails()){
+                return response()->json(['error'=>$validation->messages()]);
+            }
+            $data=$request->all();
+            $data['updated_by']=1;
+            if(unit::create($data)){
+                return response()->json(['success'=>'Unit is inserted !!']);
+            }else{
+                return response()->json(['error'=>'Unit is not inserted !!']);
+            }
+        } catch (\Exception $e) {
+            return response()->json(['error'=>$e->getMessage()]);
+        }
     }
 
     /**
@@ -57,7 +77,11 @@ class UnitController extends Controller
      */
     public function edit(unit $unit)
     {
-        //
+        try {
+            return response()->json(['success'=>$unit]);
+        } catch (\Exception $e) {
+            return response()->json(['error'=>$e->getMessage()]);
+        }
     }
 
     /**
@@ -69,7 +93,23 @@ class UnitController extends Controller
      */
     public function update(Request $request, unit $unit)
     {
-        //
+        try {
+            $validation=\Validator::make($request->all(), [
+                'name'=>'required'
+            ]);
+            if($validation->fails()){
+                return response()->json(['error'=>$validation->messages()]);
+            }
+            $data=$request->all();
+            $data['updated_by']=1;
+            if(unit::where('id',$unit['id'])->update($data)){
+                return response()->json(['success'=>'Unit is updated !!']);
+            }else{
+                return response()->json(['error'=>'Unit is not updated !!']);
+            }
+        } catch (\Exception $e) {
+            return response()->json(['error'=>$e->getMessage()]);
+        }
     }
 
     /**
@@ -80,6 +120,14 @@ class UnitController extends Controller
      */
     public function destroy(unit $unit)
     {
-        //
+        try {
+            if(unit::where('id',$unit['id'])->delete()){
+                return response()->json(['success'=>'Category is deleted !!']);
+            }else{
+                return response()->json(['error'=>'Category is not deleted !!']);
+            }
+        } catch (\Exception $e) {
+            return response()->json(['error'=>$e->getMessage()]);
+        }
     }
 }

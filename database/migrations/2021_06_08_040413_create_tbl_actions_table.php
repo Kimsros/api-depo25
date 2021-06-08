@@ -15,7 +15,10 @@ class CreateTblActionsTable extends Migration
     {
         Schema::create('tbl_actions', function (Blueprint $table) {
             $table->id();
-
+            $table->string('table_name');
+            $table->bigInteger('permission_type_id');
+            $table->json('old_value')->nullable();
+            $table->json('new_value')->nullable();
             $table->boolean('status')->default(1);
             $table->bigInteger('updated_by');
             $table->timestamps();
