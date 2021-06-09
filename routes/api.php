@@ -45,7 +45,6 @@ Route::resource('shop', ShopController::class);
 Route::resource('unit', UnitController::class);
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    // return $request->user();
-    return auth()->user();
+    return $request->user();
 });
 
