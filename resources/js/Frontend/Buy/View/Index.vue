@@ -13,7 +13,132 @@
                 </ul>
             </div>
             <!-- End PageHeader -->
-            <div class="page-content">
+<div class="page-content mb-10 pb-6">
+                  <div class="container">
+                        <div class="row gutter-lg main-content-wrap">
+                              <aside
+                                    class="col-lg-3 sidebar sidebar-fixed sidebar-toggle-remain shop-sidebar sticky-sidebar-wrapper">
+                                    <div class="sidebar-overlay"></div>
+                                    <a class="sidebar-close" href="#"><i class="d-icon-times"></i></a>
+                                    <div class="sidebar-content">
+                                          <div class="sticky-sidebar" data-sticky-options="{'top': 10}">
+                                                <div class="filter-actions mb-4">
+                                                      <a href="#"
+                                                            class="sidebar-toggle-btn toggle-remain btn btn-outline btn-primary btn-icon-right">Filter<i
+                                                                  class="d-icon-arrow-left"></i></a>
+                                                      <a href="#" class="filter-clean">Clean All</a>
+                                                </div>
+                                                <div class="widget widget-collapsible">
+                                                      <h3 class="widget-title">All Categories</h3>
+                                                      <ul class="widget-body filter-items search-ul">
+                                                            <li><a href="#">Accessosries</a></li>
+                                                            <li>
+                                                                  <a href="#">Bags</a>
+                                                                  <ul style="display: block">
+                                                                        <li><a href="#">Backpacks & Fashion Bags</a></li>
+                                                                  </ul>
+                                                            </li>
+                                                            <li>
+                                                                  <a href="#">Electronics</a>
+                                                                  <ul>
+                                                                        <li><a href="#">Computer</a></li>
+                                                                        <li><a href="#">Gaming & Accessosries</a></li>
+                                                                  </ul>
+                                                            </li>
+                                                            <li><a href="#">For Fitness</a></li>
+                                                            <li><a href="#">Home & Kitchen</a></li>
+                                                            <li><a href="#">Men's</a></li>
+                                                            <li><a href="#">Shoes</a></li>
+                                                            <li><a href="#">Sporting Goods</a></li>
+                                                            <li><a href="#">Summer Season's</a></li>
+                                                            <li><a href="#">Travel & Clothing</a></li>
+                                                            <li><a href="#">Watches</a></li>
+                                                            <li><a href="#">Women’s</a></li>
+                                                      </ul>
+                                                </div>
+                                                <div class="widget widget-collapsible">
+                                                      <h3 class="widget-title">Filter by Price</h3>
+                                                      <div class="widget-body mt-3">
+                                                            <form action="#">
+                                                                  <div class="filter-price-slider"></div>
+
+                                                                  <div class="filter-actions">
+                                                                        <div class="filter-price-text mb-4">Price:
+                                                                              <span class="filter-price-range"></span>
+                                                                        </div>
+                                                                        <button type="submit"
+                                                                              class="btn btn-dark btn-filter">Filter</button>
+                                                                  </div>
+                                                            </form><!-- End Filter Price Form -->
+                                                      </div>
+                                                </div>
+                                                <div class="widget widget-collapsible">
+                                                      <h3 class="widget-title">Size</h3>
+                                                      <ul class="widget-body filter-items">
+                                                            <li><a href="#">Extra Large</a></li>
+                                                            <li><a href="#">Large</a></li>
+                                                            <li><a href="#">Medium</a></li>
+                                                            <li><a href="#">Small</a></li>
+                                                      </ul>
+                                                </div>
+                                                <div class="widget widget-collapsible">
+                                                      <h3 class="widget-title">Color</h3>
+                                                      <ul class="widget-body filter-items">
+                                                            <li><a href="#">Black</a></li>
+                                                            <li><a href="#">Blue</a></li>
+                                                            <li><a href="#">Green</a></li>
+                                                            <li><a href="#">White</a></li>
+                                                      </ul>
+                                                </div>
+                                                <div class="widget widget-collapsible">
+                                                      <h3 class="widget-title">Brands</h3>
+                                                      <ul class="widget-body filter-items">
+                                                            <li><a href="#">Cinderella</a></li>
+                                                            <li><a href="#">Comedy</a></li>
+                                                            <li><a href="#">Rightcheck</a></li>
+                                                            <li><a href="#">SkillStar</a></li>
+                                                            <li><a href="#">SLS</a></li>
+                                                      </ul>
+                                                </div>
+                                          </div>
+                                    </div>
+                              </aside>
+                              <div class="col-lg-9 main-content">
+                                    <nav class="toolbox sticky-toolbox sticky-content fix-top">
+                                          <div class="toolbox-left">
+                                                <a href="#"
+                                                      class="toolbox-item left-sidebar-toggle btn btn-sm btn-outline btn-primary btn-icon-right d-lg-none">Filter<i
+                                                            class="d-icon-arrow-right"></i></a>
+                                                <div class="toolbox-item toolbox-sort select-box text-dark">
+                                                      <label>Sort By :</label>
+                                                      <select name="orderby" class="form-control">
+                                                            <option value="default">Default</option>
+                                                            <option value="popularity" selected="selected">Most Popular</option>
+                                                            <option value="rating">Average rating</option>
+                                                            <option value="date">Latest</option>
+                                                            <option value="price-low">Sort forward price low</option>
+                                                            <option value="price-high">Sort forward price high</option>
+                                                            <option value="">Clear custom sort</option>
+                                                      </select>
+                                                </div>
+                                          </div>
+                                          <div class="toolbox-right">
+                                                <div class="toolbox-item toolbox-show select-box text-dark">
+                                                      <label>Show :</label>
+                                                      <select name="count" class="form-control">
+                                                            <option value="12">12</option>
+                                                            <option value="24">24</option>
+                                                            <option value="36">36</option>
+                                                      </select>
+                                                </div>
+                                                <div class="toolbox-item toolbox-layout">
+                                                      <a href="shop-list.html" class="d-icon-mode-list btn-layout active"></a>
+                                                      <a href="shop.html" class="d-icon-mode-grid btn-layout"></a>
+                                                </div>
+                                          </div>
+                                    </nav>
+                                    <div class="product-lists product-wrapper">
+                                         <div class="page-content">
                 <div class="container">
                     <section class="mt-10 pt-8">
                         <h2 class="title title-center">Default Style</h2>
@@ -2234,5 +2359,36 @@
                     </div>
                 </section>
             </div>
+                                    </div>
+                                    <nav class="toolbox toolbox-pagination mt-6">
+                                          <p class="show-info">Showing <span>6 of 56</span> Products</p>
+                                          <ul class="pagination">
+                                                <li class="page-item disabled">
+                                                      <a class="page-link page-link-prev" href="#" aria-label="Previous" tabindex="-1"
+                                                            aria-disabled="true">
+                                                            <i class="d-icon-arrow-left"></i>Prev
+                                                      </a>
+                                                </li>
+                                                <li class="page-item active" aria-current="page"><a class="page-link" href="#">1</a>
+                                                </li>
+                                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                <li class="page-item page-item-dots"><a class="page-link" href="#">6</a></li>
+                                                <li class="page-item">
+                                                      <a class="page-link page-link-next" href="#" aria-label="Next">
+                                                            Next<i class="d-icon-arrow-right"></i>
+                                                      </a>
+                                                </li>
+                                          </ul>
+                                    </nav>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+
+
+<!-- edit -->
+            
+
         </main>
 </template>
