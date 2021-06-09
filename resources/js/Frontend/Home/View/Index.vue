@@ -59,7 +59,7 @@
                                 </ul>
                                 <div class="banner banner-fixed overlay-zoom overlay-dark">
                                     <figure>
-                                        <img src="images/demos/demo3/banner2.jpg" width="280" height="312"
+                                        <img src="/frontend/images/demos/demo3/banner2.jpg" width="280" height="312"
                                             alt="banner" style="background-color: #26303c;" />
                                     </figure>
                                     <div class="banner-price-info font-weight-bold text-white text-uppercase">
@@ -91,7 +91,7 @@
                                                 <div class="product product-list-sm">
                                                     <figure class="product-media">
                                                         <a href="sell_detail">
-                                                            <img src="images/demos/demo3/products/10.jpg"
+                                                            <img src="/frontend/images/demos/demo3/products/10.jpg"
                                                                 alt="product" width="100" height="100"
                                                                 style="background-color: #f5f5f5;" />
                                                         </a>
@@ -114,7 +114,7 @@
                                                 <div class="product product-list-sm">
                                                     <figure class="product-media">
                                                         <a href="sell_detail">
-                                                            <img src="images/demos/demo3/products/11.jpg"
+                                                            <img src="/frontend/images/demos/demo3/products/11.jpg"
                                                                 alt="product" width="100" height="100"
                                                                 style="background-color: #f5f5f5;" />
                                                         </a>
@@ -137,7 +137,7 @@
                                                 <div class="product product-list-sm">
                                                     <figure class="product-media">
                                                         <a href="sell_detail">
-                                                            <img src="images/demos/demo3/products/12.jpg"
+                                                            <img src="/frontend/images/demos/demo3/products/12.jpg"
                                                                 alt="product" width="100" height="100"
                                                                 style="background-color: #f5f5f5;" />
                                                         </a>
@@ -164,7 +164,7 @@
                                                 <div class="product product-list-sm">
                                                     <figure class="product-media">
                                                         <a href="sell_detail">
-                                                            <img src="images/demos/demo3/products/10.jpg"
+                                                            <img src="/frontend/images/demos/demo3/products/10.jpg"
                                                                 alt="product" width="100" height="100"
                                                                 style="background-color: #f5f5f5;" />
                                                         </a>
@@ -187,7 +187,7 @@
                                                 <div class="product product-list-sm">
                                                     <figure class="product-media">
                                                         <a href="sell_detail">
-                                                            <img src="images/demos/demo3/products/11.jpg"
+                                                            <img src="/frontend/images/demos/demo3/products/11.jpg"
                                                                 alt="product" width="100" height="100"
                                                                 style="background-color: #f5f5f5;" />
                                                         </a>
@@ -210,7 +210,7 @@
                                                 <div class="product product-list-sm">
                                                     <figure class="product-media">
                                                         <a href="sell_detail">
-                                                            <img src="images/demos/demo3/products/12.jpg"
+                                                            <img src="/frontend/images/demos/demo3/products/12.jpg"
                                                                 alt="product" width="100" height="100"
                                                                 style="background-color: #f5f5f5;" />
                                                         </a>
@@ -251,7 +251,7 @@
                                             <div class="post overlay-dark overlay-zoom">
                                                 <figure class="post-media">
                                                     <a href="post-single.html">
-                                                        <img src="images/demos/demo3/blog/1.jpg" width="280"
+                                                        <img src="/frontend/images/demos/demo3/blog/1.jpg" width="280"
                                                             height="195" alt="post"
                                                             style="background-color: #bcc3ca;" />
                                                     </a>
@@ -271,7 +271,7 @@
                                             <div class="post overlay-dark overlay-zoom">
                                                 <figure class="post-media">
                                                     <a href="post-single.html">
-                                                        <img src="images/demos/demo3/blog/2.jpg" width="280"
+                                                        <img src="/frontend/images/demos/demo3/blog/2.jpg" width="280"
                                                             height="195" alt="post"
                                                             style="background-color: #a1a7b6;" />
                                                     </a>
@@ -281,7 +281,7 @@
                                                         by <a href="#" class="post-author">John Doe</a>
                                                         on <a href="#" class="post-date">Nov 22, 2018</a>
                                                     </div>
-                                                    <h3 class="post-title"><a href="post-single.html">Just a cool blog post with images</a></h3>
+                                                    <h3 class="post-title"><a href="post-single.html">Just a cool blog post with /frontend/images</a></h3>
                                                     <a href="post-single.html"
                                                         class="btn btn-link btn-underline btn-primary btn-sm">Read
                                                         More<i class="d-icon-arrow-right"></i></a>
@@ -290,7 +290,7 @@
                                             <div class="post overlay-dark overlay-zoom">
                                                 <figure class="post-media">
                                                     <a href="post-single.html">
-                                                        <img src="images/demos/demo3/blog/3.jpg" width="280"
+                                                        <img src="/frontend/images/demos/demo3/blog/3.jpg" width="280"
                                                             height="195" alt="post"
                                                             style="background-color: #acb9bf;" />
                                                     </a>
@@ -300,7 +300,7 @@
                                                         by <a href="#" class="post-author">John Doe</a>
                                                         on <a href="#" class="post-date">Nov 22, 2018</a>
                                                     </div>
-                                                    <h3 class="post-title"><a href="post-single.html">Just a cool blog post with images</a></h3>
+                                                    <h3 class="post-title"><a href="post-single.html">Just a cool blog post with /frontend/images</a></h3>
                                                     <a href="post-single.html"
                                                         class="btn btn-link btn-underline btn-primary btn-sm">Read
                                                         More<i class="d-icon-arrow-right"></i></a>
@@ -309,7 +309,7 @@
                                             <div class="post overlay-dark overlay-zoom">
                                                 <figure class="post-media">
                                                     <a href="post-single.html">
-                                                        <img src="images/demos/demo3/blog/4.jpg" width="280"
+                                                        <img src="/frontend/images/demos/demo3/blog/4.jpg" width="280"
                                                             height="195" alt="post"
                                                             style="background-color: #2d3635;" />
                                                     </a>
@@ -319,7 +319,7 @@
                                                         by <a href="#" class="post-author">John Doe</a>
                                                         on <a href="#" class="post-date">Nov 22, 2018</a>
                                                     </div>
-                                                    <h3 class="post-title"><a href="post-single.html">Just a cool blog post with images</a></h3>
+                                                    <h3 class="post-title"><a href="post-single.html">Just a cool blog post with /frontend/images</a></h3>
                                                     <a href="post-single.html"
                                                         class="btn btn-link btn-underline btn-primary btn-sm">Read
                                                         More<i class="d-icon-arrow-right"></i></a>
@@ -346,7 +346,7 @@
                                                     likes it, too.</blockquote>
                                                 <div class="testimonial-info">
                                                     <figure class="testimonial-author-thumbnail">
-                                                        <img src="images/demos/demo3/agent.png" alt="user"
+                                                        <img src="/frontend/images/demos/demo3/agent.png" alt="user"
                                                             width="40" height="40" />
                                                     </figure>
                                                     <cite class="font-weight-semi-bold text-capitalize">
@@ -361,7 +361,7 @@
                                                     likes it, too.</blockquote>
                                                 <div class="testimonial-info">
                                                     <figure class="testimonial-author-thumbnail">
-                                                        <img src="images/demos/demo3/agent.png" alt="user"
+                                                        <img src="/frontend/images/demos/demo3/agent.png" alt="user"
                                                             width="40" height="40" />
                                                     </figure>
                                                     <cite>
@@ -389,7 +389,7 @@
                             }">
                                 <div class="banner banner-fixed intro-slide1">
                                     <figure>
-                                        <img src="images/demos/demo3/slides/1.jpg" alt="intro-banner" width="880"
+                                        <img src="/frontend/images/demos/demo3/slides/1.jpg" alt="intro-banner" width="880"
                                             height="474" style="background-color: #ffc74e;" />
                                     </figure>
                                     <div class="banner-content">
@@ -409,7 +409,7 @@
                                         <figure class="intro1-image slide-animate" data-animation-options="{
                                             'name': 'fadeInLeftShorter', 'duration': '.8s'
                                         }">
-                                            <img src="images/demos/demo3/slides/single.png" alt="Men" width="511"
+                                            <img src="/frontend/images/demos/demo3/slides/single.png" alt="Men" width="511"
                                                 height="478">
                                         </figure>
                                     </div>
@@ -417,7 +417,7 @@
                                 </div>
                                 <div class="banner banner-fixed intro-slide2">
                                     <figure>
-                                        <img src="images/demos/demo3/slides/2.jpg" alt="intro-banner" width="880"
+                                        <img src="/frontend/images/demos/demo3/slides/2.jpg" alt="intro-banner" width="880"
                                             height="474" style="background-color: #fbfcfc;" />
                                     </figure>
                                     <div class="banner-content y-50 text-right">
@@ -447,7 +447,7 @@
                                 </div>
                                 <div class="banner banner-fixed intro-slide3">
                                     <figure>
-                                        <img src="images/demos/demo3/slides/3.jpg" alt="intro-banner" width="880"
+                                        <img src="/frontend/images/demos/demo3/slides/3.jpg" alt="intro-banner" width="880"
                                             height="474" style="background-color: #d3d4d5;" />
                                     </figure>
                                     <div class="banner-content y-50 pb-3">
@@ -473,7 +473,7 @@
                                     <div class="category category-absolute category-badge">
                                         <a href="#">
                                             <figure class="category-media">
-                                                <img src="images/demos/demo3/banners/1.jpg" alt="category"
+                                                <img src="/frontend/images/demos/demo3/banners/1.jpg" alt="category"
                                                     width="430" height="189" style="background-color: #eceef2;" />
                                             </figure>
                                         </a>
@@ -488,7 +488,7 @@
                                     <div class="category category-absolute category-badge">
                                         <a href="#">
                                             <figure class="category-media">
-                                                <img src="images/demos/demo3/banners/2.jpg" alt="category"
+                                                <img src="/frontend/images/demos/demo3/banners/2.jpg" alt="category"
                                                     width="430" height="189" style="background-color: #929ca3;" />
                                             </figure>
                                         </a>
@@ -514,7 +514,7 @@
                                     <div class="product text-center">
                                         <figure class="product-media">
                                             <a href="sell_detail">
-                                                <img src="images/demos/demo3/products/1.jpg" alt="product"
+                                                <img src="/frontend/images/demos/demo3/products/1.jpg" alt="product"
                                                     width="280" height="315" style="background-color: #f5f5f5;" />
 
                                             </a>
@@ -555,7 +555,7 @@
                                     <div class="product text-center">
                                         <figure class="product-media">
                                             <a href="sell_detail">
-                                                <img src="images/demos/demo3/products/2.jpg" alt="product"
+                                                <img src="/frontend/images/demos/demo3/products/2.jpg" alt="product"
                                                     width="280" height="315" style="background-color: #f5f5f5;" />
                                             </a>
                                             <div class="product-action-vertical">
@@ -591,7 +591,7 @@
                                     <div class="product text-center">
                                         <figure class="product-media">
                                             <a href="sell_detail">
-                                                <img src="images/demos/demo3/products/3.jpg" alt="product"
+                                                <img src="/frontend/images/demos/demo3/products/3.jpg" alt="product"
                                                     width="280" height="315" style="background-color: #f5f5f5;" />
                                             </a>
                                             <div class="product-label-group">
@@ -632,7 +632,7 @@
                                     <div class="product text-center">
                                         <figure class="product-media">
                                             <a href="sell_detail">
-                                                <img src="images/demos/demo3/products/4.jpg" alt="product"
+                                                <img src="/frontend/images/demos/demo3/products/4.jpg" alt="product"
                                                     width="280" height="315" style="background-color: #f5f5f5;" />
                                             </a>
                                             <div class="product-label-group">
@@ -671,7 +671,7 @@
                                     <div class="product text-center">
                                         <figure class="product-media">
                                             <a href="sell_detail">
-                                                <img src="images/demos/demo3/products/5.jpg" alt="product"
+                                                <img src="/frontend/images/demos/demo3/products/5.jpg" alt="product"
                                                     width="280" height="315" style="background-color: #f5f5f5;" />
                                             </a>
                                             <div class="product-label-group">
@@ -711,7 +711,7 @@
                                     <div class="product text-center">
                                         <figure class="product-media">
                                             <a href="sell_detail">
-                                                <img src="images/demos/demo3/products/6.jpg" alt="product"
+                                                <img src="/frontend/images/demos/demo3/products/6.jpg" alt="product"
                                                     width="280" height="315" style="background-color: #f5f5f5;" />
                                             </a>
                                             <div class="product-action-vertical">
@@ -748,7 +748,7 @@
                                     <div class="product text-center">
                                         <figure class="product-media">
                                             <a href="sell_detail">
-                                                <img src="images/demos/demo3/products/7.jpg" alt="product"
+                                                <img src="/frontend/images/demos/demo3/products/7.jpg" alt="product"
                                                     width="280" height="315" style="background-color: #f5f5f5;" />
                                             </a>
                                             <div class="product-label-group">
@@ -788,7 +788,7 @@
                                     <div class="product text-center">
                                         <figure class="product-media">
                                             <a href="sell_detail">
-                                                <img src="images/demos/demo3/products/8.jpg" alt="product"
+                                                <img src="/frontend/images/demos/demo3/products/8.jpg" alt="product"
                                                     width="280" height="315" style="background-color: #f5f5f5;" />
                                             </a>
                                             <div class="product-action-vertical">
@@ -824,7 +824,7 @@
                         </section>
 
                         <section class="banner banner-cta mb-7 text-center"
-                            style="background-image: url(images/demos/demo3/banner.jpg);  background-color: #c5d1d2;">
+                            style="background-image: url(/frontend/images/demos/demo3/banner.jpg);  background-color: #c5d1d2;">
                             <div class="banner-content w-100 appear-animate" data-animation-options="{
                                 'delay': '.2s',
                                 'name': 'blurIn'
@@ -856,7 +856,7 @@
                                             <div class="product product-list-sm">
                                                 <figure class="product-media">
                                                     <a href="sell_detail">
-                                                        <img src="images/demos/demo3/products/9.jpg" alt="product"
+                                                        <img src="/frontend/images/demos/demo3/products/9.jpg" alt="product"
                                                             width="100" height="100"
                                                             style="background-color: #f5f5f5;" />
                                                     </a>
@@ -880,7 +880,7 @@
                                             <div class="product product-list-sm">
                                                 <figure class="product-media">
                                                     <a href="sell_detail">
-                                                        <img src="images/demos/demo3/products/10.jpg" alt="product"
+                                                        <img src="/frontend/images/demos/demo3/products/10.jpg" alt="product"
                                                             width="100" height="100"
                                                             style="background-color: #f5f5f5;" />
                                                     </a>
@@ -903,7 +903,7 @@
                                             <div class="product product-list-sm">
                                                 <figure class="product-media">
                                                     <a href="sell_detail">
-                                                        <img src="images/demos/demo3/products/11.jpg" alt="product"
+                                                        <img src="/frontend/images/demos/demo3/products/11.jpg" alt="product"
                                                             width="100" height="100"
                                                             style="background-color: #f5f5f5;" />
                                                     </a>
@@ -937,7 +937,7 @@
                                             <div class="product product-list-sm">
                                                 <figure class="product-media">
                                                     <a href="sell_detail">
-                                                        <img src="images/demos/demo3/products/12.jpg" alt="product"
+                                                        <img src="/frontend/images/demos/demo3/products/12.jpg" alt="product"
                                                             width="100" height="100"
                                                             style="background-color: #f5f5f5;" />
                                                     </a>
@@ -961,7 +961,7 @@
                                             <div class="product product-list-sm">
                                                 <figure class="product-media">
                                                     <a href="sell_detail">
-                                                        <img src="images/demos/demo3/products/13.jpg" alt="product"
+                                                        <img src="/frontend/images/demos/demo3/products/13.jpg" alt="product"
                                                             width="100" height="100"
                                                             style="background-color: #f5f5f5;" />
                                                     </a>
@@ -984,7 +984,7 @@
                                             <div class="product product-list-sm">
                                                 <figure class="product-media">
                                                     <a href="sell_detail">
-                                                        <img src="images/demos/demo3/products/14.jpg" alt="product"
+                                                        <img src="/frontend/images/demos/demo3/products/14.jpg" alt="product"
                                                             width="100" height="100"
                                                             style="background-color: #f5f5f5;" />
                                                     </a>
@@ -1017,7 +1017,7 @@
                                             <div class="product product-list-sm">
                                                 <figure class="product-media">
                                                     <a href="sell_detail">
-                                                        <img src="images/demos/demo3/products/15.jpg" alt="product"
+                                                        <img src="/frontend/images/demos/demo3/products/15.jpg" alt="product"
                                                             width="100" height="100"
                                                             style="background-color: #f5f5f5;" />
                                                     </a>
@@ -1040,7 +1040,7 @@
                                             <div class="product product-list-sm">
                                                 <figure class="product-media">
                                                     <a href="sell_detail">
-                                                        <img src="images/demos/demo3/products/16.jpg" alt="product"
+                                                        <img src="/frontend/images/demos/demo3/products/16.jpg" alt="product"
                                                             width="100" height="100"
                                                             style="background-color: #f5f5f5;" />
                                                     </a>
@@ -1064,7 +1064,7 @@
                                             <div class="product product-list-sm">
                                                 <figure class="product-media">
                                                     <a href="sell_detail">
-                                                        <img src="images/demos/demo3/products/17.jpg" alt="product"
+                                                        <img src="/frontend/images/demos/demo3/products/17.jpg" alt="product"
                                                             width="100" height="100"
                                                             style="background-color: #f5f5f5;" />
                                                     </a>
@@ -1116,15 +1116,15 @@
                                         }
                                     }
                                 }">
-                                    <figure><img src="images/brands/1.png" alt="brand" width="180" height="100" />
+                                    <figure><img src="/frontend/images/brands/1.png" alt="brand" width="180" height="100" />
                                     </figure>
-                                    <figure><img src="images/brands/2.png" alt="brand" width="180" height="100" />
+                                    <figure><img src="/frontend/images/brands/2.png" alt="brand" width="180" height="100" />
                                     </figure>
-                                    <figure><img src="images/brands/3.png" alt="brand" width="180" height="100" />
+                                    <figure><img src="/frontend/images/brands/3.png" alt="brand" width="180" height="100" />
                                     </figure>
-                                    <figure><img src="images/brands/4.png" alt="brand" width="180" height="100" />
+                                    <figure><img src="/frontend/images/brands/4.png" alt="brand" width="180" height="100" />
                                     </figure>
-                                    <figure><img src="images/brands/5.png" alt="brand" width="180" height="100" />
+                                    <figure><img src="/frontend/images/brands/5.png" alt="brand" width="180" height="100" />
                                     </figure>
                                 </div>
                             </div>
