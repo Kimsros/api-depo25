@@ -24,7 +24,7 @@
 										<td class="product-thumbnail">
 											<figure>
 												<a href="product-simple.html">
-													<img src="images/products/product18.jpg" width="100" height="100"
+													<img src="/frontend/images/products/product18.jpg" width="100" height="100"
 														alt="product">
 												</a>
 											</figure>
@@ -58,7 +58,7 @@
 										<td class="product-thumbnail">
 											<figure>
 												<a href="product-simple.html">
-													<img src="images/products/product19.jpg" width="100" height="100"
+													<img src="/frontend/images/products/product19.jpg" width="100" height="100"
 														alt="product">
 												</a>
 											</figure>

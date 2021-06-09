@@ -40383,7 +40383,7 @@ var staticRenderFns = [
         {
           staticClass: "page-header pl-4 pr-4",
           staticStyle: {
-            "background-image": "url(images/page-header/about-us.jpg)"
+            "background-image": "url(/frontend/images/page-header/about-us.jpg)"
           }
         },
         [
@@ -40569,7 +40569,7 @@ var staticRenderFns = [
                       staticClass: "banner-radius",
                       staticStyle: { "background-color": "#BDD0DE" },
                       attrs: {
-                        src: "images/subpages/customer.jpg",
+                        src: "/frontend/images/subpages/customer.jpg",
                         alt: "Happy Customer",
                         width: "580",
                         height: "507"
@@ -40685,7 +40685,7 @@ var staticRenderFns = [
                     staticClass: "banner-radius",
                     staticStyle: { "background-color": "#DEE6E8" },
                     attrs: {
-                      src: "images/subpages/store.jpg",
+                      src: "/frontend/images/subpages/store.jpg",
                       alt: "Our Store",
                       width: "580",
                       height: "507"
@@ -40739,7 +40739,7 @@ var staticRenderFns = [
                     [
                       _c("img", {
                         attrs: {
-                          src: "images/brands/1.png",
+                          src: "/frontend/images/brands/1.png",
                           alt: "Brand",
                           width: "180",
                           height: "100"
@@ -40754,7 +40754,7 @@ var staticRenderFns = [
                     [
                       _c("img", {
                         attrs: {
-                          src: "images/brands/2.png",
+                          src: "/frontend/images/brands/2.png",
                           alt: "Brand",
                           width: "180",
                           height: "100"
@@ -40769,7 +40769,7 @@ var staticRenderFns = [
                     [
                       _c("img", {
                         attrs: {
-                          src: "images/brands/3.png",
+                          src: "/frontend/images/brands/3.png",
                           alt: "Brand",
                           width: "180",
                           height: "100"
@@ -40784,7 +40784,7 @@ var staticRenderFns = [
                     [
                       _c("img", {
                         attrs: {
-                          src: "images/brands/4.png",
+                          src: "/frontend/images/brands/4.png",
                           alt: "Brand",
                           width: "180",
                           height: "100"
@@ -40799,7 +40799,7 @@ var staticRenderFns = [
                     [
                       _c("img", {
                         attrs: {
-                          src: "images/brands/5.png",
+                          src: "/frontend/images/brands/5.png",
                           alt: "Brand",
                           width: "180",
                           height: "100"
@@ -40814,7 +40814,7 @@ var staticRenderFns = [
                     [
                       _c("img", {
                         attrs: {
-                          src: "images/brands/6.png",
+                          src: "/frontend/images/brands/6.png",
                           alt: "Brand",
                           width: "180",
                           height: "100"
@@ -40865,7 +40865,7 @@ var staticRenderFns = [
                       _c("img", {
                         staticStyle: { "background-color": "#EEE" },
                         attrs: {
-                          src: "images/subpages/team1.jpg",
+                          src: "/frontend/images/subpages/team1.jpg",
                           alt: "team member",
                           width: "280",
                           height: "280"
@@ -40917,7 +40917,7 @@ var staticRenderFns = [
                       _c("img", {
                         staticStyle: { "background-color": "#121A1F" },
                         attrs: {
-                          src: "images/subpages/team2.jpg",
+                          src: "/frontend/images/subpages/team2.jpg",
                           alt: "team member",
                           width: "280",
                           height: "280"
@@ -40969,7 +40969,7 @@ var staticRenderFns = [
                       _c("img", {
                         staticStyle: { "background-color": "#E8E7E3" },
                         attrs: {
-                          src: "images/subpages/team3.jpg",
+                          src: "/frontend/images/subpages/team3.jpg",
                           alt: "team member",
                           width: "280",
                           height: "280"
@@ -41021,7 +41021,7 @@ var staticRenderFns = [
                       _c("img", {
                         staticStyle: { "background-color": "#465D7F" },
                         attrs: {
-                          src: "images/subpages/team4.jpg",
+                          src: "/frontend/images/subpages/team4.jpg",
                           alt: "team member",
                           width: "280",
                           height: "280"
@@ -41152,7 +41152,7 @@ var staticRenderFns = [
                   _c("a", { attrs: { href: "#" } }, [
                     _c("img", {
                       attrs: {
-                        src: "images/blog/single/1.jpg",
+                        src: "/frontend/images/blog/single/1.jpg",
                         width: "880",
                         height: "450",
                         alt: "post"
@@ -41219,7 +41219,7 @@ var staticRenderFns = [
                             _c("img", {
                               staticClass: "float-left",
                               attrs: {
-                                src: "images/blog/single/2.jpg",
+                                src: "/frontend/images/blog/single/2.jpg",
                                 alt: "image",
                                 width: "336",
                                 height: "415"
@@ -41319,7 +41319,7 @@ var staticRenderFns = [
                       _c("a", { attrs: { href: "#" } }, [
                         _c("img", {
                           attrs: {
-                            src: "images/blog/comments/1.jpg",
+                            src: "/frontend/images/blog/comments/1.jpg",
                             alt: "avatar",
                             width: "50",
                             height: "50"
@@ -41494,7 +41494,7 @@ var staticRenderFns = [
                         _c("a", { attrs: { href: "#" } }, [
                           _c("img", {
                             attrs: {
-                              src: "images/blog/single/3.jpg",
+                              src: "/frontend/images/blog/single/3.jpg",
                               width: "380",
                               height: "250",
                               alt: "post"
@@ -41548,7 +41548,7 @@ var staticRenderFns = [
                         _c("a", { attrs: { href: "#" } }, [
                           _c("img", {
                             attrs: {
-                              src: "images/blog/single/4.jpg",
+                              src: "/frontend/images/blog/single/4.jpg",
                               width: "380",
                               height: "250",
                               alt: "post"
@@ -41602,7 +41602,7 @@ var staticRenderFns = [
                         _c("a", { attrs: { href: "#" } }, [
                           _c("img", {
                             attrs: {
-                              src: "images/blog/single/5.jpg",
+                              src: "/frontend/images/blog/single/5.jpg",
                               width: "380",
                               height: "250",
                               alt: "post"
@@ -41656,7 +41656,7 @@ var staticRenderFns = [
                         _c("a", { attrs: { href: "#" } }, [
                           _c("img", {
                             attrs: {
-                              src: "images/blog/single/4.jpg",
+                              src: "/frontend/images/blog/single/4.jpg",
                               width: "380",
                               height: "250",
                               alt: "post"
@@ -41725,7 +41725,7 @@ var staticRenderFns = [
                         _c("a", { attrs: { href: "#" } }, [
                           _c("img", {
                             attrs: {
-                              src: "images/blog/comments/1.jpg",
+                              src: "/frontend/images/blog/comments/1.jpg",
                               alt: "avatar"
                             }
                           })
@@ -41774,7 +41774,7 @@ var staticRenderFns = [
                             _c("a", { attrs: { href: "#" } }, [
                               _c("img", {
                                 attrs: {
-                                  src: "images/blog/comments/2.jpg",
+                                  src: "/frontend/images/blog/comments/2.jpg",
                                   alt: "avatar"
                                 }
                               })
@@ -41827,7 +41827,7 @@ var staticRenderFns = [
                         _c("a", { attrs: { href: "#" } }, [
                           _c("img", {
                             attrs: {
-                              src: "images/blog/comments/1.jpg",
+                              src: "/frontend/images/blog/comments/1.jpg",
                               alt: "avatar"
                             }
                           })
@@ -42106,7 +42106,7 @@ var staticRenderFns = [
                                   [
                                     _c("img", {
                                       attrs: {
-                                        src: "images/blog/1_xs.jpg",
+                                        src: "/frontend/images/blog/1_xs.jpg",
                                         width: "90",
                                         height: "90",
                                         alt: "post"
@@ -42150,7 +42150,7 @@ var staticRenderFns = [
                                   [
                                     _c("img", {
                                       attrs: {
-                                        src: "images/blog/2_xs.jpg",
+                                        src: "/frontend/images/blog/2_xs.jpg",
                                         width: "90",
                                         height: "90",
                                         alt: "post"
@@ -42194,7 +42194,7 @@ var staticRenderFns = [
                                   [
                                     _c("img", {
                                       attrs: {
-                                        src: "images/blog/3_xs.jpg",
+                                        src: "/frontend/images/blog/3_xs.jpg",
                                         width: "90",
                                         height: "90",
                                         alt: "post"
@@ -42385,7 +42385,7 @@ var staticRenderFns = [
                     _c("a", { attrs: { href: "/blog_detail" } }, [
                       _c("img", {
                         attrs: {
-                          src: "/images/blog/list/1.jpg",
+                          src: "//frontend/images/blog/list/1.jpg",
                           width: "355",
                           height: "250",
                           alt: "post"
@@ -42448,7 +42448,7 @@ var staticRenderFns = [
                       _c("a", { attrs: { href: "/blog_detail" } }, [
                         _c("img", {
                           attrs: {
-                            src: "/images/blog/list/2.jpg",
+                            src: "//frontend/images/blog/list/2.jpg",
                             width: "355",
                             height: "250",
                             alt: "post"
@@ -42528,7 +42528,7 @@ var staticRenderFns = [
                       [
                         _c("img", {
                           attrs: {
-                            src: "/images/blog/list/3.jpg",
+                            src: "//frontend/images/blog/list/3.jpg",
                             width: "355",
                             height: "250",
                             alt: "post"
@@ -42537,7 +42537,7 @@ var staticRenderFns = [
                         _vm._v(" "),
                         _c("img", {
                           attrs: {
-                            src: "/images/blog/list/2.jpg",
+                            src: "//frontend/images/blog/list/2.jpg",
                             width: "355",
                             height: "250",
                             alt: "post"
@@ -42546,7 +42546,7 @@ var staticRenderFns = [
                         _vm._v(" "),
                         _c("img", {
                           attrs: {
-                            src: "/images/blog/list/1.jpg",
+                            src: "//frontend/images/blog/list/1.jpg",
                             width: "355",
                             height: "250",
                             alt: "post"
@@ -42607,7 +42607,7 @@ var staticRenderFns = [
                     _c("a", { attrs: { href: "/blog_detail" } }, [
                       _c("img", {
                         attrs: {
-                          src: "/images/blog/list/4.jpg",
+                          src: "//frontend/images/blog/list/4.jpg",
                           width: "355",
                           height: "250",
                           alt: "post"
@@ -42667,7 +42667,7 @@ var staticRenderFns = [
                     _c("a", { attrs: { href: "/blog_detail" } }, [
                       _c("img", {
                         attrs: {
-                          src: "/images/blog/list/5.jpg",
+                          src: "//frontend/images/blog/list/5.jpg",
                           width: "355",
                           height: "250",
                           alt: "post"
@@ -42727,7 +42727,7 @@ var staticRenderFns = [
                     _c("a", { attrs: { href: "/blog_detail" } }, [
                       _c("img", {
                         attrs: {
-                          src: "/images/blog/list/6.jpg",
+                          src: "//frontend/images/blog/list/6.jpg",
                           width: "355",
                           height: "250",
                           alt: "post"
@@ -43001,7 +43001,7 @@ var staticRenderFns = [
                                 _c("a", { attrs: { href: "/blog_detail" } }, [
                                   _c("img", {
                                     attrs: {
-                                      src: "/images/blog/1_xs.jpg",
+                                      src: "//frontend/images/blog/1_xs.jpg",
                                       width: "90",
                                       height: "90",
                                       alt: "post"
@@ -43037,7 +43037,7 @@ var staticRenderFns = [
                                 _c("a", { attrs: { href: "/blog_detail" } }, [
                                   _c("img", {
                                     attrs: {
-                                      src: "/images/blog/2_xs.jpg",
+                                      src: "//frontend/images/blog/2_xs.jpg",
                                       width: "90",
                                       height: "90",
                                       alt: "post"
@@ -43073,7 +43073,7 @@ var staticRenderFns = [
                                 _c("a", { attrs: { href: "/blog_detail" } }, [
                                   _c("img", {
                                     attrs: {
-                                      src: "/images/blog/3_xs.jpg",
+                                      src: "//frontend/images/blog/3_xs.jpg",
                                       width: "90",
                                       height: "90",
                                       alt: "post"
@@ -43321,7 +43321,7 @@ var staticRenderFns = [
                       _c("figure", [
                         _c("img", {
                           attrs: {
-                            src: "images/product/product-banner.jpg",
+                            src: "/frontend/images/product/product-banner.jpg",
                             alt: "banner",
                             width: "280",
                             height: "320"
@@ -43386,7 +43386,7 @@ var staticRenderFns = [
                                           _c("img", {
                                             attrs: {
                                               src:
-                                                "images/shop/product-widget1.jpg",
+                                                "/frontend/images/shop/product-widget1.jpg",
                                               alt: "product",
                                               width: "100",
                                               height: "114"
@@ -43468,7 +43468,7 @@ var staticRenderFns = [
                                           _c("img", {
                                             attrs: {
                                               src:
-                                                "images/shop/product-widget2.jpg",
+                                                "/frontend/images/shop/product-widget2.jpg",
                                               alt: "product",
                                               width: "100",
                                               height: "100"
@@ -43546,7 +43546,7 @@ var staticRenderFns = [
                                           _c("img", {
                                             attrs: {
                                               src:
-                                                "images/shop/product-widget3.jpg",
+                                                "/frontend/images/shop/product-widget3.jpg",
                                               alt: "product",
                                               width: "100",
                                               height: "100"
@@ -43626,7 +43626,7 @@ var staticRenderFns = [
                                           _c("img", {
                                             attrs: {
                                               src:
-                                                "images/shop/product-widget1.jpg",
+                                                "/frontend/images/shop/product-widget1.jpg",
                                               alt: "product",
                                               width: "100",
                                               height: "114"
@@ -43708,7 +43708,7 @@ var staticRenderFns = [
                                           _c("img", {
                                             attrs: {
                                               src:
-                                                "images/shop/product-widget2.jpg",
+                                                "/frontend/images/shop/product-widget2.jpg",
                                               alt: "product",
                                               width: "100",
                                               height: "100"
@@ -43786,7 +43786,7 @@ var staticRenderFns = [
                                           _c("img", {
                                             attrs: {
                                               src:
-                                                "images/shop/product-widget3.jpg",
+                                                "/frontend/images/shop/product-widget3.jpg",
                                               alt: "product",
                                               width: "100",
                                               height: "100"
@@ -43872,9 +43872,10 @@ var staticRenderFns = [
                         _c("figure", { staticClass: "product-image" }, [
                           _c("img", {
                             attrs: {
-                              src: "images/product/product-6-1-580x580.jpg",
+                              src:
+                                "/frontend/images/product/product-6-1-580x580.jpg",
                               "data-zoom-image":
-                                "images/product/product-6-1-800x900.jpg",
+                                "/frontend/images/product/product-6-1-800x900.jpg",
                               alt: "Women's Brown Leather Backpacks",
                               width: "800",
                               height: "900"
@@ -43885,9 +43886,10 @@ var staticRenderFns = [
                         _c("figure", { staticClass: "product-image" }, [
                           _c("img", {
                             attrs: {
-                              src: "images/product/product-6-2-580x580.jpg",
+                              src:
+                                "/frontend/images/product/product-6-2-580x580.jpg",
                               "data-zoom-image":
-                                "images/product/product-6-2-800x900.jpg",
+                                "/frontend/images/product/product-6-2-800x900.jpg",
                               alt: "Women's Brown Leather Backpacks",
                               width: "800",
                               height: "900"
@@ -43898,9 +43900,10 @@ var staticRenderFns = [
                         _c("figure", { staticClass: "product-image" }, [
                           _c("img", {
                             attrs: {
-                              src: "images/product/product-6-3-580x580.jpg",
+                              src:
+                                "/frontend/images/product/product-6-3-580x580.jpg",
                               "data-zoom-image":
-                                "images/product/product-6-3-800x900.jpg",
+                                "/frontend/images/product/product-6-3-800x900.jpg",
                               alt: "Women's Brown Leather Backpacks",
                               width: "800",
                               height: "900"
@@ -43911,9 +43914,10 @@ var staticRenderFns = [
                         _c("figure", { staticClass: "product-image" }, [
                           _c("img", {
                             attrs: {
-                              src: "images/product/product-6-4-580x580.jpg",
+                              src:
+                                "/frontend/images/product/product-6-4-580x580.jpg",
                               "data-zoom-image":
-                                "images/product/product-6-4-800x900.jpg",
+                                "/frontend/images/product/product-6-4-800x900.jpg",
                               alt: "Women's Brown Leather Backpacks",
                               width: "800",
                               height: "900"
@@ -43928,7 +43932,8 @@ var staticRenderFns = [
                         _c("div", { staticClass: "product-thumb active" }, [
                           _c("img", {
                             attrs: {
-                              src: "images/product/product-6-1-109x122.jpg",
+                              src:
+                                "/frontend/images/product/product-6-1-109x122.jpg",
                               alt: "product thumbnail",
                               width: "109",
                               height: "122"
@@ -43939,7 +43944,8 @@ var staticRenderFns = [
                         _c("div", { staticClass: "product-thumb" }, [
                           _c("img", {
                             attrs: {
-                              src: "images/product/product-6-2-109x122.jpg",
+                              src:
+                                "/frontend/images/product/product-6-2-109x122.jpg",
                               alt: "product thumbnail",
                               width: "109",
                               height: "122"
@@ -43950,7 +43956,8 @@ var staticRenderFns = [
                         _c("div", { staticClass: "product-thumb" }, [
                           _c("img", {
                             attrs: {
-                              src: "images/product/product-6-3-109x122.jpg",
+                              src:
+                                "/frontend/images/product/product-6-3-109x122.jpg",
                               alt: "product thumbnail",
                               width: "109",
                               height: "122"
@@ -43961,7 +43968,8 @@ var staticRenderFns = [
                         _c("div", { staticClass: "product-thumb" }, [
                           _c("img", {
                             attrs: {
-                              src: "images/product/product-6-4-109x122.jpg",
+                              src:
+                                "/frontend/images/product/product-6-4-109x122.jpg",
                               alt: "product thumbnail",
                               width: "109",
                               height: "122"
@@ -44010,7 +44018,8 @@ var staticRenderFns = [
                             _c("span", { staticClass: "product-nav-popup" }, [
                               _c("img", {
                                 attrs: {
-                                  src: "images/product/product-thumb-prev.jpg",
+                                  src:
+                                    "/frontend/images/product/product-thumb-prev.jpg",
                                   alt: "product thumbnail",
                                   width: "110",
                                   height: "123"
@@ -44032,7 +44041,8 @@ var staticRenderFns = [
                             _c("span", { staticClass: "product-nav-popup" }, [
                               _c("img", {
                                 attrs: {
-                                  src: "images/product/product-thumb-next.jpg",
+                                  src:
+                                    "/frontend/images/product/product-thumb-next.jpg",
                                   alt: "product thumbnail",
                                   width: "110",
                                   height: "123"
@@ -44101,7 +44111,8 @@ var staticRenderFns = [
                           staticClass: "color",
                           staticStyle: { "background-color": "#c8c7ce" },
                           attrs: {
-                            "data-src": "images/demos/demo7/products/big1.jpg",
+                            "data-src":
+                              "/frontend/images/demos/demo7/products/big1.jpg",
                             href: "#"
                           }
                         }),
@@ -44110,7 +44121,8 @@ var staticRenderFns = [
                           staticClass: "color",
                           staticStyle: { "background-color": "#537548" },
                           attrs: {
-                            "data-src": "images/demos/demo7/products/2.jpg",
+                            "data-src":
+                              "/frontend/images/demos/demo7/products/2.jpg",
                             href: "#"
                           }
                         }),
@@ -44119,7 +44131,8 @@ var staticRenderFns = [
                           staticClass: "color",
                           staticStyle: { "background-color": "#484975" },
                           attrs: {
-                            "data-src": "images/demos/demo7/products/3.jpg",
+                            "data-src":
+                              "/frontend/images/demos/demo7/products/3.jpg",
                             href: "#"
                           }
                         }),
@@ -44128,7 +44141,8 @@ var staticRenderFns = [
                           staticClass: "color",
                           staticStyle: { "background-color": "#313131" },
                           attrs: {
-                            "data-src": "images/demos/demo7/products/4.jpg",
+                            "data-src":
+                              "/frontend/images/demos/demo7/products/4.jpg",
                             href: "#"
                           }
                         })
@@ -44492,7 +44506,7 @@ var staticRenderFns = [
                             [
                               _c("img", {
                                 attrs: {
-                                  src: "images/product/product.jpg",
+                                  src: "/frontend/images/product/product.jpg",
                                   width: "559",
                                   height: "370",
                                   alt: "Product"
@@ -44629,7 +44643,7 @@ var staticRenderFns = [
                       _c("figure", { staticClass: "size-image mt-4 mb-4" }, [
                         _c("img", {
                           attrs: {
-                            src: "images/product/size_guide.png",
+                            src: "/frontend/images/product/size_guide.png",
                             alt: "Size Guide Image",
                             width: "217",
                             height: "398"
@@ -44735,7 +44749,8 @@ var staticRenderFns = [
                                   _c("a", { attrs: { href: "#" } }, [
                                     _c("img", {
                                       attrs: {
-                                        src: "images/blog/comments/1.jpg",
+                                        src:
+                                          "/frontend/images/blog/comments/1.jpg",
                                         alt: "avatar"
                                       }
                                     })
@@ -44811,7 +44826,8 @@ var staticRenderFns = [
                                   _c("a", { attrs: { href: "#" } }, [
                                     _c("img", {
                                       attrs: {
-                                        src: "images/blog/comments/2.jpg",
+                                        src:
+                                          "/frontend/images/blog/comments/2.jpg",
                                         alt: "avatar"
                                       }
                                     })
@@ -45088,7 +45104,7 @@ var staticRenderFns = [
                         _c("a", { attrs: { href: "product.html" } }, [
                           _c("img", {
                             attrs: {
-                              src: "images/product/featured1.jpg",
+                              src: "/frontend/images/product/featured1.jpg",
                               alt: "product",
                               width: "280",
                               height: "315"
@@ -45195,7 +45211,7 @@ var staticRenderFns = [
                         _c("a", { attrs: { href: "product.html" } }, [
                           _c("img", {
                             attrs: {
-                              src: "images/product/featured2.jpg",
+                              src: "/frontend/images/product/featured2.jpg",
                               alt: "product",
                               width: "280",
                               height: "315"
@@ -45307,7 +45323,7 @@ var staticRenderFns = [
                         _c("a", { attrs: { href: "product.html" } }, [
                           _c("img", {
                             attrs: {
-                              src: "images/product/featured3.jpg",
+                              src: "/frontend/images/product/featured3.jpg",
                               alt: "product",
                               width: "280",
                               height: "315"
@@ -45408,7 +45424,7 @@ var staticRenderFns = [
                         _c("a", { attrs: { href: "product.html" } }, [
                           _c("img", {
                             attrs: {
-                              src: "images/product/featured4.jpg",
+                              src: "/frontend/images/product/featured4.jpg",
                               alt: "product",
                               width: "280",
                               height: "315"
@@ -46636,7 +46652,8 @@ var staticRenderFns = [
       {
         staticClass: "page-header",
         staticStyle: {
-          "background-image": "url('images/shop/page-header-back.jpg')",
+          "background-image":
+            "url('/frontend/images/shop/page-header-back.jpg')",
           "background-color": "#3C63A4"
         }
       },
@@ -46680,7 +46697,7 @@ var staticRenderFns = [
                 _c("a", { attrs: { href: "/buy_detail" } }, [
                   _c("img", {
                     attrs: {
-                      src: "images/products/product1.jpg",
+                      src: "/frontend/images/products/product1.jpg",
                       alt: "product",
                       width: "280",
                       height: "315"
@@ -46782,7 +46799,7 @@ var staticRenderFns = [
                 _c("a", { attrs: { href: "/buy_detail" } }, [
                   _c("img", {
                     attrs: {
-                      src: "images/products/product2.jpg",
+                      src: "/frontend/images/products/product2.jpg",
                       alt: "product",
                       width: "280",
                       height: "315"
@@ -46877,7 +46894,7 @@ var staticRenderFns = [
                 _c("a", { attrs: { href: "/buy_detail" } }, [
                   _c("img", {
                     attrs: {
-                      src: "images/products/product3.jpg",
+                      src: "/frontend/images/products/product3.jpg",
                       alt: "product",
                       width: "280",
                       height: "315"
@@ -46978,7 +46995,7 @@ var staticRenderFns = [
                 _c("a", { attrs: { href: "/buy_detail" } }, [
                   _c("img", {
                     attrs: {
-                      src: "images/products/product4.jpg",
+                      src: "/frontend/images/products/product4.jpg",
                       alt: "product",
                       width: "280",
                       height: "315"
@@ -47080,7 +47097,7 @@ var staticRenderFns = [
                 _c("a", { attrs: { href: "/buy_detail" } }, [
                   _c("img", {
                     attrs: {
-                      src: "images/products/product1.jpg",
+                      src: "/frontend/images/products/product1.jpg",
                       alt: "product",
                       width: "280",
                       height: "315"
@@ -47182,7 +47199,7 @@ var staticRenderFns = [
                 _c("a", { attrs: { href: "/buy_detail" } }, [
                   _c("img", {
                     attrs: {
-                      src: "images/products/product2.jpg",
+                      src: "/frontend/images/products/product2.jpg",
                       alt: "product",
                       width: "280",
                       height: "315"
@@ -47277,7 +47294,7 @@ var staticRenderFns = [
                 _c("a", { attrs: { href: "/buy_detail" } }, [
                   _c("img", {
                     attrs: {
-                      src: "images/products/product3.jpg",
+                      src: "/frontend/images/products/product3.jpg",
                       alt: "product",
                       width: "280",
                       height: "315"
@@ -47378,7 +47395,7 @@ var staticRenderFns = [
                 _c("a", { attrs: { href: "/buy_detail" } }, [
                   _c("img", {
                     attrs: {
-                      src: "images/products/product4.jpg",
+                      src: "/frontend/images/products/product4.jpg",
                       alt: "product",
                       width: "280",
                       height: "315"
@@ -47485,7 +47502,7 @@ var staticRenderFns = [
                   _c("a", { attrs: { href: "/buy_detail" } }, [
                     _c("img", {
                       attrs: {
-                        src: "images/products/product1.jpg",
+                        src: "/frontend/images/products/product1.jpg",
                         alt: "product",
                         width: "280",
                         height: "315"
@@ -47585,7 +47602,7 @@ var staticRenderFns = [
                 _c("a", { attrs: { href: "/buy_detail" } }, [
                   _c("img", {
                     attrs: {
-                      src: "images/products/product2.jpg",
+                      src: "/frontend/images/products/product2.jpg",
                       alt: "product",
                       width: "280",
                       height: "315"
@@ -47677,7 +47694,7 @@ var staticRenderFns = [
                 _c("a", { attrs: { href: "/buy_detail" } }, [
                   _c("img", {
                     attrs: {
-                      src: "images/products/product3.jpg",
+                      src: "/frontend/images/products/product3.jpg",
                       alt: "product",
                       width: "280",
                       height: "315"
@@ -47778,7 +47795,7 @@ var staticRenderFns = [
                   _c("a", { attrs: { href: "/buy_detail" } }, [
                     _c("img", {
                       attrs: {
-                        src: "images/products/product4.jpg",
+                        src: "/frontend/images/products/product4.jpg",
                         alt: "product",
                         width: "280",
                         height: "315"
@@ -47882,7 +47899,7 @@ var staticRenderFns = [
                   _c("a", { attrs: { href: "/buy_detail" } }, [
                     _c("img", {
                       attrs: {
-                        src: "images/products/product1.jpg",
+                        src: "/frontend/images/products/product1.jpg",
                         alt: "product",
                         width: "280",
                         height: "315"
@@ -47987,7 +48004,7 @@ var staticRenderFns = [
                   _c("a", { attrs: { href: "/buy_detail" } }, [
                     _c("img", {
                       attrs: {
-                        src: "images/products/product2.jpg",
+                        src: "/frontend/images/products/product2.jpg",
                         alt: "product",
                         width: "280",
                         height: "315"
@@ -48085,7 +48102,7 @@ var staticRenderFns = [
                   _c("a", { attrs: { href: "/buy_detail" } }, [
                     _c("img", {
                       attrs: {
-                        src: "images/products/product3.jpg",
+                        src: "/frontend/images/products/product3.jpg",
                         alt: "product",
                         width: "280",
                         height: "315"
@@ -48192,7 +48209,7 @@ var staticRenderFns = [
                   _c("a", { attrs: { href: "/buy_detail" } }, [
                     _c("img", {
                       attrs: {
-                        src: "images/products/product4.jpg",
+                        src: "/frontend/images/products/product4.jpg",
                         alt: "product",
                         width: "280",
                         height: "315"
@@ -48300,7 +48317,7 @@ var staticRenderFns = [
                   _c("a", { attrs: { href: "/buy_detail" } }, [
                     _c("img", {
                       attrs: {
-                        src: "images/products/product5.jpg",
+                        src: "/frontend/images/products/product5.jpg",
                         alt: "product",
                         width: "280",
                         height: "315"
@@ -48400,7 +48417,7 @@ var staticRenderFns = [
                 _c("a", { attrs: { href: "/buy_detail" } }, [
                   _c("img", {
                     attrs: {
-                      src: "images/products/product6.jpg",
+                      src: "/frontend/images/products/product6.jpg",
                       alt: "product",
                       width: "280",
                       height: "315"
@@ -48492,7 +48509,7 @@ var staticRenderFns = [
                 _c("a", { attrs: { href: "/buy_detail" } }, [
                   _c("img", {
                     attrs: {
-                      src: "images/products/product7.jpg",
+                      src: "/frontend/images/products/product7.jpg",
                       alt: "product",
                       width: "280",
                       height: "315"
@@ -48596,7 +48613,7 @@ var staticRenderFns = [
                   _c("a", { attrs: { href: "/buy_detail" } }, [
                     _c("img", {
                       attrs: {
-                        src: "images/products/product8.jpg",
+                        src: "/frontend/images/products/product8.jpg",
                         alt: "product",
                         width: "280",
                         height: "315"
@@ -48694,7 +48711,7 @@ var staticRenderFns = [
                   _c("a", { attrs: { href: "/buy_detail" } }, [
                     _c("img", {
                       attrs: {
-                        src: "images/products/product9.jpg",
+                        src: "/frontend/images/products/product9.jpg",
                         alt: "product",
                         width: "280",
                         height: "315"
@@ -48803,7 +48820,7 @@ var staticRenderFns = [
                 _c("a", { attrs: { href: "/buy_detail" } }, [
                   _c("img", {
                     attrs: {
-                      src: "images/products/product1.jpg",
+                      src: "/frontend/images/products/product1.jpg",
                       alt: "product",
                       width: "280",
                       height: "315"
@@ -48899,7 +48916,7 @@ var staticRenderFns = [
                 _c("a", { attrs: { href: "/buy_detail" } }, [
                   _c("img", {
                     attrs: {
-                      src: "images/products/product2.jpg",
+                      src: "/frontend/images/products/product2.jpg",
                       alt: "product",
                       width: "280",
                       height: "315"
@@ -48988,7 +49005,7 @@ var staticRenderFns = [
                 _c("a", { attrs: { href: "/buy_detail" } }, [
                   _c("img", {
                     attrs: {
-                      src: "images/products/product3.jpg",
+                      src: "/frontend/images/products/product3.jpg",
                       alt: "product",
                       width: "280",
                       height: "315"
@@ -49083,7 +49100,7 @@ var staticRenderFns = [
                 _c("a", { attrs: { href: "/buy_detail" } }, [
                   _c("img", {
                     attrs: {
-                      src: "images/products/product4.jpg",
+                      src: "/frontend/images/products/product4.jpg",
                       alt: "product",
                       width: "280",
                       height: "315"
@@ -49173,7 +49190,7 @@ var staticRenderFns = [
                 _c("a", { attrs: { href: "/buy_detail" } }, [
                   _c("img", {
                     attrs: {
-                      src: "images/products/product10.jpg",
+                      src: "/frontend/images/products/product10.jpg",
                       alt: "product",
                       width: "280",
                       height: "315"
@@ -49273,7 +49290,7 @@ var staticRenderFns = [
                 _c("a", { attrs: { href: "/buy_detail" } }, [
                   _c("img", {
                     attrs: {
-                      src: "images/products/product1.jpg",
+                      src: "/frontend/images/products/product1.jpg",
                       alt: "product",
                       width: "280",
                       height: "315"
@@ -49375,7 +49392,7 @@ var staticRenderFns = [
                 _c("a", { attrs: { href: "/buy_detail" } }, [
                   _c("img", {
                     attrs: {
-                      src: "images/products/product2.jpg",
+                      src: "/frontend/images/products/product2.jpg",
                       alt: "product",
                       width: "280",
                       height: "315"
@@ -49470,7 +49487,7 @@ var staticRenderFns = [
                 _c("a", { attrs: { href: "/buy_detail" } }, [
                   _c("img", {
                     attrs: {
-                      src: "images/products/product3.jpg",
+                      src: "/frontend/images/products/product3.jpg",
                       alt: "product",
                       width: "280",
                       height: "315"
@@ -49571,7 +49588,7 @@ var staticRenderFns = [
                 _c("a", { attrs: { href: "/buy_detail" } }, [
                   _c("img", {
                     attrs: {
-                      src: "images/products/product4.jpg",
+                      src: "/frontend/images/products/product4.jpg",
                       alt: "product",
                       width: "280",
                       height: "315"
@@ -49690,7 +49707,7 @@ var staticRenderFns = [
                   _c("a", { attrs: { href: "/buy_detail" } }, [
                     _c("img", {
                       attrs: {
-                        src: "images/products/product1.jpg",
+                        src: "/frontend/images/products/product1.jpg",
                         alt: "product",
                         width: "280",
                         height: "315"
@@ -49767,7 +49784,7 @@ var staticRenderFns = [
                   _c("a", { attrs: { href: "/buy_detail" } }, [
                     _c("img", {
                       attrs: {
-                        src: "images/products/product2.jpg",
+                        src: "/frontend/images/products/product2.jpg",
                         alt: "product",
                         width: "280",
                         height: "315"
@@ -49837,7 +49854,7 @@ var staticRenderFns = [
                   _c("a", { attrs: { href: "/buy_detail" } }, [
                     _c("img", {
                       attrs: {
-                        src: "images/products/product3.jpg",
+                        src: "/frontend/images/products/product3.jpg",
                         alt: "product",
                         width: "280",
                         height: "315"
@@ -49916,7 +49933,7 @@ var staticRenderFns = [
                   _c("a", { attrs: { href: "/buy_detail" } }, [
                     _c("img", {
                       attrs: {
-                        src: "images/products/product4.jpg",
+                        src: "/frontend/images/products/product4.jpg",
                         alt: "product",
                         width: "280",
                         height: "315"
@@ -49986,7 +50003,7 @@ var staticRenderFns = [
                   _c("a", { attrs: { href: "/buy_detail" } }, [
                     _c("img", {
                       attrs: {
-                        src: "images/products/product10.jpg",
+                        src: "/frontend/images/products/product10.jpg",
                         alt: "product",
                         width: "280",
                         height: "315"
@@ -50075,7 +50092,7 @@ var staticRenderFns = [
                   _c("a", { attrs: { href: "/buy_detail" } }, [
                     _c("img", {
                       attrs: {
-                        src: "images/products/product1.jpg",
+                        src: "/frontend/images/products/product1.jpg",
                         alt: "product",
                         width: "280",
                         height: "315"
@@ -50156,7 +50173,7 @@ var staticRenderFns = [
                   _c("a", { attrs: { href: "/buy_detail" } }, [
                     _c("img", {
                       attrs: {
-                        src: "images/products/product2.jpg",
+                        src: "/frontend/images/products/product2.jpg",
                         alt: "product",
                         width: "280",
                         height: "315"
@@ -50243,7 +50260,7 @@ var staticRenderFns = [
                   _c("a", { attrs: { href: "/buy_detail" } }, [
                     _c("img", {
                       attrs: {
-                        src: "images/products/product3.jpg",
+                        src: "/frontend/images/products/product3.jpg",
                         alt: "product",
                         width: "280",
                         height: "315"
@@ -50337,7 +50354,7 @@ var staticRenderFns = [
                   _c("a", { attrs: { href: "/buy_detail" } }, [
                     _c("img", {
                       attrs: {
-                        src: "images/products/product4.jpg",
+                        src: "/frontend/images/products/product4.jpg",
                         alt: "product",
                         width: "280",
                         height: "315"
@@ -50418,7 +50435,7 @@ var staticRenderFns = [
                   _c("a", { attrs: { href: "/buy_detail" } }, [
                     _c("img", {
                       attrs: {
-                        src: "images/products/product3.jpg",
+                        src: "/frontend/images/products/product3.jpg",
                         alt: "product",
                         width: "280",
                         height: "315"
@@ -50519,7 +50536,7 @@ var staticRenderFns = [
                 _c("a", { attrs: { href: "/buy_detail" } }, [
                   _c("img", {
                     attrs: {
-                      src: "images/products/product2.jpg",
+                      src: "/frontend/images/products/product2.jpg",
                       alt: "product",
                       width: "280",
                       height: "315"
@@ -50634,7 +50651,7 @@ var staticRenderFns = [
                           _c("a", { attrs: { href: "/buy_detail" } }, [
                             _c("img", {
                               attrs: {
-                                src: "images/products/product11.jpg",
+                                src: "/frontend/images/products/product11.jpg",
                                 alt: "product",
                                 width: "100",
                                 height: "100"
@@ -50676,7 +50693,7 @@ var staticRenderFns = [
                           _c("a", { attrs: { href: "/buy_detail" } }, [
                             _c("img", {
                               attrs: {
-                                src: "images/products/product12.jpg",
+                                src: "/frontend/images/products/product12.jpg",
                                 alt: "product",
                                 width: "100",
                                 height: "100"
@@ -50718,7 +50735,7 @@ var staticRenderFns = [
                           _c("a", { attrs: { href: "/buy_detail" } }, [
                             _c("img", {
                               attrs: {
-                                src: "images/products/product13.jpg",
+                                src: "/frontend/images/products/product13.jpg",
                                 alt: "product",
                                 width: "100",
                                 height: "100"
@@ -50763,7 +50780,7 @@ var staticRenderFns = [
                           _c("a", { attrs: { href: "/buy_detail" } }, [
                             _c("img", {
                               attrs: {
-                                src: "images/products/product14.jpg",
+                                src: "/frontend/images/products/product14.jpg",
                                 alt: "product",
                                 width: "100",
                                 height: "100"
@@ -50810,7 +50827,7 @@ var staticRenderFns = [
                           _c("a", { attrs: { href: "/buy_detail" } }, [
                             _c("img", {
                               attrs: {
-                                src: "images/products/product11.jpg",
+                                src: "/frontend/images/products/product11.jpg",
                                 alt: "product",
                                 width: "100",
                                 height: "100"
@@ -50852,7 +50869,7 @@ var staticRenderFns = [
                           _c("a", { attrs: { href: "/buy_detail" } }, [
                             _c("img", {
                               attrs: {
-                                src: "images/products/product12.jpg",
+                                src: "/frontend/images/products/product12.jpg",
                                 alt: "product",
                                 width: "100",
                                 height: "100"
@@ -50894,7 +50911,7 @@ var staticRenderFns = [
                           _c("a", { attrs: { href: "/buy_detail" } }, [
                             _c("img", {
                               attrs: {
-                                src: "images/products/product13.jpg",
+                                src: "/frontend/images/products/product13.jpg",
                                 alt: "product",
                                 width: "100",
                                 height: "100"
@@ -50939,7 +50956,7 @@ var staticRenderFns = [
                           _c("a", { attrs: { href: "/buy_detail" } }, [
                             _c("img", {
                               attrs: {
-                                src: "images/products/product14.jpg",
+                                src: "/frontend/images/products/product14.jpg",
                                 alt: "product",
                                 width: "100",
                                 height: "100"
@@ -51795,7 +51812,8 @@ var staticRenderFns = [
         {
           staticClass: "page-header",
           staticStyle: {
-            "background-image": "url(images/page-header/contact-us.jpg)"
+            "background-image":
+              "url(/frontend/images/page-header/contact-us.jpg)"
           }
         },
         [
@@ -51952,7 +51970,7 @@ var staticRenderFns = [
                 _c("figure", { staticClass: "banner-radius" }, [
                   _c("img", {
                     attrs: {
-                      src: "images/subpages/store-1.jpg",
+                      src: "/frontend/images/subpages/store-1.jpg",
                       alt: "store",
                       width: "280",
                       height: "280"
@@ -52001,7 +52019,7 @@ var staticRenderFns = [
                 _c("figure", { staticClass: "banner-radius" }, [
                   _c("img", {
                     attrs: {
-                      src: "images/subpages/store-2.jpg",
+                      src: "/frontend/images/subpages/store-2.jpg",
                       alt: "store",
                       width: "280",
                       height: "280"
@@ -52050,7 +52068,7 @@ var staticRenderFns = [
                 _c("figure", { staticClass: "banner-radius" }, [
                   _c("img", {
                     attrs: {
-                      src: "images/subpages/store-3.jpg",
+                      src: "/frontend/images/subpages/store-3.jpg",
                       alt: "store",
                       width: "280",
                       height: "280"
@@ -52099,7 +52117,7 @@ var staticRenderFns = [
                 _c("figure", { staticClass: "banner-radius" }, [
                   _c("img", {
                     attrs: {
-                      src: "images/subpages/store-4.jpg",
+                      src: "/frontend/images/subpages/store-4.jpg",
                       alt: "store",
                       width: "280",
                       height: "280"
@@ -52333,7 +52351,7 @@ var staticRenderFns = [
                           _c("img", {
                             staticStyle: { "background-color": "#26303c" },
                             attrs: {
-                              src: "images/demos/demo3/banner2.jpg",
+                              src: "/frontend/images/demos/demo3/banner2.jpg",
                               width: "280",
                               height: "312",
                               alt: "banner"
@@ -52444,7 +52462,7 @@ var staticRenderFns = [
                                               },
                                               attrs: {
                                                 src:
-                                                  "images/demos/demo3/products/10.jpg",
+                                                  "/frontend/images/demos/demo3/products/10.jpg",
                                                 alt: "product",
                                                 width: "100",
                                                 height: "100"
@@ -52529,7 +52547,7 @@ var staticRenderFns = [
                                               },
                                               attrs: {
                                                 src:
-                                                  "images/demos/demo3/products/11.jpg",
+                                                  "/frontend/images/demos/demo3/products/11.jpg",
                                                 alt: "product",
                                                 width: "100",
                                                 height: "100"
@@ -52614,7 +52632,7 @@ var staticRenderFns = [
                                               },
                                               attrs: {
                                                 src:
-                                                  "images/demos/demo3/products/12.jpg",
+                                                  "/frontend/images/demos/demo3/products/12.jpg",
                                                 alt: "product",
                                                 width: "100",
                                                 height: "100"
@@ -52710,7 +52728,7 @@ var staticRenderFns = [
                                               },
                                               attrs: {
                                                 src:
-                                                  "images/demos/demo3/products/10.jpg",
+                                                  "/frontend/images/demos/demo3/products/10.jpg",
                                                 alt: "product",
                                                 width: "100",
                                                 height: "100"
@@ -52795,7 +52813,7 @@ var staticRenderFns = [
                                               },
                                               attrs: {
                                                 src:
-                                                  "images/demos/demo3/products/11.jpg",
+                                                  "/frontend/images/demos/demo3/products/11.jpg",
                                                 alt: "product",
                                                 width: "100",
                                                 height: "100"
@@ -52880,7 +52898,7 @@ var staticRenderFns = [
                                               },
                                               attrs: {
                                                 src:
-                                                  "images/demos/demo3/products/12.jpg",
+                                                  "/frontend/images/demos/demo3/products/12.jpg",
                                                 alt: "product",
                                                 width: "100",
                                                 height: "100"
@@ -53009,7 +53027,7 @@ var staticRenderFns = [
                                           },
                                           attrs: {
                                             src:
-                                              "images/demos/demo3/blog/1.jpg",
+                                              "/frontend/images/demos/demo3/blog/1.jpg",
                                             width: "280",
                                             height: "195",
                                             alt: "post"
@@ -53094,7 +53112,7 @@ var staticRenderFns = [
                                           },
                                           attrs: {
                                             src:
-                                              "images/demos/demo3/blog/2.jpg",
+                                              "/frontend/images/demos/demo3/blog/2.jpg",
                                             width: "280",
                                             height: "195",
                                             alt: "post"
@@ -53136,7 +53154,7 @@ var staticRenderFns = [
                                         { attrs: { href: "post-single.html" } },
                                         [
                                           _vm._v(
-                                            "Just a cool blog post with images"
+                                            "Just a cool blog post with /frontend/images"
                                           )
                                         ]
                                       )
@@ -53179,7 +53197,7 @@ var staticRenderFns = [
                                           },
                                           attrs: {
                                             src:
-                                              "images/demos/demo3/blog/3.jpg",
+                                              "/frontend/images/demos/demo3/blog/3.jpg",
                                             width: "280",
                                             height: "195",
                                             alt: "post"
@@ -53221,7 +53239,7 @@ var staticRenderFns = [
                                         { attrs: { href: "post-single.html" } },
                                         [
                                           _vm._v(
-                                            "Just a cool blog post with images"
+                                            "Just a cool blog post with /frontend/images"
                                           )
                                         ]
                                       )
@@ -53264,7 +53282,7 @@ var staticRenderFns = [
                                           },
                                           attrs: {
                                             src:
-                                              "images/demos/demo3/blog/4.jpg",
+                                              "/frontend/images/demos/demo3/blog/4.jpg",
                                             width: "280",
                                             height: "195",
                                             alt: "post"
@@ -53306,7 +53324,7 @@ var staticRenderFns = [
                                         { attrs: { href: "post-single.html" } },
                                         [
                                           _vm._v(
-                                            "Just a cool blog post with images"
+                                            "Just a cool blog post with /frontend/images"
                                           )
                                         ]
                                       )
@@ -53384,7 +53402,8 @@ var staticRenderFns = [
                                     [
                                       _c("img", {
                                         attrs: {
-                                          src: "images/demos/demo3/agent.png",
+                                          src:
+                                            "/frontend/images/demos/demo3/agent.png",
                                           alt: "user",
                                           width: "40",
                                           height: "40"
@@ -53426,7 +53445,8 @@ var staticRenderFns = [
                                     [
                                       _c("img", {
                                         attrs: {
-                                          src: "images/demos/demo3/agent.png",
+                                          src:
+                                            "/frontend/images/demos/demo3/agent.png",
                                           alt: "user",
                                           width: "40",
                                           height: "40"
@@ -53474,7 +53494,7 @@ var staticRenderFns = [
                           _c("img", {
                             staticStyle: { "background-color": "#ffc74e" },
                             attrs: {
-                              src: "images/demos/demo3/slides/1.jpg",
+                              src: "/frontend/images/demos/demo3/slides/1.jpg",
                               alt: "intro-banner",
                               width: "880",
                               height: "474"
@@ -53567,7 +53587,8 @@ var staticRenderFns = [
                             [
                               _c("img", {
                                 attrs: {
-                                  src: "images/demos/demo3/slides/single.png",
+                                  src:
+                                    "/frontend/images/demos/demo3/slides/single.png",
                                   alt: "Men",
                                   width: "511",
                                   height: "478"
@@ -53587,7 +53608,7 @@ var staticRenderFns = [
                           _c("img", {
                             staticStyle: { "background-color": "#fbfcfc" },
                             attrs: {
-                              src: "images/demos/demo3/slides/2.jpg",
+                              src: "/frontend/images/demos/demo3/slides/2.jpg",
                               alt: "intro-banner",
                               width: "880",
                               height: "474"
@@ -53669,7 +53690,7 @@ var staticRenderFns = [
                           _c("img", {
                             staticStyle: { "background-color": "#d3d4d5" },
                             attrs: {
-                              src: "images/demos/demo3/slides/3.jpg",
+                              src: "/frontend/images/demos/demo3/slides/3.jpg",
                               alt: "intro-banner",
                               width: "880",
                               height: "474"
@@ -53765,7 +53786,8 @@ var staticRenderFns = [
                             _c("img", {
                               staticStyle: { "background-color": "#eceef2" },
                               attrs: {
-                                src: "images/demos/demo3/banners/1.jpg",
+                                src:
+                                  "/frontend/images/demos/demo3/banners/1.jpg",
                                 alt: "category",
                                 width: "430",
                                 height: "189"
@@ -53813,7 +53835,8 @@ var staticRenderFns = [
                             _c("img", {
                               staticStyle: { "background-color": "#929ca3" },
                               attrs: {
-                                src: "images/demos/demo3/banners/2.jpg",
+                                src:
+                                  "/frontend/images/demos/demo3/banners/2.jpg",
                                 alt: "category",
                                 width: "430",
                                 height: "189"
@@ -53891,7 +53914,8 @@ var staticRenderFns = [
                             _c("img", {
                               staticStyle: { "background-color": "#f5f5f5" },
                               attrs: {
-                                src: "images/demos/demo3/products/1.jpg",
+                                src:
+                                  "/frontend/images/demos/demo3/products/1.jpg",
                                 alt: "product",
                                 width: "280",
                                 height: "315"
@@ -53990,7 +54014,8 @@ var staticRenderFns = [
                             _c("img", {
                               staticStyle: { "background-color": "#f5f5f5" },
                               attrs: {
-                                src: "images/demos/demo3/products/2.jpg",
+                                src:
+                                  "/frontend/images/demos/demo3/products/2.jpg",
                                 alt: "product",
                                 width: "280",
                                 height: "315"
@@ -54081,7 +54106,8 @@ var staticRenderFns = [
                             _c("img", {
                               staticStyle: { "background-color": "#f5f5f5" },
                               attrs: {
-                                src: "images/demos/demo3/products/3.jpg",
+                                src:
+                                  "/frontend/images/demos/demo3/products/3.jpg",
                                 alt: "product",
                                 width: "280",
                                 height: "315"
@@ -54189,7 +54215,8 @@ var staticRenderFns = [
                             _c("img", {
                               staticStyle: { "background-color": "#f5f5f5" },
                               attrs: {
-                                src: "images/demos/demo3/products/4.jpg",
+                                src:
+                                  "/frontend/images/demos/demo3/products/4.jpg",
                                 alt: "product",
                                 width: "280",
                                 height: "315"
@@ -54288,7 +54315,8 @@ var staticRenderFns = [
                             _c("img", {
                               staticStyle: { "background-color": "#f5f5f5" },
                               attrs: {
-                                src: "images/demos/demo3/products/5.jpg",
+                                src:
+                                  "/frontend/images/demos/demo3/products/5.jpg",
                                 alt: "product",
                                 width: "280",
                                 height: "315"
@@ -54390,7 +54418,8 @@ var staticRenderFns = [
                             _c("img", {
                               staticStyle: { "background-color": "#f5f5f5" },
                               attrs: {
-                                src: "images/demos/demo3/products/6.jpg",
+                                src:
+                                  "/frontend/images/demos/demo3/products/6.jpg",
                                 alt: "product",
                                 width: "280",
                                 height: "315"
@@ -54481,7 +54510,8 @@ var staticRenderFns = [
                             _c("img", {
                               staticStyle: { "background-color": "#f5f5f5" },
                               attrs: {
-                                src: "images/demos/demo3/products/7.jpg",
+                                src:
+                                  "/frontend/images/demos/demo3/products/7.jpg",
                                 alt: "product",
                                 width: "280",
                                 height: "315"
@@ -54580,7 +54610,8 @@ var staticRenderFns = [
                             _c("img", {
                               staticStyle: { "background-color": "#f5f5f5" },
                               attrs: {
-                                src: "images/demos/demo3/products/8.jpg",
+                                src:
+                                  "/frontend/images/demos/demo3/products/8.jpg",
                                 alt: "product",
                                 width: "280",
                                 height: "315"
@@ -54672,7 +54703,8 @@ var staticRenderFns = [
                 {
                   staticClass: "banner banner-cta mb-7 text-center",
                   staticStyle: {
-                    "background-image": "url(images/demos/demo3/banner.jpg)",
+                    "background-image":
+                      "url(/frontend/images/demos/demo3/banner.jpg)",
                     "background-color": "#c5d1d2"
                   }
                 },
@@ -54789,7 +54821,8 @@ var staticRenderFns = [
                                       "background-color": "#f5f5f5"
                                     },
                                     attrs: {
-                                      src: "images/demos/demo3/products/9.jpg",
+                                      src:
+                                        "/frontend/images/demos/demo3/products/9.jpg",
                                       alt: "product",
                                       width: "100",
                                       height: "100"
@@ -54844,7 +54877,8 @@ var staticRenderFns = [
                                       "background-color": "#f5f5f5"
                                     },
                                     attrs: {
-                                      src: "images/demos/demo3/products/10.jpg",
+                                      src:
+                                        "/frontend/images/demos/demo3/products/10.jpg",
                                       alt: "product",
                                       width: "100",
                                       height: "100"
@@ -54897,7 +54931,8 @@ var staticRenderFns = [
                                       "background-color": "#f5f5f5"
                                     },
                                     attrs: {
-                                      src: "images/demos/demo3/products/11.jpg",
+                                      src:
+                                        "/frontend/images/demos/demo3/products/11.jpg",
                                       alt: "product",
                                       width: "100",
                                       height: "100"
@@ -54974,7 +55009,8 @@ var staticRenderFns = [
                                       "background-color": "#f5f5f5"
                                     },
                                     attrs: {
-                                      src: "images/demos/demo3/products/12.jpg",
+                                      src:
+                                        "/frontend/images/demos/demo3/products/12.jpg",
                                       alt: "product",
                                       width: "100",
                                       height: "100"
@@ -55029,7 +55065,8 @@ var staticRenderFns = [
                                       "background-color": "#f5f5f5"
                                     },
                                     attrs: {
-                                      src: "images/demos/demo3/products/13.jpg",
+                                      src:
+                                        "/frontend/images/demos/demo3/products/13.jpg",
                                       alt: "product",
                                       width: "100",
                                       height: "100"
@@ -55082,7 +55119,8 @@ var staticRenderFns = [
                                       "background-color": "#f5f5f5"
                                     },
                                     attrs: {
-                                      src: "images/demos/demo3/products/14.jpg",
+                                      src:
+                                        "/frontend/images/demos/demo3/products/14.jpg",
                                       alt: "product",
                                       width: "100",
                                       height: "100"
@@ -55157,7 +55195,8 @@ var staticRenderFns = [
                                       "background-color": "#f5f5f5"
                                     },
                                     attrs: {
-                                      src: "images/demos/demo3/products/15.jpg",
+                                      src:
+                                        "/frontend/images/demos/demo3/products/15.jpg",
                                       alt: "product",
                                       width: "100",
                                       height: "100"
@@ -55210,7 +55249,8 @@ var staticRenderFns = [
                                       "background-color": "#f5f5f5"
                                     },
                                     attrs: {
-                                      src: "images/demos/demo3/products/16.jpg",
+                                      src:
+                                        "/frontend/images/demos/demo3/products/16.jpg",
                                       alt: "product",
                                       width: "100",
                                       height: "100"
@@ -55266,7 +55306,8 @@ var staticRenderFns = [
                                       "background-color": "#f5f5f5"
                                     },
                                     attrs: {
-                                      src: "images/demos/demo3/products/17.jpg",
+                                      src:
+                                        "/frontend/images/demos/demo3/products/17.jpg",
                                       alt: "product",
                                       width: "100",
                                       height: "100"
@@ -55336,7 +55377,7 @@ var staticRenderFns = [
                       _c("figure", [
                         _c("img", {
                           attrs: {
-                            src: "images/brands/1.png",
+                            src: "/frontend/images/brands/1.png",
                             alt: "brand",
                             width: "180",
                             height: "100"
@@ -55347,7 +55388,7 @@ var staticRenderFns = [
                       _c("figure", [
                         _c("img", {
                           attrs: {
-                            src: "images/brands/2.png",
+                            src: "/frontend/images/brands/2.png",
                             alt: "brand",
                             width: "180",
                             height: "100"
@@ -55358,7 +55399,7 @@ var staticRenderFns = [
                       _c("figure", [
                         _c("img", {
                           attrs: {
-                            src: "images/brands/3.png",
+                            src: "/frontend/images/brands/3.png",
                             alt: "brand",
                             width: "180",
                             height: "100"
@@ -55369,7 +55410,7 @@ var staticRenderFns = [
                       _c("figure", [
                         _c("img", {
                           attrs: {
-                            src: "images/brands/4.png",
+                            src: "/frontend/images/brands/4.png",
                             alt: "brand",
                             width: "180",
                             height: "100"
@@ -55380,7 +55421,7 @@ var staticRenderFns = [
                       _c("figure", [
                         _c("img", {
                           attrs: {
-                            src: "images/brands/5.png",
+                            src: "/frontend/images/brands/5.png",
                             alt: "brand",
                             width: "180",
                             height: "100"
@@ -55420,9 +55461,582 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("h1", [_vm._v("Footer")])
+  return _vm._m(0)
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c("div", [
+        _c(
+          "footer",
+          {
+            staticClass: "footer appear-animate",
+            attrs: {
+              "data-animation-options": "{'name': 'fadeIn', 'duration': '1s'}"
+            }
+          },
+          [
+            _c("div", { staticClass: "container" }, [
+              _c("div", { staticClass: "footer-top" }, [
+                _c("div", { staticClass: "row align-items-center" }, [
+                  _c("div", { staticClass: "col-lg-3" }, [
+                    _c(
+                      "a",
+                      {
+                        staticClass: "logo-footer",
+                        attrs: { href: "demo3.html" }
+                      },
+                      [
+                        _c("img", {
+                          attrs: {
+                            src: "/frontend/images/demos/demo3/logo-footer.png",
+                            alt: "logo-footer",
+                            width: "154",
+                            height: "43"
+                          }
+                        })
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-lg-9" }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "widget widget-newsletter form-wrapper form-wrapper-inline"
+                      },
+                      [
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "newsletter-info mx-auto mr-lg-2 ml-lg-4"
+                          },
+                          [
+                            _c("h4", { staticClass: "widget-title" }, [
+                              _vm._v("Subscribe to our Newsletter")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", [
+                              _vm._v(
+                                "Get all the latest information, Sales and Offers."
+                              )
+                            ])
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "form",
+                          {
+                            staticClass: "input-wrapper input-wrapper-inline",
+                            attrs: { action: "#" }
+                          },
+                          [
+                            _c("input", {
+                              staticClass: "form-control",
+                              attrs: {
+                                type: "email",
+                                name: "email",
+                                id: "email",
+                                placeholder: "Email address here...",
+                                required: ""
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c(
+                              "button",
+                              {
+                                staticClass:
+                                  "btn btn-primary btn-md btn-rounded ml-2",
+                                attrs: { type: "submit" }
+                              },
+                              [
+                                _vm._v("subscribe"),
+                                _c("i", { staticClass: "d-icon-arrow-right" })
+                              ]
+                            )
+                          ]
+                        )
+                      ]
+                    )
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "footer-middle" }, [
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-lg-3 col-md-6" }, [
+                    _c("div", { staticClass: "widget widget-info" }, [
+                      _c("h4", { staticClass: "widget-title" }, [
+                        _vm._v("Contact Info")
+                      ]),
+                      _vm._v(" "),
+                      _c("ul", { staticClass: "widget-body" }, [
+                        _c("li", [
+                          _c("label", [_vm._v("Phone:")]),
+                          _vm._v(" "),
+                          _c("a", { attrs: { href: "tel:#" } }, [
+                            _vm._v("Toll Free (123) 456-7890")
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("li", [
+                          _c("label", [_vm._v("Email:")]),
+                          _vm._v(" "),
+                          _c(
+                            "a",
+                            { attrs: { href: "mailto:mail@riode.com" } },
+                            [_vm._v("mail@riode.com")]
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("li", [
+                          _c("label", [_vm._v("Address:")]),
+                          _vm._v(" "),
+                          _c("a", { attrs: { href: "#" } }, [
+                            _vm._v("123 Street Name, City, England")
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("li", [
+                          _c("label", [_vm._v("WORKING DAYS / HOURS:")])
+                        ]),
+                        _vm._v(" "),
+                        _c("li", [
+                          _c("a", { attrs: { href: "#" } }, [
+                            _vm._v("Mon - Sun / 9:00 AM - 8:00 PM")
+                          ])
+                        ])
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-lg-3 col-md-6" }, [
+                    _c("div", { staticClass: "widget ml-lg-4" }, [
+                      _c("h4", { staticClass: "widget-title" }, [
+                        _vm._v("My Account")
+                      ]),
+                      _vm._v(" "),
+                      _c("ul", { staticClass: "widget-body" }, [
+                        _c("li", [
+                          _c("a", { attrs: { href: "about-us.html" } }, [
+                            _vm._v("About Us")
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("li", [
+                          _c("a", { attrs: { href: "#" } }, [
+                            _vm._v("Order History")
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("li", [
+                          _c("a", { attrs: { href: "#" } }, [_vm._v("Returns")])
+                        ]),
+                        _vm._v(" "),
+                        _c("li", [
+                          _c("a", { attrs: { href: "#" } }, [
+                            _vm._v("Custom Service")
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("li", [
+                          _c("a", { attrs: { href: "#" } }, [
+                            _vm._v("Terms & Condition")
+                          ])
+                        ])
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-lg-3 col-md-6" }, [
+                    _c("div", { staticClass: "widget ml-lg-4" }, [
+                      _c("h4", { staticClass: "widget-title" }, [
+                        _vm._v("Contact Info")
+                      ]),
+                      _vm._v(" "),
+                      _c("ul", { staticClass: "widget-body" }, [
+                        _c("li", [
+                          _c("a", { attrs: { href: "#" } }, [_vm._v("Sign in")])
+                        ]),
+                        _vm._v(" "),
+                        _c("li", [
+                          _c("a", { attrs: { href: "cart.html" } }, [
+                            _vm._v("View Cart")
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("li", [
+                          _c("a", { attrs: { href: "wishlist.html" } }, [
+                            _vm._v("My Wishlist")
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("li", [
+                          _c("a", { attrs: { href: "#" } }, [
+                            _vm._v("Track My Order")
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c("li", [
+                          _c("a", { attrs: { href: "#" } }, [_vm._v("Help")])
+                        ])
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-lg-3 col-md-6" }, [
+                    _c("div", { staticClass: "widget widget-instagram" }, [
+                      _c("h4", { staticClass: "widget-title" }, [
+                        _vm._v("Instagram")
+                      ]),
+                      _vm._v(" "),
+                      _c("figure", { staticClass: "widget-body row" }, [
+                        _c("div", { staticClass: "col-3" }, [
+                          _c("img", {
+                            attrs: {
+                              src: "/frontend/images/instagram/01.jpg",
+                              alt: "instagram 1",
+                              width: "64",
+                              height: "64"
+                            }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "col-3" }, [
+                          _c("img", {
+                            attrs: {
+                              src: "/frontend/images/instagram/02.jpg",
+                              alt: "instagram 2",
+                              width: "64",
+                              height: "64"
+                            }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "col-3" }, [
+                          _c("img", {
+                            attrs: {
+                              src: "/frontend/images/instagram/03.jpg",
+                              alt: "instagram 3",
+                              width: "64",
+                              height: "64"
+                            }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "col-3" }, [
+                          _c("img", {
+                            attrs: {
+                              src: "/frontend/images/instagram/04.jpg",
+                              alt: "instagram 4",
+                              width: "64",
+                              height: "64"
+                            }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "col-3" }, [
+                          _c("img", {
+                            attrs: {
+                              src: "/frontend/images/instagram/05.jpg",
+                              alt: "instagram 5",
+                              width: "64",
+                              height: "64"
+                            }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "col-3" }, [
+                          _c("img", {
+                            attrs: {
+                              src: "/frontend/images/instagram/06.jpg",
+                              alt: "instagram 6",
+                              width: "64",
+                              height: "64"
+                            }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "col-3" }, [
+                          _c("img", {
+                            attrs: {
+                              src: "/frontend/images/instagram/07.jpg",
+                              alt: "instagram 7",
+                              width: "64",
+                              height: "64"
+                            }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "col-3" }, [
+                          _c("img", {
+                            attrs: {
+                              src: "/frontend/images/instagram/08.jpg",
+                              alt: "instagram 8",
+                              width: "64",
+                              height: "64"
+                            }
+                          })
+                        ])
+                      ])
+                    ])
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "footer-bottom" }, [
+                _c("div", { staticClass: "footer-left" }, [
+                  _c("figure", { staticClass: "payment" }, [
+                    _c("img", {
+                      attrs: {
+                        src: "/frontend/images/payment.png",
+                        alt: "payment",
+                        width: "159",
+                        height: "29"
+                      }
+                    })
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "footer-center" }, [
+                  _c("p", { staticClass: "copyright" }, [
+                    _vm._v("Riode eCommerce © 2021. All Rights Reserved")
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "footer-right" }, [
+                  _c("div", { staticClass: "social-links" }, [
+                    _c("a", {
+                      staticClass:
+                        "social-link social-facebook fab fa-facebook-f",
+                      attrs: { href: "#" }
+                    }),
+                    _vm._v(" "),
+                    _c("a", {
+                      staticClass: "social-link social-twitter fab fa-twitter",
+                      attrs: { href: "#" }
+                    }),
+                    _vm._v(" "),
+                    _c("a", {
+                      staticClass:
+                        "social-link social-linkedin fab fa-linkedin-in",
+                      attrs: { href: "#" }
+                    })
+                  ])
+                ])
+              ])
+            ])
+          ]
+        )
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "sticky-footer sticky-content fix-bottom" }, [
+        _c(
+          "a",
+          { staticClass: "sticky-link active", attrs: { href: "demo3.html" } },
+          [
+            _c("i", { staticClass: "d-icon-home" }),
+            _vm._v(" "),
+            _c("span", [_vm._v("Home")])
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "a",
+          { staticClass: "sticky-link", attrs: { href: "demo3-shop.html" } },
+          [
+            _c("i", { staticClass: "d-icon-volume" }),
+            _vm._v(" "),
+            _c("span", [_vm._v("Categories")])
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "a",
+          { staticClass: "sticky-link", attrs: { href: "wishlist.html" } },
+          [
+            _c("i", { staticClass: "d-icon-heart" }),
+            _vm._v(" "),
+            _c("span", [_vm._v("Wishlist")])
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "a",
+          { staticClass: "sticky-link", attrs: { href: "account.html" } },
+          [
+            _c("i", { staticClass: "d-icon-user" }),
+            _vm._v(" "),
+            _c("span", [_vm._v("Account")])
+          ]
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "header-search hs-toggle dir-up" }, [
+          _c(
+            "a",
+            { staticClass: "search-toggle sticky-link", attrs: { href: "#" } },
+            [
+              _c("i", { staticClass: "d-icon-search" }),
+              _vm._v(" "),
+              _c("span", [_vm._v("Search")])
+            ]
+          ),
+          _vm._v(" "),
+          _c("form", { staticClass: "input-wrapper", attrs: { action: "#" } }, [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: {
+                type: "text",
+                name: "search",
+                autocomplete: "off",
+                placeholder: "Search your keyword...",
+                required: ""
+              }
+            }),
+            _vm._v(" "),
+            _c(
+              "button",
+              { staticClass: "btn btn-search", attrs: { type: "submit" } },
+              [_c("i", { staticClass: "d-icon-search" })]
+            )
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c(
+        "a",
+        {
+          staticClass: "scroll-top",
+          attrs: {
+            id: "scroll-top",
+            href: "#top",
+            title: "Top",
+            role: "button"
+          }
+        },
+        [_c("i", { staticClass: "d-icon-arrow-up" })]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "pswp",
+          attrs: { tabindex: "-1", role: "dialog", "aria-hidden": "true" }
+        },
+        [
+          _c("div", { staticClass: "pswp__bg" }),
+          _vm._v(" "),
+          _c("div", { staticClass: "pswp__scroll-wrap" }, [
+            _c("div", { staticClass: "pswp__container" }, [
+              _c("div", { staticClass: "pswp__item" }),
+              _vm._v(" "),
+              _c("div", { staticClass: "pswp__item" }),
+              _vm._v(" "),
+              _c("div", { staticClass: "pswp__item" })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "pswp__ui pswp__ui--hidden" }, [
+              _c("div", { staticClass: "pswp__top-bar" }, [
+                _c("div", { staticClass: "pswp__counter" }),
+                _vm._v(" "),
+                _c("button", {
+                  staticClass: "pswp__button pswp__button--close",
+                  attrs: { "aria-label": "Close (Esc)" }
+                }),
+                _vm._v(" "),
+                _c("button", {
+                  staticClass: "pswp__button pswp__button--zoom",
+                  attrs: { "aria-label": "Zoom in/out" }
+                }),
+                _vm._v(" "),
+                _c("div", { staticClass: "pswp__preloader" }, [
+                  _c("div", { staticClass: "loading-spin" })
+                ])
+              ]),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "pswp__share-modal pswp__share-modal--hidden pswp__single-tap"
+                },
+                [_c("div", { staticClass: "pswp__share-tooltip" })]
+              ),
+              _vm._v(" "),
+              _c("button", {
+                staticClass: "pswp__button--arrow--left",
+                attrs: { "aria-label": "Previous (arrow left)" }
+              }),
+              _vm._v(" "),
+              _c("button", {
+                staticClass: "pswp__button--arrow--right",
+                attrs: { "aria-label": "Next (arrow right)" }
+              }),
+              _vm._v(" "),
+              _c("div", { staticClass: "pswp__caption" }, [
+                _c("div", { staticClass: "pswp__caption__center" })
+              ])
+            ])
+          ])
+        ]
+      ),
+      _vm._v(" "),
+      _c("div", { staticClass: "mobile-menu-wrapper" }, [
+        _c("div", { staticClass: "mobile-menu-overlay" }),
+        _vm._v(" "),
+        _c("a", { staticClass: "mobile-menu-close", attrs: { href: "#" } }, [
+          _c("i", { staticClass: "d-icon-times" })
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "mobile-menu-container scrollable" }, [
+          _c("form", { staticClass: "input-wrapper", attrs: { action: "#" } }, [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: {
+                type: "text",
+                name: "search",
+                autocomplete: "off",
+                placeholder: "Search your keyword...",
+                required: ""
+              }
+            }),
+            _vm._v(" "),
+            _c(
+              "button",
+              { staticClass: "btn btn-search", attrs: { type: "submit" } },
+              [_c("i", { staticClass: "d-icon-search" })]
+            )
+          ]),
+          _vm._v(" "),
+          _c("ul", { staticClass: "mobile-menu mmenu-anim" }, [
+            _c("li", [_c("a", { attrs: { href: "/" } }, [_vm._v("Home")])]),
+            _vm._v(" "),
+            _c("li", [_c("a", { attrs: { href: "/buy" } }, [_vm._v("Buy")])]),
+            _vm._v(" "),
+            _c("li", [_c("a", { attrs: { href: "/sell" } }, [_vm._v("Sell")])]),
+            _vm._v(" "),
+            _c("li", [_c("a", { attrs: { href: "/rent" } }, [_vm._v("Rent")])]),
+            _vm._v(" "),
+            _c("li", [_c("a", { attrs: { href: "/blog" } }, [_vm._v("News")])]),
+            _vm._v(" "),
+            _c("li", [
+              _c("a", { attrs: { href: "/about" } }, [_vm._v("About")])
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c("a", { attrs: { href: "#" } }, [_vm._v("Term and Condition")])
+            ])
+          ])
+        ])
+      ])
+    ])
+  }
+]
 render._withStripped = true
 
 
@@ -55445,9 +56059,483 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("h1", [_vm._v("Header")])
+  return _c(
+    "div",
+    { staticClass: "page-wrapper", staticStyle: { opacity: "1" } },
+    [
+      _c("header", { staticClass: "header header-border" }, [
+        _vm._m(0),
+        _vm._v(" "),
+        _vm._m(1),
+        _vm._v(" "),
+        _c("div", { staticClass: "header-bottom d-lg-show" }, [
+          _c("div", { staticClass: "container" }, [
+            _c("div", { staticClass: "header-left" }, [
+              _c("nav", { staticClass: "main-nav" }, [
+                _c("ul", { staticClass: "menu" }, [
+                  _c(
+                    "li",
+                    [
+                      _c("router-link", { attrs: { to: "/" } }, [
+                        _vm._v("Home")
+                      ])
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "li",
+                    [
+                      _c("router-link", { attrs: { to: "/buy" } }, [
+                        _vm._v("Buy")
+                      ])
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "li",
+                    [
+                      _c("router-link", { attrs: { to: "/sell" } }, [
+                        _vm._v("Sell")
+                      ])
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "li",
+                    [
+                      _c("router-link", { attrs: { to: "/rent" } }, [
+                        _vm._v("Rent")
+                      ])
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "li",
+                    [
+                      _c("router-link", { attrs: { to: "/blog" } }, [
+                        _vm._v("News")
+                      ])
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "li",
+                    [
+                      _c("router-link", { attrs: { to: "/about" } }, [
+                        _vm._v("About")
+                      ])
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "li",
+                    [
+                      _c(
+                        "router-link",
+                        { attrs: { to: "/term_and_condition" } },
+                        [_vm._v("Terms and conditions")]
+                      )
+                    ],
+                    1
+                  )
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _vm._m(2)
+          ])
+        ])
+      ])
+    ]
+  )
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "header-top" }, [
+      _c("div", { staticClass: "container" }, [
+        _c("div", { staticClass: "header-left" }, [
+          _c("p", { staticClass: "welcome-msg" }, [
+            _vm._v("Welcome to Riode store message or remove it!")
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "header-right" }, [
+          _c("div", { staticClass: "dropdown" }, [
+            _c("a", { attrs: { href: "#currency" } }, [_vm._v("USD")]),
+            _vm._v(" "),
+            _c("ul", { staticClass: "dropdown-box" }, [
+              _c("li", [_c("a", { attrs: { href: "#USD" } }, [_vm._v("USD")])]),
+              _vm._v(" "),
+              _c("li", [_c("a", { attrs: { href: "#EUR" } }, [_vm._v("EUR")])])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "dropdown ml-5" }, [
+            _c("a", { attrs: { href: "#language" } }, [_vm._v("ENG")]),
+            _vm._v(" "),
+            _c("ul", { staticClass: "dropdown-box" }, [
+              _c("li", [_c("a", { attrs: { href: "#USD" } }, [_vm._v("ENG")])]),
+              _vm._v(" "),
+              _c("li", [_c("a", { attrs: { href: "#EUR" } }, [_vm._v("FRH")])])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("span", { staticClass: "divider" }),
+          _vm._v(" "),
+          _c(
+            "a",
+            { staticClass: "contact d-lg-show", attrs: { href: "/contact" } },
+            [_c("i", { staticClass: "d-icon-map" }), _vm._v("Contact")]
+          ),
+          _vm._v(" "),
+          _c("a", { staticClass: "help d-lg-show", attrs: { href: "#" } }, [
+            _c("i", { staticClass: "d-icon-info" }),
+            _vm._v(" Need Help")
+          ]),
+          _vm._v(" "),
+          _c(
+            "a",
+            {
+              staticClass: "login-link",
+              attrs: { href: "ajax/login.html", "data-toggle": "login-modal" }
+            },
+            [_c("i", { staticClass: "d-icon-user" }), _vm._v("Sign in")]
+          ),
+          _vm._v(" "),
+          _c("span", { staticClass: "delimiter" }, [_vm._v("/")]),
+          _vm._v(" "),
+          _c(
+            "a",
+            {
+              staticClass: "register-link ml-0",
+              attrs: { href: "ajax/login.html", "data-toggle": "login-modal" }
+            },
+            [_vm._v("Register")]
+          )
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "header-middle sticky-header fix-top sticky-content" },
+      [
+        _c("div", { staticClass: "container" }, [
+          _c("div", { staticClass: "header-left" }, [
+            _c(
+              "a",
+              { staticClass: "mobile-menu-toggle", attrs: { href: "#" } },
+              [_c("i", { staticClass: "d-icon-bars2" })]
+            ),
+            _vm._v(" "),
+            _c("a", { staticClass: "logo", attrs: { href: "/" } }, [
+              _c("img", {
+                attrs: {
+                  src: "/frontend/images/logo.png",
+                  alt: "logo",
+                  width: "153",
+                  height: "44"
+                }
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "header-search hs-simple" }, [
+              _c(
+                "form",
+                { staticClass: "input-wrapper", attrs: { action: "#" } },
+                [
+                  _c("input", {
+                    staticClass: "form-control",
+                    attrs: {
+                      type: "text",
+                      name: "search",
+                      autocomplete: "off",
+                      placeholder: "Search...",
+                      required: ""
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "button",
+                    {
+                      staticClass: "btn btn-search",
+                      attrs: { type: "submit" }
+                    },
+                    [_c("i", { staticClass: "d-icon-search" })]
+                  )
+                ]
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "header-right" }, [
+            _c(
+              "a",
+              {
+                staticClass: "icon-box icon-box-side",
+                attrs: { href: "tel:#" }
+              },
+              [
+                _c("div", { staticClass: "icon-box-icon mr-0 mr-lg-2" }, [
+                  _c("i", { staticClass: "d-icon-phone" })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "icon-box-content d-lg-show" }, [
+                  _c("h4", { staticClass: "icon-box-title" }, [
+                    _vm._v("Call Us Now:")
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [_vm._v("0(800) 123-456")])
+                ])
+              ]
+            ),
+            _vm._v(" "),
+            _c("span", { staticClass: "divider" }),
+            _vm._v(" "),
+            _c(
+              "a",
+              { staticClass: "wishlist", attrs: { href: "wishlist.html" } },
+              [_c("i", { staticClass: "d-icon-heart" })]
+            ),
+            _vm._v(" "),
+            _c("span", { staticClass: "divider" }),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "dropdown cart-dropdown type2 mr-0 mr-lg-2" },
+              [
+                _c(
+                  "a",
+                  {
+                    staticClass: "cart-toggle label-block link",
+                    attrs: { href: "#" }
+                  },
+                  [
+                    _c("div", { staticClass: "cart-label d-lg-show" }, [
+                      _c("span", { staticClass: "cart-name" }, [
+                        _vm._v("Shopping Cart:")
+                      ]),
+                      _vm._v(" "),
+                      _c("span", { staticClass: "cart-price" }, [
+                        _vm._v("$0.00")
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("i", { staticClass: "d-icon-bag" }, [
+                      _c("span", { staticClass: "cart-count" }, [_vm._v("2")])
+                    ])
+                  ]
+                ),
+                _vm._v(" "),
+                _c("div", { staticClass: "dropdown-box" }, [
+                  _c("div", { staticClass: "products scrollable" }, [
+                    _c("div", { staticClass: "product product-cart" }, [
+                      _c("figure", { staticClass: "product-media" }, [
+                        _c("a", { attrs: { href: "product.html" } }, [
+                          _c("img", {
+                            attrs: {
+                              src: "/frontend/images/cart/product-1.jpg",
+                              alt: "product",
+                              width: "80",
+                              height: "88"
+                            }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c(
+                          "button",
+                          { staticClass: "btn btn-link btn-close" },
+                          [
+                            _c("i", { staticClass: "fas fa-times" }),
+                            _c("span", { staticClass: "sr-only" }, [
+                              _vm._v("Close")
+                            ])
+                          ]
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "product-detail" }, [
+                        _c(
+                          "a",
+                          {
+                            staticClass: "product-name",
+                            attrs: { href: "product.html" }
+                          },
+                          [_vm._v("Riode White Trends")]
+                        ),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "price-box" }, [
+                          _c("span", { staticClass: "product-quantity" }, [
+                            _vm._v("1")
+                          ]),
+                          _vm._v(" "),
+                          _c("span", { staticClass: "product-price" }, [
+                            _vm._v("$21.00")
+                          ])
+                        ])
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "product product-cart" }, [
+                      _c("figure", { staticClass: "product-media" }, [
+                        _c("a", { attrs: { href: "product.html" } }, [
+                          _c("img", {
+                            attrs: {
+                              src: "/frontend/images/cart/product-2.jpg",
+                              alt: "product",
+                              width: "80",
+                              height: "88"
+                            }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c(
+                          "button",
+                          { staticClass: "btn btn-link btn-close" },
+                          [
+                            _c("i", { staticClass: "fas fa-times" }),
+                            _c("span", { staticClass: "sr-only" }, [
+                              _vm._v("Close")
+                            ])
+                          ]
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "product-detail" }, [
+                        _c(
+                          "a",
+                          {
+                            staticClass: "product-name",
+                            attrs: { href: "product.html" }
+                          },
+                          [
+                            _vm._v(
+                              "Dark Blue Women’s\n                                          Leomora Hat"
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "price-box" }, [
+                          _c("span", { staticClass: "product-quantity" }, [
+                            _vm._v("1")
+                          ]),
+                          _vm._v(" "),
+                          _c("span", { staticClass: "product-price" }, [
+                            _vm._v("$118.00")
+                          ])
+                        ])
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "cart-total" }, [
+                    _c("label", [_vm._v("Subtotal:")]),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "price" }, [_vm._v("$139.00")])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "cart-action" }, [
+                    _c(
+                      "a",
+                      {
+                        staticClass: "btn btn-dark btn-link",
+                        attrs: { href: "/order" }
+                      },
+                      [_vm._v("View Cart")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      {
+                        staticClass: "btn btn-dark",
+                        attrs: { href: "order_checkout" }
+                      },
+                      [_c("span", [_vm._v("Go To Checkout")])]
+                    )
+                  ])
+                ])
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "header-search hs-toggle mobile-search" },
+              [
+                _c(
+                  "a",
+                  { staticClass: "search-toggle", attrs: { href: "#" } },
+                  [_c("i", { staticClass: "d-icon-search" })]
+                ),
+                _vm._v(" "),
+                _c(
+                  "form",
+                  { staticClass: "input-wrapper", attrs: { action: "#" } },
+                  [
+                    _c("input", {
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "text",
+                        name: "search",
+                        autocomplete: "off",
+                        placeholder: "Search your keyword...",
+                        required: ""
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn btn-search",
+                        attrs: { type: "submit" }
+                      },
+                      [_c("i", { staticClass: "d-icon-search" })]
+                    )
+                  ]
+                )
+              ]
+            )
+          ])
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "header-right" }, [
+      _c("a", { attrs: { href: "#" } }, [
+        _c("i", { staticClass: "d-icon-card" }),
+        _vm._v("Special Offers")
+      ]),
+      _vm._v(" "),
+      _c(
+        "a",
+        {
+          staticClass: "ml-6",
+          attrs: {
+            href: "https://d-themes.com/buynow/riodehtml",
+            target: "_blank"
+          }
+        },
+        [_vm._v("Buy Riode!")]
+      )
+    ])
+  }
+]
 render._withStripped = true
 
 
@@ -55518,7 +56606,7 @@ var staticRenderFns = [
                         _c("a", { attrs: { href: "product-simple.html" } }, [
                           _c("img", {
                             attrs: {
-                              src: "images/products/product18.jpg",
+                              src: "/frontend/images/products/product18.jpg",
                               width: "100",
                               height: "100",
                               alt: "product"
@@ -55579,7 +56667,7 @@ var staticRenderFns = [
                         _c("a", { attrs: { href: "product-simple.html" } }, [
                           _c("img", {
                             attrs: {
-                              src: "images/products/product19.jpg",
+                              src: "/frontend/images/products/product19.jpg",
                               width: "100",
                               height: "100",
                               alt: "product"
@@ -55966,7 +57054,8 @@ var staticRenderFns = [
         {
           staticClass: "page-header",
           staticStyle: {
-            "background-image": "url('images/shop/page-header-back.jpg')",
+            "background-image":
+              "url('/frontend/images/shop/page-header-back.jpg')",
             "background-color": "#3C63A4"
           }
         },
@@ -56402,7 +57491,7 @@ var staticRenderFns = [
                     _c("a", { attrs: { href: "product.html" } }, [
                       _c("img", {
                         attrs: {
-                          src: "images/shop/13.jpg",
+                          src: "/frontend/images/shop/13.jpg",
                           alt: "product",
                           width: "260",
                           height: "293"
@@ -56504,7 +57593,7 @@ var staticRenderFns = [
                     _c("a", { attrs: { href: "product.html" } }, [
                       _c("img", {
                         attrs: {
-                          src: "images/shop/1.jpg",
+                          src: "/frontend/images/shop/1.jpg",
                           alt: "product",
                           width: "260",
                           height: "293"
@@ -56615,7 +57704,7 @@ var staticRenderFns = [
                     _c("a", { attrs: { href: "product.html" } }, [
                       _c("img", {
                         attrs: {
-                          src: "images/shop/2.jpg",
+                          src: "/frontend/images/shop/2.jpg",
                           alt: "product",
                           width: "260",
                           height: "293"
@@ -56722,7 +57811,7 @@ var staticRenderFns = [
                     _c("a", { attrs: { href: "product.html" } }, [
                       _c("img", {
                         attrs: {
-                          src: "images/shop/4.jpg",
+                          src: "/frontend/images/shop/4.jpg",
                           alt: "product",
                           width: "260",
                           height: "293"
@@ -56818,7 +57907,7 @@ var staticRenderFns = [
                     _c("a", { attrs: { href: "product.html" } }, [
                       _c("img", {
                         attrs: {
-                          src: "images/shop/14.jpg",
+                          src: "/frontend/images/shop/14.jpg",
                           alt: "product",
                           width: "260",
                           height: "293"
@@ -56914,7 +58003,7 @@ var staticRenderFns = [
                     _c("a", { attrs: { href: "product.html" } }, [
                       _c("img", {
                         attrs: {
-                          src: "images/shop/12.jpg",
+                          src: "/frontend/images/shop/12.jpg",
                           alt: "product",
                           width: "260",
                           height: "293"
@@ -57162,9 +58251,10 @@ var staticRenderFns = [
                       _c("figure", { staticClass: "product-image" }, [
                         _c("img", {
                           attrs: {
-                            src: "images/product/product-1-1-580x652.jpg",
+                            src:
+                              "/frontend/images/product/product-1-1-580x652.jpg",
                             "data-zoom-image":
-                              "images/product/product-1-1-800x900.jpg",
+                              "/frontend/images/product/product-1-1-800x900.jpg",
                             alt: "Women's Brown Leather Backpacks",
                             width: "800",
                             height: "900"
@@ -57175,9 +58265,10 @@ var staticRenderFns = [
                       _c("figure", { staticClass: "product-image" }, [
                         _c("img", {
                           attrs: {
-                            src: "images/product/product-1-2-580x652.jpg",
+                            src:
+                              "/frontend/images/product/product-1-2-580x652.jpg",
                             "data-zoom-image":
-                              "images/product/product-1-2-800x900.jpg",
+                              "/frontend/images/product/product-1-2-800x900.jpg",
                             alt: "Women's Brown Leather Backpacks",
                             width: "800",
                             height: "900"
@@ -57188,9 +58279,10 @@ var staticRenderFns = [
                       _c("figure", { staticClass: "product-image" }, [
                         _c("img", {
                           attrs: {
-                            src: "images/product/product-1-3-580x652.jpg",
+                            src:
+                              "/frontend/images/product/product-1-3-580x652.jpg",
                             "data-zoom-image":
-                              "images/product/product-1-3-800x900.jpg",
+                              "/frontend/images/product/product-1-3-800x900.jpg",
                             alt: "Women's Brown Leather Backpacks",
                             width: "800",
                             height: "900"
@@ -57201,9 +58293,10 @@ var staticRenderFns = [
                       _c("figure", { staticClass: "product-image" }, [
                         _c("img", {
                           attrs: {
-                            src: "images/product/product-1-4-580x652.jpg",
+                            src:
+                              "/frontend/images/product/product-1-4-580x652.jpg",
                             "data-zoom-image":
-                              "images/product/product-1-4-800x900.jpg",
+                              "/frontend/images/product/product-1-4-800x900.jpg",
                             alt: "Women's Brown Leather Backpacks",
                             width: "800",
                             height: "900"
@@ -57218,7 +58311,8 @@ var staticRenderFns = [
                       _c("div", { staticClass: "product-thumb active" }, [
                         _c("img", {
                           attrs: {
-                            src: "images/product/product-1-1-109x122.jpg",
+                            src:
+                              "/frontend/images/product/product-1-1-109x122.jpg",
                             alt: "product thumbnail",
                             width: "109",
                             height: "122"
@@ -57229,7 +58323,8 @@ var staticRenderFns = [
                       _c("div", { staticClass: "product-thumb" }, [
                         _c("img", {
                           attrs: {
-                            src: "images/product/product-1-2-109x122.jpg",
+                            src:
+                              "/frontend/images/product/product-1-2-109x122.jpg",
                             alt: "product thumbnail",
                             width: "109",
                             height: "122"
@@ -57240,7 +58335,8 @@ var staticRenderFns = [
                       _c("div", { staticClass: "product-thumb" }, [
                         _c("img", {
                           attrs: {
-                            src: "images/product/product-1-3-109x122.jpg",
+                            src:
+                              "/frontend/images/product/product-1-3-109x122.jpg",
                             alt: "product thumbnail",
                             width: "109",
                             height: "122"
@@ -57251,7 +58347,8 @@ var staticRenderFns = [
                       _c("div", { staticClass: "product-thumb" }, [
                         _c("img", {
                           attrs: {
-                            src: "images/product/product-1-4-109x122.jpg",
+                            src:
+                              "/frontend/images/product/product-1-4-109x122.jpg",
                             alt: "product thumbnail",
                             width: "109",
                             height: "122"
@@ -57305,7 +58402,8 @@ var staticRenderFns = [
                         _c("span", { staticClass: "product-nav-popup" }, [
                           _c("img", {
                             attrs: {
-                              src: "images/product/product-thumb-prev.jpg",
+                              src:
+                                "/frontend/images/product/product-thumb-prev.jpg",
                               alt: "product thumbnail",
                               width: "110",
                               height: "123"
@@ -57327,7 +58425,8 @@ var staticRenderFns = [
                         _c("span", { staticClass: "product-nav-popup" }, [
                           _c("img", {
                             attrs: {
-                              src: "images/product/product-thumb-next.jpg",
+                              src:
+                                "/frontend/images/product/product-thumb-next.jpg",
                               alt: "product thumbnail",
                               width: "110",
                               height: "123"
@@ -57795,7 +58894,7 @@ var staticRenderFns = [
                           [
                             _c("img", {
                               attrs: {
-                                src: "images/product/product.jpg",
+                                src: "/frontend/images/product/product.jpg",
                                 width: "559",
                                 height: "370",
                                 alt: "Product"
@@ -57927,7 +59026,7 @@ var staticRenderFns = [
                   _c("figure", { staticClass: "size-image mt-4 mb-4" }, [
                     _c("img", {
                       attrs: {
-                        src: "images/product/size_guide.png",
+                        src: "/frontend/images/product/size_guide.png",
                         alt: "Size Guide Image",
                         width: "217",
                         height: "398"
@@ -58033,7 +59132,7 @@ var staticRenderFns = [
                               _c("a", { attrs: { href: "#" } }, [
                                 _c("img", {
                                   attrs: {
-                                    src: "images/blog/comments/1.jpg",
+                                    src: "/frontend/images/blog/comments/1.jpg",
                                     alt: "avatar"
                                   }
                                 })
@@ -58100,7 +59199,7 @@ var staticRenderFns = [
                               _c("a", { attrs: { href: "#" } }, [
                                 _c("img", {
                                   attrs: {
-                                    src: "images/blog/comments/2.jpg",
+                                    src: "/frontend/images/blog/comments/2.jpg",
                                     alt: "avatar"
                                   }
                                 })
@@ -58361,7 +59460,7 @@ var staticRenderFns = [
                     _c("a", { attrs: { href: "product.html" } }, [
                       _c("img", {
                         attrs: {
-                          src: "images/product/featured1.jpg",
+                          src: "/frontend/images/product/featured1.jpg",
                           alt: "product",
                           width: "280",
                           height: "315"
@@ -58461,7 +59560,7 @@ var staticRenderFns = [
                     _c("a", { attrs: { href: "product.html" } }, [
                       _c("img", {
                         attrs: {
-                          src: "images/product/featured2.jpg",
+                          src: "/frontend/images/product/featured2.jpg",
                           alt: "product",
                           width: "280",
                           height: "315"
@@ -58564,7 +59663,7 @@ var staticRenderFns = [
                     _c("a", { attrs: { href: "product.html" } }, [
                       _c("img", {
                         attrs: {
-                          src: "images/product/featured3.jpg",
+                          src: "/frontend/images/product/featured3.jpg",
                           alt: "product",
                           width: "280",
                           height: "315"
@@ -58656,7 +59755,7 @@ var staticRenderFns = [
                     _c("a", { attrs: { href: "product.html" } }, [
                       _c("img", {
                         attrs: {
-                          src: "images/product/featured4.jpg",
+                          src: "/frontend/images/product/featured4.jpg",
                           alt: "product",
                           width: "280",
                           height: "315"
@@ -59049,7 +60148,8 @@ var staticRenderFns = [
                 {
                   staticClass: "shop-banner-default banner mb-1",
                   staticStyle: {
-                    "background-image": "url('images/shop/banner.jpg')",
+                    "background-image":
+                      "url('/frontend/images/shop/banner.jpg')",
                     "background-color": "#4e6582"
                   }
                 },
@@ -59209,7 +60309,7 @@ var staticRenderFns = [
                         _c("a", { attrs: { href: "/sell_detail" } }, [
                           _c("img", {
                             attrs: {
-                              src: "images/shop/1.jpg",
+                              src: "/frontend/images/shop/1.jpg",
                               alt: "product",
                               width: "280",
                               height: "315"
@@ -59321,7 +60421,7 @@ var staticRenderFns = [
                         _c("a", { attrs: { href: "/sell_detail" } }, [
                           _c("img", {
                             attrs: {
-                              src: "images/shop/2.jpg",
+                              src: "/frontend/images/shop/2.jpg",
                               alt: "product",
                               width: "280",
                               height: "315"
@@ -59427,7 +60527,7 @@ var staticRenderFns = [
                         _c("a", { attrs: { href: "/sell_detail" } }, [
                           _c("img", {
                             attrs: {
-                              src: "images/shop/3.jpg",
+                              src: "/frontend/images/shop/3.jpg",
                               alt: "product",
                               width: "280",
                               height: "315"
@@ -59522,7 +60622,7 @@ var staticRenderFns = [
                         _c("a", { attrs: { href: "/sell_detail" } }, [
                           _c("img", {
                             attrs: {
-                              src: "images/shop/4.jpg",
+                              src: "/frontend/images/shop/4.jpg",
                               alt: "product",
                               width: "280",
                               height: "315"
@@ -59617,7 +60717,7 @@ var staticRenderFns = [
                         _c("a", { attrs: { href: "/sell_detail" } }, [
                           _c("img", {
                             attrs: {
-                              src: "images/shop/5.jpg",
+                              src: "/frontend/images/shop/5.jpg",
                               alt: "product",
                               width: "280",
                               height: "315"
@@ -59712,7 +60812,7 @@ var staticRenderFns = [
                         _c("a", { attrs: { href: "/sell_detail" } }, [
                           _c("img", {
                             attrs: {
-                              src: "images/shop/6.jpg",
+                              src: "/frontend/images/shop/6.jpg",
                               alt: "product",
                               width: "280",
                               height: "315"
@@ -59818,7 +60918,7 @@ var staticRenderFns = [
                         _c("a", { attrs: { href: "/sell_detail" } }, [
                           _c("img", {
                             attrs: {
-                              src: "images/shop/7.jpg",
+                              src: "/frontend/images/shop/7.jpg",
                               alt: "product",
                               width: "280",
                               height: "315"
@@ -59921,7 +61021,7 @@ var staticRenderFns = [
                         _c("a", { attrs: { href: "/sell_detail" } }, [
                           _c("img", {
                             attrs: {
-                              src: "images/shop/8.jpg",
+                              src: "/frontend/images/shop/8.jpg",
                               alt: "product",
                               width: "280",
                               height: "315"
@@ -60016,7 +61116,7 @@ var staticRenderFns = [
                         _c("a", { attrs: { href: "/sell_detail" } }, [
                           _c("img", {
                             attrs: {
-                              src: "images/shop/9.jpg",
+                              src: "/frontend/images/shop/9.jpg",
                               alt: "product",
                               width: "280",
                               height: "315"
@@ -60111,7 +61211,7 @@ var staticRenderFns = [
                         _c("a", { attrs: { href: "/sell_detail" } }, [
                           _c("img", {
                             attrs: {
-                              src: "images/shop/10.jpg",
+                              src: "/frontend/images/shop/10.jpg",
                               alt: "product",
                               width: "280",
                               height: "315"
@@ -60214,7 +61314,7 @@ var staticRenderFns = [
                         _c("a", { attrs: { href: "/sell_detail" } }, [
                           _c("img", {
                             attrs: {
-                              src: "images/shop/11.jpg",
+                              src: "/frontend/images/shop/11.jpg",
                               alt: "product",
                               width: "280",
                               height: "315"
@@ -60309,7 +61409,7 @@ var staticRenderFns = [
                         _c("a", { attrs: { href: "/sell_detail" } }, [
                           _c("img", {
                             attrs: {
-                              src: "images/shop/12.jpg",
+                              src: "/frontend/images/shop/12.jpg",
                               alt: "product",
                               width: "280",
                               height: "315"
