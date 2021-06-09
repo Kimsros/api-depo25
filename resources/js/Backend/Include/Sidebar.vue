@@ -1,5 +1,5 @@
 <template>
-     <nav class="sidebar" data-trigger="scrollbar">
+    <nav class="sidebar" data-trigger="scrollbar">
             <!-- Sidebar Header -->
             <div class="sidebar-header d-none d-lg-block">
                <!-- Sidebar Toggle Pin Button -->

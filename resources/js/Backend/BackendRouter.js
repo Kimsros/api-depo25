@@ -11,8 +11,8 @@ import Product_Category from "./Product_Category/router.js";
 import Purchase from "./Purchase/router.js";
 import Role_Permission from "./Role_Permission/router.js";
 import User from "./User/router.js";
-
-const routes=[...Advertising.router,...Blog.router,...Blog_Category.router,...Brand.router,...Contact.router,...Delivery.router,...Payment.router,...Pricing.router,...Product.router,...Product_Category.router,...Purchase.router,...Role_Permission.router,...User.router];
+import Dashboard from "./Dashboard/router.js";
+const routes=[...Advertising.router,...Blog.router,...Blog_Category.router,...Brand.router,...Contact.router,...Delivery.router,...Payment.router,...Pricing.router,...Product.router,...Product_Category.router,...Purchase.router,...Role_Permission.router,...User.router,...Dashboard.router];
 export default{
     router:routes
 }
