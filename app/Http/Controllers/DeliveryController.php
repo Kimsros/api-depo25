@@ -14,7 +14,11 @@ class DeliveryController extends Controller
      */
     public function index()
     {
-        //
+        try{
+
+        }catch(\Exception $e){
+            return response()->json(['error'=>$e->getMessage()]);
+        }
     }
 
     /**
@@ -24,7 +28,11 @@ class DeliveryController extends Controller
      */
     public function create()
     {
-        //
+        try{
+
+        }catch(\Exception $e){
+            return response()->json(['error'=>$e->getMessage()]);
+        }
     }
 
     /**
@@ -35,7 +43,11 @@ class DeliveryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        try{
+
+        }catch(\Exception $e){
+            return response()->json(['error'=>$e->getMessage()]);
+        }
     }
 
     /**
@@ -46,7 +58,11 @@ class DeliveryController extends Controller
      */
     public function show(delivery $delivery)
     {
-        //
+        try{
+
+        }catch(\Exception $e){
+            return response()->json(['error'=>$e->getMessage()]);
+        }
     }
 
     /**
@@ -57,7 +73,11 @@ class DeliveryController extends Controller
      */
     public function edit(delivery $delivery)
     {
-        //
+        try{
+
+        }catch(\Exception $e){
+            return response()->json(['error'=>$e->getMessage()]);
+        }
     }
 
     /**
@@ -69,7 +89,11 @@ class DeliveryController extends Controller
      */
     public function update(Request $request, delivery $delivery)
     {
-        //
+        try{
+
+        }catch(\Exception $e){
+            return response()->json(['error'=>$e->getMessage()]);
+        }
     }
 
     /**
@@ -80,6 +104,10 @@ class DeliveryController extends Controller
      */
     public function destroy(delivery $delivery)
     {
-        //
+        try{
+
+        }catch(\Exception $e){
+            return response()->json(['error'=>$e->getMessage()]);
+        }
     }
 }
