@@ -1,5 +1,6 @@
 <template>
-    <header class="header fixed-top d-flex align-content-center flex-wrap">
+    <!-- Header -->
+      <header class="header fixed-top d-flex align-content-center flex-wrap">
          <!-- Logo -->
          <div class="logo">
             <a href="index.html" class="default-logo"><img src="/backend/assets/img/logo.png" alt=""></a>
@@ -303,4 +304,5 @@
          </div>
          <!-- End Main Header -->
       </header>
+      <!-- End Header -->
 </template>
