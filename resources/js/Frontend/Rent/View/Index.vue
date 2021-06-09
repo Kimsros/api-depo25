@@ -1,7 +1,7 @@
 <template>
       <main class="main">
             <div class="page-header"
-                  style="background-image: url('images/shop/page-header-back.jpg'); background-color: #3C63A4;">
+                  style="background-image: url('/frontend/images/shop/page-header-back.jpg'); background-color: #3C63A4;">
                   <h3 class="page-subtitle">Categories</h3>
                   <h1 class="page-title">List Mode</h1>
                   <ul class="breadcrumb">
@@ -139,7 +139,7 @@
                                           <div class="product product-list">
                                                 <figure class="product-media">
                                                       <a href="product.html">
-                                                            <img src="images/shop/13.jpg" alt="product" width="260" height="293">
+                                                            <img src="/frontend/images/shop/13.jpg" alt="product" width="260" height="293">
                                                       </a>
                                                       <div class="product-label-group">
                                                             <label class="product-label label-new">new</label>
@@ -181,7 +181,7 @@
                                           <div class="product product-list">
                                                 <figure class="product-media">
                                                       <a href="product.html">
-                                                            <img src="images/shop/1.jpg" alt="product" width="260" height="293">
+                                                            <img src="/frontend/images/shop/1.jpg" alt="product" width="260" height="293">
                                                       </a>
                                                       <div class="product-label-group">
                                                             <label class="product-label label-new">new</label>
@@ -224,7 +224,7 @@
                                           <div class="product product-list">
                                                 <figure class="product-media">
                                                       <a href="product.html">
-                                                            <img src="images/shop/2.jpg" alt="product" width="260" height="293">
+                                                            <img src="/frontend/images/shop/2.jpg" alt="product" width="260" height="293">
                                                       </a>
                                                       <div class="product-label-group">
                                                             <label class="product-label label-sale">25% off</label>
@@ -266,7 +266,7 @@
                                           <div class="product product-list">
                                                 <figure class="product-media">
                                                       <a href="product.html">
-                                                            <img src="images/shop/4.jpg" alt="product" width="260" height="293">
+                                                            <img src="/frontend/images/shop/4.jpg" alt="product" width="260" height="293">
                                                       </a>
                                                 </figure>
                                                 <div class="product-details">
@@ -305,7 +305,7 @@
                                           <div class="product product-list">
                                                 <figure class="product-media">
                                                       <a href="product.html">
-                                                            <img src="images/shop/14.jpg" alt="product" width="260" height="293">
+                                                            <img src="/frontend/images/shop/14.jpg" alt="product" width="260" height="293">
                                                       </a>
                                                 </figure>
                                                 <div class="product-details">
@@ -344,7 +344,7 @@
                                           <div class="product product-list">
                                                 <figure class="product-media">
                                                       <a href="product.html">
-                                                            <img src="images/shop/12.jpg" alt="product" width="260" height="293">
+                                                            <img src="/frontend/images/shop/12.jpg" alt="product" width="260" height="293">
                                                       </a>
                                                       <div class="product-label-group">
                                                             <label class="product-label label-sale">8% off</label>

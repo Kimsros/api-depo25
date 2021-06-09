@@ -94,7 +94,7 @@
 						</aside>
 						<div class="col-lg-9 main-content">
 							<div class="shop-banner-default banner mb-1"
-								style="background-image: url('images/shop/banner.jpg'); background-color: #4e6582;">
+								style="background-image: url('/frontend/images/shop/banner.jpg'); background-color: #4e6582;">
 								<div class="banner-content">
 									<h4 class="banner-subtitle font-weight-bold ls-normal text-uppercase text-white">
 										Riode Shop</h4>
@@ -138,7 +138,7 @@
 									<div class="product">
 										<figure class="product-media">
 											<a href="/sell_detail">
-												<img src="images/shop/1.jpg" alt="product" width="280" height="315">
+												<img src="/frontend/images/shop/1.jpg" alt="product" width="280" height="315">
 											</a>
 											<div class="product-label-group">
 												<label class="product-label label-new">new</label>
@@ -180,7 +180,7 @@
 									<div class="product">
 										<figure class="product-media">
 											<a href="/sell_detail">
-												<img src="images/shop/2.jpg" alt="product" width="280" height="315">
+												<img src="/frontend/images/shop/2.jpg" alt="product" width="280" height="315">
 											</a>
 											<div class="product-label-group">
 												<label class="product-label label-sale">25% OFF</label>
@@ -221,7 +221,7 @@
 									<div class="product">
 										<figure class="product-media">
 											<a href="/sell_detail">
-												<img src="images/shop/3.jpg" alt="product" width="280" height="315">
+												<img src="/frontend/images/shop/3.jpg" alt="product" width="280" height="315">
 											</a>
 
 											<div class="product-action-vertical">
@@ -260,7 +260,7 @@
 									<div class="product">
 										<figure class="product-media">
 											<a href="/sell_detail">
-												<img src="images/shop/4.jpg" alt="product" width="280" height="315">
+												<img src="/frontend/images/shop/4.jpg" alt="product" width="280" height="315">
 											</a>
 											<div class="product-action-vertical">
 												<a href="#" class="btn-product-icon btn-cart" data-toggle="modal"
@@ -298,7 +298,7 @@
 									<div class="product">
 										<figure class="product-media">
 											<a href="/sell_detail">
-												<img src="images/shop/5.jpg" alt="product" width="280" height="315">
+												<img src="/frontend/images/shop/5.jpg" alt="product" width="280" height="315">
 											</a>
 											<div class="product-action-vertical">
 												<a href="#" class="btn-product-icon btn-cart" data-toggle="modal"
@@ -336,7 +336,7 @@
 									<div class="product">
 										<figure class="product-media">
 											<a href="/sell_detail">
-												<img src="images/shop/6.jpg" alt="product" width="280" height="315">
+												<img src="/frontend/images/shop/6.jpg" alt="product" width="280" height="315">
 											</a>
 											<div class="product-label-group">
 												<label class="product-label label-sale">20% off</label>
@@ -377,7 +377,7 @@
 									<div class="product">
 										<figure class="product-media">
 											<a href="/sell_detail">
-												<img src="images/shop/7.jpg" alt="product" width="280" height="315">
+												<img src="/frontend/images/shop/7.jpg" alt="product" width="280" height="315">
 											</a>
 											<div class="product-label-group">
 												<label class="product-label label-new">new</label>
@@ -418,7 +418,7 @@
 									<div class="product">
 										<figure class="product-media">
 											<a href="/sell_detail">
-												<img src="images/shop/8.jpg" alt="product" width="280" height="315">
+												<img src="/frontend/images/shop/8.jpg" alt="product" width="280" height="315">
 											</a>
 											<div class="product-action-vertical">
 												<a href="#" class="btn-product-icon btn-cart" data-toggle="modal"
@@ -456,7 +456,7 @@
 									<div class="product">
 										<figure class="product-media">
 											<a href="/sell_detail">
-												<img src="images/shop/9.jpg" alt="product" width="280" height="315">
+												<img src="/frontend/images/shop/9.jpg" alt="product" width="280" height="315">
 											</a>
 											<div class="product-action-vertical">
 												<a href="#" class="btn-product-icon btn-cart" data-toggle="modal"
@@ -494,7 +494,7 @@
 									<div class="product">
 										<figure class="product-media">
 											<a href="/sell_detail">
-												<img src="images/shop/10.jpg" alt="product" width="280" height="315">
+												<img src="/frontend/images/shop/10.jpg" alt="product" width="280" height="315">
 											</a>
 											<div class="product-label-group">
 												<label class="product-label label-new">new</label>
@@ -535,7 +535,7 @@
 									<div class="product">
 										<figure class="product-media">
 											<a href="/sell_detail">
-												<img src="images/shop/11.jpg" alt="product" width="280" height="315">
+												<img src="/frontend/images/shop/11.jpg" alt="product" width="280" height="315">
 											</a>
 											<div class="product-action-vertical">
 												<a href="#" class="btn-product-icon btn-cart" data-toggle="modal"
@@ -573,7 +573,7 @@
 									<div class="product">
 										<figure class="product-media">
 											<a href="/sell_detail">
-												<img src="images/shop/12.jpg" alt="product" width="280" height="315">
+												<img src="/frontend/images/shop/12.jpg" alt="product" width="280" height="315">
 											</a>
 											<div class="product-label-group">
 												<label class="product-label label-sale">8% off</label>

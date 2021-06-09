@@ -16,7 +16,7 @@
                             <article class="post-single">
                                 <figure class="post-media">
                                     <a href="#">
-                                        <img src="images/blog/single/1.jpg" width="880" height="450" alt="post" />
+                                        <img src="/frontend/images/blog/single/1.jpg" width="880" height="450" alt="post" />
                                     </a>
                                 </figure>
                                 <div class="post-details">
@@ -44,7 +44,7 @@
                                         <div class="with-img row align-items-center">
                                             <div class="col-md-6 mb-6">
                                                 <figure>
-                                                    <img src="images/blog/single/2.jpg" alt="image" width="336"
+                                                    <img src="/frontend/images/blog/single/2.jpg" alt="image" width="336"
                                                         height="415" class="float-left">
                                                     <figcaption class="text-left mt-1">
                                                         Designe by <a href="#">Casper Dalin</a>
@@ -90,7 +90,7 @@
                                     <div class="post-author-detail">
                                         <figure class="author-media">
                                             <a href="#">
-                                                <img src="images/blog/comments/1.jpg" alt="avatar" width="50"
+                                                <img src="/frontend/images/blog/comments/1.jpg" alt="avatar" width="50"
                                                     height="50">
                                             </a>
                                         </figure>
@@ -161,7 +161,7 @@
                                     <div class="post">
                                         <figure class="post-media">
                                             <a href="#">
-                                                <img src="images/blog/single/3.jpg" width="380" height="250"
+                                                <img src="/frontend/images/blog/single/3.jpg" width="380" height="250"
                                                     alt="post" />
                                             </a>
                                             <div class="post-calendar">
@@ -184,7 +184,7 @@
                                     <div class="post">
                                         <figure class="post-media">
                                             <a href="#">
-                                                <img src="images/blog/single/4.jpg" width="380" height="250"
+                                                <img src="/frontend/images/blog/single/4.jpg" width="380" height="250"
                                                     alt="post" />
                                             </a>
                                             <div class="post-calendar">
@@ -207,7 +207,7 @@
                                     <div class="post">
                                         <figure class="post-media">
                                             <a href="#">
-                                                <img src="images/blog/single/5.jpg" width="380" height="250"
+                                                <img src="/frontend/images/blog/single/5.jpg" width="380" height="250"
                                                     alt="post" />
                                             </a>
                                             <div class="post-calendar">
@@ -230,7 +230,7 @@
                                     <div class="post">
                                         <figure class="post-media">
                                             <a href="#">
-                                                <img src="images/blog/single/4.jpg" width="380" height="250"
+                                                <img src="/frontend/images/blog/single/4.jpg" width="380" height="250"
                                                     alt="post" />
                                             </a>
                                             <div class="post-calendar">
@@ -259,7 +259,7 @@
                                         <div class="comment">
                                             <figure class="comment-media">
                                                 <a href="#">
-                                                    <img src="images/blog/comments/1.jpg" alt="avatar">
+                                                    <img src="/frontend/images/blog/comments/1.jpg" alt="avatar">
                                                 </a>
                                             </figure>
                                             <div class="comment-body">
@@ -282,7 +282,7 @@
                                                 <div class="comment">
                                                     <figure class="comment-media">
                                                         <a href="#">
-                                                            <img src="images/blog/comments/2.jpg" alt="avatar">
+                                                            <img src="/frontend/images/blog/comments/2.jpg" alt="avatar">
                                                         </a>
                                                     </figure>
 
@@ -307,7 +307,7 @@
                                         <div class="comment">
                                             <figure class="comment-media">
                                                 <a href="#">
-                                                    <img src="images/blog/comments/1.jpg" alt="avatar">
+                                                    <img src="/frontend/images/blog/comments/1.jpg" alt="avatar">
                                                 </a>
                                             </figure>
 
@@ -400,7 +400,7 @@
                                                 <div class="post post-list-sm">
                                                     <figure class="post-media">
                                                         <a href="post-single.html">
-                                                            <img src="images/blog/1_xs.jpg" width="90" height="90"
+                                                            <img src="/frontend/images/blog/1_xs.jpg" width="90" height="90"
                                                                 alt="post" />
                                                         </a>
                                                     </figure>
@@ -416,7 +416,7 @@
                                                 <div class="post post-list-sm">
                                                     <figure class="post-media">
                                                         <a href="post-single.html">
-                                                            <img src="images/blog/2_xs.jpg" width="90" height="90"
+                                                            <img src="/frontend/images/blog/2_xs.jpg" width="90" height="90"
                                                                 alt="post" />
                                                         </a>
                                                     </figure>
@@ -432,7 +432,7 @@
                                                 <div class="post post-list-sm">
                                                     <figure class="post-media">
                                                         <a href="post-single.html">
-                                                            <img src="images/blog/3_xs.jpg" width="90" height="90"
+                                                            <img src="/frontend/images/blog/3_xs.jpg" width="90" height="90"
                                                                 alt="post" />
                                                         </a>
                                                     </figure>

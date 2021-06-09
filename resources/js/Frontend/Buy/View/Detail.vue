@@ -41,7 +41,7 @@
 									</div>
 									<div class="banner banner-fixed mb-7">
 										<figure>
-											<img src="images/product/product-banner.jpg" alt="banner" width="280"
+											<img src="/frontend/images/product/product-banner.jpg" alt="banner" width="280"
 												height="320">
 										</figure>
 										<div class="banner-content text-center">
@@ -65,7 +65,7 @@
 													<div class="product product-list-sm">
 														<figure class="product-media">
 															<a href="product.html">
-																<img src="images/shop/product-widget1.jpg" alt="product"
+																<img src="/frontend/images/shop/product-widget1.jpg" alt="product"
 																	width="100" height="114">
 															</a>
 														</figure>
@@ -88,7 +88,7 @@
 													<div class="product product-list-sm">
 														<figure class="product-media">
 															<a href="product.html">
-																<img src="images/shop/product-widget2.jpg" alt="product"
+																<img src="/frontend/images/shop/product-widget2.jpg" alt="product"
 																	width="100" height="100">
 															</a>
 														</figure>
@@ -110,7 +110,7 @@
 													<div class="product product-list-sm">
 														<figure class="product-media">
 															<a href="product.html">
-																<img src="images/shop/product-widget3.jpg" alt="product"
+																<img src="/frontend/images/shop/product-widget3.jpg" alt="product"
 																	width="100" height="100">
 															</a>
 														</figure>
@@ -134,7 +134,7 @@
 													<div class="product product-list-sm">
 														<figure class="product-media">
 															<a href="product.html">
-																<img src="images/shop/product-widget1.jpg" alt="product"
+																<img src="/frontend/images/shop/product-widget1.jpg" alt="product"
 																	width="100" height="114">
 															</a>
 														</figure>
@@ -157,7 +157,7 @@
 													<div class="product product-list-sm">
 														<figure class="product-media">
 															<a href="product.html">
-																<img src="images/shop/product-widget2.jpg" alt="product"
+																<img src="/frontend/images/shop/product-widget2.jpg" alt="product"
 																	width="100" height="100">
 															</a>
 														</figure>
@@ -179,7 +179,7 @@
 													<div class="product product-list-sm">
 														<figure class="product-media">
 															<a href="product.html">
-																<img src="images/shop/product-widget3.jpg" alt="product"
+																<img src="/frontend/images/shop/product-widget3.jpg" alt="product"
 																	width="100" height="100">
 															</a>
 														</figure>
@@ -212,42 +212,42 @@
 										<div
 											class="product-single-carousel owl-carousel owl-theme owl-nav-inner row cols-1">
 											<figure class="product-image">
-												<img src="images/product/product-6-1-580x580.jpg"
-													data-zoom-image="images/product/product-6-1-800x900.jpg"
+												<img src="/frontend/images/product/product-6-1-580x580.jpg"
+													data-zoom-image="/frontend/images/product/product-6-1-800x900.jpg"
 													alt="Women's Brown Leather Backpacks" width="800" height="900">
 											</figure>
 											<figure class="product-image">
-												<img src="images/product/product-6-2-580x580.jpg"
-													data-zoom-image="images/product/product-6-2-800x900.jpg"
+												<img src="/frontend/images/product/product-6-2-580x580.jpg"
+													data-zoom-image="/frontend/images/product/product-6-2-800x900.jpg"
 													alt="Women's Brown Leather Backpacks" width="800" height="900">
 											</figure>
 											<figure class="product-image">
-												<img src="images/product/product-6-3-580x580.jpg"
-													data-zoom-image="images/product/product-6-3-800x900.jpg"
+												<img src="/frontend/images/product/product-6-3-580x580.jpg"
+													data-zoom-image="/frontend/images/product/product-6-3-800x900.jpg"
 													alt="Women's Brown Leather Backpacks" width="800" height="900">
 											</figure>
 											<figure class="product-image">
-												<img src="images/product/product-6-4-580x580.jpg"
-													data-zoom-image="images/product/product-6-4-800x900.jpg"
+												<img src="/frontend/images/product/product-6-4-580x580.jpg"
+													data-zoom-image="/frontend/images/product/product-6-4-800x900.jpg"
 													alt="Women's Brown Leather Backpacks" width="800" height="900">
 											</figure>
 										</div>
 										<div class="product-thumbs-wrap">
 											<div class="product-thumbs">
 												<div class="product-thumb active">
-													<img src="images/product/product-6-1-109x122.jpg"
+													<img src="/frontend/images/product/product-6-1-109x122.jpg"
 														alt="product thumbnail" width="109" height="122">
 												</div>
 												<div class="product-thumb">
-													<img src="images/product/product-6-2-109x122.jpg"
+													<img src="/frontend/images/product/product-6-2-109x122.jpg"
 														alt="product thumbnail" width="109" height="122">
 												</div>
 												<div class="product-thumb">
-													<img src="images/product/product-6-3-109x122.jpg"
+													<img src="/frontend/images/product/product-6-3-109x122.jpg"
 														alt="product thumbnail" width="109" height="122">
 												</div>
 												<div class="product-thumb">
-													<img src="images/product/product-6-4-109x122.jpg"
+													<img src="/frontend/images/product/product-6-4-109x122.jpg"
 														alt="product thumbnail" width="109" height="122">
 												</div>
 											</div>
@@ -271,7 +271,7 @@
 													<a href="#">
 														<i class="d-icon-arrow-left"></i> Prev
 														<span class="product-nav-popup">
-															<img src="images/product/product-thumb-prev.jpg"
+															<img src="/frontend/images/product/product-thumb-prev.jpg"
 																alt="product thumbnail" width="110" height="123">
 															<span class="product-name">Sed egtas Dnte Comfort</span>
 														</span>
@@ -281,7 +281,7 @@
 													<a href="#">
 														Next <i class="d-icon-arrow-right"></i>
 														<span class="product-nav-popup">
-															<img src="images/product/product-thumb-next.jpg"
+															<img src="/frontend/images/product/product-thumb-next.jpg"
 																alt="product thumbnail" width="110" height="123">
 															<span class="product-name">Sed egtas Dnte Comfort</span>
 														</span>
@@ -309,13 +309,13 @@
 										<div class="product-form product-color">
 											<label>Color:</label>
 											<div class="product-variations">
-												<a class="color" data-src="images/demos/demo7/products/big1.jpg"
+												<a class="color" data-src="/frontend/images/demos/demo7/products/big1.jpg"
 													href="#" style="background-color: #c8c7ce"></a>
-												<a class="color" data-src="images/demos/demo7/products/2.jpg" href="#"
+												<a class="color" data-src="/frontend/images/demos/demo7/products/2.jpg" href="#"
 													style="background-color: #537548"></a>
-												<a class="color" data-src="images/demos/demo7/products/3.jpg" href="#"
+												<a class="color" data-src="/frontend/images/demos/demo7/products/3.jpg" href="#"
 													style="background-color: #484975"></a>
-												<a class="color" data-src="images/demos/demo7/products/4.jpg" href="#"
+												<a class="color" data-src="/frontend/images/demos/demo7/products/4.jpg" href="#"
 													style="background-color: #313131"></a>
 											</div>
 										</div>
@@ -440,7 +440,7 @@
 												<h5 class="description-title font-weight-semi-bold ls-m mb-5">Video
 													Description</h5>
 												<figure class="p-relative d-inline-block mb-3">
-													<img src="images/product/product.jpg" width="559" height="370"
+													<img src="/frontend/images/product/product.jpg" width="559" height="370"
 														alt="Product" />
 													<a class="btn-play btn-iframe" href="video/memory-of-a-woman.mp4">
 														<i class="d-icon-play-solid"></i>
@@ -488,7 +488,7 @@
 									</div>
 									<div class="tab-pane " id="product-tab-size-guide">
 										<figure class="size-image mt-4 mb-4">
-											<img src="images/product/size_guide.png" alt="Size Guide Image" width="217"
+											<img src="/frontend/images/product/size_guide.png" alt="Size Guide Image" width="217"
 												height="398">
 										</figure>
 										<figure class="size-table mt-4 mb-4">
@@ -549,7 +549,7 @@
 													<div class="comment">
 														<figure class="comment-media">
 															<a href="#">
-																<img src="images/blog/comments/1.jpg" alt="avatar">
+																<img src="/frontend/images/blog/comments/1.jpg" alt="avatar">
 															</a>
 														</figure>
 														<div class="comment-body">
@@ -580,7 +580,7 @@
 													<div class="comment">
 														<figure class="comment-media">
 															<a href="#">
-																<img src="images/blog/comments/2.jpg" alt="avatar">
+																<img src="/frontend/images/blog/comments/2.jpg" alt="avatar">
 															</a>
 														</figure>
 
@@ -700,7 +700,7 @@
 									<div class="product shadow-media">
 										<figure class="product-media">
 											<a href="product.html">
-												<img src="images/product/featured1.jpg" alt="product" width="280"
+												<img src="/frontend/images/product/featured1.jpg" alt="product" width="280"
 													height="315">
 											</a>
 											<div class="product-label-group">
@@ -742,7 +742,7 @@
 									<div class="product shadow-media">
 										<figure class="product-media">
 											<a href="product.html">
-												<img src="images/product/featured2.jpg" alt="product" width="280"
+												<img src="/frontend/images/product/featured2.jpg" alt="product" width="280"
 													height="315">
 											</a>
 											<div class="product-label-group">
@@ -784,7 +784,7 @@
 									<div class="product shadow-media">
 										<figure class="product-media">
 											<a href="product.html">
-												<img src="images/product/featured3.jpg" alt="product" width="280"
+												<img src="/frontend/images/product/featured3.jpg" alt="product" width="280"
 													height="315">
 											</a>
 											<div class="product-action-vertical">
@@ -823,7 +823,7 @@
 									<div class="product shadow-media">
 										<figure class="product-media">
 											<a href="product.html">
-												<img src="images/product/featured4.jpg" alt="product" width="280"
+												<img src="/frontend/images/product/featured4.jpg" alt="product" width="280"
 													height="315">
 											</a>
 											<div class="product-action-vertical">

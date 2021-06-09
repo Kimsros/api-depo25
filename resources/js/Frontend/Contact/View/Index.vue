@@ -8,7 +8,7 @@
                   </ul>
             </div>
       </nav>
-      <div class="page-header" style="background-image: url(images/page-header/contact-us.jpg)">
+      <div class="page-header" style="background-image: url(/frontend/images/page-header/contact-us.jpg)">
             <h1 class="page-title font-weight-bold text-capitalize ls-l">Contact Us</h1>
       </div>
       <div class="page-content mt-10 pt-7">
@@ -70,7 +70,7 @@
                   <div class="row cols-sm-2 cols-lg-4">
                         <div class="store">
                               <figure class="banner-radius">
-                              <img src="images/subpages/store-1.jpg" alt="store" width="280" height="280">
+                              <img src="/frontend/images/subpages/store-1.jpg" alt="store" width="280" height="280">
                               <h4 class="overlay-visible">New York</h4>
                               <div class="overlay overlay-transparent">
                                     <a class="mt-8" href="mail:#">mail@newyorkriodestore.com</a>
@@ -85,7 +85,7 @@
                         </div>
                         <div class="store">
                               <figure class="banner-radius">
-                              <img src="images/subpages/store-2.jpg" alt="store" width="280" height="280">
+                              <img src="/frontend/images/subpages/store-2.jpg" alt="store" width="280" height="280">
                               <h4 class="overlay-visible">London</h4>
                               <div class="overlay overlay-transparent">
                                     <a class="mt-8" href="mail:#">mail@londonriodestore.com</a>
@@ -100,7 +100,7 @@
                         </div>
                         <div class="store">
                               <figure class="banner-radius">
-                              <img src="images/subpages/store-3.jpg" alt="store" width="280" height="280">
+                              <img src="/frontend/images/subpages/store-3.jpg" alt="store" width="280" height="280">
                               <h4 class="overlay-visible">Oslo</h4>
                               <div class="overlay overlay-transparent">
                                     <a class="mt-8" href="mail:#">mail@osloriodestore.com</a>
@@ -115,7 +115,7 @@
                         </div>
                         <div class="store">
                               <figure class="banner-radius">
-                              <img src="images/subpages/store-4.jpg" alt="store" width="280" height="280">
+                              <img src="/frontend/images/subpages/store-4.jpg" alt="store" width="280" height="280">
                               <h4 class="overlay-visible">Stockholm</h4>
                               <div class="overlay overlay-transparent">
                                     <a class="mt-8" href="mail:#">mail@stockholmriodestore.com</a>

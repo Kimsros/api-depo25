@@ -1,7 +1,7 @@
 <template>
       <main class="main">
             <div class="page-header"
-                style="background-image: url('images/shop/page-header-back.jpg'); background-color: #3C63A4;">
+                style="background-image: url('/frontend/images/shop/page-header-back.jpg'); background-color: #3C63A4;">
                 <h3 class="page-subtitle">Elements</h3>
                 <h1 class="page-title">Element Products</h1>
                 <ul class="breadcrumb">
@@ -22,7 +22,7 @@
                                 <div class="product shadow-media">
                                     <figure class="product-media">
                                         <a href="/buy_detail">
-                                            <img src="images/products/product1.jpg" alt="product" width="280"
+                                            <img src="/frontend/images/products/product1.jpg" alt="product" width="280"
                                                 height="315">
                                         </a>
                                         <div class="product-label-group">
@@ -64,7 +64,7 @@
                                 <div class="product shadow-media">
                                     <figure class="product-media">
                                         <a href="/buy_detail">
-                                            <img src="images/products/product2.jpg" alt="product" width="280"
+                                            <img src="/frontend/images/products/product2.jpg" alt="product" width="280"
                                                 height="315">
                                         </a>
                                         <div class="product-action-vertical">
@@ -103,7 +103,7 @@
                                 <div class="product shadow-media">
                                     <figure class="product-media">
                                         <a href="/buy_detail">
-                                            <img src="images/products/product3.jpg" alt="product" width="280"
+                                            <img src="/frontend/images/products/product3.jpg" alt="product" width="280"
                                                 height="315">
                                         </a>
 
@@ -146,7 +146,7 @@
                                 <div class="product shadow-media">
                                     <figure class="product-media">
                                         <a href="/buy_detail">
-                                            <img src="images/products/product4.jpg" alt="product" width="280"
+                                            <img src="/frontend/images/products/product4.jpg" alt="product" width="280"
                                                 height="315">
                                         </a>
                                         <div class="product-action-vertical">
@@ -190,7 +190,7 @@
                                 <div class="product text-center">
                                     <figure class="product-media">
                                         <a href="/buy_detail">
-                                            <img src="images/products/product1.jpg" alt="product" width="280"
+                                            <img src="/frontend/images/products/product1.jpg" alt="product" width="280"
                                                 height="315">
                                         </a>
                                         <div class="product-label-group">
@@ -232,7 +232,7 @@
                                 <div class="product text-center">
                                     <figure class="product-media">
                                         <a href="/buy_detail">
-                                            <img src="images/products/product2.jpg" alt="product" width="280"
+                                            <img src="/frontend/images/products/product2.jpg" alt="product" width="280"
                                                 height="315">
                                         </a>
                                         <div class="product-action-vertical">
@@ -271,7 +271,7 @@
                                 <div class="product text-center">
                                     <figure class="product-media">
                                         <a href="/buy_detail">
-                                            <img src="images/products/product3.jpg" alt="product" width="280"
+                                            <img src="/frontend/images/products/product3.jpg" alt="product" width="280"
                                                 height="315">
                                         </a>
                                         <div class="product-label-group">
@@ -313,7 +313,7 @@
                                 <div class="product text-center">
                                     <figure class="product-media">
                                         <a href="/buy_detail">
-                                            <img src="images/products/product4.jpg" alt="product" width="280"
+                                            <img src="/frontend/images/products/product4.jpg" alt="product" width="280"
                                                 height="315">
                                         </a>
                                         <div class="product-action-vertical">
@@ -357,7 +357,7 @@
                                 <div class="product product-classic product-variable">
                                     <figure class="product-media">
                                         <a href="/buy_detail">
-                                            <img src="images/products/product1.jpg" alt="product" width="280"
+                                            <img src="/frontend/images/products/product1.jpg" alt="product" width="280"
                                                 height="315">
                                         </a>
                                         <div class="product-label-group">
@@ -397,7 +397,7 @@
                                 <div class="product product-classic">
                                     <figure class="product-media">
                                         <a href="/buy_detail">
-                                            <img src="images/products/product2.jpg" alt="product" width="280"
+                                            <img src="/frontend/images/products/product2.jpg" alt="product" width="280"
                                                 height="315">
                                         </a>
                                     </figure>
@@ -434,7 +434,7 @@
                                 <div class="product product-classic">
                                     <figure class="product-media">
                                         <a href="/buy_detail">
-                                            <img src="images/products/product3.jpg" alt="product" width="280"
+                                            <img src="/frontend/images/products/product3.jpg" alt="product" width="280"
                                                 height="315">
                                         </a>
                                         <div class="product-label-group">
@@ -474,7 +474,7 @@
                                 <div class="product product-classic product-variable">
                                     <figure class="product-media">
                                         <a href="/buy_detail">
-                                            <img src="images/products/product4.jpg" alt="product" width="280"
+                                            <img src="/frontend/images/products/product4.jpg" alt="product" width="280"
                                                 height="315">
                                         </a>
                                     </figure>
@@ -517,7 +517,7 @@
                                 <div class="product product-slideup-content text-center product-variable">
                                     <figure class="product-media">
                                         <a href="/buy_detail">
-                                            <img src="images/products/product1.jpg" alt="product" width="280"
+                                            <img src="/frontend/images/products/product1.jpg" alt="product" width="280"
                                                 height="315">
                                         </a>
                                         <div class="product-label-group">
@@ -559,7 +559,7 @@
                                 <div class="product product-slideup-content text-center">
                                     <figure class="product-media">
                                         <a href="/buy_detail">
-                                            <img src="images/products/product2.jpg" alt="product" width="280"
+                                            <img src="/frontend/images/products/product2.jpg" alt="product" width="280"
                                                 height="315">
                                         </a>
                                     </figure>
@@ -598,7 +598,7 @@
                                 <div class="product product-slideup-content text-center">
                                     <figure class="product-media">
                                         <a href="/buy_detail">
-                                            <img src="images/products/product3.jpg" alt="product" width="280"
+                                            <img src="/frontend/images/products/product3.jpg" alt="product" width="280"
                                                 height="315">
                                         </a>
                                         <div class="product-label-group">
@@ -640,7 +640,7 @@
                                 <div class="product product-slideup-content text-center product-variable">
                                     <figure class="product-media">
                                         <a href="/buy_detail">
-                                            <img src="images/products/product4.jpg" alt="product" width="280"
+                                            <img src="/frontend/images/products/product4.jpg" alt="product" width="280"
                                                 height="315">
                                         </a>
                                     </figure>
@@ -685,7 +685,7 @@
                                 <div class="product product-slideup text-center product-variable">
                                     <figure class="product-media">
                                         <a href="/buy_detail">
-                                            <img src="images/products/product5.jpg" alt="product" width="280"
+                                            <img src="/frontend/images/products/product5.jpg" alt="product" width="280"
                                                 height="315">
                                         </a>
                                         <div class="product-label-group">
@@ -725,7 +725,7 @@
                                 <div class="product product-slideup text-center">
                                     <figure class="product-media">
                                         <a href="/buy_detail">
-                                            <img src="images/products/product6.jpg" alt="product" width="280"
+                                            <img src="/frontend/images/products/product6.jpg" alt="product" width="280"
                                                 height="315">
                                         </a>
                                     </figure>
@@ -762,7 +762,7 @@
                                 <div class="product product-slideup text-center">
                                     <figure class="product-media">
                                         <a href="/buy_detail">
-                                            <img src="images/products/product7.jpg" alt="product" width="280"
+                                            <img src="/frontend/images/products/product7.jpg" alt="product" width="280"
                                                 height="315">
                                         </a>
                                         <div class="product-label-group">
@@ -802,7 +802,7 @@
                                 <div class="product product-slideup text-center product-variable">
                                     <figure class="product-media">
                                         <a href="/buy_detail">
-                                            <img src="images/products/product8.jpg" alt="product" width="280"
+                                            <img src="/frontend/images/products/product8.jpg" alt="product" width="280"
                                                 height="315">
                                         </a>
                                     </figure>
@@ -839,7 +839,7 @@
                                 <div class="product product-slideup text-center product-variable">
                                     <figure class="product-media">
                                         <a href="/buy_detail">
-                                            <img src="images/products/product9.jpg" alt="product" width="280"
+                                            <img src="/frontend/images/products/product9.jpg" alt="product" width="280"
                                                 height="315">
                                         </a>
                                     </figure>
@@ -902,7 +902,7 @@
                             <div class="product text-center">
                                 <figure class="product-media">
                                     <a href="/buy_detail">
-                                        <img src="images/products/product1.jpg" alt="product" width="280" height="315">
+                                        <img src="/frontend/images/products/product1.jpg" alt="product" width="280" height="315">
                                     </a>
                                     <div class="product-label-group">
                                         <label class="product-label label-sale">25% Off</label>
@@ -940,7 +940,7 @@
                             <div class="product text-center">
                                 <figure class="product-media">
                                     <a href="/buy_detail">
-                                        <img src="images/products/product2.jpg" alt="product" width="280" height="315">
+                                        <img src="/frontend/images/products/product2.jpg" alt="product" width="280" height="315">
                                     </a>
                                     <div class="product-action-vertical">
                                         <a href="#" class="btn-product-icon btn-cart" data-toggle="modal"
@@ -975,7 +975,7 @@
                             <div class="product text-center">
                                 <figure class="product-media">
                                     <a href="/buy_detail">
-                                        <img src="images/products/product3.jpg" alt="product" width="280" height="315">
+                                        <img src="/frontend/images/products/product3.jpg" alt="product" width="280" height="315">
                                     </a>
                                     <div class="product-label-group">
                                         <label class="product-label label-sale">25% Off</label>
@@ -1013,7 +1013,7 @@
                             <div class="product text-center">
                                 <figure class="product-media">
                                     <a href="/buy_detail">
-                                        <img src="images/products/product4.jpg" alt="product" width="280" height="315">
+                                        <img src="/frontend/images/products/product4.jpg" alt="product" width="280" height="315">
                                     </a>
                                     <div class="product-action-vertical">
                                         <a href="#" class="btn-product-icon btn-cart" data-toggle="modal"
@@ -1048,7 +1048,7 @@
                             <div class="product text-center">
                                 <figure class="product-media">
                                     <a href="/buy_detail">
-                                        <img src="images/products/product10.jpg" alt="product" width="280" height="315">
+                                        <img src="/frontend/images/products/product10.jpg" alt="product" width="280" height="315">
                                     </a>
                                     <div class="product-action-vertical">
                                         <a href="#" class="btn-product-icon btn-cart" data-toggle="modal"
@@ -1089,7 +1089,7 @@
                                 <div class="product product-image-gap">
                                     <figure class="product-media">
                                         <a href="/buy_detail">
-                                            <img src="images/products/product1.jpg" alt="product" width="280"
+                                            <img src="/frontend/images/products/product1.jpg" alt="product" width="280"
                                                 height="315">
                                         </a>
                                         <div class="product-label-group">
@@ -1131,7 +1131,7 @@
                                 <div class="product product-image-gap">
                                     <figure class="product-media">
                                         <a href="/buy_detail">
-                                            <img src="images/products/product2.jpg" alt="product" width="280"
+                                            <img src="/frontend/images/products/product2.jpg" alt="product" width="280"
                                                 height="315">
                                         </a>
                                         <div class="product-action-vertical">
@@ -1170,7 +1170,7 @@
                                 <div class="product product-image-gap">
                                     <figure class="product-media">
                                         <a href="/buy_detail">
-                                            <img src="images/products/product3.jpg" alt="product" width="280"
+                                            <img src="/frontend/images/products/product3.jpg" alt="product" width="280"
                                                 height="315">
                                         </a>
                                         <div class="product-label-group">
@@ -1212,7 +1212,7 @@
                                 <div class="product product-image-gap">
                                     <figure class="product-media">
                                         <a href="/buy_detail">
-                                            <img src="images/products/product4.jpg" alt="product" width="280"
+                                            <img src="/frontend/images/products/product4.jpg" alt="product" width="280"
                                                 height="315">
                                         </a>
                                         <div class="product-action-vertical">
@@ -1275,7 +1275,7 @@
                             <div class="product product-variable text-center shadow-media cart-full">
                                 <figure class="product-media">
                                     <a href="/buy_detail">
-                                        <img src="images/products/product1.jpg" alt="product" width="280" height="315">
+                                        <img src="/frontend/images/products/product1.jpg" alt="product" width="280" height="315">
                                     </a>
                                     <div class="product-label-group">
                                         <label class="product-label label-sale">25% Off</label>
@@ -1303,7 +1303,7 @@
                             <div class="product text-center shadow-media cart-full">
                                 <figure class="product-media">
                                     <a href="/buy_detail">
-                                        <img src="images/products/product2.jpg" alt="product" width="280" height="315">
+                                        <img src="/frontend/images/products/product2.jpg" alt="product" width="280" height="315">
                                     </a>
                                     <div class="product-action-vertical">
                                         <a href="#" class="btn-product-icon btn-wishlist" title="Add to wishlist"><i
@@ -1328,7 +1328,7 @@
                             <div class="product text-center shadow-media cart-full">
                                 <figure class="product-media">
                                     <a href="/buy_detail">
-                                        <img src="images/products/product3.jpg" alt="product" width="280" height="315">
+                                        <img src="/frontend/images/products/product3.jpg" alt="product" width="280" height="315">
                                     </a>
                                     <div class="product-label-group">
                                         <label class="product-label label-sale">25% Off</label>
@@ -1356,7 +1356,7 @@
                             <div class="product product-variable text-center shadow-media cart-full">
                                 <figure class="product-media">
                                     <a href="/buy_detail">
-                                        <img src="images/products/product4.jpg" alt="product" width="280" height="315">
+                                        <img src="/frontend/images/products/product4.jpg" alt="product" width="280" height="315">
                                     </a>
                                     <div class="product-action-vertical">
                                         <a href="#" class="btn-product-icon btn-wishlist" title="Add to wishlist"><i
@@ -1380,7 +1380,7 @@
                             <div class="product product-variable text-center shadow-media cart-full">
                                 <figure class="product-media">
                                     <a href="/buy_detail">
-                                        <img src="images/products/product10.jpg" alt="product" width="280" height="315">
+                                        <img src="/frontend/images/products/product10.jpg" alt="product" width="280" height="315">
                                     </a>
                                     <div class="product-action-vertical">
                                         <a href="#" class="btn-product-icon btn-wishlist" title="Add to wishlist"><i
@@ -1429,7 +1429,7 @@
                             <div class="product text-center shadow-media product-with-qty product-variable">
                                 <figure class="product-media">
                                     <a href="/buy_detail">
-                                        <img src="images/products/product1.jpg" alt="product" width="280" height="315">
+                                        <img src="/frontend/images/products/product1.jpg" alt="product" width="280" height="315">
                                     </a>
                                     <div class="product-label-group">
                                         <label class="product-label label-sale">25% Off</label>
@@ -1459,7 +1459,7 @@
                             <div class="product text-center shadow-media product-with-qty">
                                 <figure class="product-media">
                                     <a href="/buy_detail">
-                                        <img src="images/products/product2.jpg" alt="product" width="280" height="315">
+                                        <img src="/frontend/images/products/product2.jpg" alt="product" width="280" height="315">
                                     </a>
                                     <div class="product-action-vertical">
                                         <a href="#" class="btn-product-icon btn-wishlist" title="Add to wishlist"><i
@@ -1491,7 +1491,7 @@
                             <div class="product text-center shadow-media product-with-qty">
                                 <figure class="product-media">
                                     <a href="/buy_detail">
-                                        <img src="images/products/product3.jpg" alt="product" width="280" height="315">
+                                        <img src="/frontend/images/products/product3.jpg" alt="product" width="280" height="315">
                                     </a>
                                     <div class="product-label-group">
                                         <label class="product-label label-sale">25% Off</label>
@@ -1526,7 +1526,7 @@
                             <div class="product text-center shadow-media product-with-qty product-variable">
                                 <figure class="product-media">
                                     <a href="/buy_detail">
-                                        <img src="images/products/product4.jpg" alt="product" width="280" height="315">
+                                        <img src="/frontend/images/products/product4.jpg" alt="product" width="280" height="315">
                                     </a>
                                     <div class="product-action-vertical">
                                         <a href="#" class="btn-product-icon btn-wishlist" title="Add to wishlist"><i
@@ -1560,7 +1560,7 @@
                                 <div class="product product-list product-variable">
                                     <figure class="product-media">
                                         <a href="/buy_detail">
-                                            <img src="images/products/product3.jpg" alt="product" width="280"
+                                            <img src="/frontend/images/products/product3.jpg" alt="product" width="280"
                                                 height="315">
                                         </a>
                                         <div class="product-label-group">
@@ -1603,7 +1603,7 @@
                                 <div class="product product-list">
                                     <figure class="product-media">
                                         <a href="/buy_detail">
-                                            <img src="images/products/product2.jpg" alt="product" width="280"
+                                            <img src="/frontend/images/products/product2.jpg" alt="product" width="280"
                                                 height="315">
                                         </a>
                                     </figure>
@@ -1655,7 +1655,7 @@
                                                 <div class="product product-list-sm">
                                                     <figure class="product-media">
                                                         <a href="/buy_detail">
-                                                            <img src="images/products/product11.jpg" alt="product"
+                                                            <img src="/frontend/images/products/product11.jpg" alt="product"
                                                                 width="100" height="100">
                                                         </a>
                                                     </figure>
@@ -1677,7 +1677,7 @@
                                                 <div class="product product-list-sm">
                                                     <figure class="product-media">
                                                         <a href="/buy_detail">
-                                                            <img src="images/products/product12.jpg" alt="product"
+                                                            <img src="/frontend/images/products/product12.jpg" alt="product"
                                                                 width="100" height="100">
                                                         </a>
                                                     </figure>
@@ -1699,7 +1699,7 @@
                                                 <div class="product product-list-sm">
                                                     <figure class="product-media">
                                                         <a href="/buy_detail">
-                                                            <img src="images/products/product13.jpg" alt="product"
+                                                            <img src="/frontend/images/products/product13.jpg" alt="product"
                                                                 width="100" height="100">
                                                         </a>
                                                     </figure>
@@ -1722,7 +1722,7 @@
                                                 <div class="product product-list-sm">
                                                     <figure class="product-media">
                                                         <a href="/buy_detail">
-                                                            <img src="images/products/product14.jpg" alt="product"
+                                                            <img src="/frontend/images/products/product14.jpg" alt="product"
                                                                 width="100" height="100">
                                                         </a>
                                                     </figure>
@@ -1747,7 +1747,7 @@
                                                 <div class="product product-list-sm">
                                                     <figure class="product-media">
                                                         <a href="/buy_detail">
-                                                            <img src="images/products/product11.jpg" alt="product"
+                                                            <img src="/frontend/images/products/product11.jpg" alt="product"
                                                                 width="100" height="100">
                                                         </a>
                                                     </figure>
@@ -1769,7 +1769,7 @@
                                                 <div class="product product-list-sm">
                                                     <figure class="product-media">
                                                         <a href="/buy_detail">
-                                                            <img src="images/products/product12.jpg" alt="product"
+                                                            <img src="/frontend/images/products/product12.jpg" alt="product"
                                                                 width="100" height="100">
                                                         </a>
                                                     </figure>
@@ -1791,7 +1791,7 @@
                                                 <div class="product product-list-sm">
                                                     <figure class="product-media">
                                                         <a href="/buy_detail">
-                                                            <img src="images/products/product13.jpg" alt="product"
+                                                            <img src="/frontend/images/products/product13.jpg" alt="product"
                                                                 width="100" height="100">
                                                         </a>
                                                     </figure>
@@ -1814,7 +1814,7 @@
                                                 <div class="product product-list-sm">
                                                     <figure class="product-media">
                                                         <a href="/buy_detail">
-                                                            <img src="images/products/product14.jpg" alt="product"
+                                                            <img src="/frontend/images/products/product14.jpg" alt="product"
                                                                 width="100" height="100">
                                                         </a>
                                                     </figure>
