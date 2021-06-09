@@ -180,7 +180,7 @@ class LoginController extends Controller
             }
             
             } else {
-            $status = "Your e-mail is already verified. You can now login.";
+                $status = "Your e-mail is already verified. You can now login.";
             }
         } else {
             $status="Sorry your email cannot be identified.";
