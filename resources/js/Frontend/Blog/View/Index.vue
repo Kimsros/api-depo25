@@ -1,5 +1,5 @@
 <template>
-     
+
         <main class="main">
             <nav class="breadcrumb-nav">
                 <div class="container">
@@ -18,7 +18,7 @@
                                 <article class="post post-list mb-4">
                                     <figure class="post-media overlay-zoom">
                                         <a href="/blog_detail">
-                                            <img src="//frontend/images/blog/list/1.jpg" width="355" height="250" alt="post" />
+                                            <img src="/frontend/images/blog/list/1.jpg" width="355" height="250" alt="post" />
                                         </a>
                                     </figure>
                                     <div class="post-details">
@@ -41,7 +41,7 @@
                                 <article class="post post-list post-video mb-4">
                                     <figure class="post-media">
                                         <a href="/blog_detail">
-                                            <img src="//frontend/images/blog/list/2.jpg" width="355" height="250" alt="post" />
+                                            <img src="/frontend/images/blog/list/2.jpg" width="355" height="250" alt="post" />
                                         </a>
                                         <span class="video-play"></span>
                                         <video width="380">
@@ -67,11 +67,11 @@
                                     <figure class="post-media">
                                         <div class="owl-carousel owl-theme owl-dot-inner owl-dot-white row cols-1 gutter-no"
                                             data-owl-options="{
-                                            'items': 1    
+                                            'items': 1
                                         }">
-                                            <img src="//frontend/images/blog/list/3.jpg" width="355" height="250" alt="post" />
-                                            <img src="//frontend/images/blog/list/2.jpg" width="355" height="250" alt="post" />
-                                            <img src="//frontend/images/blog/list/1.jpg" width="355" height="250" alt="post" />
+                                            <img src="/frontend/images/blog/list/3.jpg" width="355" height="250" alt="post" />
+                                            <img src="/frontend/images/blog/list/2.jpg" width="355" height="250" alt="post" />
+                                            <img src="/frontend/images/blog/list/1.jpg" width="355" height="250" alt="post" />
                                         </div>
                                     </figure>
                                     <div class="post-details">
@@ -93,7 +93,7 @@
                                 <article class="post post-list mb-4">
                                     <figure class="post-media overlay-zoom">
                                         <a href="/blog_detail">
-                                            <img src="//frontend/images/blog/list/4.jpg" width="355" height="250" alt="post" />
+                                            <img src="/frontend/images/blog/list/4.jpg" width="355" height="250" alt="post" />
                                         </a>
                                     </figure>
                                     <div class="post-details">
@@ -115,7 +115,7 @@
                                 <article class="post post-list mb-4">
                                     <figure class="post-media overlay-zoom">
                                         <a href="/blog_detail">
-                                            <img src="//frontend/images/blog/list/5.jpg" width="355" height="250" alt="post" />
+                                            <img src="/frontend/images/blog/list/5.jpg" width="355" height="250" alt="post" />
                                         </a>
                                     </figure>
                                     <div class="post-details">
@@ -137,7 +137,7 @@
                                 <article class="post post-list mb-4">
                                     <figure class="post-media overlay-zoom">
                                         <a href="/blog_detail">
-                                            <img src="//frontend/images/blog/list/6.jpg" width="355" height="250" alt="post" />
+                                            <img src="/frontend/images/blog/list/6.jpg" width="355" height="250" alt="post" />
                                         </a>
                                     </figure>
                                     <div class="post-details">
@@ -220,7 +220,7 @@
                                                 <div class="post post-list-sm">
                                                     <figure class="post-media">
                                                         <a href="/blog_detail">
-                                                            <img src="//frontend/images/blog/1_xs.jpg" width="90" height="90"
+                                                            <img src="/frontend/images/blog/1_xs.jpg" width="90" height="90"
                                                                 alt="post" />
                                                         </a>
                                                     </figure>
@@ -236,7 +236,7 @@
                                                 <div class="post post-list-sm">
                                                     <figure class="post-media">
                                                         <a href="/blog_detail">
-                                                            <img src="//frontend/images/blog/2_xs.jpg" width="90" height="90"
+                                                            <img src="/frontend/images/blog/2_xs.jpg" width="90" height="90"
                                                                 alt="post" />
                                                         </a>
                                                     </figure>
@@ -252,7 +252,7 @@
                                                 <div class="post post-list-sm">
                                                     <figure class="post-media">
                                                         <a href="/blog_detail">
-                                                            <img src="//frontend/images/blog/3_xs.jpg" width="90" height="90"
+                                                            <img src="/frontend/images/blog/3_xs.jpg" width="90" height="90"
                                                                 alt="post" />
                                                         </a>
                                                     </figure>
@@ -296,5 +296,5 @@
                 </div>
             </div>
         </main>
-     
+
 </template>
