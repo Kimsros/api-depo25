@@ -85,11 +85,26 @@ class LoginController extends Controller
             'email'=>'required|email',
             'password'=>'required'
         ]);
-        $credentials = $request->only('email', 'password');
+        $credentials = $request->only('email', 'password','remember_token');
+        dd($credentials);exit();
         if (Auth::attempt($credentials)) {
-            return Auth::user();
+            // return Auth::user();
+            return response()->json([
+                'message' => 'The given data was invalid.',
+                'errors' => [
+                    'password' => [
+                        'Invalid credentials'
+                    ],
+                ]
+            ], 422);
         }
-        return false;
+        // return false;
+        $user = User::where('email', $request->email)->first();
+        $authToken = $user->createToken('auth-token')->plainTextToken;
+        dd($authToken);
+        return response()->json([
+            'access_token' => $authToken,
+        ]);
     }
     public function logout(){
         Auth::logout();
