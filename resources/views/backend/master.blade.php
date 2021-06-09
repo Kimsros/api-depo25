@@ -11,5 +11,6 @@
     <div id="app">
         <app-backend></app-backend>
     </div>
+    <script src="{{ asset("js/app.js") }}" defer></script>
 </body>
 </html>
