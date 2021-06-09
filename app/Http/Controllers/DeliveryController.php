@@ -15,7 +15,7 @@ class DeliveryController extends Controller
     public function index()
     {
         try{
-
+            return response()->json(['success'=>delivery::where('status',1)->get()]);
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }
@@ -44,7 +44,21 @@ class DeliveryController extends Controller
     public function store(Request $request)
     {
         try{
-
+            $validation=\Validator($request->all(),[
+                'delivery_location_id'=>'required|integer',
+                'shop_id'=>'required|integer',
+                'price'=>'required|integer',
+            ]);
+            if($validation->fails()){
+                return response()->json(['error'=>$validation->getMessageBag()]);
+            }
+            $data=$request->all();
+            $data['updated_by']=1;
+            if(delivery::create($data)){
+                return response()->json(['success'=>'Delivery is inserted !!']);
+            }else{
+                return response()->json(['error'=>'Delivery is not inserted !!']);
+            }
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }
@@ -74,7 +88,7 @@ class DeliveryController extends Controller
     public function edit(delivery $delivery)
     {
         try{
-
+            return response()->json(['success'=>$delivery]);
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }
@@ -90,7 +104,21 @@ class DeliveryController extends Controller
     public function update(Request $request, delivery $delivery)
     {
         try{
-
+            $validation=\Validator($request->all(),[
+                'delivery_location_id'=>'required|integer',
+                'shop_id'=>'required|integer',
+                'price'=>'required|integer',
+            ]);
+            if($validation->fails()){
+                return response()->json(['error'=>$validation->getMessageBag()]);
+            }
+            $data=$request->all();
+            $data['updated_by']=1;
+            if(delivery::where('id',$delivery['id'])->update($data)){
+                return response()->json(['success'=>'Delivery is updated !!']);
+            }else{
+                return response()->json(['error'=>'Delivery is not updated !!']);
+            }
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }
@@ -105,7 +133,11 @@ class DeliveryController extends Controller
     public function destroy(delivery $delivery)
     {
         try{
-
+            if(delivery::where('id',$delivery['id'])->delete()){
+                return response()->json(['success'=>'Delivery is deleted !!']);
+            }else{
+                return response()->json(['error'=>'Delivery is not deleted !!']);
+            }
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }

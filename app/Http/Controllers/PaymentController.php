@@ -15,7 +15,7 @@ class PaymentController extends Controller
     public function index()
     {
         try{
-
+            return response()->json(['success'=>payment::all()]);
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }
@@ -44,7 +44,21 @@ class PaymentController extends Controller
     public function store(Request $request)
     {
         try{
-
+            $validation=\Validator($request->all(),[
+                'invoice_id'=>'required|integer',
+                'user_id'=>'required|integer',
+                'amount'=>'required|numeric'
+            ]);
+            if($validation->fails()){
+                return response()->json(['error'=>$validation->getMessageBag()]);
+            }
+            $data=$request->all();
+            $data['updated_by']=1;
+            if(payment::create($data)){
+                return response()->json(['success'=>'Payment is inserted !!']);
+            }else{
+                return response()->json(['error'=>'Payment is not inserted !!']);
+            }
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }
@@ -74,7 +88,7 @@ class PaymentController extends Controller
     public function edit(payment $payment)
     {
         try{
-
+            return response()->json(['success'=>$payment]);
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }
@@ -90,7 +104,21 @@ class PaymentController extends Controller
     public function update(Request $request, payment $payment)
     {
         try{
-
+            $validation=\Validator($request->all(),[
+                'invoice_id'=>'required|integer',
+                'user_id'=>'required|integer',
+                'amount'=>'required|numeric'
+            ]);
+            if($validation->fails()){
+                return response()->json(['error'=>$validation->getMessageBag()]);
+            }
+            $data=$request->all();
+            $data['updated_by']=1;
+            if(payment::where('id',$payment['id'])->update($data)){
+                return response()->json(['success'=>'Payment is updated !!']);
+            }else{
+                return response()->json(['error'=>'Payment is not updated !!']);
+            }
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }
@@ -105,7 +133,11 @@ class PaymentController extends Controller
     public function destroy(payment $payment)
     {
         try{
-
+            if(payment::where('id',$payment['id'])->delete()){
+                return response()->json(['success'=>'Payment is deleted !!']);
+            }else{
+                return response()->json(['error'=>'Payment is not deleted !!']);
+            }
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }

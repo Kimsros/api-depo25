@@ -15,7 +15,7 @@ class ProductTagController extends Controller
     public function index()
     {
         try{
-
+            return response()->json(['error'=>product_tag::all()]);
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }
@@ -44,7 +44,20 @@ class ProductTagController extends Controller
     public function store(Request $request)
     {
         try{
-
+            $validation=\Validator($request->all(),[
+                'product_id'=>'required|integer',
+                'name'=>'required'
+            ]);
+            if($validation->fails()){
+                return response()->json(['error'=>$validation->getMessageBag()]);
+            }
+            $data=$request->all();
+            $data['updated_by']=1;
+            if(product_tag::create($data)){
+                return response()->json(['success'=>'Product tag is inserted !!']);
+            }else{
+                return response()->json(['error'=>'Product tag is not inserted !!']);
+            }
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }
@@ -74,7 +87,7 @@ class ProductTagController extends Controller
     public function edit(product_tag $product_tag)
     {
         try{
-
+            return response()->json(['success'=>$product_tag]);
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }
@@ -90,7 +103,20 @@ class ProductTagController extends Controller
     public function update(Request $request, product_tag $product_tag)
     {
         try{
-
+            $validation=\Validator($request->all(),[
+                'product_id'=>'required|integer',
+                'name'=>'required'
+            ]);
+            if($validation->fails()){
+                return response()->json(['error'=>$validation->getMessageBag()]);
+            }
+            $data=$request->all();
+            $data['updated_by']=1;
+            if(product_tag::where('id',$product_tag['id'])->update($data)){
+                return response()->json(['success'=>'Product tag is updated !!']);
+            }else{
+                return response()->json(['error'=>'Product tag is not updated !!']);
+            }
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }
@@ -105,7 +131,11 @@ class ProductTagController extends Controller
     public function destroy(product_tag $product_tag)
     {
         try{
-
+            if(product_tag::where('id',$product_tag['id'])->delete()){
+                return response()->json(['success'=>'Product tag is deleted !!']);
+            }else{
+                return response()->json(['success'=>'Product tag is not deleted !!']);
+            }
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }

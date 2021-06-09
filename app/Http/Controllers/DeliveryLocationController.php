@@ -15,7 +15,7 @@ class DeliveryLocationController extends Controller
     public function index()
     {
         try{
-
+            return response()->json(['success'=>delivery_location::all()]);
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }
@@ -44,7 +44,19 @@ class DeliveryLocationController extends Controller
     public function store(Request $request)
     {
         try{
-
+            $validation=\Validator($request->all(),[
+                'name'=>'required'
+            ]);
+            if($validation->fails()){
+                return response()->json(['error'=>$validation->getMessageBag()]);
+            }
+            $data=$request->all();
+            $data['updated_by']=1;
+            if(delivery_location::create($data)){
+                return response()->json(['success'=>'Delivery location is inserted !!']);
+            }else{
+                return response()->json(['success'=>'Delivery location is not inserted !!']);
+            }
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }
@@ -74,7 +86,7 @@ class DeliveryLocationController extends Controller
     public function edit(delivery_location $delivery_location)
     {
         try{
-
+            return response()->json(['success'=>$delivery_location]);
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }
@@ -90,7 +102,19 @@ class DeliveryLocationController extends Controller
     public function update(Request $request, delivery_location $delivery_location)
     {
         try{
-
+            $validation=\Validator($request->all(),[
+                'name'=>'required'
+            ]);
+            if($validation->fails()){
+                return response()->json(['error'=>$validation->getMessageBag()]);
+            }
+            $data=$request->all();
+            $data['updated_by']=1;
+            if(delivery_location::where('id',$delivery_location['id'])->update($data)){
+                return response()->json(['success'=>'Delivery location is updated !!']);
+            }else{
+                return response()->json(['success'=>'Delivery location is not updated !!']);
+            }
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }
@@ -105,7 +129,11 @@ class DeliveryLocationController extends Controller
     public function destroy(delivery_location $delivery_location)
     {
         try{
-
+            if(delivery_location::where('id',$delivery_location['id'])->delete()){
+                return response()->json(['success'=>'Delivery location is deleted !!']);
+            }else{
+                return response()->json(['error'=>'Delivery location is not deleted !!']);
+            }
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }
