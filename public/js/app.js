@@ -44311,91 +44311,25 @@ var staticRenderFns = [
               ])
             ]),
             _vm._v(" "),
-            _c("li", [
-              _c("a", { attrs: { href: "#" } }, [
-                _c("i", { staticClass: "icofont-shopping-cart" }),
-                _vm._v(" "),
-                _c("span", { staticClass: "link-title" }, [_vm._v("Ecommerce")])
-              ]),
-              _vm._v(" "),
-              _c("ul", { staticClass: "nav sub-menu" }, [
-                _c("li", [
-                  _c(
-                    "a",
-                    { attrs: { href: "pages/ecommerce/ecommerce.html" } },
-                    [_vm._v("Dashboard 1")]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    { attrs: { href: "pages/ecommerce/ecommerce2.html" } },
-                    [_vm._v("dashboard 2")]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("a", { attrs: { href: "pages/ecommerce/orders.html" } }, [
-                    _vm._v("orders")
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    { attrs: { href: "pages/ecommerce/product-catelog.html" } },
-                    [_vm._v("Products Catalog")]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    { attrs: { href: "pages/ecommerce/product-details.html" } },
-                    [_vm._v("Product Details")]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    { attrs: { href: "pages/ecommerce/cartlist.html" } },
-                    [_vm._v("cart list")]
-                  )
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("a", { attrs: { href: "pages/social-media.html" } }, [
-                _c("i", { staticClass: "icofont-chart-histogram" }),
-                _vm._v(" "),
-                _c("span", { staticClass: "link-title" }, [
-                  _vm._v("Social Media Analytics")
-                ])
-              ])
-            ]),
-            _vm._v(" "),
             _c("li", { staticClass: "nav-category" }, [_vm._v("apps")]),
             _vm._v(" "),
             _c("li", [
               _c("a", { attrs: { href: "#" } }, [
                 _c("i", { staticClass: "icofont-mail-box" }),
                 _vm._v(" "),
-                _c("span", { staticClass: "link-title" }, [_vm._v("Email")])
+                _c("span", { staticClass: "link-title" }, [_vm._v("Users")])
               ]),
               _vm._v(" "),
               _c("ul", { staticClass: "nav sub-menu" }, [
                 _c("li", [
                   _c("a", { attrs: { href: "pages/apps/email/inbox.html" } }, [
-                    _vm._v("Inbox")
+                    _vm._v("Admin")
                   ])
                 ]),
                 _vm._v(" "),
                 _c("li", [
                   _c("a", { attrs: { href: "pages/apps/email/read.html" } }, [
-                    _vm._v("Read")
+                    _vm._v("Seller")
                   ])
                 ]),
                 _vm._v(" "),
@@ -44403,1018 +44337,201 @@ var staticRenderFns = [
                   _c(
                     "a",
                     { attrs: { href: "pages/apps/email/compose.html" } },
-                    [_vm._v("Compose")]
+                    [_vm._v("Buyer")]
                   )
                 ])
               ])
             ]),
             _vm._v(" "),
             _c("li", [
-              _c("a", { attrs: { href: "pages/apps/chat.html" } }, [
-                _c("i", { staticClass: "icofont-wechat" }),
+              _c("a", { attrs: { href: "#" } }, [
+                _c("i", { staticClass: "icofont-mail-box" }),
                 _vm._v(" "),
-                _c("span", { staticClass: "link-title" }, [_vm._v("Chat")])
+                _c("span", { staticClass: "link-title" }, [_vm._v("Product")])
+              ]),
+              _vm._v(" "),
+              _c("ul", { staticClass: "nav sub-menu" }, [
+                _c("li", [
+                  _c("a", { attrs: { href: "pages/apps/email/inbox.html" } }, [
+                    _vm._v("All Product")
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("a", { attrs: { href: "pages/apps/email/read.html" } }, [
+                    _vm._v("In House Product")
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c(
+                    "a",
+                    { attrs: { href: "pages/apps/email/compose.html" } },
+                    [_vm._v("Category")]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("a", { attrs: { href: "pages/apps/email/read.html" } }, [
+                    _vm._v("Brand")
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c(
+                    "a",
+                    { attrs: { href: "pages/apps/email/compose.html" } },
+                    [_vm._v("Attribute")]
+                  )
+                ])
               ])
             ]),
             _vm._v(" "),
             _c("li", [
               _c("a", { attrs: { href: "#" } }, [
-                _c("i", { staticClass: "icofont-listing-box" }),
+                _c("i", { staticClass: "icofont-mail-box" }),
+                _vm._v(" "),
+                _c("span", { staticClass: "link-title" }, [_vm._v("Sale")])
+              ]),
+              _vm._v(" "),
+              _c("ul", { staticClass: "nav sub-menu" }, [
+                _c("li", [
+                  _c("a", { attrs: { href: "pages/apps/email/inbox.html" } }, [
+                    _vm._v("All Order")
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("a", { attrs: { href: "pages/apps/email/read.html" } }, [
+                    _vm._v("In House Order")
+                  ])
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c("a", { attrs: { href: "#" } }, [
+                _c("i", { staticClass: "icofont-mail-box" }),
                 _vm._v(" "),
                 _c("span", { staticClass: "link-title" }, [
-                  _vm._v("To Do List")
+                  _vm._v("Blog System")
                 ])
               ]),
               _vm._v(" "),
               _c("ul", { staticClass: "nav sub-menu" }, [
                 _c("li", [
-                  _c(
-                    "a",
-                    { attrs: { href: "pages/apps/todolist/todolist.html" } },
-                    [_vm._v("Tasks")]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    { attrs: { href: "pages/apps/todolist/add-new.html" } },
-                    [_vm._v("add new")]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    {
-                      attrs: { href: "pages/apps/todolist/task-details.html" }
-                    },
-                    [_vm._v("details")]
-                  )
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("a", { attrs: { href: "pages/apps/calendar.html" } }, [
-                _c("i", { staticClass: "icofont-calendar" }),
-                _vm._v(" "),
-                _c("span", { staticClass: "link-title" }, [_vm._v("Calendar")])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("a", { attrs: { href: "#" } }, [
-                _c("i", { staticClass: "icofont-file-document" }),
-                _vm._v(" "),
-                _c("span", { staticClass: "link-title" }, [_vm._v("invoice")])
-              ]),
-              _vm._v(" "),
-              _c("ul", { staticClass: "nav sub-menu" }, [
-                _c("li", [
-                  _c(
-                    "a",
-                    { attrs: { href: "pages/apps/invoice/invoice-list.html" } },
-                    [_vm._v("Invoice List")]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    {
-                      attrs: { href: "pages/apps/invoice/invoice-details.html" }
-                    },
-                    [_vm._v("details")]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    {
-                      attrs: { href: "pages/apps/invoice/invoice-add-new.html" }
-                    },
-                    [_vm._v("add new")]
-                  )
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("a", { attrs: { href: "#" } }, [
-                _c("i", { staticClass: "icofont-contact-add" }),
-                _vm._v(" "),
-                _c("span", { staticClass: "link-title" }, [_vm._v("contact")])
-              ]),
-              _vm._v(" "),
-              _c("ul", { staticClass: "nav sub-menu" }, [
-                _c("li", [
-                  _c(
-                    "a",
-                    { attrs: { href: "pages/apps/contact/contact-list.html" } },
-                    [_vm._v("list view")]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    { attrs: { href: "pages/apps/contact/contact-grid.html" } },
-                    [_vm._v("grid view")]
-                  )
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("a", { attrs: { href: "#" } }, [
-                _c("i", { staticClass: "icofont-calendar" }),
-                _vm._v(" "),
-                _c("span", { staticClass: "link-title" }, [
-                  _vm._v("project manager")
-                ])
-              ]),
-              _vm._v(" "),
-              _c("ul", { staticClass: "nav sub-menu" }, [
-                _c("li", [
-                  _c(
-                    "a",
-                    {
-                      attrs: { href: "pages/apps/project-manager/project.html" }
-                    },
-                    [_vm._v("project status")]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    {
-                      attrs: {
-                        href: "pages/apps/project-manager/task-list.html"
-                      }
-                    },
-                    [_vm._v("task list")]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    {
-                      attrs: {
-                        href: "pages/apps/project-manager/create-new.html"
-                      }
-                    },
-                    [_vm._v("create new Board")]
-                  )
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("a", { attrs: { href: "#" } }, [
-                _c("i", { staticClass: "icofont-files-stack" }),
-                _vm._v(" "),
-                _c("span", { staticClass: "link-title" }, [
-                  _vm._v("file manager")
-                ])
-              ]),
-              _vm._v(" "),
-              _c("ul", { staticClass: "nav sub-menu" }, [
-                _c("li", [
-                  _c(
-                    "a",
-                    {
-                      attrs: { href: "pages/apps/file-manager/file-info.html" }
-                    },
-                    [_vm._v("file info")]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    { attrs: { href: "pages/apps/file-manager/share.html" } },
-                    [_vm._v("share")]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    { attrs: { href: "pages/apps/file-manager/upload.html" } },
-                    [_vm._v("upload new file")]
-                  )
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("li", { staticClass: "nav-category" }, [_vm._v("UI Elements")]),
-            _vm._v(" "),
-            _c("li", [
-              _c("a", { attrs: { href: "pages/ui-elements/widget.html" } }, [
-                _c("i", { staticClass: "icofont-magic-alt" }),
-                _vm._v(" "),
-                _c("span", { staticClass: "link-title" }, [_vm._v("widgets")])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("a", { attrs: { href: "#" } }, [
-                _c("i", { staticClass: "icofont-brand-icofont" }),
-                _vm._v(" "),
-                _c("span", { staticClass: "link-title" }, [
-                  _vm._v("Icons (Aniloan)")
-                ])
-              ]),
-              _vm._v(" "),
-              _c("ul", { staticClass: "nav sub-menu" }, [
-                _c("li", [
-                  _c(
-                    "a",
-                    {
-                      attrs: { href: "pages/ui-elements/icons/iconfont.html" }
-                    },
-                    [_vm._v("ico font")]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    {
-                      attrs: {
-                        href: "pages/ui-elements/icons/materializeicon.html"
-                      }
-                    },
-                    [_vm._v("Materialize Icons")]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    {
-                      attrs: {
-                        href: "pages/ui-elements/icons/et-lineicon.html"
-                      }
-                    },
-                    [_vm._v("Et-Line Icons")]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    {
-                      attrs: {
-                        href: "pages/ui-elements/icons/eleganticon.html"
-                      }
-                    },
-                    [_vm._v("Elegant Icons")]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    {
-                      attrs: {
-                        href: "pages/ui-elements/icons/pe-7strokeicon.html"
-                      }
-                    },
-                    [_vm._v("Pe-7 Stroke Icons")]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    {
-                      attrs: {
-                        href: "pages/ui-elements/icons/themifyicon.html"
-                      }
-                    },
-                    [_vm._v("Themify Icons")]
-                  )
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("a", { attrs: { href: "pages/ui-elements/color.html" } }, [
-                _c("i", { staticClass: "icofont-eye-dropper" }),
-                _vm._v(" "),
-                _c("span", { staticClass: "link-title" }, [_vm._v("color")])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c(
-                "a",
-                { attrs: { href: "pages/ui-elements/extra-component.html" } },
-                [
-                  _c("i", { staticClass: "icofont-plus" }),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "link-title" }, [
-                    _vm._v("extra Component")
+                  _c("a", { attrs: { href: "pages/apps/email/inbox.html" } }, [
+                    _vm._v("Add Post")
                   ])
-                ]
-              )
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("a", { attrs: { href: "pages/apps/email/read.html" } }, [
+                    _vm._v("All Post")
+                  ])
+                ])
+              ])
             ]),
-            _vm._v(" "),
-            _c("li", { staticClass: "nav-category" }, [_vm._v("Form & Table")]),
             _vm._v(" "),
             _c("li", [
               _c("a", { attrs: { href: "#" } }, [
-                _c("i", { staticClass: "icofont-table" }),
-                _vm._v(" "),
-                _c("span", { staticClass: "link-title" }, [
-                  _vm._v("Form Elements")
-                ])
-              ]),
-              _vm._v(" "),
-              _c("ul", { staticClass: "nav sub-menu" }, [
-                _c("li", [
-                  _c(
-                    "a",
-                    {
-                      attrs: {
-                        href: "pages/form&table/form-elements/base-input.html"
-                      }
-                    },
-                    [_vm._v("Base Input")]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    {
-                      attrs: {
-                        href: "pages/form&table/form-elements/input-group.html"
-                      }
-                    },
-                    [_vm._v("Input Groups")]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    {
-                      attrs: {
-                        href: "pages/form&table/form-elements/checkbox.html"
-                      }
-                    },
-                    [_vm._v("Checkbox")]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    {
-                      attrs: {
-                        href: "pages/form&table/form-elements/radio.html"
-                      }
-                    },
-                    [_vm._v("radio")]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    {
-                      attrs: {
-                        href: "pages/form&table/form-elements/switch.html"
-                      }
-                    },
-                    [_vm._v("Switch")]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    {
-                      attrs: {
-                        href: "pages/form&table/form-elements/number-input.html"
-                      }
-                    },
-                    [_vm._v("Number Input")]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    {
-                      attrs: {
-                        href: "pages/form&table/form-elements/textarea.html"
-                      }
-                    },
-                    [_vm._v("Text Area")]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    {
-                      attrs: {
-                        href: "pages/form&table/form-elements/text-editor.html"
-                      }
-                    },
-                    [_vm._v("Text Editor (Quill Editor)")]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    {
-                      attrs: {
-                        href:
-                          "pages/form&table/form-elements/file-uploader.html"
-                      }
-                    },
-                    [_vm._v("File Uploader")]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    {
-                      attrs: {
-                        href:
-                          "pages/form&table/form-elements/datetime-picker.html"
-                      }
-                    },
-                    [_vm._v("Date & Time Picker")]
-                  )
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c(
-                "a",
-                { attrs: { href: "pages/form&table/form-layout.html" } },
-                [
-                  _c("i", { staticClass: "icofont-layout" }),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "link-title" }, [
-                    _vm._v("Form Layout")
-                  ])
-                ]
-              )
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c(
-                "a",
-                { attrs: { href: "pages/form&table/form-wizard.html" } },
-                [
-                  _c("i", { staticClass: "icofont-ui-file" }),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "link-title" }, [
-                    _vm._v("Form Wizard")
-                  ])
-                ]
-              )
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c(
-                "a",
-                { attrs: { href: "pages/form&table/form-validation.html" } },
-                [
-                  _c("i", { staticClass: "icofont-exclamation-circle" }),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "link-title" }, [
-                    _vm._v("Form Validation")
-                  ])
-                ]
-              )
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c(
-                "a",
-                { attrs: { href: "pages/form&table/form-repeater.html" } },
-                [
-                  _c("i", { staticClass: "icofont-meeting-add" }),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "link-title" }, [
-                    _vm._v("Form Repeater")
-                  ])
-                ]
-              )
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("a", { attrs: { href: "pages/form&table/table.html" } }, [
-                _c("i", { staticClass: "icofont-table" }),
-                _vm._v(" "),
-                _c("span", { staticClass: "link-title" }, [_vm._v("Table")])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c(
-                "a",
-                { attrs: { href: "pages/form&table/table-extended.html" } },
-                [
-                  _c("i", { staticClass: "icofont-contact-add" }),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "link-title" }, [
-                    _vm._v("Table Extended")
-                  ])
-                ]
-              )
-            ]),
-            _vm._v(" "),
-            _c("li", { staticClass: "nav-category" }, [_vm._v("pages")]),
-            _vm._v(" "),
-            _c("li", [
-              _c("a", { attrs: { href: "#" } }, [
-                _c("i", { staticClass: "icofont-ui-user" }),
-                _vm._v(" "),
-                _c("span", { staticClass: "link-title" }, [
-                  _vm._v("User Profile")
-                ])
-              ]),
-              _vm._v(" "),
-              _c("ul", { staticClass: "nav sub-menu" }, [
-                _c("li", [
-                  _c(
-                    "a",
-                    {
-                      attrs: { href: "pages/pages/user-profile/news-feed.html" }
-                    },
-                    [_vm._v("News Feed")]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    { attrs: { href: "pages/pages/user-profile/about.html" } },
-                    [_vm._v("about")]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    {
-                      attrs: { href: "pages/pages/user-profile/gallery.html" }
-                    },
-                    [_vm._v("gallery")]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    {
-                      attrs: {
-                        href: "pages/pages/user-profile/connection.html"
-                      }
-                    },
-                    [_vm._v("Connections")]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    {
-                      attrs: {
-                        href: "pages/pages/user-profile/profile-chat.html"
-                      }
-                    },
-                    [_vm._v("Chat")]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    {
-                      attrs: {
-                        href: "pages/pages/user-profile/edit-profile.html"
-                      }
-                    },
-                    [_vm._v("Edit Profile")]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    {
-                      attrs: {
-                        href: "pages/pages/user-profile/user-dashboard.html"
-                      }
-                    },
-                    [_vm._v("User Dashboard")]
-                  )
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("a", { attrs: { href: "pages/pages/faq.html" } }, [
-                _c("i", { staticClass: "icofont-support-faq" }),
-                _vm._v(" "),
-                _c("span", { staticClass: "link-title" }, [_vm._v("FAQ")])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("a", { attrs: { href: "pages/pages/price.html" } }, [
-                _c("i", { staticClass: "icofont-price" }),
+                _c("i", { staticClass: "icofont-mail-box" }),
                 _vm._v(" "),
                 _c("span", { staticClass: "link-title" }, [_vm._v("Pricing")])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("a", { attrs: { href: "pages/pages/timeline.html" } }, [
-                _c("i", { staticClass: "icofont-clock-time" }),
+              ]),
+              _vm._v(" "),
+              _c("ul", { staticClass: "nav sub-menu" }, [
+                _c("li", [
+                  _c("a", { attrs: { href: "pages/apps/email/inbox.html" } }, [
+                    _vm._v("Add Pricing")
+                  ])
+                ]),
                 _vm._v(" "),
-                _c("span", { staticClass: "link-title" }, [_vm._v("Timeline")])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("a", { attrs: { href: "pages/pages/account-setting.html" } }, [
-                _c("i", { staticClass: "icofont-settings-alt" }),
-                _vm._v(" "),
-                _c("span", { staticClass: "link-title" }, [
-                  _vm._v("Account Settings")
+                _c("li", [
+                  _c("a", { attrs: { href: "pages/apps/email/read.html" } }, [
+                    _vm._v("All Pricing")
+                  ])
                 ])
               ])
             ]),
             _vm._v(" "),
             _c("li", [
               _c("a", { attrs: { href: "#" } }, [
-                _c("i", { staticClass: "icofont-check-circled" }),
+                _c("i", { staticClass: "icofont-mail-box" }),
                 _vm._v(" "),
-                _c("span", { staticClass: "link-title" }, [
-                  _vm._v("Authentication")
-                ])
+                _c("span", { staticClass: "link-title" }, [_vm._v("Shop")])
               ]),
               _vm._v(" "),
               _c("ul", { staticClass: "nav sub-menu" }, [
                 _c("li", [
-                  _c(
-                    "a",
-                    {
-                      attrs: { href: "pages/pages/authentication/login.html" }
-                    },
-                    [_vm._v("Log In")]
-                  )
+                  _c("a", { attrs: { href: "pages/apps/email/inbox.html" } }, [
+                    _vm._v("Add Shop")
+                  ])
                 ]),
                 _vm._v(" "),
                 _c("li", [
-                  _c(
-                    "a",
-                    {
-                      attrs: {
-                        href: "pages/pages/authentication/register.html"
-                      }
-                    },
-                    [_vm._v("Register")]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    {
-                      attrs: {
-                        href: "pages/pages/authentication/forget-pass.html"
-                      }
-                    },
-                    [_vm._v("Forget Password")]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    {
-                      attrs: {
-                        href: "pages/pages/authentication/reset-pass.html"
-                      }
-                    },
-                    [_vm._v("Reset Password")]
-                  )
+                  _c("a", { attrs: { href: "pages/apps/email/read.html" } }, [
+                    _vm._v("All Shop")
+                  ])
                 ])
               ])
             ]),
             _vm._v(" "),
             _c("li", [
               _c("a", { attrs: { href: "#" } }, [
-                _c("i", { staticClass: "icofont-exclamation-tringle" }),
+                _c("i", { staticClass: "icofont-mail-box" }),
                 _vm._v(" "),
-                _c("span", { staticClass: "link-title" }, [
-                  _vm._v("Miscellaneous")
-                ])
+                _c("span", { staticClass: "link-title" }, [_vm._v("Report")])
               ]),
               _vm._v(" "),
               _c("ul", { staticClass: "nav sub-menu" }, [
                 _c("li", [
-                  _c(
-                    "a",
-                    {
-                      attrs: {
-                        href: "pages/pages/miscellaneous/comming-soon.html"
-                      }
-                    },
-                    [_vm._v("Coming Soon")]
-                  )
+                  _c("a", { attrs: { href: "pages/apps/email/inbox.html" } }, [
+                    _vm._v("In House Product")
+                  ])
                 ]),
                 _vm._v(" "),
                 _c("li", [
-                  _c(
-                    "a",
-                    { attrs: { href: "pages/pages/miscellaneous/404.html" } },
-                    [_vm._v("404 Error")]
-                  )
+                  _c("a", { attrs: { href: "pages/apps/email/read.html" } }, [
+                    _vm._v("Purchase")
+                  ])
                 ]),
                 _vm._v(" "),
                 _c("li", [
-                  _c(
-                    "a",
-                    { attrs: { href: "pages/pages/miscellaneous/500.html" } },
-                    [_vm._v("500 Error")]
-                  )
+                  _c("a", { attrs: { href: "pages/apps/email/read.html" } }, [
+                    _vm._v("User Search")
+                  ])
                 ]),
                 _vm._v(" "),
                 _c("li", [
-                  _c(
-                    "a",
-                    {
-                      attrs: {
-                        href:
-                          "pages/pages/miscellaneous/page-not-authorized.html"
-                      }
-                    },
-                    [_vm._v("Not Authorized")]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    {
-                      attrs: {
-                        href: "pages/pages/miscellaneous/maintenance.html"
-                      }
-                    },
-                    [_vm._v("Maintenance")]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    {
-                      attrs: {
-                        href: "pages/pages/miscellaneous/session-timeout.html"
-                      }
-                    },
-                    [_vm._v("Session Timeout")]
-                  )
+                  _c("a", { attrs: { href: "pages/apps/email/read.html" } }, [
+                    _vm._v("Product Wishlist")
+                  ])
                 ])
               ])
             ]),
-            _vm._v(" "),
-            _c("li", { staticClass: "nav-category" }, [_vm._v("Chart & Maps")]),
             _vm._v(" "),
             _c("li", [
               _c("a", { attrs: { href: "#" } }, [
-                _c("i", { staticClass: "icofont-chart-pie-alt" }),
+                _c("i", { staticClass: "icofont-mail-box" }),
                 _vm._v(" "),
-                _c("span", { staticClass: "link-title" }, [_vm._v("charts")])
+                _c("span", { staticClass: "link-title" }, [_vm._v("Setting")])
               ]),
               _vm._v(" "),
               _c("ul", { staticClass: "nav sub-menu" }, [
                 _c("li", [
-                  _c("a", { attrs: { href: "pages/charts/apex.html" } }, [
-                    _vm._v("Apex")
+                  _c("a", { attrs: { href: "pages/apps/email/inbox.html" } }, [
+                    _vm._v("Role & Permission")
                   ])
                 ]),
                 _vm._v(" "),
                 _c("li", [
-                  _c("a", { attrs: { href: "pages/charts/chartjs.html" } }, [
-                    _vm._v("Chartjs")
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c(
-                    "a",
-                    { attrs: { href: "pages/charts/morrischart.html" } },
-                    [_vm._v("Morris Chart")]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("a", { attrs: { href: "pages/charts/flotchart.html" } }, [
-                    _vm._v("Flot Chart")
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("a", { attrs: { href: "pages/charts/chartist.html" } }, [
-                    _vm._v("Chartist Chart")
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("a", { attrs: { href: "pages/charts/c3-chart.html" } }, [
-                    _vm._v("C3 Chart")
+                  _c("a", { attrs: { href: "pages/apps/email/read.html" } }, [
+                    _vm._v("Preference")
                   ])
                 ])
               ])
-            ]),
-            _vm._v(" "),
-            _c("li", { staticClass: "nav-category" }, [_vm._v("Extensions")]),
-            _vm._v(" "),
-            _c("li", [
-              _c(
-                "a",
-                { attrs: { href: "pages/extensions/sweet-alert.html" } },
-                [
-                  _c("i", { staticClass: "icofont-notification" }),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "link-title" }, [
-                    _vm._v("Sweet Alert")
-                  ])
-                ]
-              )
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("a", { attrs: { href: "pages/extensions/toastr.html" } }, [
-                _c("i", { staticClass: "icofont-dice" }),
-                _vm._v(" "),
-                _c("span", { staticClass: "link-title" }, [_vm._v("Toastr")])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c(
-                "a",
-                { attrs: { href: "pages/extensions/noui-slider.html" } },
-                [
-                  _c("i", { staticClass: "icofont-filter" }),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "link-title" }, [
-                    _vm._v("NoUi Slider")
-                  ])
-                ]
-              )
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("a", { attrs: { href: "pages/extensions/dragdrop.html" } }, [
-                _c("i", { staticClass: "icofont-drag" }),
-                _vm._v(" "),
-                _c("span", { staticClass: "link-title" }, [
-                  _vm._v("Drag & Drop")
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("a", { attrs: { href: "pages/extensions/tour.html" } }, [
-                _c("i", { staticClass: "icofont-education" }),
-                _vm._v(" "),
-                _c("span", { staticClass: "link-title" }, [_vm._v("Tour")])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("a", { attrs: { href: "pages/extensions/swiper.html" } }, [
-                _c("i", { staticClass: "icofont-swoosh-right" }),
-                _vm._v(" "),
-                _c("span", { staticClass: "link-title" }, [_vm._v("Swiper")])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("a", { attrs: { href: "pages/extensions/treeview.html" } }, [
-                _c("i", { staticClass: "icofont-tree-alt" }),
-                _vm._v(" "),
-                _c("span", { staticClass: "link-title" }, [_vm._v("Treeview")])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("a", { attrs: { href: "pages/extensions/block-ui.html" } }, [
-                _c("i", { staticClass: "icofont-card" }),
-                _vm._v(" "),
-                _c("span", { staticClass: "link-title" }, [_vm._v("Block-UI")])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c(
-                "a",
-                { attrs: { href: "pages/extensions/media-player.html" } },
-                [
-                  _c("i", { staticClass: "icofont-multimedia" }),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "link-title" }, [
-                    _vm._v("Media Player")
-                  ])
-                ]
-              )
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("a", { attrs: { href: "pages/extensions/i18n.html" } }, [
-                _c("i", { staticClass: "icofont-globe" }),
-                _vm._v(" "),
-                _c("span", { staticClass: "link-title" }, [_vm._v("i18n")])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("li", { staticClass: "nav-category" }, [_vm._v("others")]),
-            _vm._v(" "),
-            _c("li", [
-              _c("a", { attrs: { href: "#" } }, [
-                _c("i", { staticClass: "icofont-navigation-menu" }),
-                _vm._v(" "),
-                _c("span", { staticClass: "link-title" }, [
-                  _vm._v("Menu Levels")
-                ])
-              ]),
-              _vm._v(" "),
-              _c("ul", { staticClass: "nav sub-menu" }, [
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _vm._v("Second Level 01")
-                  ]),
-                  _vm._v(" "),
-                  _c("ul", { staticClass: "nav sub-menu" }, [
-                    _c("li", [
-                      _c("a", { attrs: { href: "#" } }, [
-                        _vm._v("Third Level 01")
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _c("a", { attrs: { href: "#" } }, [
-                        _vm._v("Third Level 02")
-                      ])
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("a", { attrs: { href: "#" } }, [
-                    _vm._v("Second Level 02")
-                  ]),
-                  _vm._v(" "),
-                  _c("ul", { staticClass: "nav sub-menu" }, [
-                    _c("li", [
-                      _c("a", { attrs: { href: "#" } }, [
-                        _vm._v("Third Level 01")
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _c("a", { attrs: { href: "#" } }, [
-                        _vm._v("Third Level 02")
-                      ])
-                    ])
-                  ])
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("a", { staticClass: "disabled", attrs: { href: "#" } }, [
-                _c("i", { staticClass: "icofont-not-allowed" }),
-                _vm._v(" "),
-                _c("span", { staticClass: "link-title" }, [
-                  _vm._v("Disable Menu")
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("li", { staticClass: "nav-category" }, [_vm._v("Support")])
+            ])
           ])
         ])
       ]
