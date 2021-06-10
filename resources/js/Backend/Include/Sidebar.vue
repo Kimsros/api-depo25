@@ -22,9 +22,9 @@
                      </a>
                      <ul class="nav sub-menu">
                         <li><a href="/admin/add_user">Add Users</a></li>
-                        <li><a href="/admin/admin">Admin</a></li>
-                        <li><a href="/admin/seller">Seller</a></li>
-                        <li><a href="/admin/buyer">Buyer</a></li>
+                        <li><a href="/admin/admin">Admin List</a></li>
+                        <li><a href="/admin/seller">Seller List</a></li>
+                        <li><a href="/admin/buyer">Buyer List</a></li>
                      </ul>
                   </li>
                   <li>
@@ -35,9 +35,18 @@
                      <ul class="nav sub-menu">
                         <li><a href="pages/apps/email/inbox.html">All Product</a></li>
                         <li><a href="pages/apps/email/read.html">In House Product</a></li>
-                        <li><a href="pages/apps/email/compose.html">Category</a></li>
                         <li><a href="pages/apps/email/read.html">Brand</a></li>
                         <li><a href="pages/apps/email/compose.html">Attribute</a></li>
+                     </ul>
+                  </li>
+                  <li>
+                     <a href="#">
+                        <i class="icofont-shopping-cart"></i>
+                        <span class="link-title">Product Category</span>
+                     </a>
+                     <ul class="nav sub-menu">
+                        <li><a href="/admin/add_category">Add Product Category</a></li>
+                        <li><a href="/admin/list_category">All Product Category</a></li>
                      </ul>
                   </li>
                   <li>
@@ -56,8 +65,8 @@
                         <span class="link-title">Blog System</span>
                      </a>
                      <ul class="nav sub-menu">
-                        <li><a href="pages/apps/email/inbox.html">Add Post</a></li>
-                        <li><a href="pages/apps/email/read.html">All Post</a></li>
+                        <li><a href="/admin/add_blog">Add Post</a></li>
+                        <li><a href="/admin/blog">All Post</a></li>
                      </ul>
                   </li>
                   <li>
@@ -66,7 +75,7 @@
                         <span class="link-title">Blog Category</span>
                      </a>
                      <ul class="nav sub-menu">
-                        <li><a href="/admin/Add_blog">Add Blog Category</a></li>
+                        <li><a href="/admin/add_blog_category">Add Blog Category</a></li>
                         <li><a href="/admin/blog_category">All Category</a></li>
                      </ul>
                   </li>

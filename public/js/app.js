@@ -2782,408 +2782,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   mouted: function mouted() {
     console.log("working");
@@ -3679,8 +3277,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var _View_Index_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./View/Index.vue */ "./resources/js/Backend/Blog/View/Index.vue");
+/* harmony import */ var _View_Add_blog_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./View/Add_blog.vue */ "./resources/js/Backend/Blog/View/Add_blog.vue");
+
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  router: []
+  router: [{
+    path: "/admin/blog",
+    component: _View_Index_vue__WEBPACK_IMPORTED_MODULE_0__.default
+  }, {
+    path: "/admin/add_blog",
+    component: _View_Add_blog_vue__WEBPACK_IMPORTED_MODULE_1__.default
+  }]
 });
 
 /***/ }),
@@ -3705,7 +3313,7 @@ __webpack_require__.r(__webpack_exports__);
     path: "/admin/blog_category",
     component: _View_Index_vue__WEBPACK_IMPORTED_MODULE_1__.default
   }, {
-    path: "/admin/Add_blog",
+    path: "/admin/add_blog_category",
     component: _View_Add_blog_vue__WEBPACK_IMPORTED_MODULE_0__.default
   }]
 });
@@ -41039,6 +40647,80 @@ component.options.__file = "resources/js/Backend/Auth/View/ResetPassword.vue"
 
 /***/ }),
 
+/***/ "./resources/js/Backend/Blog/View/Add_blog.vue":
+/*!*****************************************************!*\
+  !*** ./resources/js/Backend/Blog/View/Add_blog.vue ***!
+  \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _Add_blog_vue_vue_type_template_id_d24214d4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Add_blog.vue?vue&type=template&id=d24214d4& */ "./resources/js/Backend/Blog/View/Add_blog.vue?vue&type=template&id=d24214d4&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+var script = {}
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__.default)(
+  script,
+  _Add_blog_vue_vue_type_template_id_d24214d4___WEBPACK_IMPORTED_MODULE_0__.render,
+  _Add_blog_vue_vue_type_template_id_d24214d4___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/Backend/Blog/View/Add_blog.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/Backend/Blog/View/Index.vue":
+/*!**************************************************!*\
+  !*** ./resources/js/Backend/Blog/View/Index.vue ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _Index_vue_vue_type_template_id_0b070cac___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Index.vue?vue&type=template&id=0b070cac& */ "./resources/js/Backend/Blog/View/Index.vue?vue&type=template&id=0b070cac&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+var script = {}
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__.default)(
+  script,
+  _Index_vue_vue_type_template_id_0b070cac___WEBPACK_IMPORTED_MODULE_0__.render,
+  _Index_vue_vue_type_template_id_0b070cac___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/Backend/Blog/View/Index.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/js/Backend/Blog_Category/View/Add_blog.vue":
 /*!**************************************************************!*\
   !*** ./resources/js/Backend/Blog_Category/View/Add_blog.vue ***!
@@ -43054,6 +42736,40 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/Backend/Blog/View/Add_blog.vue?vue&type=template&id=d24214d4&":
+/*!************************************************************************************!*\
+  !*** ./resources/js/Backend/Blog/View/Add_blog.vue?vue&type=template&id=d24214d4& ***!
+  \************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Add_blog_vue_vue_type_template_id_d24214d4___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Add_blog_vue_vue_type_template_id_d24214d4___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Add_blog_vue_vue_type_template_id_d24214d4___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Add_blog.vue?vue&type=template&id=d24214d4& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Backend/Blog/View/Add_blog.vue?vue&type=template&id=d24214d4&");
+
+
+/***/ }),
+
+/***/ "./resources/js/Backend/Blog/View/Index.vue?vue&type=template&id=0b070cac&":
+/*!*********************************************************************************!*\
+  !*** ./resources/js/Backend/Blog/View/Index.vue?vue&type=template&id=0b070cac& ***!
+  \*********************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Index_vue_vue_type_template_id_0b070cac___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Index_vue_vue_type_template_id_0b070cac___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Index_vue_vue_type_template_id_0b070cac___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Index.vue?vue&type=template&id=0b070cac& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Backend/Blog/View/Index.vue?vue&type=template&id=0b070cac&");
+
+
+/***/ }),
+
 /***/ "./resources/js/Backend/Blog_Category/View/Add_blog.vue?vue&type=template&id=bd587a26&":
 /*!*********************************************************************************************!*\
   !*** ./resources/js/Backend/Blog_Category/View/Add_blog.vue?vue&type=template&id=bd587a26& ***!
@@ -43926,6 +43642,1542 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", [_c("h1", [_vm._v("Login")])])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Backend/Blog/View/Add_blog.vue?vue&type=template&id=d24214d4&":
+/*!***************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Backend/Blog/View/Add_blog.vue?vue&type=template&id=d24214d4& ***!
+  \***************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "form-element py-30 multiple-column" }, [
+      _c("h4", { staticClass: "font-20 mb-20" }, [_vm._v("Add Blog")]),
+      _vm._v(" "),
+      _c("form", { attrs: { action: "#", method: "POST" } }, [
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-lg-6" }, [
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { staticClass: "font-14 bold mb-2" }, [
+                _vm._v("Title")
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                staticClass: "theme-input-style",
+                attrs: { type: "text", placeholder: "Enter Title" }
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { staticClass: "font-14 bold mb-2" }, [
+                _vm._v("Slug")
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                staticClass: "theme-input-style",
+                attrs: { type: "text", placeholder: "Enter Slug" }
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { staticClass: "font-14 bold mb-2" }, [
+                _vm._v("thumbnail")
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                staticClass: "theme-input-style",
+                attrs: { type: "text", placeholder: "Enter thumbnail" }
+              })
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "form-row" }, [
+          _c("div", { staticClass: "col-12 text-right" }, [
+            _c(
+              "button",
+              { staticClass: "btn long", attrs: { type: "submit" } },
+              [_vm._v("Submit")]
+            )
+          ])
+        ])
+      ])
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Backend/Blog/View/Index.vue?vue&type=template&id=0b070cac&":
+/*!************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Backend/Blog/View/Index.vue?vue&type=template&id=0b070cac& ***!
+  \************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "card bg-transparent" }, [
+      _c(
+        "div",
+        {
+          staticClass:
+            "contact-header d-flex align-items-sm-center media flex-column flex-sm-row card_color-bg mb-30"
+        },
+        [
+          _c(
+            "div",
+            {
+              staticClass:
+                "contact-header-left media-body d-flex align-items-center mr-4"
+            },
+            [
+              _c("div", { staticClass: "add-new-contact mr-20" }, [
+                _c(
+                  "a",
+                  {
+                    staticClass: "btn-circle",
+                    attrs: {
+                      href: "#",
+                      "data-toggle": "modal",
+                      "data-target": "#contactAddModal"
+                    }
+                  },
+                  [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/backend/assets/img/svg/plus_white.svg",
+                        alt: ""
+                      }
+                    })
+                  ]
+                )
+              ]),
+              _vm._v(" "),
+              _c(
+                "form",
+                {
+                  staticClass: "search-form flex-grow",
+                  attrs: { action: "#" }
+                },
+                [
+                  _c("div", { staticClass: "theme-input-group style--two" }, [
+                    _c("input", {
+                      staticClass: "theme-input-style",
+                      attrs: { type: "text", placeholder: "Search Here" }
+                    }),
+                    _vm._v(" "),
+                    _c("button", { attrs: { type: "submit" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/search-icon.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]
+              )
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass:
+                "contact-header-right d-flex align-items-center justify-content-end mt-3 mt-sm-0"
+            },
+            [
+              _c("div", { staticClass: "grid" }, [
+                _c("a", { attrs: { href: "contact-grid.html" } }, [
+                  _c("img", {
+                    staticClass: "svg",
+                    attrs: {
+                      src: "/backend/assets/img/svg/grid-icon.svg",
+                      alt: ""
+                    }
+                  })
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "star" }, [
+                _c("a", { attrs: { href: "#" } }, [
+                  _c("img", {
+                    staticClass: "svg",
+                    attrs: { src: "/backend/assets/img/svg/star.svg", alt: "" }
+                  })
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "delete_mail" }, [
+                _c("a", { attrs: { href: "#" } }, [
+                  _c("img", {
+                    staticClass: "svg",
+                    attrs: {
+                      src: "/backend/assets/img/svg/delete.svg",
+                      alt: ""
+                    }
+                  })
+                ])
+              ]),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "pagination style--two d-flex flex-column align-items-center ml-n2"
+                },
+                [
+                  _c(
+                    "ul",
+                    {
+                      staticClass:
+                        "list-inline d-inline-flex align-items-center"
+                    },
+                    [
+                      _c("li", [
+                        _c("a", { attrs: { href: "#" } }, [
+                          _c("img", {
+                            staticClass: "svg",
+                            attrs: {
+                              src: "/backend/assets/img/svg/left-angle.svg",
+                              alt: ""
+                            }
+                          })
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c(
+                          "a",
+                          { staticClass: "current", attrs: { href: "#" } },
+                          [
+                            _c("img", {
+                              staticClass: "svg",
+                              attrs: {
+                                src: "/backend/assets/img/svg/right-angle.svg",
+                                alt: ""
+                              }
+                            })
+                          ]
+                        )
+                      ])
+                    ]
+                  )
+                ]
+              )
+            ]
+          )
+        ]
+      ),
+      _vm._v(" "),
+      _c("div", { staticClass: "table-responsive" }, [
+        _c(
+          "table",
+          { staticClass: "contact-list-table text-nowrap card_color-bg" },
+          [
+            _c("thead", [
+              _c("tr", [
+                _c("th", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("th", { staticClass: "text-center" }, [
+                  _vm._v("Name "),
+                  _c("img", {
+                    staticClass: "svg",
+                    attrs: {
+                      src: "/backend/assets/img/svg/table-down-arrow.svg",
+                      alt: ""
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("th", [_vm._v("Email")]),
+                _vm._v(" "),
+                _c("th", [_vm._v("Phone")]),
+                _vm._v(" "),
+                _c("th", [
+                  _vm._v("Age "),
+                  _c("img", {
+                    staticClass: "svg",
+                    attrs: {
+                      src: "/backend/assets/img/svg/table-down-arrow.svg",
+                      alt: ""
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("th", [_vm._v("Post")]),
+                _vm._v(" "),
+                _c("th", [
+                  _vm._v("Joining Date "),
+                  _c("img", {
+                    staticClass: "svg",
+                    attrs: {
+                      src: "/backend/assets/img/svg/table-down-arrow.svg",
+                      alt: ""
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("th", [
+                  _vm._v("Salary "),
+                  _c("img", {
+                    staticClass: "svg",
+                    attrs: {
+                      src: "/backend/assets/img/svg/table-down-arrow.svg",
+                      alt: ""
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("th", [_vm._v("Actions")])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("tbody", [
+              _c("tr", [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m16.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(
+                        "\n                                Arden Spencer\n                            "
+                      )
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Evangeline62@yahoo.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("(023) 708-6818 x4267")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("June 20, 2015")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$26253.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m20.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(" Favian Maggio DDS ")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Electa_Conroy@hotmail.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("1-076-628-3095 x7154")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("October 11, 2019")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$26253.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m21.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(" Jacey Considine ")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Garry23@yahoo.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("1-016-234-2482")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("January 2, 2016")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$6162.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m22.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(" Kolby Torphy II ")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Phyllis75@hotmail.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("1-345-656-4163 x373")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("August 9, 2017")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$4022.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m23.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(" Mattie Daugherty ")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Jessika.Conroy@yahoo.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("721-969-9795 x09197")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("December 24, 2016")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$11588.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m24.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(" Timothy Littel ")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Nannie_Kling49@hotmail.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("1-251-141-2444 x275")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("February 8, 2019")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$14283.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", { staticClass: "selected" }, [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox", checked: "" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m19.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(" Karli Braun ")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Ruthe_Gleichner@gmail.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("697.704.7326")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("October 25, 2016")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$13329.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", { staticClass: "selected" }, [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox", checked: "" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m16.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(
+                        "\n                                Arden Spencer\n                            "
+                      )
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Evangeline62@yahoo.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("(023) 708-6818 x4267")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("June 20, 2015")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$26253.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m20.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(" Favian Maggio DDS ")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Electa_Conroy@hotmail.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("1-076-628-3095 x7154")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("October 11, 2019")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$26253.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m21.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(" Jacey Considine ")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Garry23@yahoo.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("1-016-234-2482")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("January 2, 2016")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$6162.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m22.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(" Kolby Torphy II ")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Phyllis75@hotmail.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("1-345-656-4163 x373")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("August 9, 2017")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$4022.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m23.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(" Timothy Littel ")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Nannie_Kling49@hotmail.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("1-251-141-2444 x275")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("February 8, 2019")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$14283.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m2.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(" Birdie Thiel ")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Kenya.Stanton@yahoo.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("209-225-4857")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("August 7, 2015")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$18037.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m19.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(" Karli Braun ")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Ruthe_Gleichner@gmail.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("697.704.7326")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("October 25, 2016")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$13329.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ])
+            ])
+          ]
+        )
+      ])
+    ])
   }
 ]
 render._withStripped = true
@@ -45465,375 +46717,638 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container-fluid" }, [
-    _vm._m(0),
-    _vm._v(" "),
     _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-xl-6 col-lg-12" }, [
-        _c("div", { staticClass: "row" }, [
-          _vm._m(1),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-md-4 col-sm-6" }, [
-            _c("div", { staticClass: "card mb-30 progress_1" }, [
-              _c("div", { staticClass: "card-body" }, [
-                _c("h4", { staticClass: "progress-title" }, [
-                  _vm._v("Registrations")
-                ]),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  { staticClass: "ProgressBar-wrap position-relative mb-4" },
-                  [
-                    _c(
-                      "div",
-                      {
-                        staticClass: "ProgressBar ProgressBar_1",
-                        attrs: { "data-progress": "75" }
-                      },
-                      [
-                        _c(
-                          "svg",
-                          {
-                            staticClass: "ProgressBar-contentCircle",
-                            attrs: { viewBox: "0 0 200 200" }
-                          },
-                          [
-                            _c("circle", {
-                              staticClass: "ProgressBar-background",
-                              attrs: {
-                                transform: "rotate(135, 100, 100)",
-                                cx: "100",
-                                cy: "100",
-                                r: "8"
-                              }
-                            }),
-                            _vm._v(" "),
-                            _c("circle", {
-                              staticClass: "ProgressBar-circle",
-                              attrs: {
-                                transform: "rotate(135, 100, 100)",
-                                cx: "100",
-                                cy: "100",
-                                r: "85"
-                              }
-                            })
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "span",
-                          { staticClass: "ProgressBar-percentage--text" },
-                          [
-                            _vm._v(
-                              "\n                                        Increase\n                                    "
-                            )
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c("span", {
-                          staticClass:
-                            "ProgressBar-percentage ProgressBar-percentage--count"
-                        })
-                      ]
-                    )
-                  ]
-                ),
-                _vm._v(" "),
-                _vm._m(2),
-                _vm._v(" "),
-                _vm._m(3)
-              ])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-md-4 col-sm-6" }, [
-            _c("div", { staticClass: "card mb-30 progress_2" }, [
-              _c("div", { staticClass: "card-body" }, [
-                _c("h4", { staticClass: "progress-title" }, [_vm._v("Sales")]),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  { staticClass: "ProgressBar-wrap position-relative mb-4" },
-                  [
-                    _c(
-                      "div",
-                      {
-                        staticClass: "ProgressBar ProgressBar_2",
-                        attrs: { "data-progress": "35" }
-                      },
-                      [
-                        _c(
-                          "svg",
-                          {
-                            staticClass: "ProgressBar-contentCircle",
-                            attrs: { viewBox: "0 0 200 200" }
-                          },
-                          [
-                            _c("circle", {
-                              staticClass: "ProgressBar-background",
-                              attrs: {
-                                transform: "rotate(135, 100, 100)",
-                                cx: "100",
-                                cy: "100",
-                                r: "85"
-                              }
-                            }),
-                            _vm._v(" "),
-                            _c("circle", {
-                              staticClass: "ProgressBar-circle",
-                              attrs: {
-                                transform: "rotate(135, 100, 100)",
-                                cx: "100",
-                                cy: "100",
-                                r: "85"
-                              }
-                            })
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "span",
-                          { staticClass: "ProgressBar-percentage--text" },
-                          [_vm._v("Increase")]
-                        ),
-                        _vm._v(" "),
-                        _c("span", {
-                          staticClass:
-                            "ProgressBar-percentage ProgressBar-percentage--count"
-                        })
-                      ]
-                    )
-                  ]
-                ),
-                _vm._v(" "),
-                _vm._m(4),
-                _vm._v(" "),
-                _vm._m(5)
-              ])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-md-4 col-sm-6" }, [
-            _c("div", { staticClass: "card mb-30 progress_3 mr-0" }, [
-              _c("div", { staticClass: "card-body" }, [
-                _c("h4", { staticClass: "progress-title" }, [
-                  _vm._v("Company Growth")
-                ]),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  { staticClass: "ProgressBar-wrap position-relative mb-4" },
-                  [
-                    _c(
-                      "div",
-                      {
-                        staticClass: "ProgressBar ProgressBar_3",
-                        attrs: { "data-progress": "70" }
-                      },
-                      [
-                        _c(
-                          "svg",
-                          {
-                            staticClass: "ProgressBar-contentCircle",
-                            attrs: { viewBox: "0 0 200 200" }
-                          },
-                          [
-                            _c("circle", {
-                              staticClass: "ProgressBar-background",
-                              attrs: {
-                                transform: "rotate(135, 100, 100)",
-                                cx: "100",
-                                cy: "100",
-                                r: "85",
-                                "stroke-width": "20"
-                              }
-                            }),
-                            _vm._v(" "),
-                            _c("circle", {
-                              staticClass: "ProgressBar-circle",
-                              attrs: {
-                                transform: "rotate(135, 100, 100)",
-                                cx: "100",
-                                cy: "100",
-                                r: "85",
-                                "stroke-width": "20"
-                              }
-                            })
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "span",
-                          { staticClass: "ProgressBar-percentage--text" },
-                          [
-                            _vm._v(
-                              "\n                                        Increase\n                                    "
-                            )
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c("span", {
-                          staticClass:
-                            "ProgressBar-percentage ProgressBar-percentage--count"
-                        })
-                      ]
-                    )
-                  ]
-                ),
-                _vm._v(" "),
-                _vm._m(6),
-                _vm._v(" "),
-                _vm._m(7)
-              ])
-            ])
-          ])
-        ])
-      ]),
+      _vm._m(0),
       _vm._v(" "),
-      _vm._m(8)
-    ]),
-    _vm._v(" "),
-    _c("div", { staticClass: "row" }, [
-      _vm._m(9),
+      _vm._m(1),
       _vm._v(" "),
-      _c("div", { staticClass: "col-xl-4 col-md-7" }, [
-        _vm._m(10),
-        _vm._v(" "),
-        _vm._m(11),
-        _vm._v(" "),
-        _vm._m(12),
-        _vm._v(" "),
-        _c("div", { staticClass: "card mb-30" }, [
+      _vm._m(2),
+      _vm._v(" "),
+      _vm._m(3),
+      _vm._v(" "),
+      _vm._m(4),
+      _vm._v(" "),
+      _vm._m(5),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-xl-2 col-lg-4 col-sm-6" }, [
+        _c("div", { staticClass: "card mb-30 progress_6" }, [
           _c("div", { staticClass: "card-body" }, [
-            _c("div", { staticClass: "row align-items-end" }, [
-              _c("div", { staticClass: "col-6" }, [
-                _c("div", { staticClass: "d-flex justify-content-start" }, [
-                  _c(
-                    "div",
-                    { staticClass: "ProgressBar-wrap2 position-relative" },
-                    [
-                      _c(
-                        "div",
-                        {
-                          staticClass: "ProgressBar ProgressBar_4",
-                          attrs: { "data-progress": "67" }
-                        },
-                        [
-                          _c(
-                            "svg",
-                            {
-                              staticClass: "ProgressBar-contentCircle",
-                              attrs: { viewBox: "0 0 200 200" }
-                            },
-                            [
-                              _c("circle", {
-                                staticClass: "ProgressBar-background",
-                                attrs: {
-                                  transform: "rotate(-90, 100, 100)",
-                                  cx: "100",
-                                  cy: "100",
-                                  r: "85"
-                                }
-                              }),
-                              _vm._v(" "),
-                              _c("circle", {
-                                staticClass: "ProgressBar-circle",
-                                attrs: {
-                                  transform: "rotate(-90, 100, 100)",
-                                  cx: "100",
-                                  cy: "100",
-                                  r: "85"
-                                }
-                              })
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c("span", {
-                            staticClass:
-                              "ProgressBar-percentage ProgressBar-percentage--count"
-                          }),
-                          _vm._v(" "),
-                          _c(
-                            "span",
-                            { staticClass: "ProgressBar-percentage--text" },
-                            [_vm._v("Bounce Rate")]
-                          )
-                        ]
-                      )
-                    ]
-                  )
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "col-6" }, [
+            _vm._m(6),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "ProgressBar-wrap position-relative mb-5" },
+              [
                 _c(
                   "div",
-                  { staticClass: "d-flex justify-content-start progress_5" },
+                  {
+                    staticClass: "ProgressBar ProgressBar_6",
+                    attrs: { "data-progress": "35" }
+                  },
                   [
                     _c(
-                      "div",
-                      { staticClass: "ProgressBar-wrap2 position-relative" },
+                      "svg",
+                      {
+                        staticClass: "ProgressBar-contentCircle",
+                        attrs: { viewBox: "0 0 200 200" }
+                      },
                       [
-                        _c(
-                          "div",
-                          {
-                            staticClass: "ProgressBar ProgressBar_5",
-                            attrs: { "data-progress": "48" }
-                          },
-                          [
-                            _c(
-                              "svg",
-                              {
-                                staticClass: "ProgressBar-contentCircle",
-                                attrs: { viewBox: "0 0 200 200" }
-                              },
-                              [
-                                _c("circle", {
-                                  staticClass: "ProgressBar-background",
-                                  attrs: {
-                                    transform: "rotate(-90, 100, 100)",
-                                    cx: "100",
-                                    cy: "100",
-                                    r: "85"
-                                  }
-                                }),
-                                _vm._v(" "),
-                                _c("circle", {
-                                  staticClass: "ProgressBar-circle",
-                                  attrs: {
-                                    transform: "rotate(-90, 100, 100)",
-                                    cx: "100",
-                                    cy: "100",
-                                    r: "85"
-                                  }
-                                })
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c("span", {
-                              staticClass:
-                                "ProgressBar-percentage ProgressBar-percentage--count style--two"
-                            }),
-                            _vm._v(" "),
-                            _c(
-                              "span",
-                              { staticClass: "ProgressBar-percentage--text" },
-                              [_vm._v("Conversion")]
-                            )
-                          ]
-                        )
+                        _c("circle", {
+                          staticClass: "ProgressBar-background",
+                          attrs: {
+                            transform: "rotate(135, 100, 100)",
+                            cx: "100",
+                            cy: "100",
+                            r: "8"
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("circle", {
+                          staticClass: "ProgressBar-circle",
+                          attrs: {
+                            transform: "rotate(135, 100, 100)",
+                            cx: "100",
+                            cy: "100",
+                            r: "85"
+                          }
+                        })
                       ]
-                    )
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      { staticClass: "ProgressBar-percentage--text" },
+                      [_vm._v("Increase")]
+                    ),
+                    _vm._v(" "),
+                    _c("span", {
+                      staticClass:
+                        "ProgressBar-percentage ProgressBar-percentage--count"
+                    })
                   ]
                 )
-              ])
-            ])
+              ]
+            ),
+            _vm._v(" "),
+            _vm._m(7),
+            _vm._v(" "),
+            _vm._m(8)
           ])
         ])
       ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-xl-2 col-lg-4 col-sm-6" }, [
+        _c("div", { staticClass: "card mb-30 progress_7" }, [
+          _c("div", { staticClass: "card-body" }, [
+            _vm._m(9),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "ProgressBar-wrap position-relative mb-5" },
+              [
+                _c(
+                  "div",
+                  {
+                    staticClass: "ProgressBar ProgressBar_7",
+                    attrs: { "data-progress": "70" }
+                  },
+                  [
+                    _c(
+                      "svg",
+                      {
+                        staticClass: "ProgressBar-contentCircle",
+                        attrs: { viewBox: "0 0 200 200" }
+                      },
+                      [
+                        _c("circle", {
+                          staticClass: "ProgressBar-background",
+                          attrs: {
+                            transform: "rotate(135, 100, 100)",
+                            cx: "100",
+                            cy: "100",
+                            r: "8"
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("circle", {
+                          staticClass: "ProgressBar-circle",
+                          attrs: {
+                            transform: "rotate(135, 100, 100)",
+                            cx: "100",
+                            cy: "100",
+                            r: "85"
+                          }
+                        })
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      { staticClass: "ProgressBar-percentage--text" },
+                      [
+                        _vm._v(
+                          "\n                        Increase\n                        "
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c("span", {
+                      staticClass:
+                        "ProgressBar-percentage ProgressBar-percentage--count"
+                    })
+                  ]
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _vm._m(10),
+            _vm._v(" "),
+            _vm._m(11)
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _vm._m(12),
       _vm._v(" "),
       _vm._m(13),
       _vm._v(" "),
-      _vm._m(14)
+      _c("div", { staticClass: "col-xl-6 col-lg-12" }, [
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-sm-6" }, [
+            _c("div", { staticClass: "card mb-30" }, [
+              _c("div", { staticClass: "card-body" }, [
+                _vm._m(14),
+                _vm._v(" "),
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-6" }, [
+                    _c(
+                      "div",
+                      { staticClass: "d-flex align-items-center mb-40" },
+                      [
+                        _c("div", { staticClass: "progress_8" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass: "ProgressBar-wrap2 position-relative"
+                            },
+                            [
+                              _c(
+                                "div",
+                                {
+                                  staticClass: "ProgressBar ProgressBar_8",
+                                  attrs: { "data-progress": "67" }
+                                },
+                                [
+                                  _c(
+                                    "svg",
+                                    {
+                                      staticClass: "ProgressBar-contentCircle",
+                                      attrs: { viewBox: "0 0 200 200" }
+                                    },
+                                    [
+                                      _c("circle", {
+                                        staticClass: "ProgressBar-background",
+                                        attrs: {
+                                          transform: "rotate(-90, 100, 100)",
+                                          cx: "100",
+                                          cy: "100",
+                                          r: "85"
+                                        }
+                                      }),
+                                      _vm._v(" "),
+                                      _c("circle", {
+                                        staticClass: "ProgressBar-circle",
+                                        attrs: {
+                                          transform: "rotate(-90, 100, 100)",
+                                          cx: "100",
+                                          cy: "100",
+                                          r: "85"
+                                        }
+                                      })
+                                    ]
+                                  )
+                                ]
+                              )
+                            ]
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _vm._m(15)
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-6" }, [
+                    _c(
+                      "div",
+                      { staticClass: "d-flex align-items-center mb-40" },
+                      [
+                        _c("div", { staticClass: "progress_9" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass: "ProgressBar-wrap2 position-relative"
+                            },
+                            [
+                              _c(
+                                "div",
+                                {
+                                  staticClass: "ProgressBar ProgressBar_9",
+                                  attrs: { "data-progress": "75" }
+                                },
+                                [
+                                  _c(
+                                    "svg",
+                                    {
+                                      staticClass: "ProgressBar-contentCircle",
+                                      attrs: { viewBox: "0 0 200 200" }
+                                    },
+                                    [
+                                      _c("circle", {
+                                        staticClass: "ProgressBar-background",
+                                        attrs: {
+                                          transform: "rotate(-90, 100, 100)",
+                                          cx: "100",
+                                          cy: "100",
+                                          r: "85"
+                                        }
+                                      }),
+                                      _vm._v(" "),
+                                      _c("circle", {
+                                        staticClass: "ProgressBar-circle",
+                                        attrs: {
+                                          transform: "rotate(-90, 100, 100)",
+                                          cx: "100",
+                                          cy: "100",
+                                          r: "85"
+                                        }
+                                      })
+                                    ]
+                                  )
+                                ]
+                              )
+                            ]
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _vm._m(16)
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-6" }, [
+                    _c("div", { staticClass: "d-flex align-items-center" }, [
+                      _c("div", { staticClass: "progress_10" }, [
+                        _c(
+                          "div",
+                          {
+                            staticClass: "ProgressBar-wrap2 position-relative"
+                          },
+                          [
+                            _c(
+                              "div",
+                              {
+                                staticClass: "ProgressBar ProgressBar_10",
+                                attrs: { "data-progress": "48" }
+                              },
+                              [
+                                _c(
+                                  "svg",
+                                  {
+                                    staticClass: "ProgressBar-contentCircle",
+                                    attrs: { viewBox: "0 0 200 200" }
+                                  },
+                                  [
+                                    _c("circle", {
+                                      staticClass: "ProgressBar-background",
+                                      attrs: {
+                                        transform: "rotate(-90, 100, 100)",
+                                        cx: "100",
+                                        cy: "100",
+                                        r: "85"
+                                      }
+                                    }),
+                                    _vm._v(" "),
+                                    _c("circle", {
+                                      staticClass: "ProgressBar-circle",
+                                      attrs: {
+                                        transform: "rotate(-90, 100, 100)",
+                                        cx: "100",
+                                        cy: "100",
+                                        r: "85"
+                                      }
+                                    })
+                                  ]
+                                )
+                              ]
+                            )
+                          ]
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _vm._m(17)
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-6" }, [
+                    _c("div", { staticClass: "d-flex align-items-center" }, [
+                      _c("div", { staticClass: "progress_11" }, [
+                        _c(
+                          "div",
+                          {
+                            staticClass: "ProgressBar-wrap2 position-relative"
+                          },
+                          [
+                            _c(
+                              "div",
+                              {
+                                staticClass: "ProgressBar ProgressBar_11",
+                                attrs: { "data-progress": "78" }
+                              },
+                              [
+                                _c(
+                                  "svg",
+                                  {
+                                    staticClass: "ProgressBar-contentCircle",
+                                    attrs: { viewBox: "0 0 200 200" }
+                                  },
+                                  [
+                                    _c("circle", {
+                                      staticClass: "ProgressBar-background",
+                                      attrs: {
+                                        transform: "rotate(-90, 100, 100)",
+                                        cx: "100",
+                                        cy: "100",
+                                        r: "85"
+                                      }
+                                    }),
+                                    _vm._v(" "),
+                                    _c("circle", {
+                                      staticClass: "ProgressBar-circle",
+                                      attrs: {
+                                        transform: "rotate(-90, 100, 100)",
+                                        cx: "100",
+                                        cy: "100",
+                                        r: "85"
+                                      }
+                                    })
+                                  ]
+                                )
+                              ]
+                            )
+                          ]
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _vm._m(18)
+                    ])
+                  ])
+                ])
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-sm-6" }, [
+            _c("div", { staticClass: "card mb-30" }, [
+              _c("div", { staticClass: "card-body" }, [
+                _vm._m(19),
+                _vm._v(" "),
+                _c("div", { staticClass: "row" }, [
+                  _c("div", { staticClass: "col-6" }, [
+                    _c(
+                      "div",
+                      { staticClass: "d-flex align-items-center mb-40" },
+                      [
+                        _c("div", { staticClass: "progress_12" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass: "ProgressBar-wrap2 position-relative"
+                            },
+                            [
+                              _c(
+                                "div",
+                                {
+                                  staticClass: "ProgressBar ProgressBar_12",
+                                  attrs: { "data-progress": "67" }
+                                },
+                                [
+                                  _c(
+                                    "svg",
+                                    {
+                                      staticClass: "ProgressBar-contentCircle",
+                                      attrs: { viewBox: "0 0 200 200" }
+                                    },
+                                    [
+                                      _c("circle", {
+                                        staticClass: "ProgressBar-background",
+                                        attrs: {
+                                          transform: "rotate(-90, 100, 100)",
+                                          cx: "100",
+                                          cy: "100",
+                                          r: "85"
+                                        }
+                                      }),
+                                      _vm._v(" "),
+                                      _c("circle", {
+                                        staticClass: "ProgressBar-circle",
+                                        attrs: {
+                                          transform: "rotate(-90, 100, 100)",
+                                          cx: "100",
+                                          cy: "100",
+                                          r: "85"
+                                        }
+                                      })
+                                    ]
+                                  )
+                                ]
+                              )
+                            ]
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _vm._m(20)
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-6" }, [
+                    _c(
+                      "div",
+                      { staticClass: "d-flex align-items-center mb-40" },
+                      [
+                        _c("div", { staticClass: "progress_13" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass: "ProgressBar-wrap2 position-relative"
+                            },
+                            [
+                              _c(
+                                "div",
+                                {
+                                  staticClass: "ProgressBar ProgressBar_13",
+                                  attrs: { "data-progress": "75" }
+                                },
+                                [
+                                  _c(
+                                    "svg",
+                                    {
+                                      staticClass: "ProgressBar-contentCircle",
+                                      attrs: { viewBox: "0 0 200 200" }
+                                    },
+                                    [
+                                      _c("circle", {
+                                        staticClass: "ProgressBar-background",
+                                        attrs: {
+                                          transform: "rotate(-90, 100, 100)",
+                                          cx: "100",
+                                          cy: "100",
+                                          r: "85"
+                                        }
+                                      }),
+                                      _vm._v(" "),
+                                      _c("circle", {
+                                        staticClass: "ProgressBar-circle",
+                                        attrs: {
+                                          transform: "rotate(-90, 100, 100)",
+                                          cx: "100",
+                                          cy: "100",
+                                          r: "85"
+                                        }
+                                      })
+                                    ]
+                                  )
+                                ]
+                              )
+                            ]
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _vm._m(21)
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-6" }, [
+                    _c("div", { staticClass: "d-flex align-items-center" }, [
+                      _c("div", { staticClass: "progress_14" }, [
+                        _c(
+                          "div",
+                          {
+                            staticClass: "ProgressBar-wrap2 position-relative"
+                          },
+                          [
+                            _c(
+                              "div",
+                              {
+                                staticClass: "ProgressBar ProgressBar_14",
+                                attrs: { "data-progress": "48" }
+                              },
+                              [
+                                _c(
+                                  "svg",
+                                  {
+                                    staticClass: "ProgressBar-contentCircle",
+                                    attrs: { viewBox: "0 0 200 200" }
+                                  },
+                                  [
+                                    _c("circle", {
+                                      staticClass: "ProgressBar-background",
+                                      attrs: {
+                                        transform: "rotate(-90, 100, 100)",
+                                        cx: "100",
+                                        cy: "100",
+                                        r: "85"
+                                      }
+                                    }),
+                                    _vm._v(" "),
+                                    _c("circle", {
+                                      staticClass: "ProgressBar-circle",
+                                      attrs: {
+                                        transform: "rotate(-90, 100, 100)",
+                                        cx: "100",
+                                        cy: "100",
+                                        r: "85"
+                                      }
+                                    })
+                                  ]
+                                )
+                              ]
+                            )
+                          ]
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _vm._m(22)
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-6" }, [
+                    _c("div", { staticClass: "d-flex align-items-center" }, [
+                      _c("div", { staticClass: "progress_15" }, [
+                        _c(
+                          "div",
+                          {
+                            staticClass: "ProgressBar-wrap2 position-relative"
+                          },
+                          [
+                            _c(
+                              "div",
+                              {
+                                staticClass: "ProgressBar ProgressBar_15",
+                                attrs: { "data-progress": "78" }
+                              },
+                              [
+                                _c(
+                                  "svg",
+                                  {
+                                    staticClass: "ProgressBar-contentCircle",
+                                    attrs: { viewBox: "0 0 200 200" }
+                                  },
+                                  [
+                                    _c("circle", {
+                                      staticClass: "ProgressBar-background",
+                                      attrs: {
+                                        transform: "rotate(-90, 100, 100)",
+                                        cx: "100",
+                                        cy: "100",
+                                        r: "85"
+                                      }
+                                    }),
+                                    _vm._v(" "),
+                                    _c("circle", {
+                                      staticClass: "ProgressBar-circle",
+                                      attrs: {
+                                        transform: "rotate(-90, 100, 100)",
+                                        cx: "100",
+                                        cy: "100",
+                                        r: "85"
+                                      }
+                                    })
+                                  ]
+                                )
+                              ]
+                            )
+                          ]
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _vm._m(23)
+                    ])
+                  ])
+                ])
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _vm._m(24)
+        ])
+      ]),
+      _vm._v(" "),
+      _vm._m(25),
+      _vm._v(" "),
+      _vm._m(26)
     ])
   ])
 }
@@ -45842,133 +47357,31 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-xl-4 col-md-8" }, [
-        _c("div", { staticClass: "card mb-30" }, [
-          _c("div", { staticClass: "card-body" }, [
+    return _c("div", { staticClass: "col-xl-3 col-sm-6" }, [
+      _c("div", { staticClass: "card mb-30" }, [
+        _c("div", { staticClass: "state" }, [
+          _c("div", { staticClass: "d-flex align-items-center flex-wrap" }, [
             _c(
               "div",
-              {
-                staticClass: "d-flex align-items-center justify-content-between"
-              },
+              { staticClass: "state-icon d-flex justify-content-center" },
               [
-                _c("div", { staticClass: "increase" }, [
-                  _c(
-                    "div",
-                    { staticClass: "card-title d-flex align-items-end mb-2" },
-                    [
-                      _c("h2", [_vm._v("86"), _c("sup", [_vm._v("%")])]),
-                      _vm._v(" "),
-                      _c("p", { staticClass: "font-14" }, [_vm._v("Increased")])
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("h3", { staticClass: "card-subtitle mb-2" }, [
-                    _vm._v(
-                      "\n                                Congratulation!\n                            "
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("p", { staticClass: "font-16" }, [
-                    _vm._v(
-                      "\n                                You've finished all of your tasks for this\n                                week.\n                            "
-                    )
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "congratulation-img" }, [
-                  _c("img", {
-                    attrs: {
-                      src: "/backend/assets/img/media/congratulation-img.png",
-                      alt: ""
-                    }
-                  })
-                ])
+                _c("img", {
+                  attrs: {
+                    src: "/backend/assets/img/png-icon/tax.png",
+                    alt: ""
+                  }
+                })
               ]
-            )
+            ),
+            _vm._v(" "),
+            _c("div", { staticClass: "state-content" }, [
+              _c("p", { staticClass: "font-14 mb-2" }, [
+                _vm._v("Annual Taxes EMS")
+              ]),
+              _vm._v(" "),
+              _c("h2", [_vm._v("$251k")])
+            ])
           ])
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-xl-2 col-md-4 col-sm-6" }, [
-        _c("div", { staticClass: "card area-chart-box mb-30" }, [
-          _c("div", { staticClass: "card-body" }, [
-            _c("div", { staticClass: "d-flex justify-content-between" }, [
-              _c("div", {}, [
-                _c("h4", { staticClass: "mb-1" }, [_vm._v("Income")]),
-                _vm._v(" "),
-                _c("p", { staticClass: "font-14 c3" }, [
-                  _vm._v("Increase in Average")
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", {}, [
-                _c("h2", [_vm._v("50"), _c("sup", [_vm._v("%")])])
-              ])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "chart", attrs: { id: "apex_area-chart" } })
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-xl-2 col-md-4 col-sm-6" }, [
-        _c("div", { staticClass: "card area-chart-box mb-30" }, [
-          _c("div", { staticClass: "card-body" }, [
-            _c("div", { staticClass: "d-flex justify-content-between" }, [
-              _c("div", {}, [
-                _c("h4", { staticClass: "mb-1" }, [_vm._v("Profit Report")]),
-                _vm._v(" "),
-                _c("p", { staticClass: "font-14 soft-pink" }, [
-                  _vm._v(
-                    "\n                                Decrease in Average\n                            "
-                  )
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", {}, [
-                _c("h2", [_vm._v("15"), _c("sup", [_vm._v("%")])])
-              ])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "chart", attrs: { id: "apex_area2-chart" } })
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-xl-2 col-md-4 col-sm-6" }, [
-        _c("div", { staticClass: "card area-chart-box mb-30" }, [
-          _c("div", { staticClass: "card-body" }, [
-            _c("div", {}, [
-              _c("h4", { staticClass: "mb-1" }, [_vm._v("Impression")]),
-              _vm._v(" "),
-              _c("p", { staticClass: "font-14 text_color" }, [
-                _vm._v(
-                  "\n                            Hover to see detail\n                        "
-                )
-              ])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "chart", attrs: { id: "apex_area3-chart" } })
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-xl-2 col-md-4 col-sm-6" }, [
-        _c("div", { staticClass: "card area-chart-box mb-30" }, [
-          _c("div", { staticClass: "card-body" }, [
-            _c("div", {}, [
-              _c("h4", { staticClass: "mb-1" }, [_vm._v("Activity")]),
-              _vm._v(" "),
-              _c("p", { staticClass: "font-14 text_color" }, [
-                _vm._v(
-                  "\n                            Hover to see detail\n                        "
-                )
-              ])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "chart", attrs: { id: "apex_area4-chart" } })
         ])
       ])
     ])
@@ -45977,18 +47390,763 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-xl-3 col-sm-6" }, [
+      _c("div", { staticClass: "card mb-30" }, [
+        _c("div", { staticClass: "state" }, [
+          _c("div", { staticClass: "d-flex align-items-center flex-wrap" }, [
+            _c(
+              "div",
+              { staticClass: "state-icon d-flex justify-content-center" },
+              [
+                _c("img", {
+                  attrs: {
+                    src: "/backend/assets/img/png-icon/revenue.png",
+                    alt: ""
+                  }
+                })
+              ]
+            ),
+            _vm._v(" "),
+            _c("div", { staticClass: "state-content" }, [
+              _c("p", { staticClass: "font-14 mb-2" }, [
+                _vm._v("Average Revenue")
+              ]),
+              _vm._v(" "),
+              _c("h2", [_vm._v("$2.5M")])
+            ])
+          ])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-xl-3 col-sm-6" }, [
+      _c("div", { staticClass: "card mb-30" }, [
+        _c("div", { staticClass: "state" }, [
+          _c("div", { staticClass: "d-flex align-items-center flex-wrap" }, [
+            _c(
+              "div",
+              { staticClass: "state-icon d-flex justify-content-center" },
+              [
+                _c("img", {
+                  attrs: {
+                    src: "/backend/assets/img/png-icon/comission.png",
+                    alt: ""
+                  }
+                })
+              ]
+            ),
+            _vm._v(" "),
+            _c("div", { staticClass: "state-content" }, [
+              _c("p", { staticClass: "font-14 mb-2" }, [
+                _vm._v("Paid Comissions")
+              ]),
+              _vm._v(" "),
+              _c("h2", [_vm._v("$4.8M")])
+            ])
+          ])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-xl-3 col-sm-6" }, [
+      _c("div", { staticClass: "card mb-30" }, [
+        _c("div", { staticClass: "state" }, [
+          _c("div", { staticClass: "d-flex align-items-center flex-wrap" }, [
+            _c(
+              "div",
+              { staticClass: "state-icon d-flex justify-content-center" },
+              [
+                _c("img", {
+                  attrs: {
+                    src: "/backend/assets/img/png-icon/user.png",
+                    alt: ""
+                  }
+                })
+              ]
+            ),
+            _vm._v(" "),
+            _c("div", { staticClass: "state-content" }, [
+              _c("p", { staticClass: "font-14 mb-2" }, [
+                _vm._v("Revenue Margin")
+              ]),
+              _vm._v(" "),
+              _c("h2", [_vm._v("$46%")])
+            ])
+          ])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-xl-8 col-12" }, [
+      _c("div", { staticClass: "card mb-30" }, [
+        _c("div", { staticClass: "card-body" }, [
+          _c(
+            "div",
+            {
+              staticClass:
+                "d-flex justify-content-between align-items-start align-items-sm-center media"
+            },
+            [
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "d-flex justify-content-start justify-content-sm-between align-items-start align-items-sm-center flex-column flex-sm-row mb-sm-n3  media-body"
+                },
+                [
+                  _c("div", { staticClass: "title-content mb-4 mb-sm-0" }, [
+                    _c("h4", { staticClass: "mb-2" }, [_vm._v("Sale Reports")]),
+                    _vm._v(" "),
+                    _c("p", [_vm._v("50% Average")])
+                  ]),
+                  _vm._v(" "),
+                  _c("ul", { staticClass: "list-inline list-button m-0" }, [
+                    _c("li", { staticClass: "active" }, [_vm._v("Monthly")]),
+                    _vm._v(" "),
+                    _c("li", [_vm._v("Daily")]),
+                    _vm._v(" "),
+                    _c("li", [_vm._v("Yearly")])
+                  ])
+                ]
+              ),
+              _vm._v(" "),
+              _c("div", { staticClass: "dropdown-button" }, [
+                _c("a", { attrs: { href: "#", "data-toggle": "dropdown" } }, [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "menu-icon style--two mt-0 mt-md-1 mr-0 d-flex justify-content-start justify-content-sm-end"
+                    },
+                    [
+                      _c("span"),
+                      _vm._v(" "),
+                      _c("span"),
+                      _vm._v(" "),
+                      _c("span")
+                    ]
+                  )
+                ]),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "dropdown-menu dropdown-menu-right" },
+                  [
+                    _c("a", { attrs: { href: "#" } }, [_vm._v("Report")]),
+                    _vm._v(" "),
+                    _c("a", { attrs: { href: "#" } }, [_vm._v("FAQ")]),
+                    _vm._v(" "),
+                    _c("a", { attrs: { href: "#" } }, [_vm._v("Charts")]),
+                    _vm._v(" "),
+                    _c("a", { attrs: { href: "#" } }, [_vm._v("Chat")]),
+                    _vm._v(" "),
+                    _c("a", { attrs: { href: "#" } }, [_vm._v("Settings")])
+                  ]
+                )
+              ])
+            ]
+          )
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "chart", attrs: { id: "apex_line4-chart" } })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-xl-4 col-lg-4 col-md-12" }, [
+      _c("div", { staticClass: "card mb-30" }, [
+        _c("div", { staticClass: "card-body mb-3 mb-xl-0" }, [
+          _c("div", { staticClass: "d-flex justify-content-between" }, [
+            _c("div", { staticClass: "title-content" }, [
+              _c("h4", { staticClass: "mb-2" }, [_vm._v("Top Countries")])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "dropdown-button" }, [
+              _c(
+                "a",
+                {
+                  staticClass: "d-flex",
+                  attrs: { href: "#", "data-toggle": "dropdown" }
+                },
+                [
+                  _c(
+                    "div",
+                    { staticClass: "menu-icon style--two mr-0 d-flex" },
+                    [
+                      _c("span"),
+                      _vm._v(" "),
+                      _c("span"),
+                      _vm._v(" "),
+                      _c("span")
+                    ]
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c("div", { staticClass: "dropdown-menu dropdown-menu-right" }, [
+                _c("a", { attrs: { href: "#" } }, [_vm._v("Daily")]),
+                _vm._v(" "),
+                _c("a", { attrs: { href: "#" } }, [_vm._v("Sort By")]),
+                _vm._v(" "),
+                _c("a", { attrs: { href: "#" } }, [_vm._v("Monthly")])
+              ])
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "chart", attrs: { id: "apex_pie-chart" } })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "progress-title" }, [
+      _c("h4", { staticClass: "mb-1" }, [_vm._v("sales")]),
+      _vm._v(" "),
+      _c("p", [_vm._v("Vexed if style allow he there.")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "process-bar-wrapper" }, [
+      _c("span", { staticClass: "process-name" }, [_vm._v("Sales Grow")]),
+      _vm._v(" "),
+      _c("span", { staticClass: "process-width" }, [_vm._v("35%")]),
+      _vm._v(" "),
+      _c("span", {
+        staticClass: "process-bar",
+        attrs: { "data-process-width": "35" }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "process-bar-wrapper" }, [
+      _c("span", { staticClass: "process-name" }, [_vm._v("Sales Grow")]),
+      _vm._v(" "),
+      _c("span", { staticClass: "process-width" }, [_vm._v("68%")]),
+      _vm._v(" "),
+      _c("span", {
+        staticClass: "process-bar style--two",
+        attrs: { "data-process-width": "68" }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "progress-title" }, [
+      _c("h4", { staticClass: "mb-1" }, [_vm._v("Company Growth")]),
+      _vm._v(" "),
+      _c("p", [_vm._v("Miea there style allow he now")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "process-bar-wrapper" }, [
+      _c("span", { staticClass: "process-name" }, [_vm._v("Sales Grow")]),
+      _vm._v(" "),
+      _c("span", { staticClass: "process-width" }, [_vm._v("45%")]),
+      _vm._v(" "),
+      _c("span", {
+        staticClass: "process-bar style--three",
+        attrs: { "data-process-width": "45" }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "process-bar-wrapper" }, [
+      _c("span", { staticClass: "process-name" }, [_vm._v("Sales Grow")]),
+      _vm._v(" "),
+      _c("span", { staticClass: "process-width" }, [_vm._v("23%")]),
+      _vm._v(" "),
+      _c("span", {
+        staticClass: "process-bar style--four",
+        attrs: { "data-process-width": "23" }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-xl-4 col-lg-6" }, [
+      _c("div", { staticClass: "card mb-30" }, [
+        _c("div", { staticClass: "card-body" }, [
+          _c(
+            "div",
+            {
+              staticClass:
+                "d-flex align-items-start align-items-sm-end justify-content-between mb-30"
+            },
+            [
+              _c("div", {}, [
+                _c("h4", { staticClass: "mb-1" }, [_vm._v("Last Month Sale")]),
+                _vm._v(" "),
+                _c("p", { staticClass: "font-14" }, [
+                  _vm._v("50% increase in a average")
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "dropdown-button" }, [
+                _c(
+                  "a",
+                  {
+                    staticClass: "d-flex align-items-center",
+                    attrs: { href: "#", "data-toggle": "dropdown" }
+                  },
+                  [
+                    _c("div", { staticClass: "menu-icon style--two mr-0" }, [
+                      _c("span"),
+                      _vm._v(" "),
+                      _c("span"),
+                      _vm._v(" "),
+                      _c("span")
+                    ])
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "dropdown-menu dropdown-menu-right" },
+                  [
+                    _c("a", { attrs: { href: "#" } }, [_vm._v("Daily")]),
+                    _vm._v(" "),
+                    _c("a", { attrs: { href: "#" } }, [_vm._v("Sort By")]),
+                    _vm._v(" "),
+                    _c("a", { attrs: { href: "#" } }, [_vm._v("Monthly")])
+                  ]
+                )
+              ])
+            ]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "chart", attrs: { id: "apex_line5-chart" } })
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-xl-4 col-lg-6" }, [
+      _c("div", { staticClass: "card mb-30" }, [
+        _c("div", { staticClass: "card-body" }, [
+          _c(
+            "div",
+            {
+              staticClass:
+                "d-flex align-items-start align-items-sm-end justify-content-between mb-3"
+            },
+            [
+              _c("div", {}, [
+                _c("h4", { staticClass: "mb-1" }, [
+                  _vm._v("Top Selling  Products")
+                ]),
+                _vm._v(" "),
+                _c("p", { staticClass: "font-14" }, [
+                  _vm._v(
+                    " Tell use paid law ever yet new. Meant to learn of vexed he there."
+                  )
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "dropdown-button" }, [
+                _c(
+                  "a",
+                  {
+                    staticClass: "d-flex align-items-center",
+                    attrs: { href: "#", "data-toggle": "dropdown" }
+                  },
+                  [
+                    _c("div", { staticClass: "menu-icon style--two mr-0" }, [
+                      _c("span"),
+                      _vm._v(" "),
+                      _c("span"),
+                      _vm._v(" "),
+                      _c("span")
+                    ])
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "dropdown-menu dropdown-menu-right" },
+                  [
+                    _c("a", { attrs: { href: "#" } }, [_vm._v("Daily")]),
+                    _vm._v(" "),
+                    _c("a", { attrs: { href: "#" } }, [_vm._v("Sort By")]),
+                    _vm._v(" "),
+                    _c("a", { attrs: { href: "#" } }, [_vm._v("Monthly")])
+                  ]
+                )
+              ])
+            ]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "product-list" }, [
+            _c(
+              "div",
+              {
+                staticClass:
+                  "product-list-item mb-20 d-flex justify-content-between align-items-center"
+              },
+              [
+                _c("div", { staticClass: "d-flex align-items-center" }, [
+                  _c("div", { staticClass: "img mr-3" }, [
+                    _c("img", {
+                      attrs: {
+                        src: "/backend/assets/img/product/product1.png",
+                        alt: ""
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "content" }, [
+                    _c("p", { staticClass: "mb-1" }, [
+                      _vm._v("Fastrack Watches")
+                    ]),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "c3 bold font-14" }, [
+                      _vm._v("$245.65")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("p", { staticClass: "font-14" }, [_vm._v("26584 Selles")])
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "product-list-item mb-20 d-flex justify-content-between align-items-center"
+              },
+              [
+                _c("div", { staticClass: "d-flex align-items-center" }, [
+                  _c("div", { staticClass: "img mr-3" }, [
+                    _c("img", {
+                      attrs: {
+                        src: "/backend/assets/img/product/product2.png",
+                        alt: ""
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "content" }, [
+                    _c("p", { staticClass: "mb-1" }, [
+                      _vm._v("Fastrack Watches 2654")
+                    ]),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "c3 bold font-14" }, [
+                      _vm._v("$245.65")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("p", { staticClass: "font-14" }, [_vm._v("26584 Selles")])
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "product-list-item mb-20 d-flex justify-content-between align-items-center"
+              },
+              [
+                _c("div", { staticClass: "d-flex align-items-center" }, [
+                  _c("div", { staticClass: "img mr-3" }, [
+                    _c("img", {
+                      attrs: {
+                        src: "/backend/assets/img/product/product3.png",
+                        alt: ""
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "content" }, [
+                    _c("p", { staticClass: "mb-1" }, [
+                      _vm._v("Fastrack Watches 2654")
+                    ]),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "c3 bold font-14" }, [
+                      _vm._v("$245.65")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("p", { staticClass: "font-14" }, [_vm._v("26584 Selles")])
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "product-list-item d-flex justify-content-between align-items-center"
+              },
+              [
+                _c("div", { staticClass: "d-flex align-items-center" }, [
+                  _c("div", { staticClass: "img mr-3" }, [
+                    _c("img", {
+                      attrs: {
+                        src: "/backend/assets/img/product/product4.png",
+                        alt: ""
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "content" }, [
+                    _c("p", { staticClass: "mb-1" }, [
+                      _vm._v("Fastrack Watches 2654")
+                    ]),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "c3 bold font-14" }, [
+                      _vm._v("$245.65")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("p", { staticClass: "font-14" }, [_vm._v("26584 Selles")])
+              ]
+            )
+          ])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "d-flex align-items-center mb-30" }, [
+      _c("div", { staticClass: "mr-3 square-75" }, [
+        _c("img", {
+          staticClass: "radius",
+          attrs: { src: "/backend/assets/img/avatar/top-seller.png", alt: "" }
+        })
+      ]),
+      _vm._v(" "),
+      _c("div", {}, [
+        _c("h4", { staticClass: "mb-1" }, [_vm._v("Ransel Mendalka")]),
+        _vm._v(" "),
+        _c("p", { staticClass: "font-14" }, [_vm._v("Top Sellers")])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", {}, [
+      _c("p", { staticClass: "mb-1 font-14 l-height1" }, [_vm._v("Products")]),
+      _vm._v(" "),
+      _c("h4", [_vm._v("264")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", {}, [
+      _c("p", { staticClass: "mb-1 font-14 l-height1" }, [_vm._v("Earned")]),
+      _vm._v(" "),
+      _c("h4", [_vm._v("$16k")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", {}, [
+      _c("p", { staticClass: "mb-1 font-14 l-height1" }, [_vm._v("Orders")]),
+      _vm._v(" "),
+      _c("h4", [_vm._v("$4.6k")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", {}, [
+      _c("p", { staticClass: "mb-1 font-14 l-height1" }, [_vm._v("Delivered")]),
+      _vm._v(" "),
+      _c("h4", [_vm._v("$3.4k")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "d-flex align-items-center mb-30" }, [
+      _c("div", { staticClass: "mr-3 square-75" }, [
+        _c("img", {
+          staticClass: "radius",
+          attrs: { src: "/backend/assets/img/avatar/top-buyer.png", alt: "" }
+        })
+      ]),
+      _vm._v(" "),
+      _c("div", {}, [
+        _c("h4", { staticClass: "mb-1" }, [_vm._v("Bobby Fuller")]),
+        _vm._v(" "),
+        _c("p", { staticClass: "font-14" }, [_vm._v("Top Buyer")])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", {}, [
+      _c("p", { staticClass: "mb-1 font-14 l-height1" }, [_vm._v("Orders")]),
+      _vm._v(" "),
+      _c("h4", [_vm._v("164")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", {}, [
+      _c("p", { staticClass: "mb-1 font-14 l-height1" }, [_vm._v("Expenses")]),
+      _vm._v(" "),
+      _c("h4", [_vm._v("$1.6k")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", {}, [
+      _c("p", { staticClass: "mb-1 font-14 l-height1" }, [_vm._v("Recived")]),
+      _vm._v(" "),
+      _c("h4", [_vm._v("143")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", {}, [
+      _c("p", { staticClass: "mb-1 font-14 l-height1" }, [_vm._v("Reviews")]),
+      _vm._v(" "),
+      _c("h4", [_vm._v("124")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-12" }, [
       _c("div", { staticClass: "card mb-30" }, [
-        _c(
-          "div",
-          { staticClass: "card-body d-flex justify-content-between mb-n72" },
-          [
-            _c("div", { staticClass: "position-relative index-9" }, [
-              _c("h4", { staticClass: "mb-1" }, [_vm._v("Website Analytics")]),
+        _c("div", { staticClass: "card-body mb-30" }, [
+          _c("div", { staticClass: "d-flex justify-content-between media" }, [
+            _c(
+              "div",
+              {
+                staticClass:
+                  "d-flex justify-content-between flex-column flex-md-row media-body"
+              },
+              [
+                _c("div", { staticClass: "title-content mb-4 mb-md-0" }, [
+                  _c("h4", { staticClass: "mb-2" }, [_vm._v("Impression")]),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "font-14" }, [
+                    _vm._v(
+                      "Tell use paid law ever yet new. Meant to learn of vexed if style allow he there."
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("ul", { staticClass: "list-inline list-button m-0" }, [
+                  _c("li", { staticClass: "active" }, [_vm._v("Monthly")]),
+                  _vm._v(" "),
+                  _c("li", [_vm._v("Yearly")])
+                ])
+              ]
+            ),
+            _vm._v(" "),
+            _c("div", { staticClass: "dropdown-button" }, [
+              _c(
+                "a",
+                {
+                  staticClass: "d-flex",
+                  attrs: { href: "#", "data-toggle": "dropdown" }
+                },
+                [
+                  _c("div", { staticClass: "menu-icon style--two mr-0 pt-1" }, [
+                    _c("span"),
+                    _vm._v(" "),
+                    _c("span"),
+                    _vm._v(" "),
+                    _c("span")
+                  ])
+                ]
+              ),
+              _vm._v(" "),
+              _c("div", { staticClass: "dropdown-menu dropdown-menu-right" }, [
+                _c("a", { attrs: { href: "#" } }, [_vm._v("Report")]),
+                _vm._v(" "),
+                _c("a", { attrs: { href: "#" } }, [_vm._v("FAQ")]),
+                _vm._v(" "),
+                _c("a", { attrs: { href: "#" } }, [_vm._v("Charts")]),
+                _vm._v(" "),
+                _c("a", { attrs: { href: "#" } }, [_vm._v("Chat")]),
+                _vm._v(" "),
+                _c("a", { attrs: { href: "#" } }, [_vm._v("Settings")])
+              ])
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "chart", attrs: { id: "apex_area5-chart" } })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-xl-6" }, [
+      _c("div", { staticClass: "card mb-30" }, [
+        _c("div", { staticClass: "card-body" }, [
+          _c("div", { staticClass: "d-flex justify-content-between" }, [
+            _c("div", { staticClass: "title-content mb-5" }, [
+              _c("h4", { staticClass: "mb-2" }, [_vm._v("User Activity")]),
               _vm._v(" "),
               _c("p", { staticClass: "font-14" }, [
                 _vm._v(
-                  "\n                                    Check out each column for more details\n                                "
+                  "Aenean sed lorem est. Sed quis neque ut nibh suscipit imperdiet ac non augue. Aenean ornare sit amet lectus non"
                 )
               ])
             ]),
@@ -46001,1077 +48159,161 @@ var staticRenderFns = [
                   attrs: { href: "#", "data-toggle": "dropdown" }
                 },
                 [
-                  _c("div", { staticClass: "menu-icon style--two mr-0" }, [
-                    _c("span"),
-                    _vm._v(" "),
-                    _c("span"),
-                    _vm._v(" "),
-                    _c("span")
-                  ])
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "menu-icon style--two mr-0 d-flex justify-content-center"
+                    },
+                    [
+                      _c("span"),
+                      _vm._v(" "),
+                      _c("span"),
+                      _vm._v(" "),
+                      _c("span")
+                    ]
+                  )
                 ]
               ),
               _vm._v(" "),
               _c("div", { staticClass: "dropdown-menu dropdown-menu-right" }, [
-                _c("a", { attrs: { href: "#" } }, [_vm._v("Daily")]),
+                _c("a", { attrs: { href: "#" } }, [_vm._v("Report")]),
                 _vm._v(" "),
-                _c("a", { attrs: { href: "#" } }, [_vm._v("Sort By")]),
+                _c("a", { attrs: { href: "#" } }, [_vm._v("FAQ")]),
                 _vm._v(" "),
-                _c("a", { attrs: { href: "#" } }, [_vm._v("Monthly")])
+                _c("a", { attrs: { href: "#" } }, [_vm._v("Charts")]),
+                _vm._v(" "),
+                _c("a", { attrs: { href: "#" } }, [_vm._v("Chat")]),
+                _vm._v(" "),
+                _c("a", { attrs: { href: "#" } }, [_vm._v("Settings")])
               ])
             ])
-          ]
-        ),
-        _vm._v(" "),
-        _c("div", { staticClass: "chart", attrs: { id: "apex_column-chart" } })
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "d-flex flex-wrap mb-2 progress-info" }, [
-      _c("div", [_vm._v("Users")]),
-      _vm._v(" "),
-      _c("div", [
-        _c("img", {
-          staticClass: "svg",
-          attrs: { src: "/backend/assets/img/svg/caret-up.svg", alt: "" }
-        }),
-        _vm._v(
-          "\n                                    2.6k\n                                "
-        )
-      ]),
-      _vm._v(" "),
-      _c("div", [
-        _c("img", {
-          staticClass: "svg",
-          attrs: { src: "/backend/assets/img/svg/caret-down.svg", alt: "" }
-        }),
-        _vm._v("568\n                                ")
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "d-flex flex-wrap progress-info" }, [
-      _c("div", [_vm._v("Disabled")]),
-      _vm._v(" "),
-      _c("div", [
-        _c("img", {
-          staticClass: "svg",
-          attrs: { src: "/backend/assets/img/svg/caret-up.svg", alt: "" }
-        }),
-        _vm._v("1.26k\n                                ")
-      ]),
-      _vm._v(" "),
-      _c("div", [
-        _c("img", {
-          staticClass: "svg",
-          attrs: { src: "/backend/assets/img/svg/caret-down.svg", alt: "" }
-        }),
-        _vm._v("25\n                                ")
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "d-flex flex-wrap mb-2 progress-info" }, [
-      _c("div", [_vm._v("Net Profit")]),
-      _vm._v(" "),
-      _c("div", [
-        _c("img", {
-          staticClass: "svg",
-          attrs: { src: "/backend/assets/img/svg/caret-up.svg", alt: "" }
-        }),
-        _vm._v(
-          "\n                                    268k\n                                "
-        )
-      ]),
-      _vm._v(" "),
-      _c("div", [
-        _c("img", {
-          staticClass: "svg",
-          attrs: { src: "/backend/assets/img/svg/caret-down.svg", alt: "" }
-        }),
-        _vm._v("89k\n                                ")
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "d-flex flex-wrap progress-info" }, [
-      _c("div", [_vm._v("Expenses")]),
-      _vm._v(" "),
-      _c("div", [
-        _c("img", {
-          staticClass: "svg",
-          attrs: { src: "/backend/assets/img/svg/caret-up.svg", alt: "" }
-        }),
-        _vm._v("1.26k\n                                ")
-      ]),
-      _vm._v(" "),
-      _c("div", [
-        _c("img", {
-          staticClass: "svg",
-          attrs: { src: "/backend/assets/img/svg/caret-down.svg", alt: "" }
-        }),
-        _vm._v("1.5k\n                                ")
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "d-flex flex-wrap mb-2 progress-info" }, [
-      _c("div", [_vm._v("Employee")]),
-      _vm._v(" "),
-      _c("div", [
-        _c("img", {
-          staticClass: "svg",
-          attrs: { src: "/backend/assets/img/svg/caret-up.svg", alt: "" }
-        }),
-        _vm._v("15\n                                ")
-      ]),
-      _vm._v(" "),
-      _c("div", [
-        _c("img", {
-          staticClass: "svg",
-          attrs: { src: "/backend/assets/img/svg/caret-down.svg", alt: "" }
-        }),
-        _vm._v("3\n                                ")
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "d-flex flex-wrap progress-info" }, [
-      _c("div", [_vm._v("Production")]),
-      _vm._v(" "),
-      _c("div", [
-        _c("img", {
-          staticClass: "svg",
-          attrs: { src: "/backend/assets/img/svg/caret-up.svg", alt: "" }
-        }),
-        _vm._v("1.26k\n                                ")
-      ]),
-      _vm._v(" "),
-      _c("div", [
-        _c("img", {
-          staticClass: "svg",
-          attrs: { src: "/backend/assets/img/svg/caret-down.svg", alt: "" }
-        }),
-        _vm._v("1.2k\n                                ")
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-xl-6 col-lg-12" }, [
-      _c("div", { staticClass: "row" }, [
-        _c("div", { staticClass: "col-sm-6" }, [
-          _c("div", { staticClass: "card mb-30" }, [
-            _c("div", { staticClass: "card-body" }, [
-              _c("div", {
-                staticClass: "chart",
-                attrs: { id: "apex_line-chart" }
-              }),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "d-flex align-items-end justify-content-between mt-4"
-                },
-                [
-                  _c("div", {}, [
-                    _c("h4", { staticClass: "mb-1" }, [
-                      _vm._v("Website Analytics")
-                    ]),
-                    _vm._v(" "),
-                    _c("p", { staticClass: "font-14" }, [
-                      _vm._v(
-                        "\n                                        Check out each column for more\n                                        details\n                                    "
-                      )
-                    ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "table-responsive mt-n2" }, [
+            _c("table", { staticClass: "style--two" }, [
+              _c("thead", [
+                _c("tr", [
+                  _c("th", [
+                    _vm._v("Date "),
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/table-down-arrow.svg",
+                        alt: ""
+                      }
+                    })
                   ]),
                   _vm._v(" "),
-                  _c("div", { staticClass: "dropdown-button" }, [
-                    _c(
-                      "a",
-                      {
-                        staticClass: "d-flex align-items-center",
-                        attrs: { href: "#", "data-toggle": "dropdown" }
-                      },
-                      [
-                        _c(
-                          "div",
-                          {
-                            staticClass:
-                              "menu-icon justify-content-end pb-1 style--two mr-0"
-                          },
-                          [
-                            _c("span"),
-                            _vm._v(" "),
-                            _c("span"),
-                            _vm._v(" "),
-                            _c("span")
-                          ]
-                        )
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      { staticClass: "dropdown-menu dropdown-menu-right" },
-                      [
-                        _c("a", { attrs: { href: "#" } }, [_vm._v("Daily")]),
-                        _vm._v(" "),
-                        _c("a", { attrs: { href: "#" } }, [_vm._v("Sort By")]),
-                        _vm._v(" "),
-                        _c("a", { attrs: { href: "#" } }, [_vm._v("Monthly")])
-                      ]
-                    )
-                  ])
-                ]
-              )
-            ])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "col-sm-6" }, [
-          _c("div", { staticClass: "card mb-30" }, [
-            _c("div", { staticClass: "card-body" }, [
-              _c("div", {
-                staticClass: "chart",
-                attrs: { id: "apex_line2-chart" }
-              }),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "d-flex align-items-end justify-content-between mt-4"
-                },
-                [
-                  _c("div", {}, [
-                    _c("h4", { staticClass: "mb-1" }, [
-                      _vm._v("Company Growth")
-                    ]),
-                    _vm._v(" "),
-                    _c("p", { staticClass: "font-14" }, [
-                      _vm._v(
-                        "\n                                        Company is growing 20% in average\n                                    "
-                      )
-                    ])
+                  _c("th", [
+                    _vm._v("Pages/Visit "),
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/table-down-arrow.svg",
+                        alt: ""
+                      }
+                    })
                   ]),
                   _vm._v(" "),
-                  _c("div", { staticClass: "dropdown-button" }, [
-                    _c(
-                      "a",
-                      {
-                        staticClass: "d-flex align-items-center",
-                        attrs: { href: "#", "data-toggle": "dropdown" }
-                      },
-                      [
-                        _c(
-                          "div",
-                          {
-                            staticClass:
-                              "menu-icon justify-content-end pb-1 style--two mr-0"
-                          },
-                          [
-                            _c("span"),
-                            _vm._v(" "),
-                            _c("span"),
-                            _vm._v(" "),
-                            _c("span")
-                          ]
-                        )
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      { staticClass: "dropdown-menu dropdown-menu-right" },
-                      [
-                        _c("a", { attrs: { href: "#" } }, [_vm._v("Daily")]),
-                        _vm._v(" "),
-                        _c("a", { attrs: { href: "#" } }, [_vm._v("Sort By")]),
-                        _vm._v(" "),
-                        _c("a", { attrs: { href: "#" } }, [_vm._v("Monthly")])
-                      ]
-                    )
-                  ])
-                ]
-              )
-            ])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "col-12" }, [
-          _c("div", { staticClass: "card todo-list mb-30" }, [
-            _c("div", { staticClass: "card-body p-0" }, [
-              _c("div", { staticClass: "single-row border-bottom pt-3 pb-2" }, [
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "d-flex justify-content-between align-items-start mb-2"
-                  },
-                  [
-                    _c("div", {}, [
-                      _c("h4", { staticClass: "card-title" }, [
-                        _vm._v(
-                          "\n                                            Today To Do List\n                                        "
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c("p", { staticClass: "card-text font-14 bold" }, [
-                        _vm._v(
-                          "\n                                            Saturday, "
-                        ),
-                        _c("br"),
-                        _vm._v(
-                          "\n                                            12 October 2019\n                                        "
-                        )
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "d-flex align-items-center" }, [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "btn-circle",
-                          attrs: { href: "pages/apps/todolist/add-new.html" }
-                        },
-                        [
-                          _c("img", {
-                            staticClass: "svg",
-                            attrs: {
-                              src: "/backend/assets/img/svg/plus_white.svg",
-                              alt: ""
-                            }
-                          })
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "dropdown-button" }, [
-                        _c(
-                          "a",
-                          {
-                            staticClass: "d-flex align-items-center",
-                            attrs: { href: "#", "data-toggle": "dropdown" }
-                          },
-                          [
-                            _c(
-                              "div",
-                              {
-                                staticClass:
-                                  "menu-icon style--two justify-content-center mr-0"
-                              },
-                              [
-                                _c("span"),
-                                _vm._v(" "),
-                                _c("span"),
-                                _vm._v(" "),
-                                _c("span")
-                              ]
-                            )
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          { staticClass: "dropdown-menu dropdown-menu-right" },
-                          [
-                            _c("a", { attrs: { href: "#" } }, [
-                              _vm._v("Daily")
-                            ]),
-                            _vm._v(" "),
-                            _c("a", { attrs: { href: "#" } }, [
-                              _vm._v("Sort By")
-                            ]),
-                            _vm._v(" "),
-                            _c("a", { attrs: { href: "#" } }, [
-                              _vm._v("Monthly")
-                            ])
-                          ]
-                        )
-                      ])
-                    ])
-                  ]
-                )
+                  _c("th", [
+                    _vm._v("New User "),
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/table-up-arrow.svg",
+                        alt: ""
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("th", [_vm._v("Total Sell")])
+                ])
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "single-row border-bottom pt-3 pb-3" }, [
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "d-flex justify-content-between align-items-center"
-                  },
-                  [
-                    _c("div", { staticClass: "d-flex position-relative" }, [
-                      _c("label", { staticClass: "custom-checkbox" }, [
-                        _c("input", {
-                          attrs: { type: "checkbox", checked: "" }
-                        }),
-                        _vm._v(" "),
-                        _c("span", { staticClass: "checkmark" })
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "todo-text line-through" }, [
-                        _c("p", { staticClass: "card-text mb-1" }, [
-                          _vm._v(
-                            "\n                                                For detracty charmed add\n                                                talking age. Shy resolution\n                                                instrument unreserved man\n                                                few.\n                                            "
-                          )
-                        ]),
-                        _vm._v(" "),
-                        _c("p", { staticClass: "text-warning font-12 mb-0" }, [
-                          _vm._v(
-                            "\n                                                Urgent Not Important\n                                            "
-                          )
-                        ])
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "d-flex" }, [
-                      _c("div", { staticClass: "assign_to" }, [
-                        _c("img", {
-                          staticClass: "svg mr-2 mb-1",
-                          attrs: {
-                            src: "/backend/assets/img/svg/Info.svg",
-                            alt: ""
-                          }
-                        }),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "assign-content" }, [
-                          _c("div", { staticClass: "font-12 text-warning" }, [
-                            _vm._v(
-                              "\n                                                    Back-End\n                                                "
-                            )
-                          ]),
-                          _vm._v(" "),
-                          _c("img", {
-                            staticClass: "assign-avatar",
-                            attrs: {
-                              src: "/backend/assets/img/avatar/info-avatar.png",
-                              alt: ""
-                            }
-                          })
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/dragicon.svg",
-                          alt: ""
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "dropdown-button" }, [
-                        _c(
-                          "a",
-                          {
-                            staticClass: "d-flex align-items-center",
-                            attrs: { href: "#", "data-toggle": "dropdown" }
-                          },
-                          [
-                            _c(
-                              "div",
-                              { staticClass: "menu-icon style--two w-14 mr-0" },
-                              [
-                                _c("span"),
-                                _vm._v(" "),
-                                _c("span"),
-                                _vm._v(" "),
-                                _c("span")
-                              ]
-                            )
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          { staticClass: "dropdown-menu dropdown-menu-right" },
-                          [
-                            _c("a", { attrs: { href: "#" } }, [
-                              _vm._v("Daily")
-                            ]),
-                            _vm._v(" "),
-                            _c("a", { attrs: { href: "#" } }, [
-                              _vm._v("Sort By")
-                            ]),
-                            _vm._v(" "),
-                            _c("a", { attrs: { href: "#" } }, [
-                              _vm._v("Monthly")
-                            ])
-                          ]
-                        )
-                      ])
-                    ])
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "single-row border-bottom pt-3 pb-3" }, [
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "d-flex justify-content-between align-items-center"
-                  },
-                  [
-                    _c("div", { staticClass: "d-flex position-relative" }, [
-                      _c("label", { staticClass: "custom-checkbox" }, [
-                        _c("input", { attrs: { type: "checkbox" } }),
-                        _vm._v(" "),
-                        _c("span", { staticClass: "checkmark" })
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "todo-text" }, [
-                        _c("p", { staticClass: "card-text mb-1" }, [
-                          _vm._v(
-                            "\n                                                Way sentiments two\n                                                indulgence uncommonly own.\n                                            "
-                          )
-                        ]),
-                        _vm._v(" "),
-                        _c("p", { staticClass: "text-danger font-12 mb-0" }, [
-                          _vm._v(
-                            "\n                                                Urgent And Important\n                                            "
-                          )
-                        ])
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "d-flex" }, [
-                      _c("div", { staticClass: "assign_to" }, [
-                        _c("img", {
-                          staticClass: "svg mr-2 mb-1",
-                          attrs: {
-                            src: "/backend/assets/img/svg/Info.svg",
-                            alt: ""
-                          }
-                        }),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "assign-content" }, [
-                          _c("div", { staticClass: "font-12 text-warning" }, [
-                            _vm._v(
-                              "\n                                                    Back-End\n                                                "
-                            )
-                          ]),
-                          _vm._v(" "),
-                          _c("img", {
-                            staticClass: "assign-avatar",
-                            attrs: {
-                              src: "/backend/assets/img/avatar/info-avatar.png",
-                              alt: ""
-                            }
-                          })
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/dragicon.svg",
-                          alt: ""
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "dropdown-button" }, [
-                        _c(
-                          "a",
-                          {
-                            staticClass: "d-flex align-items-center",
-                            attrs: { href: "#", "data-toggle": "dropdown" }
-                          },
-                          [
-                            _c(
-                              "div",
-                              { staticClass: "menu-icon style--two w-14 mr-0" },
-                              [
-                                _c("span"),
-                                _vm._v(" "),
-                                _c("span"),
-                                _vm._v(" "),
-                                _c("span")
-                              ]
-                            )
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          { staticClass: "dropdown-menu dropdown-menu-right" },
-                          [
-                            _c("a", { attrs: { href: "#" } }, [
-                              _vm._v("Daily")
-                            ]),
-                            _vm._v(" "),
-                            _c("a", { attrs: { href: "#" } }, [
-                              _vm._v("Sort By")
-                            ]),
-                            _vm._v(" "),
-                            _c("a", { attrs: { href: "#" } }, [
-                              _vm._v("Monthly")
-                            ])
-                          ]
-                        )
-                      ])
-                    ])
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "single-row border-bottom pt-3 pb-3" }, [
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "d-flex justify-content-between align-items-center"
-                  },
-                  [
-                    _c("div", { staticClass: "d-flex position-relative" }, [
-                      _c("label", { staticClass: "custom-checkbox" }, [
-                        _c("input", { attrs: { type: "checkbox" } }),
-                        _vm._v(" "),
-                        _c("span", { staticClass: "checkmark" })
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "todo-text" }, [
-                        _c("p", { staticClass: "card-text mb-1" }, [
-                          _vm._v(
-                            "\n                                                Donec dapibus mauris id odio\n                                                ornare tempus amet.\n                                            "
-                          )
-                        ]),
-                        _vm._v(" "),
-                        _c("p", { staticClass: "text-success font-12 mb-0" }, [
-                          _vm._v(
-                            "\n                                                Not Urgent Or Important\n                                            "
-                          )
-                        ])
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "d-flex" }, [
-                      _c("div", { staticClass: "assign_to" }, [
-                        _c("img", {
-                          staticClass: "svg mr-2 mb-1",
-                          attrs: {
-                            src: "/backend/assets/img/svg/Info.svg",
-                            alt: ""
-                          }
-                        }),
-                        _vm._v(" "),
-                        _c("div", { staticClass: "assign-content" }, [
-                          _c("div", { staticClass: "font-12 text-warning" }, [
-                            _vm._v(
-                              "\n                                                    Back-End\n                                                "
-                            )
-                          ]),
-                          _vm._v(" "),
-                          _c("img", {
-                            staticClass: "assign-avatar",
-                            attrs: {
-                              src: "/backend/assets/img/avatar/info-avatar.png",
-                              alt: ""
-                            }
-                          })
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/dragicon.svg",
-                          alt: ""
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "dropdown-button" }, [
-                        _c(
-                          "a",
-                          {
-                            staticClass: "d-flex align-items-center",
-                            attrs: { href: "#", "data-toggle": "dropdown" }
-                          },
-                          [
-                            _c(
-                              "div",
-                              { staticClass: "menu-icon style--two w-14 mr-0" },
-                              [
-                                _c("span"),
-                                _vm._v(" "),
-                                _c("span"),
-                                _vm._v(" "),
-                                _c("span")
-                              ]
-                            )
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          { staticClass: "dropdown-menu dropdown-menu-right" },
-                          [
-                            _c("a", { attrs: { href: "#" } }, [
-                              _vm._v("Daily")
-                            ]),
-                            _vm._v(" "),
-                            _c("a", { attrs: { href: "#" } }, [
-                              _vm._v("Sort By")
-                            ]),
-                            _vm._v(" "),
-                            _c("a", { attrs: { href: "#" } }, [
-                              _vm._v("Monthly")
-                            ])
-                          ]
-                        )
-                      ])
-                    ])
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "single-row border-bottom pt-3 pb-3" }, [
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "d-flex justify-content-between align-items-center"
-                  },
-                  [
-                    _c("div", { staticClass: "d-flex position-relative" }, [
-                      _c("label", { staticClass: "custom-checkbox" }, [
-                        _c("input", { attrs: { type: "checkbox" } }),
-                        _vm._v(" "),
-                        _c("span", { staticClass: "checkmark" })
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "todo-text" }, [
-                        _c("p", { staticClass: "card-text mb-1" }, [
-                          _vm._v(
-                            "\n                                                For detracty charmed add\n                                                talking age. Shy resolution\n                                                instrument unreserved man\n                                                few.\n                                            "
-                          )
-                        ]),
-                        _vm._v(" "),
-                        _c("p", { staticClass: "text-info font-12 mb-0" }, [
-                          _vm._v(
-                            "\n                                                Urgent Not Important\n                                            "
-                          )
-                        ])
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "d-flex" }, [
-                      _c("img", {
-                        staticClass: "svg mr-2",
-                        attrs: {
-                          src: "/backend/assets/img/svg/dragicon.svg",
-                          alt: ""
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "assign_to" }, [
-                        _c("img", {
-                          staticClass: "svg mb-1",
-                          attrs: {
-                            src: "/backend/assets/img/svg/Info.svg",
-                            alt: ""
-                          }
-                        })
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "dropdown-button" }, [
-                        _c(
-                          "a",
-                          {
-                            staticClass: "d-flex align-items-center",
-                            attrs: { href: "#", "data-toggle": "dropdown" }
-                          },
-                          [
-                            _c(
-                              "div",
-                              { staticClass: "menu-icon style--two w-14 mr-0" },
-                              [
-                                _c("span"),
-                                _vm._v(" "),
-                                _c("span"),
-                                _vm._v(" "),
-                                _c("span")
-                              ]
-                            )
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          { staticClass: "dropdown-menu dropdown-menu-right" },
-                          [
-                            _c("a", { attrs: { href: "#" } }, [
-                              _vm._v("Daily")
-                            ]),
-                            _vm._v(" "),
-                            _c("a", { attrs: { href: "#" } }, [
-                              _vm._v("Sort By")
-                            ]),
-                            _vm._v(" "),
-                            _c("a", { attrs: { href: "#" } }, [
-                              _vm._v("Monthly")
-                            ])
-                          ]
-                        )
-                      ])
-                    ])
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "single-row pb-3 pt-3" }, [
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "d-flex justify-content-between align-items-center"
-                  },
-                  [
-                    _c("div", { staticClass: "d-flex position-relative" }, [
-                      _c("label", { staticClass: "custom-checkbox" }, [
-                        _c("input", { attrs: { type: "checkbox" } }),
-                        _vm._v(" "),
-                        _c("span", { staticClass: "checkmark" })
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "todo-text" }, [
-                        _c("p", { staticClass: "card-text mb-1" }, [
-                          _vm._v(
-                            "\n                                                Way sentiments two\n                                                indulgence uncommonly own.\n                                            "
-                          )
-                        ]),
-                        _vm._v(" "),
-                        _c("p", { staticClass: "text-warning font-12 mb-0" }, [
-                          _vm._v(
-                            "\n                                                Urgent Not Important\n                                            "
-                          )
-                        ])
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "d-flex" }, [
-                      _c("img", {
-                        staticClass: "svg mr-2",
-                        attrs: {
-                          src: "/backend/assets/img/svg/dragicon.svg",
-                          alt: ""
-                        }
-                      }),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "assign_to" }, [
-                        _c("img", {
-                          staticClass: "svg mb-1",
-                          attrs: {
-                            src: "/backend/assets/img/svg/Info.svg",
-                            alt: ""
-                          }
-                        })
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "dropdown-button" }, [
-                        _c(
-                          "a",
-                          {
-                            staticClass: "d-flex align-items-center",
-                            attrs: { href: "#", "data-toggle": "dropdown" }
-                          },
-                          [
-                            _c(
-                              "div",
-                              { staticClass: "menu-icon style--two w-14 mr-0" },
-                              [
-                                _c("span"),
-                                _vm._v(" "),
-                                _c("span"),
-                                _vm._v(" "),
-                                _c("span")
-                              ]
-                            )
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          { staticClass: "dropdown-menu dropdown-menu-right" },
-                          [
-                            _c("a", { attrs: { href: "#" } }, [
-                              _vm._v("Daily")
-                            ]),
-                            _vm._v(" "),
-                            _c("a", { attrs: { href: "#" } }, [
-                              _vm._v("Sort By")
-                            ]),
-                            _vm._v(" "),
-                            _c("a", { attrs: { href: "#" } }, [
-                              _vm._v("Monthly")
-                            ])
-                          ]
-                        )
-                      ])
-                    ])
-                  ]
-                )
+              _c("tbody", [
+                _c("tr", [
+                  _c("td", [_vm._v("12 May 2019")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("145k")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("41k")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("$268.6k")])
+                ]),
+                _vm._v(" "),
+                _c("tr", [
+                  _c("td", [_vm._v("11 May 2019")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("256k")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("10k")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("$256.3k")])
+                ]),
+                _vm._v(" "),
+                _c("tr", [
+                  _c("td", [_vm._v("10 May 2019")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("695k")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("53k")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("$685.9k")])
+                ]),
+                _vm._v(" "),
+                _c("tr", [
+                  _c("td", [_vm._v("9 May 2019")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("645k")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("59k")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("$568.2k")])
+                ]),
+                _vm._v(" "),
+                _c("tr", [
+                  _c("td", [_vm._v("8 May 2019")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("69k")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("6k")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("$65.5k")])
+                ]),
+                _vm._v(" "),
+                _c("tr", [
+                  _c("td", [_vm._v("7 May 2019")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("236k")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("23k")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("$365.5k")])
+                ]),
+                _vm._v(" "),
+                _c("tr", [
+                  _c("td", [_vm._v("6 May 2019")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("96k")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("11k")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("$98.2k")])
+                ]),
+                _vm._v(" "),
+                _c("tr", [
+                  _c("td", [_vm._v("5 May 2019")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("487k")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("28k")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("$983.6k")])
+                ])
               ])
             ])
           ])
-        ])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-xl-3 col-md-5" }, [
-      _c("div", { staticClass: "card mb-30" }, [
-        _c("div", { staticClass: "card-body" }, [
-          _c("div", { staticClass: "mb-40 d-none" }, [
-            _c("h4", { staticClass: "mb-2" }, [_vm._v("Cloud Storage")]),
-            _vm._v(" "),
-            _c("p", { staticClass: "font-14" }, [_vm._v("72% space used")])
-          ]),
-          _vm._v(" "),
-          _c("div", {
-            staticClass: "chart",
-            attrs: { id: "apex_radar-chart" }
-          }),
-          _vm._v(" "),
-          _c("div", { staticClass: "upgrade_storage-btn mt-2" }, [
-            _c("a", { staticClass: "btn d-block", attrs: { href: "#" } }, [
-              _vm._v("Upgrade Storage")
-            ])
-          ])
-        ])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "card mb-30" }, [
-      _c("div", { staticClass: "card-body" }, [
-        _c("div", { staticClass: "row align-items-end" }, [
-          _c("div", { staticClass: "col-5 col-sm-6 col-lg-5" }, [
-            _c("div", {
-              staticClass: "chart",
-              attrs: { id: "apex_column2-chart" }
-            })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-7 col-sm-6 col-lg-7" }, [
-            _c("div", {}, [
-              _c("h4", { staticClass: "mb-2" }, [_vm._v("Registration")]),
-              _vm._v(" "),
-              _c("p", [
-                _vm._v(
-                  "\n                                    Pellentesque tincidunt tristique neque,\n                                    eget venenatis enim gravida.\n                                "
-                )
-              ])
-            ])
-          ])
-        ])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "card mb-30" }, [
-      _c("div", { staticClass: "card-body" }, [
-        _c("div", { staticClass: "row align-items-end" }, [
-          _c("div", { staticClass: "col-5 col-sm-6 col-lg-5" }, [
-            _c("div", {
-              staticClass: "chart",
-              attrs: { id: "apex_column3-chart" }
-            })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-7 col-sm-6 col-lg-7" }, [
-            _c("div", {}, [
-              _c("h4", { staticClass: "mb-2" }, [_vm._v("Activity")]),
-              _vm._v(" "),
-              _c("p", [
-                _vm._v(
-                  "\n                                    Pellentesque tincidunt tristique neque,\n                                    eget venenatis enim gravida.\n                                "
-                )
-              ])
-            ])
-          ])
-        ])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "card mb-30" }, [
-      _c("div", { staticClass: "card-body" }, [
-        _c("div", { staticClass: "row align-items-end" }, [
-          _c("div", { staticClass: "col-5 col-sm-6 col-lg-5" }, [
-            _c("div", {
-              staticClass: "chart",
-              attrs: { id: "apex_column4-chart" }
-            })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-7 col-sm-6 col-lg-7" }, [
-            _c("div", {}, [
-              _c("h4", { staticClass: "mb-2" }, [_vm._v("Completed Task")]),
-              _vm._v(" "),
-              _c("p", [
-                _vm._v(
-                  "\n                                    Pellentesque tincidunt tristique neque,\n                                    eget venenatis enim gravida.\n                                "
-                )
-              ])
-            ])
-          ])
-        ])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-xl-5" }, [
-      _c("div", { staticClass: "card mb-30" }, [
-        _c("div", { staticClass: "card-body" }, [
-          _c("div", { staticClass: "mb-1" }, [
-            _c("h4", { staticClass: "mb-2" }, [_vm._v("Analytics")]),
-            _vm._v(" "),
-            _c("p", { staticClass: "pt-1" }, [
-              _vm._v(
-                "\n                            Nunc scelerisque tincidunt elit. Vestibulum non\n                            mi ipsum. Cras pretium suscipit tellus sit amet\n                            aliquet. Vestibulum maximus lacinia massa non\n                            porttitor.\n                        "
-              )
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "chart", attrs: { id: "apex_bar-chart" } })
         ])
       ])
     ])
@@ -47082,38 +48324,287 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-xl-12" }, [
       _c("div", { staticClass: "card" }, [
-        _c("div", { staticClass: "card-body" }, [
-          _c(
-            "div",
-            {
-              staticClass:
-                "d-flex justify-content-start justify-content-sm-between align-items-start align-items-sm-center flex-column flex-sm-row mb-sm-n3"
-            },
-            [
-              _c("div", { staticClass: "title-content mb-4 mb-sm-0" }, [
-                _c("h4", { staticClass: "mb-2" }, [_vm._v("Sale Reports")]),
+        _c("div", { staticClass: "card-body pb-0" }, [
+          _c("div", { staticClass: "d-flex justify-content-between" }, [
+            _c("div", { staticClass: "title-content mb-4" }, [
+              _c("h4", { staticClass: "mb-2" }, [_vm._v("Recent Orders")]),
+              _vm._v(" "),
+              _c("p", { staticClass: "font-14" }, [
+                _vm._v(
+                  "Tell use paid law ever yet new. Meant to learn of vexed if style allow he there."
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "dropdown-button" }, [
+              _c(
+                "a",
+                {
+                  staticClass: "d-flex align-items-center",
+                  attrs: { href: "#", "data-toggle": "dropdown" }
+                },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "menu-icon style--two mr-0 d-flex justify-content-center"
+                    },
+                    [
+                      _c("span"),
+                      _vm._v(" "),
+                      _c("span"),
+                      _vm._v(" "),
+                      _c("span")
+                    ]
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c("div", { staticClass: "dropdown-menu dropdown-menu-right" }, [
+                _c("a", { attrs: { href: "#" } }, [_vm._v("Report")]),
                 _vm._v(" "),
-                _c("p", [_vm._v("Solicitude announcing as to sufficient my")])
+                _c("a", { attrs: { href: "#" } }, [_vm._v("FAQ")]),
+                _vm._v(" "),
+                _c("a", { attrs: { href: "#" } }, [_vm._v("Charts")]),
+                _vm._v(" "),
+                _c("a", { attrs: { href: "#" } }, [_vm._v("Chat")]),
+                _vm._v(" "),
+                _c("a", { attrs: { href: "#" } }, [_vm._v("Settings")])
+              ])
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "table-responsive" }, [
+          _c(
+            "table",
+            { staticClass: "style--three table-centered text-nowrap" },
+            [
+              _c("thead", [
+                _c("tr", [
+                  _c("th", [
+                    _vm._v("Order ID "),
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/table-down-arrow.svg",
+                        alt: ""
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("th", [
+                    _vm._v("Date "),
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/table-down-arrow.svg",
+                        alt: ""
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("th", [_vm._v("Products")]),
+                  _vm._v(" "),
+                  _c("th", [
+                    _vm._v("Buyer Name "),
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/table-up-arrow.svg",
+                        alt: ""
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("th", [
+                    _vm._v("Status "),
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/table-down-arrow.svg",
+                        alt: ""
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("th", [_vm._v("Price")]),
+                  _vm._v(" "),
+                  _c("th", [_vm._v("Shipping Cost")]),
+                  _vm._v(" "),
+                  _c("th", [_vm._v("Total Cost")]),
+                  _vm._v(" "),
+                  _c("th", [_vm._v("Action")])
+                ])
               ]),
               _vm._v(" "),
-              _c("div", {}, [
-                _c("ul", { staticClass: "list-inline list-button m-0" }, [
-                  _c("li", [_vm._v("2015")]),
+              _c("tbody", [
+                _c("tr", [
+                  _c("td", { staticClass: "bold" }, [_vm._v("#01254")]),
                   _vm._v(" "),
-                  _c("li", [_vm._v("2016")]),
+                  _c("td", [_vm._v("12 Oct 2019")]),
                   _vm._v(" "),
-                  _c("li", [_vm._v("2017")]),
+                  _c("td", [
+                    _c("div", { staticClass: "product-img" }, [
+                      _c("img", {
+                        attrs: {
+                          src: "/backend/assets/img/product/product1.png",
+                          alt: ""
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("img", {
+                        attrs: {
+                          src: "/backend/assets/img/product/product5.png",
+                          alt: ""
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("img", {
+                        attrs: {
+                          src: "/backend/assets/img/product/product6.png",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ]),
                   _vm._v(" "),
-                  _c("li", [_vm._v("2018")]),
+                  _c("td", [_vm._v("Kyle Lee")]),
                   _vm._v(" "),
-                  _c("li", { staticClass: "active" }, [_vm._v("2019")])
+                  _c("td", { staticClass: "text-danger" }, [
+                    _vm._v("Processing")
+                  ]),
+                  _vm._v(" "),
+                  _c("td", { staticClass: "bold" }, [_vm._v("$2456.4")]),
+                  _vm._v(" "),
+                  _c("td", { staticClass: "bold" }, [_vm._v("$24.6")]),
+                  _vm._v(" "),
+                  _c("td", { staticClass: "bold" }, [_vm._v("2687")]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c(
+                      "button",
+                      { staticClass: "details-btn", attrs: { type: "button" } },
+                      [
+                        _vm._v("Details "),
+                        _c("i", { staticClass: "icofont-arrow-right" })
+                      ]
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("tr", [
+                  _c("td", { staticClass: "bold" }, [_vm._v("#01365")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("12 Oct 2019")]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c("div", { staticClass: "product-img" }, [
+                      _c("img", {
+                        attrs: {
+                          src: "/backend/assets/img/product/product2.png",
+                          alt: ""
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("img", {
+                        attrs: {
+                          src: "/backend/assets/img/product/product7.png",
+                          alt: ""
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("img", {
+                        attrs: {
+                          src: "/backend/assets/img/product/product3.png",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("Lindo De Sire")]),
+                  _vm._v(" "),
+                  _c("td", { staticClass: "text-warning" }, [
+                    _vm._v("Shipped")
+                  ]),
+                  _vm._v(" "),
+                  _c("td", { staticClass: "bold" }, [_vm._v("$2456.4")]),
+                  _vm._v(" "),
+                  _c("td", { staticClass: "bold" }, [_vm._v("$24.6")]),
+                  _vm._v(" "),
+                  _c("td", { staticClass: "bold" }, [_vm._v("2687")]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c(
+                      "button",
+                      { staticClass: "details-btn", attrs: { type: "button" } },
+                      [
+                        _vm._v("Details "),
+                        _c("i", { staticClass: "icofont-arrow-right" })
+                      ]
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("tr", [
+                  _c("td", { staticClass: "bold" }, [_vm._v("#03654")]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("11 Oct 2019")]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c("div", { staticClass: "product-img" }, [
+                      _c("img", {
+                        attrs: {
+                          src: "/backend/assets/img/product/product8.png",
+                          alt: ""
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("img", {
+                        attrs: {
+                          src: "/backend/assets/img/product/product9.png",
+                          alt: ""
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("img", {
+                        attrs: {
+                          src: "/backend/assets/img/product/product10.png",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v("Laturi Yasn")]),
+                  _vm._v(" "),
+                  _c("td", { staticClass: "text-success" }, [
+                    _vm._v("Delivered")
+                  ]),
+                  _vm._v(" "),
+                  _c("td", { staticClass: "bold" }, [_vm._v("$2456.4")]),
+                  _vm._v(" "),
+                  _c("td", { staticClass: "bold" }, [_vm._v("$24.6")]),
+                  _vm._v(" "),
+                  _c("td", { staticClass: "bold" }, [_vm._v("2687")]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c(
+                      "button",
+                      { staticClass: "details-btn", attrs: { type: "button" } },
+                      [
+                        _vm._v("Details "),
+                        _c("i", { staticClass: "icofont-arrow-right" })
+                      ]
+                    )
+                  ])
                 ])
               ])
             ]
           )
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "chart", attrs: { id: "apex_line3-chart" } })
+        ])
       ])
     ])
   }
@@ -48014,19 +49505,19 @@ var staticRenderFns = [
                 _vm._v(" "),
                 _c("li", [
                   _c("a", { attrs: { href: "/admin/admin" } }, [
-                    _vm._v("Admin")
+                    _vm._v("Admin List")
                   ])
                 ]),
                 _vm._v(" "),
                 _c("li", [
                   _c("a", { attrs: { href: "/admin/seller" } }, [
-                    _vm._v("Seller")
+                    _vm._v("Seller List")
                   ])
                 ]),
                 _vm._v(" "),
                 _c("li", [
                   _c("a", { attrs: { href: "/admin/buyer" } }, [
-                    _vm._v("Buyer")
+                    _vm._v("Buyer List")
                   ])
                 ])
               ])
@@ -48053,14 +49544,6 @@ var staticRenderFns = [
                 ]),
                 _vm._v(" "),
                 _c("li", [
-                  _c(
-                    "a",
-                    { attrs: { href: "pages/apps/email/compose.html" } },
-                    [_vm._v("Category")]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", [
                   _c("a", { attrs: { href: "pages/apps/email/read.html" } }, [
                     _vm._v("Brand")
                   ])
@@ -48072,6 +49555,30 @@ var staticRenderFns = [
                     { attrs: { href: "pages/apps/email/compose.html" } },
                     [_vm._v("Attribute")]
                   )
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c("a", { attrs: { href: "#" } }, [
+                _c("i", { staticClass: "icofont-shopping-cart" }),
+                _vm._v(" "),
+                _c("span", { staticClass: "link-title" }, [
+                  _vm._v("Product Category")
+                ])
+              ]),
+              _vm._v(" "),
+              _c("ul", { staticClass: "nav sub-menu" }, [
+                _c("li", [
+                  _c("a", { attrs: { href: "/admin/add_category" } }, [
+                    _vm._v("Add Product Category")
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("a", { attrs: { href: "/admin/list_category" } }, [
+                    _vm._v("All Product Category")
+                  ])
                 ])
               ])
             ]),
@@ -48109,13 +49616,13 @@ var staticRenderFns = [
               _vm._v(" "),
               _c("ul", { staticClass: "nav sub-menu" }, [
                 _c("li", [
-                  _c("a", { attrs: { href: "pages/apps/email/inbox.html" } }, [
+                  _c("a", { attrs: { href: "/admin/add_blog" } }, [
                     _vm._v("Add Post")
                   ])
                 ]),
                 _vm._v(" "),
                 _c("li", [
-                  _c("a", { attrs: { href: "pages/apps/email/read.html" } }, [
+                  _c("a", { attrs: { href: "/admin/blog" } }, [
                     _vm._v("All Post")
                   ])
                 ])
@@ -48133,7 +49640,7 @@ var staticRenderFns = [
               _vm._v(" "),
               _c("ul", { staticClass: "nav sub-menu" }, [
                 _c("li", [
-                  _c("a", { attrs: { href: "/admin/Add_blog" } }, [
+                  _c("a", { attrs: { href: "/admin/add_blog_category" } }, [
                     _vm._v("Add Blog Category")
                   ])
                 ]),
@@ -48345,7 +49852,7 @@ var staticRenderFns = [
             _vm._v(" "),
             _c("div", { staticClass: "form-group" }, [
               _c("label", { staticClass: "font-14 bold mb-2" }, [
-                _vm._v("boost_duration")
+                _vm._v("Boost duration")
               ]),
               _vm._v(" "),
               _c("input", {
@@ -48356,7 +49863,7 @@ var staticRenderFns = [
             _vm._v(" "),
             _c("div", { staticClass: "form-group" }, [
               _c("label", { staticClass: "font-14 bold mb-2" }, [
-                _vm._v("upload_product")
+                _vm._v("Upload product")
               ]),
               _vm._v(" "),
               _c("input", {
@@ -48367,7 +49874,7 @@ var staticRenderFns = [
             _vm._v(" "),
             _c("div", { staticClass: "form-group" }, [
               _c("label", { staticClass: "font-14 bold mb-2" }, [
-                _vm._v("upload_product_duration")
+                _vm._v("Upload product duration")
               ]),
               _vm._v(" "),
               _c("input", {
@@ -48638,12 +50145,12 @@ var staticRenderFns = [
                   })
                 ]),
                 _vm._v(" "),
-                _c("th", [_vm._v("Email")]),
+                _c("th", [_vm._v("Pay Statsus")]),
                 _vm._v(" "),
-                _c("th", [_vm._v("Phone")]),
+                _c("th", [_vm._v("Price In Month")]),
                 _vm._v(" "),
                 _c("th", [
-                  _vm._v("Age "),
+                  _vm._v("Price In Year"),
                   _c("img", {
                     staticClass: "svg",
                     attrs: {
@@ -48653,10 +50160,10 @@ var staticRenderFns = [
                   })
                 ]),
                 _vm._v(" "),
-                _c("th", [_vm._v("Post")]),
+                _c("th", [_vm._v("Boost Product")]),
                 _vm._v(" "),
                 _c("th", [
-                  _vm._v("Joining Date "),
+                  _vm._v("Boost duration"),
                   _c("img", {
                     staticClass: "svg",
                     attrs: {
@@ -48667,7 +50174,18 @@ var staticRenderFns = [
                 ]),
                 _vm._v(" "),
                 _c("th", [
-                  _vm._v("Salary "),
+                  _vm._v("Upload product"),
+                  _c("img", {
+                    staticClass: "svg",
+                    attrs: {
+                      src: "/backend/assets/img/svg/table-down-arrow.svg",
+                      alt: ""
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("th", [
+                  _vm._v("Upload product duration"),
                   _c("img", {
                     staticClass: "svg",
                     attrs: {
@@ -48717,7 +50235,7 @@ var staticRenderFns = [
                     _vm._v(" "),
                     _c("div", { staticClass: "name bold" }, [
                       _vm._v(
-                        "\n                                                    Arden Spencer\n                                                "
+                        "\n                                Arden Spencer\n                            "
                       )
                     ])
                   ])
@@ -48735,1099 +50253,7 @@ var staticRenderFns = [
                 _vm._v(" "),
                 _c("td", [_vm._v("$26253.0")]),
                 _vm._v(" "),
-                _c("td", { staticClass: "actions" }, [
-                  _c(
-                    "span",
-                    {
-                      staticClass: "contact-edit",
-                      attrs: {
-                        "data-toggle": "modal",
-                        "data-target": "#contactEditModal"
-                      }
-                    },
-                    [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/c-edit.svg",
-                          alt: ""
-                        }
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "contact-close" }, [
-                    _c("img", {
-                      staticClass: "svg",
-                      attrs: {
-                        src: "/backend/assets/img/svg/c-close.svg",
-                        alt: ""
-                      }
-                    })
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("label", { staticClass: "custom-checkbox" }, [
-                    _c("input", { attrs: { type: "checkbox" } }),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "checkmark" })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "star" }, [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/star.svg",
-                          alt: ""
-                        }
-                      })
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _c("div", { staticClass: "d-flex align-items-center" }, [
-                    _c("div", { staticClass: "img mr-20" }, [
-                      _c("img", {
-                        staticClass: "img-40",
-                        attrs: {
-                          src: "/backend/assets/img/avatar/m20.png",
-                          alt: ""
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "name bold" }, [
-                      _vm._v(" Favian Maggio DDS ")
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [_vm._v("Electa_Conroy@hotmail.com")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("1-076-628-3095 x7154")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("28")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("UX Researcher")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("October 11, 2019")]),
-                _vm._v(" "),
                 _c("td", [_vm._v("$26253.0")]),
-                _vm._v(" "),
-                _c("td", { staticClass: "actions" }, [
-                  _c(
-                    "span",
-                    {
-                      staticClass: "contact-edit",
-                      attrs: {
-                        "data-toggle": "modal",
-                        "data-target": "#contactEditModal"
-                      }
-                    },
-                    [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/c-edit.svg",
-                          alt: ""
-                        }
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "contact-close" }, [
-                    _c("img", {
-                      staticClass: "svg",
-                      attrs: {
-                        src: "/backend/assets/img/svg/c-close.svg",
-                        alt: ""
-                      }
-                    })
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("label", { staticClass: "custom-checkbox" }, [
-                    _c("input", { attrs: { type: "checkbox" } }),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "checkmark" })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "star" }, [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/star.svg",
-                          alt: ""
-                        }
-                      })
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _c("div", { staticClass: "d-flex align-items-center" }, [
-                    _c("div", { staticClass: "img mr-20" }, [
-                      _c("img", {
-                        staticClass: "img-40",
-                        attrs: {
-                          src: "/backend/assets/img/avatar/m21.png",
-                          alt: ""
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "name bold" }, [
-                      _vm._v(" Jacey Considine ")
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [_vm._v("Garry23@yahoo.com")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("1-016-234-2482")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("28")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("UX Researcher")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("January 2, 2016")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("$6162.0")]),
-                _vm._v(" "),
-                _c("td", { staticClass: "actions" }, [
-                  _c(
-                    "span",
-                    {
-                      staticClass: "contact-edit",
-                      attrs: {
-                        "data-toggle": "modal",
-                        "data-target": "#contactEditModal"
-                      }
-                    },
-                    [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/c-edit.svg",
-                          alt: ""
-                        }
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "contact-close" }, [
-                    _c("img", {
-                      staticClass: "svg",
-                      attrs: {
-                        src: "/backend/assets/img/svg/c-close.svg",
-                        alt: ""
-                      }
-                    })
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("label", { staticClass: "custom-checkbox" }, [
-                    _c("input", { attrs: { type: "checkbox" } }),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "checkmark" })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "star" }, [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/star.svg",
-                          alt: ""
-                        }
-                      })
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _c("div", { staticClass: "d-flex align-items-center" }, [
-                    _c("div", { staticClass: "img mr-20" }, [
-                      _c("img", {
-                        staticClass: "img-40",
-                        attrs: {
-                          src: "/backend/assets/img/avatar/m22.png",
-                          alt: ""
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "name bold" }, [
-                      _vm._v(" Kolby Torphy II ")
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [_vm._v("Phyllis75@hotmail.com")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("1-345-656-4163 x373")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("28")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("UX Researcher")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("August 9, 2017")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("$4022.0")]),
-                _vm._v(" "),
-                _c("td", { staticClass: "actions" }, [
-                  _c(
-                    "span",
-                    {
-                      staticClass: "contact-edit",
-                      attrs: {
-                        "data-toggle": "modal",
-                        "data-target": "#contactEditModal"
-                      }
-                    },
-                    [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/c-edit.svg",
-                          alt: ""
-                        }
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "contact-close" }, [
-                    _c("img", {
-                      staticClass: "svg",
-                      attrs: {
-                        src: "/backend/assets/img/svg/c-close.svg",
-                        alt: ""
-                      }
-                    })
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("label", { staticClass: "custom-checkbox" }, [
-                    _c("input", { attrs: { type: "checkbox" } }),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "checkmark" })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "star" }, [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/star.svg",
-                          alt: ""
-                        }
-                      })
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _c("div", { staticClass: "d-flex align-items-center" }, [
-                    _c("div", { staticClass: "img mr-20" }, [
-                      _c("img", {
-                        staticClass: "img-40",
-                        attrs: {
-                          src: "/backend/assets/img/avatar/m23.png",
-                          alt: ""
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "name bold" }, [
-                      _vm._v(" Mattie Daugherty ")
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [_vm._v("Jessika.Conroy@yahoo.com")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("721-969-9795 x09197")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("28")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("UX Researcher")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("December 24, 2016")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("$11588.0")]),
-                _vm._v(" "),
-                _c("td", { staticClass: "actions" }, [
-                  _c(
-                    "span",
-                    {
-                      staticClass: "contact-edit",
-                      attrs: {
-                        "data-toggle": "modal",
-                        "data-target": "#contactEditModal"
-                      }
-                    },
-                    [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/c-edit.svg",
-                          alt: ""
-                        }
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "contact-close" }, [
-                    _c("img", {
-                      staticClass: "svg",
-                      attrs: {
-                        src: "/backend/assets/img/svg/c-close.svg",
-                        alt: ""
-                      }
-                    })
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("label", { staticClass: "custom-checkbox" }, [
-                    _c("input", { attrs: { type: "checkbox" } }),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "checkmark" })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "star" }, [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/star.svg",
-                          alt: ""
-                        }
-                      })
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _c("div", { staticClass: "d-flex align-items-center" }, [
-                    _c("div", { staticClass: "img mr-20" }, [
-                      _c("img", {
-                        staticClass: "img-40",
-                        attrs: {
-                          src: "/backend/assets/img/avatar/m24.png",
-                          alt: ""
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "name bold" }, [
-                      _vm._v(" Timothy Littel ")
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [_vm._v("Nannie_Kling49@hotmail.com")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("1-251-141-2444 x275")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("28")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("UX Researcher")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("February 8, 2019")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("$14283.0")]),
-                _vm._v(" "),
-                _c("td", { staticClass: "actions" }, [
-                  _c(
-                    "span",
-                    {
-                      staticClass: "contact-edit",
-                      attrs: {
-                        "data-toggle": "modal",
-                        "data-target": "#contactEditModal"
-                      }
-                    },
-                    [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/c-edit.svg",
-                          alt: ""
-                        }
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "contact-close" }, [
-                    _c("img", {
-                      staticClass: "svg",
-                      attrs: {
-                        src: "/backend/assets/img/svg/c-close.svg",
-                        alt: ""
-                      }
-                    })
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", { staticClass: "selected" }, [
-                _c("td", [
-                  _c("label", { staticClass: "custom-checkbox" }, [
-                    _c("input", { attrs: { type: "checkbox", checked: "" } }),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "checkmark" })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "star" }, [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/star.svg",
-                          alt: ""
-                        }
-                      })
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _c("div", { staticClass: "d-flex align-items-center" }, [
-                    _c("div", { staticClass: "img mr-20" }, [
-                      _c("img", {
-                        staticClass: "img-40",
-                        attrs: {
-                          src: "/backend/assets/img/avatar/m19.png",
-                          alt: ""
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "name bold" }, [
-                      _vm._v(" Karli Braun ")
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [_vm._v("Ruthe_Gleichner@gmail.com")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("697.704.7326")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("28")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("UX Researcher")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("October 25, 2016")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("$13329.0")]),
-                _vm._v(" "),
-                _c("td", { staticClass: "actions" }, [
-                  _c(
-                    "span",
-                    {
-                      staticClass: "contact-edit",
-                      attrs: {
-                        "data-toggle": "modal",
-                        "data-target": "#contactEditModal"
-                      }
-                    },
-                    [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/c-edit.svg",
-                          alt: ""
-                        }
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "contact-close" }, [
-                    _c("img", {
-                      staticClass: "svg",
-                      attrs: {
-                        src: "/backend/assets/img/svg/c-close.svg",
-                        alt: ""
-                      }
-                    })
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", { staticClass: "selected" }, [
-                _c("td", [
-                  _c("label", { staticClass: "custom-checkbox" }, [
-                    _c("input", { attrs: { type: "checkbox", checked: "" } }),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "checkmark" })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "star" }, [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/star.svg",
-                          alt: ""
-                        }
-                      })
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _c("div", { staticClass: "d-flex align-items-center" }, [
-                    _c("div", { staticClass: "img mr-20" }, [
-                      _c("img", {
-                        staticClass: "img-40",
-                        attrs: {
-                          src: "/backend/assets/img/avatar/m16.png",
-                          alt: ""
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "name bold" }, [
-                      _vm._v(
-                        "\n                                                    Arden Spencer\n                                                "
-                      )
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [_vm._v("Evangeline62@yahoo.com")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("(023) 708-6818 x4267")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("28")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("UX Researcher")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("June 20, 2015")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("$26253.0")]),
-                _vm._v(" "),
-                _c("td", { staticClass: "actions" }, [
-                  _c(
-                    "span",
-                    {
-                      staticClass: "contact-edit",
-                      attrs: {
-                        "data-toggle": "modal",
-                        "data-target": "#contactEditModal"
-                      }
-                    },
-                    [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/c-edit.svg",
-                          alt: ""
-                        }
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "contact-close" }, [
-                    _c("img", {
-                      staticClass: "svg",
-                      attrs: {
-                        src: "/backend/assets/img/svg/c-close.svg",
-                        alt: ""
-                      }
-                    })
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("label", { staticClass: "custom-checkbox" }, [
-                    _c("input", { attrs: { type: "checkbox" } }),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "checkmark" })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "star" }, [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/star.svg",
-                          alt: ""
-                        }
-                      })
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _c("div", { staticClass: "d-flex align-items-center" }, [
-                    _c("div", { staticClass: "img mr-20" }, [
-                      _c("img", {
-                        staticClass: "img-40",
-                        attrs: {
-                          src: "/backend/assets/img/avatar/m20.png",
-                          alt: ""
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "name bold" }, [
-                      _vm._v(" Favian Maggio DDS ")
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [_vm._v("Electa_Conroy@hotmail.com")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("1-076-628-3095 x7154")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("28")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("UX Researcher")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("October 11, 2019")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("$26253.0")]),
-                _vm._v(" "),
-                _c("td", { staticClass: "actions" }, [
-                  _c(
-                    "span",
-                    {
-                      staticClass: "contact-edit",
-                      attrs: {
-                        "data-toggle": "modal",
-                        "data-target": "#contactEditModal"
-                      }
-                    },
-                    [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/c-edit.svg",
-                          alt: ""
-                        }
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "contact-close" }, [
-                    _c("img", {
-                      staticClass: "svg",
-                      attrs: {
-                        src: "/backend/assets/img/svg/c-close.svg",
-                        alt: ""
-                      }
-                    })
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("label", { staticClass: "custom-checkbox" }, [
-                    _c("input", { attrs: { type: "checkbox" } }),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "checkmark" })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "star" }, [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/star.svg",
-                          alt: ""
-                        }
-                      })
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _c("div", { staticClass: "d-flex align-items-center" }, [
-                    _c("div", { staticClass: "img mr-20" }, [
-                      _c("img", {
-                        staticClass: "img-40",
-                        attrs: {
-                          src: "/backend/assets/img/avatar/m21.png",
-                          alt: ""
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "name bold" }, [
-                      _vm._v(" Jacey Considine ")
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [_vm._v("Garry23@yahoo.com")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("1-016-234-2482")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("28")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("UX Researcher")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("January 2, 2016")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("$6162.0")]),
-                _vm._v(" "),
-                _c("td", { staticClass: "actions" }, [
-                  _c(
-                    "span",
-                    {
-                      staticClass: "contact-edit",
-                      attrs: {
-                        "data-toggle": "modal",
-                        "data-target": "#contactEditModal"
-                      }
-                    },
-                    [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/c-edit.svg",
-                          alt: ""
-                        }
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "contact-close" }, [
-                    _c("img", {
-                      staticClass: "svg",
-                      attrs: {
-                        src: "/backend/assets/img/svg/c-close.svg",
-                        alt: ""
-                      }
-                    })
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("label", { staticClass: "custom-checkbox" }, [
-                    _c("input", { attrs: { type: "checkbox" } }),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "checkmark" })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "star" }, [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/star.svg",
-                          alt: ""
-                        }
-                      })
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _c("div", { staticClass: "d-flex align-items-center" }, [
-                    _c("div", { staticClass: "img mr-20" }, [
-                      _c("img", {
-                        staticClass: "img-40",
-                        attrs: {
-                          src: "/backend/assets/img/avatar/m22.png",
-                          alt: ""
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "name bold" }, [
-                      _vm._v(" Kolby Torphy II ")
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [_vm._v("Phyllis75@hotmail.com")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("1-345-656-4163 x373")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("28")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("UX Researcher")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("August 9, 2017")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("$4022.0")]),
-                _vm._v(" "),
-                _c("td", { staticClass: "actions" }, [
-                  _c(
-                    "span",
-                    {
-                      staticClass: "contact-edit",
-                      attrs: {
-                        "data-toggle": "modal",
-                        "data-target": "#contactEditModal"
-                      }
-                    },
-                    [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/c-edit.svg",
-                          alt: ""
-                        }
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "contact-close" }, [
-                    _c("img", {
-                      staticClass: "svg",
-                      attrs: {
-                        src: "/backend/assets/img/svg/c-close.svg",
-                        alt: ""
-                      }
-                    })
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("label", { staticClass: "custom-checkbox" }, [
-                    _c("input", { attrs: { type: "checkbox" } }),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "checkmark" })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "star" }, [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/star.svg",
-                          alt: ""
-                        }
-                      })
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _c("div", { staticClass: "d-flex align-items-center" }, [
-                    _c("div", { staticClass: "img mr-20" }, [
-                      _c("img", {
-                        staticClass: "img-40",
-                        attrs: {
-                          src: "/backend/assets/img/avatar/m23.png",
-                          alt: ""
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "name bold" }, [
-                      _vm._v(" Timothy Littel ")
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [_vm._v("Nannie_Kling49@hotmail.com")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("1-251-141-2444 x275")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("28")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("UX Researcher")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("February 8, 2019")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("$14283.0")]),
-                _vm._v(" "),
-                _c("td", { staticClass: "actions" }, [
-                  _c(
-                    "span",
-                    {
-                      staticClass: "contact-edit",
-                      attrs: {
-                        "data-toggle": "modal",
-                        "data-target": "#contactEditModal"
-                      }
-                    },
-                    [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/c-edit.svg",
-                          alt: ""
-                        }
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "contact-close" }, [
-                    _c("img", {
-                      staticClass: "svg",
-                      attrs: {
-                        src: "/backend/assets/img/svg/c-close.svg",
-                        alt: ""
-                      }
-                    })
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("label", { staticClass: "custom-checkbox" }, [
-                    _c("input", { attrs: { type: "checkbox" } }),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "checkmark" })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "star" }, [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/star.svg",
-                          alt: ""
-                        }
-                      })
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _c("div", { staticClass: "d-flex align-items-center" }, [
-                    _c("div", { staticClass: "img mr-20" }, [
-                      _c("img", {
-                        staticClass: "img-40",
-                        attrs: {
-                          src: "/backend/assets/img/avatar/m2.png",
-                          alt: ""
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "name bold" }, [
-                      _vm._v(" Birdie Thiel ")
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [_vm._v("Kenya.Stanton@yahoo.com")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("209-225-4857")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("28")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("UX Researcher")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("August 7, 2015")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("$18037.0")]),
-                _vm._v(" "),
-                _c("td", { staticClass: "actions" }, [
-                  _c(
-                    "span",
-                    {
-                      staticClass: "contact-edit",
-                      attrs: {
-                        "data-toggle": "modal",
-                        "data-target": "#contactEditModal"
-                      }
-                    },
-                    [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/c-edit.svg",
-                          alt: ""
-                        }
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "contact-close" }, [
-                    _c("img", {
-                      staticClass: "svg",
-                      attrs: {
-                        src: "/backend/assets/img/svg/c-close.svg",
-                        alt: ""
-                      }
-                    })
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("label", { staticClass: "custom-checkbox" }, [
-                    _c("input", { attrs: { type: "checkbox" } }),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "checkmark" })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "star" }, [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/star.svg",
-                          alt: ""
-                        }
-                      })
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _c("div", { staticClass: "d-flex align-items-center" }, [
-                    _c("div", { staticClass: "img mr-20" }, [
-                      _c("img", {
-                        staticClass: "img-40",
-                        attrs: {
-                          src: "/backend/assets/img/avatar/m19.png",
-                          alt: ""
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "name bold" }, [
-                      _vm._v(" Karli Braun ")
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [_vm._v("Ruthe_Gleichner@gmail.com")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("697.704.7326")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("28")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("UX Researcher")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("October 25, 2016")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("$13329.0")]),
                 _vm._v(" "),
                 _c("td", { staticClass: "actions" }, [
                   _c(
@@ -62462,27 +62888,6 @@ var staticRenderFns = [
                             })
                           ]
                         )
-                      ]),
-                      _vm._v(" "),
-                      _c("li", [
-                        _c(
-                          "a",
-                          { staticClass: "current", attrs: { href: "#" } },
-                          [
-                            _c("div", { staticClass: "form-row" }, [
-                              _c("div", { staticClass: "col-12 text-right" }, [
-                                _c(
-                                  "button",
-                                  {
-                                    staticClass: "btn long",
-                                    attrs: { type: "submit" }
-                                  },
-                                  [_vm._v("Add More")]
-                                )
-                              ])
-                            ])
-                          ]
-                        )
                       ])
                     ]
                   )
@@ -62521,7 +62926,7 @@ var staticRenderFns = [
                 ]),
                 _vm._v(" "),
                 _c("th", { staticClass: "text-center" }, [
-                  _vm._v("Name "),
+                  _vm._v("Company"),
                   _c("img", {
                     staticClass: "svg",
                     attrs: {
@@ -62531,12 +62936,12 @@ var staticRenderFns = [
                   })
                 ]),
                 _vm._v(" "),
-                _c("th", [_vm._v("Email")]),
+                _c("th", [_vm._v("Home No")]),
                 _vm._v(" "),
-                _c("th", [_vm._v("Phone")]),
+                _c("th", [_vm._v("Street No")]),
                 _vm._v(" "),
                 _c("th", [
-                  _vm._v("Age "),
+                  _vm._v("Village "),
                   _c("img", {
                     staticClass: "svg",
                     attrs: {
@@ -62546,10 +62951,10 @@ var staticRenderFns = [
                   })
                 ]),
                 _vm._v(" "),
-                _c("th", [_vm._v("Post")]),
+                _c("th", [_vm._v("District")]),
                 _vm._v(" "),
                 _c("th", [
-                  _vm._v("Joining Date "),
+                  _vm._v("Commune "),
                   _c("img", {
                     staticClass: "svg",
                     attrs: {
@@ -62560,7 +62965,51 @@ var staticRenderFns = [
                 ]),
                 _vm._v(" "),
                 _c("th", [
-                  _vm._v("Salary "),
+                  _vm._v("Provide"),
+                  _c("img", {
+                    staticClass: "svg",
+                    attrs: {
+                      src: "/backend/assets/img/svg/table-down-arrow.svg",
+                      alt: ""
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("th", [
+                  _vm._v("Phone One "),
+                  _c("img", {
+                    staticClass: "svg",
+                    attrs: {
+                      src: "/backend/assets/img/svg/table-down-arrow.svg",
+                      alt: ""
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("th", [
+                  _vm._v("Phone Two"),
+                  _c("img", {
+                    staticClass: "svg",
+                    attrs: {
+                      src: "/backend/assets/img/svg/table-down-arrow.svg",
+                      alt: ""
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("th", [
+                  _vm._v("Email "),
+                  _c("img", {
+                    staticClass: "svg",
+                    attrs: {
+                      src: "/backend/assets/img/svg/table-down-arrow.svg",
+                      alt: ""
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("th", [
+                  _vm._v("WebSite "),
                   _c("img", {
                     staticClass: "svg",
                     attrs: {
@@ -62616,599 +63065,9 @@ var staticRenderFns = [
                   ])
                 ]),
                 _vm._v(" "),
-                _c("td", [_vm._v("Evangeline62@yahoo.com")]),
+                _c("td", [_vm._v("Evangel")]),
                 _vm._v(" "),
-                _c("td", [_vm._v("(023) 708-6818 x4267")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("28")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("UX Researcher")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("June 20, 2015")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("$26253.0")]),
-                _vm._v(" "),
-                _c("td", { staticClass: "actions" }, [
-                  _c(
-                    "span",
-                    {
-                      staticClass: "contact-edit",
-                      attrs: {
-                        "data-toggle": "modal",
-                        "data-target": "#contactEditModal"
-                      }
-                    },
-                    [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/c-edit.svg",
-                          alt: ""
-                        }
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "contact-close" }, [
-                    _c("img", {
-                      staticClass: "svg",
-                      attrs: {
-                        src: "/backend/assets/img/svg/c-close.svg",
-                        alt: ""
-                      }
-                    })
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("label", { staticClass: "custom-checkbox" }, [
-                    _c("input", { attrs: { type: "checkbox" } }),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "checkmark" })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "star" }, [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/star.svg",
-                          alt: ""
-                        }
-                      })
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _c("div", { staticClass: "d-flex align-items-center" }, [
-                    _c("div", { staticClass: "img mr-20" }, [
-                      _c("img", {
-                        staticClass: "img-40",
-                        attrs: {
-                          src: "/backend/assets/img/avatar/m20.png",
-                          alt: ""
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "name bold" }, [
-                      _vm._v(" Favian Maggio DDS ")
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [_vm._v("Electa_Conroy@hotmail.com")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("1-076-628-3095 x7154")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("28")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("UX Researcher")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("October 11, 2019")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("$26253.0")]),
-                _vm._v(" "),
-                _c("td", { staticClass: "actions" }, [
-                  _c(
-                    "span",
-                    {
-                      staticClass: "contact-edit",
-                      attrs: {
-                        "data-toggle": "modal",
-                        "data-target": "#contactEditModal"
-                      }
-                    },
-                    [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/c-edit.svg",
-                          alt: ""
-                        }
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "contact-close" }, [
-                    _c("img", {
-                      staticClass: "svg",
-                      attrs: {
-                        src: "/backend/assets/img/svg/c-close.svg",
-                        alt: ""
-                      }
-                    })
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("label", { staticClass: "custom-checkbox" }, [
-                    _c("input", { attrs: { type: "checkbox" } }),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "checkmark" })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "star" }, [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/star.svg",
-                          alt: ""
-                        }
-                      })
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _c("div", { staticClass: "d-flex align-items-center" }, [
-                    _c("div", { staticClass: "img mr-20" }, [
-                      _c("img", {
-                        staticClass: "img-40",
-                        attrs: {
-                          src: "/backend/assets/img/avatar/m21.png",
-                          alt: ""
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "name bold" }, [
-                      _vm._v(" Jacey Considine ")
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [_vm._v("Garry23@yahoo.com")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("1-016-234-2482")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("28")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("UX Researcher")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("January 2, 2016")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("$6162.0")]),
-                _vm._v(" "),
-                _c("td", { staticClass: "actions" }, [
-                  _c(
-                    "span",
-                    {
-                      staticClass: "contact-edit",
-                      attrs: {
-                        "data-toggle": "modal",
-                        "data-target": "#contactEditModal"
-                      }
-                    },
-                    [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/c-edit.svg",
-                          alt: ""
-                        }
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "contact-close" }, [
-                    _c("img", {
-                      staticClass: "svg",
-                      attrs: {
-                        src: "/backend/assets/img/svg/c-close.svg",
-                        alt: ""
-                      }
-                    })
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("label", { staticClass: "custom-checkbox" }, [
-                    _c("input", { attrs: { type: "checkbox" } }),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "checkmark" })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "star" }, [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/star.svg",
-                          alt: ""
-                        }
-                      })
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _c("div", { staticClass: "d-flex align-items-center" }, [
-                    _c("div", { staticClass: "img mr-20" }, [
-                      _c("img", {
-                        staticClass: "img-40",
-                        attrs: {
-                          src: "/backend/assets/img/avatar/m22.png",
-                          alt: ""
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "name bold" }, [
-                      _vm._v(" Kolby Torphy II ")
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [_vm._v("Phyllis75@hotmail.com")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("1-345-656-4163 x373")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("28")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("UX Researcher")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("August 9, 2017")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("$4022.0")]),
-                _vm._v(" "),
-                _c("td", { staticClass: "actions" }, [
-                  _c(
-                    "span",
-                    {
-                      staticClass: "contact-edit",
-                      attrs: {
-                        "data-toggle": "modal",
-                        "data-target": "#contactEditModal"
-                      }
-                    },
-                    [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/c-edit.svg",
-                          alt: ""
-                        }
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "contact-close" }, [
-                    _c("img", {
-                      staticClass: "svg",
-                      attrs: {
-                        src: "/backend/assets/img/svg/c-close.svg",
-                        alt: ""
-                      }
-                    })
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("label", { staticClass: "custom-checkbox" }, [
-                    _c("input", { attrs: { type: "checkbox" } }),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "checkmark" })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "star" }, [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/star.svg",
-                          alt: ""
-                        }
-                      })
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _c("div", { staticClass: "d-flex align-items-center" }, [
-                    _c("div", { staticClass: "img mr-20" }, [
-                      _c("img", {
-                        staticClass: "img-40",
-                        attrs: {
-                          src: "/backend/assets/img/avatar/m23.png",
-                          alt: ""
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "name bold" }, [
-                      _vm._v(" Mattie Daugherty ")
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [_vm._v("Jessika.Conroy@yahoo.com")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("721-969-9795 x09197")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("28")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("UX Researcher")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("December 24, 2016")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("$11588.0")]),
-                _vm._v(" "),
-                _c("td", { staticClass: "actions" }, [
-                  _c(
-                    "span",
-                    {
-                      staticClass: "contact-edit",
-                      attrs: {
-                        "data-toggle": "modal",
-                        "data-target": "#contactEditModal"
-                      }
-                    },
-                    [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/c-edit.svg",
-                          alt: ""
-                        }
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "contact-close" }, [
-                    _c("img", {
-                      staticClass: "svg",
-                      attrs: {
-                        src: "/backend/assets/img/svg/c-close.svg",
-                        alt: ""
-                      }
-                    })
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("label", { staticClass: "custom-checkbox" }, [
-                    _c("input", { attrs: { type: "checkbox" } }),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "checkmark" })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "star" }, [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/star.svg",
-                          alt: ""
-                        }
-                      })
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _c("div", { staticClass: "d-flex align-items-center" }, [
-                    _c("div", { staticClass: "img mr-20" }, [
-                      _c("img", {
-                        staticClass: "img-40",
-                        attrs: {
-                          src: "/backend/assets/img/avatar/m24.png",
-                          alt: ""
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "name bold" }, [
-                      _vm._v(" Timothy Littel ")
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [_vm._v("Nannie_Kling49@hotmail.com")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("1-251-141-2444 x275")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("28")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("UX Researcher")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("February 8, 2019")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("$14283.0")]),
-                _vm._v(" "),
-                _c("td", { staticClass: "actions" }, [
-                  _c(
-                    "span",
-                    {
-                      staticClass: "contact-edit",
-                      attrs: {
-                        "data-toggle": "modal",
-                        "data-target": "#contactEditModal"
-                      }
-                    },
-                    [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/c-edit.svg",
-                          alt: ""
-                        }
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "contact-close" }, [
-                    _c("img", {
-                      staticClass: "svg",
-                      attrs: {
-                        src: "/backend/assets/img/svg/c-close.svg",
-                        alt: ""
-                      }
-                    })
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", { staticClass: "selected" }, [
-                _c("td", [
-                  _c("label", { staticClass: "custom-checkbox" }, [
-                    _c("input", { attrs: { type: "checkbox", checked: "" } }),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "checkmark" })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "star" }, [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/star.svg",
-                          alt: ""
-                        }
-                      })
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _c("div", { staticClass: "d-flex align-items-center" }, [
-                    _c("div", { staticClass: "img mr-20" }, [
-                      _c("img", {
-                        staticClass: "img-40",
-                        attrs: {
-                          src: "/backend/assets/img/avatar/m19.png",
-                          alt: ""
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "name bold" }, [
-                      _vm._v(" Karli Braun ")
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [_vm._v("Ruthe_Gleichner@gmail.com")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("697.704.7326")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("28")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("UX Researcher")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("October 25, 2016")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("$13329.0")]),
-                _vm._v(" "),
-                _c("td", { staticClass: "actions" }, [
-                  _c(
-                    "span",
-                    {
-                      staticClass: "contact-edit",
-                      attrs: {
-                        "data-toggle": "modal",
-                        "data-target": "#contactEditModal"
-                      }
-                    },
-                    [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/c-edit.svg",
-                          alt: ""
-                        }
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "contact-close" }, [
-                    _c("img", {
-                      staticClass: "svg",
-                      attrs: {
-                        src: "/backend/assets/img/svg/c-close.svg",
-                        alt: ""
-                      }
-                    })
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", { staticClass: "selected" }, [
-                _c("td", [
-                  _c("label", { staticClass: "custom-checkbox" }, [
-                    _c("input", { attrs: { type: "checkbox", checked: "" } }),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "checkmark" })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "star" }, [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/star.svg",
-                          alt: ""
-                        }
-                      })
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _c("div", { staticClass: "d-flex align-items-center" }, [
-                    _c("div", { staticClass: "img mr-20" }, [
-                      _c("img", {
-                        staticClass: "img-40",
-                        attrs: {
-                          src: "/backend/assets/img/avatar/m16.png",
-                          alt: ""
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "name bold" }, [
-                      _vm._v(
-                        "\n                                Arden Spencer\n                            "
-                      )
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [_vm._v("Evangeline62@yahoo.com")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("(023) 708-6818 x4267")]),
+                _c("td", [_vm._v("(023) ")]),
                 _vm._v(" "),
                 _c("td", [_vm._v("28")]),
                 _vm._v(" "),
@@ -63218,509 +63077,13 @@ var staticRenderFns = [
                 _vm._v(" "),
                 _c("td", [_vm._v("$26253.0")]),
                 _vm._v(" "),
-                _c("td", { staticClass: "actions" }, [
-                  _c(
-                    "span",
-                    {
-                      staticClass: "contact-edit",
-                      attrs: {
-                        "data-toggle": "modal",
-                        "data-target": "#contactEditModal"
-                      }
-                    },
-                    [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/c-edit.svg",
-                          alt: ""
-                        }
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "contact-close" }, [
-                    _c("img", {
-                      staticClass: "svg",
-                      attrs: {
-                        src: "/backend/assets/img/svg/c-close.svg",
-                        alt: ""
-                      }
-                    })
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("label", { staticClass: "custom-checkbox" }, [
-                    _c("input", { attrs: { type: "checkbox" } }),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "checkmark" })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "star" }, [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/star.svg",
-                          alt: ""
-                        }
-                      })
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _c("div", { staticClass: "d-flex align-items-center" }, [
-                    _c("div", { staticClass: "img mr-20" }, [
-                      _c("img", {
-                        staticClass: "img-40",
-                        attrs: {
-                          src: "/backend/assets/img/avatar/m20.png",
-                          alt: ""
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "name bold" }, [
-                      _vm._v(" Favian Maggio DDS ")
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [_vm._v("Electa_Conroy@hotmail.com")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("1-076-628-3095 x7154")]),
-                _vm._v(" "),
                 _c("td", [_vm._v("28")]),
                 _vm._v(" "),
                 _c("td", [_vm._v("UX Researcher")]),
                 _vm._v(" "),
-                _c("td", [_vm._v("October 11, 2019")]),
+                _c("td", [_vm._v("June 20, 2015")]),
                 _vm._v(" "),
                 _c("td", [_vm._v("$26253.0")]),
-                _vm._v(" "),
-                _c("td", { staticClass: "actions" }, [
-                  _c(
-                    "span",
-                    {
-                      staticClass: "contact-edit",
-                      attrs: {
-                        "data-toggle": "modal",
-                        "data-target": "#contactEditModal"
-                      }
-                    },
-                    [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/c-edit.svg",
-                          alt: ""
-                        }
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "contact-close" }, [
-                    _c("img", {
-                      staticClass: "svg",
-                      attrs: {
-                        src: "/backend/assets/img/svg/c-close.svg",
-                        alt: ""
-                      }
-                    })
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("label", { staticClass: "custom-checkbox" }, [
-                    _c("input", { attrs: { type: "checkbox" } }),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "checkmark" })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "star" }, [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/star.svg",
-                          alt: ""
-                        }
-                      })
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _c("div", { staticClass: "d-flex align-items-center" }, [
-                    _c("div", { staticClass: "img mr-20" }, [
-                      _c("img", {
-                        staticClass: "img-40",
-                        attrs: {
-                          src: "/backend/assets/img/avatar/m21.png",
-                          alt: ""
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "name bold" }, [
-                      _vm._v(" Jacey Considine ")
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [_vm._v("Garry23@yahoo.com")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("1-016-234-2482")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("28")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("UX Researcher")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("January 2, 2016")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("$6162.0")]),
-                _vm._v(" "),
-                _c("td", { staticClass: "actions" }, [
-                  _c(
-                    "span",
-                    {
-                      staticClass: "contact-edit",
-                      attrs: {
-                        "data-toggle": "modal",
-                        "data-target": "#contactEditModal"
-                      }
-                    },
-                    [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/c-edit.svg",
-                          alt: ""
-                        }
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "contact-close" }, [
-                    _c("img", {
-                      staticClass: "svg",
-                      attrs: {
-                        src: "/backend/assets/img/svg/c-close.svg",
-                        alt: ""
-                      }
-                    })
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("label", { staticClass: "custom-checkbox" }, [
-                    _c("input", { attrs: { type: "checkbox" } }),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "checkmark" })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "star" }, [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/star.svg",
-                          alt: ""
-                        }
-                      })
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _c("div", { staticClass: "d-flex align-items-center" }, [
-                    _c("div", { staticClass: "img mr-20" }, [
-                      _c("img", {
-                        staticClass: "img-40",
-                        attrs: {
-                          src: "/backend/assets/img/avatar/m22.png",
-                          alt: ""
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "name bold" }, [
-                      _vm._v(" Kolby Torphy II ")
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [_vm._v("Phyllis75@hotmail.com")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("1-345-656-4163 x373")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("28")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("UX Researcher")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("August 9, 2017")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("$4022.0")]),
-                _vm._v(" "),
-                _c("td", { staticClass: "actions" }, [
-                  _c(
-                    "span",
-                    {
-                      staticClass: "contact-edit",
-                      attrs: {
-                        "data-toggle": "modal",
-                        "data-target": "#contactEditModal"
-                      }
-                    },
-                    [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/c-edit.svg",
-                          alt: ""
-                        }
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "contact-close" }, [
-                    _c("img", {
-                      staticClass: "svg",
-                      attrs: {
-                        src: "/backend/assets/img/svg/c-close.svg",
-                        alt: ""
-                      }
-                    })
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("label", { staticClass: "custom-checkbox" }, [
-                    _c("input", { attrs: { type: "checkbox" } }),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "checkmark" })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "star" }, [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/star.svg",
-                          alt: ""
-                        }
-                      })
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _c("div", { staticClass: "d-flex align-items-center" }, [
-                    _c("div", { staticClass: "img mr-20" }, [
-                      _c("img", {
-                        staticClass: "img-40",
-                        attrs: {
-                          src: "/backend/assets/img/avatar/m23.png",
-                          alt: ""
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "name bold" }, [
-                      _vm._v(" Timothy Littel ")
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [_vm._v("Nannie_Kling49@hotmail.com")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("1-251-141-2444 x275")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("28")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("UX Researcher")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("February 8, 2019")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("$14283.0")]),
-                _vm._v(" "),
-                _c("td", { staticClass: "actions" }, [
-                  _c(
-                    "span",
-                    {
-                      staticClass: "contact-edit",
-                      attrs: {
-                        "data-toggle": "modal",
-                        "data-target": "#contactEditModal"
-                      }
-                    },
-                    [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/c-edit.svg",
-                          alt: ""
-                        }
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "contact-close" }, [
-                    _c("img", {
-                      staticClass: "svg",
-                      attrs: {
-                        src: "/backend/assets/img/svg/c-close.svg",
-                        alt: ""
-                      }
-                    })
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("label", { staticClass: "custom-checkbox" }, [
-                    _c("input", { attrs: { type: "checkbox" } }),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "checkmark" })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "star" }, [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/star.svg",
-                          alt: ""
-                        }
-                      })
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _c("div", { staticClass: "d-flex align-items-center" }, [
-                    _c("div", { staticClass: "img mr-20" }, [
-                      _c("img", {
-                        staticClass: "img-40",
-                        attrs: {
-                          src: "/backend/assets/img/avatar/m2.png",
-                          alt: ""
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "name bold" }, [
-                      _vm._v(" Birdie Thiel ")
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [_vm._v("Kenya.Stanton@yahoo.com")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("209-225-4857")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("28")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("UX Researcher")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("August 7, 2015")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("$18037.0")]),
-                _vm._v(" "),
-                _c("td", { staticClass: "actions" }, [
-                  _c(
-                    "span",
-                    {
-                      staticClass: "contact-edit",
-                      attrs: {
-                        "data-toggle": "modal",
-                        "data-target": "#contactEditModal"
-                      }
-                    },
-                    [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/c-edit.svg",
-                          alt: ""
-                        }
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "contact-close" }, [
-                    _c("img", {
-                      staticClass: "svg",
-                      attrs: {
-                        src: "/backend/assets/img/svg/c-close.svg",
-                        alt: ""
-                      }
-                    })
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("label", { staticClass: "custom-checkbox" }, [
-                    _c("input", { attrs: { type: "checkbox" } }),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "checkmark" })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "star" }, [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/star.svg",
-                          alt: ""
-                        }
-                      })
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _c("div", { staticClass: "d-flex align-items-center" }, [
-                    _c("div", { staticClass: "img mr-20" }, [
-                      _c("img", {
-                        staticClass: "img-40",
-                        attrs: {
-                          src: "/backend/assets/img/avatar/m19.png",
-                          alt: ""
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "name bold" }, [
-                      _vm._v(" Karli Braun ")
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [_vm._v("Ruthe_Gleichner@gmail.com")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("697.704.7326")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("28")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("UX Researcher")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("October 25, 2016")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("$13329.0")]),
                 _vm._v(" "),
                 _c("td", { staticClass: "actions" }, [
                   _c(
@@ -65865,7 +65228,7 @@ var staticRenderFns = [
                 _c("th", [_vm._v("Phone")]),
                 _vm._v(" "),
                 _c("th", [
-                  _vm._v("Age "),
+                  _vm._v("telephone "),
                   _c("img", {
                     staticClass: "svg",
                     attrs: {
@@ -65875,10 +65238,10 @@ var staticRenderFns = [
                   })
                 ]),
                 _vm._v(" "),
-                _c("th", [_vm._v("Post")]),
+                _c("th", [_vm._v("Role")]),
                 _vm._v(" "),
                 _c("th", [
-                  _vm._v("Joining Date "),
+                  _vm._v("Pricing "),
                   _c("img", {
                     staticClass: "svg",
                     attrs: {
@@ -65889,7 +65252,7 @@ var staticRenderFns = [
                 ]),
                 _vm._v(" "),
                 _c("th", [
-                  _vm._v("Salary "),
+                  _vm._v("Bank"),
                   _c("img", {
                     staticClass: "svg",
                     attrs: {
@@ -65956,1100 +65319,6 @@ var staticRenderFns = [
                 _c("td", [_vm._v("June 20, 2015")]),
                 _vm._v(" "),
                 _c("td", [_vm._v("$26253.0")]),
-                _vm._v(" "),
-                _c("td", { staticClass: "actions" }, [
-                  _c(
-                    "span",
-                    {
-                      staticClass: "contact-edit",
-                      attrs: {
-                        "data-toggle": "modal",
-                        "data-target": "#contactEditModal"
-                      }
-                    },
-                    [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/c-edit.svg",
-                          alt: ""
-                        }
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "contact-close" }, [
-                    _c("img", {
-                      staticClass: "svg",
-                      attrs: {
-                        src: "/backend/assets/img/svg/c-close.svg",
-                        alt: ""
-                      }
-                    })
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("label", { staticClass: "custom-checkbox" }, [
-                    _c("input", { attrs: { type: "checkbox" } }),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "checkmark" })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "star" }, [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/star.svg",
-                          alt: ""
-                        }
-                      })
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _c("div", { staticClass: "d-flex align-items-center" }, [
-                    _c("div", { staticClass: "img mr-20" }, [
-                      _c("img", {
-                        staticClass: "img-40",
-                        attrs: {
-                          src: "/backend/assets/img/avatar/m20.png",
-                          alt: ""
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "name bold" }, [
-                      _vm._v(" Favian Maggio DDS ")
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [_vm._v("Electa_Conroy@hotmail.com")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("1-076-628-3095 x7154")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("28")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("UX Researcher")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("October 11, 2019")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("$26253.0")]),
-                _vm._v(" "),
-                _c("td", { staticClass: "actions" }, [
-                  _c(
-                    "span",
-                    {
-                      staticClass: "contact-edit",
-                      attrs: {
-                        "data-toggle": "modal",
-                        "data-target": "#contactEditModal"
-                      }
-                    },
-                    [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/c-edit.svg",
-                          alt: ""
-                        }
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "contact-close" }, [
-                    _c("img", {
-                      staticClass: "svg",
-                      attrs: {
-                        src: "/backend/assets/img/svg/c-close.svg",
-                        alt: ""
-                      }
-                    })
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("label", { staticClass: "custom-checkbox" }, [
-                    _c("input", { attrs: { type: "checkbox" } }),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "checkmark" })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "star" }, [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/star.svg",
-                          alt: ""
-                        }
-                      })
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _c("div", { staticClass: "d-flex align-items-center" }, [
-                    _c("div", { staticClass: "img mr-20" }, [
-                      _c("img", {
-                        staticClass: "img-40",
-                        attrs: {
-                          src: "/backend/assets/img/avatar/m21.png",
-                          alt: ""
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "name bold" }, [
-                      _vm._v(" Jacey Considine ")
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [_vm._v("Garry23@yahoo.com")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("1-016-234-2482")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("28")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("UX Researcher")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("January 2, 2016")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("$6162.0")]),
-                _vm._v(" "),
-                _c("td", { staticClass: "actions" }, [
-                  _c(
-                    "span",
-                    {
-                      staticClass: "contact-edit",
-                      attrs: {
-                        "data-toggle": "modal",
-                        "data-target": "#contactEditModal"
-                      }
-                    },
-                    [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/c-edit.svg",
-                          alt: ""
-                        }
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "contact-close" }, [
-                    _c("img", {
-                      staticClass: "svg",
-                      attrs: {
-                        src: "/backend/assets/img/svg/c-close.svg",
-                        alt: ""
-                      }
-                    })
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("label", { staticClass: "custom-checkbox" }, [
-                    _c("input", { attrs: { type: "checkbox" } }),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "checkmark" })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "star" }, [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/star.svg",
-                          alt: ""
-                        }
-                      })
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _c("div", { staticClass: "d-flex align-items-center" }, [
-                    _c("div", { staticClass: "img mr-20" }, [
-                      _c("img", {
-                        staticClass: "img-40",
-                        attrs: {
-                          src: "/backend/assets/img/avatar/m22.png",
-                          alt: ""
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "name bold" }, [
-                      _vm._v(" Kolby Torphy II ")
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [_vm._v("Phyllis75@hotmail.com")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("1-345-656-4163 x373")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("28")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("UX Researcher")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("August 9, 2017")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("$4022.0")]),
-                _vm._v(" "),
-                _c("td", { staticClass: "actions" }, [
-                  _c(
-                    "span",
-                    {
-                      staticClass: "contact-edit",
-                      attrs: {
-                        "data-toggle": "modal",
-                        "data-target": "#contactEditModal"
-                      }
-                    },
-                    [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/c-edit.svg",
-                          alt: ""
-                        }
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "contact-close" }, [
-                    _c("img", {
-                      staticClass: "svg",
-                      attrs: {
-                        src: "/backend/assets/img/svg/c-close.svg",
-                        alt: ""
-                      }
-                    })
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("label", { staticClass: "custom-checkbox" }, [
-                    _c("input", { attrs: { type: "checkbox" } }),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "checkmark" })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "star" }, [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/star.svg",
-                          alt: ""
-                        }
-                      })
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _c("div", { staticClass: "d-flex align-items-center" }, [
-                    _c("div", { staticClass: "img mr-20" }, [
-                      _c("img", {
-                        staticClass: "img-40",
-                        attrs: {
-                          src: "/backend/assets/img/avatar/m23.png",
-                          alt: ""
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "name bold" }, [
-                      _vm._v(" Mattie Daugherty ")
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [_vm._v("Jessika.Conroy@yahoo.com")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("721-969-9795 x09197")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("28")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("UX Researcher")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("December 24, 2016")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("$11588.0")]),
-                _vm._v(" "),
-                _c("td", { staticClass: "actions" }, [
-                  _c(
-                    "span",
-                    {
-                      staticClass: "contact-edit",
-                      attrs: {
-                        "data-toggle": "modal",
-                        "data-target": "#contactEditModal"
-                      }
-                    },
-                    [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/c-edit.svg",
-                          alt: ""
-                        }
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "contact-close" }, [
-                    _c("img", {
-                      staticClass: "svg",
-                      attrs: {
-                        src: "/backend/assets/img/svg/c-close.svg",
-                        alt: ""
-                      }
-                    })
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("label", { staticClass: "custom-checkbox" }, [
-                    _c("input", { attrs: { type: "checkbox" } }),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "checkmark" })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "star" }, [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/star.svg",
-                          alt: ""
-                        }
-                      })
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _c("div", { staticClass: "d-flex align-items-center" }, [
-                    _c("div", { staticClass: "img mr-20" }, [
-                      _c("img", {
-                        staticClass: "img-40",
-                        attrs: {
-                          src: "/backend/assets/img/avatar/m24.png",
-                          alt: ""
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "name bold" }, [
-                      _vm._v(" Timothy Littel ")
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [_vm._v("Nannie_Kling49@hotmail.com")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("1-251-141-2444 x275")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("28")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("UX Researcher")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("February 8, 2019")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("$14283.0")]),
-                _vm._v(" "),
-                _c("td", { staticClass: "actions" }, [
-                  _c(
-                    "span",
-                    {
-                      staticClass: "contact-edit",
-                      attrs: {
-                        "data-toggle": "modal",
-                        "data-target": "#contactEditModal"
-                      }
-                    },
-                    [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/c-edit.svg",
-                          alt: ""
-                        }
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "contact-close" }, [
-                    _c("img", {
-                      staticClass: "svg",
-                      attrs: {
-                        src: "/backend/assets/img/svg/c-close.svg",
-                        alt: ""
-                      }
-                    })
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", { staticClass: "selected" }, [
-                _c("td", [
-                  _c("label", { staticClass: "custom-checkbox" }, [
-                    _c("input", { attrs: { type: "checkbox", checked: "" } }),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "checkmark" })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "star" }, [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/star.svg",
-                          alt: ""
-                        }
-                      })
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _c("div", { staticClass: "d-flex align-items-center" }, [
-                    _c("div", { staticClass: "img mr-20" }, [
-                      _c("img", {
-                        staticClass: "img-40",
-                        attrs: {
-                          src: "/backend/assets/img/avatar/m19.png",
-                          alt: ""
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "name bold" }, [
-                      _vm._v(" Karli Braun ")
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [_vm._v("Ruthe_Gleichner@gmail.com")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("697.704.7326")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("28")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("UX Researcher")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("October 25, 2016")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("$13329.0")]),
-                _vm._v(" "),
-                _c("td", { staticClass: "actions" }, [
-                  _c(
-                    "span",
-                    {
-                      staticClass: "contact-edit",
-                      attrs: {
-                        "data-toggle": "modal",
-                        "data-target": "#contactEditModal"
-                      }
-                    },
-                    [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/c-edit.svg",
-                          alt: ""
-                        }
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "contact-close" }, [
-                    _c("img", {
-                      staticClass: "svg",
-                      attrs: {
-                        src: "/backend/assets/img/svg/c-close.svg",
-                        alt: ""
-                      }
-                    })
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", { staticClass: "selected" }, [
-                _c("td", [
-                  _c("label", { staticClass: "custom-checkbox" }, [
-                    _c("input", { attrs: { type: "checkbox", checked: "" } }),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "checkmark" })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "star" }, [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/star.svg",
-                          alt: ""
-                        }
-                      })
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _c("div", { staticClass: "d-flex align-items-center" }, [
-                    _c("div", { staticClass: "img mr-20" }, [
-                      _c("img", {
-                        staticClass: "img-40",
-                        attrs: {
-                          src: "/backend/assets/img/avatar/m16.png",
-                          alt: ""
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "name bold" }, [
-                      _vm._v(
-                        "\n                                Arden Spencer\n                            "
-                      )
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [_vm._v("Evangeline62@yahoo.com")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("(023) 708-6818 x4267")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("28")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("UX Researcher")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("June 20, 2015")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("$26253.0")]),
-                _vm._v(" "),
-                _c("td", { staticClass: "actions" }, [
-                  _c(
-                    "span",
-                    {
-                      staticClass: "contact-edit",
-                      attrs: {
-                        "data-toggle": "modal",
-                        "data-target": "#contactEditModal"
-                      }
-                    },
-                    [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/c-edit.svg",
-                          alt: ""
-                        }
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "contact-close" }, [
-                    _c("img", {
-                      staticClass: "svg",
-                      attrs: {
-                        src: "/backend/assets/img/svg/c-close.svg",
-                        alt: ""
-                      }
-                    })
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("label", { staticClass: "custom-checkbox" }, [
-                    _c("input", { attrs: { type: "checkbox" } }),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "checkmark" })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "star" }, [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/star.svg",
-                          alt: ""
-                        }
-                      })
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _c("div", { staticClass: "d-flex align-items-center" }, [
-                    _c("div", { staticClass: "img mr-20" }, [
-                      _c("img", {
-                        staticClass: "img-40",
-                        attrs: {
-                          src: "/backend/assets/img/avatar/m20.png",
-                          alt: ""
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "name bold" }, [
-                      _vm._v(" Favian Maggio DDS ")
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [_vm._v("Electa_Conroy@hotmail.com")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("1-076-628-3095 x7154")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("28")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("UX Researcher")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("October 11, 2019")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("$26253.0")]),
-                _vm._v(" "),
-                _c("td", { staticClass: "actions" }, [
-                  _c(
-                    "span",
-                    {
-                      staticClass: "contact-edit",
-                      attrs: {
-                        "data-toggle": "modal",
-                        "data-target": "#contactEditModal"
-                      }
-                    },
-                    [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/c-edit.svg",
-                          alt: ""
-                        }
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "contact-close" }, [
-                    _c("img", {
-                      staticClass: "svg",
-                      attrs: {
-                        src: "/backend/assets/img/svg/c-close.svg",
-                        alt: ""
-                      }
-                    })
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("label", { staticClass: "custom-checkbox" }, [
-                    _c("input", { attrs: { type: "checkbox" } }),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "checkmark" })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "star" }, [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/star.svg",
-                          alt: ""
-                        }
-                      })
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _c("div", { staticClass: "d-flex align-items-center" }, [
-                    _c("div", { staticClass: "img mr-20" }, [
-                      _c("img", {
-                        staticClass: "img-40",
-                        attrs: {
-                          src: "/backend/assets/img/avatar/m21.png",
-                          alt: ""
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "name bold" }, [
-                      _vm._v(" Jacey Considine ")
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [_vm._v("Garry23@yahoo.com")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("1-016-234-2482")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("28")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("UX Researcher")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("January 2, 2016")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("$6162.0")]),
-                _vm._v(" "),
-                _c("td", { staticClass: "actions" }, [
-                  _c(
-                    "span",
-                    {
-                      staticClass: "contact-edit",
-                      attrs: {
-                        "data-toggle": "modal",
-                        "data-target": "#contactEditModal"
-                      }
-                    },
-                    [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/c-edit.svg",
-                          alt: ""
-                        }
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "contact-close" }, [
-                    _c("img", {
-                      staticClass: "svg",
-                      attrs: {
-                        src: "/backend/assets/img/svg/c-close.svg",
-                        alt: ""
-                      }
-                    })
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("label", { staticClass: "custom-checkbox" }, [
-                    _c("input", { attrs: { type: "checkbox" } }),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "checkmark" })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "star" }, [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/star.svg",
-                          alt: ""
-                        }
-                      })
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _c("div", { staticClass: "d-flex align-items-center" }, [
-                    _c("div", { staticClass: "img mr-20" }, [
-                      _c("img", {
-                        staticClass: "img-40",
-                        attrs: {
-                          src: "/backend/assets/img/avatar/m22.png",
-                          alt: ""
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "name bold" }, [
-                      _vm._v(" Kolby Torphy II ")
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [_vm._v("Phyllis75@hotmail.com")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("1-345-656-4163 x373")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("28")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("UX Researcher")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("August 9, 2017")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("$4022.0")]),
-                _vm._v(" "),
-                _c("td", { staticClass: "actions" }, [
-                  _c(
-                    "span",
-                    {
-                      staticClass: "contact-edit",
-                      attrs: {
-                        "data-toggle": "modal",
-                        "data-target": "#contactEditModal"
-                      }
-                    },
-                    [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/c-edit.svg",
-                          alt: ""
-                        }
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "contact-close" }, [
-                    _c("img", {
-                      staticClass: "svg",
-                      attrs: {
-                        src: "/backend/assets/img/svg/c-close.svg",
-                        alt: ""
-                      }
-                    })
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("label", { staticClass: "custom-checkbox" }, [
-                    _c("input", { attrs: { type: "checkbox" } }),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "checkmark" })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "star" }, [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/star.svg",
-                          alt: ""
-                        }
-                      })
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _c("div", { staticClass: "d-flex align-items-center" }, [
-                    _c("div", { staticClass: "img mr-20" }, [
-                      _c("img", {
-                        staticClass: "img-40",
-                        attrs: {
-                          src: "/backend/assets/img/avatar/m23.png",
-                          alt: ""
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "name bold" }, [
-                      _vm._v(" Timothy Littel ")
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [_vm._v("Nannie_Kling49@hotmail.com")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("1-251-141-2444 x275")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("28")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("UX Researcher")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("February 8, 2019")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("$14283.0")]),
-                _vm._v(" "),
-                _c("td", { staticClass: "actions" }, [
-                  _c(
-                    "span",
-                    {
-                      staticClass: "contact-edit",
-                      attrs: {
-                        "data-toggle": "modal",
-                        "data-target": "#contactEditModal"
-                      }
-                    },
-                    [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/c-edit.svg",
-                          alt: ""
-                        }
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "contact-close" }, [
-                    _c("img", {
-                      staticClass: "svg",
-                      attrs: {
-                        src: "/backend/assets/img/svg/c-close.svg",
-                        alt: ""
-                      }
-                    })
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("label", { staticClass: "custom-checkbox" }, [
-                    _c("input", { attrs: { type: "checkbox" } }),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "checkmark" })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "star" }, [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/star.svg",
-                          alt: ""
-                        }
-                      })
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _c("div", { staticClass: "d-flex align-items-center" }, [
-                    _c("div", { staticClass: "img mr-20" }, [
-                      _c("img", {
-                        staticClass: "img-40",
-                        attrs: {
-                          src: "/backend/assets/img/avatar/m2.png",
-                          alt: ""
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "name bold" }, [
-                      _vm._v(" Birdie Thiel ")
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [_vm._v("Kenya.Stanton@yahoo.com")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("209-225-4857")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("28")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("UX Researcher")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("August 7, 2015")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("$18037.0")]),
-                _vm._v(" "),
-                _c("td", { staticClass: "actions" }, [
-                  _c(
-                    "span",
-                    {
-                      staticClass: "contact-edit",
-                      attrs: {
-                        "data-toggle": "modal",
-                        "data-target": "#contactEditModal"
-                      }
-                    },
-                    [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/c-edit.svg",
-                          alt: ""
-                        }
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "contact-close" }, [
-                    _c("img", {
-                      staticClass: "svg",
-                      attrs: {
-                        src: "/backend/assets/img/svg/c-close.svg",
-                        alt: ""
-                      }
-                    })
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("label", { staticClass: "custom-checkbox" }, [
-                    _c("input", { attrs: { type: "checkbox" } }),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "checkmark" })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "star" }, [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/star.svg",
-                          alt: ""
-                        }
-                      })
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _c("div", { staticClass: "d-flex align-items-center" }, [
-                    _c("div", { staticClass: "img mr-20" }, [
-                      _c("img", {
-                        staticClass: "img-40",
-                        attrs: {
-                          src: "/backend/assets/img/avatar/m19.png",
-                          alt: ""
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "name bold" }, [
-                      _vm._v(" Karli Braun ")
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [_vm._v("Ruthe_Gleichner@gmail.com")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("697.704.7326")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("28")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("UX Researcher")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("October 25, 2016")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("$13329.0")]),
                 _vm._v(" "),
                 _c("td", { staticClass: "actions" }, [
                   _c(
@@ -67318,7 +65587,7 @@ var staticRenderFns = [
                 _c("th", [_vm._v("Phone")]),
                 _vm._v(" "),
                 _c("th", [
-                  _vm._v("Age "),
+                  _vm._v("telephone "),
                   _c("img", {
                     staticClass: "svg",
                     attrs: {
@@ -67328,10 +65597,10 @@ var staticRenderFns = [
                   })
                 ]),
                 _vm._v(" "),
-                _c("th", [_vm._v("Post")]),
+                _c("th", [_vm._v("Role")]),
                 _vm._v(" "),
                 _c("th", [
-                  _vm._v("Joining Date "),
+                  _vm._v("Pricing "),
                   _c("img", {
                     staticClass: "svg",
                     attrs: {
@@ -67342,7 +65611,7 @@ var staticRenderFns = [
                 ]),
                 _vm._v(" "),
                 _c("th", [
-                  _vm._v("Salary "),
+                  _vm._v("Bank"),
                   _c("img", {
                     staticClass: "svg",
                     attrs: {
@@ -67409,1100 +65678,6 @@ var staticRenderFns = [
                 _c("td", [_vm._v("June 20, 2015")]),
                 _vm._v(" "),
                 _c("td", [_vm._v("$26253.0")]),
-                _vm._v(" "),
-                _c("td", { staticClass: "actions" }, [
-                  _c(
-                    "span",
-                    {
-                      staticClass: "contact-edit",
-                      attrs: {
-                        "data-toggle": "modal",
-                        "data-target": "#contactEditModal"
-                      }
-                    },
-                    [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/c-edit.svg",
-                          alt: ""
-                        }
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "contact-close" }, [
-                    _c("img", {
-                      staticClass: "svg",
-                      attrs: {
-                        src: "/backend/assets/img/svg/c-close.svg",
-                        alt: ""
-                      }
-                    })
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("label", { staticClass: "custom-checkbox" }, [
-                    _c("input", { attrs: { type: "checkbox" } }),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "checkmark" })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "star" }, [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/star.svg",
-                          alt: ""
-                        }
-                      })
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _c("div", { staticClass: "d-flex align-items-center" }, [
-                    _c("div", { staticClass: "img mr-20" }, [
-                      _c("img", {
-                        staticClass: "img-40",
-                        attrs: {
-                          src: "/backend/assets/img/avatar/m20.png",
-                          alt: ""
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "name bold" }, [
-                      _vm._v(" Favian Maggio DDS ")
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [_vm._v("Electa_Conroy@hotmail.com")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("1-076-628-3095 x7154")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("28")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("UX Researcher")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("October 11, 2019")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("$26253.0")]),
-                _vm._v(" "),
-                _c("td", { staticClass: "actions" }, [
-                  _c(
-                    "span",
-                    {
-                      staticClass: "contact-edit",
-                      attrs: {
-                        "data-toggle": "modal",
-                        "data-target": "#contactEditModal"
-                      }
-                    },
-                    [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/c-edit.svg",
-                          alt: ""
-                        }
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "contact-close" }, [
-                    _c("img", {
-                      staticClass: "svg",
-                      attrs: {
-                        src: "/backend/assets/img/svg/c-close.svg",
-                        alt: ""
-                      }
-                    })
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("label", { staticClass: "custom-checkbox" }, [
-                    _c("input", { attrs: { type: "checkbox" } }),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "checkmark" })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "star" }, [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/star.svg",
-                          alt: ""
-                        }
-                      })
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _c("div", { staticClass: "d-flex align-items-center" }, [
-                    _c("div", { staticClass: "img mr-20" }, [
-                      _c("img", {
-                        staticClass: "img-40",
-                        attrs: {
-                          src: "/backend/assets/img/avatar/m21.png",
-                          alt: ""
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "name bold" }, [
-                      _vm._v(" Jacey Considine ")
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [_vm._v("Garry23@yahoo.com")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("1-016-234-2482")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("28")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("UX Researcher")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("January 2, 2016")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("$6162.0")]),
-                _vm._v(" "),
-                _c("td", { staticClass: "actions" }, [
-                  _c(
-                    "span",
-                    {
-                      staticClass: "contact-edit",
-                      attrs: {
-                        "data-toggle": "modal",
-                        "data-target": "#contactEditModal"
-                      }
-                    },
-                    [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/c-edit.svg",
-                          alt: ""
-                        }
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "contact-close" }, [
-                    _c("img", {
-                      staticClass: "svg",
-                      attrs: {
-                        src: "/backend/assets/img/svg/c-close.svg",
-                        alt: ""
-                      }
-                    })
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("label", { staticClass: "custom-checkbox" }, [
-                    _c("input", { attrs: { type: "checkbox" } }),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "checkmark" })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "star" }, [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/star.svg",
-                          alt: ""
-                        }
-                      })
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _c("div", { staticClass: "d-flex align-items-center" }, [
-                    _c("div", { staticClass: "img mr-20" }, [
-                      _c("img", {
-                        staticClass: "img-40",
-                        attrs: {
-                          src: "/backend/assets/img/avatar/m22.png",
-                          alt: ""
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "name bold" }, [
-                      _vm._v(" Kolby Torphy II ")
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [_vm._v("Phyllis75@hotmail.com")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("1-345-656-4163 x373")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("28")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("UX Researcher")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("August 9, 2017")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("$4022.0")]),
-                _vm._v(" "),
-                _c("td", { staticClass: "actions" }, [
-                  _c(
-                    "span",
-                    {
-                      staticClass: "contact-edit",
-                      attrs: {
-                        "data-toggle": "modal",
-                        "data-target": "#contactEditModal"
-                      }
-                    },
-                    [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/c-edit.svg",
-                          alt: ""
-                        }
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "contact-close" }, [
-                    _c("img", {
-                      staticClass: "svg",
-                      attrs: {
-                        src: "/backend/assets/img/svg/c-close.svg",
-                        alt: ""
-                      }
-                    })
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("label", { staticClass: "custom-checkbox" }, [
-                    _c("input", { attrs: { type: "checkbox" } }),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "checkmark" })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "star" }, [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/star.svg",
-                          alt: ""
-                        }
-                      })
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _c("div", { staticClass: "d-flex align-items-center" }, [
-                    _c("div", { staticClass: "img mr-20" }, [
-                      _c("img", {
-                        staticClass: "img-40",
-                        attrs: {
-                          src: "/backend/assets/img/avatar/m23.png",
-                          alt: ""
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "name bold" }, [
-                      _vm._v(" Mattie Daugherty ")
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [_vm._v("Jessika.Conroy@yahoo.com")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("721-969-9795 x09197")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("28")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("UX Researcher")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("December 24, 2016")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("$11588.0")]),
-                _vm._v(" "),
-                _c("td", { staticClass: "actions" }, [
-                  _c(
-                    "span",
-                    {
-                      staticClass: "contact-edit",
-                      attrs: {
-                        "data-toggle": "modal",
-                        "data-target": "#contactEditModal"
-                      }
-                    },
-                    [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/c-edit.svg",
-                          alt: ""
-                        }
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "contact-close" }, [
-                    _c("img", {
-                      staticClass: "svg",
-                      attrs: {
-                        src: "/backend/assets/img/svg/c-close.svg",
-                        alt: ""
-                      }
-                    })
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("label", { staticClass: "custom-checkbox" }, [
-                    _c("input", { attrs: { type: "checkbox" } }),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "checkmark" })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "star" }, [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/star.svg",
-                          alt: ""
-                        }
-                      })
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _c("div", { staticClass: "d-flex align-items-center" }, [
-                    _c("div", { staticClass: "img mr-20" }, [
-                      _c("img", {
-                        staticClass: "img-40",
-                        attrs: {
-                          src: "/backend/assets/img/avatar/m24.png",
-                          alt: ""
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "name bold" }, [
-                      _vm._v(" Timothy Littel ")
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [_vm._v("Nannie_Kling49@hotmail.com")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("1-251-141-2444 x275")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("28")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("UX Researcher")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("February 8, 2019")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("$14283.0")]),
-                _vm._v(" "),
-                _c("td", { staticClass: "actions" }, [
-                  _c(
-                    "span",
-                    {
-                      staticClass: "contact-edit",
-                      attrs: {
-                        "data-toggle": "modal",
-                        "data-target": "#contactEditModal"
-                      }
-                    },
-                    [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/c-edit.svg",
-                          alt: ""
-                        }
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "contact-close" }, [
-                    _c("img", {
-                      staticClass: "svg",
-                      attrs: {
-                        src: "/backend/assets/img/svg/c-close.svg",
-                        alt: ""
-                      }
-                    })
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", { staticClass: "selected" }, [
-                _c("td", [
-                  _c("label", { staticClass: "custom-checkbox" }, [
-                    _c("input", { attrs: { type: "checkbox", checked: "" } }),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "checkmark" })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "star" }, [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/star.svg",
-                          alt: ""
-                        }
-                      })
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _c("div", { staticClass: "d-flex align-items-center" }, [
-                    _c("div", { staticClass: "img mr-20" }, [
-                      _c("img", {
-                        staticClass: "img-40",
-                        attrs: {
-                          src: "/backend/assets/img/avatar/m19.png",
-                          alt: ""
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "name bold" }, [
-                      _vm._v(" Karli Braun ")
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [_vm._v("Ruthe_Gleichner@gmail.com")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("697.704.7326")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("28")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("UX Researcher")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("October 25, 2016")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("$13329.0")]),
-                _vm._v(" "),
-                _c("td", { staticClass: "actions" }, [
-                  _c(
-                    "span",
-                    {
-                      staticClass: "contact-edit",
-                      attrs: {
-                        "data-toggle": "modal",
-                        "data-target": "#contactEditModal"
-                      }
-                    },
-                    [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/c-edit.svg",
-                          alt: ""
-                        }
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "contact-close" }, [
-                    _c("img", {
-                      staticClass: "svg",
-                      attrs: {
-                        src: "/backend/assets/img/svg/c-close.svg",
-                        alt: ""
-                      }
-                    })
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", { staticClass: "selected" }, [
-                _c("td", [
-                  _c("label", { staticClass: "custom-checkbox" }, [
-                    _c("input", { attrs: { type: "checkbox", checked: "" } }),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "checkmark" })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "star" }, [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/star.svg",
-                          alt: ""
-                        }
-                      })
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _c("div", { staticClass: "d-flex align-items-center" }, [
-                    _c("div", { staticClass: "img mr-20" }, [
-                      _c("img", {
-                        staticClass: "img-40",
-                        attrs: {
-                          src: "/backend/assets/img/avatar/m16.png",
-                          alt: ""
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "name bold" }, [
-                      _vm._v(
-                        "\n                                Arden Spencer\n                            "
-                      )
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [_vm._v("Evangeline62@yahoo.com")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("(023) 708-6818 x4267")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("28")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("UX Researcher")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("June 20, 2015")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("$26253.0")]),
-                _vm._v(" "),
-                _c("td", { staticClass: "actions" }, [
-                  _c(
-                    "span",
-                    {
-                      staticClass: "contact-edit",
-                      attrs: {
-                        "data-toggle": "modal",
-                        "data-target": "#contactEditModal"
-                      }
-                    },
-                    [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/c-edit.svg",
-                          alt: ""
-                        }
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "contact-close" }, [
-                    _c("img", {
-                      staticClass: "svg",
-                      attrs: {
-                        src: "/backend/assets/img/svg/c-close.svg",
-                        alt: ""
-                      }
-                    })
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("label", { staticClass: "custom-checkbox" }, [
-                    _c("input", { attrs: { type: "checkbox" } }),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "checkmark" })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "star" }, [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/star.svg",
-                          alt: ""
-                        }
-                      })
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _c("div", { staticClass: "d-flex align-items-center" }, [
-                    _c("div", { staticClass: "img mr-20" }, [
-                      _c("img", {
-                        staticClass: "img-40",
-                        attrs: {
-                          src: "/backend/assets/img/avatar/m20.png",
-                          alt: ""
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "name bold" }, [
-                      _vm._v(" Favian Maggio DDS ")
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [_vm._v("Electa_Conroy@hotmail.com")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("1-076-628-3095 x7154")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("28")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("UX Researcher")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("October 11, 2019")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("$26253.0")]),
-                _vm._v(" "),
-                _c("td", { staticClass: "actions" }, [
-                  _c(
-                    "span",
-                    {
-                      staticClass: "contact-edit",
-                      attrs: {
-                        "data-toggle": "modal",
-                        "data-target": "#contactEditModal"
-                      }
-                    },
-                    [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/c-edit.svg",
-                          alt: ""
-                        }
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "contact-close" }, [
-                    _c("img", {
-                      staticClass: "svg",
-                      attrs: {
-                        src: "/backend/assets/img/svg/c-close.svg",
-                        alt: ""
-                      }
-                    })
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("label", { staticClass: "custom-checkbox" }, [
-                    _c("input", { attrs: { type: "checkbox" } }),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "checkmark" })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "star" }, [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/star.svg",
-                          alt: ""
-                        }
-                      })
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _c("div", { staticClass: "d-flex align-items-center" }, [
-                    _c("div", { staticClass: "img mr-20" }, [
-                      _c("img", {
-                        staticClass: "img-40",
-                        attrs: {
-                          src: "/backend/assets/img/avatar/m21.png",
-                          alt: ""
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "name bold" }, [
-                      _vm._v(" Jacey Considine ")
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [_vm._v("Garry23@yahoo.com")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("1-016-234-2482")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("28")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("UX Researcher")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("January 2, 2016")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("$6162.0")]),
-                _vm._v(" "),
-                _c("td", { staticClass: "actions" }, [
-                  _c(
-                    "span",
-                    {
-                      staticClass: "contact-edit",
-                      attrs: {
-                        "data-toggle": "modal",
-                        "data-target": "#contactEditModal"
-                      }
-                    },
-                    [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/c-edit.svg",
-                          alt: ""
-                        }
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "contact-close" }, [
-                    _c("img", {
-                      staticClass: "svg",
-                      attrs: {
-                        src: "/backend/assets/img/svg/c-close.svg",
-                        alt: ""
-                      }
-                    })
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("label", { staticClass: "custom-checkbox" }, [
-                    _c("input", { attrs: { type: "checkbox" } }),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "checkmark" })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "star" }, [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/star.svg",
-                          alt: ""
-                        }
-                      })
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _c("div", { staticClass: "d-flex align-items-center" }, [
-                    _c("div", { staticClass: "img mr-20" }, [
-                      _c("img", {
-                        staticClass: "img-40",
-                        attrs: {
-                          src: "/backend/assets/img/avatar/m22.png",
-                          alt: ""
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "name bold" }, [
-                      _vm._v(" Kolby Torphy II ")
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [_vm._v("Phyllis75@hotmail.com")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("1-345-656-4163 x373")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("28")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("UX Researcher")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("August 9, 2017")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("$4022.0")]),
-                _vm._v(" "),
-                _c("td", { staticClass: "actions" }, [
-                  _c(
-                    "span",
-                    {
-                      staticClass: "contact-edit",
-                      attrs: {
-                        "data-toggle": "modal",
-                        "data-target": "#contactEditModal"
-                      }
-                    },
-                    [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/c-edit.svg",
-                          alt: ""
-                        }
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "contact-close" }, [
-                    _c("img", {
-                      staticClass: "svg",
-                      attrs: {
-                        src: "/backend/assets/img/svg/c-close.svg",
-                        alt: ""
-                      }
-                    })
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("label", { staticClass: "custom-checkbox" }, [
-                    _c("input", { attrs: { type: "checkbox" } }),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "checkmark" })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "star" }, [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/star.svg",
-                          alt: ""
-                        }
-                      })
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _c("div", { staticClass: "d-flex align-items-center" }, [
-                    _c("div", { staticClass: "img mr-20" }, [
-                      _c("img", {
-                        staticClass: "img-40",
-                        attrs: {
-                          src: "/backend/assets/img/avatar/m23.png",
-                          alt: ""
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "name bold" }, [
-                      _vm._v(" Timothy Littel ")
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [_vm._v("Nannie_Kling49@hotmail.com")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("1-251-141-2444 x275")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("28")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("UX Researcher")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("February 8, 2019")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("$14283.0")]),
-                _vm._v(" "),
-                _c("td", { staticClass: "actions" }, [
-                  _c(
-                    "span",
-                    {
-                      staticClass: "contact-edit",
-                      attrs: {
-                        "data-toggle": "modal",
-                        "data-target": "#contactEditModal"
-                      }
-                    },
-                    [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/c-edit.svg",
-                          alt: ""
-                        }
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "contact-close" }, [
-                    _c("img", {
-                      staticClass: "svg",
-                      attrs: {
-                        src: "/backend/assets/img/svg/c-close.svg",
-                        alt: ""
-                      }
-                    })
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("label", { staticClass: "custom-checkbox" }, [
-                    _c("input", { attrs: { type: "checkbox" } }),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "checkmark" })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "star" }, [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/star.svg",
-                          alt: ""
-                        }
-                      })
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _c("div", { staticClass: "d-flex align-items-center" }, [
-                    _c("div", { staticClass: "img mr-20" }, [
-                      _c("img", {
-                        staticClass: "img-40",
-                        attrs: {
-                          src: "/backend/assets/img/avatar/m2.png",
-                          alt: ""
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "name bold" }, [
-                      _vm._v(" Birdie Thiel ")
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [_vm._v("Kenya.Stanton@yahoo.com")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("209-225-4857")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("28")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("UX Researcher")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("August 7, 2015")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("$18037.0")]),
-                _vm._v(" "),
-                _c("td", { staticClass: "actions" }, [
-                  _c(
-                    "span",
-                    {
-                      staticClass: "contact-edit",
-                      attrs: {
-                        "data-toggle": "modal",
-                        "data-target": "#contactEditModal"
-                      }
-                    },
-                    [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/c-edit.svg",
-                          alt: ""
-                        }
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "contact-close" }, [
-                    _c("img", {
-                      staticClass: "svg",
-                      attrs: {
-                        src: "/backend/assets/img/svg/c-close.svg",
-                        alt: ""
-                      }
-                    })
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("label", { staticClass: "custom-checkbox" }, [
-                    _c("input", { attrs: { type: "checkbox" } }),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "checkmark" })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "star" }, [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/star.svg",
-                          alt: ""
-                        }
-                      })
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _c("div", { staticClass: "d-flex align-items-center" }, [
-                    _c("div", { staticClass: "img mr-20" }, [
-                      _c("img", {
-                        staticClass: "img-40",
-                        attrs: {
-                          src: "/backend/assets/img/avatar/m19.png",
-                          alt: ""
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "name bold" }, [
-                      _vm._v(" Karli Braun ")
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [_vm._v("Ruthe_Gleichner@gmail.com")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("697.704.7326")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("28")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("UX Researcher")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("October 25, 2016")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("$13329.0")]),
                 _vm._v(" "),
                 _c("td", { staticClass: "actions" }, [
                   _c(
@@ -68771,7 +65946,7 @@ var staticRenderFns = [
                 _c("th", [_vm._v("Phone")]),
                 _vm._v(" "),
                 _c("th", [
-                  _vm._v("Age "),
+                  _vm._v("telephone "),
                   _c("img", {
                     staticClass: "svg",
                     attrs: {
@@ -68781,10 +65956,10 @@ var staticRenderFns = [
                   })
                 ]),
                 _vm._v(" "),
-                _c("th", [_vm._v("Post")]),
+                _c("th", [_vm._v("Role")]),
                 _vm._v(" "),
                 _c("th", [
-                  _vm._v("Joining Date "),
+                  _vm._v("Pricing "),
                   _c("img", {
                     staticClass: "svg",
                     attrs: {
@@ -68795,7 +65970,7 @@ var staticRenderFns = [
                 ]),
                 _vm._v(" "),
                 _c("th", [
-                  _vm._v("Salary "),
+                  _vm._v("Bank"),
                   _c("img", {
                     staticClass: "svg",
                     attrs: {
@@ -68862,1100 +66037,6 @@ var staticRenderFns = [
                 _c("td", [_vm._v("June 20, 2015")]),
                 _vm._v(" "),
                 _c("td", [_vm._v("$26253.0")]),
-                _vm._v(" "),
-                _c("td", { staticClass: "actions" }, [
-                  _c(
-                    "span",
-                    {
-                      staticClass: "contact-edit",
-                      attrs: {
-                        "data-toggle": "modal",
-                        "data-target": "#contactEditModal"
-                      }
-                    },
-                    [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/c-edit.svg",
-                          alt: ""
-                        }
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "contact-close" }, [
-                    _c("img", {
-                      staticClass: "svg",
-                      attrs: {
-                        src: "/backend/assets/img/svg/c-close.svg",
-                        alt: ""
-                      }
-                    })
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("label", { staticClass: "custom-checkbox" }, [
-                    _c("input", { attrs: { type: "checkbox" } }),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "checkmark" })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "star" }, [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/star.svg",
-                          alt: ""
-                        }
-                      })
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _c("div", { staticClass: "d-flex align-items-center" }, [
-                    _c("div", { staticClass: "img mr-20" }, [
-                      _c("img", {
-                        staticClass: "img-40",
-                        attrs: {
-                          src: "/backend/assets/img/avatar/m20.png",
-                          alt: ""
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "name bold" }, [
-                      _vm._v(" Favian Maggio DDS ")
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [_vm._v("Electa_Conroy@hotmail.com")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("1-076-628-3095 x7154")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("28")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("UX Researcher")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("October 11, 2019")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("$26253.0")]),
-                _vm._v(" "),
-                _c("td", { staticClass: "actions" }, [
-                  _c(
-                    "span",
-                    {
-                      staticClass: "contact-edit",
-                      attrs: {
-                        "data-toggle": "modal",
-                        "data-target": "#contactEditModal"
-                      }
-                    },
-                    [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/c-edit.svg",
-                          alt: ""
-                        }
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "contact-close" }, [
-                    _c("img", {
-                      staticClass: "svg",
-                      attrs: {
-                        src: "/backend/assets/img/svg/c-close.svg",
-                        alt: ""
-                      }
-                    })
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("label", { staticClass: "custom-checkbox" }, [
-                    _c("input", { attrs: { type: "checkbox" } }),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "checkmark" })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "star" }, [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/star.svg",
-                          alt: ""
-                        }
-                      })
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _c("div", { staticClass: "d-flex align-items-center" }, [
-                    _c("div", { staticClass: "img mr-20" }, [
-                      _c("img", {
-                        staticClass: "img-40",
-                        attrs: {
-                          src: "/backend/assets/img/avatar/m21.png",
-                          alt: ""
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "name bold" }, [
-                      _vm._v(" Jacey Considine ")
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [_vm._v("Garry23@yahoo.com")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("1-016-234-2482")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("28")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("UX Researcher")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("January 2, 2016")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("$6162.0")]),
-                _vm._v(" "),
-                _c("td", { staticClass: "actions" }, [
-                  _c(
-                    "span",
-                    {
-                      staticClass: "contact-edit",
-                      attrs: {
-                        "data-toggle": "modal",
-                        "data-target": "#contactEditModal"
-                      }
-                    },
-                    [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/c-edit.svg",
-                          alt: ""
-                        }
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "contact-close" }, [
-                    _c("img", {
-                      staticClass: "svg",
-                      attrs: {
-                        src: "/backend/assets/img/svg/c-close.svg",
-                        alt: ""
-                      }
-                    })
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("label", { staticClass: "custom-checkbox" }, [
-                    _c("input", { attrs: { type: "checkbox" } }),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "checkmark" })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "star" }, [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/star.svg",
-                          alt: ""
-                        }
-                      })
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _c("div", { staticClass: "d-flex align-items-center" }, [
-                    _c("div", { staticClass: "img mr-20" }, [
-                      _c("img", {
-                        staticClass: "img-40",
-                        attrs: {
-                          src: "/backend/assets/img/avatar/m22.png",
-                          alt: ""
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "name bold" }, [
-                      _vm._v(" Kolby Torphy II ")
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [_vm._v("Phyllis75@hotmail.com")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("1-345-656-4163 x373")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("28")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("UX Researcher")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("August 9, 2017")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("$4022.0")]),
-                _vm._v(" "),
-                _c("td", { staticClass: "actions" }, [
-                  _c(
-                    "span",
-                    {
-                      staticClass: "contact-edit",
-                      attrs: {
-                        "data-toggle": "modal",
-                        "data-target": "#contactEditModal"
-                      }
-                    },
-                    [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/c-edit.svg",
-                          alt: ""
-                        }
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "contact-close" }, [
-                    _c("img", {
-                      staticClass: "svg",
-                      attrs: {
-                        src: "/backend/assets/img/svg/c-close.svg",
-                        alt: ""
-                      }
-                    })
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("label", { staticClass: "custom-checkbox" }, [
-                    _c("input", { attrs: { type: "checkbox" } }),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "checkmark" })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "star" }, [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/star.svg",
-                          alt: ""
-                        }
-                      })
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _c("div", { staticClass: "d-flex align-items-center" }, [
-                    _c("div", { staticClass: "img mr-20" }, [
-                      _c("img", {
-                        staticClass: "img-40",
-                        attrs: {
-                          src: "/backend/assets/img/avatar/m23.png",
-                          alt: ""
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "name bold" }, [
-                      _vm._v(" Mattie Daugherty ")
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [_vm._v("Jessika.Conroy@yahoo.com")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("721-969-9795 x09197")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("28")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("UX Researcher")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("December 24, 2016")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("$11588.0")]),
-                _vm._v(" "),
-                _c("td", { staticClass: "actions" }, [
-                  _c(
-                    "span",
-                    {
-                      staticClass: "contact-edit",
-                      attrs: {
-                        "data-toggle": "modal",
-                        "data-target": "#contactEditModal"
-                      }
-                    },
-                    [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/c-edit.svg",
-                          alt: ""
-                        }
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "contact-close" }, [
-                    _c("img", {
-                      staticClass: "svg",
-                      attrs: {
-                        src: "/backend/assets/img/svg/c-close.svg",
-                        alt: ""
-                      }
-                    })
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("label", { staticClass: "custom-checkbox" }, [
-                    _c("input", { attrs: { type: "checkbox" } }),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "checkmark" })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "star" }, [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/star.svg",
-                          alt: ""
-                        }
-                      })
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _c("div", { staticClass: "d-flex align-items-center" }, [
-                    _c("div", { staticClass: "img mr-20" }, [
-                      _c("img", {
-                        staticClass: "img-40",
-                        attrs: {
-                          src: "/backend/assets/img/avatar/m24.png",
-                          alt: ""
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "name bold" }, [
-                      _vm._v(" Timothy Littel ")
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [_vm._v("Nannie_Kling49@hotmail.com")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("1-251-141-2444 x275")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("28")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("UX Researcher")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("February 8, 2019")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("$14283.0")]),
-                _vm._v(" "),
-                _c("td", { staticClass: "actions" }, [
-                  _c(
-                    "span",
-                    {
-                      staticClass: "contact-edit",
-                      attrs: {
-                        "data-toggle": "modal",
-                        "data-target": "#contactEditModal"
-                      }
-                    },
-                    [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/c-edit.svg",
-                          alt: ""
-                        }
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "contact-close" }, [
-                    _c("img", {
-                      staticClass: "svg",
-                      attrs: {
-                        src: "/backend/assets/img/svg/c-close.svg",
-                        alt: ""
-                      }
-                    })
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", { staticClass: "selected" }, [
-                _c("td", [
-                  _c("label", { staticClass: "custom-checkbox" }, [
-                    _c("input", { attrs: { type: "checkbox", checked: "" } }),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "checkmark" })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "star" }, [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/star.svg",
-                          alt: ""
-                        }
-                      })
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _c("div", { staticClass: "d-flex align-items-center" }, [
-                    _c("div", { staticClass: "img mr-20" }, [
-                      _c("img", {
-                        staticClass: "img-40",
-                        attrs: {
-                          src: "/backend/assets/img/avatar/m19.png",
-                          alt: ""
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "name bold" }, [
-                      _vm._v(" Karli Braun ")
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [_vm._v("Ruthe_Gleichner@gmail.com")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("697.704.7326")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("28")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("UX Researcher")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("October 25, 2016")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("$13329.0")]),
-                _vm._v(" "),
-                _c("td", { staticClass: "actions" }, [
-                  _c(
-                    "span",
-                    {
-                      staticClass: "contact-edit",
-                      attrs: {
-                        "data-toggle": "modal",
-                        "data-target": "#contactEditModal"
-                      }
-                    },
-                    [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/c-edit.svg",
-                          alt: ""
-                        }
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "contact-close" }, [
-                    _c("img", {
-                      staticClass: "svg",
-                      attrs: {
-                        src: "/backend/assets/img/svg/c-close.svg",
-                        alt: ""
-                      }
-                    })
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", { staticClass: "selected" }, [
-                _c("td", [
-                  _c("label", { staticClass: "custom-checkbox" }, [
-                    _c("input", { attrs: { type: "checkbox", checked: "" } }),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "checkmark" })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "star" }, [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/star.svg",
-                          alt: ""
-                        }
-                      })
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _c("div", { staticClass: "d-flex align-items-center" }, [
-                    _c("div", { staticClass: "img mr-20" }, [
-                      _c("img", {
-                        staticClass: "img-40",
-                        attrs: {
-                          src: "/backend/assets/img/avatar/m16.png",
-                          alt: ""
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "name bold" }, [
-                      _vm._v(
-                        "\n                                Arden Spencer\n                            "
-                      )
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [_vm._v("Evangeline62@yahoo.com")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("(023) 708-6818 x4267")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("28")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("UX Researcher")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("June 20, 2015")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("$26253.0")]),
-                _vm._v(" "),
-                _c("td", { staticClass: "actions" }, [
-                  _c(
-                    "span",
-                    {
-                      staticClass: "contact-edit",
-                      attrs: {
-                        "data-toggle": "modal",
-                        "data-target": "#contactEditModal"
-                      }
-                    },
-                    [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/c-edit.svg",
-                          alt: ""
-                        }
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "contact-close" }, [
-                    _c("img", {
-                      staticClass: "svg",
-                      attrs: {
-                        src: "/backend/assets/img/svg/c-close.svg",
-                        alt: ""
-                      }
-                    })
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("label", { staticClass: "custom-checkbox" }, [
-                    _c("input", { attrs: { type: "checkbox" } }),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "checkmark" })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "star" }, [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/star.svg",
-                          alt: ""
-                        }
-                      })
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _c("div", { staticClass: "d-flex align-items-center" }, [
-                    _c("div", { staticClass: "img mr-20" }, [
-                      _c("img", {
-                        staticClass: "img-40",
-                        attrs: {
-                          src: "/backend/assets/img/avatar/m20.png",
-                          alt: ""
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "name bold" }, [
-                      _vm._v(" Favian Maggio DDS ")
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [_vm._v("Electa_Conroy@hotmail.com")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("1-076-628-3095 x7154")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("28")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("UX Researcher")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("October 11, 2019")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("$26253.0")]),
-                _vm._v(" "),
-                _c("td", { staticClass: "actions" }, [
-                  _c(
-                    "span",
-                    {
-                      staticClass: "contact-edit",
-                      attrs: {
-                        "data-toggle": "modal",
-                        "data-target": "#contactEditModal"
-                      }
-                    },
-                    [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/c-edit.svg",
-                          alt: ""
-                        }
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "contact-close" }, [
-                    _c("img", {
-                      staticClass: "svg",
-                      attrs: {
-                        src: "/backend/assets/img/svg/c-close.svg",
-                        alt: ""
-                      }
-                    })
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("label", { staticClass: "custom-checkbox" }, [
-                    _c("input", { attrs: { type: "checkbox" } }),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "checkmark" })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "star" }, [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/star.svg",
-                          alt: ""
-                        }
-                      })
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _c("div", { staticClass: "d-flex align-items-center" }, [
-                    _c("div", { staticClass: "img mr-20" }, [
-                      _c("img", {
-                        staticClass: "img-40",
-                        attrs: {
-                          src: "/backend/assets/img/avatar/m21.png",
-                          alt: ""
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "name bold" }, [
-                      _vm._v(" Jacey Considine ")
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [_vm._v("Garry23@yahoo.com")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("1-016-234-2482")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("28")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("UX Researcher")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("January 2, 2016")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("$6162.0")]),
-                _vm._v(" "),
-                _c("td", { staticClass: "actions" }, [
-                  _c(
-                    "span",
-                    {
-                      staticClass: "contact-edit",
-                      attrs: {
-                        "data-toggle": "modal",
-                        "data-target": "#contactEditModal"
-                      }
-                    },
-                    [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/c-edit.svg",
-                          alt: ""
-                        }
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "contact-close" }, [
-                    _c("img", {
-                      staticClass: "svg",
-                      attrs: {
-                        src: "/backend/assets/img/svg/c-close.svg",
-                        alt: ""
-                      }
-                    })
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("label", { staticClass: "custom-checkbox" }, [
-                    _c("input", { attrs: { type: "checkbox" } }),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "checkmark" })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "star" }, [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/star.svg",
-                          alt: ""
-                        }
-                      })
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _c("div", { staticClass: "d-flex align-items-center" }, [
-                    _c("div", { staticClass: "img mr-20" }, [
-                      _c("img", {
-                        staticClass: "img-40",
-                        attrs: {
-                          src: "/backend/assets/img/avatar/m22.png",
-                          alt: ""
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "name bold" }, [
-                      _vm._v(" Kolby Torphy II ")
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [_vm._v("Phyllis75@hotmail.com")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("1-345-656-4163 x373")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("28")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("UX Researcher")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("August 9, 2017")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("$4022.0")]),
-                _vm._v(" "),
-                _c("td", { staticClass: "actions" }, [
-                  _c(
-                    "span",
-                    {
-                      staticClass: "contact-edit",
-                      attrs: {
-                        "data-toggle": "modal",
-                        "data-target": "#contactEditModal"
-                      }
-                    },
-                    [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/c-edit.svg",
-                          alt: ""
-                        }
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "contact-close" }, [
-                    _c("img", {
-                      staticClass: "svg",
-                      attrs: {
-                        src: "/backend/assets/img/svg/c-close.svg",
-                        alt: ""
-                      }
-                    })
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("label", { staticClass: "custom-checkbox" }, [
-                    _c("input", { attrs: { type: "checkbox" } }),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "checkmark" })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "star" }, [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/star.svg",
-                          alt: ""
-                        }
-                      })
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _c("div", { staticClass: "d-flex align-items-center" }, [
-                    _c("div", { staticClass: "img mr-20" }, [
-                      _c("img", {
-                        staticClass: "img-40",
-                        attrs: {
-                          src: "/backend/assets/img/avatar/m23.png",
-                          alt: ""
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "name bold" }, [
-                      _vm._v(" Timothy Littel ")
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [_vm._v("Nannie_Kling49@hotmail.com")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("1-251-141-2444 x275")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("28")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("UX Researcher")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("February 8, 2019")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("$14283.0")]),
-                _vm._v(" "),
-                _c("td", { staticClass: "actions" }, [
-                  _c(
-                    "span",
-                    {
-                      staticClass: "contact-edit",
-                      attrs: {
-                        "data-toggle": "modal",
-                        "data-target": "#contactEditModal"
-                      }
-                    },
-                    [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/c-edit.svg",
-                          alt: ""
-                        }
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "contact-close" }, [
-                    _c("img", {
-                      staticClass: "svg",
-                      attrs: {
-                        src: "/backend/assets/img/svg/c-close.svg",
-                        alt: ""
-                      }
-                    })
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("label", { staticClass: "custom-checkbox" }, [
-                    _c("input", { attrs: { type: "checkbox" } }),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "checkmark" })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "star" }, [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/star.svg",
-                          alt: ""
-                        }
-                      })
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _c("div", { staticClass: "d-flex align-items-center" }, [
-                    _c("div", { staticClass: "img mr-20" }, [
-                      _c("img", {
-                        staticClass: "img-40",
-                        attrs: {
-                          src: "/backend/assets/img/avatar/m2.png",
-                          alt: ""
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "name bold" }, [
-                      _vm._v(" Birdie Thiel ")
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [_vm._v("Kenya.Stanton@yahoo.com")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("209-225-4857")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("28")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("UX Researcher")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("August 7, 2015")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("$18037.0")]),
-                _vm._v(" "),
-                _c("td", { staticClass: "actions" }, [
-                  _c(
-                    "span",
-                    {
-                      staticClass: "contact-edit",
-                      attrs: {
-                        "data-toggle": "modal",
-                        "data-target": "#contactEditModal"
-                      }
-                    },
-                    [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/c-edit.svg",
-                          alt: ""
-                        }
-                      })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "contact-close" }, [
-                    _c("img", {
-                      staticClass: "svg",
-                      attrs: {
-                        src: "/backend/assets/img/svg/c-close.svg",
-                        alt: ""
-                      }
-                    })
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tr", [
-                _c("td", [
-                  _c("label", { staticClass: "custom-checkbox" }, [
-                    _c("input", { attrs: { type: "checkbox" } }),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "checkmark" })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "star" }, [
-                    _c("a", { attrs: { href: "#" } }, [
-                      _c("img", {
-                        staticClass: "svg",
-                        attrs: {
-                          src: "/backend/assets/img/svg/star.svg",
-                          alt: ""
-                        }
-                      })
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [
-                  _c("div", { staticClass: "d-flex align-items-center" }, [
-                    _c("div", { staticClass: "img mr-20" }, [
-                      _c("img", {
-                        staticClass: "img-40",
-                        attrs: {
-                          src: "/backend/assets/img/avatar/m19.png",
-                          alt: ""
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "name bold" }, [
-                      _vm._v(" Karli Braun ")
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("td", [_vm._v("Ruthe_Gleichner@gmail.com")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("697.704.7326")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("28")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("UX Researcher")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("October 25, 2016")]),
-                _vm._v(" "),
-                _c("td", [_vm._v("$13329.0")]),
                 _vm._v(" "),
                 _c("td", { staticClass: "actions" }, [
                   _c(

@@ -64,7 +64,7 @@
 
           <!-- Form Group -->
           <div class="form-group">
-            <label class="font-14 bold mb-2">boost_duration</label>
+            <label class="font-14 bold mb-2">Boost duration</label>
             <input
               type="Number"
               class="theme-input-style"
@@ -75,7 +75,7 @@
 
           <!-- Form Group -->
           <div class="form-group">
-            <label class="font-14 bold mb-2">upload_product</label>
+            <label class="font-14 bold mb-2">Upload product</label>
             <input
               type="Number"
               class="theme-input-style"
@@ -84,7 +84,7 @@
           </div>
           <!-- End Form Group -->
           <div class="form-group">
-            <label class="font-14 bold mb-2">upload_product_duration</label>
+            <label class="font-14 bold mb-2">Upload product duration</label>
             <input
               type="Number"
               class="theme-input-style"
