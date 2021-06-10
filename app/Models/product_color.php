@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class product_color extends Model
 {
     use HasFactory;
+    protected $fillable=['name','color_code','updated_by'];
 }

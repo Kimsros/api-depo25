@@ -15,7 +15,7 @@ class ProductVideoController extends Controller
     public function index()
     {
         try{
-
+            return response()->json(['success'=>product_video::all()]);
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }
@@ -44,7 +44,20 @@ class ProductVideoController extends Controller
     public function store(Request $request)
     {
         try{
-
+            $validation=\Validator($request->all(),[
+                'product_video_type'=>'required',
+                'url'=>'required'
+            ]);
+            if($validation->fails()){
+                return response()->json(['error'=>$validation->getMessageBag()]);
+            }
+            $data=$request->all();
+            $data['updated_by']=1;
+            if(product_video::create($data)){
+                return response()->json(['success'=>'Product video is inserted !!']);
+            }else{
+                return response()->json(['success'=>'Product video is not inserted !!']);
+            }
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }
@@ -74,7 +87,7 @@ class ProductVideoController extends Controller
     public function edit(product_video $product_video)
     {
         try{
-
+            return response()->json(['success'=>$product_video]);
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }
@@ -90,7 +103,20 @@ class ProductVideoController extends Controller
     public function update(Request $request, product_video $product_video)
     {
         try{
-
+            $validation=\Validator($request->all(),[
+                'product_video_type'=>'required',
+                'url'=>'required'
+            ]);
+            if($validation->fails()){
+                return response()->json(['error'=>$validation->getMessageBag()]);
+            }
+            $data=$request->all();
+            $data['updated_by']=1;
+            if(product_video::where('id',$product_video['id'])->update($data)){
+                return response()->json(['success'=>'Product video is updated !!']);
+            }else{
+                return response()->json(['success'=>'Product video is not updated !!']);
+            }
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }
@@ -105,7 +131,11 @@ class ProductVideoController extends Controller
     public function destroy(product_video $product_video)
     {
         try{
-
+            if(product_video::where('id',$product_video['id'])->delete()){
+                return response()->json(['success'=>'Product video is deleted !!']);
+            }else{
+                return response()->json(['success'=>'Product video is not deleted !!']);
+            }
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }

@@ -15,7 +15,7 @@ class PermissionTypeController extends Controller
     public function index()
     {
         try{
-
+            return response()->json(['success'=>permission_type::orderBy('id','DESC')->get()]);
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }
@@ -44,7 +44,19 @@ class PermissionTypeController extends Controller
     public function store(Request $request)
     {
         try{
-
+            $validation=\Validator($request->all(),[
+                'name'=>'required'
+            ]);
+            if($validation->fails()){
+                return response()->json(['error'=>$validation->getMessageBag()]);
+            }
+            $data=$request->all();
+            $data['updated_by']=1;
+            if(permission_type::create($data)){
+                return response()->json(['success'=>'Permission type is updated !!']);
+            }else{
+                return response()->json(['error'=>'Permission type is not updated !!']);
+            }
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }
@@ -74,7 +86,7 @@ class PermissionTypeController extends Controller
     public function edit(permission_type $permission_type)
     {
         try{
-
+            return response()->json(['success'=>$permission_type]);
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }
@@ -90,7 +102,19 @@ class PermissionTypeController extends Controller
     public function update(Request $request, permission_type $permission_type)
     {
         try{
-
+            $validation=\Validator($request->all(),[
+                'name'=>'required'
+            ]);
+            if($validation->fails()){
+                return response()->json(['error'=>$validation->getMessageBag()]);
+            }
+            $data=$request->all();
+            $data['updated_by']=1;
+            if(permission_type::where('id',$permission_type['id'])->update($data)){
+                return response()->json(['success'=>'Permission type is inserted !!']);
+            }else{
+                return response()->json(['error'=>'Permission is not deleted !!']);
+            }
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }
@@ -105,7 +129,11 @@ class PermissionTypeController extends Controller
     public function destroy(permission_type $permission_type)
     {
         try{
-
+            if(permission_type::where('id',$permission_type)->delete()){
+                return response()->json(['success'=>'Permision type is deleted !!']);
+            }else{
+                return response()->json(['error'=>'Permision type is not deleted !!']);
+            }
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }

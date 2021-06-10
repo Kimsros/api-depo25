@@ -15,7 +15,7 @@ class QuoteController extends Controller
     public function index()
     {
         try{
-
+            return response()->json(['success'=>quote::all()]);
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }
@@ -44,7 +44,12 @@ class QuoteController extends Controller
     public function store(Request $request)
     {
         try{
-
+            $data['updated_by']=1;
+            if(quote::create($data)){
+                return response()->json(['success'=>'Quote is inserted !!']);
+            }else{
+                return response()->json(['error'=>'Quote is not inserted !!']);
+            }
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }
@@ -74,7 +79,7 @@ class QuoteController extends Controller
     public function edit(quote $quote)
     {
         try{
-
+            return response()->json(['success'=>$quote]);
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }
@@ -90,7 +95,12 @@ class QuoteController extends Controller
     public function update(Request $request, quote $quote)
     {
         try{
-
+            $data['updated_by']=1;
+            if(quote::where('id',$quote['id'])->update($data)){
+                return response()->json(['success'=>'Quote is updated !!']);
+            }else{
+                return response()->json(['error'=>'Quote is not updated !!']);
+            }
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }
@@ -105,7 +115,11 @@ class QuoteController extends Controller
     public function destroy(quote $quote)
     {
         try{
-
+            if(quote::where('id',$quote['id'])){
+                return response()->json(['success'=>'Quote is deleted !!']);
+            }else{
+                return response()->json(['error'=>'Quote is not deleted !!']);
+            }
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }

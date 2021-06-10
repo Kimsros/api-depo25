@@ -15,7 +15,7 @@ class CartController extends Controller
     public function index()
     {
         try{
-
+            return response()->json(['success'=>cart::all()]);
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }
@@ -44,7 +44,20 @@ class CartController extends Controller
     public function store(Request $request)
     {
         try{
-
+            $validation=\Validator($request->all(),[
+                'product_id'=>'required|integer',
+                'user_id'=>'required|integer',
+            ]);
+            if($validation->fails()){
+                return response()->json(['error'=>$validation->getMessageBag()]);
+            }
+            $data=$request->all();
+            $data['updated_by']=1;
+            if(cart::create($data)){
+                return response()->json(['success'=>'Cart is inserted !!']);
+            }else{
+                return response()->json(['success'=>'Cart is not inserted !!']);
+            }
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }
@@ -74,7 +87,7 @@ class CartController extends Controller
     public function edit(cart $cart)
     {
         try{
-
+            return response()->json(['success'=>$cart]);
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }
@@ -90,7 +103,20 @@ class CartController extends Controller
     public function update(Request $request, cart $cart)
     {
         try{
-
+            $validation=\Validator($request->all(),[
+                'product_id'=>'required|integer',
+                'user_id'=>'required|integer',
+            ]);
+            if($validation->fails()){
+                return response()->json(['error'=>$validation->getMessageBag()]);
+            }
+            $data=$request->all();
+            $data['updated_by']=1;
+            if(cart::where('id',$cart['id'])->update($data)){
+                return response()->json(['success'=>'Cart is updated !!']);
+            }else{
+                return response()->json(['success'=>'Cart is not updated !!']);
+            }
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }
@@ -105,7 +131,11 @@ class CartController extends Controller
     public function destroy(cart $cart)
     {
         try{
-
+            if(cart::where('id',$cart['id'])->delete()){
+                return response()->json(['success'=>'Card is deleted !!']);
+            }else{
+                return response()->json(['success'=>'Card is not deleted !!']);
+            }
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }

@@ -16,7 +16,7 @@ class BrandController extends Controller
     public function index()
     {
         try{
-            return response()->json(['success'=>brand::where('status',1)->get()]);
+            return response()->json(['success'=>brand::orderBy('id','DESC')->get()]);
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }
