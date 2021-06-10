@@ -21,7 +21,7 @@
                         <span class="link-title">Users</span>
                      </a>
                      <ul class="nav sub-menu">
-                        <li><a href="pages/apps/email/inbox.html">Add Users</a></li>
+                        <li><a href="/admin/add_user">Add Users</a></li>
                         <li><a href="/admin/admin">Admin</a></li>
                         <li><a href="/admin/seller">Seller</a></li>
                         <li><a href="/admin/buyer">Buyer</a></li>
@@ -46,8 +46,8 @@
                         <span class="link-title">Sale</span>
                      </a>
                      <ul class="nav sub-menu">
-                        <li><a href="pages/apps/email/inbox.html">All Order</a></li>
-                        <li><a href="pages/apps/email/read.html">In House Order</a></li>
+                        <li><a href="/admin/all_order">All Order</a></li>
+                        <li><a href="/admin/house_order">In House Order</a></li>
                      </ul>
                   </li>
                   <li>
@@ -58,6 +58,16 @@
                      <ul class="nav sub-menu">
                         <li><a href="pages/apps/email/inbox.html">Add Post</a></li>
                         <li><a href="pages/apps/email/read.html">All Post</a></li>
+                     </ul>
+                  </li>
+                  <li>
+                     <a href="#">
+                        <i class="icofont-newspaper"></i>
+                        <span class="link-title">Blog Category</span>
+                     </a>
+                     <ul class="nav sub-menu">
+                        <li><a href="/admin/Add_blog">Add Blog Category</a></li>
+                        <li><a href="/admin/blog_category">All Category</a></li>
                      </ul>
                   </li>
                   <li>
@@ -86,10 +96,10 @@
                         <span class="link-title">Report</span>
                      </a>
                      <ul class="nav sub-menu">
-                        <li><a href="pages/apps/email/inbox.html">In House Product</a></li>
-                        <li><a href="pages/apps/email/read.html">Purchase</a></li>
-                        <li><a href="pages/apps/email/read.html">User Search</a></li>
-                        <li><a href="pages/apps/email/read.html">Product Wishlist</a></li>
+                        <li><a href="/admin/in_house_products">In House Product</a></li>
+                        <li><a href="/admin/purchase">Purchase</a></li>
+                        <li><a href="/admin/user_search">User Search</a></li>
+                        <li><a href="/admin/product_wishlist">Product Wishlist</a></li>
                      </ul>
                   </li>
                   <li>
