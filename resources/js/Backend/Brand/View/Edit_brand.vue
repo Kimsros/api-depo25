@@ -6,12 +6,12 @@
                 <h3 class="font-20 mb-30">Edit Categoey</h3>
                     <form @submit.prevent="updateData()">
                         <div class="form-group">
-                            <label class="font-14 bold mb-2">Add Category</label>
-                            <input type="text" class="form-control pl-1" v-model=" data.name " placeholder="Category Name">
+                            <label class="font-14 bold mb-2">Add brand</label>
+                            <input type="text" class="form-control pl-1" v-model=" data.name " placeholder="brand Name">
                         </div>
                         <div class="form-group">
-                            <label class="font-14 bold mb-2">Icon</label>
-                            <input type="text"  class="form-control pl-1" v-model="data.icon" placeholder="Icon Category" >
+                            <label class="font-14 bold mb-2">logo</label>
+                            <input type="text"  class="form-control pl-1" v-model="data.logo" placeholder="logo brand" >
                         </div>
                         <div class="form-row">
                             <div class="col-12 text-right">
@@ -30,7 +30,7 @@ export default {
         return{
             data:{
                 name:null,
-                icon:null },
+                logo:null },
                 id:null,
                 data:null,
         }
@@ -41,7 +41,7 @@ export default {
     },
     methods:{
         getData(){
-           axios.get("/api/category/"+this.id+"/edit").then(response=>{
+           axios.get("/api/brand/"+this.id+"/edit").then(response=>{
               if(response.data.success){
                this.data=response.data.success;
 
@@ -53,15 +53,15 @@ export default {
            })
         },
         updateData(){
-            if(this.data.name&&this.data.icon){
+            if(this.data.name&&this.data.logo){
                 var fd={
                     'name':this.data.name,
-                    'icon':this.data.icon
+                    'logo':this.data.logo
                 };
-                var url='/api/category/'+this.id;
+                var url='/api/brand/'+this.id;
                 axios.put(url,fd).then(response=>{
                     if(response.data.success){
-                        this.$router.push("/admin/brand");
+                        this.$router.push("/admin/list_brand");
                     }else{
                         console.log(response.data.error);
                     }
