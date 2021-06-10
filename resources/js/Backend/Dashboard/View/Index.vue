@@ -1,1219 +1,817 @@
 <template>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-xl-4 col-md-8">
+            <div class="col-xl-3 col-sm-6">
                 <!-- Card -->
                 <div class="card mb-30">
-                    <div class="card-body">
-                        <div
-                            class="d-flex align-items-center justify-content-between"
-                        >
-                            <div class="increase">
-                                <div
-                                    class="card-title d-flex align-items-end mb-2"
-                                >
-                                    <h2>86<sup>%</sup></h2>
-                                    <p class="font-14">Increased</p>
-                                </div>
-                                <h3 class="card-subtitle mb-2">
-                                    Congratulation!
-                                </h3>
-                                <p class="font-16">
-                                    You've finished all of your tasks for this
-                                    week.
-                                </p>
-                            </div>
-                            <div class="congratulation-img">
-                                <img
-                                    src="/backend/assets/img/media/congratulation-img.png"
-                                    alt=""
-                                />
-                            </div>
+                <div class="state">
+                    <div class="d-flex align-items-center flex-wrap">
+                        <div class="state-icon d-flex justify-content-center">
+                            <img src="/backend/assets/img/png-icon/tax.png" alt="">
+                        </div>
+                        <div class="state-content">
+                            <p class="font-14 mb-2">Annual Taxes EMS</p>
+                            <h2>&#36;251k</h2>
                         </div>
                     </div>
+                </div>
                 </div>
                 <!-- End Card -->
             </div>
 
-            <div class="col-xl-2 col-md-4 col-sm-6">
+            <div class="col-xl-3 col-sm-6">
                 <!-- Card -->
-                <div class="card area-chart-box mb-30">
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between">
-                            <div class="">
-                                <h4 class="mb-1">Income</h4>
-                                <p class="font-14 c3">Increase in Average</p>
-                            </div>
-                            <div class="">
-                                <h2>50<sup>%</sup></h2>
-                            </div>
+                <div class="card mb-30">
+                <div class="state">
+                    <div class="d-flex align-items-center flex-wrap">
+                        <div class="state-icon d-flex justify-content-center">
+                            <img src="/backend/assets/img/png-icon/revenue.png" alt="">
+                        </div>
+                        <div class="state-content">
+                            <p class="font-14 mb-2">Average Revenue</p>
+                            <h2>&#36;2.5M</h2>
                         </div>
                     </div>
-                    <div id="apex_area-chart" class="chart"></div>
+                </div>
                 </div>
                 <!-- End Card -->
             </div>
 
-            <div class="col-xl-2 col-md-4 col-sm-6">
+            <div class="col-xl-3 col-sm-6">
                 <!-- Card -->
-                <div class="card area-chart-box mb-30">
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between">
-                            <div class="">
-                                <h4 class="mb-1">Profit Report</h4>
-                                <p class="font-14 soft-pink">
-                                    Decrease in Average
-                                </p>
-                            </div>
-                            <div class="">
-                                <h2>15<sup>%</sup></h2>
-                            </div>
+                <div class="card mb-30">
+                <div class="state">
+                    <div class="d-flex align-items-center flex-wrap">
+                        <div class="state-icon d-flex justify-content-center">
+                            <img src="/backend/assets/img/png-icon/comission.png" alt="">
+                        </div>
+                        <div class="state-content">
+                            <p class="font-14 mb-2">Paid Comissions</p>
+                            <h2>&#36;4.8M</h2>
                         </div>
                     </div>
-                    <div id="apex_area2-chart" class="chart"></div>
+                </div>
                 </div>
                 <!-- End Card -->
             </div>
 
-            <div class="col-xl-2 col-md-4 col-sm-6">
+            <div class="col-xl-3 col-sm-6">
                 <!-- Card -->
-                <div class="card area-chart-box mb-30">
-                    <div class="card-body">
+                <div class="card mb-30">
+                <div class="state">
+                    <div class="d-flex align-items-center flex-wrap">
+                        <div class="state-icon d-flex justify-content-center">
+                            <img src="/backend/assets/img/png-icon/user.png" alt="">
+                        </div>
+                        <div class="state-content">
+                            <p class="font-14 mb-2">Revenue Margin</p>
+                            <h2>&#36;46%</h2>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <!-- End Card -->
+            </div>
+
+            <div class="col-xl-8 col-12">
+                <!-- Card -->
+                <div class="card mb-30">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-start align-items-sm-center media">
+                        <div class="d-flex justify-content-start justify-content-sm-between align-items-start align-items-sm-center flex-column flex-sm-row mb-sm-n3  media-body">
+                            <div class="title-content mb-4 mb-sm-0">
+                            <h4 class="mb-2">Sale Reports</h4>
+                            <p>50% Average</p>
+                            </div>
+
+                            <!-- List Button -->
+                            <ul class="list-inline list-button m-0">
+                            <li class="active">Monthly</li>
+                            <li>Daily</li>
+                            <li>Yearly</li>
+                            </ul>
+                            <!-- End List Button -->
+                        </div>
+
+                        <!-- Dropdown Button -->
+                        <div class="dropdown-button">
+                            <a href="#" data-toggle="dropdown">
+                            <div class="menu-icon style--two mt-0 mt-md-1 mr-0 d-flex justify-content-start justify-content-sm-end">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                            <a href="#">Report</a>
+                            <a href="#">FAQ</a>
+                            <a href="#">Charts</a>
+                            <a href="#">Chat</a>
+                            <a href="#">Settings</a>
+                            </div>
+                        </div>
+                        <!-- End Dropdown Button -->
+                    </div>
+                </div>
+                <div id="apex_line4-chart" class="chart"></div>
+                </div>
+                <!-- End Card -->
+            </div>
+
+            <div class="col-xl-4 col-lg-4 col-md-12">
+                <!-- Card -->
+                <div class="card mb-30">
+                <div class="card-body mb-3 mb-xl-0">
+                    <div class="d-flex justify-content-between">
+                        <div class="title-content">
+                            <h4 class="mb-2">Top Countries</h4>
+                        </div>
+
+                        <!-- Dropdown Button -->
+                        <div class="dropdown-button">
+                            <a href="#" class="d-flex" data-toggle="dropdown">
+                            <div class="menu-icon style--two mr-0 d-flex">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                            <a href="#">Daily</a>
+                            <a href="#">Sort By</a>
+                            <a href="#">Monthly</a>
+                            </div>
+                        </div>
+                        <!-- End Dropdown Button -->
+                    </div>
+                </div>
+                <div id="apex_pie-chart" class="chart"></div>
+                </div>
+                <!-- End Card -->
+            </div>
+
+            <div class="col-xl-2 col-lg-4 col-sm-6">
+                <!-- Card -->
+                <div class="card mb-30 progress_6">
+                <div class="card-body">
+                    <div class="progress-title">
+                        <h4 class="mb-1">sales</h4>
+                        <p>Vexed if style allow he there.</p>
+                    </div>
+
+                    <div class="ProgressBar-wrap position-relative mb-5">
+                        <div class="ProgressBar ProgressBar_6" data-progress="35">
+                            <svg class="ProgressBar-contentCircle" viewBox="0 0 200 200">
+                            <!-- on défini le l'angle et le centre de rotation du cercle -->
+                            <circle transform="rotate(135, 100, 100)" class="ProgressBar-background" cx="100" cy="100" r="8" />
+                            <circle transform="rotate(135, 100, 100)" class="ProgressBar-circle" cx="100" cy="100" r="85" />
+                            </svg>
+                            <span class="ProgressBar-percentage--text">Increase</span>
+                            <span class="ProgressBar-percentage ProgressBar-percentage--count"></span>
+                        </div>
+                    </div>
+                    
+
+                    <div class="process-bar-wrapper">
+                        <span class="process-name">Sales Grow</span>
+                        <span class="process-width">35%</span>
+                        <span class="process-bar" data-process-width="35"></span>
+                    </div>
+                    
+                    <div class="process-bar-wrapper">
+                        <span class="process-name">Sales Grow</span>
+                        <span class="process-width">68%</span>
+                        <span class="process-bar style--two" data-process-width="68"></span>
+                    </div>
+                </div>
+                </div>
+                <!-- End Card -->
+            </div>
+
+            <div class="col-xl-2 col-lg-4 col-sm-6">
+                <!-- Card -->
+                <div class="card mb-30 progress_7">
+                <div class="card-body">
+                    <div class="progress-title">
+                        <h4 class="mb-1">Company Growth</h4>
+                        <p>Miea there style allow he now</p>
+                    </div>
+
+                    <div class="ProgressBar-wrap position-relative mb-5">
+                        <div class="ProgressBar ProgressBar_7" data-progress="70">
+                            <svg class="ProgressBar-contentCircle" viewBox="0 0 200 200">
+                            <!-- on défini le l'angle et le centre de rotation du cercle -->
+                            <circle transform="rotate(135, 100, 100)" class="ProgressBar-background" cx="100" cy="100" r="8" />
+                            <circle transform="rotate(135, 100, 100)" class="ProgressBar-circle" cx="100" cy="100" r="85" />
+                            </svg>
+                            <span class="ProgressBar-percentage--text">
+                            Increase
+                            </span>
+                            <span class="ProgressBar-percentage ProgressBar-percentage--count"></span>
+                        </div>
+                    </div>
+                    
+
+                    <div class="process-bar-wrapper">
+                        <span class="process-name">Sales Grow</span>
+                        <span class="process-width">45%</span>
+                        <span class="process-bar style--three" data-process-width="45"></span>
+                    </div>
+                    
+                    <div class="process-bar-wrapper">
+                        <span class="process-name">Sales Grow</span>
+                        <span class="process-width">23%</span>
+                        <span class="process-bar style--four" data-process-width="23"></span>
+                    </div>
+                </div>
+                </div>
+                <!-- End Card -->
+            </div>
+
+            <div class="col-xl-4 col-lg-6">
+                <!-- Card -->
+                <div class="card mb-30">
+                <div class="card-body">
+                    <div class="d-flex align-items-start align-items-sm-end justify-content-between mb-30">
                         <div class="">
-                            <h4 class="mb-1">Impression</h4>
-                            <p class="font-14 text_color">
-                                Hover to see detail
-                            </p>
+                            <h4 class="mb-1">Last Month Sale</h4>
+                            <p class="font-14">50% increase in a average</p>
+                        </div>
+
+                        <div class="dropdown-button">
+                            <a href="#" class="d-flex align-items-center" data-toggle="dropdown">
+                            <div class="menu-icon style--two mr-0">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                            <a href="#">Daily</a>
+                            <a href="#">Sort By</a>
+                            <a href="#">Monthly</a>
+                            </div>
                         </div>
                     </div>
-                    <div id="apex_area3-chart" class="chart"></div>
+
+                    <div id="apex_line5-chart" class="chart"></div>
+                </div>
                 </div>
                 <!-- End Card -->
             </div>
 
-            <div class="col-xl-2 col-md-4 col-sm-6">
+            <div class="col-xl-4 col-lg-6">
                 <!-- Card -->
-                <div class="card area-chart-box mb-30">
-                    <div class="card-body">
+                <div class="card mb-30">
+                <div class="card-body">
+                    <div class="d-flex align-items-start align-items-sm-end justify-content-between mb-3">
                         <div class="">
-                            <h4 class="mb-1">Activity</h4>
-                            <p class="font-14 text_color">
-                                Hover to see detail
-                            </p>
+                            <h4 class="mb-1">Top Selling  Products</h4>
+                            <p class="font-14"> Tell use paid law ever yet new. Meant to learn of vexed he there.</p>
+                        </div>
+
+                        <div class="dropdown-button">
+                            <a href="#" class="d-flex align-items-center" data-toggle="dropdown">
+                            <div class="menu-icon style--two mr-0">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                            <a href="#">Daily</a>
+                            <a href="#">Sort By</a>
+                            <a href="#">Monthly</a>
+                            </div>
                         </div>
                     </div>
-                    <div id="apex_area4-chart" class="chart"></div>
+
+                    <!-- Product List -->
+                    <div class="product-list">
+                        <!-- Product List Item -->
+                        <div class="product-list-item mb-20 d-flex justify-content-between align-items-center">
+                            <div class="d-flex align-items-center">
+                            <div class="img mr-3">
+                                <img src="/backend/assets/img/product/product1.png" alt="">
+                            </div>
+                            <div class="content">
+                                <p class="mb-1">Fastrack Watches</p>
+                                <span class="c3 bold font-14">$245.65</span>
+                            </div>
+                            </div>
+                            <p class="font-14">26584 Selles</p>
+                        </div>
+                        <!-- End Product List Item -->
+
+                        <!-- Product List Item -->
+                        <div class="product-list-item mb-20 d-flex justify-content-between align-items-center">
+                            <div class="d-flex align-items-center">
+                            <div class="img mr-3">
+                                <img src="/backend/assets/img/product/product2.png" alt="">
+                            </div>
+                            <div class="content">
+                                <p class="mb-1">Fastrack Watches 2654</p>
+                                <span class="c3 bold font-14">$245.65</span>
+                            </div>
+                            </div>
+                            <p class="font-14">26584 Selles</p>
+                        </div>
+                        <!-- End Product List Item -->
+
+                        <!-- Product List Item -->
+                        <div class="product-list-item mb-20 d-flex justify-content-between align-items-center">
+                            <div class="d-flex align-items-center">
+                            <div class="img mr-3">
+                                <img src="/backend/assets/img/product/product3.png" alt="">
+                            </div>
+                            <div class="content">
+                                <p class="mb-1">Fastrack Watches 2654</p>
+                                <span class="c3 bold font-14">$245.65</span>
+                            </div>
+                            </div>
+                            <p class="font-14">26584 Selles</p>
+                        </div>
+                        <!-- End Product List Item -->
+
+                        <!-- Product List Item -->
+                        <div class="product-list-item d-flex justify-content-between align-items-center">
+                            <div class="d-flex align-items-center">
+                            <div class="img mr-3">
+                                <img src="/backend/assets/img/product/product4.png" alt="">
+                            </div>
+                            <div class="content">
+                                <p class="mb-1">Fastrack Watches 2654</p>
+                                <span class="c3 bold font-14">$245.65</span>
+                            </div>
+                            </div>
+                            <p class="font-14">26584 Selles</p>
+                        </div>
+                        <!-- End Product List Item -->
+                    </div>
+                    <!-- End Product List -->
+                </div>
                 </div>
                 <!-- End Card -->
             </div>
-        </div>
 
-        <div class="row">
             <div class="col-xl-6 col-lg-12">
                 <div class="row">
-                    <div class="col-12">
-                        <!-- Card -->
-                        <div class="card mb-30">
-                            <div
-                                class="card-body d-flex justify-content-between mb-n72"
-                            >
-                                <div class="position-relative index-9">
-                                    <h4 class="mb-1">Website Analytics</h4>
-                                    <p class="font-14">
-                                        Check out each column for more details
-                                    </p>
-                                </div>
-
-                                <!-- Dropdown Button -->
-                                <div class="dropdown-button">
-                                    <a
-                                        href="#"
-                                        class="d-flex align-items-center"
-                                        data-toggle="dropdown"
-                                    >
-                                        <div class="menu-icon style--two mr-0">
-                                            <span></span>
-                                            <span></span>
-                                            <span></span>
-                                        </div>
-                                    </a>
-                                    <div
-                                        class="dropdown-menu dropdown-menu-right"
-                                    >
-                                        <a href="#">Daily</a>
-                                        <a href="#">Sort By</a>
-                                        <a href="#">Monthly</a>
-                                    </div>
-                                </div>
-                                <!-- End Dropdown Button -->
+                <div class="col-sm-6">
+                    <!-- Card -->
+                    <div class="card mb-30">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-30">
+                            <div class="mr-3 square-75">
+                                <img src="/backend/assets/img/avatar/top-seller.png" class="radius" alt="">
                             </div>
-                            <div id="apex_column-chart" class="chart"></div>
-                        </div>
-                        <!-- End Card -->
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                        <!-- Card -->
-                        <div class="card mb-30 progress_1">
-                            <div class="card-body">
-                                <h4 class="progress-title">Registrations</h4>
-
-                                <div
-                                    class="ProgressBar-wrap position-relative mb-4"
-                                >
-                                    <div
-                                        class="ProgressBar ProgressBar_1"
-                                        data-progress="75"
-                                    >
-                                        <svg
-                                            class="ProgressBar-contentCircle"
-                                            viewBox="0 0 200 200"
-                                        >
-                                            <!-- on défini le l'angle et le centre de rotation du cercle -->
-                                            <circle
-                                                transform="rotate(135, 100, 100)"
-                                                class="ProgressBar-background"
-                                                cx="100"
-                                                cy="100"
-                                                r="8"
-                                            />
-                                            <circle
-                                                transform="rotate(135, 100, 100)"
-                                                class="ProgressBar-circle"
-                                                cx="100"
-                                                cy="100"
-                                                r="85"
-                                            />
-                                        </svg>
-                                        <span
-                                            class="ProgressBar-percentage--text"
-                                        >
-                                            Increase
-                                        </span>
-                                        <span
-                                            class="ProgressBar-percentage ProgressBar-percentage--count"
-                                        ></span>
-                                    </div>
-                                </div>
-
-                                <div
-                                    class="d-flex flex-wrap mb-2 progress-info"
-                                >
-                                    <div>Users</div>
-                                    <div>
-                                        <img
-                                            src="/backend/assets/img/svg/caret-up.svg"
-                                            alt=""
-                                            class="svg"
-                                        />
-                                        2.6k
-                                    </div>
-                                    <div>
-                                        <img
-                                            src="/backend/assets/img/svg/caret-down.svg"
-                                            alt=""
-                                            class="svg"
-                                        />568
-                                    </div>
-                                </div>
-
-                                <div class="d-flex flex-wrap progress-info">
-                                    <div>Disabled</div>
-                                    <div>
-                                        <img
-                                            src="/backend/assets/img/svg/caret-up.svg"
-                                            alt=""
-                                            class="svg"
-                                        />1.26k
-                                    </div>
-                                    <div>
-                                        <img
-                                            src="/backend/assets/img/svg/caret-down.svg"
-                                            alt=""
-                                            class="svg"
-                                        />25
-                                    </div>
-                                </div>
+                            <div class="">
+                                <h4 class="mb-1">Ransel Mendalka</h4>
+                                <p class="font-14">Top Sellers</p>
                             </div>
-                        </div>
-                        <!-- End Card -->
-                    </div>
-
-                    <div class="col-md-4 col-sm-6">
-                        <!-- Card -->
-                        <div class="card mb-30 progress_2">
-                            <div class="card-body">
-                                <h4 class="progress-title">Sales</h4>
-
-                                <div
-                                    class="ProgressBar-wrap position-relative mb-4"
-                                >
-                                    <div
-                                        class="ProgressBar ProgressBar_2"
-                                        data-progress="35"
-                                    >
-                                        <svg
-                                            class="ProgressBar-contentCircle"
-                                            viewBox="0 0 200 200"
-                                        >
-                                            <!-- on défini le l'angle et le centre de rotation du cercle -->
-                                            <circle
-                                                transform="rotate(135, 100, 100)"
-                                                class="ProgressBar-background"
-                                                cx="100"
-                                                cy="100"
-                                                r="85"
-                                            />
-                                            <circle
-                                                transform="rotate(135, 100, 100)"
-                                                class="ProgressBar-circle"
-                                                cx="100"
-                                                cy="100"
-                                                r="85"
-                                            />
-                                        </svg>
-                                        <span
-                                            class="ProgressBar-percentage--text"
-                                            >Increase</span
-                                        >
-                                        <span
-                                            class="ProgressBar-percentage ProgressBar-percentage--count"
-                                        ></span>
-                                    </div>
-                                </div>
-
-                                <div
-                                    class="d-flex flex-wrap mb-2 progress-info"
-                                >
-                                    <div>Net Profit</div>
-                                    <div>
-                                        <img
-                                            src="/backend/assets/img/svg/caret-up.svg"
-                                            alt=""
-                                            class="svg"
-                                        />
-                                        268k
-                                    </div>
-                                    <div>
-                                        <img
-                                            src="/backend/assets/img/svg/caret-down.svg"
-                                            alt=""
-                                            class="svg"
-                                        />89k
-                                    </div>
-                                </div>
-
-                                <div class="d-flex flex-wrap progress-info">
-                                    <div>Expenses</div>
-                                    <div>
-                                        <img
-                                            src="/backend/assets/img/svg/caret-up.svg"
-                                            alt=""
-                                            class="svg"
-                                        />1.26k
-                                    </div>
-                                    <div>
-                                        <img
-                                            src="/backend/assets/img/svg/caret-down.svg"
-                                            alt=""
-                                            class="svg"
-                                        />1.5k
-                                    </div>
-                                </div>
                             </div>
-                        </div>
-                        <!-- End Card -->
-                    </div>
 
-                    <div class="col-md-4 col-sm-6">
-                        <!-- Card -->
-                        <div class="card mb-30 progress_3 mr-0">
-                            <div class="card-body">
-                                <h4 class="progress-title">Company Growth</h4>
-
-                                <div
-                                    class="ProgressBar-wrap position-relative mb-4"
-                                >
-                                    <div
-                                        class="ProgressBar ProgressBar_3"
-                                        data-progress="70"
-                                    >
-                                        <svg
-                                            class="ProgressBar-contentCircle"
-                                            viewBox="0 0 200 200"
-                                        >
-                                            <!-- on défini le l'angle et le centre de rotation du cercle -->
-                                            <circle
-                                                transform="rotate(135, 100, 100)"
-                                                class="ProgressBar-background"
-                                                cx="100"
-                                                cy="100"
-                                                r="85"
-                                                stroke-width="20"
-                                            />
-                                            <circle
-                                                transform="rotate(135, 100, 100)"
-                                                class="ProgressBar-circle"
-                                                cx="100"
-                                                cy="100"
-                                                r="85"
-                                                stroke-width="20"
-                                            />
-                                        </svg>
-                                        <span
-                                            class="ProgressBar-percentage--text"
-                                        >
-                                            Increase
-                                        </span>
-                                        <span
-                                            class="ProgressBar-percentage ProgressBar-percentage--count"
-                                        ></span>
-                                    </div>
-                                </div>
-
-                                <div
-                                    class="d-flex flex-wrap mb-2 progress-info"
-                                >
-                                    <div>Employee</div>
-                                    <div>
-                                        <img
-                                            src="/backend/assets/img/svg/caret-up.svg"
-                                            alt=""
-                                            class="svg"
-                                        />15
-                                    </div>
-                                    <div>
-                                        <img
-                                            src="/backend/assets/img/svg/caret-down.svg"
-                                            alt=""
-                                            class="svg"
-                                        />3
-                                    </div>
-                                </div>
-
-                                <div class="d-flex flex-wrap progress-info">
-                                    <div>Production</div>
-                                    <div>
-                                        <img
-                                            src="/backend/assets/img/svg/caret-up.svg"
-                                            alt=""
-                                            class="svg"
-                                        />1.26k
-                                    </div>
-                                    <div>
-                                        <img
-                                            src="/backend/assets/img/svg/caret-down.svg"
-                                            alt=""
-                                            class="svg"
-                                        />1.2k
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Card -->
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-6 col-lg-12">
-                <div class="row">
-                    <div class="col-sm-6">
-                        <!-- Card -->
-                        <div class="card mb-30">
-                            <div class="card-body">
-                                <div id="apex_line-chart" class="chart"></div>
-
-                                <div
-                                    class="d-flex align-items-end justify-content-between mt-4"
-                                >
-                                    <div class="">
-                                        <h4 class="mb-1">Website Analytics</h4>
-                                        <p class="font-14">
-                                            Check out each column for more
-                                            details
-                                        </p>
-                                    </div>
-
-                                    <div class="dropdown-button">
-                                        <a
-                                            href="#"
-                                            class="d-flex align-items-center"
-                                            data-toggle="dropdown"
-                                        >
-                                            <div
-                                                class="menu-icon justify-content-end pb-1 style--two mr-0"
-                                            >
-                                                <span></span>
-                                                <span></span>
-                                                <span></span>
-                                            </div>
-                                        </a>
-                                        <div
-                                            class="dropdown-menu dropdown-menu-right"
-                                        >
-                                            <a href="#">Daily</a>
-                                            <a href="#">Sort By</a>
-                                            <a href="#">Monthly</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Card -->
-                    </div>
-
-                    <div class="col-sm-6">
-                        <!-- Card -->
-                        <div class="card mb-30">
-                            <div class="card-body">
-                                <div id="apex_line2-chart" class="chart"></div>
-
-                                <div
-                                    class="d-flex align-items-end justify-content-between mt-4"
-                                >
-                                    <div class="">
-                                        <h4 class="mb-1">Company Growth</h4>
-                                        <p class="font-14">
-                                            Company is growing 20% in average
-                                        </p>
-                                    </div>
-
-                                    <div class="dropdown-button">
-                                        <a
-                                            href="#"
-                                            class="d-flex align-items-center"
-                                            data-toggle="dropdown"
-                                        >
-                                            <div
-                                                class="menu-icon justify-content-end pb-1 style--two mr-0"
-                                            >
-                                                <span></span>
-                                                <span></span>
-                                                <span></span>
-                                            </div>
-                                        </a>
-                                        <div
-                                            class="dropdown-menu dropdown-menu-right"
-                                        >
-                                            <a href="#">Daily</a>
-                                            <a href="#">Sort By</a>
-                                            <a href="#">Monthly</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Card -->
-                    </div>
-
-                    <div class="col-12">
-                        <!-- Card -->
-                        <div class="card todo-list mb-30">
-                            <div class="card-body p-0">
-                                <!-- Todo Single -->
-                                <div class="single-row border-bottom pt-3 pb-2">
-                                    <div
-                                        class="d-flex justify-content-between align-items-start mb-2"
-                                    >
-                                        <div class="">
-                                            <h4 class="card-title">
-                                                Today To Do List
-                                            </h4>
-                                            <p class="card-text font-14 bold">
-                                                Saturday, <br />
-                                                12 October 2019
-                                            </p>
-                                        </div>
-
-                                        <div class="d-flex align-items-center">
-                                            <a
-                                                href="pages/apps/todolist/add-new.html"
-                                                class="btn-circle"
-                                            >
-                                                <img
-                                                    src="/backend/assets/img/svg/plus_white.svg"
-                                                    alt=""
-                                                    class="svg"
-                                                />
-                                            </a>
-
-                                            <div class="dropdown-button">
-                                                <a
-                                                    href="#"
-                                                    class="d-flex align-items-center"
-                                                    data-toggle="dropdown"
-                                                >
-                                                    <div
-                                                        class="menu-icon style--two justify-content-center mr-0"
-                                                    >
-                                                        <span></span>
-                                                        <span></span>
-                                                        <span></span>
-                                                    </div>
-                                                </a>
-                                                <div
-                                                    class="dropdown-menu dropdown-menu-right"
-                                                >
-                                                    <a href="#">Daily</a>
-                                                    <a href="#">Sort By</a>
-                                                    <a href="#">Monthly</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- End Todo Single -->
-
-                                <!-- Todo Single -->
-                                <div class="single-row border-bottom pt-3 pb-3">
-                                    <div
-                                        class="d-flex justify-content-between align-items-center"
-                                    >
-                                        <div class="d-flex position-relative">
-                                            <!-- Custom Checkbox -->
-                                            <label class="custom-checkbox">
-                                                <input
-                                                    type="checkbox"
-                                                    checked
-                                                />
-                                                <span class="checkmark"></span>
-                                            </label>
-                                            <!-- End Custom Checkbox -->
-
-                                            <!-- Todo Text -->
-                                            <div class="todo-text line-through">
-                                                <p class="card-text mb-1">
-                                                    For detracty charmed add
-                                                    talking age. Shy resolution
-                                                    instrument unreserved man
-                                                    few.
-                                                </p>
-                                                <p
-                                                    class="text-warning font-12 mb-0"
-                                                >
-                                                    Urgent Not Important
-                                                </p>
-                                            </div>
-                                            <!-- End Todo Text -->
-                                        </div>
-
-                                        <div class="d-flex">
-                                            <!-- Assign To -->
-                                            <div class="assign_to">
-                                                <img
-                                                    src="/backend/assets/img/svg/Info.svg"
-                                                    alt=""
-                                                    class="svg mr-2 mb-1"
-                                                />
-                                                <div class="assign-content">
-                                                    <div
-                                                        class="font-12 text-warning"
-                                                    >
-                                                        Back-End
-                                                    </div>
-                                                    <img
-                                                        src="/backend/assets/img/avatar/info-avatar.png"
-                                                        alt=""
-                                                        class="assign-avatar"
-                                                    />
-                                                </div>
-                                            </div>
-                                            <!-- End Assign To -->
-
-                                            <!-- Drag Icon -->
-                                            <img
-                                                src="/backend/assets/img/svg/dragicon.svg"
-                                                alt=""
-                                                class="svg"
-                                            />
-                                            <!-- End Drag Icon -->
-
-                                            <!-- Dropdown Button -->
-                                            <div class="dropdown-button">
-                                                <a
-                                                    href="#"
-                                                    class="d-flex align-items-center"
-                                                    data-toggle="dropdown"
-                                                >
-                                                    <div
-                                                        class="menu-icon style--two w-14 mr-0"
-                                                    >
-                                                        <span></span>
-                                                        <span></span>
-                                                        <span></span>
-                                                    </div>
-                                                </a>
-                                                <div
-                                                    class="dropdown-menu dropdown-menu-right"
-                                                >
-                                                    <a href="#">Daily</a>
-                                                    <a href="#">Sort By</a>
-                                                    <a href="#">Monthly</a>
-                                                </div>
-                                            </div>
-                                            <!-- End Dropdown Button -->
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- End Todo Single -->
-
-                                <!-- Todo Single -->
-                                <div class="single-row border-bottom pt-3 pb-3">
-                                    <div
-                                        class="d-flex justify-content-between align-items-center"
-                                    >
-                                        <div class="d-flex position-relative">
-                                            <!-- Custom Checkbox -->
-                                            <label class="custom-checkbox">
-                                                <input type="checkbox" />
-                                                <span class="checkmark"></span>
-                                            </label>
-                                            <!-- End Custom Checkbox -->
-
-                                            <!-- Todo Text -->
-                                            <div class="todo-text">
-                                                <p class="card-text mb-1">
-                                                    Way sentiments two
-                                                    indulgence uncommonly own.
-                                                </p>
-                                                <p
-                                                    class="text-danger font-12 mb-0"
-                                                >
-                                                    Urgent And Important
-                                                </p>
-                                            </div>
-                                            <!-- End Todo Text -->
-                                        </div>
-
-                                        <div class="d-flex">
-                                            <!-- Assign To -->
-                                            <div class="assign_to">
-                                                <img
-                                                    src="/backend/assets/img/svg/Info.svg"
-                                                    alt=""
-                                                    class="svg mr-2 mb-1"
-                                                />
-                                                <div class="assign-content">
-                                                    <div
-                                                        class="font-12 text-warning"
-                                                    >
-                                                        Back-End
-                                                    </div>
-                                                    <img
-                                                        src="/backend/assets/img/avatar/info-avatar.png"
-                                                        alt=""
-                                                        class="assign-avatar"
-                                                    />
-                                                </div>
-                                            </div>
-                                            <!-- End Assign To -->
-
-                                            <!-- Drag Icon -->
-                                            <img
-                                                src="/backend/assets/img/svg/dragicon.svg"
-                                                alt=""
-                                                class="svg"
-                                            />
-                                            <!-- End Drag Icon -->
-
-                                            <!-- Dropdown Button -->
-                                            <div class="dropdown-button">
-                                                <a
-                                                    href="#"
-                                                    class="d-flex align-items-center"
-                                                    data-toggle="dropdown"
-                                                >
-                                                    <div
-                                                        class="menu-icon style--two w-14 mr-0"
-                                                    >
-                                                        <span></span>
-                                                        <span></span>
-                                                        <span></span>
-                                                    </div>
-                                                </a>
-                                                <div
-                                                    class="dropdown-menu dropdown-menu-right"
-                                                >
-                                                    <a href="#">Daily</a>
-                                                    <a href="#">Sort By</a>
-                                                    <a href="#">Monthly</a>
-                                                </div>
-                                            </div>
-                                            <!-- End Dropdown Button -->
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- End Todo Single -->
-
-                                <!-- Todo Single -->
-                                <div class="single-row border-bottom pt-3 pb-3">
-                                    <div
-                                        class="d-flex justify-content-between align-items-center"
-                                    >
-                                        <div class="d-flex position-relative">
-                                            <!-- Custom Checkbox -->
-                                            <label class="custom-checkbox">
-                                                <input type="checkbox" />
-                                                <span class="checkmark"></span>
-                                            </label>
-                                            <!-- End Custom Checkbox -->
-
-                                            <!-- Todo Text -->
-                                            <div class="todo-text">
-                                                <p class="card-text mb-1">
-                                                    Donec dapibus mauris id odio
-                                                    ornare tempus amet.
-                                                </p>
-                                                <p
-                                                    class="text-success font-12 mb-0"
-                                                >
-                                                    Not Urgent Or Important
-                                                </p>
-                                            </div>
-                                            <!-- End Todo Text -->
-                                        </div>
-
-                                        <div class="d-flex">
-                                            <!-- Assign To -->
-                                            <div class="assign_to">
-                                                <img
-                                                    src="/backend/assets/img/svg/Info.svg"
-                                                    alt=""
-                                                    class="svg mr-2 mb-1"
-                                                />
-                                                <div class="assign-content">
-                                                    <div
-                                                        class="font-12 text-warning"
-                                                    >
-                                                        Back-End
-                                                    </div>
-                                                    <img
-                                                        src="/backend/assets/img/avatar/info-avatar.png"
-                                                        alt=""
-                                                        class="assign-avatar"
-                                                    />
-                                                </div>
-                                            </div>
-                                            <!-- End Assign To -->
-
-                                            <!-- Drag Icon -->
-                                            <img
-                                                src="/backend/assets/img/svg/dragicon.svg"
-                                                alt=""
-                                                class="svg"
-                                            />
-                                            <!-- End Drag Icon -->
-
-                                            <!-- Dropdown Button -->
-                                            <div class="dropdown-button">
-                                                <a
-                                                    href="#"
-                                                    class="d-flex align-items-center"
-                                                    data-toggle="dropdown"
-                                                >
-                                                    <div
-                                                        class="menu-icon style--two w-14 mr-0"
-                                                    >
-                                                        <span></span>
-                                                        <span></span>
-                                                        <span></span>
-                                                    </div>
-                                                </a>
-                                                <div
-                                                    class="dropdown-menu dropdown-menu-right"
-                                                >
-                                                    <a href="#">Daily</a>
-                                                    <a href="#">Sort By</a>
-                                                    <a href="#">Monthly</a>
-                                                </div>
-                                            </div>
-                                            <!-- End Dropdown Button -->
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- End Todo Single -->
-
-                                <!-- Todo Single -->
-                                <div class="single-row border-bottom pt-3 pb-3">
-                                    <div
-                                        class="d-flex justify-content-between align-items-center"
-                                    >
-                                        <div class="d-flex position-relative">
-                                            <!-- Custom Checkbox -->
-                                            <label class="custom-checkbox">
-                                                <input type="checkbox" />
-                                                <span class="checkmark"></span>
-                                            </label>
-                                            <!-- End Custom Checkbox -->
-
-                                            <!-- Todo Text -->
-                                            <div class="todo-text">
-                                                <p class="card-text mb-1">
-                                                    For detracty charmed add
-                                                    talking age. Shy resolution
-                                                    instrument unreserved man
-                                                    few.
-                                                </p>
-                                                <p
-                                                    class="text-info font-12 mb-0"
-                                                >
-                                                    Urgent Not Important
-                                                </p>
-                                            </div>
-                                            <!-- End Todo Text -->
-                                        </div>
-
-                                        <div class="d-flex">
-                                            <!-- Drag Icon -->
-                                            <img
-                                                src="/backend/assets/img/svg/dragicon.svg"
-                                                alt=""
-                                                class="svg mr-2"
-                                            />
-                                            <!-- End Drag Icon -->
-                                            <!-- Assign To -->
-                                            <div class="assign_to">
-                                                <img
-                                                    src="/backend/assets/img/svg/Info.svg"
-                                                    alt=""
-                                                    class="svg mb-1"
-                                                />
-                                            </div>
-                                            <!-- End Assign To -->
-
-                                            <!-- Dropdown Button -->
-                                            <div class="dropdown-button">
-                                                <a
-                                                    href="#"
-                                                    class="d-flex align-items-center"
-                                                    data-toggle="dropdown"
-                                                >
-                                                    <div
-                                                        class="menu-icon style--two w-14 mr-0"
-                                                    >
-                                                        <span></span>
-                                                        <span></span>
-                                                        <span></span>
-                                                    </div>
-                                                </a>
-                                                <div
-                                                    class="dropdown-menu dropdown-menu-right"
-                                                >
-                                                    <a href="#">Daily</a>
-                                                    <a href="#">Sort By</a>
-                                                    <a href="#">Monthly</a>
-                                                </div>
-                                            </div>
-                                            <!-- End Dropdown Button -->
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- End Todo Single -->
-
-                                <!-- Todo Single -->
-                                <div class="single-row pb-3 pt-3">
-                                    <div
-                                        class="d-flex justify-content-between align-items-center"
-                                    >
-                                        <div class="d-flex position-relative">
-                                            <!-- Custom Checkbox -->
-                                            <label class="custom-checkbox">
-                                                <input type="checkbox" />
-                                                <span class="checkmark"></span>
-                                            </label>
-                                            <!-- End Custom Checkbox -->
-
-                                            <!-- Todo Text -->
-                                            <div class="todo-text">
-                                                <p class="card-text mb-1">
-                                                    Way sentiments two
-                                                    indulgence uncommonly own.
-                                                </p>
-                                                <p
-                                                    class="text-warning font-12 mb-0"
-                                                >
-                                                    Urgent Not Important
-                                                </p>
-                                            </div>
-                                            <!-- End Todo Text -->
-                                        </div>
-
-                                        <div class="d-flex">
-                                            <!-- Drag Icon -->
-                                            <img
-                                                src="/backend/assets/img/svg/dragicon.svg"
-                                                alt=""
-                                                class="svg mr-2"
-                                            />
-                                            <!-- End Drag Icon -->
-                                            <!-- Assign To -->
-                                            <div class="assign_to">
-                                                <img
-                                                    src="/backend/assets/img/svg/Info.svg"
-                                                    alt=""
-                                                    class="svg mb-1"
-                                                />
-                                            </div>
-                                            <!-- End Assign To -->
-
-                                            <!-- Dropdown Button -->
-                                            <div class="dropdown-button">
-                                                <a
-                                                    href="#"
-                                                    class="d-flex align-items-center"
-                                                    data-toggle="dropdown"
-                                                >
-                                                    <div
-                                                        class="menu-icon style--two w-14 mr-0"
-                                                    >
-                                                        <span></span>
-                                                        <span></span>
-                                                        <span></span>
-                                                    </div>
-                                                </a>
-                                                <div
-                                                    class="dropdown-menu dropdown-menu-right"
-                                                >
-                                                    <a href="#">Daily</a>
-                                                    <a href="#">Sort By</a>
-                                                    <a href="#">Monthly</a>
-                                                </div>
-                                            </div>
-                                            <!-- End Dropdown Button -->
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- End Todo Single -->
-                            </div>
-                        </div>
-                        <!-- End Card -->
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-xl-3 col-md-5">
-                <!-- Card -->
-                <div class="card mb-30">
-                    <div class="card-body">
-                        <div class="mb-40 d-none">
-                            <h4 class="mb-2">Cloud Storage</h4>
-                            <p class="font-14">72% space used</p>
-                        </div>
-                        <div id="apex_radar-chart" class="chart"></div>
-
-                        <div class="upgrade_storage-btn mt-2">
-                            <a href="#" class="btn d-block">Upgrade Storage</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Card -->
-            </div>
-            <div class="col-xl-4 col-md-7">
-                <!-- Card -->
-                <div class="card mb-30">
-                    <div class="card-body">
-                        <div class="row align-items-end">
-                            <div class="col-5 col-sm-6 col-lg-5">
-                                <div
-                                    id="apex_column2-chart"
-                                    class="chart"
-                                ></div>
-                            </div>
-                            <div class="col-7 col-sm-6 col-lg-7">
-                                <div class="">
-                                    <h4 class="mb-2">Registration</h4>
-                                    <p>
-                                        Pellentesque tincidunt tristique neque,
-                                        eget venenatis enim gravida.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Card -->
-
-                <!-- Card -->
-                <div class="card mb-30">
-                    <div class="card-body">
-                        <div class="row align-items-end">
-                            <div class="col-5 col-sm-6 col-lg-5">
-                                <div
-                                    id="apex_column3-chart"
-                                    class="chart"
-                                ></div>
-                            </div>
-                            <div class="col-7 col-sm-6 col-lg-7">
-                                <div class="">
-                                    <h4 class="mb-2">Activity</h4>
-                                    <p>
-                                        Pellentesque tincidunt tristique neque,
-                                        eget venenatis enim gravida.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Card -->
-
-                <!-- Card -->
-                <div class="card mb-30">
-                    <div class="card-body">
-                        <div class="row align-items-end">
-                            <div class="col-5 col-sm-6 col-lg-5">
-                                <div
-                                    id="apex_column4-chart"
-                                    class="chart"
-                                ></div>
-                            </div>
-                            <div class="col-7 col-sm-6 col-lg-7">
-                                <div class="">
-                                    <h4 class="mb-2">Completed Task</h4>
-                                    <p>
-                                        Pellentesque tincidunt tristique neque,
-                                        eget venenatis enim gravida.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Card -->
-
-                <!-- Card -->
-                <div class="card mb-30">
-                    <div class="card-body">
-                        <div class="row align-items-end">
+                            <div class="row">
                             <div class="col-6">
-                                <div class="d-flex justify-content-start">
-                                    <div
-                                        class="ProgressBar-wrap2 position-relative"
-                                    >
-                                        <div
-                                            class="ProgressBar ProgressBar_4"
-                                            data-progress="67"
-                                        >
-                                            <svg
-                                                class="ProgressBar-contentCircle"
-                                                viewBox="0 0 200 200"
-                                            >
+                                <div class="d-flex align-items-center mb-40">
+                                    <div class="progress_8">
+                                        <!-- Progress Bar -->
+                                        <div class="ProgressBar-wrap2 position-relative">
+                                        <div class="ProgressBar ProgressBar_8" data-progress="67">
+                                            <svg class="ProgressBar-contentCircle" viewBox="0 0 200 200">
                                                 <!-- on défini le l'angle et le centre de rotation du cercle -->
-                                                <circle
-                                                    transform="rotate(-90, 100, 100)"
-                                                    class="ProgressBar-background"
-                                                    cx="100"
-                                                    cy="100"
-                                                    r="85"
-                                                />
-                                                <circle
-                                                    transform="rotate(-90, 100, 100)"
-                                                    class="ProgressBar-circle"
-                                                    cx="100"
-                                                    cy="100"
-                                                    r="85"
-                                                />
+                                                <circle transform="rotate(-90, 100, 100)" class="ProgressBar-background" cx="100" cy="100" r="85" />
+                                                <circle transform="rotate(-90, 100, 100)" class="ProgressBar-circle" cx="100" cy="100" r="85" />
                                             </svg>
-                                            <span
-                                                class="ProgressBar-percentage ProgressBar-percentage--count"
-                                            ></span>
-                                            <span
-                                                class="ProgressBar-percentage--text"
-                                                >Bounce Rate</span
-                                            >
                                         </div>
+                                        </div>
+                                        <!-- End Progress Bar -->
+                                    </div>
+                                    <div class="">
+                                        <p class="mb-1 font-14 l-height1">Products</p>
+                                        <h4>264</h4>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-6">
-                                <div
-                                    class="d-flex justify-content-start progress_5"
-                                >
-                                    <div
-                                        class="ProgressBar-wrap2 position-relative"
-                                    >
-                                        <div
-                                            class="ProgressBar ProgressBar_5"
-                                            data-progress="48"
-                                        >
-                                            <svg
-                                                class="ProgressBar-contentCircle"
-                                                viewBox="0 0 200 200"
-                                            >
+                                <div class="d-flex align-items-center mb-40">
+                                    <div class="progress_9">
+                                        <!-- Progress Bar -->
+                                        <div class="ProgressBar-wrap2 position-relative">
+                                        <div class="ProgressBar ProgressBar_9" data-progress="75">
+                                            <svg class="ProgressBar-contentCircle" viewBox="0 0 200 200">
                                                 <!-- on défini le l'angle et le centre de rotation du cercle -->
-                                                <circle
-                                                    transform="rotate(-90, 100, 100)"
-                                                    class="ProgressBar-background"
-                                                    cx="100"
-                                                    cy="100"
-                                                    r="85"
-                                                />
-                                                <circle
-                                                    transform="rotate(-90, 100, 100)"
-                                                    class="ProgressBar-circle"
-                                                    cx="100"
-                                                    cy="100"
-                                                    r="85"
-                                                />
+                                                <circle transform="rotate(-90, 100, 100)" class="ProgressBar-background" cx="100" cy="100" r="85" />
+                                                <circle transform="rotate(-90, 100, 100)" class="ProgressBar-circle" cx="100" cy="100" r="85" />
                                             </svg>
-                                            <span
-                                                class="ProgressBar-percentage ProgressBar-percentage--count style--two"
-                                            ></span>
-                                            <span
-                                                class="ProgressBar-percentage--text"
-                                                >Conversion</span
-                                            >
                                         </div>
+                                        </div>
+                                        <!-- End Progress Bar -->
+                                    </div>
+                                    <div class="">
+                                        <p class="mb-1 font-14 l-height1">Earned</p>
+                                        <h4>$16k</h4>
                                     </div>
                                 </div>
                             </div>
+                            <div class="col-6">
+                                <div class="d-flex align-items-center">
+                                    <div class="progress_10">
+                                        <!-- Progress Bar -->
+                                        <div class="ProgressBar-wrap2 position-relative">
+                                        <div class="ProgressBar ProgressBar_10" data-progress="48">
+                                            <svg class="ProgressBar-contentCircle" viewBox="0 0 200 200">
+                                                <!-- on défini le l'angle et le centre de rotation du cercle -->
+                                                <circle transform="rotate(-90, 100, 100)" class="ProgressBar-background" cx="100" cy="100" r="85" />
+                                                <circle transform="rotate(-90, 100, 100)" class="ProgressBar-circle" cx="100" cy="100" r="85" />
+                                            </svg>
+                                        </div>
+                                        </div>
+                                        <!-- End Progress Bar -->
+                                    </div>
+                                    <div class="">
+                                        <p class="mb-1 font-14 l-height1">Orders</p>
+                                        <h4>$4.6k</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex align-items-center">
+                                    <div class="progress_11">
+                                        <!-- Progress Bar -->
+                                        <div class="ProgressBar-wrap2 position-relative">
+                                        <div class="ProgressBar ProgressBar_11" data-progress="78">
+                                            <svg class="ProgressBar-contentCircle" viewBox="0 0 200 200">
+                                                <!-- on défini le l'angle et le centre de rotation du cercle -->
+                                                <circle transform="rotate(-90, 100, 100)" class="ProgressBar-background" cx="100" cy="100" r="85" />
+                                                <circle transform="rotate(-90, 100, 100)" class="ProgressBar-circle" cx="100" cy="100" r="85" />
+                                            </svg>
+                                        </div>
+                                        </div>
+                                        <!-- End Progress Bar -->
+                                    </div>
+                                    <div class="">
+                                        <p class="mb-1 font-14 l-height1">Delivered</p>
+                                        <h4>$3.4k</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
                         </div>
                     </div>
+                    <!-- End Card -->
                 </div>
-                <!-- End Card -->
+
+                <div class="col-sm-6">
+                    <!-- Card -->
+                    <div class="card mb-30">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-30">
+                            <div class="mr-3 square-75">
+                                <img src="/backend/assets/img/avatar/top-buyer.png" class="radius" alt="">
+                            </div>
+                            <div class="">
+                                <h4 class="mb-1">Bobby Fuller</h4>
+                                <p class="font-14">Top Buyer</p>
+                            </div>
+                            </div>
+
+                            <div class="row">
+                            <div class="col-6">
+                                <div class="d-flex align-items-center mb-40">
+                                    <div class="progress_12">
+                                        <!-- Progress Bar -->
+                                        <div class="ProgressBar-wrap2 position-relative">
+                                        <div class="ProgressBar ProgressBar_12" data-progress="67">
+                                            <svg class="ProgressBar-contentCircle" viewBox="0 0 200 200">
+                                                <!-- on défini le l'angle et le centre de rotation du cercle -->
+                                                <circle transform="rotate(-90, 100, 100)" class="ProgressBar-background" cx="100" cy="100" r="85" />
+                                                <circle transform="rotate(-90, 100, 100)" class="ProgressBar-circle" cx="100" cy="100" r="85" />
+                                            </svg>
+                                        </div>
+                                        </div>
+                                        <!-- End Progress Bar -->
+                                    </div>
+                                    <div class="">
+                                        <p class="mb-1 font-14 l-height1">Orders</p>
+                                        <h4>164</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex align-items-center mb-40">
+                                    <div class="progress_13">
+                                        <!-- Progress Bar -->
+                                        <div class="ProgressBar-wrap2 position-relative">
+                                        <div class="ProgressBar ProgressBar_13" data-progress="75">
+                                            <svg class="ProgressBar-contentCircle" viewBox="0 0 200 200">
+                                                <!-- on défini le l'angle et le centre de rotation du cercle -->
+                                                <circle transform="rotate(-90, 100, 100)" class="ProgressBar-background" cx="100" cy="100" r="85" />
+                                                <circle transform="rotate(-90, 100, 100)" class="ProgressBar-circle" cx="100" cy="100" r="85" />
+                                            </svg>
+                                        </div>
+                                        </div>
+                                        <!-- End Progress Bar -->
+                                    </div>
+                                    <div class="">
+                                        <p class="mb-1 font-14 l-height1">Expenses</p>
+                                        <h4>$1.6k</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex align-items-center">
+                                    <div class="progress_14">
+                                        <!-- Progress Bar -->
+                                        <div class="ProgressBar-wrap2 position-relative">
+                                        <div class="ProgressBar ProgressBar_14" data-progress="48">
+                                            <svg class="ProgressBar-contentCircle" viewBox="0 0 200 200">
+                                                <!-- on défini le l'angle et le centre de rotation du cercle -->
+                                                <circle transform="rotate(-90, 100, 100)" class="ProgressBar-background" cx="100" cy="100" r="85" />
+                                                <circle transform="rotate(-90, 100, 100)" class="ProgressBar-circle" cx="100" cy="100" r="85" />
+                                            </svg>
+                                        </div>
+                                        </div>
+                                        <!-- End Progress Bar -->
+                                    </div>
+                                    <div class="">
+                                        <p class="mb-1 font-14 l-height1">Recived</p>
+                                        <h4>143</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="d-flex align-items-center">
+                                    <div class="progress_15">
+                                        <!-- Progress Bar -->
+                                        <div class="ProgressBar-wrap2 position-relative">
+                                        <div class="ProgressBar ProgressBar_15" data-progress="78">
+                                            <svg class="ProgressBar-contentCircle" viewBox="0 0 200 200">
+                                                <!-- on défini le l'angle et le centre de rotation du cercle -->
+                                                <circle transform="rotate(-90, 100, 100)" class="ProgressBar-background" cx="100" cy="100" r="85" />
+                                                <circle transform="rotate(-90, 100, 100)" class="ProgressBar-circle" cx="100" cy="100" r="85" />
+                                            </svg>
+                                        </div>
+                                        </div>
+                                        <!-- End Progress Bar -->
+                                    </div>
+                                    <div class="">
+                                        <p class="mb-1 font-14 l-height1">Reviews</p>
+                                        <h4>124</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Card -->
+                </div>
+
+                <div class="col-12">
+                    <!-- Card -->
+                    <div class="card mb-30">
+                        <div class="card-body mb-30">
+                            <div class="d-flex justify-content-between media">
+                            <div class="d-flex justify-content-between flex-column flex-md-row media-body">
+                                <div class="title-content mb-4 mb-md-0">
+                                    <h4 class="mb-2">Impression</h4>
+                                    <p class="font-14">Tell use paid law ever yet new. Meant to learn of vexed if style allow he there.</p>
+                                </div>
+
+                                <!-- List Button -->
+                                <ul class="list-inline list-button m-0">
+                                    <li class="active">Monthly</li>
+                                    <li>Yearly</li>
+                                </ul>
+                                <!-- End List Button -->
+                            </div>
+
+                            <!-- Dropdown Button -->
+                            <div class="dropdown-button">
+                                <a href="#" class="d-flex" data-toggle="dropdown">
+                                    <div class="menu-icon style--two mr-0 pt-1">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <a href="#">Report</a>
+                                    <a href="#">FAQ</a>
+                                    <a href="#">Charts</a>
+                                    <a href="#">Chat</a>
+                                    <a href="#">Settings</a>
+                                </div>
+                            </div>
+                            <!-- End Dropdown Button -->
+                            </div>
+                        </div>
+                        <div id="apex_area5-chart" class="chart"></div>
+                    </div>
+                    <!-- End Card -->
+                </div>
+                </div>
             </div>
-            <div class="col-xl-5">
+
+            <div class="col-xl-6">
                 <!-- Card -->
                 <div class="card mb-30">
-                    <div class="card-body">
-                        <div class="mb-1">
-                            <h4 class="mb-2">Analytics</h4>
-                            <p class="pt-1">
-                                Nunc scelerisque tincidunt elit. Vestibulum non
-                                mi ipsum. Cras pretium suscipit tellus sit amet
-                                aliquet. Vestibulum maximus lacinia massa non
-                                porttitor.
-                            </p>
+                <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                        <div class="title-content mb-5">
+                            <h4 class="mb-2">User Activity</h4>
+                            <p class="font-14">Aenean sed lorem est. Sed quis neque ut nibh suscipit imperdiet ac non augue. Aenean ornare sit amet lectus non</p>
                         </div>
 
-                        <div id="apex_bar-chart" class="chart"></div>
+                        <!-- Dropdown Button -->
+                        <div class="dropdown-button">
+                            <a href="#" class="d-flex align-items-center" data-toggle="dropdown">
+                            <div class="menu-icon style--two mr-0 d-flex justify-content-center">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                            <a href="#">Report</a>
+                            <a href="#">FAQ</a>
+                            <a href="#">Charts</a>
+                            <a href="#">Chat</a>
+                            <a href="#">Settings</a>
+                            </div>
+                        </div>
+                        <!-- End Dropdown Button -->
                     </div>
+                    
+                    <div class="table-responsive mt-n2">
+                        <table class="style--two">
+                            <thead>
+                            <tr>
+                            <th>Date <img src="/backend/assets/img/svg/table-down-arrow.svg" alt="" class="svg"></th>
+                            <th>Pages/Visit <img src="/backend/assets/img/svg/table-down-arrow.svg" alt="" class="svg"></th>
+                            <th>New User <img src="/backend/assets/img/svg/table-up-arrow.svg" alt="" class="svg"></th>
+                            <th>Total Sell</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>12 May 2019</td>
+                                <td>145k</td>
+                                <td>41k</td>
+                                <td>$268.6k</td>
+                            </tr>
+                            <tr>
+                                <td>11 May 2019</td>
+                                <td>256k</td>
+                                <td>10k</td>
+                                <td>$256.3k</td>
+                            </tr>
+                            <tr>
+                                <td>10 May 2019</td>
+                                <td>695k</td>
+                                <td>53k</td>
+                                <td>$685.9k</td>
+                            </tr>
+                            <tr>
+                                <td>9 May 2019</td>
+                                <td>645k</td>
+                                <td>59k</td>
+                                <td>$568.2k</td>
+                            </tr>
+                            <tr>
+                                <td>8 May 2019</td>
+                                <td>69k</td>
+                                <td>6k</td>
+                                <td>$65.5k</td>
+                            </tr>
+                            <tr>
+                                <td>7 May 2019</td>
+                                <td>236k</td>
+                                <td>23k</td>
+                                <td>$365.5k</td>
+                            </tr>
+                            <tr>
+                                <td>6 May 2019</td>
+                                <td>96k</td>
+                                <td>11k</td>
+                                <td>$98.2k</td>
+                            </tr>
+                            <tr>
+                                <td>5 May 2019</td>
+                                <td>487k</td>
+                                <td>28k</td>
+                                <td>$983.6k</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
                 </div>
                 <!-- End Card -->
             </div>
+
             <div class="col-xl-12">
                 <!-- Card -->
                 <div class="card">
-                    <div class="card-body">
-                        <div
-                            class="d-flex justify-content-start justify-content-sm-between align-items-start align-items-sm-center flex-column flex-sm-row mb-sm-n3"
-                        >
-                            <div class="title-content mb-4 mb-sm-0">
-                                <h4 class="mb-2">Sale Reports</h4>
-                                <p>Solicitude announcing as to sufficient my</p>
+                <div class="card-body pb-0">
+                    <div class="d-flex justify-content-between">
+                        <div class="title-content mb-4">
+                            <h4 class="mb-2">Recent Orders</h4>
+                            <p class="font-14">Tell use paid law ever yet new. Meant to learn of vexed if style allow he there.</p>
+                        </div>
+
+                        <!-- Dropdown Button -->
+                        <div class="dropdown-button">
+                            <a href="#" class="d-flex align-items-center" data-toggle="dropdown">
+                            <div class="menu-icon style--two mr-0 d-flex justify-content-center">
+                                <span></span>
+                                <span></span>
+                                <span></span>
                             </div>
-                            <div class="">
-                                <ul class="list-inline list-button m-0">
-                                    <li>2015</li>
-                                    <li>2016</li>
-                                    <li>2017</li>
-                                    <li>2018</li>
-                                    <li class="active">2019</li>
-                                </ul>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                            <a href="#">Report</a>
+                            <a href="#">FAQ</a>
+                            <a href="#">Charts</a>
+                            <a href="#">Chat</a>
+                            <a href="#">Settings</a>
                             </div>
                         </div>
+                        <!-- End Dropdown Button -->
                     </div>
-                    <div id="apex_line3-chart" class="chart"></div>
+                </div>
+                        
+                <div class="table-responsive">
+                    <table class="style--three table-centered text-nowrap">
+                        <thead>
+                            <tr>
+                            <th>Order ID <img src="/backend/assets/img/svg/table-down-arrow.svg" alt="" class="svg"></th>
+                            <th>Date <img src="/backend/assets/img/svg/table-down-arrow.svg" alt="" class="svg"></th>
+                            <th>Products</th>
+                            <th>Buyer Name <img src="/backend/assets/img/svg/table-up-arrow.svg" alt="" class="svg"></th>
+                            <th>Status <img src="/backend/assets/img/svg/table-down-arrow.svg" alt="" class="svg"></th>
+                            <th>Price</th>
+                            <th>Shipping Cost</th>
+                            <th>Total Cost</th>
+                            <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            <td class="bold">#01254</td>
+                            <td>12 Oct 2019</td>
+                            <td>
+                                <div class="product-img">
+                                    <img src="/backend/assets/img/product/product1.png" alt="">
+                                    <img src="/backend/assets/img/product/product5.png" alt="">
+                                    <img src="/backend/assets/img/product/product6.png" alt="">
+                                </div>
+                            </td>
+                            <td>Kyle Lee</td>
+                            <td class="text-danger">Processing</td>
+                            <td class="bold">$2456.4</td>
+                            <td class="bold">$24.6</td>
+                            <td class="bold">2687</td>
+                            <td><button type="button" class="details-btn">Details <i class="icofont-arrow-right"></i></button></td>
+                            </tr>
+
+                            <tr>
+                            <td class="bold">#01365</td>
+                            <td>12 Oct 2019</td>
+                            <td>
+                                <div class="product-img">
+                                    <img src="/backend/assets/img/product/product2.png" alt="">
+                                    <img src="/backend/assets/img/product/product7.png" alt="">
+                                    <img src="/backend/assets/img/product/product3.png" alt="">
+                                </div>
+                            </td>
+                            <td>Lindo De Sire</td>
+                            <td class="text-warning">Shipped</td>
+                            <td class="bold">$2456.4</td>
+                            <td class="bold">$24.6</td>
+                            <td class="bold">2687</td>
+                            <td><button type="button" class="details-btn">Details <i class="icofont-arrow-right"></i></button></td>
+                            </tr>
+
+                            <tr>
+                            <td class="bold">#03654</td>
+                            <td>11 Oct 2019</td>
+                            <td>
+                                <div class="product-img">
+                                    <img src="/backend/assets/img/product/product8.png" alt="">
+                                    <img src="/backend/assets/img/product/product9.png" alt="">
+                                    <img src="/backend/assets/img/product/product10.png" alt="">
+                                </div>
+                            </td>
+                            <td>Laturi Yasn</td>
+                            <td class="text-success">Delivered</td>
+                            <td class="bold">$2456.4</td>
+                            <td class="bold">$24.6</td>
+                            <td class="bold">2687</td>
+                            <td><button type="button" class="details-btn">Details <i class="icofont-arrow-right"></i></button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
                 </div>
                 <!-- End Card -->
             </div>

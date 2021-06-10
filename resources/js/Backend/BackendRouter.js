@@ -11,10 +11,13 @@ import Product_Category from "./Product_Category/router.js";
 import Purchase from "./Purchase/router.js";
 import Role_Permission from "./Role_Permission/router.js";
 import User from "./User/router.js";
-import Auth from "./Auth/router.js";
 import Dashboard from "./Dashboard/router.js";
 import Shop from "./Shop/router.js";
-const routes=[...Advertising.router,...Blog.router,...Blog_Category.router,...Brand.router,...Contact.router,...Delivery.router,...Payment.router,...Pricing.router,...Product.router,...Product_Category.router,...Purchase.router,...Role_Permission.router,...User.router,...Dashboard.router,...Shop.router,...Auth.router];
+import Sale from "./Sale/router.js";
+import System from "./System/router.js";
+import Report from "./Report/router.js";
+import Auth from "./Auth/router.js";
+const routes=[...Advertising.router,...Blog.router,...Blog_Category.router,...Brand.router,...Contact.router,...Delivery.router,...Payment.router,...Pricing.router,...Product.router,...Product_Category.router,...Purchase.router,...Role_Permission.router,...User.router,...Dashboard.router,...Shop.router,...Sale.router,...System.router,...Auth.router,...Report.router];
 export default{
     router:routes
 }

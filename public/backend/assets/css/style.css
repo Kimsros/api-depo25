@@ -455,31 +455,31 @@ h6, .text-white *, .p_header-content *,
 }
 
 .c1, .dashboard-date.style--six input, .pagination ul li, .follow-btn, .link-btn, .theme-input-group button:hover, .theme-input-group > a:hover, .header-toogle-menu, .sidebar .sidebar-header .sidebar-toogle-pin, .mail-compose .form-group .input-wrap span, .modal-body .form-group .input-wrap span {
-  color: #6045E2;
+  color: #F15922;
 }
 
 ::-moz-selection {
-  background-color: #6045E2;
+  background-color: #F15922;
 }
 
 .c1-bg, ::selection, .btn, #example-vertical > .actions ul li a[href="#next"], #example-vertical > .actions ul li a[href="#finish"], .light-btn.c2-bg:hover, .theme-input-group button.btn.style--three, .theme-input-group > a.btn.style--three, .theme-input-group.input-wrap > a, .aside-body li a:after, .chat_aside .aside-header, .chat-footer div .submit {
-  background-color: #6045E2;
+  background-color: #F15922;
 }
 
 .c1-bo {
-  border-color: #6045E2 !important;
+  border-color: #F15922 !important;
 }
 
 .c2, a, a:hover, .dropdown-menu .dropdown-body a:hover .main-text, .dropdown-menu.style--two .dropdown-body a:hover .time, .dropdown-menu.style--two .dropdown-body a:hover .main-text, .btn.preview, #example-vertical > .actions ul li a.preview[href="#next"], #example-vertical > .actions ul li a.preview[href="#finish"], .btn.style--two, #example-vertical > .actions ul li a.style--two[href="#next"], #example-vertical > .actions ul li a.style--two[href="#finish"], .btn.s_alert, #example-vertical > .actions ul li a.s_alert[href="#next"], #example-vertical > .actions ul li a.s_alert[href="#finish"], .details-btn, .light-btn, table.table-condensed thead tr:nth-child(2) th, table.table-contextual .details-btn, .sidebar .sidebar-body li.active > a, .sidebar .sidebar-body li:hover > a, .aside-body li a.active, .aside-body li:hover a, .aside-body li.active a, .aside-body li.fc-event a:hover, .message:hover p.time, .message.active p.time, .fc-view > table thead th.fc-day-header, .notifications a:hover p, .news a:hover p, .icon:hover, .select2-container--default .select2-selection--multiple .select2-selection__choice, .p_nav-link, .about-nav-tab a.active, .iconwrap, .dragable-list > div.ui-sortable-helper i {
-  color: #8280FD;
+  color: #F15922;
 }
 
 .c2-bg, .ba, .btn-circle:after, .offcanvas-overlay, .aside-body li a:after, .chat_aside .aside-header .aside-header-bottom:after, .message:after, .todo-list .single-row:after, .board .board-cards .board-card:before, #menu button, .btn:hover, #example-vertical > .actions ul li a:hover[href="#next"], #example-vertical > .actions ul li a:hover[href="#finish"], .btn-circle.style--three, .light-btn.c2-bg, .change-card-btn.c2, a.change-card-btn, a.change-card-btn:hover, .dropdown-menu .dropdown-body a:hover .change-card-btn.main-text, .dropdown-menu.style--two .dropdown-body a:hover .change-card-btn.time, .change-card-btn.btn.preview, #example-vertical > .actions ul li a.change-card-btn.preview[href="#next"], #example-vertical > .actions ul li a.change-card-btn.preview[href="#finish"], .change-card-btn.btn.style--two, #example-vertical > .actions ul li a.change-card-btn.style--two[href="#next"], #example-vertical > .actions ul li a.change-card-btn.style--two[href="#finish"], .change-card-btn.btn.s_alert, #example-vertical > .actions ul li a.change-card-btn.s_alert[href="#next"], #example-vertical > .actions ul li a.change-card-btn.s_alert[href="#finish"], .change-card-btn.details-btn, .change-card-btn.light-btn, table.table-condensed thead tr:nth-child(2) th.change-card-btn, table.table-contextual .change-card-btn.details-btn, .sidebar .sidebar-body li.active > a.change-card-btn, .sidebar .sidebar-body li:hover > a.change-card-btn, .aside-body li a.change-card-btn.active, .aside-body li:hover a.change-card-btn, .aside-body li.active a.change-card-btn, .aside-body li.fc-event a.change-card-btn:hover, .message:hover p.change-card-btn.time, .message.active p.change-card-btn.time, .fc-view > table thead th.change-card-btn.fc-day-header, .notifications a:hover p.change-card-btn, .news a:hover p.change-card-btn, .change-card-btn.icon:hover, .select2-container--default .select2-selection--multiple .change-card-btn.select2-selection__choice, .change-card-btn.p_nav-link, .about-nav-tab a.change-card-btn.active, .change-card-btn.iconwrap, .dragable-list > div.ui-sortable-helper i.change-card-btn, .change-card-btn.c2:hover, .change-card-btn.details-btn:hover, .change-card-btn.light-btn:hover, table.table-condensed thead tr:nth-child(2) th.change-card-btn:hover, .change-card-btn.p_nav-link:hover, .change-card-btn.iconwrap:hover, .theme-input-group button, .theme-input-group > a, .theme-input-group button:hover, .theme-input-group > a:hover, .theme-input-group button.btn.style--three:hover, .theme-input-group > a.btn.style--three:hover, .sidebar .sidebar-body li.active:before, .sidebar .sidebar-body li:hover:before, .labels .label.add-label, .label-item .label.add-label, .switch input:checked ~ .control:after, .switch input:checked ~ .control .check, .input-group.bootstrap-touchspin button.btn, .color-circle, .faq h5:after {
-  background-color: #8280FD;
+  background-color: #F15922;
 }
 
 .c2-bo {
-  border-color: #8280FD !important;
+  border-color: #F15922 !important;
 }
 
 .c3, .mail-compose .form-group .cc-btns .cc, .modal-body .form-group .cc-btns .cc, .mail-compose .form-group .cc-btns .cc-btn:hover, .modal-body .form-group .cc-btns .cc-btn:hover {
@@ -1129,7 +1129,7 @@ body,
 .upload-icon {
   width: 90px;
   height: 90px;
-  border: 2px solid #8280FD;
+  border: 2px solid #F15922;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1248,7 +1248,7 @@ sub, sup {
 }
 
 .bg-light-blue {
-  background-color: #8280FD !important;
+  background-color: #F15922 !important;
 }
 
 .bg-light-info {
@@ -1346,7 +1346,7 @@ sub, sup {
   width: 40px;
   height: 40px;
   background-color: #E9E7FF;
-  color: #8280FD;
+  color: #F15922;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1437,7 +1437,7 @@ sub, sup {
 }
 
 .divider.divider-primary .divider-text:before, .divider.divider-primary .divider-text:after {
-  border-color: #8280FD;
+  border-color: #F15922;
 }
 
 .divider.divider-success .divider-text:before, .divider.divider-success .divider-text:after {
@@ -1525,7 +1525,7 @@ sub, sup {
 }
 
 .bg-primary {
-  background-color: #8280FD !important;
+  background-color: #F15922 !important;
 }
 
 .bg-success {
@@ -1577,7 +1577,7 @@ sub, sup {
 }
 
 .text-primary {
-  color: #8280FD !important;
+  color: #F15922 !important;
 }
 
 .text-success, .price-body ul li i {
@@ -1725,7 +1725,7 @@ svg text.c3-chart-arcs-title {
 }
 
 .tag_color.meeting {
-  background-color: #8280FD;
+  background-color: #F15922;
 }
 
 .tag_color.travel {
@@ -3701,10 +3701,10 @@ user agent stylesheet div {
 
 .btn-circle:after {
   background-color: #6F51FF;
-  background-color: -moz-linear-gradient(left, #6F51FF 0%, #6045E2 100%);
-  background-color: -webkit-linear-gradient(left, #6F51FF 0%, #6045E2 100%);
-  background-color: linear-gradient(to right, #6F51FF 0%, #6045E2 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6F51FF', endColorstr='#6045E2',GradientType=1);
+  background-color: -moz-linear-gradient(left, #6F51FF 0%, #F15922 100%);
+  background-color: -webkit-linear-gradient(left, #6F51FF 0%, #F15922 100%);
+  background-color: linear-gradient(to right, #6F51FF 0%, #F15922 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6F51FF', endColorstr='#F15922',GradientType=1);
 }
 
 .btn-circle:hover:after {
@@ -3953,7 +3953,7 @@ user agent stylesheet div {
 }
 
 .light-btn:hover {
-  background-color: #8280FD;
+  background-color: #F15922;
 }
 
 .light-btn:hover.style--two {
@@ -3979,7 +3979,7 @@ table td a {
 }
 
 table td a:hover {
-  color: #8280FD;
+  color: #F15922;
 }
 
 table tr:not(:last-child) td {
@@ -4356,11 +4356,11 @@ table.contact-list-table td.actions span:not(:last-child) {
 }
 
 table.table-condensed tbody tr td.active.day {
-  background: #8280FD;
+  background: #F15922;
 }
 
 table.table-condensed tbody tr td.active.day:hover {
-  background: #8280FD;
+  background: #F15922;
 }
 
 table.table-bordered tr:last-child td {
@@ -4469,7 +4469,7 @@ table.table-bordered th:last-child, table.table-bordered td:last-child {
 .ProgressBar-wrap2 .ProgressBar-circle,
 .ProgressBar-wrap2 .ProgressBar-background {
   fill: none;
-  stroke: #8280FD;
+  stroke: #F15922;
   stroke-width: 20px;
 }
 
@@ -4541,7 +4541,7 @@ table.table-bordered th:last-child, table.table-bordered td:last-child {
 }
 
 .progress_3 .ProgressBar-wrap .ProgressBar-circle, .progress_3 .ProgressBar-wrap2 .ProgressBar-circle {
-  stroke: #8280FD;
+  stroke: #F15922;
 }
 
 .progress_5 .ProgressBar-wrap2 .ProgressBar-circle {
@@ -4577,7 +4577,7 @@ table.table-bordered th:last-child, table.table-bordered td:last-child {
 }
 
 .progress_7 .ProgressBar-wrap2 .ProgressBar-circle {
-  stroke: #8280FD;
+  stroke: #F15922;
 }
 
 .progress_8,
@@ -4703,7 +4703,7 @@ table.table-bordered th:last-child, table.table-bordered td:last-child {
 }
 
 .progress_20 .ProgressBar-wrap .ProgressBar-circle, .progress_20 .ProgressBar-wrap2 .ProgressBar-circle {
-  stroke: #8280FD;
+  stroke: #F15922;
   fill: #f9f9f9;
 }
 
@@ -4723,12 +4723,12 @@ table.table-bordered th:last-child, table.table-bordered td:last-child {
 }
 
 .progress_22 .ProgressBar-wrap2 .ProgressBar-circle {
-  stroke: #8280FD;
+  stroke: #F15922;
 }
 
 .progress_22 .ProgressBar-wrap2 .ProgressBar-percentage {
   position: absolute;
-  color: #8280FD;
+  color: #F15922;
   left: 50%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -4924,7 +4924,7 @@ table.table-bordered th:last-child, table.table-bordered td:last-child {
 }
 
 .process-bar-wrapper.style--five.c2 .process-bar, a.process-bar-wrapper.style--five .process-bar, a.process-bar-wrapper.style--five:hover .process-bar, .dropdown-menu .dropdown-body a:hover .process-bar-wrapper.style--five.main-text .process-bar, .dropdown-menu.style--two .dropdown-body a:hover .process-bar-wrapper.style--five.time .process-bar, .process-bar-wrapper.style--five.btn.preview .process-bar, #example-vertical > .actions ul li a.process-bar-wrapper.style--five.preview[href="#next"] .process-bar, #example-vertical > .actions ul li a.process-bar-wrapper.style--five.preview[href="#finish"] .process-bar, .process-bar-wrapper.style--five.btn.style--two .process-bar, #example-vertical > .actions ul li a.process-bar-wrapper.style--five.style--two[href="#next"] .process-bar, #example-vertical > .actions ul li a.process-bar-wrapper.style--five.style--two[href="#finish"] .process-bar, .process-bar-wrapper.style--five.btn.s_alert .process-bar, #example-vertical > .actions ul li a.process-bar-wrapper.style--five.s_alert[href="#next"] .process-bar, #example-vertical > .actions ul li a.process-bar-wrapper.style--five.s_alert[href="#finish"] .process-bar, .process-bar-wrapper.style--five.details-btn .process-bar, .process-bar-wrapper.style--five.light-btn .process-bar, table.table-condensed thead tr:nth-child(2) th.process-bar-wrapper.style--five .process-bar, .sidebar .sidebar-body li.active > a.process-bar-wrapper.style--five .process-bar, .sidebar .sidebar-body li:hover > a.process-bar-wrapper.style--five .process-bar, .aside-body li a.process-bar-wrapper.style--five.active .process-bar, .aside-body li:hover a.process-bar-wrapper.style--five .process-bar, .aside-body li.active a.process-bar-wrapper.style--five .process-bar, .message:hover p.process-bar-wrapper.style--five.time .process-bar, .message.active p.process-bar-wrapper.style--five.time .process-bar, .fc-view > table thead th.process-bar-wrapper.style--five.fc-day-header .process-bar, .notifications a:hover p.process-bar-wrapper.style--five .process-bar, .news a:hover p.process-bar-wrapper.style--five .process-bar, .process-bar-wrapper.style--five.icon:hover .process-bar, .select2-container--default .select2-selection--multiple .process-bar-wrapper.style--five.select2-selection__choice .process-bar, .process-bar-wrapper.style--five.p_nav-link .process-bar, .about-nav-tab a.process-bar-wrapper.style--five.active .process-bar, .process-bar-wrapper.style--five.iconwrap .process-bar, .dragable-list > div.ui-sortable-helper i.process-bar-wrapper.style--five .process-bar {
-  background-color: #8280FD;
+  background-color: #F15922;
 }
 
 /* Home Social Media Process */
@@ -5418,7 +5418,7 @@ select.multiple option {
   top: 3px;
   width: 6px;
   height: 10px;
-  border: solid #8280FD;
+  border: solid #F15922;
   border-width: 0 2px 2px 0;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -5472,7 +5472,7 @@ select.multiple option {
 }
 
 .custom-checkbox.bold .checkmark, .dashboard-date.style--three > i.custom-checkbox .checkmark, .dashboard-date.style--five > i.custom-checkbox .checkmark, .dropdown-menu.style--four a.custom-checkbox:hover .checkmark, .dropdown-menu.style--four a.custom-checkbox.selected .checkmark, .custom-checkbox.avatar .checkmark, .custom-checkbox.full-date .checkmark, .pagination ul li.custom-checkbox .checkmark, .custom-checkbox.follow-btn .checkmark, .custom-checkbox.link-btn .checkmark, .custom-checkbox.details-btn .checkmark, table.style--two td.custom-checkbox .checkmark, table.cart_table tr td.custom-checkbox:first-child .checkmark, table.cart_table tr td:last-child span.custom-checkbox .checkmark, table.invoice-list-table.style-two td.custom-checkbox:nth-child(4) .checkmark, table.style-two.contact-list-table td.custom-checkbox:nth-child(4) .checkmark, table.invoice-list-table.style-two td.custom-checkbox:nth-child(5) .checkmark, table.style-two.contact-list-table td.custom-checkbox:nth-child(5) .checkmark, table.invoice-list.style-two td.custom-checkbox:nth-child(4) .checkmark, table.invoice-list.style-two td.custom-checkbox:nth-child(5) .checkmark, .ProgressBar-wrap .custom-checkbox.ProgressBar-percentage .checkmark, .ProgressBar-wrap2 .custom-checkbox.ProgressBar-percentage .checkmark, .progress-info div.custom-checkbox:not(:first-child) .checkmark, .process-bar-wrapper.style--four .custom-checkbox.process-width .checkmark, .notification-icon .custom-checkbox.count .checkmark, .avatar .custom-checkbox.count .checkmark, .sidebar .sidebar-body li.custom-checkbox.nav-category .checkmark, .footer a.custom-checkbox .checkmark, #apex_radar-chart .custom-checkbox.apexcharts-title-text .checkmark, .custom-checkbox.statistic-row.days .checkmark, .product-details-content .custom-checkbox.product_title .checkmark, .product-details-content .custom-checkbox.woocommerce-Price-amount .checkmark, .product-details-content .woocommerce-product-details__short-description h5.custom-checkbox .checkmark, .form-row label.custom-checkbox .checkmark, .cart-collaterals .shop_table th.custom-checkbox .checkmark, .cart-collaterals .shop_table td.custom-checkbox .checkmark, .mail-list-item:hover .mail-text .custom-checkbox.msg .checkmark, .main-mail:hover .mail-text .custom-checkbox.msg .checkmark, .message:hover p.custom-checkbox .checkmark, .message.active p.custom-checkbox .checkmark, .assign_to .custom-checkbox.assign-content .checkmark, .assign-tag .custom-checkbox.tag-text .checkmark, .add-new_task .custom-checkbox.label-text .checkmark, .task-details .custom-checkbox.label-text .checkmark, .fc table.custom-checkbox .checkmark, #projectTaskDetails .modal-content .project-main-title textarea.custom-checkbox .checkmark, #projectTaskDetails .modal-content .checklist .process-bar-wrapper .custom-checkbox.process-name .checkmark, #smartwizard .nav li a.custom-checkbox .checkmark, #example-vertical > .steps ul li a.custom-checkbox .checkmark, #example-vertical > .actions ul li a.custom-checkbox[href="#previous"] .checkmark, .chip .chip-content > div.custom-checkbox .checkmark, .chip .chip-content .custom-checkbox.img .checkmark, .custom-checkbox.color-circle .checkmark, .custom-checkbox.topic .checkmark, .timeline .custom-checkbox.event:before .checkmark, .custom-checkbox.base-timer__label .checkmark, .custom-checkbox.base-timer__text .checkmark, .custom-checkbox.p_nav-link .checkmark, .info-list li.custom-checkbox .checkmark, .shepherd-element .shepherd-content footer .shepherd-buttons li .custom-checkbox.shepherd-button .checkmark {
-  border: 1px solid #8280FD;
+  border: 1px solid #F15922;
 }
 
 .custom-checkbox.bold .checkmark:after, .dashboard-date.style--three > i.custom-checkbox .checkmark:after, .dashboard-date.style--five > i.custom-checkbox .checkmark:after, .dropdown-menu.style--four a.custom-checkbox:hover .checkmark:after, .dropdown-menu.style--four a.custom-checkbox.selected .checkmark:after, .custom-checkbox.avatar .checkmark:after, .custom-checkbox.full-date .checkmark:after, .pagination ul li.custom-checkbox .checkmark:after, .custom-checkbox.follow-btn .checkmark:after, .custom-checkbox.link-btn .checkmark:after, .custom-checkbox.details-btn .checkmark:after, table.style--two td.custom-checkbox .checkmark:after, table.cart_table tr td.custom-checkbox:first-child .checkmark:after, table.cart_table tr td:last-child span.custom-checkbox .checkmark:after, table.invoice-list-table.style-two td.custom-checkbox:nth-child(4) .checkmark:after, table.style-two.contact-list-table td.custom-checkbox:nth-child(4) .checkmark:after, table.invoice-list-table.style-two td.custom-checkbox:nth-child(5) .checkmark:after, table.style-two.contact-list-table td.custom-checkbox:nth-child(5) .checkmark:after, table.invoice-list.style-two td.custom-checkbox:nth-child(4) .checkmark:after, table.invoice-list.style-two td.custom-checkbox:nth-child(5) .checkmark:after, .ProgressBar-wrap .custom-checkbox.ProgressBar-percentage .checkmark:after, .ProgressBar-wrap2 .custom-checkbox.ProgressBar-percentage .checkmark:after, .progress-info div.custom-checkbox:not(:first-child) .checkmark:after, .process-bar-wrapper.style--four .custom-checkbox.process-width .checkmark:after, .notification-icon .custom-checkbox.count .checkmark:after, .avatar .custom-checkbox.count .checkmark:after, .sidebar .sidebar-body li.custom-checkbox.nav-category .checkmark:after, .footer a.custom-checkbox .checkmark:after, #apex_radar-chart .custom-checkbox.apexcharts-title-text .checkmark:after, .custom-checkbox.statistic-row.days .checkmark:after, .product-details-content .custom-checkbox.product_title .checkmark:after, .product-details-content .custom-checkbox.woocommerce-Price-amount .checkmark:after, .product-details-content .woocommerce-product-details__short-description h5.custom-checkbox .checkmark:after, .form-row label.custom-checkbox .checkmark:after, .cart-collaterals .shop_table th.custom-checkbox .checkmark:after, .cart-collaterals .shop_table td.custom-checkbox .checkmark:after, .mail-list-item:hover .mail-text .custom-checkbox.msg .checkmark:after, .main-mail:hover .mail-text .custom-checkbox.msg .checkmark:after, .message:hover p.custom-checkbox .checkmark:after, .message.active p.custom-checkbox .checkmark:after, .assign_to .custom-checkbox.assign-content .checkmark:after, .assign-tag .custom-checkbox.tag-text .checkmark:after, .add-new_task .custom-checkbox.label-text .checkmark:after, .task-details .custom-checkbox.label-text .checkmark:after, .fc table.custom-checkbox .checkmark:after, #projectTaskDetails .modal-content .project-main-title textarea.custom-checkbox .checkmark:after, #projectTaskDetails .modal-content .checklist .process-bar-wrapper .custom-checkbox.process-name .checkmark:after, #smartwizard .nav li a.custom-checkbox .checkmark:after, #example-vertical > .steps ul li a.custom-checkbox .checkmark:after, #example-vertical > .actions ul li a.custom-checkbox[href="#previous"] .checkmark:after, .chip .chip-content > div.custom-checkbox .checkmark:after, .chip .chip-content .custom-checkbox.img .checkmark:after, .custom-checkbox.color-circle .checkmark:after, .custom-checkbox.topic .checkmark:after, .timeline .custom-checkbox.event:before .checkmark:after, .custom-checkbox.base-timer__label .checkmark:after, .custom-checkbox.base-timer__text .checkmark:after, .custom-checkbox.p_nav-link .checkmark:after, .info-list li.custom-checkbox .checkmark:after, .shepherd-element .shepherd-content footer .shepherd-buttons li .custom-checkbox.shepherd-button .checkmark:after {
@@ -5481,7 +5481,7 @@ select.multiple option {
 }
 
 .custom-checkbox.solid .checkmark {
-  background-color: #8280FD;
+  background-color: #F15922;
 }
 
 .custom-checkbox.solid .checkmark:after {
@@ -5566,7 +5566,7 @@ select.multiple option {
   top: 0;
   width: 18px;
   height: 18px;
-  border: 1px solid #8280FD;
+  border: 1px solid #F15922;
   border-radius: 100%;
   background-color: #E9E7FF;
 }
@@ -5576,7 +5576,7 @@ select.multiple option {
   content: '';
   width: 7px;
   height: 7px;
-  background-color: #8280FD;
+  background-color: #F15922;
   position: absolute;
   top: 5px;
   left: 5px;
@@ -6195,7 +6195,7 @@ body.sidebar-folded.open-sidebar-folded .header .main-header {
 }
 
 .sidebar .sidebar-body li.active i, .sidebar .sidebar-body li:hover i {
-  color: #8280FD;
+  color: #F15922;
 }
 
 .sidebar .sidebar-body li.active > a.disabled i, .sidebar .sidebar-body li:hover > a.disabled i {
@@ -6238,7 +6238,7 @@ body.sidebar-folded .sidebar .sidebar-body li a span {
 }
 
 body.sidebar-folded .sidebar .sidebar-body li.active i, body.sidebar-folded .sidebar .sidebar-body li:hover i {
-  color: #8280FD;
+  color: #F15922;
 }
 
 body.sidebar-folded.open-sidebar-folded .sidebar {
@@ -6267,7 +6267,7 @@ body.sidebar-folded.open-sidebar-folded .sidebar .sidebar-body li a span {
 }
 
 body.sidebar-folded.open-sidebar-folded .sidebar .sidebar-body li.active i, body.sidebar-folded.open-sidebar-folded .sidebar .sidebar-body li:hover i {
-  color: #8280FD;
+  color: #F15922;
 }
 
 body.sidebar-open .sidebar {
@@ -6554,10 +6554,10 @@ body.sidebar-folded .main-content {
 
 .chat_aside .aside-header .aside-header-bottom:after {
   background: #6F51FF;
-  background: -webkit-gradient(linear, left top, left bottom, from(#6F51FF), to(#6045E2));
-  background: -o-linear-gradient(top, #6F51FF 0%, #6045E2 100%);
-  background: linear-gradient(to bottom, #6F51FF 0%, #6045E2 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6F51FF', endColorstr='#6045E2',GradientType=0);
+  background: -webkit-gradient(linear, left top, left bottom, from(#6F51FF), to(#F15922));
+  background: -o-linear-gradient(top, #6F51FF 0%, #F15922 100%);
+  background: linear-gradient(to bottom, #6F51FF 0%, #F15922 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6F51FF', endColorstr='#F15922',GradientType=0);
   z-index: -1;
 }
 
@@ -6675,7 +6675,7 @@ body.sidebar-folded .main-content {
 }
 
 .state2.style--two h2 {
-  color: #8280FD;
+  color: #F15922;
 }
 
 .state2.style--three h2 {
@@ -6729,7 +6729,7 @@ body.sidebar-folded .main-content {
 }
 
 .apex_pie3-chart-legend .color-box.three {
-  background-color: #8280FD;
+  background-color: #F15922;
 }
 
 .apex_pie3-chart-legend .color-box.four {
@@ -7631,10 +7631,10 @@ body.sidebar-folded .main-content {
 
 #search-tab ~ #search-box input {
   background: #6F51FF;
-  background: -webkit-gradient(linear, left top, left bottom, from(#6F51FF), to(#6045E2));
-  background: -o-linear-gradient(top, #6F51FF 0%, #6045E2 100%);
-  background: linear-gradient(to bottom, #6F51FF 0%, #6045E2 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6F51FF', endColorstr='#6045E2',GradientType=0);
+  background: -webkit-gradient(linear, left top, left bottom, from(#6F51FF), to(#F15922));
+  background: -o-linear-gradient(top, #6F51FF 0%, #F15922 100%);
+  background: linear-gradient(to bottom, #6F51FF 0%, #F15922 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6F51FF', endColorstr='#F15922',GradientType=0);
   width: 100%;
   height: 100%;
   padding: 5px 10px;
@@ -7839,7 +7839,7 @@ body.sidebar-folded .main-content {
 }
 
 .assign-btn:hover svg line {
-  stroke: #6045E2;
+  stroke: #F15922;
 }
 
 /* Todo Priority */
@@ -8483,7 +8483,7 @@ body.sidebar-folded .main-content {
 }
 
 .project-box > a svg g line {
-  stroke: #8280FD;
+  stroke: #F15922;
 }
 
 .project-box .dropdown-button .dropdown-menu {
@@ -9546,7 +9546,7 @@ body.sidebar-folded .main-content {
 /* Dropzone */
 .dropzone {
   border-radius: 3px;
-  border: 2px dashed #8280FD;
+  border: 2px dashed #F15922;
   -o-border-image: none;
   border-image: none;
   max-width: 1050px;
@@ -10023,11 +10023,11 @@ input[type=range]::-ms-thumb {
 
 .switch.brand input:checked ~ .control {
   background-color: #E9E7FF;
-  border-color: #8280FD;
+  border-color: #F15922;
 }
 
 .switch.brand input:checked ~ .control:after {
-  background-color: #8280FD;
+  background-color: #F15922;
 }
 
 .switch.brand.glow input:checked ~ .control:after {
@@ -10050,7 +10050,7 @@ input[type=range]::-ms-thumb {
 }
 
 .switch.primary input:checked ~ .control {
-  border-color: #8280FD;
+  border-color: #F15922;
 }
 
 .switch.primary.glow input:checked ~ .control:after {
@@ -10502,7 +10502,7 @@ select#locale {
 }
 
 #example-vertical > .steps ul li.done a i, #example-vertical > .steps ul li.current a i {
-  color: #8280FD;
+  color: #F15922;
 }
 
 #example-vertical > .steps ul li.current:after {
@@ -10767,8 +10767,8 @@ select#locale {
 
 .chip .chip-content .img.c2, .chip .chip-content a.img, .chip .chip-content a.img:hover, .chip .chip-content .dropdown-menu .dropdown-body a:hover .img.main-text, .dropdown-menu .dropdown-body a:hover .chip .chip-content .img.main-text, .chip .chip-content .dropdown-menu.style--two .dropdown-body a:hover .img.time, .dropdown-menu.style--two .dropdown-body a:hover .chip .chip-content .img.time, .chip .chip-content .img.btn.preview, .chip .chip-content #example-vertical > .actions ul li a.img.preview[href="#next"], #example-vertical > .actions ul li .chip .chip-content a.img.preview[href="#next"], .chip .chip-content #example-vertical > .actions ul li a.img.preview[href="#finish"], #example-vertical > .actions ul li .chip .chip-content a.img.preview[href="#finish"], .chip .chip-content .img.btn.style--two, .chip .chip-content #example-vertical > .actions ul li a.img.style--two[href="#next"], #example-vertical > .actions ul li .chip .chip-content a.img.style--two[href="#next"], .chip .chip-content #example-vertical > .actions ul li a.img.style--two[href="#finish"], #example-vertical > .actions ul li .chip .chip-content a.img.style--two[href="#finish"], .chip .chip-content .img.btn.s_alert, .chip .chip-content #example-vertical > .actions ul li a.img.s_alert[href="#next"], #example-vertical > .actions ul li .chip .chip-content a.img.s_alert[href="#next"], .chip .chip-content #example-vertical > .actions ul li a.img.s_alert[href="#finish"], #example-vertical > .actions ul li .chip .chip-content a.img.s_alert[href="#finish"], .chip .chip-content .img.details-btn, .chip .chip-content .img.light-btn, .chip .chip-content table.table-condensed thead tr:nth-child(2) th.img, table.table-condensed thead tr:nth-child(2) .chip .chip-content th.img, .chip .chip-content .sidebar .sidebar-body li.active > a.img, .sidebar .sidebar-body .chip .chip-content li.active > a.img, .chip .chip-content .sidebar .sidebar-body li:hover > a.img, .sidebar .sidebar-body .chip .chip-content li:hover > a.img, .chip .chip-content .aside-body li a.img.active, .aside-body li .chip .chip-content a.img.active, .chip .chip-content .aside-body li:hover a.img, .aside-body li:hover .chip .chip-content a.img, .chip .chip-content .aside-body li.active a.img, .aside-body li.active .chip .chip-content a.img, .chip .chip-content .message:hover p.img.time, .message:hover .chip .chip-content p.img.time, .chip .chip-content .message.active p.img.time, .message.active .chip .chip-content p.img.time, .chip .chip-content .fc-view > table thead th.img.fc-day-header, .fc-view > table thead .chip .chip-content th.img.fc-day-header, .chip .chip-content .notifications a:hover p.img, .notifications a:hover .chip .chip-content p.img, .chip .chip-content .news a:hover p.img, .news a:hover .chip .chip-content p.img, .chip .chip-content .img.icon:hover, .chip .chip-content .select2-container--default .select2-selection--multiple .img.select2-selection__choice, .select2-container--default .select2-selection--multiple .chip .chip-content .img.select2-selection__choice, .chip .chip-content .img.p_nav-link, .chip .chip-content .about-nav-tab a.img.active, .about-nav-tab .chip .chip-content a.img.active, .chip .chip-content .img.iconwrap, .chip .chip-content .dragable-list > div.ui-sortable-helper i.img, .dragable-list > div.ui-sortable-helper .chip .chip-content i.img {
   background-color: #E9E7FF;
-  color: #8280FD;
-  border-color: #8280FD !important;
+  color: #F15922;
+  border-color: #F15922 !important;
 }
 
 .chip .chip-content .img.danger {
@@ -11338,7 +11338,7 @@ select#locale {
 }
 
 .base-timer__path-remaining.c2, a.base-timer__path-remaining, .dropdown-menu .dropdown-body a:hover .base-timer__path-remaining.main-text, .dropdown-menu.style--two .dropdown-body a:hover .base-timer__path-remaining.time, .base-timer__path-remaining.btn.preview, #example-vertical > .actions ul li a.base-timer__path-remaining.preview[href="#next"], #example-vertical > .actions ul li a.base-timer__path-remaining.preview[href="#finish"], .base-timer__path-remaining.btn.style--two, #example-vertical > .actions ul li a.base-timer__path-remaining.style--two[href="#next"], #example-vertical > .actions ul li a.base-timer__path-remaining.style--two[href="#finish"], .base-timer__path-remaining.btn.s_alert, #example-vertical > .actions ul li a.base-timer__path-remaining.s_alert[href="#next"], #example-vertical > .actions ul li a.base-timer__path-remaining.s_alert[href="#finish"], .base-timer__path-remaining.details-btn, .base-timer__path-remaining.light-btn, table.table-condensed thead tr:nth-child(2) th.base-timer__path-remaining, table.table-contextual .base-timer__path-remaining.details-btn, .sidebar .sidebar-body li.active > a.base-timer__path-remaining, .sidebar .sidebar-body li:hover > a.base-timer__path-remaining, .aside-body li a.base-timer__path-remaining.active, .aside-body li:hover a.base-timer__path-remaining, .aside-body li.active a.base-timer__path-remaining, .aside-body li.fc-event a.base-timer__path-remaining:hover, .message:hover p.base-timer__path-remaining.time, .message.active p.base-timer__path-remaining.time, .fc-view > table thead th.base-timer__path-remaining.fc-day-header, .notifications a:hover p.base-timer__path-remaining, .news a:hover p.base-timer__path-remaining, .base-timer__path-remaining.icon:hover, .select2-container--default .select2-selection--multiple .base-timer__path-remaining.select2-selection__choice, .base-timer__path-remaining.p_nav-link, .about-nav-tab a.base-timer__path-remaining.active, .base-timer__path-remaining.iconwrap, .dragable-list > div.ui-sortable-helper i.base-timer__path-remaining {
-  color: #8280FD;
+  color: #F15922;
 }
 
 .base-timer__label,
@@ -11755,7 +11755,7 @@ select#locale {
 }
 
 .iconwrap {
-  border: 1px dashed #8280FD;
+  border: 1px dashed #F15922;
   width: 32px;
   height: 32px;
   display: -webkit-box;
@@ -11936,7 +11936,7 @@ select#locale {
 
 .post-footer .love:hover svg path {
   fill: #E9E7FF;
-  stroke: #8280FD;
+  stroke: #F15922;
 }
 
 .post-footer > div:not(:last-child) {
@@ -12144,7 +12144,7 @@ select#locale {
 }
 
 .dragable-list > div.ui-sortable-helper svg path#Path_365 {
-  fill: #8280FD;
+  fill: #F15922;
 }
 
 /* Tour */
@@ -12274,7 +12274,7 @@ select#locale {
 }
 
 .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
-  background: #8280FD;
+  background: #F15922;
 }
 
 .swiper-slide {

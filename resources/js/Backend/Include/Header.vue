@@ -3,8 +3,8 @@
       <header class="header fixed-top d-flex align-content-center flex-wrap">
          <!-- Logo -->
          <div class="logo">
-            <a href="index.html" class="default-logo"><img src="/backend/assets/img/logo.png" alt=""></a>
-            <a href="index.html" class="mobile-logo"><img src="/backend/assets/img/mobile-logo.png" alt=""></a>
+            <a href="/admin" class="default-logo"><img src="/backend/assets/img/depot25.png" alt=""></a>
+            <a href="/admin" class="mobile-logo"><img src="/backend/assets/img/depot25.png" alt=""></a>
          </div>
          <!-- End Logo -->
 

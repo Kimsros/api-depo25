@@ -28,14 +28,14 @@ $(function() {
             resize: !0,
             smooth: !1,
             pointSize: 3,
-            pointStrokeColors: ["#8280FD", "#67CF94", "#FC7383"],
+            pointStrokeColors: ["#F15922", "#67CF94", "#FC7383"],
             gridLineColor: "#e3e3e3",
             behaveLikeLine: !0,
             numLines: 6,
             gridtextSize: 14,
             lineWidth: 3,
             hideHover: "auto",
-            lineColors: ["#8280FD", "#67CF94", "#FC7383"],
+            lineColors: ["#F15922", "#67CF94", "#FC7383"],
         });
     
         new Morris.Line({
