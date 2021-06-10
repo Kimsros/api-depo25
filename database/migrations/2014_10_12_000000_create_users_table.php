@@ -30,6 +30,23 @@ class CreateUsersTable extends Migration
             $table->bigInteger('updated_by')->nullable();
             $table->timestamps();
         });
+
+        DB::table('users')->insert(
+            [
+                'email'=>'administrator@khbmedia.asia',
+                'password'=>Hash::make('ASDasd12345$$'),
+                'first_name'=> 'my',
+                'last_name'=> 'sey',
+                'telephone'=> '09876543',
+                'bank_id'=> '1',
+                'role_id'=>1,
+                'pricing_id'=>1,
+                'status'=>1,
+                'updated_by'=>1,
+                'created_at'=>now(),
+                'updated_at'=>now()
+            ]
+        );
     }
 
     /**

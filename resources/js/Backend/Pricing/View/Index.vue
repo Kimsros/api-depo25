@@ -45,12 +45,25 @@
                                 <!-- Pagination -->
                                 <div class="pagination style--two d-flex flex-column align-items-center ml-n2">
                                     <ul class="list-inline d-inline-flex align-items-center">
-                                    <li><a href="#">
-                                        <img src="/backend/assets/img/svg/left-angle.svg" alt="" class="svg">
-                                    </a></li>
-                                    <li><a href="#" class="current">
-                                        <img src="/backend/assets/img/svg/right-angle.svg" alt="" class="svg">
-                                    </a></li>
+                                        <li>
+                                            <a href="#">
+                                                <img src="/backend/assets/img/svg/left-angle.svg" alt="" class="svg">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="current">
+                                                <img src="/backend/assets/img/svg/right-angle.svg" alt="" class="svg">
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="current">
+                                                <div class="form-row">
+                                                    <div class="col-12 text-right">
+                                                        <button type="submit" class="btn long">Add More</button>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
                                     </ul>
                                 </div>
                                 <!-- End Pagination -->

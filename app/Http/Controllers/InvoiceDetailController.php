@@ -14,7 +14,11 @@ class InvoiceDetailController extends Controller
      */
     public function index()
     {
-        //
+        try{
+            return response()->json(['success'=>invoice_detail::where('status',1)->get()]);
+        }catch(\Exception $e){
+            return response()->json(['error'=>$e->getMessage()]);
+        }
     }
 
     /**
@@ -24,7 +28,11 @@ class InvoiceDetailController extends Controller
      */
     public function create()
     {
-        //
+        try{
+
+        }catch(\Exception $e){
+            return response()->json(['error'=>$e->getMessage()]);
+        }
     }
 
     /**
@@ -35,7 +43,28 @@ class InvoiceDetailController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        try{
+            $validation=\Validator($request->all(),[
+                'invoice_id'=>'required|integer',
+                'product_id'=>'required|integer',
+                'product_name'=>'required',
+                'product_color_id'=>'required|integer',
+                'qty'=>'required|numeric',
+                'price'=>'required|numeric'
+            ]);
+            if($validation->fails()){
+                return response()->json(['error'=>$validation->getMessageBag()]);
+            }
+            $data=$request->all();
+            $data['updated_by']=1;
+            if(invoice_detail::create($data)){
+                return response()->json(['success'=>'Invoice detail is inserted !!']);
+            }else{
+                return response()->json(['error'=>'Invoice detail isn not inserted !!']);
+            }
+        }catch(\Exception $e){
+            return response()->json(['error'=>$e->getMessage()]);
+        }
     }
 
     /**
@@ -46,7 +75,11 @@ class InvoiceDetailController extends Controller
      */
     public function show(invoice_detail $invoice_detail)
     {
-        //
+        try{
+
+        }catch(\Exception $e){
+            return response()->json(['error'=>$e->getMessage()]);
+        }
     }
 
     /**
@@ -57,7 +90,11 @@ class InvoiceDetailController extends Controller
      */
     public function edit(invoice_detail $invoice_detail)
     {
-        //
+        try{
+            return response()->json(['success'=>$invoice_detail]);
+        }catch(\Exception $e){
+            return response()->json(['error'=>$e->getMessage()]);
+        }
     }
 
     /**
@@ -69,7 +106,28 @@ class InvoiceDetailController extends Controller
      */
     public function update(Request $request, invoice_detail $invoice_detail)
     {
-        //
+        try{
+            $validation=\Validator($request->all(),[
+                'invoice_id'=>'required|integer',
+                'product_id'=>'required|integer',
+                'product_name'=>'required',
+                'product_color_id'=>'required|integer',
+                'qty'=>'required|numeric',
+                'price'=>'required|numeric'
+            ]);
+            if($validation->fails()){
+                return response()->json(['error'=>$validation->getMessageBag()]);
+            }
+            $data=$request->all();
+            $data['updated_by']=1;
+            if(invoice_detail::where('id',$invoice_detail['id'])->update($data)){
+                return response()->json(['success'=>'Invoice detail is updated !!']);
+            }else{
+                return response()->json(['error'=>'Invoice detail isn not updated !!']);
+            }
+        }catch(\Exception $e){
+            return response()->json(['error'=>$e->getMessage()]);
+        }
     }
 
     /**
@@ -80,6 +138,14 @@ class InvoiceDetailController extends Controller
      */
     public function destroy(invoice_detail $invoice_detail)
     {
-        //
+        try{
+            if(invoice_detail::where('id',$invoice_detail['id'])->delete()){
+                return response()->json(['success'=>'Invoice detail is deleted !!']);
+            }else{
+                return response()->json(['error'=>'Invoice detail is not deleted !!']);
+            }
+        }catch(\Exception $e){
+            return response()->json(['error'=>$e->getMessage()]);
+        }
     }
 }

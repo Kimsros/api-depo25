@@ -1930,6 +1930,27 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Backend/Auth/View/Login.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Backend/Auth/View/Login.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Backend/Dashboard/View/Index.vue?vue&type=script&lang=js&":
 /*!************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Backend/Dashboard/View/Index.vue?vue&type=script&lang=js& ***!
@@ -3171,6 +3192,273 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Backend/Product_Category/View/Add_category.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Backend/Product_Category/View/Add_category.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {
+      category: {
+        name: null,
+        icon: null
+      }
+    };
+  },
+  methods: {
+    insertData: function insertData() {
+      var _this = this;
+
+      if (this.category.name && this.category.icon) {
+        var fd = new FormData();
+        fd.append("name", this.category.name);
+        fd.append("icon", this.category.icon);
+        axios.post('/api/category', fd).then(function (response) {
+          // console.log(response.data);
+          if (response.data.success) {
+            _this.$router.push("/admin/list_category");
+          } else {
+            console.log(response.data.error);
+          }
+        });
+      } else {
+        alert("data is empty");
+      }
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Backend/Product_Category/View/Index.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Backend/Product_Category/View/Index.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  data: function data() {
+    return {
+      data: null,
+      dataDelete: 0
+    };
+  },
+  mounted: function mounted() {
+    this.getData();
+  },
+  methods: {
+    getId: function getId(id) {
+      this.dataDelete = id;
+    },
+    getData: function getData() {
+      var _this = this;
+
+      axios.get("/api/category").then(function (response) {
+        if (response.data.success) {
+          _this.data = response.data.success;
+        }
+      });
+    },
+    deleteData: function deleteData() {
+      var _this2 = this;
+
+      axios["delete"]('/api/category/' + this.dataDelete).then(function (response) {
+        if (response.data.success) {
+          exampleModal.click();
+
+          _this2.getData();
+        } else {
+          console.log(response.data.error);
+        }
+      });
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Frontend/App.vue?vue&type=script&lang=js&":
 /*!********************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Frontend/App.vue?vue&type=script&lang=js& ***!
@@ -3199,6 +3487,27 @@ __webpack_require__.r(__webpack_exports__);
     Footer: _Include_Footer_vue__WEBPACK_IMPORTED_MODULE_1__.default
   }
 });
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Frontend/Auth/View/Login.vue?vue&type=script&lang=js&":
+/*!********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Frontend/Auth/View/Login.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
 
 /***/ }),
 
@@ -3237,43 +3546,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/Auth/AuthRouter.js":
-/*!*****************************************!*\
-  !*** ./resources/js/Auth/AuthRouter.js ***!
-  \*****************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _View_Login_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./View/Login.vue */ "./resources/js/Auth/View/Login.vue");
-/* harmony import */ var _View_Register_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./View/Register.vue */ "./resources/js/Auth/View/Register.vue");
-/* harmony import */ var _View_ForgotPassword_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./View/ForgotPassword.vue */ "./resources/js/Auth/View/ForgotPassword.vue");
-/* harmony import */ var _View_ResetPassword_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./View/ResetPassword.vue */ "./resources/js/Auth/View/ResetPassword.vue");
-
-
-
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  router: [{
-    path: "/login",
-    component: _View_Login_vue__WEBPACK_IMPORTED_MODULE_0__.default
-  }, {
-    path: "/register",
-    component: _View_Register_vue__WEBPACK_IMPORTED_MODULE_1__.default
-  }, {
-    path: "/forgot_password",
-    component: _View_ForgotPassword_vue__WEBPACK_IMPORTED_MODULE_2__.default
-  }, {
-    path: "/reset_password",
-    component: _View_ResetPassword_vue__WEBPACK_IMPORTED_MODULE_3__.default
-  }]
-});
-
-/***/ }),
-
 /***/ "./resources/js/Backend/Advertising/router.js":
 /*!****************************************************!*\
   !*** ./resources/js/Backend/Advertising/router.js ***!
@@ -3287,6 +3559,43 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   router: []
+});
+
+/***/ }),
+
+/***/ "./resources/js/Backend/Auth/router.js":
+/*!*********************************************!*\
+  !*** ./resources/js/Backend/Auth/router.js ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _View_Login_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./View/Login.vue */ "./resources/js/Backend/Auth/View/Login.vue");
+/* harmony import */ var _View_Register_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./View/Register.vue */ "./resources/js/Backend/Auth/View/Register.vue");
+/* harmony import */ var _View_ForgotPassword_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./View/ForgotPassword.vue */ "./resources/js/Backend/Auth/View/ForgotPassword.vue");
+/* harmony import */ var _View_ResetPassword_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./View/ResetPassword.vue */ "./resources/js/Backend/Auth/View/ResetPassword.vue");
+
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  router: [{
+    path: "/admin/login",
+    component: _View_Login_vue__WEBPACK_IMPORTED_MODULE_0__.default
+  }, {
+    path: "/admin/register",
+    component: _View_Register_vue__WEBPACK_IMPORTED_MODULE_1__.default
+  }, {
+    path: "/admin/forgot_password",
+    component: _View_ForgotPassword_vue__WEBPACK_IMPORTED_MODULE_2__.default
+  }, {
+    path: "/admin/reset_password",
+    component: _View_ResetPassword_vue__WEBPACK_IMPORTED_MODULE_3__.default
+  }]
 });
 
 /***/ }),
@@ -3320,6 +3629,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Sale_router_js__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./Sale/router.js */ "./resources/js/Backend/Sale/router.js");
 /* harmony import */ var _System_router_js__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./System/router.js */ "./resources/js/Backend/System/router.js");
 /* harmony import */ var _Report_router_js__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./Report/router.js */ "./resources/js/Backend/Report/router.js");
+/* harmony import */ var _Auth_router_js__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./Auth/router.js */ "./resources/js/Backend/Auth/router.js");
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
 
 function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -3350,7 +3660,8 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 
 
 
-var routes = [].concat(_toConsumableArray(_Advertising_router_js__WEBPACK_IMPORTED_MODULE_0__.default.router), _toConsumableArray(_Blog_router_js__WEBPACK_IMPORTED_MODULE_1__.default.router), _toConsumableArray(_Blog_Category_router_js__WEBPACK_IMPORTED_MODULE_2__.default.router), _toConsumableArray(_Brand_router_js__WEBPACK_IMPORTED_MODULE_3__.default.router), _toConsumableArray(_Contact_router_js__WEBPACK_IMPORTED_MODULE_4__.default.router), _toConsumableArray(_Delivery_router_js__WEBPACK_IMPORTED_MODULE_5__.default.router), _toConsumableArray(_Payment_router_js__WEBPACK_IMPORTED_MODULE_6__.default.router), _toConsumableArray(_Pricing_router_js__WEBPACK_IMPORTED_MODULE_7__.default.router), _toConsumableArray(_Product_router_js__WEBPACK_IMPORTED_MODULE_8__.default.router), _toConsumableArray(_Product_Category_router_js__WEBPACK_IMPORTED_MODULE_9__.default.router), _toConsumableArray(_Purchase_router_js__WEBPACK_IMPORTED_MODULE_10__.default.router), _toConsumableArray(_Role_Permission_router_js__WEBPACK_IMPORTED_MODULE_11__.default.router), _toConsumableArray(_User_router_js__WEBPACK_IMPORTED_MODULE_12__.default.router), _toConsumableArray(_Dashboard_router_js__WEBPACK_IMPORTED_MODULE_13__.default.router), _toConsumableArray(_Shop_router_js__WEBPACK_IMPORTED_MODULE_14__.default.router), _toConsumableArray(_Sale_router_js__WEBPACK_IMPORTED_MODULE_15__.default.router), _toConsumableArray(_System_router_js__WEBPACK_IMPORTED_MODULE_16__.default.router), _toConsumableArray(_Report_router_js__WEBPACK_IMPORTED_MODULE_17__.default.router));
+
+var routes = [].concat(_toConsumableArray(_Advertising_router_js__WEBPACK_IMPORTED_MODULE_0__.default.router), _toConsumableArray(_Blog_router_js__WEBPACK_IMPORTED_MODULE_1__.default.router), _toConsumableArray(_Blog_Category_router_js__WEBPACK_IMPORTED_MODULE_2__.default.router), _toConsumableArray(_Brand_router_js__WEBPACK_IMPORTED_MODULE_3__.default.router), _toConsumableArray(_Contact_router_js__WEBPACK_IMPORTED_MODULE_4__.default.router), _toConsumableArray(_Delivery_router_js__WEBPACK_IMPORTED_MODULE_5__.default.router), _toConsumableArray(_Payment_router_js__WEBPACK_IMPORTED_MODULE_6__.default.router), _toConsumableArray(_Pricing_router_js__WEBPACK_IMPORTED_MODULE_7__.default.router), _toConsumableArray(_Product_router_js__WEBPACK_IMPORTED_MODULE_8__.default.router), _toConsumableArray(_Product_Category_router_js__WEBPACK_IMPORTED_MODULE_9__.default.router), _toConsumableArray(_Purchase_router_js__WEBPACK_IMPORTED_MODULE_10__.default.router), _toConsumableArray(_Role_Permission_router_js__WEBPACK_IMPORTED_MODULE_11__.default.router), _toConsumableArray(_User_router_js__WEBPACK_IMPORTED_MODULE_12__.default.router), _toConsumableArray(_Dashboard_router_js__WEBPACK_IMPORTED_MODULE_13__.default.router), _toConsumableArray(_Shop_router_js__WEBPACK_IMPORTED_MODULE_14__.default.router), _toConsumableArray(_Sale_router_js__WEBPACK_IMPORTED_MODULE_15__.default.router), _toConsumableArray(_System_router_js__WEBPACK_IMPORTED_MODULE_16__.default.router), _toConsumableArray(_Auth_router_js__WEBPACK_IMPORTED_MODULE_18__.default.router), _toConsumableArray(_Report_router_js__WEBPACK_IMPORTED_MODULE_17__.default.router));
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   router: routes
 });
@@ -3529,8 +3840,33 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var _View_Index_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./View/Index.vue */ "./resources/js/Backend/Product/View/Index.vue");
+/* harmony import */ var _View_Attribute_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./View/Attribute.vue */ "./resources/js/Backend/Product/View/Attribute.vue");
+/* harmony import */ var _View_Brand_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./View/Brand.vue */ "./resources/js/Backend/Product/View/Brand.vue");
+/* harmony import */ var _View_Category_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./View/Category.vue */ "./resources/js/Backend/Product/View/Category.vue");
+/* harmony import */ var _View_House_product_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./View/House_product.vue */ "./resources/js/Backend/Product/View/House_product.vue");
+
+
+
+
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  router: []
+  router: [{
+    path: "/admin/list_product",
+    component: _View_Index_vue__WEBPACK_IMPORTED_MODULE_0__.default
+  }, {
+    path: "/admin/list_attribute",
+    component: _View_Attribute_vue__WEBPACK_IMPORTED_MODULE_1__.default
+  }, {
+    path: "/admin/list_brand",
+    component: _View_Brand_vue__WEBPACK_IMPORTED_MODULE_2__.default
+  }, {
+    path: "/admin/list_product_category",
+    component: _View_Category_vue__WEBPACK_IMPORTED_MODULE_3__.default
+  }, {
+    path: "/admin/list_house_product",
+    component: _View_House_product_vue__WEBPACK_IMPORTED_MODULE_4__.default
+  }]
 });
 
 /***/ }),
@@ -3546,8 +3882,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var _View_Add_category_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./View/Add_category.vue */ "./resources/js/Backend/Product_Category/View/Add_category.vue");
+/* harmony import */ var _View_Index_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./View/Index.vue */ "./resources/js/Backend/Product_Category/View/Index.vue");
+
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  router: []
+  router: [{
+    path: "/admin/add_category",
+    component: _View_Add_category_vue__WEBPACK_IMPORTED_MODULE_0__.default
+  }, {
+    path: "/admin/list_category",
+    component: _View_Index_vue__WEBPACK_IMPORTED_MODULE_1__.default
+  }]
 });
 
 /***/ }),
@@ -3763,6 +4109,43 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/Frontend/Auth/router.js":
+/*!**********************************************!*\
+  !*** ./resources/js/Frontend/Auth/router.js ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _View_Login_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./View/Login.vue */ "./resources/js/Frontend/Auth/View/Login.vue");
+/* harmony import */ var _View_Register_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./View/Register.vue */ "./resources/js/Frontend/Auth/View/Register.vue");
+/* harmony import */ var _View_ForgotPassword_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./View/ForgotPassword.vue */ "./resources/js/Frontend/Auth/View/ForgotPassword.vue");
+/* harmony import */ var _View_ResetPassword_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./View/ResetPassword.vue */ "./resources/js/Frontend/Auth/View/ResetPassword.vue");
+
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  router: [{
+    path: "/admin/login",
+    component: _View_Login_vue__WEBPACK_IMPORTED_MODULE_0__.default
+  }, {
+    path: "/admin/register",
+    component: _View_Register_vue__WEBPACK_IMPORTED_MODULE_1__.default
+  }, {
+    path: "/admin/forgot_password",
+    component: _View_ForgotPassword_vue__WEBPACK_IMPORTED_MODULE_2__.default
+  }, {
+    path: "/admin/reset_password",
+    component: _View_ResetPassword_vue__WEBPACK_IMPORTED_MODULE_3__.default
+  }]
+});
+
+/***/ }),
+
 /***/ "./resources/js/Frontend/Blog/router.js":
 /*!**********************************************!*\
   !*** ./resources/js/Frontend/Blog/router.js ***!
@@ -3882,6 +4265,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Sell_router_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Sell/router.js */ "./resources/js/Frontend/Sell/router.js");
 /* harmony import */ var _About_router_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./About/router.js */ "./resources/js/Frontend/About/router.js");
 /* harmony import */ var _Term_And_Condition_router_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./Term_And_Condition/router.js */ "./resources/js/Frontend/Term_And_Condition/router.js");
+/* harmony import */ var _Auth_router_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./Auth/router.js */ "./resources/js/Frontend/Auth/router.js");
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
 
 function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -3904,7 +4288,8 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 
 
 
-var routes = [].concat(_toConsumableArray(_Blog_router_js__WEBPACK_IMPORTED_MODULE_0__.default.router), _toConsumableArray(_Buy_router_js__WEBPACK_IMPORTED_MODULE_1__.default.router), _toConsumableArray(_Checkout_router_js__WEBPACK_IMPORTED_MODULE_2__.default.router), _toConsumableArray(_Contact_router_js__WEBPACK_IMPORTED_MODULE_3__.default.router), _toConsumableArray(_Home_router_js__WEBPACK_IMPORTED_MODULE_4__.default.router), _toConsumableArray(_Order_router_js__WEBPACK_IMPORTED_MODULE_5__.default.router), _toConsumableArray(_Rent_router_js__WEBPACK_IMPORTED_MODULE_6__.default.router), _toConsumableArray(_Sell_router_js__WEBPACK_IMPORTED_MODULE_7__.default.router), _toConsumableArray(_Term_And_Condition_router_js__WEBPACK_IMPORTED_MODULE_9__.default.router), _toConsumableArray(_About_router_js__WEBPACK_IMPORTED_MODULE_8__.default.router));
+
+var routes = [].concat(_toConsumableArray(_Blog_router_js__WEBPACK_IMPORTED_MODULE_0__.default.router), _toConsumableArray(_Buy_router_js__WEBPACK_IMPORTED_MODULE_1__.default.router), _toConsumableArray(_Checkout_router_js__WEBPACK_IMPORTED_MODULE_2__.default.router), _toConsumableArray(_Contact_router_js__WEBPACK_IMPORTED_MODULE_3__.default.router), _toConsumableArray(_Home_router_js__WEBPACK_IMPORTED_MODULE_4__.default.router), _toConsumableArray(_Order_router_js__WEBPACK_IMPORTED_MODULE_5__.default.router), _toConsumableArray(_Rent_router_js__WEBPACK_IMPORTED_MODULE_6__.default.router), _toConsumableArray(_Sell_router_js__WEBPACK_IMPORTED_MODULE_7__.default.router), _toConsumableArray(_Term_And_Condition_router_js__WEBPACK_IMPORTED_MODULE_9__.default.router), _toConsumableArray(_About_router_js__WEBPACK_IMPORTED_MODULE_8__.default.router), _toConsumableArray(_Auth_router_js__WEBPACK_IMPORTED_MODULE_10__.default.router));
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   router: routes
 });
@@ -4128,11 +4513,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
-/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js");
+/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
 /* harmony import */ var _Backend_BackendRouter__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Backend/BackendRouter */ "./resources/js/Backend/BackendRouter.js");
 /* harmony import */ var _Frontend_FrontendRouter__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Frontend/FrontendRouter */ "./resources/js/Frontend/FrontendRouter.js");
-/* harmony import */ var _Auth_AuthRouter__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Auth/AuthRouter */ "./resources/js/Auth/AuthRouter.js");
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
 
 function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -4149,10 +4533,9 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 
 
 
-
-vue__WEBPACK_IMPORTED_MODULE_3__.default.use(vue_router__WEBPACK_IMPORTED_MODULE_4__.default);
-var a = [].concat(_toConsumableArray(_Backend_BackendRouter__WEBPACK_IMPORTED_MODULE_0__.default.router), _toConsumableArray(_Frontend_FrontendRouter__WEBPACK_IMPORTED_MODULE_1__.default.router), _toConsumableArray(_Auth_AuthRouter__WEBPACK_IMPORTED_MODULE_2__.default.router));
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (new vue_router__WEBPACK_IMPORTED_MODULE_4__.default({
+vue__WEBPACK_IMPORTED_MODULE_2__.default.use(vue_router__WEBPACK_IMPORTED_MODULE_3__.default);
+var a = [].concat(_toConsumableArray(_Backend_BackendRouter__WEBPACK_IMPORTED_MODULE_0__.default.router), _toConsumableArray(_Frontend_FrontendRouter__WEBPACK_IMPORTED_MODULE_1__.default.router));
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (new vue_router__WEBPACK_IMPORTED_MODULE_3__.default({
   routes: a,
   mode: 'history',
   scrollBehavior: function scrollBehavior() {
@@ -40476,142 +40859,6 @@ try {
 
 /***/ }),
 
-/***/ "./resources/js/Auth/View/ForgotPassword.vue":
-/*!***************************************************!*\
-  !*** ./resources/js/Auth/View/ForgotPassword.vue ***!
-  \***************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-var render, staticRenderFns
-var script = {}
-
-
-/* normalize component */
-;
-var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_0__.default)(
-  script,
-  render,
-  staticRenderFns,
-  false,
-  null,
-  null,
-  null
-  
-)
-
-component.options.__file = "resources/js/Auth/View/ForgotPassword.vue"
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/Auth/View/Login.vue":
-/*!******************************************!*\
-  !*** ./resources/js/Auth/View/Login.vue ***!
-  \******************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-var render, staticRenderFns
-var script = {}
-
-
-/* normalize component */
-;
-var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_0__.default)(
-  script,
-  render,
-  staticRenderFns,
-  false,
-  null,
-  null,
-  null
-  
-)
-
-component.options.__file = "resources/js/Auth/View/Login.vue"
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/Auth/View/Register.vue":
-/*!*********************************************!*\
-  !*** ./resources/js/Auth/View/Register.vue ***!
-  \*********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-var render, staticRenderFns
-var script = {}
-
-
-/* normalize component */
-;
-var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_0__.default)(
-  script,
-  render,
-  staticRenderFns,
-  false,
-  null,
-  null,
-  null
-  
-)
-
-component.options.__file = "resources/js/Auth/View/Register.vue"
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/Auth/View/ResetPassword.vue":
-/*!**************************************************!*\
-  !*** ./resources/js/Auth/View/ResetPassword.vue ***!
-  \**************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-var render, staticRenderFns
-var script = {}
-
-
-/* normalize component */
-;
-var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_0__.default)(
-  script,
-  render,
-  staticRenderFns,
-  false,
-  null,
-  null,
-  null
-  
-)
-
-component.options.__file = "resources/js/Auth/View/ResetPassword.vue"
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
-
-/***/ }),
-
 /***/ "./resources/js/Backend/App.vue":
 /*!**************************************!*\
   !*** ./resources/js/Backend/App.vue ***!
@@ -40647,6 +40894,147 @@ var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__
 /* hot reload */
 if (false) { var api; }
 component.options.__file = "resources/js/Backend/App.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/Backend/Auth/View/ForgotPassword.vue":
+/*!***********************************************************!*\
+  !*** ./resources/js/Backend/Auth/View/ForgotPassword.vue ***!
+  \***********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+var render, staticRenderFns
+var script = {}
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_0__.default)(
+  script,
+  render,
+  staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+component.options.__file = "resources/js/Backend/Auth/View/ForgotPassword.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/Backend/Auth/View/Login.vue":
+/*!**************************************************!*\
+  !*** ./resources/js/Backend/Auth/View/Login.vue ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _Login_vue_vue_type_template_id_650874fd_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Login.vue?vue&type=template&id=650874fd&scoped=true& */ "./resources/js/Backend/Auth/View/Login.vue?vue&type=template&id=650874fd&scoped=true&");
+/* harmony import */ var _Login_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Login.vue?vue&type=script&lang=js& */ "./resources/js/Backend/Auth/View/Login.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__.default)(
+  _Login_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
+  _Login_vue_vue_type_template_id_650874fd_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
+  _Login_vue_vue_type_template_id_650874fd_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  "650874fd",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/Backend/Auth/View/Login.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/Backend/Auth/View/Register.vue":
+/*!*****************************************************!*\
+  !*** ./resources/js/Backend/Auth/View/Register.vue ***!
+  \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+var render, staticRenderFns
+var script = {}
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_0__.default)(
+  script,
+  render,
+  staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+component.options.__file = "resources/js/Backend/Auth/View/Register.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/Backend/Auth/View/ResetPassword.vue":
+/*!**********************************************************!*\
+  !*** ./resources/js/Backend/Auth/View/ResetPassword.vue ***!
+  \**********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+var render, staticRenderFns
+var script = {}
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_0__.default)(
+  script,
+  render,
+  staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+component.options.__file = "resources/js/Backend/Auth/View/ResetPassword.vue"
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
 
 /***/ }),
@@ -40945,6 +41333,269 @@ var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__
 /* hot reload */
 if (false) { var api; }
 component.options.__file = "resources/js/Backend/Pricing/View/Index.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/Backend/Product/View/Attribute.vue":
+/*!*********************************************************!*\
+  !*** ./resources/js/Backend/Product/View/Attribute.vue ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _Attribute_vue_vue_type_template_id_f246832a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Attribute.vue?vue&type=template&id=f246832a& */ "./resources/js/Backend/Product/View/Attribute.vue?vue&type=template&id=f246832a&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+var script = {}
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__.default)(
+  script,
+  _Attribute_vue_vue_type_template_id_f246832a___WEBPACK_IMPORTED_MODULE_0__.render,
+  _Attribute_vue_vue_type_template_id_f246832a___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/Backend/Product/View/Attribute.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/Backend/Product/View/Brand.vue":
+/*!*****************************************************!*\
+  !*** ./resources/js/Backend/Product/View/Brand.vue ***!
+  \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _Brand_vue_vue_type_template_id_4fad2556___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Brand.vue?vue&type=template&id=4fad2556& */ "./resources/js/Backend/Product/View/Brand.vue?vue&type=template&id=4fad2556&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+var script = {}
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__.default)(
+  script,
+  _Brand_vue_vue_type_template_id_4fad2556___WEBPACK_IMPORTED_MODULE_0__.render,
+  _Brand_vue_vue_type_template_id_4fad2556___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/Backend/Product/View/Brand.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/Backend/Product/View/Category.vue":
+/*!********************************************************!*\
+  !*** ./resources/js/Backend/Product/View/Category.vue ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _Category_vue_vue_type_template_id_95c12302___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Category.vue?vue&type=template&id=95c12302& */ "./resources/js/Backend/Product/View/Category.vue?vue&type=template&id=95c12302&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+var script = {}
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__.default)(
+  script,
+  _Category_vue_vue_type_template_id_95c12302___WEBPACK_IMPORTED_MODULE_0__.render,
+  _Category_vue_vue_type_template_id_95c12302___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/Backend/Product/View/Category.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/Backend/Product/View/House_product.vue":
+/*!*************************************************************!*\
+  !*** ./resources/js/Backend/Product/View/House_product.vue ***!
+  \*************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _House_product_vue_vue_type_template_id_07f8fdc2___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./House_product.vue?vue&type=template&id=07f8fdc2& */ "./resources/js/Backend/Product/View/House_product.vue?vue&type=template&id=07f8fdc2&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+var script = {}
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__.default)(
+  script,
+  _House_product_vue_vue_type_template_id_07f8fdc2___WEBPACK_IMPORTED_MODULE_0__.render,
+  _House_product_vue_vue_type_template_id_07f8fdc2___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/Backend/Product/View/House_product.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/Backend/Product/View/Index.vue":
+/*!*****************************************************!*\
+  !*** ./resources/js/Backend/Product/View/Index.vue ***!
+  \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _Index_vue_vue_type_template_id_4e786521___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Index.vue?vue&type=template&id=4e786521& */ "./resources/js/Backend/Product/View/Index.vue?vue&type=template&id=4e786521&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+var script = {}
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__.default)(
+  script,
+  _Index_vue_vue_type_template_id_4e786521___WEBPACK_IMPORTED_MODULE_0__.render,
+  _Index_vue_vue_type_template_id_4e786521___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/Backend/Product/View/Index.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/Backend/Product_Category/View/Add_category.vue":
+/*!*********************************************************************!*\
+  !*** ./resources/js/Backend/Product_Category/View/Add_category.vue ***!
+  \*********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _Add_category_vue_vue_type_template_id_30800184___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Add_category.vue?vue&type=template&id=30800184& */ "./resources/js/Backend/Product_Category/View/Add_category.vue?vue&type=template&id=30800184&");
+/* harmony import */ var _Add_category_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Add_category.vue?vue&type=script&lang=js& */ "./resources/js/Backend/Product_Category/View/Add_category.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__.default)(
+  _Add_category_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
+  _Add_category_vue_vue_type_template_id_30800184___WEBPACK_IMPORTED_MODULE_0__.render,
+  _Add_category_vue_vue_type_template_id_30800184___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/Backend/Product_Category/View/Add_category.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/Backend/Product_Category/View/Index.vue":
+/*!**************************************************************!*\
+  !*** ./resources/js/Backend/Product_Category/View/Index.vue ***!
+  \**************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _Index_vue_vue_type_template_id_476471e0___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Index.vue?vue&type=template&id=476471e0& */ "./resources/js/Backend/Product_Category/View/Index.vue?vue&type=template&id=476471e0&");
+/* harmony import */ var _Index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Index.vue?vue&type=script&lang=js& */ "./resources/js/Backend/Product_Category/View/Index.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__.default)(
+  _Index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
+  _Index_vue_vue_type_template_id_476471e0___WEBPACK_IMPORTED_MODULE_0__.render,
+  _Index_vue_vue_type_template_id_476471e0___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/Backend/Product_Category/View/Index.vue"
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
 
 /***/ }),
@@ -41543,6 +42194,147 @@ component.options.__file = "resources/js/Frontend/App.vue"
 
 /***/ }),
 
+/***/ "./resources/js/Frontend/Auth/View/ForgotPassword.vue":
+/*!************************************************************!*\
+  !*** ./resources/js/Frontend/Auth/View/ForgotPassword.vue ***!
+  \************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+var render, staticRenderFns
+var script = {}
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_0__.default)(
+  script,
+  render,
+  staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+component.options.__file = "resources/js/Frontend/Auth/View/ForgotPassword.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/Frontend/Auth/View/Login.vue":
+/*!***************************************************!*\
+  !*** ./resources/js/Frontend/Auth/View/Login.vue ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _Login_vue_vue_type_template_id_b3caeb72_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Login.vue?vue&type=template&id=b3caeb72&scoped=true& */ "./resources/js/Frontend/Auth/View/Login.vue?vue&type=template&id=b3caeb72&scoped=true&");
+/* harmony import */ var _Login_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Login.vue?vue&type=script&lang=js& */ "./resources/js/Frontend/Auth/View/Login.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__.default)(
+  _Login_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__.default,
+  _Login_vue_vue_type_template_id_b3caeb72_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
+  _Login_vue_vue_type_template_id_b3caeb72_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  "b3caeb72",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/Frontend/Auth/View/Login.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/Frontend/Auth/View/Register.vue":
+/*!******************************************************!*\
+  !*** ./resources/js/Frontend/Auth/View/Register.vue ***!
+  \******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+var render, staticRenderFns
+var script = {}
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_0__.default)(
+  script,
+  render,
+  staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+component.options.__file = "resources/js/Frontend/Auth/View/Register.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/Frontend/Auth/View/ResetPassword.vue":
+/*!***********************************************************!*\
+  !*** ./resources/js/Frontend/Auth/View/ResetPassword.vue ***!
+  \***********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+var render, staticRenderFns
+var script = {}
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_0__.default)(
+  script,
+  render,
+  staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+component.options.__file = "resources/js/Frontend/Auth/View/ResetPassword.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/js/Frontend/Blog/View/Detail.vue":
 /*!****************************************************!*\
   !*** ./resources/js/Frontend/Blog/View/Detail.vue ***!
@@ -42116,6 +42908,22 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/Backend/Auth/View/Login.vue?vue&type=script&lang=js&":
+/*!***************************************************************************!*\
+  !*** ./resources/js/Backend/Auth/View/Login.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Login_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Login.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Backend/Auth/View/Login.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Login_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
+
+/***/ }),
+
 /***/ "./resources/js/Backend/Dashboard/View/Index.vue?vue&type=script&lang=js&":
 /*!********************************************************************************!*\
   !*** ./resources/js/Backend/Dashboard/View/Index.vue?vue&type=script&lang=js& ***!
@@ -42128,6 +42936,38 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Index.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Backend/Dashboard/View/Index.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
+
+/***/ }),
+
+/***/ "./resources/js/Backend/Product_Category/View/Add_category.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************!*\
+  !*** ./resources/js/Backend/Product_Category/View/Add_category.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Add_category_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Add_category.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Backend/Product_Category/View/Add_category.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Add_category_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
+
+/***/ }),
+
+/***/ "./resources/js/Backend/Product_Category/View/Index.vue?vue&type=script&lang=js&":
+/*!***************************************************************************************!*\
+  !*** ./resources/js/Backend/Product_Category/View/Index.vue?vue&type=script&lang=js& ***!
+  \***************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Index.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Backend/Product_Category/View/Index.vue?vue&type=script&lang=js&");
  /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Index_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
 
 /***/ }),
@@ -42145,6 +42985,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_App_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./App.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Frontend/App.vue?vue&type=script&lang=js&");
  /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_App_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
+
+/***/ }),
+
+/***/ "./resources/js/Frontend/Auth/View/Login.vue?vue&type=script&lang=js&":
+/*!****************************************************************************!*\
+  !*** ./resources/js/Frontend/Auth/View/Login.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Login_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Login.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Frontend/Auth/View/Login.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Login_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
 
 /***/ }),
 
@@ -42177,6 +43033,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_App_vue_vue_type_template_id_b8a5cc50___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
 /* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_App_vue_vue_type_template_id_b8a5cc50___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./App.vue?vue&type=template&id=b8a5cc50& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Backend/App.vue?vue&type=template&id=b8a5cc50&");
+
+
+/***/ }),
+
+/***/ "./resources/js/Backend/Auth/View/Login.vue?vue&type=template&id=650874fd&scoped=true&":
+/*!*********************************************************************************************!*\
+  !*** ./resources/js/Backend/Auth/View/Login.vue?vue&type=template&id=650874fd&scoped=true& ***!
+  \*********************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Login_vue_vue_type_template_id_650874fd_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Login_vue_vue_type_template_id_650874fd_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Login_vue_vue_type_template_id_650874fd_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Login.vue?vue&type=template&id=650874fd&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Backend/Auth/View/Login.vue?vue&type=template&id=650874fd&scoped=true&");
 
 
 /***/ }),
@@ -42313,6 +43186,125 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Index_vue_vue_type_template_id_41dead2c___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
 /* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Index_vue_vue_type_template_id_41dead2c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Index.vue?vue&type=template&id=41dead2c& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Backend/Pricing/View/Index.vue?vue&type=template&id=41dead2c&");
+
+
+/***/ }),
+
+/***/ "./resources/js/Backend/Product/View/Attribute.vue?vue&type=template&id=f246832a&":
+/*!****************************************************************************************!*\
+  !*** ./resources/js/Backend/Product/View/Attribute.vue?vue&type=template&id=f246832a& ***!
+  \****************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Attribute_vue_vue_type_template_id_f246832a___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Attribute_vue_vue_type_template_id_f246832a___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Attribute_vue_vue_type_template_id_f246832a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Attribute.vue?vue&type=template&id=f246832a& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Backend/Product/View/Attribute.vue?vue&type=template&id=f246832a&");
+
+
+/***/ }),
+
+/***/ "./resources/js/Backend/Product/View/Brand.vue?vue&type=template&id=4fad2556&":
+/*!************************************************************************************!*\
+  !*** ./resources/js/Backend/Product/View/Brand.vue?vue&type=template&id=4fad2556& ***!
+  \************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Brand_vue_vue_type_template_id_4fad2556___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Brand_vue_vue_type_template_id_4fad2556___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Brand_vue_vue_type_template_id_4fad2556___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Brand.vue?vue&type=template&id=4fad2556& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Backend/Product/View/Brand.vue?vue&type=template&id=4fad2556&");
+
+
+/***/ }),
+
+/***/ "./resources/js/Backend/Product/View/Category.vue?vue&type=template&id=95c12302&":
+/*!***************************************************************************************!*\
+  !*** ./resources/js/Backend/Product/View/Category.vue?vue&type=template&id=95c12302& ***!
+  \***************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Category_vue_vue_type_template_id_95c12302___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Category_vue_vue_type_template_id_95c12302___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Category_vue_vue_type_template_id_95c12302___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Category.vue?vue&type=template&id=95c12302& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Backend/Product/View/Category.vue?vue&type=template&id=95c12302&");
+
+
+/***/ }),
+
+/***/ "./resources/js/Backend/Product/View/House_product.vue?vue&type=template&id=07f8fdc2&":
+/*!********************************************************************************************!*\
+  !*** ./resources/js/Backend/Product/View/House_product.vue?vue&type=template&id=07f8fdc2& ***!
+  \********************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_House_product_vue_vue_type_template_id_07f8fdc2___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_House_product_vue_vue_type_template_id_07f8fdc2___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_House_product_vue_vue_type_template_id_07f8fdc2___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./House_product.vue?vue&type=template&id=07f8fdc2& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Backend/Product/View/House_product.vue?vue&type=template&id=07f8fdc2&");
+
+
+/***/ }),
+
+/***/ "./resources/js/Backend/Product/View/Index.vue?vue&type=template&id=4e786521&":
+/*!************************************************************************************!*\
+  !*** ./resources/js/Backend/Product/View/Index.vue?vue&type=template&id=4e786521& ***!
+  \************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Index_vue_vue_type_template_id_4e786521___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Index_vue_vue_type_template_id_4e786521___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Index_vue_vue_type_template_id_4e786521___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Index.vue?vue&type=template&id=4e786521& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Backend/Product/View/Index.vue?vue&type=template&id=4e786521&");
+
+
+/***/ }),
+
+/***/ "./resources/js/Backend/Product_Category/View/Add_category.vue?vue&type=template&id=30800184&":
+/*!****************************************************************************************************!*\
+  !*** ./resources/js/Backend/Product_Category/View/Add_category.vue?vue&type=template&id=30800184& ***!
+  \****************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Add_category_vue_vue_type_template_id_30800184___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Add_category_vue_vue_type_template_id_30800184___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Add_category_vue_vue_type_template_id_30800184___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Add_category.vue?vue&type=template&id=30800184& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Backend/Product_Category/View/Add_category.vue?vue&type=template&id=30800184&");
+
+
+/***/ }),
+
+/***/ "./resources/js/Backend/Product_Category/View/Index.vue?vue&type=template&id=476471e0&":
+/*!*********************************************************************************************!*\
+  !*** ./resources/js/Backend/Product_Category/View/Index.vue?vue&type=template&id=476471e0& ***!
+  \*********************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Index_vue_vue_type_template_id_476471e0___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Index_vue_vue_type_template_id_476471e0___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Index_vue_vue_type_template_id_476471e0___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Index.vue?vue&type=template&id=476471e0& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Backend/Product_Category/View/Index.vue?vue&type=template&id=476471e0&");
 
 
 /***/ }),
@@ -42585,6 +43577,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_App_vue_vue_type_template_id_258d4e22___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
 /* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_App_vue_vue_type_template_id_258d4e22___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./App.vue?vue&type=template&id=258d4e22& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Frontend/App.vue?vue&type=template&id=258d4e22&");
+
+
+/***/ }),
+
+/***/ "./resources/js/Frontend/Auth/View/Login.vue?vue&type=template&id=b3caeb72&scoped=true&":
+/*!**********************************************************************************************!*\
+  !*** ./resources/js/Frontend/Auth/View/Login.vue?vue&type=template&id=b3caeb72&scoped=true& ***!
+  \**********************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Login_vue_vue_type_template_id_b3caeb72_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Login_vue_vue_type_template_id_b3caeb72_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Login_vue_vue_type_template_id_b3caeb72_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Login.vue?vue&type=template&id=b3caeb72&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Frontend/Auth/View/Login.vue?vue&type=template&id=b3caeb72&scoped=true&");
 
 
 /***/ }),
@@ -42887,6 +43896,38 @@ var render = function() {
   ])
 }
 var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Backend/Auth/View/Login.vue?vue&type=template&id=650874fd&scoped=true&":
+/*!************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Backend/Auth/View/Login.vue?vue&type=template&id=650874fd&scoped=true& ***!
+  \************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [_c("h1", [_vm._v("Login")])])
+  }
+]
 render._withStripped = true
 
 
@@ -46148,25 +47189,17 @@ var staticRenderFns = [
       { staticClass: "header fixed-top d-flex align-content-center flex-wrap" },
       [
         _c("div", { staticClass: "logo" }, [
-          _c(
-            "a",
-            { staticClass: "default-logo", attrs: { href: "index.html" } },
-            [
-              _c("img", {
-                attrs: { src: "/backend/assets/img/logo.png", alt: "" }
-              })
-            ]
-          ),
+          _c("a", { staticClass: "default-logo", attrs: { href: "/admin" } }, [
+            _c("img", {
+              attrs: { src: "/backend/assets/img/depot25.png", alt: "" }
+            })
+          ]),
           _vm._v(" "),
-          _c(
-            "a",
-            { staticClass: "mobile-logo", attrs: { href: "index.html" } },
-            [
-              _c("img", {
-                attrs: { src: "/backend/assets/img/mobile-logo.png", alt: "" }
-              })
-            ]
-          )
+          _c("a", { staticClass: "mobile-logo", attrs: { href: "/admin" } }, [
+            _c("img", {
+              attrs: { src: "/backend/assets/img/depot25.png", alt: "" }
+            })
+          ])
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "main-header" }, [
@@ -47536,6 +48569,27 @@ var staticRenderFns = [
                             })
                           ]
                         )
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c(
+                          "a",
+                          { staticClass: "current", attrs: { href: "#" } },
+                          [
+                            _c("div", { staticClass: "form-row" }, [
+                              _c("div", { staticClass: "col-12 text-right" }, [
+                                _c(
+                                  "button",
+                                  {
+                                    staticClass: "btn long",
+                                    attrs: { type: "submit" }
+                                  },
+                                  [_vm._v("Add More")]
+                                )
+                              ])
+                            ])
+                          ]
+                        )
                       ])
                     ]
                   )
@@ -48811,6 +49865,7925 @@ var staticRenderFns = [
           ]
         )
       ])
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Backend/Product/View/Attribute.vue?vue&type=template&id=f246832a&":
+/*!*******************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Backend/Product/View/Attribute.vue?vue&type=template&id=f246832a& ***!
+  \*******************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "card bg-transparent" }, [
+      _c(
+        "div",
+        {
+          staticClass:
+            "contact-header d-flex align-items-sm-center media flex-column flex-sm-row card_color-bg mb-30"
+        },
+        [
+          _c(
+            "div",
+            {
+              staticClass:
+                "contact-header-left media-body d-flex align-items-center mr-4"
+            },
+            [
+              _c("div", { staticClass: "add-new-contact mr-20" }, [
+                _c(
+                  "a",
+                  {
+                    staticClass: "btn-circle",
+                    attrs: {
+                      href: "#",
+                      "data-toggle": "modal",
+                      "data-target": "#contactAddModal"
+                    }
+                  },
+                  [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/backend/assets/img/svg/plus_white.svg",
+                        alt: ""
+                      }
+                    })
+                  ]
+                )
+              ]),
+              _vm._v(" "),
+              _c(
+                "form",
+                {
+                  staticClass: "search-form flex-grow",
+                  attrs: { action: "#" }
+                },
+                [
+                  _c("div", { staticClass: "theme-input-group style--two" }, [
+                    _c("input", {
+                      staticClass: "theme-input-style",
+                      attrs: { type: "text", placeholder: "Search Here" }
+                    }),
+                    _vm._v(" "),
+                    _c("button", { attrs: { type: "submit" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/search-icon.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]
+              )
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass:
+                "contact-header-right d-flex align-items-center justify-content-end mt-3 mt-sm-0"
+            },
+            [
+              _c("div", { staticClass: "grid" }, [
+                _c("a", { attrs: { href: "contact-grid.html" } }, [
+                  _c("img", {
+                    staticClass: "svg",
+                    attrs: {
+                      src: "/backend/assets/img/svg/grid-icon.svg",
+                      alt: ""
+                    }
+                  })
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "star" }, [
+                _c("a", { attrs: { href: "#" } }, [
+                  _c("img", {
+                    staticClass: "svg",
+                    attrs: { src: "/backend/assets/img/svg/star.svg", alt: "" }
+                  })
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "delete_mail" }, [
+                _c("a", { attrs: { href: "#" } }, [
+                  _c("img", {
+                    staticClass: "svg",
+                    attrs: {
+                      src: "/backend/assets/img/svg/delete.svg",
+                      alt: ""
+                    }
+                  })
+                ])
+              ]),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "pagination style--two d-flex flex-column align-items-center ml-n2"
+                },
+                [
+                  _c(
+                    "ul",
+                    {
+                      staticClass:
+                        "list-inline d-inline-flex align-items-center"
+                    },
+                    [
+                      _c("li", [
+                        _c("a", { attrs: { href: "#" } }, [
+                          _c("img", {
+                            staticClass: "svg",
+                            attrs: {
+                              src: "/backend/assets/img/svg/left-angle.svg",
+                              alt: ""
+                            }
+                          })
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c(
+                          "a",
+                          { staticClass: "current", attrs: { href: "#" } },
+                          [
+                            _c("img", {
+                              staticClass: "svg",
+                              attrs: {
+                                src: "/backend/assets/img/svg/right-angle.svg",
+                                alt: ""
+                              }
+                            })
+                          ]
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c(
+                          "a",
+                          { staticClass: "current", attrs: { href: "#" } },
+                          [
+                            _c("div", { staticClass: "form-row" }, [
+                              _c("div", { staticClass: "col-12 text-right" }, [
+                                _c(
+                                  "button",
+                                  {
+                                    staticClass: "btn long",
+                                    attrs: { type: "submit" }
+                                  },
+                                  [_vm._v("Add More")]
+                                )
+                              ])
+                            ])
+                          ]
+                        )
+                      ])
+                    ]
+                  )
+                ]
+              )
+            ]
+          )
+        ]
+      ),
+      _vm._v(" "),
+      _c("div", { staticClass: "table-responsive" }, [
+        _c(
+          "table",
+          { staticClass: "contact-list-table text-nowrap card_color-bg" },
+          [
+            _c("thead", [
+              _c("tr", [
+                _c("th", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("th", { staticClass: "text-center" }, [
+                  _vm._v("Name "),
+                  _c("img", {
+                    staticClass: "svg",
+                    attrs: {
+                      src: "/backend/assets/img/svg/table-down-arrow.svg",
+                      alt: ""
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("th", [_vm._v("Email")]),
+                _vm._v(" "),
+                _c("th", [_vm._v("Phone")]),
+                _vm._v(" "),
+                _c("th", [
+                  _vm._v("Age "),
+                  _c("img", {
+                    staticClass: "svg",
+                    attrs: {
+                      src: "/backend/assets/img/svg/table-down-arrow.svg",
+                      alt: ""
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("th", [_vm._v("Post")]),
+                _vm._v(" "),
+                _c("th", [
+                  _vm._v("Joining Date "),
+                  _c("img", {
+                    staticClass: "svg",
+                    attrs: {
+                      src: "/backend/assets/img/svg/table-down-arrow.svg",
+                      alt: ""
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("th", [
+                  _vm._v("Salary "),
+                  _c("img", {
+                    staticClass: "svg",
+                    attrs: {
+                      src: "/backend/assets/img/svg/table-down-arrow.svg",
+                      alt: ""
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("th", [_vm._v("Actions")])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("tbody", [
+              _c("tr", [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m16.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(
+                        "\n                                                    Arden Spencer\n                                                "
+                      )
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Evangeline62@yahoo.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("(023) 708-6818 x4267")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("June 20, 2015")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$26253.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m20.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(" Favian Maggio DDS ")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Electa_Conroy@hotmail.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("1-076-628-3095 x7154")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("October 11, 2019")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$26253.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m21.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(" Jacey Considine ")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Garry23@yahoo.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("1-016-234-2482")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("January 2, 2016")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$6162.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m22.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(" Kolby Torphy II ")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Phyllis75@hotmail.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("1-345-656-4163 x373")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("August 9, 2017")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$4022.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m23.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(" Mattie Daugherty ")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Jessika.Conroy@yahoo.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("721-969-9795 x09197")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("December 24, 2016")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$11588.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m24.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(" Timothy Littel ")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Nannie_Kling49@hotmail.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("1-251-141-2444 x275")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("February 8, 2019")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$14283.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", { staticClass: "selected" }, [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox", checked: "" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m19.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(" Karli Braun ")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Ruthe_Gleichner@gmail.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("697.704.7326")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("October 25, 2016")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$13329.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", { staticClass: "selected" }, [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox", checked: "" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m16.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(
+                        "\n                                                    Arden Spencer\n                                                "
+                      )
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Evangeline62@yahoo.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("(023) 708-6818 x4267")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("June 20, 2015")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$26253.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m20.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(" Favian Maggio DDS ")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Electa_Conroy@hotmail.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("1-076-628-3095 x7154")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("October 11, 2019")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$26253.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m21.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(" Jacey Considine ")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Garry23@yahoo.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("1-016-234-2482")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("January 2, 2016")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$6162.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m22.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(" Kolby Torphy II ")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Phyllis75@hotmail.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("1-345-656-4163 x373")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("August 9, 2017")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$4022.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m23.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(" Timothy Littel ")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Nannie_Kling49@hotmail.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("1-251-141-2444 x275")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("February 8, 2019")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$14283.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m2.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(" Birdie Thiel ")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Kenya.Stanton@yahoo.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("209-225-4857")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("August 7, 2015")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$18037.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m19.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(" Karli Braun ")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Ruthe_Gleichner@gmail.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("697.704.7326")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("October 25, 2016")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$13329.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ])
+            ])
+          ]
+        )
+      ])
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Backend/Product/View/Brand.vue?vue&type=template&id=4fad2556&":
+/*!***************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Backend/Product/View/Brand.vue?vue&type=template&id=4fad2556& ***!
+  \***************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "card bg-transparent" }, [
+      _c(
+        "div",
+        {
+          staticClass:
+            "contact-header d-flex align-items-sm-center media flex-column flex-sm-row card_color-bg mb-30"
+        },
+        [
+          _c(
+            "div",
+            {
+              staticClass:
+                "contact-header-left media-body d-flex align-items-center mr-4"
+            },
+            [
+              _c("div", { staticClass: "add-new-contact mr-20" }, [
+                _c(
+                  "a",
+                  {
+                    staticClass: "btn-circle",
+                    attrs: {
+                      href: "#",
+                      "data-toggle": "modal",
+                      "data-target": "#contactAddModal"
+                    }
+                  },
+                  [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/backend/assets/img/svg/plus_white.svg",
+                        alt: ""
+                      }
+                    })
+                  ]
+                )
+              ]),
+              _vm._v(" "),
+              _c(
+                "form",
+                {
+                  staticClass: "search-form flex-grow",
+                  attrs: { action: "#" }
+                },
+                [
+                  _c("div", { staticClass: "theme-input-group style--two" }, [
+                    _c("input", {
+                      staticClass: "theme-input-style",
+                      attrs: { type: "text", placeholder: "Search Here" }
+                    }),
+                    _vm._v(" "),
+                    _c("button", { attrs: { type: "submit" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/search-icon.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]
+              )
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass:
+                "contact-header-right d-flex align-items-center justify-content-end mt-3 mt-sm-0"
+            },
+            [
+              _c("div", { staticClass: "grid" }, [
+                _c("a", { attrs: { href: "contact-grid.html" } }, [
+                  _c("img", {
+                    staticClass: "svg",
+                    attrs: {
+                      src: "/backend/assets/img/svg/grid-icon.svg",
+                      alt: ""
+                    }
+                  })
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "star" }, [
+                _c("a", { attrs: { href: "#" } }, [
+                  _c("img", {
+                    staticClass: "svg",
+                    attrs: { src: "/backend/assets/img/svg/star.svg", alt: "" }
+                  })
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "delete_mail" }, [
+                _c("a", { attrs: { href: "#" } }, [
+                  _c("img", {
+                    staticClass: "svg",
+                    attrs: {
+                      src: "/backend/assets/img/svg/delete.svg",
+                      alt: ""
+                    }
+                  })
+                ])
+              ]),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "pagination style--two d-flex flex-column align-items-center ml-n2"
+                },
+                [
+                  _c(
+                    "ul",
+                    {
+                      staticClass:
+                        "list-inline d-inline-flex align-items-center"
+                    },
+                    [
+                      _c("li", [
+                        _c("a", { attrs: { href: "#" } }, [
+                          _c("img", {
+                            staticClass: "svg",
+                            attrs: {
+                              src: "/backend/assets/img/svg/left-angle.svg",
+                              alt: ""
+                            }
+                          })
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c(
+                          "a",
+                          { staticClass: "current", attrs: { href: "#" } },
+                          [
+                            _c("img", {
+                              staticClass: "svg",
+                              attrs: {
+                                src: "/backend/assets/img/svg/right-angle.svg",
+                                alt: ""
+                              }
+                            })
+                          ]
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c(
+                          "a",
+                          { staticClass: "current", attrs: { href: "#" } },
+                          [
+                            _c("div", { staticClass: "form-row" }, [
+                              _c("div", { staticClass: "col-12 text-right" }, [
+                                _c(
+                                  "button",
+                                  {
+                                    staticClass: "btn long",
+                                    attrs: { type: "submit" }
+                                  },
+                                  [_vm._v("Add More")]
+                                )
+                              ])
+                            ])
+                          ]
+                        )
+                      ])
+                    ]
+                  )
+                ]
+              )
+            ]
+          )
+        ]
+      ),
+      _vm._v(" "),
+      _c("div", { staticClass: "table-responsive" }, [
+        _c(
+          "table",
+          { staticClass: "contact-list-table text-nowrap card_color-bg" },
+          [
+            _c("thead", [
+              _c("tr", [
+                _c("th", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("th", { staticClass: "text-center" }, [
+                  _vm._v("Name "),
+                  _c("img", {
+                    staticClass: "svg",
+                    attrs: {
+                      src: "/backend/assets/img/svg/table-down-arrow.svg",
+                      alt: ""
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("th", [_vm._v("Email")]),
+                _vm._v(" "),
+                _c("th", [_vm._v("Phone")]),
+                _vm._v(" "),
+                _c("th", [
+                  _vm._v("Age "),
+                  _c("img", {
+                    staticClass: "svg",
+                    attrs: {
+                      src: "/backend/assets/img/svg/table-down-arrow.svg",
+                      alt: ""
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("th", [_vm._v("Post")]),
+                _vm._v(" "),
+                _c("th", [
+                  _vm._v("Joining Date "),
+                  _c("img", {
+                    staticClass: "svg",
+                    attrs: {
+                      src: "/backend/assets/img/svg/table-down-arrow.svg",
+                      alt: ""
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("th", [
+                  _vm._v("Salary "),
+                  _c("img", {
+                    staticClass: "svg",
+                    attrs: {
+                      src: "/backend/assets/img/svg/table-down-arrow.svg",
+                      alt: ""
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("th", [_vm._v("Actions")])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("tbody", [
+              _c("tr", [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m16.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(
+                        "\n                                                    Arden Spencer\n                                                "
+                      )
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Evangeline62@yahoo.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("(023) 708-6818 x4267")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("June 20, 2015")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$26253.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m20.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(" Favian Maggio DDS ")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Electa_Conroy@hotmail.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("1-076-628-3095 x7154")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("October 11, 2019")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$26253.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m21.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(" Jacey Considine ")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Garry23@yahoo.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("1-016-234-2482")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("January 2, 2016")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$6162.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m22.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(" Kolby Torphy II ")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Phyllis75@hotmail.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("1-345-656-4163 x373")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("August 9, 2017")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$4022.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m23.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(" Mattie Daugherty ")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Jessika.Conroy@yahoo.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("721-969-9795 x09197")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("December 24, 2016")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$11588.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m24.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(" Timothy Littel ")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Nannie_Kling49@hotmail.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("1-251-141-2444 x275")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("February 8, 2019")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$14283.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", { staticClass: "selected" }, [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox", checked: "" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m19.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(" Karli Braun ")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Ruthe_Gleichner@gmail.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("697.704.7326")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("October 25, 2016")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$13329.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", { staticClass: "selected" }, [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox", checked: "" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m16.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(
+                        "\n                                                    Arden Spencer\n                                                "
+                      )
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Evangeline62@yahoo.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("(023) 708-6818 x4267")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("June 20, 2015")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$26253.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m20.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(" Favian Maggio DDS ")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Electa_Conroy@hotmail.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("1-076-628-3095 x7154")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("October 11, 2019")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$26253.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m21.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(" Jacey Considine ")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Garry23@yahoo.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("1-016-234-2482")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("January 2, 2016")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$6162.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m22.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(" Kolby Torphy II ")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Phyllis75@hotmail.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("1-345-656-4163 x373")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("August 9, 2017")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$4022.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m23.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(" Timothy Littel ")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Nannie_Kling49@hotmail.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("1-251-141-2444 x275")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("February 8, 2019")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$14283.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m2.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(" Birdie Thiel ")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Kenya.Stanton@yahoo.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("209-225-4857")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("August 7, 2015")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$18037.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m19.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(" Karli Braun ")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Ruthe_Gleichner@gmail.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("697.704.7326")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("October 25, 2016")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$13329.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ])
+            ])
+          ]
+        )
+      ])
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Backend/Product/View/Category.vue?vue&type=template&id=95c12302&":
+/*!******************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Backend/Product/View/Category.vue?vue&type=template&id=95c12302& ***!
+  \******************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "card bg-transparent" }, [
+      _c(
+        "div",
+        {
+          staticClass:
+            "contact-header d-flex align-items-sm-center media flex-column flex-sm-row card_color-bg mb-30"
+        },
+        [
+          _c(
+            "div",
+            {
+              staticClass:
+                "contact-header-left media-body d-flex align-items-center mr-4"
+            },
+            [
+              _c("div", { staticClass: "add-new-contact mr-20" }, [
+                _c(
+                  "a",
+                  {
+                    staticClass: "btn-circle",
+                    attrs: {
+                      href: "#",
+                      "data-toggle": "modal",
+                      "data-target": "#contactAddModal"
+                    }
+                  },
+                  [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/backend/assets/img/svg/plus_white.svg",
+                        alt: ""
+                      }
+                    })
+                  ]
+                )
+              ]),
+              _vm._v(" "),
+              _c(
+                "form",
+                {
+                  staticClass: "search-form flex-grow",
+                  attrs: { action: "#" }
+                },
+                [
+                  _c("div", { staticClass: "theme-input-group style--two" }, [
+                    _c("input", {
+                      staticClass: "theme-input-style",
+                      attrs: { type: "text", placeholder: "Search Here" }
+                    }),
+                    _vm._v(" "),
+                    _c("button", { attrs: { type: "submit" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/search-icon.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]
+              )
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass:
+                "contact-header-right d-flex align-items-center justify-content-end mt-3 mt-sm-0"
+            },
+            [
+              _c("div", { staticClass: "grid" }, [
+                _c("a", { attrs: { href: "contact-grid.html" } }, [
+                  _c("img", {
+                    staticClass: "svg",
+                    attrs: {
+                      src: "/backend/assets/img/svg/grid-icon.svg",
+                      alt: ""
+                    }
+                  })
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "star" }, [
+                _c("a", { attrs: { href: "#" } }, [
+                  _c("img", {
+                    staticClass: "svg",
+                    attrs: { src: "/backend/assets/img/svg/star.svg", alt: "" }
+                  })
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "delete_mail" }, [
+                _c("a", { attrs: { href: "#" } }, [
+                  _c("img", {
+                    staticClass: "svg",
+                    attrs: {
+                      src: "/backend/assets/img/svg/delete.svg",
+                      alt: ""
+                    }
+                  })
+                ])
+              ]),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "pagination style--two d-flex flex-column align-items-center ml-n2"
+                },
+                [
+                  _c(
+                    "ul",
+                    {
+                      staticClass:
+                        "list-inline d-inline-flex align-items-center"
+                    },
+                    [
+                      _c("li", [
+                        _c("a", { attrs: { href: "#" } }, [
+                          _c("img", {
+                            staticClass: "svg",
+                            attrs: {
+                              src: "/backend/assets/img/svg/left-angle.svg",
+                              alt: ""
+                            }
+                          })
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c(
+                          "a",
+                          { staticClass: "current", attrs: { href: "#" } },
+                          [
+                            _c("img", {
+                              staticClass: "svg",
+                              attrs: {
+                                src: "/backend/assets/img/svg/right-angle.svg",
+                                alt: ""
+                              }
+                            })
+                          ]
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c(
+                          "a",
+                          { staticClass: "current", attrs: { href: "#" } },
+                          [
+                            _c("div", { staticClass: "form-row" }, [
+                              _c("div", { staticClass: "col-12 text-right" }, [
+                                _c(
+                                  "button",
+                                  {
+                                    staticClass: "btn long",
+                                    attrs: { type: "submit" }
+                                  },
+                                  [_vm._v("Add More")]
+                                )
+                              ])
+                            ])
+                          ]
+                        )
+                      ])
+                    ]
+                  )
+                ]
+              )
+            ]
+          )
+        ]
+      ),
+      _vm._v(" "),
+      _c("div", { staticClass: "table-responsive" }, [
+        _c(
+          "table",
+          { staticClass: "contact-list-table text-nowrap card_color-bg" },
+          [
+            _c("thead", [
+              _c("tr", [
+                _c("th", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("th", { staticClass: "text-center" }, [
+                  _vm._v("Name "),
+                  _c("img", {
+                    staticClass: "svg",
+                    attrs: {
+                      src: "/backend/assets/img/svg/table-down-arrow.svg",
+                      alt: ""
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("th", [_vm._v("Email")]),
+                _vm._v(" "),
+                _c("th", [_vm._v("Phone")]),
+                _vm._v(" "),
+                _c("th", [
+                  _vm._v("Age "),
+                  _c("img", {
+                    staticClass: "svg",
+                    attrs: {
+                      src: "/backend/assets/img/svg/table-down-arrow.svg",
+                      alt: ""
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("th", [_vm._v("Post")]),
+                _vm._v(" "),
+                _c("th", [
+                  _vm._v("Joining Date "),
+                  _c("img", {
+                    staticClass: "svg",
+                    attrs: {
+                      src: "/backend/assets/img/svg/table-down-arrow.svg",
+                      alt: ""
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("th", [
+                  _vm._v("Salary "),
+                  _c("img", {
+                    staticClass: "svg",
+                    attrs: {
+                      src: "/backend/assets/img/svg/table-down-arrow.svg",
+                      alt: ""
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("th", [_vm._v("Actions")])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("tbody", [
+              _c("tr", [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m16.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(
+                        "\n                                                    Arden Spencer\n                                                "
+                      )
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Evangeline62@yahoo.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("(023) 708-6818 x4267")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("June 20, 2015")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$26253.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m20.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(" Favian Maggio DDS ")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Electa_Conroy@hotmail.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("1-076-628-3095 x7154")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("October 11, 2019")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$26253.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m21.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(" Jacey Considine ")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Garry23@yahoo.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("1-016-234-2482")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("January 2, 2016")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$6162.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m22.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(" Kolby Torphy II ")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Phyllis75@hotmail.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("1-345-656-4163 x373")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("August 9, 2017")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$4022.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m23.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(" Mattie Daugherty ")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Jessika.Conroy@yahoo.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("721-969-9795 x09197")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("December 24, 2016")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$11588.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m24.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(" Timothy Littel ")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Nannie_Kling49@hotmail.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("1-251-141-2444 x275")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("February 8, 2019")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$14283.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", { staticClass: "selected" }, [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox", checked: "" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m19.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(" Karli Braun ")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Ruthe_Gleichner@gmail.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("697.704.7326")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("October 25, 2016")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$13329.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", { staticClass: "selected" }, [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox", checked: "" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m16.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(
+                        "\n                                                    Arden Spencer\n                                                "
+                      )
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Evangeline62@yahoo.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("(023) 708-6818 x4267")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("June 20, 2015")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$26253.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m20.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(" Favian Maggio DDS ")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Electa_Conroy@hotmail.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("1-076-628-3095 x7154")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("October 11, 2019")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$26253.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m21.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(" Jacey Considine ")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Garry23@yahoo.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("1-016-234-2482")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("January 2, 2016")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$6162.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m22.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(" Kolby Torphy II ")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Phyllis75@hotmail.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("1-345-656-4163 x373")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("August 9, 2017")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$4022.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m23.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(" Timothy Littel ")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Nannie_Kling49@hotmail.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("1-251-141-2444 x275")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("February 8, 2019")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$14283.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m2.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(" Birdie Thiel ")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Kenya.Stanton@yahoo.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("209-225-4857")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("August 7, 2015")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$18037.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m19.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(" Karli Braun ")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Ruthe_Gleichner@gmail.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("697.704.7326")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("October 25, 2016")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$13329.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ])
+            ])
+          ]
+        )
+      ])
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Backend/Product/View/House_product.vue?vue&type=template&id=07f8fdc2&":
+/*!***********************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Backend/Product/View/House_product.vue?vue&type=template&id=07f8fdc2& ***!
+  \***********************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "card bg-transparent" }, [
+      _c(
+        "div",
+        {
+          staticClass:
+            "contact-header d-flex align-items-sm-center media flex-column flex-sm-row card_color-bg mb-30"
+        },
+        [
+          _c(
+            "div",
+            {
+              staticClass:
+                "contact-header-left media-body d-flex align-items-center mr-4"
+            },
+            [
+              _c("div", { staticClass: "add-new-contact mr-20" }, [
+                _c(
+                  "a",
+                  {
+                    staticClass: "btn-circle",
+                    attrs: {
+                      href: "#",
+                      "data-toggle": "modal",
+                      "data-target": "#contactAddModal"
+                    }
+                  },
+                  [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/backend/assets/img/svg/plus_white.svg",
+                        alt: ""
+                      }
+                    })
+                  ]
+                )
+              ]),
+              _vm._v(" "),
+              _c(
+                "form",
+                {
+                  staticClass: "search-form flex-grow",
+                  attrs: { action: "#" }
+                },
+                [
+                  _c("div", { staticClass: "theme-input-group style--two" }, [
+                    _c("input", {
+                      staticClass: "theme-input-style",
+                      attrs: { type: "text", placeholder: "Search Here" }
+                    }),
+                    _vm._v(" "),
+                    _c("button", { attrs: { type: "submit" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/search-icon.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]
+              )
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass:
+                "contact-header-right d-flex align-items-center justify-content-end mt-3 mt-sm-0"
+            },
+            [
+              _c("div", { staticClass: "grid" }, [
+                _c("a", { attrs: { href: "contact-grid.html" } }, [
+                  _c("img", {
+                    staticClass: "svg",
+                    attrs: {
+                      src: "/backend/assets/img/svg/grid-icon.svg",
+                      alt: ""
+                    }
+                  })
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "star" }, [
+                _c("a", { attrs: { href: "#" } }, [
+                  _c("img", {
+                    staticClass: "svg",
+                    attrs: { src: "/backend/assets/img/svg/star.svg", alt: "" }
+                  })
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "delete_mail" }, [
+                _c("a", { attrs: { href: "#" } }, [
+                  _c("img", {
+                    staticClass: "svg",
+                    attrs: {
+                      src: "/backend/assets/img/svg/delete.svg",
+                      alt: ""
+                    }
+                  })
+                ])
+              ]),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "pagination style--two d-flex flex-column align-items-center ml-n2"
+                },
+                [
+                  _c(
+                    "ul",
+                    {
+                      staticClass:
+                        "list-inline d-inline-flex align-items-center"
+                    },
+                    [
+                      _c("li", [
+                        _c("a", { attrs: { href: "#" } }, [
+                          _c("img", {
+                            staticClass: "svg",
+                            attrs: {
+                              src: "/backend/assets/img/svg/left-angle.svg",
+                              alt: ""
+                            }
+                          })
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c(
+                          "a",
+                          { staticClass: "current", attrs: { href: "#" } },
+                          [
+                            _c("img", {
+                              staticClass: "svg",
+                              attrs: {
+                                src: "/backend/assets/img/svg/right-angle.svg",
+                                alt: ""
+                              }
+                            })
+                          ]
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c(
+                          "a",
+                          { staticClass: "current", attrs: { href: "#" } },
+                          [
+                            _c("div", { staticClass: "form-row" }, [
+                              _c("div", { staticClass: "col-12 text-right" }, [
+                                _c(
+                                  "button",
+                                  {
+                                    staticClass: "btn long",
+                                    attrs: { type: "submit" }
+                                  },
+                                  [_vm._v("Add More")]
+                                )
+                              ])
+                            ])
+                          ]
+                        )
+                      ])
+                    ]
+                  )
+                ]
+              )
+            ]
+          )
+        ]
+      ),
+      _vm._v(" "),
+      _c("div", { staticClass: "table-responsive" }, [
+        _c(
+          "table",
+          { staticClass: "contact-list-table text-nowrap card_color-bg" },
+          [
+            _c("thead", [
+              _c("tr", [
+                _c("th", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("th", { staticClass: "text-center" }, [
+                  _vm._v("Name "),
+                  _c("img", {
+                    staticClass: "svg",
+                    attrs: {
+                      src: "/backend/assets/img/svg/table-down-arrow.svg",
+                      alt: ""
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("th", [_vm._v("Email")]),
+                _vm._v(" "),
+                _c("th", [_vm._v("Phone")]),
+                _vm._v(" "),
+                _c("th", [
+                  _vm._v("Age "),
+                  _c("img", {
+                    staticClass: "svg",
+                    attrs: {
+                      src: "/backend/assets/img/svg/table-down-arrow.svg",
+                      alt: ""
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("th", [_vm._v("Post")]),
+                _vm._v(" "),
+                _c("th", [
+                  _vm._v("Joining Date "),
+                  _c("img", {
+                    staticClass: "svg",
+                    attrs: {
+                      src: "/backend/assets/img/svg/table-down-arrow.svg",
+                      alt: ""
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("th", [
+                  _vm._v("Salary "),
+                  _c("img", {
+                    staticClass: "svg",
+                    attrs: {
+                      src: "/backend/assets/img/svg/table-down-arrow.svg",
+                      alt: ""
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("th", [_vm._v("Actions")])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("tbody", [
+              _c("tr", [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m16.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(
+                        "\n                                                    Arden Spencer\n                                                "
+                      )
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Evangeline62@yahoo.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("(023) 708-6818 x4267")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("June 20, 2015")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$26253.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m20.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(" Favian Maggio DDS ")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Electa_Conroy@hotmail.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("1-076-628-3095 x7154")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("October 11, 2019")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$26253.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m21.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(" Jacey Considine ")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Garry23@yahoo.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("1-016-234-2482")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("January 2, 2016")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$6162.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m22.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(" Kolby Torphy II ")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Phyllis75@hotmail.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("1-345-656-4163 x373")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("August 9, 2017")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$4022.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m23.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(" Mattie Daugherty ")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Jessika.Conroy@yahoo.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("721-969-9795 x09197")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("December 24, 2016")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$11588.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m24.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(" Timothy Littel ")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Nannie_Kling49@hotmail.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("1-251-141-2444 x275")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("February 8, 2019")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$14283.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", { staticClass: "selected" }, [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox", checked: "" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m19.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(" Karli Braun ")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Ruthe_Gleichner@gmail.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("697.704.7326")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("October 25, 2016")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$13329.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", { staticClass: "selected" }, [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox", checked: "" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m16.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(
+                        "\n                                                    Arden Spencer\n                                                "
+                      )
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Evangeline62@yahoo.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("(023) 708-6818 x4267")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("June 20, 2015")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$26253.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m20.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(" Favian Maggio DDS ")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Electa_Conroy@hotmail.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("1-076-628-3095 x7154")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("October 11, 2019")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$26253.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m21.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(" Jacey Considine ")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Garry23@yahoo.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("1-016-234-2482")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("January 2, 2016")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$6162.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m22.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(" Kolby Torphy II ")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Phyllis75@hotmail.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("1-345-656-4163 x373")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("August 9, 2017")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$4022.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m23.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(" Timothy Littel ")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Nannie_Kling49@hotmail.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("1-251-141-2444 x275")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("February 8, 2019")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$14283.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m2.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(" Birdie Thiel ")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Kenya.Stanton@yahoo.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("209-225-4857")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("August 7, 2015")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$18037.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m19.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(" Karli Braun ")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Ruthe_Gleichner@gmail.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("697.704.7326")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("October 25, 2016")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$13329.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ])
+            ])
+          ]
+        )
+      ])
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Backend/Product/View/Index.vue?vue&type=template&id=4e786521&":
+/*!***************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Backend/Product/View/Index.vue?vue&type=template&id=4e786521& ***!
+  \***************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "card bg-transparent" }, [
+      _c(
+        "div",
+        {
+          staticClass:
+            "contact-header d-flex align-items-sm-center media flex-column flex-sm-row card_color-bg mb-30"
+        },
+        [
+          _c(
+            "div",
+            {
+              staticClass:
+                "contact-header-left media-body d-flex align-items-center mr-4"
+            },
+            [
+              _c("div", { staticClass: "add-new-contact mr-20" }, [
+                _c(
+                  "a",
+                  {
+                    staticClass: "btn-circle",
+                    attrs: {
+                      href: "#",
+                      "data-toggle": "modal",
+                      "data-target": "#contactAddModal"
+                    }
+                  },
+                  [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/backend/assets/img/svg/plus_white.svg",
+                        alt: ""
+                      }
+                    })
+                  ]
+                )
+              ]),
+              _vm._v(" "),
+              _c(
+                "form",
+                {
+                  staticClass: "search-form flex-grow",
+                  attrs: { action: "#" }
+                },
+                [
+                  _c("div", { staticClass: "theme-input-group style--two" }, [
+                    _c("input", {
+                      staticClass: "theme-input-style",
+                      attrs: { type: "text", placeholder: "Search Here" }
+                    }),
+                    _vm._v(" "),
+                    _c("button", { attrs: { type: "submit" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/search-icon.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]
+              )
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass:
+                "contact-header-right d-flex align-items-center justify-content-end mt-3 mt-sm-0"
+            },
+            [
+              _c("div", { staticClass: "grid" }, [
+                _c("a", { attrs: { href: "contact-grid.html" } }, [
+                  _c("img", {
+                    staticClass: "svg",
+                    attrs: {
+                      src: "/backend/assets/img/svg/grid-icon.svg",
+                      alt: ""
+                    }
+                  })
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "star" }, [
+                _c("a", { attrs: { href: "#" } }, [
+                  _c("img", {
+                    staticClass: "svg",
+                    attrs: { src: "/backend/assets/img/svg/star.svg", alt: "" }
+                  })
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "delete_mail" }, [
+                _c("a", { attrs: { href: "#" } }, [
+                  _c("img", {
+                    staticClass: "svg",
+                    attrs: {
+                      src: "/backend/assets/img/svg/delete.svg",
+                      alt: ""
+                    }
+                  })
+                ])
+              ]),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "pagination style--two d-flex flex-column align-items-center ml-n2"
+                },
+                [
+                  _c(
+                    "ul",
+                    {
+                      staticClass:
+                        "list-inline d-inline-flex align-items-center"
+                    },
+                    [
+                      _c("li", [
+                        _c("a", { attrs: { href: "#" } }, [
+                          _c("img", {
+                            staticClass: "svg",
+                            attrs: {
+                              src: "/backend/assets/img/svg/left-angle.svg",
+                              alt: ""
+                            }
+                          })
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c(
+                          "a",
+                          { staticClass: "current", attrs: { href: "#" } },
+                          [
+                            _c("img", {
+                              staticClass: "svg",
+                              attrs: {
+                                src: "/backend/assets/img/svg/right-angle.svg",
+                                alt: ""
+                              }
+                            })
+                          ]
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c(
+                          "a",
+                          { staticClass: "current", attrs: { href: "#" } },
+                          [
+                            _c("div", { staticClass: "form-row" }, [
+                              _c("div", { staticClass: "col-12 text-right" }, [
+                                _c(
+                                  "button",
+                                  {
+                                    staticClass: "btn long",
+                                    attrs: { type: "submit" }
+                                  },
+                                  [_vm._v("Add More")]
+                                )
+                              ])
+                            ])
+                          ]
+                        )
+                      ])
+                    ]
+                  )
+                ]
+              )
+            ]
+          )
+        ]
+      ),
+      _vm._v(" "),
+      _c("div", { staticClass: "table-responsive" }, [
+        _c(
+          "table",
+          { staticClass: "contact-list-table text-nowrap card_color-bg" },
+          [
+            _c("thead", [
+              _c("tr", [
+                _c("th", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("th", { staticClass: "text-center" }, [
+                  _vm._v("Name "),
+                  _c("img", {
+                    staticClass: "svg",
+                    attrs: {
+                      src: "/backend/assets/img/svg/table-down-arrow.svg",
+                      alt: ""
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("th", [_vm._v("Email")]),
+                _vm._v(" "),
+                _c("th", [_vm._v("Phone")]),
+                _vm._v(" "),
+                _c("th", [
+                  _vm._v("Age "),
+                  _c("img", {
+                    staticClass: "svg",
+                    attrs: {
+                      src: "/backend/assets/img/svg/table-down-arrow.svg",
+                      alt: ""
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("th", [_vm._v("Post")]),
+                _vm._v(" "),
+                _c("th", [
+                  _vm._v("Joining Date "),
+                  _c("img", {
+                    staticClass: "svg",
+                    attrs: {
+                      src: "/backend/assets/img/svg/table-down-arrow.svg",
+                      alt: ""
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("th", [
+                  _vm._v("Salary "),
+                  _c("img", {
+                    staticClass: "svg",
+                    attrs: {
+                      src: "/backend/assets/img/svg/table-down-arrow.svg",
+                      alt: ""
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("th", [_vm._v("Actions")])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("tbody", [
+              _c("tr", [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m16.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(
+                        "\n                                Arden Spencer\n                            "
+                      )
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Evangeline62@yahoo.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("(023) 708-6818 x4267")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("June 20, 2015")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$26253.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m20.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(" Favian Maggio DDS ")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Electa_Conroy@hotmail.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("1-076-628-3095 x7154")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("October 11, 2019")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$26253.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m21.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(" Jacey Considine ")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Garry23@yahoo.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("1-016-234-2482")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("January 2, 2016")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$6162.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m22.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(" Kolby Torphy II ")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Phyllis75@hotmail.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("1-345-656-4163 x373")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("August 9, 2017")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$4022.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m23.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(" Mattie Daugherty ")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Jessika.Conroy@yahoo.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("721-969-9795 x09197")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("December 24, 2016")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$11588.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m24.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(" Timothy Littel ")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Nannie_Kling49@hotmail.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("1-251-141-2444 x275")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("February 8, 2019")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$14283.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", { staticClass: "selected" }, [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox", checked: "" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m19.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(" Karli Braun ")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Ruthe_Gleichner@gmail.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("697.704.7326")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("October 25, 2016")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$13329.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", { staticClass: "selected" }, [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox", checked: "" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m16.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(
+                        "\n                                Arden Spencer\n                            "
+                      )
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Evangeline62@yahoo.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("(023) 708-6818 x4267")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("June 20, 2015")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$26253.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m20.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(" Favian Maggio DDS ")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Electa_Conroy@hotmail.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("1-076-628-3095 x7154")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("October 11, 2019")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$26253.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m21.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(" Jacey Considine ")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Garry23@yahoo.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("1-016-234-2482")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("January 2, 2016")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$6162.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m22.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(" Kolby Torphy II ")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Phyllis75@hotmail.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("1-345-656-4163 x373")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("August 9, 2017")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$4022.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m23.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(" Timothy Littel ")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Nannie_Kling49@hotmail.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("1-251-141-2444 x275")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("February 8, 2019")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$14283.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m2.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(" Birdie Thiel ")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Kenya.Stanton@yahoo.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("209-225-4857")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("August 7, 2015")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$18037.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("tr", [
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", { attrs: { type: "checkbox" } }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "star" }, [
+                    _c("a", { attrs: { href: "#" } }, [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/star.svg",
+                          alt: ""
+                        }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "img mr-20" }, [
+                      _c("img", {
+                        staticClass: "img-40",
+                        attrs: {
+                          src: "/backend/assets/img/avatar/m19.png",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(" Karli Braun ")
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v("Ruthe_Gleichner@gmail.com")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("697.704.7326")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("28")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("UX Researcher")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("October 25, 2016")]),
+                _vm._v(" "),
+                _c("td", [_vm._v("$13329.0")]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "span",
+                    {
+                      staticClass: "contact-edit",
+                      attrs: {
+                        "data-toggle": "modal",
+                        "data-target": "#contactEditModal"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-edit.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "contact-close" }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/c-close.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ])
+            ])
+          ]
+        )
+      ])
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Backend/Product_Category/View/Add_category.vue?vue&type=template&id=30800184&":
+/*!*******************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Backend/Product_Category/View/Add_category.vue?vue&type=template&id=30800184& ***!
+  \*******************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "row" }, [
+    _c("div", { staticClass: "col-md-6 offset-md-3" }, [
+      _c("div", { staticClass: "form-element vertical-form " }, [
+        _c("h3", { staticClass: "font-20 mb-30" }, [_vm._v("Add Categoey")]),
+        _vm._v(" "),
+        _c(
+          "form",
+          {
+            on: {
+              submit: function($event) {
+                $event.preventDefault()
+                return _vm.insertData()
+              }
+            }
+          },
+          [
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { staticClass: "font-14 bold mb-2" }, [
+                _vm._v("Category Name")
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.category.name,
+                    expression: "category.name"
+                  }
+                ],
+                staticClass: "form-control pl-1",
+                attrs: { type: "text", placeholder: "Category Name" },
+                domProps: { value: _vm.category.name },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.category, "name", $event.target.value)
+                  }
+                }
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { staticClass: "font-14 bold mb-2" }, [
+                _vm._v("Icon")
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.category.icon,
+                    expression: "category.icon"
+                  }
+                ],
+                staticClass: "form-control pl-1",
+                attrs: { type: "text", placeholder: "Icon Category" },
+                domProps: { value: _vm.category.icon },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.category, "icon", $event.target.value)
+                  }
+                }
+              })
+            ]),
+            _vm._v(" "),
+            _vm._m(0)
+          ]
+        )
+      ])
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "form-row" }, [
+      _c("div", { staticClass: "col-12 text-right" }, [
+        _c("button", { staticClass: "btn long", attrs: { type: "submit" } }, [
+          _vm._v("Submit")
+        ])
+      ])
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Backend/Product_Category/View/Index.vue?vue&type=template&id=476471e0&":
+/*!************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Backend/Product_Category/View/Index.vue?vue&type=template&id=476471e0& ***!
+  \************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "card bg-transparent" }, [
+    _vm._m(0),
+    _vm._v(" "),
+    _c("div", { staticClass: "table-responsive" }, [
+      _c(
+        "table",
+        { staticClass: "contact-list-table text-nowrap card_color-bg" },
+        [
+          _vm._m(1),
+          _vm._v(" "),
+          _c(
+            "tbody",
+            _vm._l(_vm.data, function(item, idx) {
+              return _c("tr", { key: idx }, [
+                _vm._m(2, true),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _vm._m(3, true),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(
+                        "\n                                " +
+                          _vm._s(item.name) +
+                          "\n                            "
+                      )
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v(" " + _vm._s(item.icon))]),
+                _vm._v(" "),
+                _c("td", { staticClass: "actions" }, [
+                  _c(
+                    "button",
+                    {
+                      staticClass: "btn btn-primary",
+                      attrs: {
+                        type: "button",
+                        "data-toggle": "modal",
+                        "data-target": "#exampleModal"
+                      },
+                      on: {
+                        click: function($event) {
+                          return _vm.getId(item.id)
+                        }
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/c-close.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _vm._m(4, true)
+                ])
+              ])
+            }),
+            0
+          )
+        ]
+      )
+    ]),
+    _vm._v(" "),
+    _c(
+      "div",
+      {
+        staticClass: "modal fade",
+        attrs: {
+          id: "exampleModal",
+          tabindex: "-1",
+          role: "dialog",
+          "aria-labelledby": "exampleModalLabel",
+          "aria-hidden": "true"
+        }
+      },
+      [
+        _c(
+          "div",
+          { staticClass: "modal-dialog", attrs: { role: "document" } },
+          [
+            _c("div", { staticClass: "modal-content" }, [
+              _vm._m(5),
+              _vm._v(" "),
+              _vm._m(6),
+              _vm._v(" "),
+              _c("div", { staticClass: "modal-footer" }, [
+                _c(
+                  "button",
+                  {
+                    staticClass: "btn btn-secondary",
+                    attrs: { type: "button", "data-dismiss": "modal" }
+                  },
+                  [_vm._v("No")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "button",
+                  {
+                    staticClass: "btn btn-primary",
+                    attrs: { type: "button" },
+                    on: {
+                      click: function($event) {
+                        return _vm.deleteData()
+                      }
+                    }
+                  },
+                  [_vm._v("Yes")]
+                )
+              ])
+            ])
+          ]
+        )
+      ]
+    )
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass:
+          "contact-header d-flex align-items-sm-center media flex-column flex-sm-row card_color-bg mb-30"
+      },
+      [
+        _c(
+          "div",
+          {
+            staticClass:
+              "contact-header-left media-body d-flex align-items-center mr-4"
+          },
+          [
+            _c("div", { staticClass: "add-new-contact mr-20" }, [
+              _c(
+                "a",
+                {
+                  staticClass: "btn-circle",
+                  attrs: {
+                    href: "#",
+                    "data-toggle": "modal",
+                    "data-target": "#contactAddModal"
+                  }
+                },
+                [
+                  _c("img", {
+                    staticClass: "svg",
+                    attrs: {
+                      src: "/backend/backend/assets/img/svg/plus_white.svg",
+                      alt: ""
+                    }
+                  })
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c(
+              "form",
+              { staticClass: "search-form flex-grow", attrs: { action: "#" } },
+              [
+                _c("div", { staticClass: "theme-input-group style--two" }, [
+                  _c("input", {
+                    staticClass: "theme-input-style",
+                    attrs: { type: "text", placeholder: "Search Here" }
+                  }),
+                  _vm._v(" "),
+                  _c("button", { attrs: { type: "submit" } }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/search-icon.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ])
+              ]
+            )
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass:
+              "contact-header-right d-flex align-items-center justify-content-end mt-3 mt-sm-0"
+          },
+          [
+            _c("div", { staticClass: "grid" }, [
+              _c("a", { attrs: { href: "contact-grid.html" } }, [
+                _c("img", {
+                  staticClass: "svg",
+                  attrs: {
+                    src: "/backend/assets/img/svg/grid-icon.svg",
+                    alt: ""
+                  }
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "star" }, [
+              _c("a", { attrs: { href: "#" } }, [
+                _c("img", {
+                  staticClass: "svg",
+                  attrs: { src: "/backend/assets/img/svg/star.svg", alt: "" }
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "delete_mail" }, [
+              _c("a", { attrs: { href: "#" } }, [
+                _c("img", {
+                  staticClass: "svg",
+                  attrs: { src: "/backend/assets/img/svg/delete.svg", alt: "" }
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "pagination style--two d-flex flex-column align-items-center ml-n2"
+              },
+              [
+                _c(
+                  "ul",
+                  {
+                    staticClass: "list-inline d-inline-flex align-items-center"
+                  },
+                  [
+                    _c("li", [
+                      _c("a", { attrs: { href: "#" } }, [
+                        _c("img", {
+                          staticClass: "svg",
+                          attrs: {
+                            src: "/backend/assets/img/svg/left-angle.svg",
+                            alt: ""
+                          }
+                        })
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("li", [
+                      _c(
+                        "a",
+                        { staticClass: "current", attrs: { href: "#" } },
+                        [
+                          _c("img", {
+                            staticClass: "svg",
+                            attrs: {
+                              src: "/backend/assets/img/svg/right-angle.svg",
+                              alt: ""
+                            }
+                          })
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("li", [
+                      _c(
+                        "a",
+                        { staticClass: "current", attrs: { href: "#" } },
+                        [
+                          _c("div", { staticClass: "form-row" }, [
+                            _c("div", { staticClass: "col-12 text-right" }, [
+                              _c(
+                                "button",
+                                {
+                                  staticClass: "btn long",
+                                  attrs: { type: "submit" }
+                                },
+                                [_vm._v("Add More")]
+                              )
+                            ])
+                          ])
+                        ]
+                      )
+                    ])
+                  ]
+                )
+              ]
+            )
+          ]
+        )
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", [
+      _c("tr", [
+        _c("th", [
+          _c("label", { staticClass: "custom-checkbox" }, [
+            _c("input", { attrs: { type: "checkbox" } }),
+            _vm._v(" "),
+            _c("span", { staticClass: "checkmark" })
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "star" }, [
+            _c("a", { attrs: { href: "#" } }, [
+              _c("img", {
+                staticClass: "svg",
+                attrs: { src: "/backend/assets/img/svg/star.svg", alt: "" }
+              })
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("th", [
+          _vm._v("Name "),
+          _c("img", {
+            staticClass: "svg",
+            attrs: {
+              src: "/backend/assets/img/svg/table-down-arrow.svg",
+              alt: ""
+            }
+          })
+        ]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Icon")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Actions")])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("td", [
+      _c("label", { staticClass: "custom-checkbox" }, [
+        _c("input", { attrs: { type: "checkbox" } }),
+        _c("span", { staticClass: "checkmark" })
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "star" }, [
+        _c("a", { attrs: { href: "#" } }, [
+          _c("img", {
+            staticClass: "svg",
+            attrs: { src: "/backend/assets/img/svg/star.svg", alt: "" }
+          })
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "img mr-20" }, [
+      _c("img", {
+        staticClass: "img-40",
+        attrs: { src: "/backend/assets/img/avatar/m16.png", alt: "" }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("span", { staticClass: "contact-close" }, [
+      _c("img", {
+        staticClass: "svg",
+        attrs: { src: "/backend/assets/img/svg/c-edit.svg", alt: "" }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "modal-header" }, [
+      _c(
+        "h5",
+        { staticClass: "modal-title", attrs: { id: "exampleModalLabel" } },
+        [_vm._v("Modal title")]
+      ),
+      _vm._v(" "),
+      _c(
+        "button",
+        {
+          staticClass: "close",
+          attrs: {
+            type: "button",
+            "data-dismiss": "modal",
+            "aria-label": "Close"
+          }
+        },
+        [_c("span", { attrs: { "aria-hidden": "true" } }, [_vm._v("×")])]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "modal-body pull-center" }, [
+      _c("h3", [_vm._v("Are You Sure ?")])
     ])
   }
 ]
@@ -50220,7 +59193,7 @@ var staticRenderFns = [
         "div",
         {
           staticClass:
-            "contact-header d-flex align-items-sm-center media flex-column flex-sm-row card_color-bg mb-30"
+            "\n      contact-header\n      d-flex\n      align-items-sm-center\n      media\n      flex-column flex-sm-row\n      card_color-bg\n      mb-30\n    "
         },
         [
           _c(
@@ -50285,7 +59258,7 @@ var staticRenderFns = [
             "div",
             {
               staticClass:
-                "contact-header-right d-flex align-items-center justify-content-end mt-3 mt-sm-0"
+                "\n        contact-header-right\n        d-flex\n        align-items-center\n        justify-content-end\n        mt-3 mt-sm-0\n      "
             },
             [
               _c("div", { staticClass: "grid" }, [
@@ -50325,7 +59298,7 @@ var staticRenderFns = [
                 "div",
                 {
                   staticClass:
-                    "pagination style--two d-flex flex-column align-items-center ml-n2"
+                    "\n          pagination\n          style--two\n          d-flex\n          flex-column\n          align-items-center\n          ml-n2\n        "
                 },
                 [
                   _c(
@@ -50359,6 +59332,27 @@ var staticRenderFns = [
                                 alt: ""
                               }
                             })
+                          ]
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c(
+                          "a",
+                          { staticClass: "current", attrs: { href: "#" } },
+                          [
+                            _c("div", { staticClass: "form-row" }, [
+                              _c("div", { staticClass: "col-12 text-right" }, [
+                                _c(
+                                  "button",
+                                  {
+                                    staticClass: "btn long",
+                                    attrs: { type: "submit" }
+                                  },
+                                  [_vm._v("Add More")]
+                                )
+                              ])
+                            ])
                           ]
                         )
                       ])
@@ -50399,7 +59393,7 @@ var staticRenderFns = [
                 ]),
                 _vm._v(" "),
                 _c("th", { staticClass: "text-center" }, [
-                  _vm._v("Name "),
+                  _vm._v("\n            Name\n            "),
                   _c("img", {
                     staticClass: "svg",
                     attrs: {
@@ -50414,7 +59408,7 @@ var staticRenderFns = [
                 _c("th", [_vm._v("Phone")]),
                 _vm._v(" "),
                 _c("th", [
-                  _vm._v("Age "),
+                  _vm._v("\n            Age\n            "),
                   _c("img", {
                     staticClass: "svg",
                     attrs: {
@@ -50427,7 +59421,7 @@ var staticRenderFns = [
                 _c("th", [_vm._v("Post")]),
                 _vm._v(" "),
                 _c("th", [
-                  _vm._v("Joining Date "),
+                  _vm._v("\n            Joining Date\n            "),
                   _c("img", {
                     staticClass: "svg",
                     attrs: {
@@ -50438,7 +59432,7 @@ var staticRenderFns = [
                 ]),
                 _vm._v(" "),
                 _c("th", [
-                  _vm._v("Salary "),
+                  _vm._v("\n            Salary\n            "),
                   _c("img", {
                     staticClass: "svg",
                     attrs: {
@@ -50487,9 +59481,7 @@ var staticRenderFns = [
                     ]),
                     _vm._v(" "),
                     _c("div", { staticClass: "name bold" }, [
-                      _vm._v(
-                        "\n                                                    Arden Spencer\n                                                "
-                      )
+                      _vm._v("Arden Spencer")
                     ])
                   ])
                 ]),
@@ -50573,7 +59565,7 @@ var staticRenderFns = [
                     ]),
                     _vm._v(" "),
                     _c("div", { staticClass: "name bold" }, [
-                      _vm._v(" Favian Maggio DDS ")
+                      _vm._v("Favian Maggio DDS")
                     ])
                   ])
                 ]),
@@ -50657,7 +59649,7 @@ var staticRenderFns = [
                     ]),
                     _vm._v(" "),
                     _c("div", { staticClass: "name bold" }, [
-                      _vm._v(" Jacey Considine ")
+                      _vm._v("Jacey Considine")
                     ])
                   ])
                 ]),
@@ -50741,7 +59733,7 @@ var staticRenderFns = [
                     ]),
                     _vm._v(" "),
                     _c("div", { staticClass: "name bold" }, [
-                      _vm._v(" Kolby Torphy II ")
+                      _vm._v("Kolby Torphy II")
                     ])
                   ])
                 ]),
@@ -50825,7 +59817,7 @@ var staticRenderFns = [
                     ]),
                     _vm._v(" "),
                     _c("div", { staticClass: "name bold" }, [
-                      _vm._v(" Mattie Daugherty ")
+                      _vm._v("Mattie Daugherty")
                     ])
                   ])
                 ]),
@@ -50909,7 +59901,7 @@ var staticRenderFns = [
                     ]),
                     _vm._v(" "),
                     _c("div", { staticClass: "name bold" }, [
-                      _vm._v(" Timothy Littel ")
+                      _vm._v("Timothy Littel")
                     ])
                   ])
                 ]),
@@ -50993,7 +59985,7 @@ var staticRenderFns = [
                     ]),
                     _vm._v(" "),
                     _c("div", { staticClass: "name bold" }, [
-                      _vm._v(" Karli Braun ")
+                      _vm._v("Karli Braun")
                     ])
                   ])
                 ]),
@@ -51077,9 +60069,7 @@ var staticRenderFns = [
                     ]),
                     _vm._v(" "),
                     _c("div", { staticClass: "name bold" }, [
-                      _vm._v(
-                        "\n                                                    Arden Spencer\n                                                "
-                      )
+                      _vm._v("Arden Spencer")
                     ])
                   ])
                 ]),
@@ -51163,7 +60153,7 @@ var staticRenderFns = [
                     ]),
                     _vm._v(" "),
                     _c("div", { staticClass: "name bold" }, [
-                      _vm._v(" Favian Maggio DDS ")
+                      _vm._v("Favian Maggio DDS")
                     ])
                   ])
                 ]),
@@ -51247,7 +60237,7 @@ var staticRenderFns = [
                     ]),
                     _vm._v(" "),
                     _c("div", { staticClass: "name bold" }, [
-                      _vm._v(" Jacey Considine ")
+                      _vm._v("Jacey Considine")
                     ])
                   ])
                 ]),
@@ -51331,7 +60321,7 @@ var staticRenderFns = [
                     ]),
                     _vm._v(" "),
                     _c("div", { staticClass: "name bold" }, [
-                      _vm._v(" Kolby Torphy II ")
+                      _vm._v("Kolby Torphy II")
                     ])
                   ])
                 ]),
@@ -51415,7 +60405,7 @@ var staticRenderFns = [
                     ]),
                     _vm._v(" "),
                     _c("div", { staticClass: "name bold" }, [
-                      _vm._v(" Timothy Littel ")
+                      _vm._v("Timothy Littel")
                     ])
                   ])
                 ]),
@@ -51499,7 +60489,7 @@ var staticRenderFns = [
                     ]),
                     _vm._v(" "),
                     _c("div", { staticClass: "name bold" }, [
-                      _vm._v(" Birdie Thiel ")
+                      _vm._v("Birdie Thiel")
                     ])
                   ])
                 ]),
@@ -51583,7 +60573,7 @@ var staticRenderFns = [
                     ]),
                     _vm._v(" "),
                     _c("div", { staticClass: "name bold" }, [
-                      _vm._v(" Karli Braun ")
+                      _vm._v("Karli Braun")
                     ])
                   ])
                 ]),
@@ -51812,6 +60802,27 @@ var staticRenderFns = [
                                 alt: ""
                               }
                             })
+                          ]
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c(
+                          "a",
+                          { staticClass: "current", attrs: { href: "#" } },
+                          [
+                            _c("div", { staticClass: "form-row" }, [
+                              _c("div", { staticClass: "col-12 text-right" }, [
+                                _c(
+                                  "button",
+                                  {
+                                    staticClass: "btn long",
+                                    attrs: { type: "submit" }
+                                  },
+                                  [_vm._v("Add More")]
+                                )
+                              ])
+                            ])
                           ]
                         )
                       ])
@@ -53451,6 +62462,27 @@ var staticRenderFns = [
                             })
                           ]
                         )
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c(
+                          "a",
+                          { staticClass: "current", attrs: { href: "#" } },
+                          [
+                            _c("div", { staticClass: "form-row" }, [
+                              _c("div", { staticClass: "col-12 text-right" }, [
+                                _c(
+                                  "button",
+                                  {
+                                    staticClass: "btn long",
+                                    attrs: { type: "submit" }
+                                  },
+                                  [_vm._v("Add More")]
+                                )
+                              ])
+                            ])
+                          ]
+                        )
                       ])
                     ]
                   )
@@ -55045,6 +64077,27 @@ var staticRenderFns = [
                                 alt: ""
                               }
                             })
+                          ]
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c(
+                          "a",
+                          { staticClass: "current", attrs: { href: "#" } },
+                          [
+                            _c("div", { staticClass: "form-row" }, [
+                              _c("div", { staticClass: "col-12 text-right" }, [
+                                _c(
+                                  "button",
+                                  {
+                                    staticClass: "btn long",
+                                    attrs: { type: "submit" }
+                                  },
+                                  [_vm._v("Add More")]
+                                )
+                              ])
+                            ])
                           ]
                         )
                       ])
@@ -61702,6 +70755,38 @@ var render = function() {
   )
 }
 var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Frontend/Auth/View/Login.vue?vue&type=template&id=b3caeb72&scoped=true&":
+/*!*************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/Frontend/Auth/View/Login.vue?vue&type=template&id=b3caeb72&scoped=true& ***!
+  \*************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [_c("h1", [_vm._v("Login")])])
+  }
+]
 render._withStripped = true
 
 
