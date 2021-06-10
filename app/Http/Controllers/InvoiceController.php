@@ -14,7 +14,11 @@ class InvoiceController extends Controller
      */
     public function index()
     {
-        //
+        try{
+            return response()->json(['success'=>invoice::where('status',1)->get()]);
+        }catch(\Exception $e){
+            return response()->json(['error'=>$e->getMessage()]);
+        }
     }
 
     /**
@@ -24,7 +28,11 @@ class InvoiceController extends Controller
      */
     public function create()
     {
-        //
+        try{
+
+        }catch(\Exception $e){
+            return response()->json(['error'=>$e->getMessage()]);
+        }
     }
 
     /**
@@ -35,7 +43,23 @@ class InvoiceController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        try{
+            $validation=\Validator($request->all(),[
+                'quote_id'=>'required|integer'
+            ]);
+            if($validation->fails()){
+                return response()->json(['error'=>$validation->getMessageBag()]);
+            }
+            $data=$request->all();
+            $data['updated_by']=1;
+            if(invoice::create($data)){
+                return response()->json(['success'=>'Invoice is Inserted']);
+            }else{
+                return response()->json(['error'=>'Invoice is not inserted']);
+            }
+        }catch(\Exception $e){
+            return response()->json(['error'=>$e->getMessage()]);
+        }
     }
 
     /**
@@ -46,7 +70,11 @@ class InvoiceController extends Controller
      */
     public function show(invoice $invoice)
     {
-        //
+        try{
+
+        }catch(\Exception $e){
+            return response()->json(['error'=>$e->getMessage()]);
+        }
     }
 
     /**
@@ -57,7 +85,11 @@ class InvoiceController extends Controller
      */
     public function edit(invoice $invoice)
     {
-        //
+        try{
+            return response()->json(['success'=>$invoice]);
+        }catch(\Exception $e){
+            return response()->json(['error'=>$e->getMessage()]);
+        }
     }
 
     /**
@@ -69,7 +101,23 @@ class InvoiceController extends Controller
      */
     public function update(Request $request, invoice $invoice)
     {
-        //
+        try{
+            $validation=\Validator($request->all(),[
+                'quote_id'=>'required|integer'
+            ]);
+            if($validation->fails()){
+                return response()->json(['error'=>$validation->getMessageBag()]);
+            }
+            $data=$request->all();
+            $data['updated_by']=1;
+            if(invoice::where('id',$invoice['id'])->update($data)){
+                return response()->json(['success'=>'Invoice is updated']);
+            }else{
+                return response()->json(['error'=>'Invoice is not updated']);
+            }
+        }catch(\Exception $e){
+            return response()->json(['error'=>$e->getMessage()]);
+        }
     }
 
     /**
@@ -80,6 +128,14 @@ class InvoiceController extends Controller
      */
     public function destroy(invoice $invoice)
     {
-        //
+        try{
+            if(invoice::where('id',$invoice['id'])->delete()){
+                return response()->json(['success'=>'Invoice is deleted !!']);
+            }else{
+                return response()->json(['error'=>'Invoice is not deleted !!']);
+            }
+        }catch(\Exception $e){
+            return response()->json(['error'=>$e->getMessage()]);
+        }
     }
 }

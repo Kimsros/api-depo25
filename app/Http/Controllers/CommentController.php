@@ -14,7 +14,11 @@ class CommentController extends Controller
      */
     public function index()
     {
-        //
+        try{
+            return response()->json(['success'=>comment::all()]);
+        }catch(\Exception $e){
+            return response()->json(['error'=>$e->getMessage()]);
+        }
     }
 
     /**
@@ -24,7 +28,11 @@ class CommentController extends Controller
      */
     public function create()
     {
-        //
+        try{
+
+        }catch(\Exception $e){
+            return response()->json(['error'=>$e->getMessage()]);
+        }
     }
 
     /**
@@ -35,7 +43,26 @@ class CommentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        try{
+            $validation=\Validator($request->all(),[
+                'product_id'=>'required|integer',
+                'user_id'=>'required|integer',
+                'comment'=>'required',
+                'comment_type_id'=>'required|integer'
+            ]);
+            if($validation->fails()){
+                return response()->json(['error'=>$validation->getMessageBag()]);
+            }
+            $data=$request->all();
+            $data['updated_by']=1;
+            if(comment::create($data)){
+                return response()->json(['success'=>'Comment is inserted !!']);
+            }else{
+                return response()->json(['error'=>'Comment is not inserted !!']);
+            }
+        }catch(\Exception $e){
+            return response()->json(['error'=>$e->getMessage()]);
+        }
     }
 
     /**
@@ -46,7 +73,11 @@ class CommentController extends Controller
      */
     public function show(comment $comment)
     {
-        //
+        try{
+
+        }catch(\Exception $e){
+            return response()->json(['error'=>$e->getMessage()]);
+        }
     }
 
     /**
@@ -57,7 +88,11 @@ class CommentController extends Controller
      */
     public function edit(comment $comment)
     {
-        //
+        try{
+            return response()->json(['success'=>$comment]);
+        }catch(\Exception $e){
+            return response()->json(['error'=>$e->getMessage()]);
+        }
     }
 
     /**
@@ -69,7 +104,26 @@ class CommentController extends Controller
      */
     public function update(Request $request, comment $comment)
     {
-        //
+        try{
+            $validation=\Validator($request->all(),[
+                'product_id'=>'required|integer',
+                'user_id'=>'required|integer',
+                'comment'=>'required',
+                'comment_type_id'=>'required|integer'
+            ]);
+            if($validation->fails()){
+                return response()->json(['error'=>$validation->getMessageBag()]);
+            }
+            $data=$request->all();
+            $data['updated_by']=1;
+            if(comment::where('id',$comment['id'])->update($data)){
+                return response()->json(['success'=>'Comment is updated !!']);
+            }else{
+                return response()->json(['error'=>'Comment is not updated !!']);
+            }
+        }catch(\Exception $e){
+            return response()->json(['error'=>$e->getMessage()]);
+        }
     }
 
     /**
@@ -80,6 +134,14 @@ class CommentController extends Controller
      */
     public function destroy(comment $comment)
     {
-        //
+        try{
+            if(comment::where('id',$comment['id'])->delete()){
+                return response()->json(['success'=>'Comment is deleted !!']);
+            }else{
+                return response()->json(['error'=>'Comment is not deleted !!']);
+            }
+        }catch(\Exception $e){
+            return response()->json(['error'=>$e->getMessage()]);
+        }
     }
 }

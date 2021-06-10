@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\comment_type;
+use Illuminate\Cache\Repository;
 use Illuminate\Http\Request;
 
 class CommentTypeController extends Controller
@@ -14,7 +15,11 @@ class CommentTypeController extends Controller
      */
     public function index()
     {
-        //
+        try{
+            return response()->json(['success'=>comment_type::where('status',1)->get()]);
+        }catch(\Exception $e){
+            return response()->json(['error'=>$e->getMessage()]);
+        }
     }
 
     /**
@@ -24,7 +29,11 @@ class CommentTypeController extends Controller
      */
     public function create()
     {
-        //
+        try{
+
+        }catch(\Exception $e){
+            return response()->json(['error'=>$e->getMessage()]);
+        }
     }
 
     /**
@@ -35,7 +44,23 @@ class CommentTypeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        try{
+            $validation=\Validator($request->all(),[
+                'name'=>'required'
+            ]);
+            if($validation->fails()){
+                return response()->json(['error'=>$validation->getMessageBag()]);
+            }
+            $data=$request->all();
+            $data['updated_by']=1;
+            if(comment_type::create($data)){
+                return response()->json(['success'=>'Comment Type is inserted !!']);
+            }else{
+                return response()->json(['error'=>'Comment Type is not inserted !!']);
+            }
+        }catch(\Exception $e){
+            return response()->json(['error'=>$e->getMessage()]);
+        }
     }
 
     /**
@@ -46,7 +71,11 @@ class CommentTypeController extends Controller
      */
     public function show(comment_type $comment_type)
     {
-        //
+        try{
+            return response()->json(['success'=>$comment_type]);
+        }catch(\Exception $e){
+            return response()->json(['error'=>$e->getMessage()]);
+        }
     }
 
     /**
@@ -57,7 +86,11 @@ class CommentTypeController extends Controller
      */
     public function edit(comment_type $comment_type)
     {
-        //
+        try{
+            return response()->json(['success'=>$comment_type]);
+        }catch(\Exception $e){
+            return response()->json(['error'=>$e->getMessage()]);
+        }
     }
 
     /**
@@ -69,7 +102,23 @@ class CommentTypeController extends Controller
      */
     public function update(Request $request, comment_type $comment_type)
     {
-        //
+        try{
+            $validation=\Validator($request->all(),[
+                'name'=>'required'
+            ]);
+            if($validation->fails()){
+                return response()->json(['error'=>$validation->getMessageBag()]);
+            }
+            $data=$request->all();
+            $data['updated_by']=1;
+            if(comment_type::where('id',$comment_type['id'])->update($data)){
+                return response()->json(['success'=>'Comment Type is updated']);
+            }else{
+                return response()->json(['error'=>'Comment Tyupe is not updated !!']);
+            }
+        }catch(\Exception $e){
+            return response()->json(['error'=>$e->getMessage()]);
+        }
     }
 
     /**
@@ -80,6 +129,14 @@ class CommentTypeController extends Controller
      */
     public function destroy(comment_type $comment_type)
     {
-        //
+        try{
+            if(comment_type::where('id',$comment_type['id'])->delete()){
+                return response()->json(['success'=>'Comment Type is deleted !!']);
+            }else{
+                return response()->json(['error'=>'Comment Type is not deleted']);
+            }
+        }catch(\Exception $e){
+            return response()->json(['error'=>$e->getMessage()]);
+        }
     }
 }

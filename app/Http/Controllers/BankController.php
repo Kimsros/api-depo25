@@ -14,7 +14,11 @@ class BankController extends Controller
      */
     public function index()
     {
-        echo "index";
+        try{
+            return response()->json(['success'=>bank::where('status',1)->get()]);
+        }catch(\Exception $e){
+            return response()->json(['error'=>$e->getMessage()]);
+        }
     }
 
     /**
@@ -35,7 +39,25 @@ class BankController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        try{
+            $validation=Validator($request->all(),[
+                'account_name'=>'required',
+                'bank_name'=>'required',
+                'bank_account'=>'required'
+            ]);
+            if($validation->fails()){
+                return response()->json(['error'=>$validation->getMessageBag()]);
+            }
+            $data=$request->all();
+            $data['updated_by']=1;
+            if(bank::create($data)){
+                return response()->json(['success'=>'Bank is inserted !!']);
+            }else{
+                return response()->json(['error'=>'Bank is not inserted !!']);
+            }
+        }catch(\Exception $e){
+            return response()->json(['error'=>$e->getMessage()]);
+        }
     }
 
     /**
@@ -57,7 +79,11 @@ class BankController extends Controller
      */
     public function edit(bank $bank)
     {
-        //
+        try{
+            return response()->json(['success'=>$bank]);
+        }catch(\Exception $e){
+            return response()->json(['error'=>$e->getMessage()]);
+        }
     }
 
     /**
@@ -69,7 +95,25 @@ class BankController extends Controller
      */
     public function update(Request $request, bank $bank)
     {
-        //
+        try{
+            $validation=Validator($request->all(),[
+                'account_name'=>'required',
+                'bank_name'=>'required',
+                'bank_account'=>'required'
+            ]);
+            if($validation->fails()){
+                return response()->json(['error'=>$validation->getMessageBag()]);
+            }
+            $data=$request->all();
+            $data['updated_by']=1;
+            if(bank::where('id',$bank['id'])->update($data)){
+                return response()->json(['success'=>'Bank is updated !!']);
+            }else{
+                return response()->json(['error'=>'Bank is not updated !!']);
+            }
+        }catch(\Exception $e){
+            return response()->json(['error'=>$e->getMessage()]);
+        }
     }
 
     /**
@@ -80,6 +124,14 @@ class BankController extends Controller
      */
     public function destroy(bank $bank)
     {
-        //
+        try{
+            if(bank::where('id',$bank['id'])->delete()){
+                return response()->json(['success'=>'Bank is deleted !!']);
+            }else{
+                return response()->json(['error'=>'Bank is not deleted !!']);
+            }
+        }catch(\Exception $e){
+            return response()->json(['error'=>$e->getMessage()]);
+        }
     }
 }

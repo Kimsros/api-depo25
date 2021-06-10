@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class delivery extends Model
 {
     use HasFactory;
+    protected $fillable=['delivery_location_id','shop_id','price','updated_by'];
 }
