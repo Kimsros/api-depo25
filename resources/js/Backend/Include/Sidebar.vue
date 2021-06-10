@@ -54,8 +54,8 @@
                         <span class="link-title">Brand</span>
                      </a>
                      <ul class="nav sub-menu">
-                        <li><a href="/admin/brand">Add Brand</a></li>
-                        <li><a href="/admin/add_brand">List Brand</a></li>
+                        <li><a href="/admin/add_brand">Add Brand</a></li>
+                        <li><a href="/admin/brand">List Brand</a></li>
                      </ul>
                   </li>
                   <li>
