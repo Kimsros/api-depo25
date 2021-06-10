@@ -65,8 +65,8 @@
                         <span class="link-title">Pricing</span>
                      </a>
                      <ul class="nav sub-menu">
-                        <li><a href="pages/apps/email/inbox.html">Add Pricing</a></li>
-                        <li><a href="pages/apps/email/read.html">All Pricing</a></li>
+                        <li><a href="/admin/add_pricing">Add Pricing</a></li>
+                        <li><a href="/admin/pricing">All Pricing</a></li>
                      </ul>
                   </li>
                   <li>
@@ -75,8 +75,8 @@
                         <span class="link-title">Shop</span>
                      </a>
                      <ul class="nav sub-menu">
-                        <li><a href="pages/apps/email/inbox.html">Add Shop</a></li>
-                        <li><a href="pages/apps/email/read.html">All Shop</a></li>
+                        <li><a href="/admin/add_shop">Add Shop</a></li>
+                        <li><a href="/admin/shop">All Shop</a></li>
                      </ul>
                   </li>
                   <li>
