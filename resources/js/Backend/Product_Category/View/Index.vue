@@ -108,12 +108,14 @@
                         <td> {{item.icon}}</td>
                         <td class="actions">
 
-                            <button type="button" class="btn btn-primary" @click="getId(item.id)" data-toggle="modal"  data-target="#exampleModal">
+                            <span @click="getId(item.id)" data-toggle="modal"  data-target="#exampleModal">
                                 <img src="/backend/assets/img/svg/c-close.svg" alt="" class="svg">
-                            </button>
-                            <span class="contact-close">
+                            </span>
+                           <router-link :to="'/admin/edit_category/'+item.id">
+                              <span >
                                 <img src="/backend/assets/img/svg/c-edit.svg" alt="" class="svg">
                             </span>
+                           </router-link>
                         </td>
                     </tr>
                 </tbody>
