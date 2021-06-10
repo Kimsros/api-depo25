@@ -250,7 +250,7 @@ $(function() {
             message: '<i class="icofont-spinner icon-spin"></i>',
             timeout: 2000, //unblock after 2 seconds
             overlayCSS: {
-              backgroundColor: '#8280FD',
+              backgroundColor: '#F15922',
               opacity: 1,
               cursor: 'wait'
             },

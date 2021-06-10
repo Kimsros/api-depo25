@@ -14,7 +14,7 @@ $(function() {
 
     $(document).ready(function () {
         var e = "#333333",
-            t = "#8280FD",
+            t = "#F15922",
             a = "#fff",
             l = [
                     {
