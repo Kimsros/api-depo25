@@ -49713,12 +49713,6 @@ var staticRenderFns = [
                 ]),
                 _vm._v(" "),
                 _c("li", [
-                  _c("a", { attrs: { href: "pages/apps/email/read.html" } }, [
-                    _vm._v("Brand")
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("li", [
                   _c(
                     "a",
                     { attrs: { href: "pages/apps/email/compose.html" } },
@@ -49747,6 +49741,28 @@ var staticRenderFns = [
                 _c("li", [
                   _c("a", { attrs: { href: "/admin/list_category" } }, [
                     _vm._v("All Product Category")
+                  ])
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c("a", { attrs: { href: "#" } }, [
+                _c("i", { staticClass: "icofont-cubes" }),
+                _vm._v(" "),
+                _c("span", { staticClass: "link-title" }, [_vm._v("Brand")])
+              ]),
+              _vm._v(" "),
+              _c("ul", { staticClass: "nav sub-menu" }, [
+                _c("li", [
+                  _c("a", { attrs: { href: "/admin/brand" } }, [
+                    _vm._v("Add Brand")
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("a", { attrs: { href: "/admin/add_brand" } }, [
+                    _vm._v("List Brand")
                   ])
                 ])
               ])

@@ -35,7 +35,6 @@
                      <ul class="nav sub-menu">
                         <li><a href="pages/apps/email/inbox.html">All Product</a></li>
                         <li><a href="pages/apps/email/read.html">In House Product</a></li>
-                        <li><a href="pages/apps/email/read.html">Brand</a></li>
                         <li><a href="pages/apps/email/compose.html">Attribute</a></li>
                      </ul>
                   </li>
@@ -47,6 +46,16 @@
                      <ul class="nav sub-menu">
                         <li><a href="/admin/add_category">Add Product Category</a></li>
                         <li><a href="/admin/list_category">All Product Category</a></li>
+                     </ul>
+                  </li>
+                  <li>
+                     <a href="#">
+                        <i class="icofont-cubes"></i>
+                        <span class="link-title">Brand</span>
+                     </a>
+                     <ul class="nav sub-menu">
+                        <li><a href="/admin/brand">Add Brand</a></li>
+                        <li><a href="/admin/add_brand">List Brand</a></li>
                      </ul>
                   </li>
                   <li>
