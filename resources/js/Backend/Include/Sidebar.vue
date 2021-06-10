@@ -17,18 +17,19 @@
                   <li class="nav-category">apps</li>
                   <li>
                      <a href="#">
-                        <i class="icofont-mail-box"></i>
+                        <i class="icofont-ui-user"></i>
                         <span class="link-title">Users</span>
                      </a>
                      <ul class="nav sub-menu">
-                        <li><a href="pages/apps/email/inbox.html">Admin</a></li>
-                        <li><a href="pages/apps/email/read.html">Seller</a></li>
-                        <li><a href="pages/apps/email/compose.html">Buyer</a></li>
+                        <li><a href="pages/apps/email/inbox.html">Add Users</a></li>
+                        <li><a href="/admin/admin">Admin</a></li>
+                        <li><a href="/admin/seller">Seller</a></li>
+                        <li><a href="/admin/buyer">Buyer</a></li>
                      </ul>
                   </li>
                   <li>
                      <a href="#">
-                        <i class="icofont-mail-box"></i>
+                        <i class="icofont-shopping-cart"></i>
                         <span class="link-title">Product</span>
                      </a>
                      <ul class="nav sub-menu">
@@ -41,7 +42,7 @@
                   </li>
                   <li>
                      <a href="#">
-                        <i class="icofont-mail-box"></i>
+                        <i class="icofont-dollar-true"></i>
                         <span class="link-title">Sale</span>
                      </a>
                      <ul class="nav sub-menu">
@@ -51,7 +52,7 @@
                   </li>
                   <li>
                      <a href="#">
-                        <i class="icofont-mail-box"></i>
+                        <i class="icofont-newspaper"></i>
                         <span class="link-title">Blog System</span>
                      </a>
                      <ul class="nav sub-menu">
@@ -61,7 +62,7 @@
                   </li>
                   <li>
                      <a href="#">
-                        <i class="icofont-mail-box"></i>
+                        <i class="icofont-price"></i>
                         <span class="link-title">Pricing</span>
                      </a>
                      <ul class="nav sub-menu">
@@ -71,7 +72,7 @@
                   </li>
                   <li>
                      <a href="#">
-                        <i class="icofont-mail-box"></i>
+                        <i class="icofont-shopify"></i>
                         <span class="link-title">Shop</span>
                      </a>
                      <ul class="nav sub-menu">
@@ -81,7 +82,7 @@
                   </li>
                   <li>
                      <a href="#">
-                        <i class="icofont-mail-box"></i>
+                        <i class="icofont-file-text"></i>
                         <span class="link-title">Report</span>
                      </a>
                      <ul class="nav sub-menu">
@@ -93,7 +94,7 @@
                   </li>
                   <li>
                      <a href="#">
-                        <i class="icofont-mail-box"></i>
+                        <i class="icofont-settings-alt"></i>
                         <span class="link-title">Setting</span>
                      </a>
                      <ul class="nav sub-menu">
