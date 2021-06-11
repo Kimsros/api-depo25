@@ -3468,6 +3468,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -60049,7 +60054,35 @@ var render = function() {
               ])
             }),
             0
-          )
+          ),
+          _vm._v(" "),
+          _c("nav", { attrs: { "aria-label": "Page navigation example" } }, [
+            _c(
+              "ul",
+              { staticClass: "pagination" },
+              _vm._l(_vm.data.links, function(item, idx) {
+                return _c(
+                  "li",
+                  {
+                    key: idx,
+                    class: { "page-item": true, active: item.active }
+                  },
+                  [
+                    _c("a", {
+                      staticClass: "page-link",
+                      domProps: { innerHTML: _vm._s(item.label) },
+                      on: {
+                        click: function($event) {
+                          return _vm.getData(item.url)
+                        }
+                      }
+                    })
+                  ]
+                )
+              }),
+              0
+            )
+          ])
         ]
       )
     ]),
