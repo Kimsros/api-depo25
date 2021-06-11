@@ -97,7 +97,7 @@
                      </a>
                      <ul class="nav sub-menu">
                         <li><a href="/admin/add_pricing">Add Pricing</a></li>
-                        <li><a href="/admin/pricing">All Pricing</a></li>
+                        <li><a href="/admin/list_pricing">All Pricing</a></li>
                      </ul>
                   </li>
                   <li>
