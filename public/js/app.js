@@ -5124,6 +5124,7 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./router */ "./resources/js/router.js");
 /* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./store */ "./resources/js/store/index.js");
+Object(function webpackMissingModule() { var e = new Error("Cannot find module 'ckeditor4-vue'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -5134,6 +5135,8 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm.js").default;
 
 
+
+Vue.use(Object(function webpackMissingModule() { var e = new Error("Cannot find module 'ckeditor4-vue'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -5158,7 +5161,8 @@ Vue.component('pagination', __webpack_require__(/*! laravel-vue-pagination */ ".
 var app = new Vue({
   el: '#app',
   router: _router__WEBPACK_IMPORTED_MODULE_0__.default,
-  store: _store__WEBPACK_IMPORTED_MODULE_1__.default
+  store: _store__WEBPACK_IMPORTED_MODULE_1__.default,
+  CKEditor: Object(function webpackMissingModule() { var e = new Error("Cannot find module 'ckeditor4-vue'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())
 });
 
 /***/ }),
@@ -62479,24 +62483,20 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "card justify-content-center auth-card" }, [
-      _c("div", { staticClass: "row justify-content-center" }, [
-        _c("div", { staticClass: "col-xl-10" }, [
-          _c("h4", { staticClass: "mb-5 font-20" }, [
-            _vm._v("Welcome To Create User")
-          ]),
-          _vm._v(" "),
-          _c("form", { attrs: { action: "#" } }, [
-            _c("div", { staticClass: "row" }, [
-              _c("div", { staticClass: "col-lg-6" }, [
-                _c("div", { staticClass: "form-group mb-20" }, [
+  return _c("div", { staticClass: "card justify-content-center auth-card" }, [
+    _c("div", { staticClass: "row justify-content-center" }, [
+      _c("div", { staticClass: "col-xl-10" }, [
+        _c("h4", { staticClass: "mb-5 font-20" }, [
+          _vm._v("Welcome To Create User")
+        ]),
+        _vm._v(" "),
+        _c("form", { attrs: { action: "#" } }, [
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col-lg-6" }, [
+              _c(
+                "div",
+                { staticClass: "form-group mb-20" },
+                [
                   _c(
                     "label",
                     {
@@ -62513,205 +62513,206 @@ var staticRenderFns = [
                       id: "f_name",
                       placeholder: "First Name"
                     }
-                  })
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "col-lg-6" }, [
-                _c("div", { staticClass: "form-group mb-20" }, [
-                  _c(
-                    "label",
-                    {
-                      staticClass: "mb-2 font-14 bold",
-                      attrs: { for: "l_name" }
-                    },
-                    [_vm._v("Last Name")]
-                  ),
+                  }),
                   _vm._v(" "),
-                  _c("input", {
-                    staticClass: "theme-input-style",
-                    attrs: {
-                      type: "text",
-                      id: "l_name",
-                      placeholder: "Last Name"
-                    }
-                  })
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "col-lg-6" }, [
-                _c("div", { staticClass: "form-group mb-20" }, [
-                  _c(
-                    "label",
-                    {
-                      staticClass: "mb-2 font-14 bold",
-                      attrs: { for: "u_name" }
-                    },
-                    [_vm._v("User Name")]
-                  ),
-                  _vm._v(" "),
-                  _c("input", {
-                    staticClass: "theme-input-style",
-                    attrs: {
-                      type: "text",
-                      id: "u_name",
-                      placeholder: "User Name"
-                    }
-                  })
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "col-lg-6" }, [
-                _c("div", { staticClass: "form-group mb-20" }, [
-                  _c(
-                    "label",
-                    {
-                      staticClass: "mb-2 font-14 bold",
-                      attrs: { for: "email" }
-                    },
-                    [_vm._v("Email Address")]
-                  ),
-                  _vm._v(" "),
-                  _c("input", {
-                    staticClass: "theme-input-style",
-                    attrs: {
-                      type: "email",
-                      id: "email",
-                      placeholder: "Email Address"
-                    }
-                  })
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "col-lg-6" }, [
-                _c("div", { staticClass: "form-group mb-20" }, [
-                  _c(
-                    "label",
-                    {
-                      staticClass: "mb-2 font-14 bold",
-                      attrs: { for: "password" }
-                    },
-                    [_vm._v("Password")]
-                  ),
-                  _vm._v(" "),
-                  _c("input", {
-                    staticClass: "theme-input-style",
-                    attrs: {
-                      type: "password",
-                      id: "password",
-                      placeholder: "Password"
-                    }
-                  })
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "col-lg-6" }, [
-                _c("div", { staticClass: "form-group mb-20" }, [
-                  _c(
-                    "label",
-                    {
-                      staticClass: "mb-2 font-14 bold",
-                      attrs: { for: "r_password" }
-                    },
-                    [_vm._v("Phone")]
-                  ),
-                  _vm._v(" "),
-                  _c("input", {
-                    staticClass: "theme-input-style",
-                    attrs: {
-                      type: "text",
-                      id: "r_password",
-                      placeholder: "Password"
-                    }
-                  })
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "col-lg-6" }, [
-                _c("div", { staticClass: "form-group mb-20" }, [
-                  _c(
-                    "label",
-                    {
-                      staticClass: "mb-2 font-14 bold",
-                      attrs: { for: "r_password" }
-                    },
-                    [_vm._v("Role")]
-                  ),
-                  _vm._v(" "),
-                  _c("input", {
-                    staticClass: "theme-input-style",
-                    attrs: {
-                      type: "text",
-                      id: "r_password",
-                      placeholder: "Role"
-                    }
-                  })
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "col-lg-6" }, [
-                _c("div", { staticClass: "form-group mb-20" }, [
-                  _c(
-                    "label",
-                    {
-                      staticClass: "mb-2 font-14 bold",
-                      attrs: { for: "r_password" }
-                    },
-                    [_vm._v("Pricing")]
-                  ),
-                  _vm._v(" "),
-                  _c("input", {
-                    staticClass: "theme-input-style",
-                    attrs: {
-                      type: "text",
-                      id: "r_password",
-                      placeholder: "Pricing"
-                    }
-                  })
-                ])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "col-lg-6" }, [
-                _c("div", { staticClass: "form-group mb-20" }, [
-                  _c(
-                    "label",
-                    {
-                      staticClass: "mb-2 font-14 bold",
-                      attrs: { for: "r_password" }
-                    },
-                    [_vm._v("Bank")]
-                  ),
-                  _vm._v(" "),
-                  _c("input", {
-                    staticClass: "theme-input-style",
-                    attrs: {
-                      type: "text",
-                      id: "r_password",
-                      placeholder: "Bank"
-                    }
-                  })
-                ])
-              ])
+                  _c("ckeditor", { attrs: { value: "Hello, World!" } })
+                ],
+                1
+              )
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "d-flex align-items-center pt-4" }, [
-              _c(
-                "button",
-                { staticClass: "btn long mr-20", attrs: { type: "submit" } },
-                [_vm._v("Register")]
-              ),
-              _vm._v(" "),
-              _c("span", { staticClass: "font-12 d-block" }, [
-                _c(
-                  "a",
-                  { staticClass: "bold", attrs: { href: "login.html" } },
-                  [_vm._v("Log In")]
-                ),
-                _vm._v(",If you already have an account.")
-              ])
-            ])
-          ])
+            _vm._m(0),
+            _vm._v(" "),
+            _vm._m(1),
+            _vm._v(" "),
+            _vm._m(2),
+            _vm._v(" "),
+            _vm._m(3),
+            _vm._v(" "),
+            _vm._m(4),
+            _vm._v(" "),
+            _vm._m(5),
+            _vm._v(" "),
+            _vm._m(6),
+            _vm._v(" "),
+            _vm._m(7)
+          ]),
+          _vm._v(" "),
+          _vm._m(8)
         ])
+      ])
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-lg-6" }, [
+      _c("div", { staticClass: "form-group mb-20" }, [
+        _c(
+          "label",
+          { staticClass: "mb-2 font-14 bold", attrs: { for: "l_name" } },
+          [_vm._v("Last Name")]
+        ),
+        _vm._v(" "),
+        _c("input", {
+          staticClass: "theme-input-style",
+          attrs: { type: "text", id: "l_name", placeholder: "Last Name" }
+        })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-lg-6" }, [
+      _c("div", { staticClass: "form-group mb-20" }, [
+        _c(
+          "label",
+          { staticClass: "mb-2 font-14 bold", attrs: { for: "u_name" } },
+          [_vm._v("User Name")]
+        ),
+        _vm._v(" "),
+        _c("input", {
+          staticClass: "theme-input-style",
+          attrs: { type: "text", id: "u_name", placeholder: "User Name" }
+        })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-lg-6" }, [
+      _c("div", { staticClass: "form-group mb-20" }, [
+        _c(
+          "label",
+          { staticClass: "mb-2 font-14 bold", attrs: { for: "email" } },
+          [_vm._v("Email Address")]
+        ),
+        _vm._v(" "),
+        _c("input", {
+          staticClass: "theme-input-style",
+          attrs: { type: "email", id: "email", placeholder: "Email Address" }
+        })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-lg-6" }, [
+      _c("div", { staticClass: "form-group mb-20" }, [
+        _c(
+          "label",
+          { staticClass: "mb-2 font-14 bold", attrs: { for: "password" } },
+          [_vm._v("Password")]
+        ),
+        _vm._v(" "),
+        _c("input", {
+          staticClass: "theme-input-style",
+          attrs: { type: "password", id: "password", placeholder: "Password" }
+        })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-lg-6" }, [
+      _c("div", { staticClass: "form-group mb-20" }, [
+        _c(
+          "label",
+          { staticClass: "mb-2 font-14 bold", attrs: { for: "r_password" } },
+          [_vm._v("Phone")]
+        ),
+        _vm._v(" "),
+        _c("input", {
+          staticClass: "theme-input-style",
+          attrs: { type: "text", id: "r_password", placeholder: "Password" }
+        })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-lg-6" }, [
+      _c("div", { staticClass: "form-group mb-20" }, [
+        _c(
+          "label",
+          { staticClass: "mb-2 font-14 bold", attrs: { for: "r_password" } },
+          [_vm._v("Role")]
+        ),
+        _vm._v(" "),
+        _c("input", {
+          staticClass: "theme-input-style",
+          attrs: { type: "text", id: "r_password", placeholder: "Role" }
+        })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-lg-6" }, [
+      _c("div", { staticClass: "form-group mb-20" }, [
+        _c(
+          "label",
+          { staticClass: "mb-2 font-14 bold", attrs: { for: "r_password" } },
+          [_vm._v("Pricing")]
+        ),
+        _vm._v(" "),
+        _c("input", {
+          staticClass: "theme-input-style",
+          attrs: { type: "text", id: "r_password", placeholder: "Pricing" }
+        })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-lg-6" }, [
+      _c("div", { staticClass: "form-group mb-20" }, [
+        _c(
+          "label",
+          { staticClass: "mb-2 font-14 bold", attrs: { for: "r_password" } },
+          [_vm._v("Bank")]
+        ),
+        _vm._v(" "),
+        _c("input", {
+          staticClass: "theme-input-style",
+          attrs: { type: "text", id: "r_password", placeholder: "Bank" }
+        })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "d-flex align-items-center pt-4" }, [
+      _c(
+        "button",
+        { staticClass: "btn long mr-20", attrs: { type: "submit" } },
+        [_vm._v("Register")]
+      ),
+      _vm._v(" "),
+      _c("span", { staticClass: "font-12 d-block" }, [
+        _c("a", { staticClass: "bold", attrs: { href: "login.html" } }, [
+          _vm._v("Log In")
+        ]),
+        _vm._v(",If you already have an account.")
       ])
     ])
   }
