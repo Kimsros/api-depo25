@@ -12,10 +12,15 @@ class ShopController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         try{
-            return response()->json(['success'=>shop::all()]);
+            if(isset($request->per_page)){
+                $per_page=$request->per_page;
+            }else{
+                $per_page=15;
+            }
+            return response()->json(['success'=>shop::orderBy('id','DESC')->paginate($per_page)]);
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }
