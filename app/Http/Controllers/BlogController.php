@@ -12,9 +12,18 @@ class BlogController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        try{
+            if(isset($request->per_page)){
+                $per_page=$request->per_page;
+            }else{
+                $per_page=15;
+            }
+            return response()->json(['success'=>blog::where('status',1)->orderBy('id','DESC')->paginate($per_page)]);
+        }catch(\Exception $e){
+            return response()->json(['error'=>$e->getMessage()]);
+        }
     }
 
     /**
@@ -24,7 +33,11 @@ class BlogController extends Controller
      */
     public function create()
     {
-        //
+        try{
+
+        }catch(\Exception $e){
+            return response()->json(['error'=>$e->getMessage()]);
+        }
     }
 
     /**
@@ -35,51 +48,104 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        try{
+            $validation=\Validator($request->all(),[
+                'title'=>'required',
+                'slug'=>'required',
+                'content'=>'required',
+            ]);
+            if($validation->fails()){
+                return response()->json(['success'=>$validation->getMessageBag()]);
+            }
+            $data=$request->all();
+            $data['updated_by']=1;
+            if(blog::create($data)){
+                return response()->json(['success'=>'Blog is inserted !!']);
+            }else{
+                return response()->json(['error'=>'Blog is not inserted !!']);
+            }
+        }catch(\Exception $e){
+            return response()->json(['error'=>$e->getMessage()]);
+        }
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\blog  $blog
+     * @param  \App\Models\product  $product
      * @return \Illuminate\Http\Response
      */
     public function show(blog $blog)
     {
-        //
+        try{
+
+        }catch(\Exception $e){
+            return response()->json(['error'=>$e->getMessage()]);
+        }
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\blog  $blog
+     * @param  \App\Models\product  $product
      * @return \Illuminate\Http\Response
      */
     public function edit(blog $blog)
     {
-        //
+        try{
+            return response()->json(['success'=>$blog]);
+        }catch(\Exception $e){
+            return response()->json(['error'=>$e->getMessage()]);
+        }
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\blog  $blog
+     * @param  \App\Models\product  $product
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, blog $blog)
     {
-        //
+        try{
+            $validation=\Validator($request->all(),[
+                'title'=>'required',
+                'slug'=>'required',
+                'content'=>'required',
+               
+            ]);
+            if($validation->fails()){
+                return response()->json(['success'=>$validation->getMessageBag()]);
+            }
+            $data=$request->all();
+            $data['updated_by']=1;
+            if(blog::where('id',$blog['id'])->update($data)){
+                return response()->json(['success'=>'Blog is updated !!']);
+            }else{
+                return response()->json(['error'=>'Blog is not updated !!']);
+            }
+        }catch(\Exception $e){
+            return response()->json(['error'=>$e->getMessage()]);
+        }
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\blog  $blog
+     * @param  \App\Models\product  $product
      * @return \Illuminate\Http\Response
      */
     public function destroy(blog $blog)
     {
-        //
+        try{
+            if(blog::find($blog[id])->update('status',1)){
+                return response()->json(['success'=>'Blog is deleted !!']);
+            }else{
+                return response()->json(['error'=>'Blog is not deleted !!']);
+            }
+        }catch(\Exception $e){
+            return response()->json(['error'=>$e->getMessage()]);
+        }
     }
 }
