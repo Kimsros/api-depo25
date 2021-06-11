@@ -88,7 +88,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr  v-for="(item,idx) in data" :key="idx">
+                    <tr  v-for="(item,idx) in data.data" :key="idx">
                         <td>
                             <label class="custom-checkbox"><input type="checkbox"><span class="checkmark"></span> </label>
                             <div class="star">
@@ -118,7 +118,9 @@
                            </router-link>
                         </td>
                     </tr>
+
                 </tbody>
+                
             </table>
         </div>
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -148,24 +150,35 @@
 export default {
     data(){
         return{
-            data:null,
+            data:[],
             dataDelete:0
         }
     },
-    mounted(){
-this.getData();
-    },
+ created(){
+    this.getData();
+ },
     methods:
     {
         getId(id){
             this.dataDelete=id;
         },
-        getData(){
-           axios.get("/api/category").then(response=>{
+        getData(url=null){
+            if(url!=null){
+                axios.get(url).then(response=>{
               if(response.data.success){
+                  console.log(response.data.success);
                 this.data=response.data.success;
               }
            });
+            }else{
+                axios.get("/api/category").then(response=>{
+              if(response.data.success){
+                  console.log(response.data.success);
+                this.data=response.data.success;
+              }
+           });
+            }
+
         },
         deleteData()
         {
