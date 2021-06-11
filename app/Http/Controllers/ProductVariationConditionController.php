@@ -12,10 +12,15 @@ class ProductVariationConditionController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         try{
-
+            if(isset($request->per_page)){
+                $per_page=$request->per_page;
+            }else{
+                $per_page=15;
+            }
+            return response()->json(['success'=>product_variation_condition::orderBy('id','DESC')->paginate($per_page)]);
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }
@@ -44,7 +49,22 @@ class ProductVariationConditionController extends Controller
     public function store(Request $request)
     {
         try{
-
+            $validation=\Validator($request->all(),[
+                'product_variation_id'=>'required|integer',
+                'qty_from'=>'required|integer',
+                'qty_to'=>'required|integer',
+                'rice_in_unit'=>'required|numeric',
+            ]);
+            if($validation->fails()){
+                return response()->json(['error'=>$validation->getMessageBag()]);
+            }
+            $data=$request->all();
+            $data['updated_by']=1;
+            if(product_variation_condition::create($data)){
+                return response()->json(['success'=>'Product variation condition is inserted !!']);
+            }else{
+                return response()->json(['success'=>'Product variation condition is not inserted !!']);
+            }
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }
@@ -74,7 +94,7 @@ class ProductVariationConditionController extends Controller
     public function edit(product_variation_condition $product_variation_condition)
     {
         try{
-
+            return response()->json(['success'=>$product_variation_condition]);
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }
@@ -90,7 +110,22 @@ class ProductVariationConditionController extends Controller
     public function update(Request $request, product_variation_condition $product_variation_condition)
     {
         try{
-
+            $validation=\Validator($request->all(),[
+                'product_variation_id'=>'required|integer',
+                'qty_from'=>'required|integer',
+                'qty_to'=>'required|integer',
+                'rice_in_unit'=>'required|numeric',
+            ]);
+            if($validation->fails()){
+                return response()->json(['error'=>$validation->getMessageBag()]);
+            }
+            $data=$request->all();
+            $data['updated_by']=1;
+            if(product_variation_condition::where('id',$product_variation_condition['id'])->update($data)){
+                return response()->json(['success'=>'Product variation condition is updated !!']);
+            }else{
+                return response()->json(['success'=>'Product variation condition is not updated !!']);
+            }
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }
@@ -105,7 +140,11 @@ class ProductVariationConditionController extends Controller
     public function destroy(product_variation_condition $product_variation_condition)
     {
         try{
-
+            if(product_variation_condition::where('id',$product_variation_condition['id'])->delete()){
+                return response()->json(['success'=>'Product variation codition is deleted !!']);
+            }else{
+                return response()->json(['success'=>'Product variation codition is not deleted !!']);
+            }
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }

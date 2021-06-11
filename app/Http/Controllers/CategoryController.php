@@ -14,10 +14,15 @@ class CategoryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         try {
-            return response()->json(['success'=>category::where('status',1)->paginate(10)]);
+            if(isset($request->per_page)){
+                $per_page=$request->per_page;
+            }else{
+                $per_page=15;
+            }
+            return response()->json(['success'=>category::where('status',1)->orderBy('id','DESC')->paginate($per_page)]);
         } catch (\Exception $e) {
             return response()->json(['error'=>$e->getMessage()]);
         }

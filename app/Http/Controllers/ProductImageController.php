@@ -12,10 +12,15 @@ class ProductImageController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         try{
-
+            if(isset($request->per_page)){
+                $per_page=$request->per_page;
+            }else{
+                $per_page=15;
+            }
+            return response()->json(['success'=>product_image::orderBy('id','DESC')->paginate($per_page)]);
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }
@@ -44,7 +49,20 @@ class ProductImageController extends Controller
     public function store(Request $request)
     {
         try{
-
+            $validation=\Validator($request->all(),[
+                'product_id'=>'required|integer',
+                'path'=>'required'
+            ]);
+            if($validation->fails()){
+                return response()->json(['error'=>$validation->getMessageBag()]);
+            }
+            $data=$request->all();
+            $data['updated_by']=1;
+            if(product_image::create($data)){
+                return response()->json(['success'=>'Product image is inserted !!']);
+            }else{
+                return response()->json(['error'=>'Product image is not inserted !!']);
+            }
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }
@@ -74,7 +92,7 @@ class ProductImageController extends Controller
     public function edit(product_image $product_image)
     {
         try{
-
+            return response()->json(['success'=>$product_image]);
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }
@@ -90,7 +108,20 @@ class ProductImageController extends Controller
     public function update(Request $request, product_image $product_image)
     {
         try{
-
+            $validation=\Validator($request->all(),[
+                'product_id'=>'required|integer',
+                'path'=>'required'
+            ]);
+            if($validation->fails()){
+                return response()->json(['error'=>$validation->getMessageBag()]);
+            }
+            $data=$request->all();
+            $data['updated_by']=1;
+            if(product_image::where('id',$product_image['id'])->update($data)){
+                return response()->json(['success'=>'Product image is updated !!']);
+            }else{
+                return response()->json(['error'=>'Product image is not updated !!']);
+            }
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }
@@ -105,7 +136,11 @@ class ProductImageController extends Controller
     public function destroy(product_image $product_image)
     {
         try{
-
+            if(product_image::where('id',$product_image['id'])->delete()){
+                return response()->json(['success'=>'Product image is deleted !!']);
+            }else{
+                return response()->json(['error'=>'Product image is not deleted !!']);
+            }
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }

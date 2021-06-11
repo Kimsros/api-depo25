@@ -9,6 +9,9 @@ require('./bootstrap');
 window.Vue = require('vue').default;
 import router from './router';
 import store from './store';
+import CKEditor from 'ckeditor4-vue';
+
+Vue.use( CKEditor );
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -33,4 +36,5 @@ const app = new Vue({
     el: '#app',
     router,
     store,
+    CKEditor
 });

@@ -12,10 +12,15 @@ class QuoteDetailController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         try{
-
+            if(isset($request->per_page)){
+                $per_page=$request->per_page;
+            }else{
+                $per_page=15;
+            }
+            return response()->json(['success'=>quote_detail::orderBy('id','DESC')->$per_page]);
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }
@@ -44,7 +49,20 @@ class QuoteDetailController extends Controller
     public function store(Request $request)
     {
         try{
-
+            $validation=\Validator($request->all(),[
+                'cart_id'=>'required|integer',
+                'quote_id'=>'required|integer',
+            ]);
+            if($validation->fails()){
+                return response()->json(['error'=>$validation->getMessageBag()]);
+            }
+            $data=$request->all();
+            $data['updated_by']=1;
+            if(quote_detail::create($data)){
+                return response()->json(['success'=>'Quote detail is inserted !!']);
+            }else{
+                return response()->json(['success'=>'Quote detail is not inserted !!']);
+            }
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }
@@ -74,7 +92,7 @@ class QuoteDetailController extends Controller
     public function edit(quote_detail $quote_detail)
     {
         try{
-
+            return response()->json(['success'=>$quote_detail]);
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }
@@ -90,7 +108,20 @@ class QuoteDetailController extends Controller
     public function update(Request $request, quote_detail $quote_detail)
     {
         try{
-
+            $validation=\Validator($request->all(),[
+                'cart_id'=>'required|integer',
+                'quote_id'=>'required|integer',
+            ]);
+            if($validation->fails()){
+                return response()->json(['error'=>$validation->getMessageBag()]);
+            }
+            $data=$request->all();
+            $data['updated_by']=1;
+            if(quote_detail::where('id',$quote_detail['id'])->update($data)){
+                return response()->json(['success'=>'Quote detail is updated !!']);
+            }else{
+                return response()->json(['success'=>'Quote detail is not updated !!']);
+            }
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }
@@ -105,7 +136,11 @@ class QuoteDetailController extends Controller
     public function destroy(quote_detail $quote_detail)
     {
         try{
-
+            if(quote_detail::where('id',$quote_detail['id'])->delete()){
+                return response()->json(['success'=>'Quote detail is deleted !!']);
+            }else{
+                return response()->json(['error'=>'Quote detail is not deleted !!']);
+            }
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }

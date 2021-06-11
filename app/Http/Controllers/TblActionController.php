@@ -44,7 +44,19 @@ class TblActionController extends Controller
     public function store(Request $request)
     {
         try{
-
+            $validation=\Validator($request->all(),[
+                'table_name'=>'required',
+                'permission_type_id'=>'required|integer',
+                'old_value'=>'required',
+                'new_value'=>'required'
+            ]);
+            if($validation->fails()){
+                return response()->json(['error'=>$validation->getMessageBag()]);
+            }
+            $data=$request->all();
+            $data['old_value']=json_encode($request->old_value);
+            $data['new_value']=json_encode($request->new_value);
+            tbl_action::create($data);
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }
