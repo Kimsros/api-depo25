@@ -78,17 +78,17 @@
                             </div>
                             <!-- End Star -->
                         </th>
-                        <th class="text-center">Company<img src="/backend/assets/img/svg/table-down-arrow.svg" alt="" class="svg"></th>
+                        <th class="text-center">Company</th>
                         <th>Home No</th>
                         <th>Street No</th>
-                        <th>Village <img src="/backend/assets/img/svg/table-down-arrow.svg" alt="" class="svg"></th>
+                        <th>Village</th>
                         <th>District</th>
-                        <th>Commune <img src="/backend/assets/img/svg/table-down-arrow.svg" alt="" class="svg"></th>
-                        <th>Provide<img src="/backend/assets/img/svg/table-down-arrow.svg" alt="" class="svg"></th>
-                        <th>Phone One <img src="/backend/assets/img/svg/table-down-arrow.svg" alt="" class="svg"></th>
-                        <th>Phone Two<img src="/backend/assets/img/svg/table-down-arrow.svg" alt="" class="svg"></th>
-                        <th>Email <img src="/backend/assets/img/svg/table-down-arrow.svg" alt="" class="svg"></th>
-                        <th>WebSite <img src="/backend/assets/img/svg/table-down-arrow.svg" alt="" class="svg"></th>
+                        <th>Commune </th>
+                        <th>Provide</th>
+                        <th>Phone One </th>
+                        <th>Phone Two</th>
+                        <th>Email</th>
+                        <th>WebSite</th>
                         <th>Actions</th>
                     </tr>
                 </thead>

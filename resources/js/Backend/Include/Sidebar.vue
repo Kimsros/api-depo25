@@ -33,9 +33,11 @@
                         <span class="link-title">Product</span>
                      </a>
                      <ul class="nav sub-menu">
-                        <li><a href="pages/apps/email/inbox.html">All Product</a></li>
-                        <li><a href="pages/apps/email/read.html">In House Product</a></li>
-                        <li><a href="pages/apps/email/compose.html">Attribute</a></li>
+                        <li><a href="/admin/product/add_product">Add Product</a></li>
+                        <li><a href="/admin/product/list_attribute">All Product</a></li>
+                        <li><a href="/admin/product_brand">Product Brand</a></li>
+                        <li><a href="/admin/product/list_house_product">In House Product</a></li>
+                        <li><a href="/admin/product/list_attribute">Attribute</a></li>
                      </ul>
                   </li>
                   <li>
@@ -114,6 +116,7 @@
                         <span class="link-title">Report</span>
                      </a>
                      <ul class="nav sub-menu">
+                        
                         <li><a href="/admin/in_house_products">In House Product</a></li>
                         <li><a href="/admin/purchase">Purchase</a></li>
                         <li><a href="/admin/user_search">User Search</a></li>
