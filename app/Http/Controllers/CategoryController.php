@@ -22,7 +22,7 @@ class CategoryController extends Controller
             }else{
                 $per_page=15;
             }
-            return response()->json(['success'=>category::orderBy('id','DESC')->paginate($per_page)]);
+            return response()->json(['success'=>category::where('status',1)->orderBy('id','DESC')->paginate($per_page)]);
         } catch (\Exception $e) {
             return response()->json(['error'=>$e->getMessage()]);
         }
