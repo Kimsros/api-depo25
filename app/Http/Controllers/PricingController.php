@@ -15,7 +15,7 @@ class PricingController extends Controller
     public function index()
     {
         try{
-            return response()->json(['success'=>pricing::where('status',1)->get()]);
+            return response()->json(['success'=>pricing::where('status',1)->paginate(10)]);
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }

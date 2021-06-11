@@ -4615,7 +4615,6 @@ input[type=button].btn-block {
 }
 
 .page-item:first-child .page-link {
-  color:red;
   margin-left: 0;
   border-top-left-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem;

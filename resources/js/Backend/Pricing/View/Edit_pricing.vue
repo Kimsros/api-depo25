@@ -1,16 +1,16 @@
 <template>
   <div class="form-element py-30 multiple-column">
-    <h4 class="font-20 mb-20">Add Pricing</h4>
+    <h4 class="font-20 mb-20">Edit Pricing</h4>
 
     <!-- Form -->
-    <form @submit.prevent="insertData()">
+    <form @submit.prevent="updateData()">
       <div class="row">
         <div class="col-lg-6">
           <!-- Form Group -->
           <div class="form-group">
             <label class="font-14 bold mb-2">Name</label>
             <input
-              v-model="pricing.name"
+              v-model="data.name"
               type="text"
               class="theme-input-style"
               placeholder=" Name"
@@ -22,7 +22,7 @@
           <div class="form-group">
             <label class="font-14 bold mb-2">Pay Statsus</label>
             <input
-              v-model="pricing.pay_status"
+              v-model="data.pay_status"
               type="Number"
               class="theme-input-style"
               placeholder=" Pay Status"
@@ -34,7 +34,7 @@
           <div class="form-group">
             <label class="font-14 bold mb-2">Price In Month</label>
             <input
-              v-model="pricing.price_in_month"
+              v-model="data.price_in_month"
               type="number"
               class="theme-input-style"
               placeholder=" Price In Month"
@@ -45,7 +45,7 @@
           <div class="form-group">
             <label class="font-14 bold mb-2">Price In Year</label>
             <input
-              v-model="pricing.price_in_year"
+              v-model="data.price_in_year"
               type="Number"
               class="theme-input-style"
               placeholder=" Price In Year "
@@ -59,7 +59,7 @@
           <div class="form-group">
             <label class="font-14 bold mb-2">Boost Product</label>
             <input
-              v-model="pricing.boost_product"
+              v-model="data.boost_product"
               type="Number"
               class="theme-input-style"
               placeholder=" Boost Product"
@@ -71,7 +71,7 @@
           <div class="form-group">
             <label class="font-14 bold mb-2">Boost duration</label>
             <input
-              v-model="pricing.boost_duration"
+              v-model="data.boost_duration"
               type="Number"
               class="theme-input-style"
               placeholder=" Boost Duration"
@@ -83,7 +83,7 @@
           <div class="form-group">
             <label class="font-14 bold mb-2">Upload product</label>
             <input
-              v-model="pricing.upload_product"
+              v-model="data.upload_product"
               type="Number"
               class="theme-input-style"
               placeholder=" Upload Product"
@@ -93,7 +93,7 @@
           <div class="form-group">
             <label class="font-14 bold mb-2">Upload product duration</label>
             <input
-              v-model="pricing.upload_product_duration"
+              v-model="data.upload_product_duration"
               type="Number"
               class="theme-input-style"
               placeholder=" Upload Product Duction"
@@ -117,39 +117,58 @@
 export default {
     data(){
         return{
-               pricing:{
-                  name:null,
-                  pay_status:null,
-                  price_in_month:null,
-                  price_in_year:null,
-                  boost_product:null,
-                  boost_duration:null,
-                  upload_product:null,
-                  upload_product_duration:null
-               }
+            data:{
+                name:null,
+                pay_status:null,
+                price_in_month:null,
+                price_in_year:null,
+                boost_product:null,
+                boost_duration:null,
+                upload_product:null,
+                upload_product_duration:null },
+                id:null,
+                data:null,
         }
     },
+    mounted(){
+        this.id=this.$route.params.id;
+        this.getData();
+    },
     methods:{
-        insertData(){
-            if( this.pricing.name && 
-                this.pricing.pay_status && 
-                this.pricing.price_in_month && 
-                this.pricing.price_in_year && 
-                this.pricing.boost_product && 
-                this.pricing.boost_duration && 
-                this.pricing.upload_product && 
-                this.pricing.upload_product_duration ){
-                var Pricing=new FormData();
-                Pricing.append("name",this.pricing.name);
-                Pricing.append("pay_status",this.pricing.pay_status);
-                Pricing.append("price_in_month",this.pricing.price_in_month);
-                Pricing.append("price_in_year",this.pricing.price_in_year);
-                Pricing.append("boost_product",this.pricing.boost_product);
-                Pricing.append("boost_duration",this.pricing.boost_duration);
-                Pricing.append("upload_product",this.pricing.upload_product);
-                Pricing.append("upload_product_duration",this.pricing.upload_product_duration);
-                axios.post('/api/pricing',Pricing).then(response=>{
-                    // console.log(response.data);
+        getData(){
+           axios.get("/api/pricing/"+this.id+"/edit").then(response=>{
+              if(response.data.success){
+               this.data=response.data.success;
+
+              }
+              else{
+                  console.log(response.data.error);
+              }
+
+           })
+        },
+        updateData(){
+            if( this.data.name && 
+                this.data.pay_status && 
+                this.data.price_in_month && 
+                this.data.price_in_year && 
+                this.data.boost_product && 
+                this.data.boost_duration && 
+                this.data.upload_product && 
+                this.data.upload_product_duration){
+                var Pricing={
+                  'name':this.data.name,
+                  'pay_status':this.data.pay_status,
+                  'price_in_month':this.data.price_in_month,
+                  'price_in_year':this.data.price_in_year,
+                  'boost_product':this.data.boost_product,
+                  'boost_duration':this.data.boost_duration,
+                  'upload_product':this.data.upload_product,
+                  'upload_product_duration':this.data.upload_product_duration
+                };
+                console.log(Pricing);
+                var url='/api/pricing/'+this.id;
+                axios.put(url,Pricing).then(response=>{
                     if(response.data.success){
                         this.$router.push("/admin/list_pricing");
                     }else{
@@ -157,8 +176,7 @@ export default {
                     }
                 })
             }else{
-
-                alert("data is empty");
+                console.log("data is empty");
             }
         }
     }
