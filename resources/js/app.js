@@ -25,7 +25,9 @@ Vue.use( CKEditor );
 Vue.component('app-backend', require('./Backend/App.vue').default);
 Vue.component('app-frontend', require('./Frontend/App.vue').default);
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+Vue.use(require('vue-resource'));
 
+Vue.component('pagination', require('laravel-vue-pagination'));
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

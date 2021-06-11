@@ -61,7 +61,7 @@ export default {
                 var url='/api/brand/'+this.id;
                 axios.put(url,fd).then(response=>{
                     if(response.data.success){
-                        this.$router.push("/admin/list_brand");
+                        this.$router.push("/admin/brand");
                     }else{
                         console.log(response.data.error);
                     }

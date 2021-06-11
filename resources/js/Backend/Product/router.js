@@ -1,14 +1,14 @@
-import Index from "./View/Index.vue";
+import Add_product from "./View/Add_product.vue";
 import Attribute from "./View/Attribute.vue";
-import Brand from "./View/Brand.vue";
+import Product_brand from "./View/Product_brand.vue";
 import Category from "./View/Category.vue";
 import House_product from "./View/House_product.vue";
 export default{
     router:[
-        {path:"/admin/list_product",component:Index},
-        {path:"/admin/list_attribute",component:Attribute},
-        {path:"/admin/list_brand",component:Brand},
-        {path:"/admin/list_product_category",component:Category},
-        {path:"/admin/list_house_product",component:House_product},
+        {path:"/admin/product/add_product",component:Add_product},
+        {path:"/admin/product/list_attribute",component:Attribute},
+        {path:"/admin/product/product_brand",component:Product_brand},
+        {path:"/admin/product/list_product_category",component:Category},
+        {path:"/admin/product/list_house_product",component:House_product},
     ]
 }
