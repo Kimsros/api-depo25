@@ -120,7 +120,12 @@
                     </tr>
 
                 </tbody>
-                
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                      <li  v-for="(item,idx) in data.links" :key="idx" v-bind:class="{'page-item':true,'active':item.active }"><a class="page-link" @click="getData(item.url)" v-html="item.label"></a></li>
+
+                    </ul>
+                  </nav>
             </table>
         </div>
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
