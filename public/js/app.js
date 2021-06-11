@@ -4544,8 +4544,6 @@ Vue.use(Object(function webpackMissingModule() { var e = new Error("Cannot find 
 Vue.component('app-backend', __webpack_require__(/*! ./Backend/App.vue */ "./resources/js/Backend/App.vue").default);
 Vue.component('app-frontend', __webpack_require__(/*! ./Frontend/App.vue */ "./resources/js/Frontend/App.vue").default);
 Vue.component('example-component', __webpack_require__(/*! ./components/ExampleComponent.vue */ "./resources/js/components/ExampleComponent.vue").default);
-Vue.use(__webpack_require__(Object(function webpackMissingModule() { var e = new Error("Cannot find module 'vue-resource'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())));
-Vue.component('pagination', __webpack_require__(Object(function webpackMissingModule() { var e = new Error("Cannot find module 'laravel-vue-pagination'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())));
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
