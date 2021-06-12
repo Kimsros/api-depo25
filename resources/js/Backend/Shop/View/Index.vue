@@ -52,7 +52,7 @@
                     <img src="/backend/assets/img/svg/right-angle.svg" alt="" class="svg">
                 </a>
                 </li>
-                
+
                 </ul>
             </div>
             <!-- End Pagination -->

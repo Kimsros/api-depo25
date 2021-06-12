@@ -56,7 +56,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="current">
+                        <a href="/admin/add_pricing" class="current">
                             <div class="form-row">
                                 <div class="col-12 text-right">
                                     <button type="submit" class="btn long">Add More</button>
@@ -103,7 +103,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
+                    <tr v-for="(item,idx) in data.data" :key="idx">
                         <td>
                             <!-- Custom Checkbox -->
                             <label class="custom-checkbox">
@@ -124,22 +124,24 @@
                                     <img src="/backend/assets/img/avatar/m16.png" class="img-40" alt="">
                                 </div>
                                 <div class="name bold">
-                                    Arden Spencer
+                                    {{item.name}}
                                 </div>
                             </div>
                         </td>
-                        <td>Evangeline62@yahoo.com</td>
-                        <td>(023) 708-6818 x4267</td>
-                        <td>28</td>
-                        <td>UX Researcher</td>
-                        <td>June 20, 2015</td>
-                        <td>$26253.0</td>
-                        <td>$26253.0</td>
+                        <td>{{item.pay_status}}</td>
+                        <td>{{item.price_in_month}}</td>
+                        <td>{{item.price_in_year}}</td>
+                        <td>{{item.boost_product}}</td>
+                        <td>{{item.boost_duration}}</td>
+                        <td>{{item.upload_product}}</td>
+                        <td>{{item.upload_product_duration}}</td>
                         <td class="actions">
-                            <span class="contact-edit" data-toggle="modal" data-target="#contactEditModal">
-                                <img src="/backend/assets/img/svg/c-edit.svg" alt="" class="svg">
-                            </span>
-                            <span class="contact-close">
+                            <router-link :to="'/admin/edit_pricing/'+item.id">
+                                <span class="contact-edit" data-toggle="modal" data-target="#contactEditModal">
+                                    <img src="/backend/assets/img/svg/c-edit.svg" alt="" class="svg">
+                                </span>
+                            </router-link>
+                            <span @click="getId(item.id)" data-toggle="modal"  data-target="#exampleModal">
                                 <img src="/backend/assets/img/svg/c-close.svg" alt="" class="svg">
                             </span>
                         </td>
@@ -147,6 +149,74 @@
                 </tbody>
             </table>
             <!-- End Invoice List Table -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body pull-center">
+                        <h3>Are You Sure ?</h3>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                        <button type="button" class="btn btn-primary" @click="deleteData()">Yes</button>
+                    </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </template>
+<script>
+export default {
+    data(){
+        return{
+            data:[],
+            dataDelete:0
+        }
+    },
+ created(){
+    this.getData();
+ },
+    methods:
+    {
+        getId(id){
+            this.dataDelete=id;
+        },
+        getData(url=null){
+            if(url!=null){
+                axios.get(url).then(response=>{
+              if(response.data.success){
+                  console.log(response.data.success);
+                this.data=response.data.success;
+              }
+           });
+            }else{
+                axios.get("/api/pricing").then(response=>{
+              if(response.data.success){
+                  console.log(response.data.success);
+                this.data=response.data.success;
+              }
+           });
+            }
+
+        },
+        deleteData()
+        {
+            axios.delete('/api/pricing/'+this.dataDelete).then(response=>{
+                if(response.data.success){
+                    exampleModal.click()
+                    this.getData();
+                }else{
+                    console.log(response.data.error);
+                }
+
+            })
+        }
+    }
+}
+</script>
