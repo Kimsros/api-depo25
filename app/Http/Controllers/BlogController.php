@@ -17,7 +17,6 @@ class BlogController extends Controller
     public function index(Request $request)
     {
         try{
-
             if(isset($request->per_page)){
                 $per_page=$request->per_page;
             }else{
@@ -39,7 +38,11 @@ class BlogController extends Controller
      */
     public function create()
     {
-        //
+        try{
+
+        }catch(\Exception $e){
+            return response()->json(['error'=>$e->getMessage()]);
+        }
     }
 
     /**
@@ -74,18 +77,22 @@ class BlogController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\blog  $blog
+     * @param  \App\Models\product  $product
      * @return \Illuminate\Http\Response
      */
     public function show(blog $blog)
     {
-        //
+        try{
+
+        }catch(\Exception $e){
+            return response()->json(['error'=>$e->getMessage()]);
+        }
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\blog  $blog
+     * @param  \App\Models\product  $product
      * @return \Illuminate\Http\Response
      */
     public function edit(blog $blog)
@@ -101,7 +108,7 @@ class BlogController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\blog  $blog
+     * @param  \App\Models\product  $product
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, blog $blog)
@@ -130,7 +137,7 @@ class BlogController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\blog  $blog
+     * @param  \App\Models\product  $product
      * @return \Illuminate\Http\Response
      */
     public function destroy(Request $request,blog $blog)
