@@ -23,6 +23,7 @@ class BrandController extends Controller
                 $per_page=15;
             }
             if(isset($request->search)){
+
                 return response()->json(['success'=>SeachTable::getSearch('brands',$request->search,array(),$per_page)]);
             }
             return response()->json(['success'=>brand::orderBy('id','DESC')->paginate($per_page)]);

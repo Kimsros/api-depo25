@@ -12,12 +12,10 @@
                 <!-- End Add New Contact Btn -->
 
                 <!-- Search Form -->
-                <form action="#" class="search-form flex-grow">
+                <form @submit.prevent="searchData()" class="search-form flex-grow">
                     <div class="theme-input-group style--two">
-                    <input type="text" class="theme-input-style" placeholder="Search Here">
-
-                    <button type="submit"><img src="/backend/assets/img/svg/search-icon.svg" alt=""
-                        class="svg"></button>
+                    <input type="text" class="theme-input-style" @keyup="search_null()" v-model="search" placeholder="Search Here">
+                   <button type="submit" class="btn btn-info" >Search Information</button>
                     </div>
                 </form>
                 <!-- End Search Form -->
@@ -56,7 +54,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="current">
+                        <a href="add_category" class="current">
                             <div class="form-row">
                                 <div class="col-12 text-right">
                                     <button type="submit" class="btn long">Add More</button>
@@ -156,7 +154,9 @@ export default {
     data(){
         return{
             data:[],
-            dataDelete:0
+            dataDelete:0,
+            search:null,
+
         }
     },
  created(){
@@ -196,6 +196,22 @@ export default {
                 }
 
             })
+        },
+         searchData(){
+            if(this.search)
+            {
+                axios.get('/api/category?search='+this.search).then(response=>{
+                    if(response.data.success){
+                    this.data=response.data.success;
+                    this.$router.push("/admin/list_category");
+                    }
+                })
+            }
+        },
+        search_null(){
+            if(this.search==''){
+                this.getData();
+            }
         }
     }
 }

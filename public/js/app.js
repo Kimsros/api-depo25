@@ -2268,13 +2268,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
       data: null,
-      dataDelete: 0
+      dataDelete: 0,
+      search: null
     };
   },
   mounted: function mounted() {
@@ -2305,6 +2304,24 @@ __webpack_require__.r(__webpack_exports__);
           console.log(response.data.error);
         }
       });
+    },
+    searchData: function searchData() {
+      var _this3 = this;
+
+      if (this.search) {
+        axios.get('/api/blog-category?search=' + this.search).then(function (response) {
+          if (response.data.success) {
+            _this3.data = response.data.success;
+
+            _this3.$router.push("/admin/list_blog_category");
+          }
+        });
+      }
+    },
+    search_null: function search_null() {
+      if (this.search == '') {
+        this.getData();
+      }
     }
   }
 });
@@ -2482,7 +2499,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-//
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
 //
 //
 //
@@ -2631,12 +2659,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
+      ids: [],
       data: null,
-      dataDelete: 0
+      dataDelete: 0,
+      search: null
     };
   },
   mounted: function mounted() {
-    console.log(this.data);
     this.getData();
   },
   methods: {
@@ -2652,17 +2681,55 @@ __webpack_require__.r(__webpack_exports__);
         }
       });
     },
-    deleteData: function deleteData() {
+    mutipleDelete: function mutipleDelete() {
       var _this2 = this;
+
+      axios["delete"]('/api/brand/' + this.ids[0], {
+        id: this.ids
+      }).then(function (response) {
+        if (response.data.success) {
+          _this2.getData();
+
+          _this2.ids = [];
+        } else {
+          console.log(response.data.error);
+        }
+      });
+    },
+    deleteData: function deleteData() {
+      var _this3 = this;
 
       axios["delete"]('/api/brand/' + this.dataDelete).then(function (response) {
         if (response.data.success) {
           exampleModal.click();
 
-          _this2.getData();
+          _this3.getData();
         } else {
           console.log(response.data.error);
         }
+      });
+    },
+    searchData: function searchData() {
+      var _this4 = this;
+
+      if (this.search) {
+        axios.get('/api/brand?search=' + this.search).then(function (response) {
+          if (response.data.success) {
+            _this4.data = response.data.success;
+
+            _this4.$router.push("/admin/brand");
+          }
+        });
+      }
+    },
+    search_null: function search_null() {
+      if (this.search == '') {
+        this.getData();
+      }
+    },
+    getCheck: function getCheck($event, id) {
+      this.ids = $event.target.checked ? [].concat(_toConsumableArray(this.ids), [id]) : this.ids.filter(function (element) {
+        return element != id;
       });
     }
   }
@@ -4433,13 +4500,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
       data: [],
-      dataDelete: 0
+      dataDelete: 0,
+      search: null
     };
   },
   created: function created() {
@@ -4482,6 +4548,24 @@ __webpack_require__.r(__webpack_exports__);
           console.log(response.data.error);
         }
       });
+    },
+    searchData: function searchData() {
+      var _this3 = this;
+
+      if (this.search) {
+        axios.get('/api/category?search=' + this.search).then(function (response) {
+          if (response.data.success) {
+            _this3.data = response.data.success;
+
+            _this3.$router.push("/admin/list_category");
+          }
+        });
+      }
+    },
+    search_null: function search_null() {
+      if (this.search == '') {
+        this.getData();
+      }
     }
   }
 });
@@ -5166,11 +5250,19 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
       data: [],
-      dataDelete: 0
+      dataDelete: 0,
+      search: null
     };
   },
   created: function created() {
@@ -5213,6 +5305,24 @@ __webpack_require__.r(__webpack_exports__);
           console.log(response.data.error);
         }
       });
+    },
+    searchData: function searchData() {
+      var _this3 = this;
+
+      if (this.search) {
+        axios.get('/api/shop?search=' + this.search).then(function (response) {
+          if (response.data.success) {
+            _this3.data = response.data.success;
+
+            _this3.$router.push("/admin/shop");
+          }
+        });
+      }
+    },
+    search_null: function search_null() {
+      if (this.search == '') {
+        this.getData();
+      }
     }
   }
 });
@@ -48331,24 +48441,91 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "card bg-transparent" }, [
-    _vm._m(0),
+    _c(
+      "div",
+      {
+        staticClass:
+          "contact-header d-flex align-items-sm-center media flex-column flex-sm-row card_color-bg mb-30"
+      },
+      [
+        _c(
+          "div",
+          {
+            staticClass:
+              "contact-header-left media-body d-flex align-items-center mr-4"
+          },
+          [
+            _vm._m(0),
+            _vm._v(" "),
+            _c(
+              "form",
+              {
+                staticClass: "search-form flex-grow",
+                on: {
+                  submit: function($event) {
+                    $event.preventDefault()
+                    return _vm.searchData()
+                  }
+                }
+              },
+              [
+                _c("div", { staticClass: "theme-input-group style--two" }, [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.search,
+                        expression: "search"
+                      }
+                    ],
+                    staticClass: "theme-input-style",
+                    attrs: { type: "text", placeholder: "Search Here" },
+                    domProps: { value: _vm.search },
+                    on: {
+                      keyup: function($event) {
+                        return _vm.search_null()
+                      },
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.search = $event.target.value
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "button",
+                    { staticClass: "btn btn-info", attrs: { type: "submit" } },
+                    [_vm._v("Search Information")]
+                  )
+                ])
+              ]
+            )
+          ]
+        ),
+        _vm._v(" "),
+        _vm._m(1)
+      ]
+    ),
     _vm._v(" "),
     _c("div", { staticClass: "table-responsive" }, [
       _c(
         "table",
         { staticClass: "contact-list-table text-nowrap card_color-bg" },
         [
-          _vm._m(1),
+          _vm._m(2),
           _vm._v(" "),
           _c(
             "tbody",
             _vm._l(_vm.data.data, function(item, idx) {
               return _c("tr", { key: idx }, [
-                _vm._m(2, true),
+                _vm._m(3, true),
                 _vm._v(" "),
                 _c("td", [
                   _c("div", { staticClass: "d-flex align-items-center" }, [
-                    _vm._m(3, true),
+                    _vm._m(4, true),
                     _vm._v(" "),
                     _c("div", { staticClass: "name bold" }, [
                       _vm._v(
@@ -48434,9 +48611,9 @@ var render = function() {
           { staticClass: "modal-dialog", attrs: { role: "document" } },
           [
             _c("div", { staticClass: "modal-content" }, [
-              _vm._m(4),
-              _vm._v(" "),
               _vm._m(5),
+              _vm._v(" "),
+              _vm._m(6),
               _vm._v(" "),
               _c("div", { staticClass: "modal-footer" }, [
                 _c(
@@ -48474,168 +48651,125 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "add-new-contact mr-20" }, [
+      _c(
+        "a",
+        {
+          staticClass: "btn-circle",
+          attrs: {
+            href: "#",
+            "data-toggle": "modal",
+            "data-target": "#contactAddModal"
+          }
+        },
+        [
+          _c("img", {
+            staticClass: "svg",
+            attrs: {
+              src: "/backend/backend/assets/img/svg/plus_white.svg",
+              alt: ""
+            }
+          })
+        ]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
     return _c(
       "div",
       {
         staticClass:
-          "contact-header d-flex align-items-sm-center media flex-column flex-sm-row card_color-bg mb-30"
+          "contact-header-right d-flex align-items-center justify-content-end mt-3 mt-sm-0"
       },
       [
-        _c(
-          "div",
-          {
-            staticClass:
-              "contact-header-left media-body d-flex align-items-center mr-4"
-          },
-          [
-            _c("div", { staticClass: "add-new-contact mr-20" }, [
-              _c(
-                "a",
-                {
-                  staticClass: "btn-circle",
-                  attrs: {
-                    href: "#",
-                    "data-toggle": "modal",
-                    "data-target": "#contactAddModal"
-                  }
-                },
-                [
-                  _c("img", {
-                    staticClass: "svg",
-                    attrs: {
-                      src: "/backend/backend/assets/img/svg/plus_white.svg",
-                      alt: ""
-                    }
-                  })
-                ]
-              )
-            ]),
-            _vm._v(" "),
-            _c(
-              "form",
-              { staticClass: "search-form flex-grow", attrs: { action: "#" } },
-              [
-                _c("div", { staticClass: "theme-input-group style--two" }, [
-                  _c("input", {
-                    staticClass: "theme-input-style",
-                    attrs: { type: "text", placeholder: "Search Here" }
-                  }),
-                  _vm._v(" "),
-                  _c("button", { attrs: { type: "submit" } }, [
-                    _c("img", {
-                      staticClass: "svg",
-                      attrs: {
-                        src: "/backend/assets/img/svg/search-logo.svg",
-                        alt: ""
-                      }
-                    })
-                  ])
-                ])
-              ]
-            )
-          ]
-        ),
+        _c("div", { staticClass: "grid" }, [
+          _c("a", { attrs: { href: "contact-grid.html" } }, [
+            _c("img", {
+              staticClass: "svg",
+              attrs: { src: "/backend/assets/img/svg/grid-logo.svg", alt: "" }
+            })
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "star" }, [
+          _c("a", { attrs: { href: "#" } }, [
+            _c("img", {
+              staticClass: "svg",
+              attrs: { src: "/backend/assets/img/svg/star.svg", alt: "" }
+            })
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "delete_mail" }, [
+          _c("a", { attrs: { href: "#" } }, [
+            _c("img", {
+              staticClass: "svg",
+              attrs: { src: "/backend/assets/img/svg/delete.svg", alt: "" }
+            })
+          ])
+        ]),
         _vm._v(" "),
         _c(
           "div",
           {
             staticClass:
-              "contact-header-right d-flex align-items-center justify-content-end mt-3 mt-sm-0"
+              "pagination style--two d-flex flex-column align-items-center ml-n2"
           },
           [
-            _c("div", { staticClass: "grid" }, [
-              _c("a", { attrs: { href: "contact-grid.html" } }, [
-                _c("img", {
-                  staticClass: "svg",
-                  attrs: {
-                    src: "/backend/assets/img/svg/grid-logo.svg",
-                    alt: ""
-                  }
-                })
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "star" }, [
-              _c("a", { attrs: { href: "#" } }, [
-                _c("img", {
-                  staticClass: "svg",
-                  attrs: { src: "/backend/assets/img/svg/star.svg", alt: "" }
-                })
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "delete_mail" }, [
-              _c("a", { attrs: { href: "#" } }, [
-                _c("img", {
-                  staticClass: "svg",
-                  attrs: { src: "/backend/assets/img/svg/delete.svg", alt: "" }
-                })
-              ])
-            ]),
-            _vm._v(" "),
             _c(
-              "div",
-              {
-                staticClass:
-                  "pagination style--two d-flex flex-column align-items-center ml-n2"
-              },
+              "ul",
+              { staticClass: "list-inline d-inline-flex align-items-center" },
               [
-                _c(
-                  "ul",
-                  {
-                    staticClass: "list-inline d-inline-flex align-items-center"
-                  },
-                  [
-                    _c("li", [
-                      _c("a", { attrs: { href: "#" } }, [
-                        _c("img", {
-                          staticClass: "svg",
-                          attrs: {
-                            src: "/backend/assets/img/svg/left-angle.svg",
-                            alt: ""
-                          }
-                        })
+                _c("li", [
+                  _c("a", { attrs: { href: "#" } }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/left-angle.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("a", { staticClass: "current", attrs: { href: "#" } }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/right-angle.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c(
+                    "a",
+                    {
+                      staticClass: "current",
+                      attrs: { href: "add_blog_category" }
+                    },
+                    [
+                      _c("div", { staticClass: "form-row" }, [
+                        _c("div", { staticClass: "col-12 text-right" }, [
+                          _c(
+                            "button",
+                            {
+                              staticClass: "btn long",
+                              attrs: { type: "submit" }
+                            },
+                            [_vm._v("Add More")]
+                          )
+                        ])
                       ])
-                    ]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _c(
-                        "a",
-                        { staticClass: "current", attrs: { href: "#" } },
-                        [
-                          _c("img", {
-                            staticClass: "svg",
-                            attrs: {
-                              src: "/backend/assets/img/svg/right-angle.svg",
-                              alt: ""
-                            }
-                          })
-                        ]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _c(
-                        "a",
-                        { staticClass: "current", attrs: { href: "#" } },
-                        [
-                          _c("div", { staticClass: "form-row" }, [
-                            _c("div", { staticClass: "col-12 text-right" }, [
-                              _c(
-                                "button",
-                                {
-                                  staticClass: "btn long",
-                                  attrs: { type: "submit" }
-                                },
-                                [_vm._v("Add More")]
-                              )
-                            ])
-                          ])
-                        ]
-                      )
-                    ])
-                  ]
-                )
+                    ]
+                  )
+                ])
               ]
             )
           ]
@@ -49001,24 +49135,143 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "card bg-transparent" }, [
-    _vm._m(0),
+    _c(
+      "div",
+      {
+        staticClass:
+          "contact-header d-flex align-items-sm-center media flex-column flex-sm-row card_color-bg mb-30"
+      },
+      [
+        _c(
+          "div",
+          {
+            staticClass:
+              "contact-header-left media-body d-flex align-items-center mr-4"
+          },
+          [
+            _vm._m(0),
+            _vm._v(" "),
+            _c(
+              "form",
+              {
+                staticClass: "search-form flex-grow",
+                on: {
+                  submit: function($event) {
+                    $event.preventDefault()
+                    return _vm.searchData()
+                  }
+                }
+              },
+              [
+                _c("div", { staticClass: "theme-input-group style--two" }, [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.search,
+                        expression: "search"
+                      }
+                    ],
+                    staticClass: "theme-input-style",
+                    attrs: { type: "text", placeholder: "Search Here" },
+                    domProps: { value: _vm.search },
+                    on: {
+                      keyup: function($event) {
+                        return _vm.search_null()
+                      },
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.search = $event.target.value
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "button",
+                    { staticClass: "btn btn-info", attrs: { type: "submit" } },
+                    [_vm._v("Search Information")]
+                  )
+                ])
+              ]
+            )
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass:
+              "contact-header-right d-flex align-items-center justify-content-end mt-3 mt-sm-0"
+          },
+          [
+            _vm._m(1),
+            _vm._v(" "),
+            _vm._m(2),
+            _vm._v(" "),
+            _vm.ids.length > 0
+              ? _c("div", { staticClass: "delete_mail" }, [
+                  _c(
+                    "a",
+                    {
+                      attrs: { href: "#" },
+                      on: {
+                        click: function($event) {
+                          return _vm.mutipleDelete()
+                        }
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "svg",
+                        attrs: {
+                          src: "/backend/assets/img/svg/delete.svg",
+                          alt: ""
+                        }
+                      })
+                    ]
+                  )
+                ])
+              : _vm._e(),
+            _vm._v(" "),
+            _vm._m(3)
+          ]
+        )
+      ]
+    ),
     _vm._v(" "),
     _c("div", { staticClass: "table-responsive" }, [
       _c(
         "table",
         { staticClass: "contact-list-table text-nowrap card_color-bg" },
         [
-          _vm._m(1),
+          _vm._m(4),
           _vm._v(" "),
           _c(
             "tbody",
             _vm._l(_vm.data.data, function(item, idx) {
               return _c("tr", { key: idx }, [
-                _vm._m(2, true),
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", {
+                      attrs: { type: "checkbox" },
+                      on: {
+                        change: function($event) {
+                          return _vm.getCheck($event, item.id)
+                        }
+                      }
+                    }),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _vm._m(5, true)
+                ]),
                 _vm._v(" "),
                 _c("td", [
                   _c("div", { staticClass: "d-flex align-items-center" }, [
-                    _vm._m(3, true),
+                    _vm._m(6, true),
                     _vm._v(" "),
                     _c("div", { staticClass: "name bold" }, [
                       _vm._v(
@@ -49104,9 +49357,9 @@ var render = function() {
           { staticClass: "modal-dialog", attrs: { role: "document" } },
           [
             _c("div", { staticClass: "modal-content" }, [
-              _vm._m(4),
+              _vm._m(7),
               _vm._v(" "),
-              _vm._m(5),
+              _vm._m(8),
               _vm._v(" "),
               _c("div", { staticClass: "modal-footer" }, [
                 _c(
@@ -49144,170 +49397,111 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "add-new-contact mr-20" }, [
+      _c(
+        "a",
+        {
+          staticClass: "btn-circle",
+          attrs: {
+            href: "#",
+            "data-toggle": "modal",
+            "data-target": "#contactAddModal"
+          }
+        },
+        [
+          _c("img", {
+            staticClass: "svg",
+            attrs: {
+              src: "/backend/backend/assets/img/svg/plus_white.svg",
+              alt: ""
+            }
+          })
+        ]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "grid" }, [
+      _c("a", { attrs: { href: "contact-grid.html" } }, [
+        _c("img", {
+          staticClass: "svg",
+          attrs: { src: "/backend/assets/img/svg/grid-logo.svg", alt: "" }
+        })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "star" }, [
+      _c("a", { attrs: { href: "#" } }, [
+        _c("img", {
+          staticClass: "svg",
+          attrs: { src: "/backend/assets/img/svg/star.svg", alt: "" }
+        })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
     return _c(
       "div",
       {
         staticClass:
-          "contact-header d-flex align-items-sm-center media flex-column flex-sm-row card_color-bg mb-30"
+          "pagination style--two d-flex flex-column align-items-center ml-n2"
       },
       [
         _c(
-          "div",
-          {
-            staticClass:
-              "contact-header-left media-body d-flex align-items-center mr-4"
-          },
+          "ul",
+          { staticClass: "list-inline d-inline-flex align-items-center" },
           [
-            _c("div", { staticClass: "add-new-contact mr-20" }, [
-              _c(
-                "a",
-                {
-                  staticClass: "btn-circle",
-                  attrs: {
-                    href: "#",
-                    "data-toggle": "modal",
-                    "data-target": "#contactAddModal"
-                  }
-                },
-                [
-                  _c("img", {
-                    staticClass: "svg",
-                    attrs: {
-                      src: "/backend/backend/assets/img/svg/plus_white.svg",
-                      alt: ""
-                    }
-                  })
-                ]
-              )
-            ]),
-            _vm._v(" "),
-            _c(
-              "form",
-              { staticClass: "search-form flex-grow", attrs: { action: "#" } },
-              [
-                _c("div", { staticClass: "theme-input-group style--two" }, [
-                  _c("input", {
-                    staticClass: "theme-input-style",
-                    attrs: { type: "text", placeholder: "Search Here" }
-                  }),
-                  _vm._v(" "),
-                  _c("button", { attrs: { type: "submit" } }, [
-                    _c("img", {
-                      staticClass: "svg",
-                      attrs: {
-                        src: "/backend/assets/img/svg/search-logo.svg",
-                        alt: ""
-                      }
-                    })
-                  ])
-                ])
-              ]
-            )
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "contact-header-right d-flex align-items-center justify-content-end mt-3 mt-sm-0"
-          },
-          [
-            _c("div", { staticClass: "grid" }, [
-              _c("a", { attrs: { href: "contact-grid.html" } }, [
+            _c("li", [
+              _c("a", { attrs: { href: "#" } }, [
                 _c("img", {
                   staticClass: "svg",
                   attrs: {
-                    src: "/backend/assets/img/svg/grid-logo.svg",
+                    src: "/backend/assets/img/svg/left-angle.svg",
                     alt: ""
                   }
                 })
               ])
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "star" }, [
-              _c("a", { attrs: { href: "#" } }, [
+            _c("li", [
+              _c("a", { staticClass: "current", attrs: { href: "" } }, [
                 _c("img", {
                   staticClass: "svg",
-                  attrs: { src: "/backend/assets/img/svg/star.svg", alt: "" }
+                  attrs: {
+                    src: "/backend/assets/img/svg/right-angle.svg",
+                    alt: ""
+                  }
                 })
               ])
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "delete_mail" }, [
-              _c("a", { attrs: { href: "#" } }, [
-                _c("img", {
-                  staticClass: "svg",
-                  attrs: { src: "/backend/assets/img/svg/delete.svg", alt: "" }
-                })
-              ])
-            ]),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass:
-                  "pagination style--two d-flex flex-column align-items-center ml-n2"
-              },
-              [
-                _c(
-                  "ul",
-                  {
-                    staticClass: "list-inline d-inline-flex align-items-center"
-                  },
-                  [
-                    _c("li", [
-                      _c("a", { attrs: { href: "#" } }, [
-                        _c("img", {
-                          staticClass: "svg",
-                          attrs: {
-                            src: "/backend/assets/img/svg/left-angle.svg",
-                            alt: ""
-                          }
-                        })
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("li", [
+            _c("li", [
+              _c(
+                "a",
+                { staticClass: "current", attrs: { href: "add_brand" } },
+                [
+                  _c("div", { staticClass: "form-row" }, [
+                    _c("div", { staticClass: "col-12 text-right" }, [
                       _c(
-                        "a",
-                        { staticClass: "current", attrs: { href: "#" } },
-                        [
-                          _c("img", {
-                            staticClass: "svg",
-                            attrs: {
-                              src: "/backend/assets/img/svg/right-angle.svg",
-                              alt: ""
-                            }
-                          })
-                        ]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _c(
-                        "a",
-                        { staticClass: "current", attrs: { href: "#" } },
-                        [
-                          _c("div", { staticClass: "form-row" }, [
-                            _c("div", { staticClass: "col-12 text-right" }, [
-                              _c(
-                                "button",
-                                {
-                                  staticClass: "btn long",
-                                  attrs: { type: "submit" }
-                                },
-                                [_vm._v("Add More")]
-                              )
-                            ])
-                          ])
-                        ]
+                        "button",
+                        { staticClass: "btn long", attrs: { type: "submit" } },
+                        [_vm._v("Add More")]
                       )
                     ])
-                  ]
-                )
-              ]
-            )
+                  ])
+                ]
+              )
+            ])
           ]
         )
       ]
@@ -49357,19 +49551,12 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("td", [
-      _c("label", { staticClass: "custom-checkbox" }, [
-        _c("input", { attrs: { type: "checkbox" } }),
-        _c("span", { staticClass: "checkmark" })
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "star" }, [
-        _c("a", { attrs: { href: "#" } }, [
-          _c("img", {
-            staticClass: "svg",
-            attrs: { src: "/backend/assets/img/svg/star.svg", alt: "" }
-          })
-        ])
+    return _c("div", { staticClass: "star" }, [
+      _c("a", { attrs: { href: "#" } }, [
+        _c("img", {
+          staticClass: "svg",
+          attrs: { src: "/backend/assets/img/svg/star.svg", alt: "" }
+        })
       ])
     ])
   },
@@ -55525,24 +55712,91 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "card bg-transparent" }, [
-    _vm._m(0),
+    _c(
+      "div",
+      {
+        staticClass:
+          "contact-header d-flex align-items-sm-center media flex-column flex-sm-row card_color-bg mb-30"
+      },
+      [
+        _c(
+          "div",
+          {
+            staticClass:
+              "contact-header-left media-body d-flex align-items-center mr-4"
+          },
+          [
+            _vm._m(0),
+            _vm._v(" "),
+            _c(
+              "form",
+              {
+                staticClass: "search-form flex-grow",
+                on: {
+                  submit: function($event) {
+                    $event.preventDefault()
+                    return _vm.searchData()
+                  }
+                }
+              },
+              [
+                _c("div", { staticClass: "theme-input-group style--two" }, [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.search,
+                        expression: "search"
+                      }
+                    ],
+                    staticClass: "theme-input-style",
+                    attrs: { type: "text", placeholder: "Search Here" },
+                    domProps: { value: _vm.search },
+                    on: {
+                      keyup: function($event) {
+                        return _vm.search_null()
+                      },
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.search = $event.target.value
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "button",
+                    { staticClass: "btn btn-info", attrs: { type: "submit" } },
+                    [_vm._v("Search Information")]
+                  )
+                ])
+              ]
+            )
+          ]
+        ),
+        _vm._v(" "),
+        _vm._m(1)
+      ]
+    ),
     _vm._v(" "),
     _c("div", { staticClass: "table-responsive" }, [
       _c(
         "table",
         { staticClass: "contact-list-table text-nowrap card_color-bg" },
         [
-          _vm._m(1),
+          _vm._m(2),
           _vm._v(" "),
           _c(
             "tbody",
             _vm._l(_vm.data.data, function(item, idx) {
               return _c("tr", { key: idx }, [
-                _vm._m(2, true),
+                _vm._m(3, true),
                 _vm._v(" "),
                 _c("td", [
                   _c("div", { staticClass: "d-flex align-items-center" }, [
-                    _vm._m(3, true),
+                    _vm._m(4, true),
                     _vm._v(" "),
                     _c("div", { staticClass: "name bold" }, [
                       _vm._v(
@@ -55656,9 +55910,9 @@ var render = function() {
           { staticClass: "modal-dialog", attrs: { role: "document" } },
           [
             _c("div", { staticClass: "modal-content" }, [
-              _vm._m(4),
-              _vm._v(" "),
               _vm._m(5),
+              _vm._v(" "),
+              _vm._m(6),
               _vm._v(" "),
               _c("div", { staticClass: "modal-footer" }, [
                 _c(
@@ -55696,168 +55950,122 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "add-new-contact mr-20" }, [
+      _c(
+        "a",
+        {
+          staticClass: "btn-circle",
+          attrs: {
+            href: "#",
+            "data-toggle": "modal",
+            "data-target": "#contactAddModal"
+          }
+        },
+        [
+          _c("img", {
+            staticClass: "svg",
+            attrs: {
+              src: "/backend/backend/assets/img/svg/plus_white.svg",
+              alt: ""
+            }
+          })
+        ]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
     return _c(
       "div",
       {
         staticClass:
-          "contact-header d-flex align-items-sm-center media flex-column flex-sm-row card_color-bg mb-30"
+          "contact-header-right d-flex align-items-center justify-content-end mt-3 mt-sm-0"
       },
       [
-        _c(
-          "div",
-          {
-            staticClass:
-              "contact-header-left media-body d-flex align-items-center mr-4"
-          },
-          [
-            _c("div", { staticClass: "add-new-contact mr-20" }, [
-              _c(
-                "a",
-                {
-                  staticClass: "btn-circle",
-                  attrs: {
-                    href: "#",
-                    "data-toggle": "modal",
-                    "data-target": "#contactAddModal"
-                  }
-                },
-                [
-                  _c("img", {
-                    staticClass: "svg",
-                    attrs: {
-                      src: "/backend/backend/assets/img/svg/plus_white.svg",
-                      alt: ""
-                    }
-                  })
-                ]
-              )
-            ]),
-            _vm._v(" "),
-            _c(
-              "form",
-              { staticClass: "search-form flex-grow", attrs: { action: "#" } },
-              [
-                _c("div", { staticClass: "theme-input-group style--two" }, [
-                  _c("input", {
-                    staticClass: "theme-input-style",
-                    attrs: { type: "text", placeholder: "Search Here" }
-                  }),
-                  _vm._v(" "),
-                  _c("button", { attrs: { type: "submit" } }, [
-                    _c("img", {
-                      staticClass: "svg",
-                      attrs: {
-                        src: "/backend/assets/img/svg/search-icon.svg",
-                        alt: ""
-                      }
-                    })
-                  ])
-                ])
-              ]
-            )
-          ]
-        ),
+        _c("div", { staticClass: "grid" }, [
+          _c("a", { attrs: { href: "contact-grid.html" } }, [
+            _c("img", {
+              staticClass: "svg",
+              attrs: { src: "/backend/assets/img/svg/grid-icon.svg", alt: "" }
+            })
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "star" }, [
+          _c("a", { attrs: { href: "#" } }, [
+            _c("img", {
+              staticClass: "svg",
+              attrs: { src: "/backend/assets/img/svg/star.svg", alt: "" }
+            })
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "delete_mail" }, [
+          _c("a", { attrs: { href: "#" } }, [
+            _c("img", {
+              staticClass: "svg",
+              attrs: { src: "/backend/assets/img/svg/delete.svg", alt: "" }
+            })
+          ])
+        ]),
         _vm._v(" "),
         _c(
           "div",
           {
             staticClass:
-              "contact-header-right d-flex align-items-center justify-content-end mt-3 mt-sm-0"
+              "pagination style--two d-flex flex-column align-items-center ml-n2"
           },
           [
-            _c("div", { staticClass: "grid" }, [
-              _c("a", { attrs: { href: "contact-grid.html" } }, [
-                _c("img", {
-                  staticClass: "svg",
-                  attrs: {
-                    src: "/backend/assets/img/svg/grid-icon.svg",
-                    alt: ""
-                  }
-                })
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "star" }, [
-              _c("a", { attrs: { href: "#" } }, [
-                _c("img", {
-                  staticClass: "svg",
-                  attrs: { src: "/backend/assets/img/svg/star.svg", alt: "" }
-                })
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "delete_mail" }, [
-              _c("a", { attrs: { href: "#" } }, [
-                _c("img", {
-                  staticClass: "svg",
-                  attrs: { src: "/backend/assets/img/svg/delete.svg", alt: "" }
-                })
-              ])
-            ]),
-            _vm._v(" "),
             _c(
-              "div",
-              {
-                staticClass:
-                  "pagination style--two d-flex flex-column align-items-center ml-n2"
-              },
+              "ul",
+              { staticClass: "list-inline d-inline-flex align-items-center" },
               [
-                _c(
-                  "ul",
-                  {
-                    staticClass: "list-inline d-inline-flex align-items-center"
-                  },
-                  [
-                    _c("li", [
-                      _c("a", { attrs: { href: "#" } }, [
-                        _c("img", {
-                          staticClass: "svg",
-                          attrs: {
-                            src: "/backend/assets/img/svg/left-angle.svg",
-                            alt: ""
-                          }
-                        })
+                _c("li", [
+                  _c("a", { attrs: { href: "#" } }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/left-angle.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("a", { staticClass: "current", attrs: { href: "#" } }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/right-angle.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c(
+                    "a",
+                    { staticClass: "current", attrs: { href: "add_category" } },
+                    [
+                      _c("div", { staticClass: "form-row" }, [
+                        _c("div", { staticClass: "col-12 text-right" }, [
+                          _c(
+                            "button",
+                            {
+                              staticClass: "btn long",
+                              attrs: { type: "submit" }
+                            },
+                            [_vm._v("Add More")]
+                          )
+                        ])
                       ])
-                    ]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _c(
-                        "a",
-                        { staticClass: "current", attrs: { href: "#" } },
-                        [
-                          _c("img", {
-                            staticClass: "svg",
-                            attrs: {
-                              src: "/backend/assets/img/svg/right-angle.svg",
-                              alt: ""
-                            }
-                          })
-                        ]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _c(
-                        "a",
-                        { staticClass: "current", attrs: { href: "#" } },
-                        [
-                          _c("div", { staticClass: "form-row" }, [
-                            _c("div", { staticClass: "col-12 text-right" }, [
-                              _c(
-                                "button",
-                                {
-                                  staticClass: "btn long",
-                                  attrs: { type: "submit" }
-                                },
-                                [_vm._v("Add More")]
-                              )
-                            ])
-                          ])
-                        ]
-                      )
-                    ])
-                  ]
-                )
+                    ]
+                  )
+                ])
               ]
             )
           ]
@@ -61451,22 +61659,89 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "card bg-transparent" }, [
-    _vm._m(0),
+    _c(
+      "div",
+      {
+        staticClass:
+          "contact-header d-flex align-items-sm-center media flex-column flex-sm-row card_color-bg mb-30"
+      },
+      [
+        _c(
+          "div",
+          {
+            staticClass:
+              "contact-header-left media-body d-flex align-items-center mr-4"
+          },
+          [
+            _vm._m(0),
+            _vm._v(" "),
+            _c(
+              "form",
+              {
+                staticClass: "search-form flex-grow",
+                on: {
+                  submit: function($event) {
+                    $event.preventDefault()
+                    return _vm.searchData()
+                  }
+                }
+              },
+              [
+                _c("div", { staticClass: "theme-input-group style--two" }, [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.search,
+                        expression: "search"
+                      }
+                    ],
+                    staticClass: "theme-input-style",
+                    attrs: { type: "text", placeholder: "Search Here" },
+                    domProps: { value: _vm.search },
+                    on: {
+                      keyup: function($event) {
+                        return _vm.search_null()
+                      },
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.search = $event.target.value
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "button",
+                    { staticClass: "btn btn-info", attrs: { type: "submit" } },
+                    [_vm._v("Search Information")]
+                  )
+                ])
+              ]
+            )
+          ]
+        ),
+        _vm._v(" "),
+        _vm._m(1)
+      ]
+    ),
     _vm._v(" "),
     _c("div", { staticClass: "table-responsive" }, [
       _c(
         "table",
         { staticClass: "contact-list-table text-nowrap card_color-bg" },
         [
-          _vm._m(1),
+          _vm._m(2),
           _vm._v(" "),
           _c(
             "tbody",
             _vm._l(_vm.data.data, function(item, idx) {
               return _c("tr", { key: idx }, [
-                _vm._m(2, true),
-                _vm._v(" "),
                 _vm._m(3, true),
+                _vm._v(" "),
+                _vm._m(4, true),
                 _vm._v(" "),
                 _c("td", [_vm._v("Name")]),
                 _vm._v(" "),
@@ -61578,9 +61853,9 @@ var render = function() {
           { staticClass: "modal-dialog", attrs: { role: "document" } },
           [
             _c("div", { staticClass: "modal-content" }, [
-              _vm._m(4),
-              _vm._v(" "),
               _vm._m(5),
+              _vm._v(" "),
+              _vm._m(6),
               _vm._v(" "),
               _c("div", { staticClass: "modal-footer" }, [
                 _c(
@@ -61618,147 +61893,122 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "add-new-contact mr-20" }, [
+      _c(
+        "a",
+        {
+          staticClass: "btn-circle",
+          attrs: {
+            href: "#",
+            "data-toggle": "modal",
+            "data-target": "#contactAddModal"
+          }
+        },
+        [
+          _c("img", {
+            staticClass: "svg",
+            attrs: {
+              src: "/backend/backend/assets/img/svg/plus_white.svg",
+              alt: ""
+            }
+          })
+        ]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
     return _c(
       "div",
       {
         staticClass:
-          "contact-header d-flex align-items-sm-center media flex-column flex-sm-row card_color-bg mb-30"
+          "contact-header-right d-flex align-items-center justify-content-end mt-3 mt-sm-0"
       },
       [
-        _c(
-          "div",
-          {
-            staticClass:
-              "contact-header-left media-body d-flex align-items-center mr-4"
-          },
-          [
-            _c("div", { staticClass: "add-new-contact mr-20" }, [
-              _c(
-                "a",
-                {
-                  staticClass: "btn-circle",
-                  attrs: {
-                    href: "#",
-                    "data-toggle": "modal",
-                    "data-target": "#contactAddModal"
-                  }
-                },
-                [
-                  _c("img", {
-                    staticClass: "svg",
-                    attrs: {
-                      src: "/backend/backend/assets/img/svg/plus_white.svg",
-                      alt: ""
-                    }
-                  })
-                ]
-              )
-            ]),
-            _vm._v(" "),
-            _c(
-              "form",
-              { staticClass: "search-form flex-grow", attrs: { action: "#" } },
-              [
-                _c("div", { staticClass: "theme-input-group style--two" }, [
-                  _c("input", {
-                    staticClass: "theme-input-style",
-                    attrs: { type: "text", placeholder: "Search Here" }
-                  }),
-                  _vm._v(" "),
-                  _c("button", { attrs: { type: "submit" } }, [
-                    _c("img", {
-                      staticClass: "svg",
-                      attrs: {
-                        src: "/backend/assets/img/svg/search-icon.svg",
-                        alt: ""
-                      }
-                    })
-                  ])
-                ])
-              ]
-            )
-          ]
-        ),
+        _c("div", { staticClass: "grid" }, [
+          _c("a", { attrs: { href: "contact-grid.html" } }, [
+            _c("img", {
+              staticClass: "svg",
+              attrs: { src: "/backend/assets/img/svg/grid-icon.svg", alt: "" }
+            })
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "star" }, [
+          _c("a", { attrs: { href: "#" } }, [
+            _c("img", {
+              staticClass: "svg",
+              attrs: { src: "/backend/assets/img/svg/star.svg", alt: "" }
+            })
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "delete_mail" }, [
+          _c("a", { attrs: { href: "#" } }, [
+            _c("img", {
+              staticClass: "svg",
+              attrs: { src: "/backend/assets/img/svg/delete.svg", alt: "" }
+            })
+          ])
+        ]),
         _vm._v(" "),
         _c(
           "div",
           {
             staticClass:
-              "contact-header-right d-flex align-items-center justify-content-end mt-3 mt-sm-0"
+              "pagination style--two d-flex flex-column align-items-center ml-n2"
           },
           [
-            _c("div", { staticClass: "grid" }, [
-              _c("a", { attrs: { href: "contact-grid.html" } }, [
-                _c("img", {
-                  staticClass: "svg",
-                  attrs: {
-                    src: "/backend/assets/img/svg/grid-icon.svg",
-                    alt: ""
-                  }
-                })
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "star" }, [
-              _c("a", { attrs: { href: "#" } }, [
-                _c("img", {
-                  staticClass: "svg",
-                  attrs: { src: "/backend/assets/img/svg/star.svg", alt: "" }
-                })
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "delete_mail" }, [
-              _c("a", { attrs: { href: "#" } }, [
-                _c("img", {
-                  staticClass: "svg",
-                  attrs: { src: "/backend/assets/img/svg/delete.svg", alt: "" }
-                })
-              ])
-            ]),
-            _vm._v(" "),
             _c(
-              "div",
-              {
-                staticClass:
-                  "pagination style--two d-flex flex-column align-items-center ml-n2"
-              },
+              "ul",
+              { staticClass: "list-inline d-inline-flex align-items-center" },
               [
-                _c(
-                  "ul",
-                  {
-                    staticClass: "list-inline d-inline-flex align-items-center"
-                  },
-                  [
-                    _c("li", [
-                      _c("a", { attrs: { href: "#" } }, [
-                        _c("img", {
-                          staticClass: "svg",
-                          attrs: {
-                            src: "/backend/assets/img/svg/left-angle.svg",
-                            alt: ""
-                          }
-                        })
+                _c("li", [
+                  _c("a", { attrs: { href: "#" } }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/left-angle.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("a", { staticClass: "current", attrs: { href: "#" } }, [
+                    _c("img", {
+                      staticClass: "svg",
+                      attrs: {
+                        src: "/backend/assets/img/svg/right-angle.svg",
+                        alt: ""
+                      }
+                    })
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c(
+                    "a",
+                    { staticClass: "current", attrs: { href: "add_shop" } },
+                    [
+                      _c("div", { staticClass: "form-row" }, [
+                        _c("div", { staticClass: "col-12 text-right" }, [
+                          _c(
+                            "button",
+                            {
+                              staticClass: "btn long",
+                              attrs: { type: "submit" }
+                            },
+                            [_vm._v("Add More")]
+                          )
+                        ])
                       ])
-                    ]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _c(
-                        "a",
-                        { staticClass: "current", attrs: { href: "#" } },
-                        [
-                          _c("img", {
-                            staticClass: "svg",
-                            attrs: {
-                              src: "/backend/assets/img/svg/right-angle.svg",
-                              alt: ""
-                            }
-                          })
-                        ]
-                      )
-                    ])
-                  ]
-                )
+                    ]
+                  )
+                ])
               ]
             )
           ]
