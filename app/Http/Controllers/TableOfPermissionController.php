@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\SeachTable;
 use App\Models\table_of_permission;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -20,6 +21,9 @@ class TableOfPermissionController extends Controller
                 $per_page=$request->per_page;
             }else{
                 $per_page=15;
+            }
+            if(isset($request->search)){
+                return response()->json(['success'=>SeachTable::getSearch('table_of_permissions',$request->search,array(),$per_page)]);
             }
             return response()->json(['success'=>table_of_permission::orderBy('id','DESC')->paginate($per_page)]);
         }catch(\Exception $e){

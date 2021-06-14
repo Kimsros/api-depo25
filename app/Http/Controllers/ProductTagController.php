@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\product_tag;
+use App\Models\SeachTable;
 use Illuminate\Http\Request;
 
 class ProductTagController extends Controller
@@ -19,6 +20,9 @@ class ProductTagController extends Controller
                 $per_page=$request->per_page;
             }else{
                 $per_page=15;
+            }
+            if(isset($request->search)){
+                return response()->json(['success'=>SeachTable::getSearch('product_tags',$request->search,array(),$per_page)]);
             }
             return response()->json(['error'=>product_tag::orderBy('id','DESC')->paginate($per_page)]);
         }catch(\Exception $e){

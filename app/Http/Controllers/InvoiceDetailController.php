@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\invoice_detail;
+use App\Models\SeachTable;
 use Illuminate\Http\Request;
 
 class InvoiceDetailController extends Controller
@@ -19,6 +20,9 @@ class InvoiceDetailController extends Controller
                 $per_page=$request->per_page;
             }else{
                 $per_page=15;
+            }
+            if(isset($request->search)){
+                return response()->json(['success'=>SeachTable::getSearch('invoice_details',$request->search,array(),$per_page)]);
             }
             return response()->json(['success'=>invoice_detail::orderBy('id','DESC')->paginate($per_page)]);
         }catch(\Exception $e){

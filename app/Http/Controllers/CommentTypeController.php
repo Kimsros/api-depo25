@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\comment_type;
+use App\Models\SeachTable;
 use Illuminate\Cache\Repository;
 use Illuminate\Http\Request;
 
@@ -20,6 +21,9 @@ class CommentTypeController extends Controller
                 $per_page=$request->per_page;
             }else{
                 $per_page=15;
+            }
+            if(isset($request->search)){
+                return response()->json(['success'=>SeachTable::getSearch('comment_types',$request->search,array(),$per_page)]);
             }
             return response()->json(['success'=>comment_type::orderBy('id','DESC')->paginate($per_page)]);
         }catch(\Exception $e){

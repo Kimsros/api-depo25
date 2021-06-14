@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\brand;
+use App\Models\SeachTable;
 use Illuminate\Http\Request;
-use Psr\Http\Message\ResponseInterface;
+// use Psr\Http\Message\ResponseInterface;
 
 class BrandController extends Controller
 {
@@ -20,6 +21,9 @@ class BrandController extends Controller
                 $per_page=$request->per_page;
             }else{
                 $per_page=15;
+            }
+            if(isset($request->search)){
+                return response()->json(['success'=>SeachTable::getSearch('brands',$request->search,array(),$per_page)]);
             }
             return response()->json(['success'=>brand::orderBy('id','DESC')->paginate($per_page)]);
         }catch(\Exception $e){
@@ -126,14 +130,23 @@ class BrandController extends Controller
      * @param  \App\Models\brand  $brand
      * @return \Illuminate\Http\Response
      */
-    public function destroy(brand $brand)
+    public function destroy(Request $request,brand $brand)
     {
         try{
-            if(brand::where('id',$brand['id'])->delete()){
-                return response()->json(['success'=>'Brand is deleted !!']);
+            if(is_array($request->id)){
+                if(brand::whereIn('id',$request->id)->delete()){
+                    return response()->json(['success'=>'Brand is deleted !!']);
+                }else{
+                    return response()->json(['error'=>'Brand is not deleted !!']);
+                }
             }else{
-                return response()->json(['error'=>'Brand is not deleted !!']);
+                if(brand::where('id',$brand['id'])->delete()){
+                    return response()->json(['success'=>'Brand is deleted !!']);
+                }else{
+                    return response()->json(['error'=>'Brand is not deleted !!']);
+                }
             }
+
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }

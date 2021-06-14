@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\product_variation_condition;
+use App\Models\SeachTable;
 use Illuminate\Http\Request;
 
 class ProductVariationConditionController extends Controller
@@ -19,6 +20,9 @@ class ProductVariationConditionController extends Controller
                 $per_page=$request->per_page;
             }else{
                 $per_page=15;
+            }
+            if(isset($request->search)){
+                return response()->json(['success'=>SeachTable::getSearch('product_variation_conditions',$request->search,array(),$per_page)]);
             }
             return response()->json(['success'=>product_variation_condition::orderBy('id','DESC')->paginate($per_page)]);
         }catch(\Exception $e){

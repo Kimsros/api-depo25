@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\permission_type;
+use App\Models\SeachTable;
 use Illuminate\Http\Request;
 
 class PermissionTypeController extends Controller
@@ -19,6 +20,9 @@ class PermissionTypeController extends Controller
                 $per_page=$request->per_page;
             }else{
                 $per_page=15;
+            }
+            if(isset($request->search)){
+                return response()->json(['success'=>SeachTable::getSearch('permission_type',$request->search,array(),$per_page)]);
             }
             return response()->json(['success'=>permission_type::orderBy('id','DESC')->paginate($per_page)]);
         }catch(\Exception $e){
