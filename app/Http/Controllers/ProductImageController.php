@@ -137,14 +137,23 @@ class ProductImageController extends Controller
      * @param  \App\Models\product_image  $product_image
      * @return \Illuminate\Http\Response
      */
-    public function destroy(product_image $product_image)
+    public function destroy(Request $request,product_image $product_image)
     {
         try{
-            if(product_image::where('id',$product_image['id'])->delete()){
-                return response()->json(['success'=>'Product image is deleted !!']);
+            if(is_array($request->id)){
+                if(product_image::whereIn('id',$request->id)->delete()){
+                    return response()->json(['success'=>'Product image is deleted !!']);
+                }else{
+                    return response()->json(['error'=>'Product image is not deleted !!']);
+                }
             }else{
-                return response()->json(['error'=>'Product image is not deleted !!']);
+                if(product_image::where('id',$product_image['id'])->delete()){
+                    return response()->json(['success'=>'Product image is deleted !!']);
+                }else{
+                    return response()->json(['error'=>'Product image is not deleted !!']);
+                }
             }
+
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }

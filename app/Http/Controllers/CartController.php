@@ -137,14 +137,23 @@ class CartController extends Controller
      * @param  \App\Models\cart  $cart
      * @return \Illuminate\Http\Response
      */
-    public function destroy(cart $cart)
+    public function destroy(Request $request,cart $cart)
     {
         try{
-            if(cart::where('id',$cart['id'])->delete()){
-                return response()->json(['success'=>'Card is deleted !!']);
+            if(is_array($request->id)){
+                if(cart::whereIn('id',$request->id)->delete()){
+                    return response()->json(['success'=>'Card is deleted !!']);
+                }else{
+                    return response()->json(['success'=>'Card is not deleted !!']);
+                }
             }else{
-                return response()->json(['success'=>'Card is not deleted !!']);
+                if(cart::where('id',$cart['id'])->delete()){
+                    return response()->json(['success'=>'Card is deleted !!']);
+                }else{
+                    return response()->json(['success'=>'Card is not deleted !!']);
+                }
             }
+
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }

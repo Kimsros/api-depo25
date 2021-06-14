@@ -159,14 +159,23 @@ class ShopController extends Controller
      * @param  \App\Models\shop  $shop
      * @return \Illuminate\Http\Response
      */
-    public function destroy(shop $shop)
+    public function destroy(Request $request,shop $shop)
     {
         try{
-            if(shop::where('id',$shop['id'])->delete()){
-                return response()->json(['success'=>'Shop is deleted !!']);
+            if(is_array($request->id)){
+                if(shop::whereIn('id',$request->id)->delete()){
+                    return response()->json(['success'=>'Shop is deleted !!']);
+                }else{
+                    return response()->json(['error'=>'Shop is not deleted !!']);
+                }
             }else{
-                return response()->json(['error'=>'Shop is not deleted !!']);
+                if(shop::where('id',$shop['id'])->delete()){
+                    return response()->json(['success'=>'Shop is deleted !!']);
+                }else{
+                    return response()->json(['error'=>'Shop is not deleted !!']);
+                }
             }
+
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }

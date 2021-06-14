@@ -136,13 +136,21 @@ class RoleController extends Controller
      * @param  \App\Models\role  $role
      * @return \Illuminate\Http\Response
      */
-    public function destroy(role $role)
+    public function destroy(Request $request,role $role)
     {
         try{
-            if(role::where('id',$role['id'])->delete()){
-                return response()->json(['success'=>'Role is deleted !!']);
+            if(is_array($request->id)){
+                if(role::whereIn('id',$request->id)->delete()){
+                    return response()->json(['success'=>'Role is deleted !!']);
+                }else{
+                    return response()->json(['error'=>'Role is not inserted !!']);
+                }
             }else{
-                return response()->json(['error'=>'Role is not inserted !!']);
+                if(role::where('id',$role['id'])->delete()){
+                    return response()->json(['success'=>'Role is deleted !!']);
+                }else{
+                    return response()->json(['error'=>'Role is not inserted !!']);
+                }
             }
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);

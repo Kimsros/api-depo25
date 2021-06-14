@@ -145,14 +145,23 @@ class InvoiceDetailController extends Controller
      * @param  \App\Models\invoice_detail  $invoice_detail
      * @return \Illuminate\Http\Response
      */
-    public function destroy(invoice_detail $invoice_detail)
+    public function destroy(Request $request,invoice_detail $invoice_detail)
     {
         try{
-            if(invoice_detail::where('id',$invoice_detail['id'])->delete()){
-                return response()->json(['success'=>'Invoice detail is deleted !!']);
+            if(is_array($request->id)){
+                if(invoice_detail::whereIn('id',$request->id)->delete()){
+                    return response()->json(['success'=>'Invoice detail is deleted !!']);
+                }else{
+                    return response()->json(['error'=>'Invoice detail is not deleted !!']);
+                }
             }else{
-                return response()->json(['error'=>'Invoice detail is not deleted !!']);
+                if(invoice_detail::where('id',$invoice_detail['id'])->delete()){
+                    return response()->json(['success'=>'Invoice detail is deleted !!']);
+                }else{
+                    return response()->json(['error'=>'Invoice detail is not deleted !!']);
+                }
             }
+
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }
