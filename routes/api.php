@@ -23,6 +23,7 @@ Route::resource('brand', BrandController::class);
 Route::resource('cart', CartController::class);
 Route::resource('category', CategoryController::class);
 Route::resource('blog-category',BlogCategoryController::class);
+Route::resource('blog',BlogController::class);
 Route::resource('comment', CommentController::class);
 Route::resource('comment-type', CommentTypeController::class);
 Route::resource('delivery', DeliveryController::class);

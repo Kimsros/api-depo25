@@ -20,7 +20,7 @@ class BlogController extends Controller
             }else{
                 $per_page=15;
             }
-            return response()->json(['success'=>blog::where('status',1)->orderBy('id','DESC')->paginate($per_page)]);
+            return response()->json(['success'=>blog::orderBy('id','DESC')->paginate($per_page)]);
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }
@@ -92,6 +92,8 @@ class BlogController extends Controller
      */
     public function edit(blog $blog)
     {
+
+
         try{
             return response()->json(['success'=>$blog]);
         }catch(\Exception $e){
@@ -139,7 +141,7 @@ class BlogController extends Controller
     public function destroy(blog $blog)
     {
         try{
-            if(blog::find($blog[id])->update('status',1)){
+            if(blog::find($blog['id'])->delete()){
                 return response()->json(['success'=>'Blog is deleted !!']);
             }else{
                 return response()->json(['error'=>'Blog is not deleted !!']);

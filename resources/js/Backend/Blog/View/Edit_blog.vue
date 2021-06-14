@@ -3,13 +3,13 @@
     <h4 class="font-20 mb-20">Add Blog</h4>
 
     <!-- Form -->
-    <form @submit.prevent="insertData()" >
+    <form @submit.prevent="updateData()" >
       <div class="row">
-        <div class="col-lg-6">
+        <div class="col-lg-6" v-if="data != null">
           <!-- Form Group -->
           <div class="form-group">
             <label class="font-14 bold mb-2">Title</label>
-            <input v-model="blog.title"
+            <input v-model="data.title"
               type="text"
               class="theme-input-style"
               placeholder="Enter title"
@@ -20,7 +20,7 @@
           <!-- Form Group -->
           <div class="form-group">
             <label class="font-14 bold mb-2">Slug</label>
-            <input v-model="blog.slug"
+            <input v-model="data.slug"
               type="text"
               class="theme-input-style"
               placeholder="Enter slug"
@@ -31,8 +31,8 @@
           <!-- Form Group -->
           <div class="form-group">
             <label class="font-14 bold mb-2">Content</label>
-            <ckeditor  v-model="blog.content"></ckeditor>
-            <!-- <input v-model="blog.content"
+             <ckeditor :editor="editor" v-model="data.content" :config="editorConfig"></ckeditor>
+            <!-- <input v-model="data.content"
               type="text"
               class="theme-input-style"
               placeholder="Enter content"
@@ -51,26 +51,39 @@
     <!-- End Form -->
   </div>
 </template>
+
 <script>
 export default {
     data(){
         return{
-               blog:{
-                   title:null,
-                   slug:null,
-                   content:null,
-               }
+            id:this.$route.params.id,
+            data:null
         }
     },
+    mounted(){
+        this.getData();
+    },
     methods:{
-        insertData(){
-            if(this.blog.title&&this.blog.slug&&this.blog.content){
-                var fd=new FormData();
-                fd.append("title",this.blog.title);
-                fd.append("slug",this.blog.slug);
-                fd.append("content",this.blog.content);
-                axios.post('/api/blog',fd).then(response=>{
-                    // console.log(response.data);
+        getData(){
+           axios.get("/api/blog/"+this.id+"/edit").then(response=>{
+              if(response.data.success){
+               this.data=response.data.success;
+              }
+              else{
+                  console.log(response.data.error);
+              }
+           })
+          
+        },
+        updateData(){
+            if(this.data.title&&this.data.slug&&this.data.content){
+                var fd={
+                    'title':this.data.title,
+                    'slug':this.data.slug,
+                    'content':this.data.content,
+                };
+                var url='/api/blog/'+this.id;
+                axios.put(url,fd).then(response=>{
                     if(response.data.success){
                         this.$router.push("/admin/blog");
                     }else{
@@ -80,9 +93,10 @@ export default {
                 })
             }else{
 
-                alert("data is empty");
+                console.log("data is empty");
             }
         }
     }
 }
 </script>
+
