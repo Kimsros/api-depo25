@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\BlogCategory;
+use App\Models\SeachTable;
 use Illuminate\Http\Request;
 
 class BlogCategoryController extends Controller
@@ -19,6 +20,9 @@ class BlogCategoryController extends Controller
                 $per_page=$request->per_page;
             }else{
                 $per_page=15;
+            }
+            if(isset($request->search)){
+                return response()->json(['success'=>SeachTable::getSearch('blog_categories',$request->search,array(),$per_page)]);
             }
             return response()->json(['success'=>BlogCategory::where('status',1)->orderBy('id','DESC')->paginate($per_page)]);
         } catch (\Exception $e) {
@@ -128,15 +132,24 @@ class BlogCategoryController extends Controller
      * @param  \App\Models\BlogCategory  $category
      * @return \Illuminate\Http\Response
      */
-    public function destroy(BlogCategory $BlogCategory)
+    public function destroy(Request $request,BlogCategory $BlogCategory)
     {
 
         try {
-            if(BlogCategory::where('id', $BlogCategory['id'])->delete()){
-                return response()->json(['success'=>'Category is deleted !!']);
+            if(is_array($request->id)){
+                if(BlogCategory::whereIn('id', $request->id)->delete()){
+                    return response()->json(['success'=>'Category is deleted !!']);
+                }else{
+                    return response()->json(['error'=>'Category is not deleted !!']);
+                }
             }else{
-                return response()->json(['error'=>'Category is not deleted !!']);
+                if(BlogCategory::where('id', $BlogCategory['id'])->delete()){
+                    return response()->json(['success'=>'Category is deleted !!']);
+                }else{
+                    return response()->json(['error'=>'Category is not deleted !!']);
+                }
             }
+
         } catch (\Exception $e) {
             return response()->json(['error'=>$e->getMessage()]);
         }
