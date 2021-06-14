@@ -149,7 +149,6 @@ class BlogCategoryController extends Controller
                     return response()->json(['error'=>'Category is not deleted !!']);
                 }
             }
-
         } catch (\Exception $e) {
             return response()->json(['error'=>$e->getMessage()]);
         }
