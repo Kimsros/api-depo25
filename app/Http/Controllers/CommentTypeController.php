@@ -136,14 +136,23 @@ class CommentTypeController extends Controller
      * @param  \App\Models\comment_type  $comment_type
      * @return \Illuminate\Http\Response
      */
-    public function destroy(comment_type $comment_type)
+    public function destroy(Request $request,comment_type $comment_type)
     {
         try{
-            if(comment_type::where('id',$comment_type['id'])->delete()){
-                return response()->json(['success'=>'Comment Type is deleted !!']);
+            if(is_array($request->id)){
+                if(comment_type::whereIn('id',$request->id)->delete()){
+                    return response()->json(['success'=>'Comment Type is deleted !!']);
+                }else{
+                    return response()->json(['error'=>'Comment Type is not deleted']);
+                }
             }else{
-                return response()->json(['error'=>'Comment Type is not deleted']);
+                if(comment_type::where('id',$comment_type['id'])->delete()){
+                    return response()->json(['success'=>'Comment Type is deleted !!']);
+                }else{
+                    return response()->json(['error'=>'Comment Type is not deleted']);
+                }
             }
+
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }

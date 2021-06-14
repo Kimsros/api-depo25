@@ -141,13 +141,21 @@ class CommentController extends Controller
      * @param  \App\Models\comment  $comment
      * @return \Illuminate\Http\Response
      */
-    public function destroy(comment $comment)
+    public function destroy(Request $request,comment $comment)
     {
         try{
-            if(comment::where('id',$comment['id'])->delete()){
-                return response()->json(['success'=>'Comment is deleted !!']);
+            if(is_array($request->id)){
+                if(comment::whereIn('id',$request->id)->delete()){
+                    return response()->json(['success'=>'Comment is deleted !!']);
+                }else{
+                    return response()->json(['error'=>'Comment is not deleted !!']);
+                }
             }else{
-                return response()->json(['error'=>'Comment is not deleted !!']);
+                if(comment::where('id',$comment['id'])->delete()){
+                    return response()->json(['success'=>'Comment is deleted !!']);
+                }else{
+                    return response()->json(['error'=>'Comment is not deleted !!']);
+                }
             }
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);

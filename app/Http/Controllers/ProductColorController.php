@@ -137,14 +137,23 @@ class ProductColorController extends Controller
      * @param  \App\Models\product_color  $product_color
      * @return \Illuminate\Http\Response
      */
-    public function destroy(product_color $product_color)
+    public function destroy(Request $request,product_color $product_color)
     {
         try{
-            if(product_color::where('id',$product_color['id'])->delete()){
-                return response()->json(['success'=>'Product color is deleted !!']);
+            if(is_array($request->id)){
+                if(product_color::whereIn('id',$request->id)->delete()){
+                    return response()->json(['success'=>'Product color is deleted !!']);
+                }else{
+                    return response()->json(['success'=>'Product color is not deleted !!']);
+                }
             }else{
-                return response()->json(['success'=>'Product color is not deleted !!']);
+                if(product_color::where('id',$product_color['id'])->delete()){
+                    return response()->json(['success'=>'Product color is deleted !!']);
+                }else{
+                    return response()->json(['success'=>'Product color is not deleted !!']);
+                }
             }
+
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }

@@ -147,14 +147,23 @@ class ProductController extends Controller
      * @param  \App\Models\product  $product
      * @return \Illuminate\Http\Response
      */
-    public function destroy(product $product)
+    public function destroy(Request $request,product $product)
     {
         try{
-            if(product::where('id',$product['id'])->delete()){
-                return response()->json(['success'=>'Product is deleted !!']);
+            if(is_array($request->id)){
+                if(product::whereIn('id',$request->id)->delete()){
+                    return response()->json(['success'=>'Product is deleted !!']);
+                }else{
+                    return response()->json(['error'=>'Product is not deleted !!']);
+                }
             }else{
-                return response()->json(['error'=>'Product is not deleted !!']);
+                if(product::where('id',$product['id'])->delete()){
+                    return response()->json(['success'=>'Product is deleted !!']);
+                }else{
+                    return response()->json(['error'=>'Product is not deleted !!']);
+                }
             }
+
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }

@@ -121,14 +121,23 @@ class QuoteController extends Controller
      * @param  \App\Models\quote  $quote
      * @return \Illuminate\Http\Response
      */
-    public function destroy(quote $quote)
+    public function destroy(Request $request,quote $quote)
     {
         try{
-            if(quote::where('id',$quote['id'])){
-                return response()->json(['success'=>'Quote is deleted !!']);
+            if(is_array($request->id)){
+                if(quote::whereIn('id',$request->id)->delete()){
+                    return response()->json(['success'=>'Quote is deleted !!']);
+                }else{
+                    return response()->json(['error'=>'Quote is not deleted !!']);
+                }
             }else{
-                return response()->json(['error'=>'Quote is not deleted !!']);
+                if(quote::where('id',$quote['id'])->delete()){
+                    return response()->json(['success'=>'Quote is deleted !!']);
+                }else{
+                    return response()->json(['error'=>'Quote is not deleted !!']);
+                }
             }
+
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }

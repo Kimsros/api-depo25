@@ -137,14 +137,23 @@ class QuoteDetailController extends Controller
      * @param  \App\Models\quote_detail  $quote_detail
      * @return \Illuminate\Http\Response
      */
-    public function destroy(quote_detail $quote_detail)
+    public function destroy(Request $request,quote_detail $quote_detail)
     {
         try{
-            if(quote_detail::where('id',$quote_detail['id'])->delete()){
-                return response()->json(['success'=>'Quote detail is deleted !!']);
+            if(is_array($request->id)){
+                if(quote_detail::whereIn('id',$request->id)->delete()){
+                    return response()->json(['success'=>'Quote detail is deleted !!']);
+                }else{
+                    return response()->json(['error'=>'Quote detail is not deleted !!']);
+                }
             }else{
-                return response()->json(['error'=>'Quote detail is not deleted !!']);
+                if(quote_detail::where('id',$quote_detail['id'])->delete()){
+                    return response()->json(['success'=>'Quote detail is deleted !!']);
+                }else{
+                    return response()->json(['error'=>'Quote detail is not deleted !!']);
+                }
             }
+
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }

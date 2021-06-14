@@ -135,14 +135,23 @@ class DeliveryLocationController extends Controller
      * @param  \App\Models\delivery_location  $delivery_location
      * @return \Illuminate\Http\Response
      */
-    public function destroy(delivery_location $delivery_location)
+    public function destroy(Request $request,delivery_location $delivery_location)
     {
         try{
-            if(delivery_location::where('id',$delivery_location['id'])->delete()){
-                return response()->json(['success'=>'Delivery location is deleted !!']);
+            if(is_array($request->id)){
+                if(delivery_location::whereIn('id',$request->id)->delete()){
+                    return response()->json(['success'=>'Delivery location is deleted !!']);
+                }else{
+                    return response()->json(['error'=>'Delivery location is not deleted !!']);
+                }
             }else{
-                return response()->json(['error'=>'Delivery location is not deleted !!']);
+                if(delivery_location::where('id',$delivery_location['id'])->delete()){
+                    return response()->json(['success'=>'Delivery location is deleted !!']);
+                }else{
+                    return response()->json(['error'=>'Delivery location is not deleted !!']);
+                }
             }
+
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }

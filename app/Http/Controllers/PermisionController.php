@@ -137,14 +137,23 @@ class PermisionController extends Controller
      * @param  \App\Models\permision  $permision
      * @return \Illuminate\Http\Response
      */
-    public function destroy(permision $permision)
+    public function destroy(Request $request,permision $permision)
     {
         try{
-            if(permision::where('id',$permision['id'])->delete()){
-                return response()->json(['success'=>'Permision is deleted !!']);
+            if(is_array($request->id)){
+                if(permision::whereIn('id',$request->id)->delete()){
+                    return response()->json(['success'=>'Permision is deleted !!']);
+                }else{
+                    return response()->json(['success'=>'Permision is not deleted !!']);
+                }
             }else{
-                return response()->json(['success'=>'Permision is not deleted !!']);
+                if(permision::where('id',$permision['id'])->delete()){
+                    return response()->json(['success'=>'Permision is deleted !!']);
+                }else{
+                    return response()->json(['success'=>'Permision is not deleted !!']);
+                }
             }
+
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }

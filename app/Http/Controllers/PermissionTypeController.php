@@ -135,14 +135,23 @@ class PermissionTypeController extends Controller
      * @param  \App\Models\permission_type  $permission_type
      * @return \Illuminate\Http\Response
      */
-    public function destroy(permission_type $permission_type)
+    public function destroy(Request $request,permission_type $permission_type)
     {
         try{
-            if(permission_type::where('id',$permission_type)->delete()){
-                return response()->json(['success'=>'Permision type is deleted !!']);
+            if(is_array($request->id)){
+                if(permission_type::whereIn('id',$request->id)->delete()){
+                    return response()->json(['success'=>'Permision type is deleted !!']);
+                }else{
+                    return response()->json(['error'=>'Permision type is not deleted !!']);
+                }
             }else{
-                return response()->json(['error'=>'Permision type is not deleted !!']);
+                if(permission_type::where('id',$permission_type['id'])->delete()){
+                    return response()->json(['success'=>'Permision type is deleted !!']);
+                }else{
+                    return response()->json(['error'=>'Permision type is not deleted !!']);
+                }
             }
+
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }

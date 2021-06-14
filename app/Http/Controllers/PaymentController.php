@@ -139,14 +139,23 @@ class PaymentController extends Controller
      * @param  \App\Models\payment  $payment
      * @return \Illuminate\Http\Response
      */
-    public function destroy(payment $payment)
+    public function destroy(Request $request,payment $payment)
     {
         try{
-            if(payment::where('id',$payment['id'])->delete()){
-                return response()->json(['success'=>'Payment is deleted !!']);
+            if(is_array($request->id)){
+                if(payment::whereIn('id',$request->id)->delete()){
+                    return response()->json(['success'=>'Payment is deleted !!']);
+                }else{
+                    return response()->json(['error'=>'Payment is not deleted !!']);
+                }
             }else{
-                return response()->json(['error'=>'Payment is not deleted !!']);
+                if(payment::where('id',$payment['id'])->delete()){
+                    return response()->json(['success'=>'Payment is deleted !!']);
+                }else{
+                    return response()->json(['error'=>'Payment is not deleted !!']);
+                }
             }
+
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }
