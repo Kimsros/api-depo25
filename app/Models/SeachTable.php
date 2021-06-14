@@ -19,7 +19,7 @@ class SeachTable extends Model
                     $query->orWhere($column, 'LIKE', "%{$search_}%")->where([['status','!=',0]]);
                 }
             }
-            return $query->get();
+            return $query->paginate($per_page);
         }else{
             $columns = Schema::getColumnListing($table_name);
             foreach($columns as $column){
