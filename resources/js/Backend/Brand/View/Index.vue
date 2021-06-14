@@ -20,7 +20,6 @@
                 </form>
                 <!-- End Search Form -->
         </div>
-
         <div class="contact-header-right d-flex align-items-center justify-content-end mt-3 mt-sm-0">
             <!-- Grid -->
             <div class="grid">
@@ -33,10 +32,9 @@
                 <a href="#"><img src="/backend/assets/img/svg/star.svg" alt="" class="svg"></a>
             </div>
             <!-- End Starred -->
-
             <!-- Delete Mail -->
-            <div class="delete_mail">
-                <a href="#"><img src="/backend/assets/img/svg/delete.svg" alt="" class="svg"></a>
+            <div class="delete_mail" v-if="ids.length>0">
+                <a href="#"  @click="mutipleDelete()"><img src="/backend/assets/img/svg/delete.svg" alt="" class="svg"></a>
             </div>
             <!-- End Delete Mail -->
 
@@ -48,11 +46,13 @@
                             <img src="/backend/assets/img/svg/left-angle.svg" alt="" class="svg">
                         </a>
                     </li>
+
                     <li>
-                        <a href="#" class="current">
+                        <a href="" class="current" >
                             <img src="/backend/assets/img/svg/right-angle.svg" alt="" class="svg">
                         </a>
                     </li>
+
                     <li>
                         <a href="add_brand" class="current">
                             <div class="form-row">
@@ -88,7 +88,8 @@
                 <tbody>
                     <tr  v-for="(item,idx) in data.data" :key="idx">
                         <td>
-                            <label class="custom-checkbox"><input type="checkbox"><span class="checkmark"></span> </label>
+                            <label class="custom-checkbox">
+                                <input type="checkbox" @change="getCheck($event,item.id)"><span class="checkmark"></span> </label>
                             <div class="star">
                                 <a href="#"><img src="/backend/assets/img/svg/star.svg" alt="" class="svg"></a>
                             </div>
@@ -146,6 +147,7 @@
 export default {
     data(){
         return{
+            ids:[],
             data:null,
             dataDelete:0,
             search:null,
@@ -169,6 +171,17 @@ export default {
               }
            });
         },
+        mutipleDelete(){
+             axios.delete('/api/brand/'+this.ids[0],{id:this.ids}).then(response=>{
+                if(response.data.success){
+                    this.getData();
+                    this.ids=[];
+                }else{
+                    console.log(response.data.error);
+                }
+
+            });
+        },
         deleteData()
         {
             axios.delete('/api/brand/'+this.dataDelete).then(response=>{
@@ -190,13 +203,20 @@ export default {
                     this.$router.push("/admin/brand");
                     }
                 })
+
             }
         },
         search_null(){
             if(this.search==''){
                 this.getData();
             }
+        },
+        getCheck($event, id)
+        {
+            this.ids=$event.target.checked?[...this.ids,...[id]]:this.ids.filter(element=>element!=id);
+
         }
+
 
     }
 }
