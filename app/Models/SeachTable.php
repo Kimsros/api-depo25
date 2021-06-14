@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Schema;
 class SeachTable extends Model
 {
     use HasFactory;
-    public static function getSearch($table_name,$search,$columns=[],$per_page=0){
+    public static function getSearch($table_name,$search,$columns=[],$per_page=15){
         $searchs=explode(" ",$search);
         $query =DB::table($table_name)->select('*');
         if(count($columns)>0){
@@ -19,7 +19,7 @@ class SeachTable extends Model
                     $query->orWhere($column, 'LIKE', "%{$search_}%")->where([['status','!=',0]]);
                 }
             }
-            return $query->get();
+            return $query->orderBy('id','DESC')->paginate($per_page);
         }else{
             $columns = Schema::getColumnListing($table_name);
             foreach($columns as $column){
@@ -27,7 +27,7 @@ class SeachTable extends Model
                     $query->orWhere($column, 'LIKE', "%{$search_}%")->where([['status','!=',0]]);
                 }
             }
-            return $query->paginate($per_page);
+            return $query->orderBy('id','DESC')->paginate($per_page);
         }
     }
 }
