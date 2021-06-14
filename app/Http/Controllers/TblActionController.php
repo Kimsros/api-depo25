@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\SeachTable;
 use App\Models\tbl_action;
 use Illuminate\Http\Request;
 
@@ -12,10 +13,12 @@ class TblActionController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+public function index(Request $request)
     {
         try{
-
+            if(isset($request->search)){
+                return response()->json(['success'=>SeachTable::getSearch('tbl_actions',$request->search,array(),15)]);
+            }
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }

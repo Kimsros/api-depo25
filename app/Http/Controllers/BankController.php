@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\bank;
+use App\Models\SeachTable;
 use Illuminate\Http\Request;
 
 class BankController extends Controller
@@ -15,10 +16,14 @@ class BankController extends Controller
     public function index(Request $request)
     {
         try{
+
             if(isset($request->per_page)){
                 $per_page=$request->per_page;
             }else{
                 $per_page=15;
+            }
+            if(isset($request->search)){
+                return response()->json(['success'=>SeachTable::getSearch('banks',$request->search,array(),$per_page)]);
             }
             return response()->json(['success'=>bank::orderBy('id','DESC')->paginate($per_page)]);
         }catch(\Exception $e){
@@ -127,14 +132,23 @@ class BankController extends Controller
      * @param  \App\Models\bank  $bank
      * @return \Illuminate\Http\Response
      */
-    public function destroy(bank $bank)
+    public function destroy(Request $request,bank $bank)
     {
         try{
-            if(bank::where('id',$bank['id'])->delete()){
-                return response()->json(['success'=>'Bank is deleted !!']);
+            if(is_array($request->id)){
+                if(bank::whereIn('id',$request->id)->delete()){
+                    return response()->json(['success'=>'Bank is deleted !!']);
+                }else{
+                    return response()->json(['error'=>'Bank is not deleted !!']);
+                }
             }else{
-                return response()->json(['error'=>'Bank is not deleted !!']);
+                if(bank::where('id',$bank['id'])->delete()){
+                    return response()->json(['success'=>'Bank is deleted !!']);
+                }else{
+                    return response()->json(['error'=>'Bank is not deleted !!']);
+                }
             }
+
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }

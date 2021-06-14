@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\quote_detail;
+use App\Models\SeachTable;
 use Illuminate\Http\Request;
 
 class QuoteDetailController extends Controller
@@ -19,6 +20,9 @@ class QuoteDetailController extends Controller
                 $per_page=$request->per_page;
             }else{
                 $per_page=15;
+            }
+            if(isset($request->search)){
+                return response()->json(['success'=>SeachTable::getSearch('quote_details',$request->search,array(),$per_page)]);
             }
             return response()->json(['success'=>quote_detail::orderBy('id','DESC')->$per_page]);
         }catch(\Exception $e){

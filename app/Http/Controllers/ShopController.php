@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\SeachTable;
 use App\Models\shop;
 use Illuminate\Http\Request;
 
@@ -19,6 +20,9 @@ class ShopController extends Controller
                 $per_page=$request->per_page;
             }else{
                 $per_page=15;
+            }
+            if(isset($request->search)){
+                return response()->json(['success'=>SeachTable::getSearch('shops',$request->search,array(),$per_page)]);
             }
             return response()->json(['success'=>shop::orderBy('id','DESC')->paginate($per_page)]);
         }catch(\Exception $e){
