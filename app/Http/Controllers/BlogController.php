@@ -6,6 +6,7 @@ use App\Models\blog;
 use App\Models\SeachTable;
 use Exception;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class BlogController extends Controller
 {
