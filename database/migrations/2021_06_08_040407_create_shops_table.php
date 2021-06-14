@@ -19,7 +19,7 @@ class CreateShopsTable extends Migration
             $table->text('logo_company');
             $table->text('description');
             $table->string('home_no');
-            $table->string('streat_no');
+            $table->string('street_no');
             $table->string('village');
             $table->string('district');
             $table->string('commune');

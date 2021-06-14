@@ -20,7 +20,7 @@ class PricingController extends Controller
             }else{
                 $per_page=15;
             }
-            return response()->json(['success'=>pricing::where('status',1)->orderBy('id','DESC')->paginate($per_page)]);
+            return response()->json(['success'=>pricing::where('status',1)->paginate($per_page)]);
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }

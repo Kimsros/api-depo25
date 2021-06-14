@@ -1,9 +1,9 @@
 <template>
   <div class="form-element py-30 multiple-column">
-    <h4 class="font-20 mb-20">Add Shop</h4>
+    <h4 class="font-20 mb-20">Edit data</h4>
 
     <!-- Form -->
-    <form @submit.prevent="insertData()">
+    <form @submit.prevent="updateData()">
       <div class="row">
         <div class="col-lg-6">
           <!-- Form Group -->
@@ -14,7 +14,7 @@
               type="text"
               class="theme-input-style"
               placeholder="Enter Logo Compeny"
-              v-model="shop.logo_company"
+              v-model="data.logo_company"
             />
           </div>
           <!-- End Form Group -->
@@ -26,7 +26,7 @@
               type="text"
               class="theme-input-style"
               placeholder="Enter Description"
-              v-model="shop.description"
+              v-model="data.description"
             />
           </div>
           <!-- End Form Group -->
@@ -38,7 +38,7 @@
               type="text"
               class="theme-input-style"
               placeholder="Enter Home No"
-              v-model="shop.home_no"
+              v-model="data.home_no"
             />
           </div>
           <!-- End Form Group -->
@@ -49,7 +49,7 @@
               type="text"
               class="theme-input-style"
               placeholder="Enter Street No"
-              v-model="shop.street_no"
+              v-model="data.street_no"
             />
           </div>
           <!-- End Form Group -->
@@ -61,7 +61,7 @@
               type="text"
               class="theme-input-style"
               placeholder="Enter Village"
-              v-model="shop.village"
+              v-model="data.village"
             />
           </div>
           <!-- End Form Group -->
@@ -73,7 +73,7 @@
               type="text"
               class="theme-input-style"
               placeholder="Enter District"
-              v-model="shop.district"
+              v-model="data.district"
             />
           </div>
           <!-- End Form Group -->
@@ -87,7 +87,7 @@
               type="text"
               class="theme-input-style"
               placeholder="Enter Commune"
-              v-model="shop.commune"
+              v-model="data.commune"
             />
           </div>
           <!-- End Form Group -->
@@ -99,7 +99,7 @@
               type="text"
               class="theme-input-style"
               placeholder="Enter Provide"
-              v-model="shop.province"
+              v-model="data.province"
             />
           </div>
           <!-- End Form Group -->
@@ -111,7 +111,7 @@
               type="text"
               class="theme-input-style"
               placeholder="Enter Phone One"
-              v-model="shop.phone_one"
+              v-model="data.phone_one"
             />
           </div>
           <!-- End Form Group -->
@@ -121,7 +121,7 @@
               type="text"
               class="theme-input-style"
               placeholder="Enter Phone Two"
-              v-model="shop.phone_two"
+              v-model="data.phone_two"
             />
           </div>
           <!-- End Form Group -->
@@ -133,7 +133,7 @@
               type="text"
               class="theme-input-style"
               placeholder="Enter Email"
-              v-model="shop.email"
+              v-model="data.email"
             />
           </div>
           <!-- End Form Group -->
@@ -145,7 +145,7 @@
               type="text"
               class="theme-input-style"
               placeholder="Enter Website"
-              v-model="shop.facebook"
+              v-model="data.facebook"
             />
           </div>
           <div class="form-group">
@@ -154,7 +154,7 @@
               type="text"
               class="theme-input-style"
               placeholder="Enter Website"
-              v-model="shop.website"
+              v-model="data.website"
             />
           </div>
           <!-- End Form Group -->
@@ -172,11 +172,12 @@
   </div>
 </template>
 
+
 <script>
 export default {
     data(){
         return{
-               shop:{
+                data:{
                     user_id:'12',
                     logo_company:null,
                     description:null,
@@ -190,33 +191,49 @@ export default {
                     phone_two:null,
                     email:null,
                     facebook:null,
-                    website:null
-               }
+                    website:null},
+
+                    id:null,
+                    data:null,
         }
     },
+    mounted(){
+        this.id=this.$route.params.id;
+        this.getData();
+        // console.log();
+    },
     methods:{
-        insertData(){
-            if(this.shop.user_id&&this.shop.commune){
-                 var fd={
-                        'user_id':this.shop.user_id,
-                        'logo_company':this.shop.logo_company,
-                        'description':this.shop.description,
-                        'home_no':this.shop.home_no,
-                        'street_no':this.shop.street_no,
-                        'village':this.shop.village,
-                        'district':this.shop.district,
-                        'commune':this.shop.commune,
-                        'province':this.shop.province,
-                        'phone_one':this.shop.phone_one,
-                        'phone_two':this.shop.phone_two,
-                        'email':this.shop.email,
-                        'facebook':this.shop.facebook,
-                        'website':this.shop.website
-
+        getData(){
+           axios.get("/api/shop/"+this.id+"/edit").then(response=>{
+              if(response.data.success){
+               this.data=response.data.success;
+              }
+              else{
+                  console.log(response.data.error);
+              }
+           })
+        },
+        updateData(){
+            // alert('Hello World');
+            if(this.data.logo_company&&this.data.email){
+                var fd={
+                        'user_id':this.data.user_id,
+                        'logo_company':this.data.logo_company,
+                        'description':this.data.description,
+                        'home_no':this.data.home_no,
+                        'street_no':this.data.street_no,
+                        'village':this.data.village,
+                        'district':this.data.district,
+                        'commune':this.data.commune,
+                        'province':this.data.province,
+                        'phone_one':this.data.phone_one,
+                        'phone_two':this.data.phone_two,
+                        'email':this.data.email,
+                        'facebook':this.data.facebook,
+                        'website':this.data.website
                 };
-                axios.post('/api/shop',fd).then(response=>{
-
-                    // console.log(response.data.success);
+                var url='/api/shop/'+this.id;
+                axios.put(url,fd).then(response=>{
                     if(response.data.success){
                         this.$router.push("/admin/shop");
                     }else{
@@ -225,11 +242,9 @@ export default {
 
                 })
             }else{
-
                 console.log("data is empty");
             }
-        },
-
+        }
     }
 }
 </script>

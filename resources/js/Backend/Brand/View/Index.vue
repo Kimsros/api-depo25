@@ -88,7 +88,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr  v-for="(item,idx) in data" :key="idx">
+                    <tr  v-for="(item,idx) in data.data" :key="idx">
                         <td>
                             <label class="custom-checkbox"><input type="checkbox"><span class="checkmark"></span> </label>
                             <div class="star">
@@ -150,10 +150,13 @@ export default {
         return{
             data:null,
             dataDelete:0
+
         }
     },
     mounted(){
+        console.log(this.data);
         this.getData();
+
     },
     methods:
     {

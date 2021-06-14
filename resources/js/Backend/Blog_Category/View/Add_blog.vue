@@ -1,31 +1,60 @@
 <template>
-  <div class="form-element py-30 multiple-column">
-    <h4 class="font-20 mb-20">Add Pricing</h4>
-
-    <!-- Form -->
-    <form action="#" method="POST">
-      <div class="row">
-        <div class="col-lg-6">
-          <!-- Form Group -->
-          <div class="form-group">
-            <label class="font-14 bold mb-2">Name</label>
-            <input
-              type="text"
-              class="theme-input-style"
-              placeholder=" Name"
-            />
-          </div>
-          <!-- End Form Group -->
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <div class="form-element vertical-form ">
+                <h3 class="font-20 mb-30">Add Blog Category</h3>
+                    <form @submit.prevent="insertData()">
+                        <div class="form-group">
+                            <label class="font-14 bold mb-2">Blog Category Name</label>
+                            <input type="text" class="form-control pl-1" v-model="blog.name" placeholder="Enter Name">
+                        </div>
+                        <div class="form-group">
+                            <label class="font-14 bold mb-2">Icon</label>
+                            <input type="text" class="form-control pl-1" v-model="blog.icon" placeholder="Enter Logo">
+                        </div>
+                        <div class="form-row">
+                            <div class="col-12 text-right">
+                                <button type="submit" class="btn long">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+            </div>
         </div>
-      </div>
-      <!-- Form Row -->
-      <div class="form-row">
-        <div class="col-12 text-right">
-          <button type="submit" class="btn long">Submit</button>
-        </div>
-      </div>
-      <!-- End Form Row -->
-    </form>
-    <!-- End Form -->
-  </div>
+    </div>
 </template>
+
+<script>
+export default {
+    data(){
+        return{
+               blog:{
+                   name:null,
+                   icon:null
+               }
+        }
+    },
+    methods:{
+        insertData(){
+            if(this.blog.name&&this.blog.icon){
+                 var fd={
+                    'name':this.blog.name,
+                    'icon':this.blog.icon
+                };
+                console.log(fd);
+                axios.post('/api/blog-category',fd).then(response=>{
+                    console.log(response.data.success);
+                    if(response.data.success){
+                        this.$router.push("/admin/list_blog_category");
+                    }else{
+                        console.log(response.data.error);
+                    }
+                })
+            }else{
+
+                console.log("data is empty");
+            }
+        },
+
+    }
+}
+</script>

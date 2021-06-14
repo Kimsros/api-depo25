@@ -50,7 +50,9 @@
                 </a></li>
                 <li><a href="#" class="current">
                     <img src="/backend/assets/img/svg/right-angle.svg" alt="" class="svg">
-                </a></li>
+                </a>
+                </li>
+
                 </ul>
             </div>
             <!-- End Pagination -->
@@ -78,22 +80,18 @@
                             </div>
                             <!-- End Star -->
                         </th>
-                        <th class="text-center">Company</th>
+                        <!-- <th class="text-center">Company<img src="/backend/assets/img/svg/table-down-arrow.svg" alt="" class="svg"></th> -->
+                        <th>logo Company</th>
+                        <th>Name</th>
                         <th>Home No</th>
                         <th>Street No</th>
-                        <th>Village</th>
-                        <th>District</th>
-                        <th>Commune </th>
-                        <th>Provide</th>
-                        <th>Phone One </th>
-                        <th>Phone Two</th>
-                        <th>Email</th>
-                        <th>WebSite</th>
+                        <th>Email<img src="/backend/assets/img/svg/table-down-arrow.svg" alt="" class="svg"></th>
+                        <th>Phone One<img src="/backend/assets/img/svg/table-down-arrow.svg" alt="" class="svg"></th>
                         <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
+                    <tr v-for="(item,idx) in data.data" :key="idx">
                         <td>
                             <!-- Custom Checkbox -->
                             <label class="custom-checkbox">
@@ -109,37 +107,104 @@
                             <!-- End Star -->
                         </td>
                         <td>
-                            <div class="d-flex align-items-center">
-                                <div class="img mr-20">
-                                    <img src="/backend/assets/img/avatar/m16.png" class="img-40" alt="">
-                                </div>
-                                <div class="name bold">
-                                    Arden Spencer
-                                </div>
-                            </div>
+                            <img src="/backend/assets/img/avatar/m16.png" class="img-40" alt="">
                         </td>
-                        <td>Evangel</td>
-                        <td>(023) </td>
-                        <td>28</td>
-                        <td>UX Researcher</td>
-                        <td>June 20, 2015</td>
-                        <td>$26253.0</td>
-                        <td>28</td>
-                        <td>UX Researcher</td>
-                        <td>June 20, 2015</td>
-                        <td>$26253.0</td>
+                        <td>Name</td>
+                        <td>{{item.home_no}}</td>
+                        <td>{{item.street_no  }}</td>
+                        <td>{{item.email }}</td>
+                        <td>{{item.phone_one  }}</td>
                         <td class="actions">
-                            <span class="contact-edit" data-toggle="modal" data-target="#contactEditModal">
-                                <img src="/backend/assets/img/svg/c-edit.svg" alt="" class="svg">
-                            </span>
-                            <span class="contact-close">
+                            <span @click="getId(item.id)" data-toggle="modal"  data-target="#exampleModal">
                                 <img src="/backend/assets/img/svg/c-close.svg" alt="" class="svg">
                             </span>
+                           <router-link :to="'/admin/edit_shop/'+item.id">
+                              <span >
+                                <img src="/backend/assets/img/svg/c-edit.svg" alt="" class="svg">
+                            </span>
+                           </router-link>
                         </td>
                     </tr>
                 </tbody>
+                  <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                      <li  v-for="(item,idx) in data.links" :key="idx" v-bind:class="{'page-item':true,'active':item.active }"><a class="page-link" @click="getData(item.url)" v-html="item.label"></a></li>
+
+                    </ul>
+                  </nav>
             </table>
-            <!-- End Invoice List Table -->
         </div>
+            <!-- Model Delete -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body pull-center">
+                        <h3>Are You Sure ?</h3>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                        <button type="button" class="btn btn-primary" @click="deleteData()">Yes</button>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Model Delete -->
     </div>
 </template>
+<script>
+export default {
+    data(){
+        return{
+            data:[],
+            dataDelete:0
+        }
+    },
+ created(){
+    this.getData();
+ },
+    methods:
+    {
+        getId(id){
+            this.dataDelete=id;
+        },
+        getData(url=null){
+            if(url!=null){
+                axios.get(url).then(response=>{
+              if(response.data.success){
+                  console.log(response.data.success);
+                this.data=response.data.success;
+              }
+           });
+            }else{
+                axios.get("/api/shop").then(response=>{
+              if(response.data.success){
+                  console.log(response.data.success);
+                this.data=response.data.success;
+              }
+           });
+            }
+
+        },
+        deleteData(){
+            axios.delete('/api/shop/'+this.dataDelete).then(response=>{
+                if(response.data.success){
+                    exampleModal.click()
+                    this.getData();
+                }else{
+                    console.log(response.data.error);
+                }
+
+            })
+        }
+    }
+}
+</script>
+
+
+
