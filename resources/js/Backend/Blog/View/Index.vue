@@ -159,6 +159,16 @@
               </div>
               <!-- End Star -->
             </th>
+
+            <th class="text-center">
+              Thumbnail
+              <img
+                src="/backend/assets/img/svg/table-down-arrow.svg"
+                alt=""
+                class="svg"
+              />
+            </th>
+
             <th class="text-center">
               Title
               <img
@@ -167,15 +177,33 @@
                 class="svg"
               />
             </th>
-           
-            <th>
-              Slug
+
+            <th class="text-center">
+              Blog Category
               <img
                 src="/backend/assets/img/svg/table-down-arrow.svg"
                 alt=""
                 class="svg"
               />
             </th>
+
+            <th class="text-center">
+              Tag
+              <img
+                src="/backend/assets/img/svg/table-down-arrow.svg"
+                alt=""
+                class="svg"
+              />
+            </th>
+           
+            <!-- <th>
+              Slug
+              <img
+                src="/backend/assets/img/svg/table-down-arrow.svg"
+                alt=""
+                class="svg"
+              />
+            </th> -->
            
             <th>
               Content
@@ -206,21 +234,34 @@
             <td>
               <div class="d-flex align-items-center">
                 <div class="name bold">
+                  {{ item.thumbnail }}
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="d-flex align-items-center">
+                <div class="name bold">
                   {{ item.title }}
                 </div>
               </div>
             </td>
-             <td>
+            <td>
               <div class="d-flex align-items-center">
                 <div class="name bold">
-                  {{ item.slug }}
+                  {{ item.name}}
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="d-flex align-items-center">
+                <div class="name bold">
+                  {{ item.tag }}
                 </div>
               </div>
             </td>
              <td>
               <div class="d-flex align-items-center">
                 <div class="name bold" v-html="item.content">
-                    
                 </div>
               </div>
             </td>
@@ -253,7 +294,6 @@
         <nav aria-label="Page navigation example">
             <ul class="pagination">
                 <li  v-for="(item,idx) in data.links" :key="idx" v-bind:class="{'page-item':true,'active':item.active }"><a class="page-link" @click="getData(item.url)" v-html="item.label"></a></li>
-
             </ul>
         </nav>
       </table>

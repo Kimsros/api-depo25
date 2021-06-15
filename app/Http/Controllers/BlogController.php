@@ -7,6 +7,7 @@ use App\Models\SeachTable;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\DB;
 
 class BlogController extends Controller
 {
@@ -23,10 +24,15 @@ class BlogController extends Controller
             }else{
                 $per_page=15;
             }
+
+            $data = DB::table('blogs')
+            ->join('blog_categories','blog_categories.id', '=', 'blogs.blog_categories')
+            ->select('blogs.*', 'blog_categories.name');
+
             if(isset($request->search)){
-                return response()->json(['success'=>SeachTable::getSearch('banks',$request->search,array(),$per_page)]);
+                return response()->json(['success'=>SeachTable::getSearch('blogs',$request->search,array(),$per_page)]);
             }
-            return response()->json(['success'=>blog::orderBy('id','DESC')->paginate($per_page)]);
+            return response()->json(['success'=>$data->orderBy('id','DESC')->paginate($per_page)]);
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }
@@ -57,7 +63,7 @@ class BlogController extends Controller
         try{
             $validation=Validator($request->all(),[
                 'title'=>'required',
-                'slug'=>'required',
+                // 'slug'=>'required',
                 'blog_categories'=>'required',
                 'thumbnail'=>'required',
                 'tag'=>'required',
@@ -121,11 +127,11 @@ class BlogController extends Controller
         try{
             $validation=Validator($request->all(),[
                 'title'=>'required',
-                'slug'=>'required',
-                'content'=>'required',
+                // 'slug'=>'required',
                 'blog_categories'=>'required',
                 // 'thumbnail'=>'required',
                 'tag'=>'required',
+                'content'=>'required',
             ]);
             if($validation->fails()){
                 return response()->json(['error'=>$validation->getMessageBag()]);
