@@ -112,3 +112,54 @@
         </div>
     </div>
 </template>
+<script>
+export default {
+    data(){
+        return{
+               pricing:{
+                  name:null,
+                  pay_status:null,
+                  price_in_month:null,
+                  price_in_year:null,
+                  boost_product:null,
+                  boost_duration:null,
+                  upload_product:null,
+                  upload_product_duration:null
+               }
+        }
+    },
+    methods:{
+        insertData(){
+            if( this.pricing.name && 
+                this.pricing.pay_status && 
+                this.pricing.price_in_month && 
+                this.pricing.price_in_year && 
+                this.pricing.boost_product && 
+                this.pricing.boost_duration && 
+                this.pricing.upload_product && 
+                this.pricing.upload_product_duration ){
+                var Pricing=new FormData();
+                Pricing.append("name",this.pricing.name);
+                Pricing.append("pay_status",this.pricing.pay_status);
+                Pricing.append("price_in_month",this.pricing.price_in_month);
+                Pricing.append("price_in_year",this.pricing.price_in_year);
+                Pricing.append("boost_product",this.pricing.boost_product);
+                Pricing.append("boost_duration",this.pricing.boost_duration);
+                Pricing.append("upload_product",this.pricing.upload_product);
+                Pricing.append("upload_product_duration",this.pricing.upload_product_duration);
+                axios.post('/api/pricing',Pricing).then(response=>{
+                    // console.log(response.data);
+                    if(response.data.success){
+                        this.$router.push("/admin/list_pricing");
+                    }else{
+                        console.log(response.data.error);
+                    }
+                })
+            }else{
+
+                alert("data is empty");
+            }
+        }
+    }
+}
+</script>
