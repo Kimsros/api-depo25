@@ -57,6 +57,10 @@ class BlogController extends Controller
         try{
             $validation=Validator($request->all(),[
                 'title'=>'required',
+                'slug'=>'required',
+                'blog_categories'=>'required',
+                'thumbnail'=>'required',
+                'tag'=>'required',
                 'content'=>'required',
             ]);
             if($validation->fails()){
@@ -117,7 +121,11 @@ class BlogController extends Controller
         try{
             $validation=Validator($request->all(),[
                 'title'=>'required',
+                'slug'=>'required',
                 'content'=>'required',
+                'blog_categories'=>'required',
+                // 'thumbnail'=>'required',
+                'tag'=>'required',
             ]);
             if($validation->fails()){
                 return response()->json(['error'=>$validation->getMessageBag()]);

@@ -2015,12 +2015,48 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
       blog: {
         title: null,
         slug: null,
+        blog_categories: null,
+        thumbnail: null,
+        tag: null,
         content: null
       }
     };
@@ -2033,6 +2069,9 @@ __webpack_require__.r(__webpack_exports__);
         var fd = new FormData();
         fd.append("title", this.blog.title);
         fd.append("slug", this.blog.slug);
+        fd.append("blog_categories", this.blog.blog_categories);
+        fd.append("thumbnail", this.blog.thumbnail);
+        fd.append("tag", this.blog.tag);
         fd.append("content", this.blog.content);
         axios.post('/api/blog', fd).then(function (response) {
           // console.log(response.data);
@@ -47409,6 +47448,90 @@ var render = function() {
                       return
                     }
                     _vm.$set(_vm.blog, "slug", $event.target.value)
+                  }
+                }
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { staticClass: "font-14 bold mb-2" }, [
+                _vm._v("Blog Category")
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.blog.blog_categories,
+                    expression: "blog.blog_categories"
+                  }
+                ],
+                staticClass: "theme-input-style",
+                attrs: { type: "text", placeholder: "Enter slug" },
+                domProps: { value: _vm.blog.blog_categories },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.blog, "blog_categories", $event.target.value)
+                  }
+                }
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { staticClass: "font-14 bold mb-2" }, [
+                _vm._v("Thumbnail")
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.blog.thumbnail,
+                    expression: "blog.thumbnail"
+                  }
+                ],
+                staticClass: "theme-input-style",
+                attrs: { type: "text", placeholder: "Enter slug" },
+                domProps: { value: _vm.blog.thumbnail },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.blog, "thumbnail", $event.target.value)
+                  }
+                }
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { staticClass: "font-14 bold mb-2" }, [
+                _vm._v("Tag")
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.blog.tag,
+                    expression: "blog.tag"
+                  }
+                ],
+                staticClass: "theme-input-style",
+                attrs: { type: "text", placeholder: "Enter slug" },
+                domProps: { value: _vm.blog.tag },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.blog, "tag", $event.target.value)
                   }
                 }
               })
