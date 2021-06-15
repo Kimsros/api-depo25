@@ -141,21 +141,13 @@ class PricingController extends Controller
      * @param  \App\Models\pricing  $pricing
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Request $request,pricing $pricing)
+    public function destroy($id)
     {
         try{
-            if(is_array($request->id)){
-                if(pricing::whereIn('id',$request->id)->delete()){
-                    return response()->json(['success'=>'Pricing is deleted !!']);
-                }else{
-                    return response()->json(['error'=>'Pricing is not deleted !!']);
-                }
+            if(pricing::whereIn('id',explode('-',$id))->delete()){
+                return response()->json(['success'=>'Pricing is deleted !!']);
             }else{
-                if(pricing::where('id',$pricing['id'])->delete()){
-                    return response()->json(['success'=>'Pricing is deleted !!']);
-                }else{
-                    return response()->json(['error'=>'Pricing is not deleted !!']);
-                }
+                return response()->json(['error'=>'Pricing is not deleted !!']);
             }
 
         }catch(\Exception $e){

@@ -137,21 +137,13 @@ class ProductTagController extends Controller
      * @param  \App\Models\product_tag  $product_tag
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Request $request,product_tag $product_tag)
+    public function destroy($id)
     {
         try{
-            if(is_array($request->id)){
-                if(product_tag::whereIn('id',$request->id)->delete()){
-                    return response()->json(['success'=>'Product tag is deleted !!']);
-                }else{
-                    return response()->json(['success'=>'Product tag is not deleted !!']);
-                }
+            if(product_tag::whereIn('id',explode('-',$id))->delete()){
+                return response()->json(['success'=>'Product tag is deleted !!']);
             }else{
-                if(product_tag::where('id',$product_tag['id'])->delete()){
-                    return response()->json(['success'=>'Product tag is deleted !!']);
-                }else{
-                    return response()->json(['success'=>'Product tag is not deleted !!']);
-                }
+                return response()->json(['success'=>'Product tag is not deleted !!']);
             }
 
         }catch(\Exception $e){

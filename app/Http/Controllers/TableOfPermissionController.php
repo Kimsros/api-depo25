@@ -137,21 +137,13 @@ class TableOfPermissionController extends Controller
      * @param  \App\Models\table_of_permission  $table_of_permission
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Request $request,table_of_permission $table_of_permission)
+    public function destroy($id)
     {
         try{
-            if(is_array($request->id)){
-                if(table_of_permission::whereIn('id',$request->id)->delete()){
-                    return response()->json(['success'=>'Table of permission is deleted !!']);
-                }else{
-                    return response()->json(['success'=>'Table of permission is not deleted !!']);
-                }
+            if(table_of_permission::whereIn('id',explode('-',$id))->delete()){
+                return response()->json(['success'=>'Table of permission is deleted !!']);
             }else{
-                if(table_of_permission::where('id',$table_of_permission['id'])->delete()){
-                    return response()->json(['success'=>'Table of permission is deleted !!']);
-                }else{
-                    return response()->json(['success'=>'Table of permission is not deleted !!']);
-                }
+                return response()->json(['success'=>'Table of permission is not deleted !!']);
             }
 
         }catch(\Exception $e){
