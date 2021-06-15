@@ -141,21 +141,13 @@ class ProductVariationController extends Controller
      * @param  \App\Models\product_variation  $product_variation
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Request $request,product_variation $product_variation)
+    public function destroy($id)
     {
         try{
-            if(is_array($request->id)){
-                if(product_variation::whereIn('id',$request->id)->delete()){
-                    return response()->json(['success'=>'Product Variation is deleted !!']);
-                }else{
-                    return response()->json(['success'=>'Product Variation is not deleted !!']);
-                }
+            if(product_variation::whereIn('id',explode('-',$id))->delete()){
+                return response()->json(['success'=>'Product Variation is deleted !!']);
             }else{
-                if(product_variation::where('id',$product_variation['id'])->delete()){
-                    return response()->json(['success'=>'Product Variation is deleted !!']);
-                }else{
-                    return response()->json(['success'=>'Product Variation is not deleted !!']);
-                }
+                return response()->json(['success'=>'Product Variation is not deleted !!']);
             }
 
         }catch(\Exception $e){

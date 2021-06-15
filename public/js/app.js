@@ -5261,6 +5261,18 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -57889,268 +57901,271 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", { staticClass: "container-fluid" }, [
+    _c("div", { staticClass: "row", attrs: { id: "grid" } }, [
+      _c("div", { staticClass: "col-xl-4 col-md-6 grid-item" }, [
+        _c("div", { staticClass: "card todo-list mb-30" }, [
+          _c(
+            "div",
+            { staticClass: "single-row p-0 border-bottom" },
+            [
+              _c("di", { staticClass: "row" }, [
+                _c("div", { staticClass: "col-6" }, [
+                  _c("h4", { staticClass: "font-20 py-3 pl-20 pr-20" }, [
+                    _vm._v("Permission")
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-6" }, [
+                  _c("h4", { staticClass: "font-20 py-3 pl-20 pr-20" }, [
+                    _c("div", { staticClass: "form-group" }, [
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.pricing.last_name,
+                            expression: "pricing.last_name"
+                          }
+                        ],
+                        staticClass: "theme-input-style",
+                        attrs: { type: "text", placeholder: "add role" },
+                        domProps: { value: _vm.pricing.last_name },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.pricing,
+                              "last_name",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      })
+                    ])
+                  ])
+                ])
+              ])
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _vm._m(0),
+          _vm._v(" "),
+          _vm._m(1),
+          _vm._v(" "),
+          _vm._m(2)
+        ]),
+        _vm._v(" "),
+        _vm._m(3)
+      ]),
+      _vm._v(" "),
+      _vm._m(4)
+    ])
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container-fluid" }, [
-      _c("div", { staticClass: "row", attrs: { id: "grid" } }, [
-        _c("div", { staticClass: "col-xl-4 col-md-6 grid-item" }, [
-          _c("div", { staticClass: "card todo-list mb-30" }, [
-            _c("div", { staticClass: "single-row p-0 border-bottom" }, [
-              _c("h4", { staticClass: "font-20 py-3 pl-20 pr-20" }, [
-                _vm._v("Permission")
+    return _c(
+      "div",
+      { staticClass: "single-row level-urgent border-bottom pt-3 pb-3" },
+      [
+        _c(
+          "div",
+          { staticClass: "d-flex justify-content-between align-items-center" },
+          [
+            _c("div", { staticClass: "d-flex position-relative" }, [
+              _c("a", { staticClass: "todo-text", attrs: { href: "#" } }, [
+                _c("p", { staticClass: "card-text mb-1" }, [_vm._v("Admin")])
               ])
-            ]),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass: "single-row level-urgent border-bottom pt-3 pb-3"
-              },
-              [
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "d-flex justify-content-between align-items-center"
-                  },
-                  [
-                    _c("div", { staticClass: "d-flex position-relative" }, [
-                      _c(
-                        "a",
-                        { staticClass: "todo-text", attrs: { href: "#" } },
-                        [
-                          _c("p", { staticClass: "card-text mb-1" }, [
-                            _vm._v("Admin")
-                          ])
-                        ]
-                      )
-                    ])
-                  ]
-                )
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass: "single-row level-urgent border-bottom pt-3 pb-3"
-              },
-              [
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "d-flex justify-content-between align-items-center"
-                  },
-                  [
-                    _c("div", { staticClass: "d-flex position-relative" }, [
-                      _c(
-                        "a",
-                        { staticClass: "todo-text", attrs: { href: "#" } },
-                        [
-                          _c("p", { staticClass: "card-text mb-1" }, [
-                            _vm._v("Seller")
-                          ])
-                        ]
-                      )
-                    ])
-                  ]
-                )
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass: "single-row level-urgent border-bottom pt-3 pb-3"
-              },
-              [
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "d-flex justify-content-between align-items-center"
-                  },
-                  [
-                    _c("div", { staticClass: "d-flex position-relative" }, [
-                      _c(
-                        "a",
-                        { staticClass: "todo-text", attrs: { href: "#" } },
-                        [
-                          _c("p", { staticClass: "card-text mb-1" }, [
-                            _vm._v("Buyer")
-                          ])
-                        ]
-                      )
-                    ])
-                  ]
-                )
-              ]
-            )
+            ])
+          ]
+        )
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "single-row level-urgent border-bottom pt-3 pb-3" },
+      [
+        _c(
+          "div",
+          { staticClass: "d-flex justify-content-between align-items-center" },
+          [
+            _c("div", { staticClass: "d-flex position-relative" }, [
+              _c("a", { staticClass: "todo-text", attrs: { href: "#" } }, [
+                _c("p", { staticClass: "card-text mb-1" }, [_vm._v("Seller")])
+              ])
+            ])
+          ]
+        )
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "single-row level-urgent border-bottom pt-3 pb-3" },
+      [
+        _c(
+          "div",
+          { staticClass: "d-flex justify-content-between align-items-center" },
+          [
+            _c("div", { staticClass: "d-flex position-relative" }, [
+              _c("a", { staticClass: "todo-text", attrs: { href: "#" } }, [
+                _c("p", { staticClass: "card-text mb-1" }, [_vm._v("Buyer")])
+              ])
+            ])
+          ]
+        )
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "text-center mb-30 mt-40" }, [
+      _c("a", { staticClass: "btn long", attrs: { href: "#" } }, [
+        _vm._v("Add role")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-xl-8 col-md-8 grid-item" }, [
+      _c("div", { staticClass: "col-12" }, [
+        _c("div", { staticClass: "card mb-30" }, [
+          _c("div", { staticClass: "card-body pt-30" }, [
+            _c("h4", { staticClass: "font-20 " }, [_vm._v("Basic Table")])
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "text-center mb-30 mt-40" }, [
-            _c("a", { staticClass: "btn long", attrs: { href: "#" } }, [
-              _vm._v("Add role")
-            ])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "col-xl-8 col-md-8 grid-item" }, [
-          _c("div", { staticClass: "col-12" }, [
-            _c("div", { staticClass: "card mb-30" }, [
-              _c("div", { staticClass: "card-body pt-30" }, [
-                _c("h4", { staticClass: "font-20 " }, [_vm._v("Basic Table")])
+          _c("div", { staticClass: "table-responsive" }, [
+            _c("table", { staticClass: "text-nowrap card_color-bg dh-table" }, [
+              _c("thead", [
+                _c("tr", [
+                  _c("th", [_vm._v("ID")]),
+                  _vm._v(" "),
+                  _c("th", [_vm._v("Table")]),
+                  _vm._v(" "),
+                  _c("th", [_vm._v("View")]),
+                  _vm._v(" "),
+                  _c("th", [_vm._v("Add")]),
+                  _vm._v(" "),
+                  _c("th", [_vm._v("Update")]),
+                  _vm._v(" "),
+                  _c("th", [_vm._v("Delete")])
+                ])
               ]),
               _vm._v(" "),
-              _c("div", { staticClass: "table-responsive" }, [
-                _c(
-                  "table",
-                  { staticClass: "text-nowrap card_color-bg dh-table" },
-                  [
-                    _c("thead", [
-                      _c("tr", [
-                        _c("th", [_vm._v("ID")]),
-                        _vm._v(" "),
-                        _c("th", [_vm._v("Table")]),
-                        _vm._v(" "),
-                        _c("th", [_vm._v("View")]),
-                        _vm._v(" "),
-                        _c("th", [_vm._v("Add")]),
-                        _vm._v(" "),
-                        _c("th", [_vm._v("Update")]),
-                        _vm._v(" "),
-                        _c("th", [_vm._v("Delete")])
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("tbody", [
-                      _c("tr", [
-                        _c("td", [_vm._v("1")]),
-                        _vm._v(" "),
-                        _c("td", [
-                          _c(
-                            "div",
-                            { staticClass: "d-flex align-items-center" },
-                            [
-                              _c(
-                                "label",
-                                {
-                                  staticClass:
-                                    "custom-checkbox position-relative mr-2"
-                                },
-                                [
-                                  _c("input", {
-                                    attrs: { type: "checkbox", id: "check1" }
-                                  }),
-                                  _vm._v(" "),
-                                  _c("span", { staticClass: "checkmark" })
-                                ]
-                              )
-                            ]
-                          )
-                        ]),
-                        _vm._v(" "),
-                        _c("td", [
-                          _c(
-                            "div",
-                            { staticClass: "d-flex align-items-center" },
-                            [
-                              _c(
-                                "label",
-                                {
-                                  staticClass:
-                                    "custom-checkbox position-relative mr-2"
-                                },
-                                [
-                                  _c("input", {
-                                    attrs: { type: "checkbox", id: "check1" }
-                                  }),
-                                  _vm._v(" "),
-                                  _c("span", { staticClass: "checkmark" })
-                                ]
-                              )
-                            ]
-                          )
-                        ]),
-                        _vm._v(" "),
-                        _c("td", [
-                          _c(
-                            "div",
-                            { staticClass: "d-flex align-items-center" },
-                            [
-                              _c(
-                                "label",
-                                {
-                                  staticClass:
-                                    "custom-checkbox position-relative mr-2"
-                                },
-                                [
-                                  _c("input", {
-                                    attrs: { type: "checkbox", id: "check1" }
-                                  }),
-                                  _vm._v(" "),
-                                  _c("span", { staticClass: "checkmark" })
-                                ]
-                              )
-                            ]
-                          )
-                        ]),
-                        _vm._v(" "),
-                        _c("td", [
-                          _c(
-                            "div",
-                            { staticClass: "d-flex align-items-center" },
-                            [
-                              _c(
-                                "label",
-                                {
-                                  staticClass:
-                                    "custom-checkbox position-relative mr-2"
-                                },
-                                [
-                                  _c("input", {
-                                    attrs: { type: "checkbox", id: "check1" }
-                                  }),
-                                  _vm._v(" "),
-                                  _c("span", { staticClass: "checkmark" })
-                                ]
-                              )
-                            ]
-                          )
-                        ]),
-                        _vm._v(" "),
-                        _c("td", [
-                          _c(
-                            "div",
-                            { staticClass: "d-flex align-items-center" },
-                            [
-                              _c(
-                                "label",
-                                {
-                                  staticClass:
-                                    "custom-checkbox position-relative mr-2"
-                                },
-                                [
-                                  _c("input", {
-                                    attrs: { type: "checkbox", id: "check1" }
-                                  }),
-                                  _vm._v(" "),
-                                  _c("span", { staticClass: "checkmark" })
-                                ]
-                              )
-                            ]
-                          )
-                        ])
-                      ])
+              _c("tbody", [
+                _c("tr", [
+                  _c("td", [_vm._v("1")]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c("div", { staticClass: "d-flex align-items-center" }, [
+                      _c(
+                        "label",
+                        {
+                          staticClass: "custom-checkbox position-relative mr-2"
+                        },
+                        [
+                          _c("input", {
+                            attrs: { type: "checkbox", id: "check1" }
+                          }),
+                          _vm._v(" "),
+                          _c("span", { staticClass: "checkmark" })
+                        ]
+                      )
                     ])
-                  ]
-                )
+                  ]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c("div", { staticClass: "d-flex align-items-center" }, [
+                      _c(
+                        "label",
+                        {
+                          staticClass: "custom-checkbox position-relative mr-2"
+                        },
+                        [
+                          _c("input", {
+                            attrs: { type: "checkbox", id: "check1" }
+                          }),
+                          _vm._v(" "),
+                          _c("span", { staticClass: "checkmark" })
+                        ]
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c("div", { staticClass: "d-flex align-items-center" }, [
+                      _c(
+                        "label",
+                        {
+                          staticClass: "custom-checkbox position-relative mr-2"
+                        },
+                        [
+                          _c("input", {
+                            attrs: { type: "checkbox", id: "check1" }
+                          }),
+                          _vm._v(" "),
+                          _c("span", { staticClass: "checkmark" })
+                        ]
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c("div", { staticClass: "d-flex align-items-center" }, [
+                      _c(
+                        "label",
+                        {
+                          staticClass: "custom-checkbox position-relative mr-2"
+                        },
+                        [
+                          _c("input", {
+                            attrs: { type: "checkbox", id: "check1" }
+                          }),
+                          _vm._v(" "),
+                          _c("span", { staticClass: "checkmark" })
+                        ]
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("td", [
+                    _c("div", { staticClass: "d-flex align-items-center" }, [
+                      _c(
+                        "label",
+                        {
+                          staticClass: "custom-checkbox position-relative mr-2"
+                        },
+                        [
+                          _c("input", {
+                            attrs: { type: "checkbox", id: "check1" }
+                          }),
+                          _vm._v(" "),
+                          _c("span", { staticClass: "checkmark" })
+                        ]
+                      )
+                    ])
+                  ])
+                ])
               ])
             ])
           ])

@@ -135,21 +135,13 @@ class InvoiceController extends Controller
      * @param  \App\Models\invoice  $invoice
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Request $request,invoice $invoice)
+    public function destroy($id)
     {
         try{
-            if(is_array($request->id)){
-                if(invoice::whereIn('id',$request->id)->delete()){
-                    return response()->json(['success'=>'Invoice is deleted !!']);
-                }else{
-                    return response()->json(['error'=>'Invoice is not deleted !!']);
-                }
+            if(invoice::whereIn('id',explode('-',$id))->delete()){
+                return response()->json(['success'=>'Invoice is deleted !!']);
             }else{
-                if(invoice::where('id',$invoice['id'])->delete()){
-                    return response()->json(['success'=>'Invoice is deleted !!']);
-                }else{
-                    return response()->json(['error'=>'Invoice is not deleted !!']);
-                }
+                return response()->json(['error'=>'Invoice is not deleted !!']);
             }
 
         }catch(\Exception $e){
