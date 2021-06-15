@@ -132,22 +132,14 @@ class BlogCategoryController extends Controller
      * @param  \App\Models\BlogCategory  $category
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Request $request,BlogCategory $BlogCategory)
+    public function destroy($id)
     {
 
         try {
-            if(is_array($request->id)){
-                if(BlogCategory::whereIn('id', $request->id)->delete()){
-                    return response()->json(['success'=>'Category is deleted !!']);
-                }else{
-                    return response()->json(['error'=>'Category is not deleted !!']);
-                }
+            if(BlogCategory::whereIn('id', explode('-',$id))->delete()){
+                return response()->json(['success'=>'Category is deleted !!']);
             }else{
-                if(BlogCategory::where('id', $BlogCategory['id'])->delete()){
-                    return response()->json(['success'=>'Category is deleted !!']);
-                }else{
-                    return response()->json(['error'=>'Category is not deleted !!']);
-                }
+                return response()->json(['error'=>'Category is not deleted !!']);
             }
         } catch (\Exception $e) {
             return response()->json(['error'=>$e->getMessage()]);

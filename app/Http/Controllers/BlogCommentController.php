@@ -135,21 +135,13 @@ class BlogCommentController extends Controller
      * @param  \App\Models\blog_comment  $blog_comment
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Request $request,blog_comment $blog_comment)
+    public function destroy($id)
     {
         try{
-            if(is_array($request->id)){
-                if(blog_comment::whereIn('id',$request->id)->delete()){
-                    return response()->json(['success'=>'Bank is deleted !!']);
-                }else{
-                    return response()->json(['error'=>'Bank is not deleted !!']);
-                }
+            if(blog_comment::whereIn('id',explode('-',$id))->delete()){
+                return response()->json(['success'=>'Bank is deleted !!']);
             }else{
-                if(blog_comment::where('id',$blog_comment['id'])->delete()){
-                    return response()->json(['success'=>'Bank is deleted !!']);
-                }else{
-                    return response()->json(['error'=>'Bank is not deleted !!']);
-                }
+                return response()->json(['error'=>'Bank is not deleted !!']);
             }
 
         }catch(\Exception $e){

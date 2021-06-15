@@ -132,21 +132,13 @@ class BankController extends Controller
      * @param  \App\Models\bank  $bank
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Request $request,bank $bank)
+    public function destroy($id)
     {
         try{
-            if(is_array($request->id)){
-                if(bank::whereIn('id',$request->id)->delete()){
-                    return response()->json(['success'=>'Bank is deleted !!']);
-                }else{
-                    return response()->json(['error'=>'Bank is not deleted !!']);
-                }
+            if(bank::whereIn('id',explode('-',$id))->delete()){
+                return response()->json(['success'=>'Bank is deleted !!']);
             }else{
-                if(bank::where('id',$bank['id'])->delete()){
-                    return response()->json(['success'=>'Bank is deleted !!']);
-                }else{
-                    return response()->json(['error'=>'Bank is not deleted !!']);
-                }
+                return response()->json(['error'=>'Bank is not deleted !!']);
             }
 
         }catch(\Exception $e){

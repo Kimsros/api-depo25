@@ -4,7 +4,19 @@
             <div class="col-xl-4 col-md-6 grid-item">
                 <div class="card todo-list mb-30">
                     <div class="single-row p-0 border-bottom">
-                        <h4 class="font-20 py-3 pl-20 pr-20">Permission</h4>
+                        <di class="row">
+                            <div class="col-6">
+                                <h4 class="font-20 py-3 pl-20 pr-20">Permission</h4>
+                            </div>
+                            <div class="col-6">
+                                <h4 class="font-20 py-3 pl-20 pr-20"><div class="form-group">
+                                    <input v-model="pricing.last_name" type="text" class="theme-input-style" placeholder="add role"/>
+                                </div>
+                                </h4>
+
+                            </div>
+                        </di>
+
                     </div>
                     <div class="single-row level-urgent border-bottom pt-3 pb-3">
                         <div class="d-flex justify-content-between align-items-center">
@@ -38,7 +50,7 @@
                     <a href="#" class="btn long">Add role</a>
                 </div>
             </div>
-            
+
             <div class="col-xl-8 col-md-8 grid-item">
                 <div class="col-12">
                     <div class="card mb-30">
@@ -130,13 +142,13 @@ export default {
     },
     methods:{
         insertData(){
-            if( this.pricing.name && 
-                this.pricing.pay_status && 
-                this.pricing.price_in_month && 
-                this.pricing.price_in_year && 
-                this.pricing.boost_product && 
-                this.pricing.boost_duration && 
-                this.pricing.upload_product && 
+            if( this.pricing.name &&
+                this.pricing.pay_status &&
+                this.pricing.price_in_month &&
+                this.pricing.price_in_year &&
+                this.pricing.boost_product &&
+                this.pricing.boost_duration &&
+                this.pricing.upload_product &&
                 this.pricing.upload_product_duration ){
                 var Pricing=new FormData();
                 Pricing.append("name",this.pricing.name);
