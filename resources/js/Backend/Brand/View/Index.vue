@@ -85,7 +85,7 @@
                         <th>Actions</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody v-if="!reRender">
                     <tr  v-for="(item,idx) in data.data" :key="idx">
                         <td>
                             <label class="custom-checkbox">
@@ -151,6 +151,7 @@ export default {
             data:null,
             dataDelete:0,
             search:null,
+            reRender:false
 
         }
     },
@@ -172,10 +173,17 @@ export default {
            });
         },
         mutipleDelete(){
-             axios.delete('/api/brand/'+this.ids[0],{id:this.ids}).then(response=>{
+
+            const data=this.ids.join("-");
+             axios.delete('/api/brand/'+data).then(response=>{
                 if(response.data.success){
                     this.getData();
                     this.ids=[];
+                    this.reRender=true;
+                    this.$nextTick(()=>{
+
+                    });
+                    this.reRender=false;
                 }else{
                     console.log(response.data.error);
                 }
