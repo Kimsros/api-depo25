@@ -46,7 +46,7 @@
                           <i class="d-icon-bars2"></i>
                       </a>
                       <a href="/" class="logo">
-                          <img src="/frontend/images/logo.png" alt="logo" width="153" height="44" />
+                          <img src="/backend/assets/img/depot25.png" alt="logo" width="153" height="44" />
                       </a>
                       <!-- End Logo -->
 
