@@ -1,5 +1,5 @@
 <template>
-  <div class="mn-vh-100 d-flex align-items-center">
+    <div class="mn-vh-100 d-flex align-items-center">
         <div class="container">
             <!-- Card -->
             <div class="card justify-content-center auth-card">
