@@ -11,7 +11,7 @@
                           <div class="form-group mb-20">
                               <label for="f_name" class="mb-2 font-14 bold">First Name</label>
                               <input type="text" id="f_name" class="theme-input-style" placeholder="First Name">
-                              <ckeditor value="Hello, World!"></ckeditor>
+
                           </div>
                           <!-- End Form Group -->
                       </div>
@@ -24,7 +24,6 @@
                           </div>
                           <!-- End Form Group -->
                       </div>
-
                       <div class="col-lg-6">
                           <!-- Form Group -->
                           <div class="form-group mb-20">
@@ -33,7 +32,6 @@
                           </div>
                           <!-- End Form Group -->
                       </div>
-
                       <div class="col-lg-6">
                           <!-- Form Group -->
                           <div class="form-group mb-20">
@@ -42,7 +40,6 @@
                           </div>
                           <!-- End Form Group -->
                       </div>
-
                       <div class="col-lg-6">
                           <!-- Form Group -->
                           <div class="form-group mb-20">
@@ -51,7 +48,6 @@
                           </div>
                           <!-- End Form Group -->
                       </div>
-
                       <div class="col-lg-6">
                           <!-- Form Group -->
                           <div class="form-group mb-20">
