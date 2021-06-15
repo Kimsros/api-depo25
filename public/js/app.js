@@ -3290,6 +3290,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       this.ids = $event.target.checked ? [].concat(_toConsumableArray(this.ids), [id]) : this.ids.filter(function (element) {
         return element != id;
       });
+      console.log(this.ids);
     }
   }
 });

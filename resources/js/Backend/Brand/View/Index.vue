@@ -213,7 +213,8 @@ export default {
         },
         getCheck($event, id)
         {
-            this.ids=$event.target.checked?[...this.ids,...[id]]:this.ids.filter(element=>element!=id);
+            this.ids=$event.target.checked?[...this.ids,...[id]]:this.ids.filter(element=> element!=id);
+            console.log(this.ids);
 
         }
 
