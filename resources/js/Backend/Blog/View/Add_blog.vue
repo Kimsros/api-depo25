@@ -28,6 +28,39 @@
           </div>
           <!-- End Form Group -->
 
+           <!-- Form Group -->
+          <div class="form-group">
+            <label class="font-14 bold mb-2">Blog Category</label>
+            <input v-model="blog.blog_categories"
+              type="text"
+              class="theme-input-style"
+              placeholder="Enter slug"
+            />
+          </div>
+          <!-- End Form Group -->
+
+           <!-- Form Group -->
+          <div class="form-group">
+            <label class="font-14 bold mb-2">Thumbnail</label>
+            <input v-model="blog.thumbnail"
+              type="text"
+              class="theme-input-style"
+              placeholder="Enter slug"
+            />
+          </div>
+          <!-- End Form Group -->
+
+           <!-- Form Group -->
+          <div class="form-group">
+            <label class="font-14 bold mb-2">Tag</label>
+            <input v-model="blog.tag"
+              type="text"
+              class="theme-input-style"
+              placeholder="Enter slug"
+            />
+          </div>
+          <!-- End Form Group -->
+
           <!-- Form Group -->
           <div class="form-group">
             <label class="font-14 bold mb-2">Content</label>
@@ -56,9 +89,12 @@ export default {
     data(){
         return{
                blog:{
-                   title:null,
-                   slug:null,
-                   content:null,
+                  title:null,
+                  slug:null,
+                  blog_categories:null,
+                  thumbnail:null,
+                  tag:null,
+                  content:null,
                }
         }
     },
@@ -68,6 +104,9 @@ export default {
                 var fd=new FormData();
                 fd.append("title",this.blog.title);
                 fd.append("slug",this.blog.slug);
+                fd.append("blog_categories",this.blog.blog_categories);
+                fd.append("thumbnail",this.blog.thumbnail);
+                fd.append("tag",this.blog.tag);
                 fd.append("content",this.blog.content);
                 axios.post('/api/blog',fd).then(response=>{
                     // console.log(response.data);

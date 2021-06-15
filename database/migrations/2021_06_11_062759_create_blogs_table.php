@@ -17,6 +17,9 @@ class CreateBlogsTable extends Migration
             $table->id();
             $table->text('title');
             $table->text('slug');
+            $table->integer('blog_categories');
+            $table->text('thumbnail');
+            $table->text('tag');
             $table->text('content');
             $table->bigInteger('updated_by');
             $table->timestamps();
