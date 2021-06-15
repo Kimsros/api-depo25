@@ -17,6 +17,7 @@ class CreatePermisionsTable extends Migration
             $table->id();
             $table->bigInteger('role_id');
             $table->bigInteger('permission_type_id');
+            $table->bigInteger('table_of_permission_id');
             $table->boolean('status')->default(1);
             $table->bigInteger('updated_by');
             $table->timestamps();

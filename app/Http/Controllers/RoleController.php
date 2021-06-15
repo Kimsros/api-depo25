@@ -25,7 +25,7 @@ class RoleController extends Controller
             if(isset($request->search)){
                 return response()->json(['success'=>SeachTable::getSearch('roles',$request->search,array(),$per_page)]);
             }
-            return response()->json(['success'=>role::orderBy('id','DESC')->paginate($per_page)]);
+            return response()->json(['success'=>role::paginate($per_page)]);
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }
