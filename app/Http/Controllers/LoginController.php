@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 
 use App\Http\Controllers\Controller;
@@ -80,23 +80,15 @@ class LoginController extends Controller
         \Mail::to($user->email)->send(new Verify($user));
         return redirect()->intended('user-verification');
     }
+    
     public function login(Request $request){
         $this->validate($request,[
             'email'=>'required|email',
             'password'=>'required'
         ]);
         $credentials = $request->only('email', 'password','remember_token');
-        dd($credentials);exit();
         if (Auth::attempt($credentials)) {
-            // return Auth::user();
-            return response()->json([
-                'message' => 'The given data was invalid.',
-                'errors' => [
-                    'password' => [
-                        'Invalid credentials'
-                    ],
-                ]
-            ], 422);
+            return Auth::user();
         }
         // return false;
         $user = User::where('email', $request->email)->first();

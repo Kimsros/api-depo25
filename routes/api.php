@@ -46,7 +46,15 @@ Route::resource('role', RoleController::class);
 Route::resource('shop', ShopController::class);
 Route::resource('unit', UnitController::class);
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::group(['middleware' => ['auth:sanctum']], function () {
+    Route::get('/user', function(Request $request) {
+        // return auth()->user();
+        echo "work";
+    });
+
+    Route::post('/auth/logout', [AuthController::class, 'logout']);
 });
+// Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
 
