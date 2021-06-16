@@ -10,8 +10,11 @@ window.Vue = require('vue').default;
 import router from './router';
 import store from './store';
 import CKEditor from 'ckeditor4-vue';
+import VueSweetalert2 from 'vue-sweetalert2';
+import 'sweetalert2/dist/sweetalert2.min.css';
 
 Vue.use( CKEditor );
+Vue.use(VueSweetalert2);
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue

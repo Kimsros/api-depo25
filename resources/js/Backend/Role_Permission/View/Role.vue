@@ -18,9 +18,15 @@
             <div class="d-flex justify-content-between align-items-center">
               <div class="d-flex position-relative">
                 <a href="#" class="todo-text">
-                  <p class="card-text mb-1">{{ role_item.name }} <span class="text-right">D</span></p>
+                  <p class="card-text mb-1">
+                    {{ role_item.name }}
+                  </p>
                 </a>
-
+              </div>
+              <div class="d-flex position-relative">
+                <a href="javascript:;" class="" @click="removeRole(role_item.id)">
+                    <img src="/backend/assets/img/svg/delete.svg" alt="" class="svg">
+                </a>
               </div>
             </div>
           </div>
@@ -34,7 +40,7 @@
                     v-model="role"
                     type="text"
                     class="theme-input-style"
-                    placeholder=" Pay Status"
+                    placeholder="Role"
                   />
                 </div>
               </div>
@@ -180,10 +186,8 @@ export default {
   },
   methods: {
     setActiveList(id) {
-
-        this.currentActive = id;
-        this.getPermissionData("/api/permission?role_id=" + id);
-
+      this.currentActive = id;
+      this.getPermissionData("/api/permission?role_id=" + id);
     },
     getPermissionData(url = null) {
       if (url != null) {
@@ -221,6 +225,19 @@ export default {
           if (response.data.success) {
             this.role = null;
             this.getRoleData();
+            this.$swal.fire(
+                    {
+                        toast:true,
+                        position:'top-end',
+                        // title: 'Success !',
+                        title: 'Successfully inserted !!',
+                        icon: 'success',
+                        showConfirmButton:false,
+                        timer:3000,
+                        background:'##060818',
+                        titleColor:"#FFF"
+                    }
+                );
           } else {
             alert(response.data.error);
           }
@@ -229,7 +246,43 @@ export default {
         alert("no");
       }
     },
+    removeRole(id){
+        this.$swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            background:'#060818',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+            }).then((result) => {
+            if (result.isConfirmed) {
+                axios.delete('/api/role/'+id).then(response=>{
+                    if(response.data.success){
+                        this.$swal.fire(
+                            {
+                                toast:true,
+                                position:'top-end',
+                                title: response.data.success,
+                                icon: 'success',
+                                showConfirmButton:false,
+                                timer:3000,
+                                background:'#060818',
+                                titleColor:"#FFF"
+                            }
+                        );
+                        this.currentActive=1;
+                        this.getRoleData();
+                        this.getPermissionData();
+                    }
+                });
+
+            }
+        })
+    },
     insertOrRemoveData(e, table_id, role_id, permission_type_id) {
+
       if (e.target.checked) {
         axios
           .post("/api/permission", {
@@ -238,20 +291,26 @@ export default {
             permission_type_id: permission_type_id,
           })
           .then((response) => {
-            this.reRender = true;
-      this.$nextTick(() => {});
-      this.reRender=false;
+              if(response.data.success){
+
+                 this.getPermissionData("/api/permission?role_id=" + id);
+              }
+
           })
           .catch((error) => {
             console.log(error);
           });
       } else {
-        var id=table_id+'-'+role_id+'-'+permission_type_id;
-        axios.delete("/api/permission/"+id).then(response=>{
-            console.log(response.data.success);
+        var id = table_id + "-" + role_id + "-" + permission_type_id;
+        axios.delete("/api/permission/" + id).then((response) => {
+          if(response.data.success){
+
+          }
         });
       }
+
     },
+
   },
 };
 </script>
@@ -259,4 +318,5 @@ export default {
 .activeBg {
   background: #f15922;
 }
+
 </style>
