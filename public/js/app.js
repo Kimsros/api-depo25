@@ -3394,7 +3394,6 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 //
 //
 //
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -3402,7 +3401,9 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       dataDelete: 0,
       search: null,
       ids: [],
-      reRender: false
+      reRender: false,
+      allSelected: null,
+      userIds: []
     };
   },
   mounted: function mounted() {
@@ -3476,6 +3477,25 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
           console.log(response.data.error);
         }
       });
+    },
+    selectAll: function selectAll() {
+      var _this5 = this;
+
+      this.userIds = [];
+
+      for (var item in this.data.data) {
+        this.userIds.push(this.data.data[item].id);
+
+        if (this.allSelected == true) {
+          this.ids = [].concat(_toConsumableArray(this.ids), [this.data.data[item].id]);
+        } else if (this.allSelected != true) {
+          this.ids = this.ids.filter(function (element) {
+            return element != [_this5.data.data[item].id];
+          });
+        }
+      }
+
+      console.log(this.ids);
     }
   }
 });
@@ -5264,7 +5284,9 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       dataDelete: 0,
       search: null,
       ids: [],
-      reRender: false
+      reRender: false,
+      allSelected: null,
+      userIds: []
     };
   },
   created: function created() {
@@ -5350,6 +5372,25 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
           console.log(response.data.error);
         }
       });
+    },
+    selectAll: function selectAll() {
+      var _this5 = this;
+
+      this.userIds = [];
+
+      for (var item in this.data.data) {
+        this.userIds.push(this.data.data[item].id);
+
+        if (this.allSelected == true) {
+          this.ids = [].concat(_toConsumableArray(this.ids), [this.data.data[item].id]);
+        } else if (this.allSelected != true) {
+          this.ids = this.ids.filter(function (element) {
+            return element != [_this5.data.data[item].id];
+          });
+        }
+      }
+
+      console.log(this.ids);
     }
   }
 });
@@ -6236,7 +6277,9 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       dataDelete: 0,
       search: null,
       ids: [],
-      reRender: false
+      reRender: false,
+      allSelected: null,
+      userIds: []
     };
   },
   created: function created() {
@@ -6322,6 +6365,25 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
           console.log(response.data.error);
         }
       });
+    },
+    selectAll: function selectAll() {
+      var _this5 = this;
+
+      this.userIds = [];
+
+      for (var item in this.data.data) {
+        this.userIds.push(this.data.data[item].id);
+
+        if (this.allSelected == true) {
+          this.ids = [].concat(_toConsumableArray(this.ids), [this.data.data[item].id]);
+        } else if (this.allSelected != true) {
+          this.ids = this.ids.filter(function (element) {
+            return element != [_this5.data.data[item].id];
+          });
+        }
+      }
+
+      console.log(this.ids);
     }
   }
 });
@@ -49894,26 +49956,6 @@ var render = function() {
           ]
         ),
         _vm._v(" "),
-        _c("div", { staticClass: "delete_mail" }, [
-          _c(
-            "a",
-            {
-              attrs: { href: "#" },
-              on: {
-                click: function($event) {
-                  return _vm.deleteAll()
-                }
-              }
-            },
-            [
-              _c("img", {
-                staticClass: "svg",
-                attrs: { src: "/backend/assets/img/svg/delete.svg", alt: "" }
-              })
-            ]
-          )
-        ]),
-        _vm._v(" "),
         _c(
           "div",
           {
@@ -49961,7 +50003,64 @@ var render = function() {
         "table",
         { staticClass: "contact-list-table text-nowrap card_color-bg" },
         [
-          _vm._m(4),
+          _c("thead", [
+            _c("tr", [
+              _c("th", [
+                _c("label", { staticClass: "custom-checkbox" }, [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.allSelected,
+                        expression: "allSelected"
+                      }
+                    ],
+                    attrs: { type: "checkbox" },
+                    domProps: {
+                      checked: Array.isArray(_vm.allSelected)
+                        ? _vm._i(_vm.allSelected, null) > -1
+                        : _vm.allSelected
+                    },
+                    on: {
+                      change: [
+                        function($event) {
+                          var $$a = _vm.allSelected,
+                            $$el = $event.target,
+                            $$c = $$el.checked ? true : false
+                          if (Array.isArray($$a)) {
+                            var $$v = null,
+                              $$i = _vm._i($$a, $$v)
+                            if ($$el.checked) {
+                              $$i < 0 && (_vm.allSelected = $$a.concat([$$v]))
+                            } else {
+                              $$i > -1 &&
+                                (_vm.allSelected = $$a
+                                  .slice(0, $$i)
+                                  .concat($$a.slice($$i + 1)))
+                            }
+                          } else {
+                            _vm.allSelected = $$c
+                          }
+                        },
+                        _vm.selectAll
+                      ]
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "checkmark" })
+                ]),
+                _vm._v(" "),
+                _vm._m(4)
+              ]),
+              _vm._v(" "),
+              _vm._m(5),
+              _vm._v(" "),
+              _c("th", [_vm._v("logo")]),
+              _vm._v(" "),
+              _c("th", [_vm._v("Actions")])
+            ])
+          ]),
           _vm._v(" "),
           !_vm.reRender
             ? _c(
@@ -49971,22 +50070,57 @@ var render = function() {
                     _c("td", [
                       _c("label", { staticClass: "custom-checkbox" }, [
                         _c("input", {
-                          attrs: { type: "checkbox" },
-                          on: {
-                            change: function($event) {
-                              return _vm.getCheck($event, item.id)
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.userIds,
+                              expression: "userIds"
                             }
+                          ],
+                          attrs: { type: "checkbox" },
+                          domProps: {
+                            value: item.id,
+                            checked: Array.isArray(_vm.userIds)
+                              ? _vm._i(_vm.userIds, item.id) > -1
+                              : _vm.userIds
+                          },
+                          on: {
+                            change: [
+                              function($event) {
+                                var $$a = _vm.userIds,
+                                  $$el = $event.target,
+                                  $$c = $$el.checked ? true : false
+                                if (Array.isArray($$a)) {
+                                  var $$v = item.id,
+                                    $$i = _vm._i($$a, $$v)
+                                  if ($$el.checked) {
+                                    $$i < 0 && (_vm.userIds = $$a.concat([$$v]))
+                                  } else {
+                                    $$i > -1 &&
+                                      (_vm.userIds = $$a
+                                        .slice(0, $$i)
+                                        .concat($$a.slice($$i + 1)))
+                                  }
+                                } else {
+                                  _vm.userIds = $$c
+                                }
+                              },
+                              function($event) {
+                                return _vm.getCheck($event, item.id)
+                              }
+                            ]
                           }
                         }),
                         _c("span", { staticClass: "checkmark" })
                       ]),
                       _vm._v(" "),
-                      _vm._m(5, true)
+                      _vm._m(6, true)
                     ]),
                     _vm._v(" "),
                     _c("td", [
                       _c("div", { staticClass: "d-flex align-items-center" }, [
-                        _vm._m(6, true),
+                        _vm._m(7, true),
                         _vm._v(" "),
                         _c("div", { staticClass: "name bold" }, [
                           _vm._v(
@@ -50073,9 +50207,9 @@ var render = function() {
           { staticClass: "modal-dialog", attrs: { role: "document" } },
           [
             _c("div", { staticClass: "modal-content" }, [
-              _vm._m(7),
-              _vm._v(" "),
               _vm._m(8),
+              _vm._v(" "),
+              _vm._m(9),
               _vm._v(" "),
               _c("div", { staticClass: "modal-footer" }, [
                 _c(
@@ -50227,40 +50361,25 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("thead", [
-      _c("tr", [
-        _c("th", [
-          _c("label", { staticClass: "custom-checkbox" }, [
-            _c("input", { attrs: { type: "checkbox" } }),
-            _vm._v(" "),
-            _c("span", { staticClass: "checkmark" })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "star" }, [
-            _c("a", { attrs: { href: "#" } }, [
-              _c("img", {
-                staticClass: "svg",
-                attrs: { src: "/backend/assets/img/svg/star.svg", alt: "" }
-              })
-            ])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("th", [
-          _vm._v("\n            Name\n            "),
-          _c("img", {
-            staticClass: "svg",
-            attrs: {
-              src: "/backend/assets/img/svg/table-down-arrow.svg",
-              alt: ""
-            }
-          })
-        ]),
-        _vm._v(" "),
-        _c("th", [_vm._v("logo")]),
-        _vm._v(" "),
-        _c("th", [_vm._v("Actions")])
+    return _c("div", { staticClass: "star" }, [
+      _c("a", { attrs: { href: "#" } }, [
+        _c("img", {
+          staticClass: "svg",
+          attrs: { src: "/backend/assets/img/svg/star.svg", alt: "" }
+        })
       ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("th", [
+      _vm._v("\n            Name\n            "),
+      _c("img", {
+        staticClass: "svg",
+        attrs: { src: "/backend/assets/img/svg/table-down-arrow.svg", alt: "" }
+      })
     ])
   },
   function() {
@@ -56540,7 +56659,64 @@ var render = function() {
         "table",
         { staticClass: "contact-list-table text-nowrap card_color-bg" },
         [
-          _vm._m(4),
+          _c("thead", [
+            _c("tr", [
+              _c("th", [
+                _c("label", { staticClass: "custom-checkbox" }, [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.allSelected,
+                        expression: "allSelected"
+                      }
+                    ],
+                    attrs: { type: "checkbox" },
+                    domProps: {
+                      checked: Array.isArray(_vm.allSelected)
+                        ? _vm._i(_vm.allSelected, null) > -1
+                        : _vm.allSelected
+                    },
+                    on: {
+                      change: [
+                        function($event) {
+                          var $$a = _vm.allSelected,
+                            $$el = $event.target,
+                            $$c = $$el.checked ? true : false
+                          if (Array.isArray($$a)) {
+                            var $$v = null,
+                              $$i = _vm._i($$a, $$v)
+                            if ($$el.checked) {
+                              $$i < 0 && (_vm.allSelected = $$a.concat([$$v]))
+                            } else {
+                              $$i > -1 &&
+                                (_vm.allSelected = $$a
+                                  .slice(0, $$i)
+                                  .concat($$a.slice($$i + 1)))
+                            }
+                          } else {
+                            _vm.allSelected = $$c
+                          }
+                        },
+                        _vm.selectAll
+                      ]
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "checkmark" })
+                ]),
+                _vm._v(" "),
+                _vm._m(4)
+              ]),
+              _vm._v(" "),
+              _vm._m(5),
+              _vm._v(" "),
+              _c("th", [_vm._v("Icon")]),
+              _vm._v(" "),
+              _c("th", [_vm._v("Actions")])
+            ])
+          ]),
           _vm._v(" "),
           !_vm.reRender
             ? _c(
@@ -56550,22 +56726,57 @@ var render = function() {
                     _c("td", [
                       _c("label", { staticClass: "custom-checkbox" }, [
                         _c("input", {
-                          attrs: { type: "checkbox" },
-                          on: {
-                            change: function($event) {
-                              return _vm.getCheck($event, item.id)
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.userIds,
+                              expression: "userIds"
                             }
+                          ],
+                          attrs: { type: "checkbox" },
+                          domProps: {
+                            value: item.id,
+                            checked: Array.isArray(_vm.userIds)
+                              ? _vm._i(_vm.userIds, item.id) > -1
+                              : _vm.userIds
+                          },
+                          on: {
+                            change: [
+                              function($event) {
+                                var $$a = _vm.userIds,
+                                  $$el = $event.target,
+                                  $$c = $$el.checked ? true : false
+                                if (Array.isArray($$a)) {
+                                  var $$v = item.id,
+                                    $$i = _vm._i($$a, $$v)
+                                  if ($$el.checked) {
+                                    $$i < 0 && (_vm.userIds = $$a.concat([$$v]))
+                                  } else {
+                                    $$i > -1 &&
+                                      (_vm.userIds = $$a
+                                        .slice(0, $$i)
+                                        .concat($$a.slice($$i + 1)))
+                                  }
+                                } else {
+                                  _vm.userIds = $$c
+                                }
+                              },
+                              function($event) {
+                                return _vm.getCheck($event, item.id)
+                              }
+                            ]
                           }
                         }),
                         _c("span", { staticClass: "checkmark" })
                       ]),
                       _vm._v(" "),
-                      _vm._m(5, true)
+                      _vm._m(6, true)
                     ]),
                     _vm._v(" "),
                     _c("td", [
                       _c("div", { staticClass: "d-flex align-items-center" }, [
-                        _vm._m(6, true),
+                        _vm._m(7, true),
                         _vm._v(" "),
                         _c("div", { staticClass: "name bold" }, [
                           _vm._v(
@@ -56680,9 +56891,9 @@ var render = function() {
           { staticClass: "modal-dialog", attrs: { role: "document" } },
           [
             _c("div", { staticClass: "modal-content" }, [
-              _vm._m(7),
-              _vm._v(" "),
               _vm._m(8),
+              _vm._v(" "),
+              _vm._m(9),
               _vm._v(" "),
               _c("div", { staticClass: "modal-footer" }, [
                 _c(
@@ -56834,40 +57045,25 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("thead", [
-      _c("tr", [
-        _c("th", [
-          _c("label", { staticClass: "custom-checkbox" }, [
-            _c("input", { attrs: { type: "checkbox" } }),
-            _vm._v(" "),
-            _c("span", { staticClass: "checkmark" })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "star" }, [
-            _c("a", { attrs: { href: "#" } }, [
-              _c("img", {
-                staticClass: "svg",
-                attrs: { src: "/backend/assets/img/svg/star.svg", alt: "" }
-              })
-            ])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("th", [
-          _vm._v("Name "),
-          _c("img", {
-            staticClass: "svg",
-            attrs: {
-              src: "/backend/assets/img/svg/table-down-arrow.svg",
-              alt: ""
-            }
-          })
-        ]),
-        _vm._v(" "),
-        _c("th", [_vm._v("Icon")]),
-        _vm._v(" "),
-        _c("th", [_vm._v("Actions")])
+    return _c("div", { staticClass: "star" }, [
+      _c("a", { attrs: { href: "#" } }, [
+        _c("img", {
+          staticClass: "svg",
+          attrs: { src: "/backend/assets/img/svg/star.svg", alt: "" }
+        })
       ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("th", [
+      _vm._v("Name "),
+      _c("img", {
+        staticClass: "svg",
+        attrs: { src: "/backend/assets/img/svg/table-down-arrow.svg", alt: "" }
+      })
     ])
   },
   function() {
@@ -62524,7 +62720,72 @@ var render = function() {
         "table",
         { staticClass: "contact-list-table text-nowrap card_color-bg" },
         [
-          _vm._m(4),
+          _c("thead", [
+            _c("tr", [
+              _c("th", [
+                _c("label", { staticClass: "custom-checkbox" }, [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.allSelected,
+                        expression: "allSelected"
+                      }
+                    ],
+                    attrs: { type: "checkbox" },
+                    domProps: {
+                      checked: Array.isArray(_vm.allSelected)
+                        ? _vm._i(_vm.allSelected, null) > -1
+                        : _vm.allSelected
+                    },
+                    on: {
+                      change: [
+                        function($event) {
+                          var $$a = _vm.allSelected,
+                            $$el = $event.target,
+                            $$c = $$el.checked ? true : false
+                          if (Array.isArray($$a)) {
+                            var $$v = null,
+                              $$i = _vm._i($$a, $$v)
+                            if ($$el.checked) {
+                              $$i < 0 && (_vm.allSelected = $$a.concat([$$v]))
+                            } else {
+                              $$i > -1 &&
+                                (_vm.allSelected = $$a
+                                  .slice(0, $$i)
+                                  .concat($$a.slice($$i + 1)))
+                            }
+                          } else {
+                            _vm.allSelected = $$c
+                          }
+                        },
+                        _vm.selectAll
+                      ]
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "checkmark" })
+                ]),
+                _vm._v(" "),
+                _vm._m(4)
+              ]),
+              _vm._v(" "),
+              _c("th", [_vm._v("logo Company")]),
+              _vm._v(" "),
+              _c("th", [_vm._v("Name")]),
+              _vm._v(" "),
+              _c("th", [_vm._v("Home No")]),
+              _vm._v(" "),
+              _c("th", [_vm._v("Street No")]),
+              _vm._v(" "),
+              _vm._m(5),
+              _vm._v(" "),
+              _vm._m(6),
+              _vm._v(" "),
+              _c("th", [_vm._v("Actions")])
+            ])
+          ]),
           _vm._v(" "),
           !_vm.reRender
             ? _c(
@@ -62534,20 +62795,55 @@ var render = function() {
                     _c("td", [
                       _c("label", { staticClass: "custom-checkbox" }, [
                         _c("input", {
-                          attrs: { type: "checkbox" },
-                          on: {
-                            change: function($event) {
-                              return _vm.getCheck($event, item.id)
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.userIds,
+                              expression: "userIds"
                             }
+                          ],
+                          attrs: { type: "checkbox" },
+                          domProps: {
+                            value: item.id,
+                            checked: Array.isArray(_vm.userIds)
+                              ? _vm._i(_vm.userIds, item.id) > -1
+                              : _vm.userIds
+                          },
+                          on: {
+                            change: [
+                              function($event) {
+                                var $$a = _vm.userIds,
+                                  $$el = $event.target,
+                                  $$c = $$el.checked ? true : false
+                                if (Array.isArray($$a)) {
+                                  var $$v = item.id,
+                                    $$i = _vm._i($$a, $$v)
+                                  if ($$el.checked) {
+                                    $$i < 0 && (_vm.userIds = $$a.concat([$$v]))
+                                  } else {
+                                    $$i > -1 &&
+                                      (_vm.userIds = $$a
+                                        .slice(0, $$i)
+                                        .concat($$a.slice($$i + 1)))
+                                  }
+                                } else {
+                                  _vm.userIds = $$c
+                                }
+                              },
+                              function($event) {
+                                return _vm.getCheck($event, item.id)
+                              }
+                            ]
                           }
                         }),
                         _c("span", { staticClass: "checkmark" })
                       ]),
                       _vm._v(" "),
-                      _vm._m(5, true)
+                      _vm._m(7, true)
                     ]),
                     _vm._v(" "),
-                    _vm._m(6, true),
+                    _vm._m(8, true),
                     _vm._v(" "),
                     _c("td", [_vm._v("Name")]),
                     _vm._v(" "),
@@ -62660,9 +62956,9 @@ var render = function() {
           { staticClass: "modal-dialog", attrs: { role: "document" } },
           [
             _c("div", { staticClass: "modal-content" }, [
-              _vm._m(7),
+              _vm._m(9),
               _vm._v(" "),
-              _vm._m(8),
+              _vm._m(10),
               _vm._v(" "),
               _c("div", { staticClass: "modal-footer" }, [
                 _c(
@@ -62810,57 +63106,37 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("thead", [
-      _c("tr", [
-        _c("th", [
-          _c("label", { staticClass: "custom-checkbox" }, [
-            _c("input", { attrs: { type: "checkbox" } }),
-            _vm._v(" "),
-            _c("span", { staticClass: "checkmark" })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "star" }, [
-            _c("a", { attrs: { href: "#" } }, [
-              _c("img", {
-                staticClass: "svg",
-                attrs: { src: "/backend/assets/img/svg/star.svg", alt: "" }
-              })
-            ])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("th", [_vm._v("logo Company")]),
-        _vm._v(" "),
-        _c("th", [_vm._v("Name")]),
-        _vm._v(" "),
-        _c("th", [_vm._v("Home No")]),
-        _vm._v(" "),
-        _c("th", [_vm._v("Street No")]),
-        _vm._v(" "),
-        _c("th", [
-          _vm._v("Email"),
-          _c("img", {
-            staticClass: "svg",
-            attrs: {
-              src: "/backend/assets/img/svg/table-down-arrow.svg",
-              alt: ""
-            }
-          })
-        ]),
-        _vm._v(" "),
-        _c("th", [
-          _vm._v("Phone One"),
-          _c("img", {
-            staticClass: "svg",
-            attrs: {
-              src: "/backend/assets/img/svg/table-down-arrow.svg",
-              alt: ""
-            }
-          })
-        ]),
-        _vm._v(" "),
-        _c("th", [_vm._v("Actions")])
+    return _c("div", { staticClass: "star" }, [
+      _c("a", { attrs: { href: "#" } }, [
+        _c("img", {
+          staticClass: "svg",
+          attrs: { src: "/backend/assets/img/svg/star.svg", alt: "" }
+        })
       ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("th", [
+      _vm._v("Email"),
+      _c("img", {
+        staticClass: "svg",
+        attrs: { src: "/backend/assets/img/svg/table-down-arrow.svg", alt: "" }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("th", [
+      _vm._v("Phone One"),
+      _c("img", {
+        staticClass: "svg",
+        attrs: { src: "/backend/assets/img/svg/table-down-arrow.svg", alt: "" }
+      })
     ])
   },
   function() {
