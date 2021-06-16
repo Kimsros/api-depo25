@@ -16,8 +16,9 @@ import Shop from "./Shop/router.js";
 import Sale from "./Sale/router.js";
 import System from "./System/router.js";
 import Report from "./Report/router.js";
+import Preference from "./Preference/router.js";
 import Auth from "./Auth/router.js";
-const routes=[...Advertising.router,...Blog.router,...Blog_Category.router,...Brand.router,...Contact.router,...Delivery.router,...Payment.router,...Pricing.router,...Product.router,...Product_Category.router,...Purchase.router,...Role_Permission.router,...User.router,...Dashboard.router,...Shop.router,...Sale.router,...System.router,...Auth.router,...Report.router];
+const routes=[...Advertising.router,...Blog.router,...Blog_Category.router,...Brand.router,...Contact.router,...Delivery.router,...Payment.router,...Pricing.router,...Product.router,...Product_Category.router,...Purchase.router,...Role_Permission.router,...User.router,...Dashboard.router,...Shop.router,...Sale.router,...System.router,...Auth.router,...Report.router,...Preference.router];
 export default{
     router:routes
 }

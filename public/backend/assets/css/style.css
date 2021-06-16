@@ -7694,10 +7694,10 @@ body.sidebar-folded .main-content {
   height: 70%;
 }
 
-.todo-list .single-row.level-urgent:after {
+/* .todo-list .single-row.level-urgent:after {
   background-color: #FFB959;
   width: 3px;
-}
+} */
 
 .todo-list .single-row.level-urgent .label-text {
   color: #FFB959;

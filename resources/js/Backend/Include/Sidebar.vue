@@ -130,7 +130,7 @@
                      </a>
                      <ul class="nav sub-menu">
                         <li><a href="/admin/role">Role & Permission</a></li>
-                        <li><a href="pages/apps/email/read.html">Preference</a></li>
+                        <li><a href="/admin/preference">Preference</a></li>
                      </ul>
                   </li>
                </ul>
