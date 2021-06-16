@@ -14,6 +14,9 @@ use App\Models\User;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+Route::group(['prefix' => 'laravel-filemanager'], function () {
+    \UniSharp\LaravelFilemanager\Lfm::routes();
+});
 Route::post('login',[LoginController::class,'login']);
 Route::post('register',[LoginController::class,'register']);
 
