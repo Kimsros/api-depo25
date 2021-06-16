@@ -14,8 +14,8 @@ use App\Models\User;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-Route::get('login',[LoginController::class,'login']);
-Route::get('register',[LoginController::class,'register']);
+Route::post('login',[LoginController::class,'login']);
+Route::post('register',[LoginController::class,'register']);
 
 
 Route::resource('bank', BankController::class);
@@ -48,11 +48,8 @@ Route::resource('unit', UnitController::class);
 
 Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::get('/user', function(Request $request) {
-        // return auth()->user();
-        echo "work";
+       return auth()->user();
     });
-
-    Route::post('/auth/logout', [AuthController::class, 'logout']);
 });
 // Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 //     return $request->user();
