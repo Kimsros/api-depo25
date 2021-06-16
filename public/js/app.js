@@ -5311,6 +5311,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -5405,7 +5406,10 @@ __webpack_require__.r(__webpack_exports__);
           console.log(error);
         });
       } else {
-        alert("no");
+        var id = table_id + '-' + role_id + '-' + permission_type_id;
+        axios["delete"]("/api/permission/" + id).then(function (response) {
+          console.log(response.data.success);
+        });
       }
     }
   }
@@ -58160,7 +58164,10 @@ var render = function() {
                                 },
                                 [
                                   _c("p", { staticClass: "card-text mb-1" }, [
-                                    _vm._v(_vm._s(role_item.name))
+                                    _vm._v(_vm._s(role_item.name) + " "),
+                                    _c("span", { staticClass: "text-right" }, [
+                                      _vm._v("D")
+                                    ])
                                   ])
                                 ]
                               )

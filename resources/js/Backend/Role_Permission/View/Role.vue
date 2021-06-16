@@ -18,8 +18,9 @@
             <div class="d-flex justify-content-between align-items-center">
               <div class="d-flex position-relative">
                 <a href="#" class="todo-text">
-                  <p class="card-text mb-1">{{ role_item.name }}</p>
+                  <p class="card-text mb-1">{{ role_item.name }} <span class="text-right">D</span></p>
                 </a>
+
               </div>
             </div>
           </div>
@@ -245,7 +246,10 @@ export default {
             console.log(error);
           });
       } else {
-        alert("no");
+        var id=table_id+'-'+role_id+'-'+permission_type_id;
+        axios.delete("/api/permission/"+id).then(response=>{
+            console.log(response.data.success);
+        });
       }
     },
   },

@@ -137,10 +137,15 @@ class PermisionController extends Controller
      * @param  \App\Models\permision  $permision
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($ids)
     {
         try{
-            if(permision::whereIn('id',explode('-',$id))->delete()){
+            $id=explode('-',$ids);
+            if(permision::where([
+                    ['table_of_permission_id',$id[0]],
+                    ['role_id',$id[1]],
+                    ['permission_type_id',$id['2']]
+                ])->delete()){
                 return response()->json(['success'=>'Permision is deleted !!']);
             }else{
                 return response()->json(['success'=>'Permision is not deleted !!']);
