@@ -5318,6 +5318,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -5325,7 +5331,9 @@ __webpack_require__.r(__webpack_exports__);
       role_list: [],
       role: null,
       currentActive: 1,
-      reRender: false
+      reRender: false,
+      edit_role: 0,
+      btn_role: 'Add'
     };
   },
   created: function created() {
@@ -5379,32 +5387,73 @@ __webpack_require__.r(__webpack_exports__);
       var _this3 = this;
 
       if (this.role) {
-        axios.post("/api/role", {
-          name: this.role
-        }).then(function (response) {
-          if (response.data.success) {
-            _this3.role = null;
+        if (this.btn_role == 'Add') {
+          axios.post("/api/role", {
+            name: this.role
+          }).then(function (response) {
+            if (response.data.success) {
+              _this3.role = null;
 
-            _this3.getRoleData();
+              _this3.getRoleData();
 
-            _this3.$swal.fire({
-              toast: true,
-              position: 'top-end',
-              // title: 'Success !',
-              title: 'Successfully inserted !!',
-              icon: 'success',
-              showConfirmButton: false,
-              timer: 3000,
-              background: '##060818',
-              titleColor: "#FFF"
-            });
-          } else {
-            alert(response.data.error);
-          }
-        });
+              _this3.$swal.fire({
+                toast: true,
+                position: 'top-end',
+                // title: 'Success !',
+                title: 'Successfully inserted !!',
+                icon: 'success',
+                showConfirmButton: false,
+                timer: 3000,
+                background: '#060818',
+                titleColor: "#FFF"
+              });
+            } else {
+              alert(response.data.error);
+            }
+          });
+        } else {
+          axios.put("/api/role/" + this.edit_role, {
+            name: this.role
+          }).then(function (response) {
+            if (response.data.success) {
+              _this3.$swal.fire({
+                toast: true,
+                position: 'top-end',
+                // title: 'Success !',
+                title: 'Successfully inserted !!',
+                icon: 'success',
+                showConfirmButton: false,
+                timer: 3000,
+                background: '#060818',
+                titleColor: "#FFF"
+              });
+
+              _this3.role = null;
+              _this3.btn_role = 'Add';
+              _this3.edit_role = 0;
+              _this3.currentActive = 1;
+
+              _this3.getPermissionData();
+
+              _this3.getRoleData();
+            } else {
+              alert(response.data.error);
+            }
+          });
+        }
       } else {
         alert("no");
       }
+    },
+    editRole: function editRole(data_role) {
+      this.role = data_role.name;
+      this.btn_role = 'Update';
+      this.edit_role = data_role.id;
+    },
+    cancelUpdateRole: function cancelUpdateRole() {
+      this.role = null;
+      this.btn_role = 'Add';
+      this.edit_role = 0;
     },
     removeRole: function removeRole(id) {
       var _this4 = this;
@@ -5454,6 +5503,17 @@ __webpack_require__.r(__webpack_exports__);
         }).then(function (response) {
           if (response.data.success) {
             _this5.getPermissionData("/api/permission?role_id=" + id);
+
+            _this5.$swal.fire({
+              toast: true,
+              position: 'top-end',
+              title: response.data.success,
+              icon: 'success',
+              showConfirmButton: false,
+              timer: 3000,
+              background: '#060818',
+              titleColor: "#FFF"
+            });
           }
         })["catch"](function (error) {
           console.log(error);
@@ -5461,7 +5521,18 @@ __webpack_require__.r(__webpack_exports__);
       } else {
         var id = table_id + "-" + role_id + "-" + permission_type_id;
         axios["delete"]("/api/permission/" + id).then(function (response) {
-          if (response.data.success) {}
+          if (response.data.success) {
+            _this5.$swal.fire({
+              toast: true,
+              position: 'top-end',
+              title: response.data.success,
+              icon: 'success',
+              showConfirmButton: false,
+              timer: 3000,
+              background: '#060818',
+              titleColor: "#FFF"
+            });
+          }
         });
       }
     }
@@ -61870,6 +61941,9 @@ var render = function() {
                       on: {
                         click: function($event) {
                           return _vm.setActiveList(role_item.id)
+                        },
+                        dblclick: function($event) {
+                          return _vm.editRole(role_item)
                         }
                       }
                     },
@@ -61919,13 +61993,16 @@ var render = function() {
                                   }
                                 },
                                 [
-                                  _c("img", {
-                                    staticClass: "svg",
-                                    attrs: {
-                                      src: "/backend/assets/img/svg/delete.svg",
-                                      alt: ""
-                                    }
-                                  })
+                                  role_item.id != 1
+                                    ? _c("img", {
+                                        staticClass: "svg",
+                                        attrs: {
+                                          src:
+                                            "/backend/assets/img/svg/delete.svg",
+                                          alt: ""
+                                        }
+                                      })
+                                    : _vm._e()
                                 ]
                               )
                             ]
@@ -61953,7 +62030,7 @@ var render = function() {
             },
             [
               _c("div", { staticClass: "row" }, [
-                _c("div", { staticClass: "col-8" }, [
+                _c("div", { staticClass: "col-7" }, [
                   _c("div", { staticClass: "form-group" }, [
                     _c("input", {
                       directives: [
@@ -61979,7 +62056,35 @@ var render = function() {
                   ])
                 ]),
                 _vm._v(" "),
-                _vm._m(1)
+                _c("div", { staticClass: "col-5 text-right" }, [
+                  _c("div", { staticClass: "row" }, [
+                    _c("div", { staticClass: "col-6" }, [
+                      _vm.btn_role == "Update"
+                        ? _c(
+                            "a",
+                            {
+                              staticClass: "btn long bg-danger",
+                              attrs: { href: "javascript:;" },
+                              on: {
+                                click: function($event) {
+                                  return _vm.cancelUpdateRole()
+                                }
+                              }
+                            },
+                            [_vm._v("Cancel")]
+                          )
+                        : _vm._e()
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-6" }, [
+                      _c("input", {
+                        staticClass: "btn long",
+                        attrs: { type: "submit" },
+                        domProps: { value: _vm.btn_role }
+                      })
+                    ])
+                  ])
+                ])
               ])
             ]
           )
@@ -61989,14 +62094,14 @@ var render = function() {
       _c("div", { staticClass: "col-xl-8 col-md-8 grid-item" }, [
         _c("div", { staticClass: "col-12" }, [
           _c("div", { staticClass: "card mb-30" }, [
-            _vm._m(2),
+            _vm._m(1),
             _vm._v(" "),
             _c("div", { staticClass: "table-responsive" }, [
               _c(
                 "table",
                 { staticClass: "text-nowrap card_color-bg dh-table" },
                 [
-                  _vm._m(3),
+                  _vm._m(2),
                   _vm._v(" "),
                   !_vm.reRender
                     ? _c(
@@ -62193,20 +62298,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "single-row p-0 border-bottom" }, [
-      _c("h4", { staticClass: "font-20 py-3 pl-20 pr-20" }, [
-        _vm._v("Permission")
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-4" }, [
-      _c("input", {
-        staticClass: "btn long",
-        attrs: { type: "submit", value: "Add Role" }
-      })
+      _c("h4", { staticClass: "font-20 py-3 pl-20 pr-20" }, [_vm._v("Role")])
     ])
   },
   function() {
@@ -62214,7 +62306,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "card-body pt-30" }, [
-      _c("h4", { staticClass: "font-20" }, [_vm._v("Basic Table")])
+      _c("h4", { staticClass: "font-20" }, [_vm._v("Permission")])
     ])
   },
   function() {
