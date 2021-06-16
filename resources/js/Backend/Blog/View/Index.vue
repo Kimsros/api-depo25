@@ -261,7 +261,7 @@
             </td>
              <td>
               <div class="d-flex align-items-center">
-                <div class="name bold" v-html="item.content">
+                <div class="name bold" v-html="item.content" style="height: 50px; width: 50px;">
                 </div>
               </div>
             </td>

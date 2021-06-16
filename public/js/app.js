@@ -2053,9 +2053,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
+      editorConfig: {
+        filebrowserImageBrowseUrl: "/api/laravel-filemanager?type=Images",
+        filebrowserImageUploadUrl: "/api/laravel-filemanager/upload?type=Images&_token=",
+        filebrowserBrowseUrl: "/api/laravel-filemanager?type=Files",
+        filebrowserUploadUrl: "/api/laravel-filemanager/upload?type=Files&_token="
+      },
       blog: {
         title: null,
         // slug:null,
@@ -2075,6 +2082,9 @@ __webpack_require__.r(__webpack_exports__);
     });
   },
   methods: {
+    thumbnail: function thumbnail() {
+      window.open('/api/laravel-filemanager?type=Images');
+    },
     insertData: function insertData() {
       var _this2 = this;
 
@@ -2086,7 +2096,7 @@ __webpack_require__.r(__webpack_exports__);
         fd.append("thumbnail", this.blog.thumbnail);
         fd.append("tag", this.blog.tag);
         fd.append("content", this.blog.content);
-        axios.post('/api/blog', fd).then(function (response) {
+        axios.post("/api/blog", fd).then(function (response) {
           // console.log(response.data);
           if (response.data.success) {
             _this2.$router.push("/admin/blog");
@@ -47544,7 +47554,13 @@ var render = function() {
                   return _c(
                     "option",
                     { key: idx, domProps: { value: item.id } },
-                    [_vm._v(_vm._s(item.name))]
+                    [
+                      _vm._v(
+                        "\n              " +
+                          _vm._s(item.name) +
+                          "\n            "
+                      )
+                    ]
                   )
                 }),
                 0
@@ -47554,6 +47570,33 @@ var render = function() {
             _c("div", { staticClass: "form-group" }, [
               _c("label", { staticClass: "font-14 bold mb-2" }, [
                 _vm._v("Thumbnail")
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                staticClass: "form-control",
+                attrs: {
+                  type: "text",
+                  id: "image1",
+                  name: "image",
+                  "aria-label": "Image",
+                  "aria-describedby": "button-image"
+                }
+              }),
+              _vm._v(" "),
+              _c("div", { staticClass: "input-group-append" }, [
+                _c(
+                  "button",
+                  {
+                    staticClass: "btn btn-outline-secondary",
+                    attrs: { type: "button", id: "image1" },
+                    on: {
+                      click: function($event) {
+                        return _vm.thumbnail()
+                      }
+                    }
+                  },
+                  [_vm._v("Select")]
+                )
               ]),
               _vm._v(" "),
               _c("input", {
@@ -47616,6 +47659,7 @@ var render = function() {
                 ]),
                 _vm._v(" "),
                 _c("ckeditor", {
+                  attrs: { config: _vm.editorConfig },
                   model: {
                     value: _vm.blog.content,
                     callback: function($$v) {
@@ -48025,6 +48069,7 @@ var render = function() {
                   _c("div", { staticClass: "d-flex align-items-center" }, [
                     _c("div", {
                       staticClass: "name bold",
+                      staticStyle: { height: "50px", width: "50px" },
                       domProps: { innerHTML: _vm._s(item.content) }
                     })
                   ])
