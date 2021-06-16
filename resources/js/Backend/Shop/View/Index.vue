@@ -99,7 +99,7 @@
                 </thead>
                 <tbody  v-if="!reRender">
                     <tr v-for="(item,idx) in data.data" :key="idx">
-                                               <td>
+                        <td>
                             <label class="custom-checkbox">
                                 <input type="checkbox" v-model="userIds" @change="getCheck($event,item.id)" :value="item.id"><span class="checkmark"></span> </label>
                             <div class="star">
@@ -241,6 +241,7 @@ export default {
                     this.reRender=true;
                     this.$nextTick(()=>{});
                     this.reRender=false;
+                    this.allSelected=false;
                 }else{
                     console.log(response.data.error);
                 }

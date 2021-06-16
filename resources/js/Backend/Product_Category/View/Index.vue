@@ -233,6 +233,7 @@ export default {
                     this.reRender=true;
                     this.$nextTick(()=>{});
                     this.reRender=false;
+                    this.allSelected=false;
                 }else{
                     console.log(response.data.error);
                 }

@@ -2916,6 +2916,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
           _this4.$nextTick(function () {});
 
           _this4.reRender = false;
+          _this4.allSelected = false;
         } else {
           console.log(response.data.error);
         }
@@ -3473,6 +3474,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
           _this4.$nextTick(function () {});
 
           _this4.reRender = false;
+          _this4.allSelected = false;
         } else {
           console.log(response.data.error);
         }
@@ -5368,6 +5370,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
           _this4.$nextTick(function () {});
 
           _this4.reRender = false;
+          _this4.allSelected = false;
         } else {
           console.log(response.data.error);
         }
@@ -6361,6 +6364,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
           _this4.$nextTick(function () {});
 
           _this4.reRender = false;
+          _this4.allSelected = false;
         } else {
           console.log(response.data.error);
         }
