@@ -135,21 +135,13 @@ class ProductVideoTypeController extends Controller
      * @param  \App\Models\product_video_type  $product_video_type
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Request $request,product_video_type $product_video_type)
+    public function destroy($id)
     {
         try{
-            if(is_array($request->id)){
-                if(product_video_type::whereIn('id',$request->id)->delete()){
-                    return response()->json(['success'=>'Product video type is deleted !!']);
-                }else{
-                    return response()->json(['success'=>'Product video type is not deleted !!']);
-                }
+            if(product_video_type::whereIn('id',explode('-',$id))->delete()){
+                return response()->json(['success'=>'Product video type is deleted !!']);
             }else{
-                if(product_video_type::where('id',$product_video_type['id'])->delete()){
-                    return response()->json(['success'=>'Product video type is deleted !!']);
-                }else{
-                    return response()->json(['success'=>'Product video type is not deleted !!']);
-                }
+                return response()->json(['success'=>'Product video type is not deleted !!']);
             }
 
         }catch(\Exception $e){

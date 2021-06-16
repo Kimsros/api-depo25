@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePermisionsTable extends Migration
+class CreatePreferencesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,14 @@ class CreatePermisionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('permisions', function (Blueprint $table) {
+        Schema::create('preferences', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('role_id');
-            $table->bigInteger('permission_type_id');
-            $table->bigInteger('table_of_permission_id');
+            $table->text('key');
+            $table->text('icon')->nullable();
+            $table->text('value')->nullable();
+            $table->bigInteger('preference_main_id')->nullable();
             $table->boolean('status')->default(1);
-            $table->bigInteger('updated_by');
+            $table->bigInteger('updated_by')->nullable();
             $table->timestamps();
         });
     }
@@ -31,6 +32,6 @@ class CreatePermisionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('permisions');
+        Schema::dropIfExists('preferences');
     }
 }

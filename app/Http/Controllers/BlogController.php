@@ -149,21 +149,13 @@ class BlogController extends Controller
      * @param  \App\Models\product  $product
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Request $request,blog $blog)
+    public function destroy($id)
     {
         try{
-            if(is_array($request->id)){
-                if(blog::whereIn('id',$request->id)->delete()){
-                    return response()->json(['success'=>'Blog is deleted !!']);
-                }else{
-                    return response()->json(['error'=>'Blog is not deleted !!']);
-                }
+            if(blog::whereIn('id',explode('-',$id))->delete()){
+                return response()->json(['success'=>'Blog is deleted !!']);
             }else{
-                if(blog::where('id',$blog['id'])->delete()){
-                    return response()->json(['success'=>'Blog is deleted !!']);
-                }else{
-                    return response()->json(['error'=>'Blog is not deleted !!']);
-                }
+                return response()->json(['error'=>'Blog is not deleted !!']);
             }
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
