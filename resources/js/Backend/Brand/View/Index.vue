@@ -49,11 +49,7 @@
         </form>
         <!-- End Search Form -->
       </div>
-      <div class="delete_mail">
-        <a href="#" @click="deleteAll()"
-          ><img src="/backend/assets/img/svg/delete.svg" alt="" class="svg"
-        /></a>
-      </div>
+
       <div
         class="
           contact-header-right
@@ -141,7 +137,7 @@
           <tr>
             <th>
               <label class="custom-checkbox">
-                <input type="checkbox" />
+                 <input type="checkbox" v-on:change="selectAll" v-model="allSelected">
                 <span class="checkmark"></span>
               </label>
               <div class="star">
@@ -171,7 +167,9 @@
               <label class="custom-checkbox">
                 <input
                   type="checkbox"
+                  v-model="userIds"
                   @change="getCheck($event, item.id)"
+                 :value="item.id"
                 /><span class="checkmark"></span>
               </label>
               <div class="star">
@@ -203,6 +201,7 @@
                 @click="getId(item.id)"
                 data-toggle="modal"
                 data-target="#exampleModal"
+
               >
                 <img
                   src="/backend/assets/img/svg/c-close.svg"
@@ -274,8 +273,10 @@ export default {
       search: null,
       ids: [],
       reRender: false,
+      allSelected:null,
+      userIds:[]
     };
-  },
+        },
   mounted() {
     this.getData();
   },
@@ -331,12 +332,28 @@ export default {
           this.reRender = true;
           this.$nextTick(() => {});
           this.reRender = false;
+          this.allSelected=false;
         } else {
           console.log(response.data.error);
         }
       });
     },
-   
+     selectAll(){
+              this.userIds = [];
+                for( var item in this.data.data)
+                {
+                    this.userIds.push(this.data.data[item].id);
+                        if(this.allSelected==true)
+                        {
+                            this.ids=[...this.ids,...[this.data.data[item].id]];
+                        }else if(this.allSelected!=true)
+                        {
+                            this.ids=this.ids.filter(element=> element!=[this.data.data[item].id]);
+                        }
+                }
+                    console.log(this.ids);
+    },
+
   },
 };
 </script>
