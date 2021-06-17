@@ -17,6 +17,11 @@ use Illuminate\Support\Facades\Route;
 */
 // Route::get('login',[LoginController::class,'login']);
 // Route::get('register',[LoginController::class,'register']);
+Route::group(['prefix' => 'laravel-filemanager'], function () {
+    \UniSharp\LaravelFilemanager\Lfm::routes();
+});
+Route::post('login',[LoginController::class,'login']);
+Route::post('register',[LoginController::class,'register']);
 
 
 Route::resource('bank', BankController::class);
@@ -48,6 +53,11 @@ Route::resource('role', RoleController::class);
 Route::resource('shop', ShopController::class);
 Route::resource('unit', UnitController::class);
 
+Route::group(['middleware' => ['auth:sanctum']], function () {
+    Route::get('/user', function(Request $request) {
+       return auth()->user();
+    });
+});
 // Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 //     return $request->user();
 // });
