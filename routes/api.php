@@ -51,7 +51,7 @@ Route::resource('quote', QuoteController::class);
 Route::resource('quote-detail', QuoteDetailController::class);
 Route::resource('role', RoleController::class);
 Route::resource('shop', ShopController::class);
-Route::resource('unit', UnitController::class);
+Route::resource('preference_mains', PreferenceMainController::class);
 
 Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::get('/user', function(Request $request) {
