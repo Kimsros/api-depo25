@@ -42,16 +42,24 @@
           <!-- Form Group -->
           <div class="form-group">
             <label class="font-14 bold mb-2">Thumbnail</label>
-              <input type="text" id="image1" class="form-control" name="image" aria-label="Image" aria-describedby="button-image">
+            <div class="input-group">
+              <span class="input-group-btn">
+                <a id="lfm" data-input="thumbnail" @click="thumbnail()" class="btn btn-primary">
+                  <i class="fa fa-picture-o"></i> Choose
+                </a>
+              </span>
+              <input id="thumbnail" class="form-control" type="text" name="filepath">
+            </div>
+              <!-- <input type="text" id="image1" class="form-control" name="image" aria-label="Image" aria-describedby="button-image">
               <div class="input-group-append">
                 <button class="btn btn-outline-secondary" @click="thumbnail()" type="button" id="image1">Select</button>
-              </div>
-            <input
+              </div> -->
+            <!-- <input
               v-model="blog.thumbnail"
               type="text"
               class="theme-input-style"
               placeholder="Enter Thumbnail"
-            />
+            /> -->
           </div>
           <!-- End Form Group -->
 
@@ -90,6 +98,7 @@
     <!-- End Form -->
   </div>
 </template>
+<script src="/vendor/laravel-filemanager/js/stand-alone-button.js"></script>
 <script>
 export default {
   data() {
@@ -118,7 +127,13 @@ export default {
   },
   methods: {
     thumbnail(){
-      window.open('/api/laravel-filemanager?type=Images');
+      // window.open('/laravel-filemanager?type=Files');
+      // $('#lfm').filemanager('file','/laravel-filemanager?type=Files');
+      window.onload = function () {
+        CKEDITOR.replace('ckeditor', {
+          filebrowserBrowseUrl: filemanager.ckBrowseUrl,
+        });
+      }
     },
     insertData() {
       if (this.blog.title && this.blog.content) {
