@@ -4,13 +4,13 @@ import ForgotPassword from "./View/ForgotPassword.vue";
 import ResetPassword from "./View/ResetPassword.vue";
 export default{
     router:[{
-        path:"/admin/login",component:Login
+        path:"/login",component:Login
     },{
-        path:"/admin/register",component:Register
+        path:"/register",component:Register
     },
     {
-        path:"/admin/forgot_password",component:ForgotPassword
+        path:"/forgot_password",component:ForgotPassword
     },{
-        path:"/admin/reset_password",component:ResetPassword
+        path:"/reset_password",component:ResetPassword
     }]
 }

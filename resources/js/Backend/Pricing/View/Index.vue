@@ -91,14 +91,14 @@
                             </div>
                             <!-- End Star -->
                         </th>
-                        <th class="text-center">Name <img src="/backend/assets/img/svg/table-down-arrow.svg" alt="" class="svg"></th>
+                        <th class="text-center">Name</th>
                         <th>Pay Statsus</th>
                         <th>Price In Month</th>
-                        <th>Price In Year<img src="/backend/assets/img/svg/table-down-arrow.svg" alt="" class="svg"></th>
+                        <th>Price In Year</th>
                         <th>Boost Product</th>
-                        <th>Boost duration<img src="/backend/assets/img/svg/table-down-arrow.svg" alt="" class="svg"></th>
-                        <th>Upload product<img src="/backend/assets/img/svg/table-down-arrow.svg" alt="" class="svg"></th>
-                        <th>Upload product duration<img src="/backend/assets/img/svg/table-down-arrow.svg" alt="" class="svg"></th>
+                        <th>Boost duration</th>
+                        <th>Upload product</th>
+                        <th>Upload product duration</th>
                         <th>Actions</th>
                     </tr>
                 </thead>

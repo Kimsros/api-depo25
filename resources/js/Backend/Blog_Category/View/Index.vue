@@ -35,8 +35,8 @@
             <!-- End Starred -->
 
             <!-- Delete Mail -->
-            <div class="delete_mail">
-                <a href="#"><img src="/backend/assets/img/svg/delete.svg" alt="" class="svg"></a>
+           <div class="delete_mail" v-if="ids.length>0">
+                <a href="#"  @click="mutipleDelete()"><img src="/backend/assets/img/svg/delete.svg" alt="" class="svg"></a>
             </div>
             <!-- End Delete Mail -->
 
@@ -85,10 +85,11 @@
                         <th>Actions</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody v-if="!reRender">
                     <tr  v-for="(item,idx) in data.data" :key="idx">
                         <td>
-                            <label class="custom-checkbox"><input type="checkbox"><span class="checkmark"></span> </label>
+                            <label class="custom-checkbox">
+                                <input type="checkbox" @change="getCheck($event,item.id)"><span class="checkmark"></span> </label>
                             <div class="star">
                                 <a href="#"><img src="/backend/assets/img/svg/star.svg" alt="" class="svg"></a>
                             </div>
@@ -149,6 +150,8 @@ export default {
             data:null,
             dataDelete:0,
             search:null,
+            ids:[],
+            reRender:false,
         }
     },
     mounted(){
@@ -194,7 +197,30 @@ export default {
             if(this.search==''){
                 this.getData();
             }
-        }
+        },
+         getCheck($event, id)
+        {
+            // alert('Hello world');
+            console.log(this.ids);
+            this.ids=$event.target.checked?[...this.ids,...[id]]:this.ids.filter(element=> element!=id);
+            console.log(this.ids);
+
+        },
+        mutipleDelete(){
+            const data=this.ids.join("-");
+             axios.delete('/api/blog-category/'+data).then(response=>{
+                if(response.data.success){
+                    this.getData();
+                    this.ids=[];
+                    this.reRender=true;
+                    this.$nextTick(()=>{});
+                    this.reRender=false;
+                }else{
+                    console.log(response.data.error);
+                }
+
+            });
+        },
     }
 }
 </script>
