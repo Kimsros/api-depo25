@@ -36,30 +36,17 @@
                 <div class="single-row p-0 border-bottom">
                     <h4 class="font-20 py-3 pl-20 pr-20">Preferences</h4>
                 </div>
-                <form action="">
-                    <div class="single-row level-urgent border-bottom pt-3 pb-3">
+                <form @submit.prevent="updateData()">
+                    <div class="single-row level-urgent border-bottom pt-3 pb-3" v-for="(item, idx) in preference" :key="idx" >
                         <div class="justify-content-between align-items-center">
                             <div class="position-relative">
-                                <p class="card-text mb-1">About Company</p>
-                                <ckeditor></ckeditor>
-                            </div>
-                            <div class="position-relative">
-                                <p class="card-text mb-1">About Us</p>
-                                <ckeditor></ckeditor>
-                            </div>
-                            <div class="position-relative">
-                                <p class="card-text mb-1">About Products</p>
-                                <ckeditor></ckeditor>
-                            </div>
-
-                            <div class="d-flex">
-                                <div class="assign_to">
-                                    <div class="assign-content">
-                                        <div class="font-12 text-warning">Back-End</div>
-                                    </div>
-                                </div>
+                                <p class="card-text mb-1">{{item.key}}</p>
+                                <ckeditor v-model="item.value"></ckeditor>
                             </div>
                         </div>
+                    </div>
+                     <div class="col-4">
+                        <button type="submit" class="btn long">Submit</button>
                     </div>
                 </form>
             </div>
@@ -73,25 +60,51 @@ export default {
         return{
             preference: [],
             preference_list: [],
-            currentActive: 1,
+            currentActive:1,
             reRender: false,
+            
+           
         };
     },
     methods:{
-        getData(){
+        getPreference(){
             axios.get("/api/preference_mains")
             .then(respone=>{
-
                 this.preference_list = respone.data.success;
+            })
+        },
+        getPreferenceForm(id=1){
+            axios.get("/api/preferences?preference_main_id="+id)
+             .then(respone=>{
+                
+                this.preference = respone.data.success;
+            })
+        },
+        setActiveList(id) {
+            this.currentActive = id;
+            this.getPreferenceForm(id);
+        },
+        updateData(){
+          
+        var url='/api/preferences/'+1;
+            axios.put(url,this.preference).then(response=>{
+                if(response.data.success){
+                    this.$router.push("/admin/preferences");
+                }else{
+                    console.log(response.data.error);
+                }
             })
         }
     },
     mounted(){
-        this.getData();
+        this.getPreference();
+        this.getPreferenceForm();
     }
 }
 </script>
-
-<style>
+<style scoped>
+.activeBg {
+  background: #f15922;
+}
 
 </style>

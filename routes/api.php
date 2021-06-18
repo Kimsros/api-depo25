@@ -45,6 +45,7 @@ Route::resource('quote-detail', QuoteDetailController::class);
 Route::resource('role', RoleController::class);
 Route::resource('shop', ShopController::class);
 Route::resource('preference_mains', PreferenceMainController::class);
+Route::resource('preferences', PreferenceController::class);
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
