@@ -52,6 +52,7 @@ class UserController extends Controller
     public function store(Request $request)
     {
         try{
+            // dd($request->all());
             DB::beginTransaction();
             $validation=Validator($request->all(),[
                 'first_name'=>'required',
@@ -66,7 +67,8 @@ class UserController extends Controller
                 'bank_account'=>'required',
             ]);
             if($validation->fails()){
-                return response()->json(['error'=>$validation->getMessageBag()]);
+                // dd(is_string($validation->getMessageBag()));
+                return response()->json(['validation'=>$validation->getMessageBag()]);
             }
             $data=$request->all();
             $data['updated_by']=1;
@@ -115,7 +117,7 @@ class UserController extends Controller
     public function edit($id)
     {
         try{
-            $user=DB::table('users as u')->join('banks as b','b.id','=','u.bank_id')->join('roles as r','r.id','=','u.role_id')->join('pricings as p','p.id','=','u.pricing_id')->select('u.id','u.first_name','u.last_name','u.email','u.telephone','u.password','p.name as price_name','b.bank_name','b.account_name','b.bank_account','r.name as role')->orderBy('u.id','DESC')->where('u.id',$id)->first();
+            $user=DB::table('users as u')->join('banks as b','b.id','=','u.bank_id')->join('roles as r','r.id','=','u.role_id')->join('pricings as p','p.id','=','u.pricing_id')->select('u.id','u.first_name','u.last_name','u.email','u.telephone','u.password','u.profile','p.name as price_name','b.bank_name','b.account_name','b.bank_account','r.name as role')->orderBy('u.id','DESC')->where('u.id',$id)->first();
             return response()->json(['success'=>$user]);
         }catch(Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
@@ -133,24 +135,24 @@ class UserController extends Controller
     {
         try{
             DB::beginTransaction();
-            $validation=Validator($request->all(),[
-                'first_name'=>'required',
-                'last_name'=>'required',
-                'email'=>['required','email',ValidationRule::unique('users')->ignore($id)],
-                'telephone'=>'required',
-                'password'=>'required',
-                'role_id'=>'required|integer',
-                'pricing_id'=>'required|integer',
-                'bank_name'=>'required',
-                'account_name'=>'required',
-                'bank_account'=>'required',
-            ]);
-            if($validation->fails()){
-                return response()->json(['error'=>$validation->getMessageBag()]);
-            }
+            // $validation=Validator($request->all(),[
+            //     'first_name'=>'required',
+            //     'last_name'=>'required',
+            //     'email'=>['required','email',ValidationRule::unique('users')->ignore($id)],
+            //     'telephone'=>'required',
+            //     'password'=>'required',
+            //     'role_id'=>'required|integer',
+            //     'pricing_id'=>'required|integer',
+            //     'bank_name'=>'required',
+            //     'account_name'=>'required',
+            //     'bank_account'=>'required',
+            // ]);
+            // if($validation->fails()){
+            //     return response()->json(['validation'=>$validation->getMessageBag()]);
+            // }
             $data=$request->all();
             $data['updated_by']=1;
-            $update_data=User::find($id)->select('bank_id')->first();
+            $update_data=User::where('id',$id)->first();
             $bank=bank::find($update_data->bank_id)->update(
                 [
                     'bank_name'=>$request->bank_name,
@@ -164,7 +166,7 @@ class UserController extends Controller
             $data['name']=$request->first_name.' '.$request->last_name;
             User::find($id)->update($data);
             DB::commit();
-            return response()->json(['success'=>'User is inserted !!']);
+            return response()->json(['success'=>'User is Update !!']);
         }catch(Exception $e){
             DB::rollBack();
             return response()->json(['error'=>$e->getMessage()]);
@@ -181,9 +183,9 @@ class UserController extends Controller
     {
         try{
             $user=User::find($id)->first();
-            bank::find($user->bank_id)->delete();
+            bank::where('id',$user['bank_id'])->delete();
             User::find($id)->delete();
-            return response()->json(['error'=>'User is deleted !!']);
+            return response()->json(['success'=>'User is deleted !!']);
         }catch(Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }

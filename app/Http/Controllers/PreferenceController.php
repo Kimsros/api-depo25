@@ -22,7 +22,7 @@ class PreferenceController extends Controller
             }else{
                 $preference_main_id=1;
             }
-            return response()->json(['error'=>Preference::where('preference_main_id',$preference_main_id)->get()]);
+            return response()->json(['success'=>Preference::where('preference_main_id',$preference_main_id)->get()]);
         }catch(Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }
@@ -53,7 +53,7 @@ class PreferenceController extends Controller
                 'preference_main_id'=>'required|integer'
             ]);
             if($validation->fails()){
-                return response()->json(['error'=>$validation->getMessageBag()]);
+                return response()->json(['validation'=>$validation->getMessageBag()]);
             }
             $data=$request->all();
             $data['updated_by']=1;

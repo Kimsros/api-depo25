@@ -25,6 +25,8 @@ class CreateUsersTable extends Migration
             $table->bigInteger('role_id')->nullable();
             $table->bigInteger('pricing_id')->nullable();
             $table->bigInteger('bank_id')->nullable();
+            $table->text('profile')->nullable();
+            $table->text('description')->nullable();
             $table->rememberToken();
             $table->boolean('status')->default(1);
             $table->bigInteger('updated_by')->nullable();
@@ -35,9 +37,9 @@ class CreateUsersTable extends Migration
             [
                 'email'=>'administrator@khbmedia.asia',
                 'password'=>Hash::make('ASDasd12345$$'),
-                'first_name'=> 'my',
-                'last_name'=> 'sey',
-                'telephone'=> '09876543',
+                'first_name'=> 'Admin',
+                'last_name'=> 'KHB',
+                'telephone'=> '(+855) 95 555 100 | 70 555 144',
                 'bank_id'=> '1',
                 'role_id'=>1,
                 'pricing_id'=>1,

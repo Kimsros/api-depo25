@@ -22,6 +22,7 @@
                      </a>
                      <ul class="nav sub-menu">
                         <li><a href="/admin/add_user">Add Users</a></li>
+                        <li><a href="/admin/all_user">All Users</a></li>
                         <li><a href="/admin/admin">Admin List</a></li>
                         <li><a href="/admin/seller">Seller List</a></li>
                         <li><a href="/admin/buyer">Buyer List</a></li>
@@ -116,7 +117,7 @@
                         <span class="link-title">Report</span>
                      </a>
                      <ul class="nav sub-menu">
-                        
+
                         <li><a href="/admin/in_house_products">In House Product</a></li>
                         <li><a href="/admin/purchase">Purchase</a></li>
                         <li><a href="/admin/user_search">User Search</a></li>
