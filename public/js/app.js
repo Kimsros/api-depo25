@@ -4639,18 +4639,6 @@ __webpack_require__.r(__webpack_exports__);
     setActiveList: function setActiveList(id) {
       this.currentActive = id;
       this.getPreferenceForm(id);
-    },
-    updateData: function updateData() {
-      var _this3 = this;
-
-      var url = '/api/preferences/' + 1;
-      axios.put(url, this.preference).then(function (response) {
-        if (response.data.success) {
-          _this3.$router.push("/admin/preferences");
-        } else {
-          console.log(response.data.error);
-        }
-      });
     }
   },
   mounted: function mounted() {

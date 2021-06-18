@@ -22,9 +22,9 @@ class PreferenceController extends Controller
             }else{
                 $preference_main_id=1;
             }
-            return response()->json(['error'=>Preference::where('preference_main_id',$preference_main_id)->get()]);
+            return response()->json(['success'=>Preference::where('preference_main_id',$preference_main_id)->get()]);
         }catch(Exception $e){
-            return response()->json(['error'=>$e->getMessage()]);
+            return response()->json(['success'=>$e->getMessage()]);
         }
     }
 
@@ -105,7 +105,7 @@ class PreferenceController extends Controller
         try{
             DB::beginTransaction();
             foreach($request->all() as $key=>$item){
-                Preference::find($key)->update(['value'=>$item]);
+                Preference::find($item->id)->update(['value'=>$item->value]);
             }
             DB::commit();
             return response()->json(['success'=>'Preference is updated !!']);

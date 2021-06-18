@@ -83,17 +83,6 @@ export default {
         setActiveList(id) {
             this.currentActive = id;
             this.getPreferenceForm(id);
-        },
-        updateData(){
-          
-        var url='/api/preferences/'+1;
-            axios.put(url,this.preference).then(response=>{
-                if(response.data.success){
-                    this.$router.push("/admin/preferences");
-                }else{
-                    console.log(response.data.error);
-                }
-            })
         }
     },
     mounted(){
