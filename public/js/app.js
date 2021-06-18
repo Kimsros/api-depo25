@@ -1987,6 +1987,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 //
 //
 //
@@ -2039,7 +2046,62 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  computed: _objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_0__.mapGetters)({
+    //merge 
+    authenticated: "auth/authenticated",
+    user: "auth/getUser"
+  })),
+  data: function data() {
+    return {
+      login: {
+        email: null,
+        password: null
+      },
+      massage: false,
+      loadding: false
+    };
+  },
+  mounted: function mounted() {
+    axios.get('/api/user', {
+      headers: {
+        'content-Type': 'aplication/json'
+      }
+    }).then(function (response) {
+      console.log(response.date);
+    });
+  },
+  methods: _objectSpread(_objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_0__.mapActions)({
+    SignIn: "auth/SignIn"
+  })), {}, {
+    InsertLogin: function InsertLogin() {
+      var _this = this;
+
+      if (this.login.email && this.login.password) {
+        var dataLogin = {
+          'email': this.login.email,
+          'password': this.login.password
+        };
+        axios.post('/sanctum/csrf-cookie').then(function (response) {
+          _this.SignIn(dataLogin).then(function (response) {
+            if (response[0] == "true") {
+              thisupdate.$Progress.finish();
+              thisupdate.loadding = false;
+              var url = '/loginSotre';
+
+              if (_this.$route.query.redirect) {
+                url = _this.$route.query.redirect;
+              }
+            } else {}
+          });
+        });
+      } else {
+        alert("not work");
+      }
+    }
+  })
+});
 
 /***/ }),
 
@@ -7399,9 +7461,21 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+ // import store from "../store";
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   router: [{
+    path: "admin/loginSotre",
+    beforeEnter: function beforeEnter(to, from, next) {
+      if (store.getters['auth/authenticated'] && store.getters['auth/getUser'].role == "admin" || store.getters['auth/authenticated'] && store.getters['auth/getUser'].role == "lecture") {
+        window.location = "/admin";
+      } else if (store.getters['auth/authenticated'] && store.getters['auth/getUser'].role == "student") {
+        window.location = "/my-course";
+      } else {
+        next();
+      }
+    }
+  }, {
     path: "/admin/login",
     component: _View_Login_vue__WEBPACK_IMPORTED_MODULE_0__.default
   }, {
@@ -8480,7 +8554,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   namespaced: true,
   state: {
-    user: null,
+    user: false,
     isLogin: false
   },
   getters: {
@@ -53268,21 +53342,24 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "mn-vh-100 d-flex align-items-center" }, [
-      _c("div", { staticClass: "container" }, [
-        _c("div", { staticClass: "card justify-content-center auth-card" }, [
-          _c("div", { staticClass: "row justify-content-center" }, [
-            _c("div", { staticClass: "col-xl-7 col-lg-9" }, [
-              _c("h4", { staticClass: "mb-5 font-20" }, [_vm._v("Admin")]),
-              _vm._v(" "),
-              _c("form", { attrs: { action: "#" } }, [
+  return _c("div", { staticClass: "mn-vh-100 d-flex align-items-center" }, [
+    _c("div", { staticClass: "container" }, [
+      _c("div", { staticClass: "card justify-content-center auth-card" }, [
+        _c("div", { staticClass: "row justify-content-center" }, [
+          _c("div", { staticClass: "col-xl-7 col-lg-9" }, [
+            _c("h4", { staticClass: "mb-5 font-20" }, [_vm._v("Admin")]),
+            _vm._v(" "),
+            _c(
+              "form",
+              {
+                on: {
+                  submit: function($event) {
+                    $event.preventDefault()
+                    return _vm.InsertLogin()
+                  }
+                }
+              },
+              [
                 _c("div", { staticClass: "form-group mb-20" }, [
                   _c(
                     "label",
@@ -53294,11 +53371,28 @@ var staticRenderFns = [
                   ),
                   _vm._v(" "),
                   _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.login.email,
+                        expression: "login.email"
+                      }
+                    ],
                     staticClass: "theme-input-style",
                     attrs: {
                       type: "email",
                       id: "email",
                       placeholder: "Email Address"
+                    },
+                    domProps: { value: _vm.login.email },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(_vm.login, "email", $event.target.value)
+                      }
                     }
                   })
                 ]),
@@ -53314,75 +53408,87 @@ var staticRenderFns = [
                   ),
                   _vm._v(" "),
                   _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.login.password,
+                        expression: "login.password"
+                      }
+                    ],
                     staticClass: "theme-input-style",
                     attrs: {
                       type: "password",
                       id: "password",
                       placeholder: "********"
+                    },
+                    domProps: { value: _vm.login.password },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(_vm.login, "password", $event.target.value)
+                      }
                     }
                   })
                 ]),
                 _vm._v(" "),
-                _c(
-                  "div",
-                  { staticClass: "d-flex justify-content-between mb-20" },
-                  [
-                    _c("div", { staticClass: "d-flex align-items-center" }, [
-                      _c(
-                        "label",
-                        {
-                          staticClass: "custom-checkbox position-relative mr-2"
-                        },
-                        [
-                          _c("input", {
-                            attrs: { type: "checkbox", id: "checkbox" }
-                          }),
-                          _vm._v(" "),
-                          _c("span", { staticClass: "checkmark" })
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "label",
-                        { staticClass: "font-14", attrs: { for: "checkbox" } },
-                        [_vm._v("Remember Me")]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c(
-                      "a",
-                      {
-                        staticClass: "font-12 text_color",
-                        attrs: { href: "forget-pass.html" }
-                      },
-                      [_vm._v("Forgot Password?")]
-                    )
-                  ]
-                ),
+                _vm._m(0),
                 _vm._v(" "),
-                _c("div", { staticClass: "d-flex align-items-center" }, [
-                  _c(
-                    "button",
-                    {
-                      staticClass: "btn long mr-20",
-                      attrs: { type: "submit" }
-                    },
-                    [_vm._v("Log In")]
-                  ),
-                  _vm._v(" "),
-                  _c("span", { staticClass: "font-12 d-block" }, [
-                    _c(
-                      "a",
-                      { staticClass: "bold", attrs: { href: "register.html" } },
-                      [_vm._v("Sign Up")]
-                    ),
-                    _vm._v(",If you have no account.")
-                  ])
-                ])
-              ])
-            ])
+                _vm._m(1)
+              ]
+            )
           ])
         ])
+      ])
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "d-flex justify-content-between mb-20" }, [
+      _c("div", { staticClass: "d-flex align-items-center" }, [
+        _c("label", { staticClass: "custom-checkbox position-relative mr-2" }, [
+          _c("input", { attrs: { type: "checkbox", id: "checkbox" } }),
+          _vm._v(" "),
+          _c("span", { staticClass: "checkmark" })
+        ]),
+        _vm._v(" "),
+        _c("label", { staticClass: "font-14", attrs: { for: "checkbox" } }, [
+          _vm._v("Remember Me")
+        ])
+      ]),
+      _vm._v(" "),
+      _c(
+        "a",
+        {
+          staticClass: "font-12 text_color",
+          attrs: { href: "forget-pass.html" }
+        },
+        [_vm._v("Forgot Password?")]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "d-flex align-items-center" }, [
+      _c(
+        "button",
+        { staticClass: "btn long mr-20", attrs: { type: "submit" } },
+        [_vm._v("Log In")]
+      ),
+      _vm._v(" "),
+      _c("span", { staticClass: "font-12 d-block" }, [
+        _c("a", { staticClass: "bold", attrs: { href: "register.html" } }, [
+          _vm._v("Sign Up")
+        ]),
+        _vm._v(",If you have no account.")
       ])
     ])
   }

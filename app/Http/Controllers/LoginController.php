@@ -88,18 +88,12 @@ class LoginController extends Controller
         ]);
         $credentials = $request->only('email', 'password','remember_token');
         
-        if (Auth::attempt($credentials)) {
+        if (Auth::attempt($credentials)&&Auth::user()->verified==1) {
             return Auth::user();
         }
-        // return false;
-        $user = User::where('email', $request->email)->first();
-        $authToken = $user->createToken('auth_token')->plainTextToken;
-        
-        return response()->json([
-            'access_token' => $authToken,
-            'token_type'   => 'Bearer'
-        ]);
+        return false;
     }
+
     public function logout(){
         Auth::logout();
         return true;
