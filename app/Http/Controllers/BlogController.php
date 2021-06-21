@@ -158,7 +158,6 @@ class BlogController extends Controller
      */
     public function destroy($id)
     {
-        return($blog);
         try{
             if(blog::whereIn('id',explode('-',$id))->delete()){
                 return response()->json(['success'=>'Blog is deleted !!']);

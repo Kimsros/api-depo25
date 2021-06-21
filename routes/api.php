@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 */
 // Route::get('login',[LoginController::class,'login']);
 // Route::get('register',[LoginController::class,'register']);
-Route::group(['prefix' => 'laravel-filemanager'], function () {
+Route::group(['prefix' => 'laravel-filemanager','middleware'=>['web','auth']], function () {
     \UniSharp\LaravelFilemanager\Lfm::routes();
 });
 Route::post('login',[LoginController::class,'login']);

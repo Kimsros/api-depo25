@@ -368,9 +368,8 @@ export default {
 						}
     },
     checkdelete(){
-      console.log(this.checkboxfm);
-
-      axios.delete("/api/blog/" + this.checkboxfm).then((response) => {
+      
+      axios.delete("/api/blog/" + this.checkboxfm.join("-")).then((response) => {
         if (response.data.success) {
           exampleModal.click();
           this.getData();
