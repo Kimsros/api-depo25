@@ -2254,29 +2254,91 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
+      editorConfig: {
+        filebrowserImageBrowseUrl: "/api/laravel-filemanager?type=Images",
+        filebrowserImageUploadUrl: "/api/laravel-filemanager/upload?type=Images&_token=",
+        filebrowserBrowseUrl: "/api/laravel-filemanager?type=Files",
+        filebrowserUploadUrl: "/api/laravel-filemanager/upload?type=Files&_token="
+      },
       blog: {
         title: null,
-        slug: null,
+        // slug:null,
+        blog_categories: 1,
+        thumbnail: null,
+        tag: null,
         content: null
-      }
+      },
+      category: null
     };
   },
-  methods: {
-    insertData: function insertData() {
-      var _this = this;
+  mounted: function mounted() {
+    var _this = this;
 
-      if (this.blog.title && this.blog.slug && this.blog.content) {
+    axios.get("/api/blog-category").then(function (response) {
+      _this.category = response.data.success.data;
+    });
+  },
+  methods: {
+    thumbnail: function thumbnail() {
+      window.open('/api/laravel-filemanager?type=Images');
+    },
+    insertData: function insertData() {
+      var _this2 = this;
+
+      if (this.blog.title && this.blog.content) {
         var fd = new FormData();
-        fd.append("title", this.blog.title);
-        fd.append("slug", this.blog.slug);
+        fd.append("title", this.blog.title); // fd.append("slug",this.blog.slug);
+
+        fd.append("blog_categories", this.blog.blog_categories);
+        fd.append("thumbnail", this.blog.thumbnail);
+        fd.append("tag", this.blog.tag);
         fd.append("content", this.blog.content);
-        axios.post('/api/blog', fd).then(function (response) {
+        axios.post("/api/blog", fd).then(function (response) {
           // console.log(response.data);
           if (response.data.success) {
-            _this.$router.push("/admin/blog");
+            _this2.$router.push("/admin/blog");
           } else {
             console.log(response.data.error);
           }
@@ -2355,41 +2417,66 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
       id: this.$route.params.id,
-      data: null
+      data: null,
+      category: null
     };
   },
   mounted: function mounted() {
+    var _this = this;
+
     this.getData();
+    axios.get("/api/blog-category").then(function (response) {
+      _this.category = response.data.success.data;
+    });
   },
   methods: {
     getData: function getData() {
-      var _this = this;
+      var _this2 = this;
 
       axios.get("/api/blog/" + this.id + "/edit").then(function (response) {
         if (response.data.success) {
-          _this.data = response.data.success;
+          _this2.data = response.data.success;
         } else {
           console.log(response.data.error);
         }
       });
     },
     updateData: function updateData() {
-      var _this2 = this;
+      var _this3 = this;
 
-      if (this.data.title && this.data.slug && this.data.content) {
+      if (this.data.title && this.data.content) {
         var fd = {
           'title': this.data.title,
-          'slug': this.data.slug,
+          'blog_categories': this.data.blog_categories,
+          'thumbnail': this.data.thumbnail,
+          'tag': this.data.tag,
           'content': this.data.content
         };
         var url = '/api/blog/' + this.id;
         axios.put(url, fd).then(function (response) {
           if (response.data.success) {
-            _this2.$router.push("/admin/blog");
+            _this3.$router.push("/admin/blog");
           } else {
             console.log(response.data.error);
           }
@@ -2414,6 +2501,46 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -53323,7 +53450,88 @@ var render = function() {
             _vm._v(" "),
             _c("div", { staticClass: "form-group" }, [
               _c("label", { staticClass: "font-14 bold mb-2" }, [
-                _vm._v("Slug")
+                _vm._v("Blog Category")
+              ]),
+              _vm._v(" "),
+              _c(
+                "select",
+                {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.blog.blog_categories,
+                      expression: "blog.blog_categories"
+                    }
+                  ],
+                  staticClass: "theme-input-style",
+                  on: {
+                    change: function($event) {
+                      var $$selectedVal = Array.prototype.filter
+                        .call($event.target.options, function(o) {
+                          return o.selected
+                        })
+                        .map(function(o) {
+                          var val = "_value" in o ? o._value : o.value
+                          return val
+                        })
+                      _vm.$set(
+                        _vm.blog,
+                        "blog_categories",
+                        $event.target.multiple
+                          ? $$selectedVal
+                          : $$selectedVal[0]
+                      )
+                    }
+                  }
+                },
+                _vm._l(this.category, function(item, idx) {
+                  return _c(
+                    "option",
+                    { key: idx, domProps: { value: item.id } },
+                    [
+                      _vm._v(
+                        "\n              " +
+                          _vm._s(item.name) +
+                          "\n            "
+                      )
+                    ]
+                  )
+                }),
+                0
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { staticClass: "font-14 bold mb-2" }, [
+                _vm._v("Thumbnail")
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                staticClass: "form-control",
+                attrs: {
+                  type: "text",
+                  id: "image1",
+                  name: "image",
+                  "aria-label": "Image",
+                  "aria-describedby": "button-image"
+                }
+              }),
+              _vm._v(" "),
+              _c("div", { staticClass: "input-group-append" }, [
+                _c(
+                  "button",
+                  {
+                    staticClass: "btn btn-outline-secondary",
+                    attrs: { type: "button", id: "image1" },
+                    on: {
+                      click: function($event) {
+                        return _vm.thumbnail()
+                      }
+                    }
+                  },
+                  [_vm._v("Select")]
+                )
               ]),
               _vm._v(" "),
               _c("input", {
@@ -53331,19 +53539,47 @@ var render = function() {
                   {
                     name: "model",
                     rawName: "v-model",
-                    value: _vm.blog.slug,
-                    expression: "blog.slug"
+                    value: _vm.blog.thumbnail,
+                    expression: "blog.thumbnail"
                   }
                 ],
                 staticClass: "theme-input-style",
-                attrs: { type: "text", placeholder: "Enter slug" },
-                domProps: { value: _vm.blog.slug },
+                attrs: { type: "text", placeholder: "Enter Thumbnail" },
+                domProps: { value: _vm.blog.thumbnail },
                 on: {
                   input: function($event) {
                     if ($event.target.composing) {
                       return
                     }
-                    _vm.$set(_vm.blog, "slug", $event.target.value)
+                    _vm.$set(_vm.blog, "thumbnail", $event.target.value)
+                  }
+                }
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { staticClass: "font-14 bold mb-2" }, [
+                _vm._v("Tag")
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.blog.tag,
+                    expression: "blog.tag"
+                  }
+                ],
+                staticClass: "theme-input-style",
+                attrs: { type: "text", placeholder: "Enter Tag" },
+                domProps: { value: _vm.blog.tag },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.blog, "tag", $event.target.value)
                   }
                 }
               })
@@ -53358,6 +53594,7 @@ var render = function() {
                 ]),
                 _vm._v(" "),
                 _c("ckeditor", {
+                  attrs: { config: _vm.editorConfig },
                   model: {
                     value: _vm.blog.content,
                     callback: function($$v) {
@@ -53414,7 +53651,7 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "form-element py-30 multiple-column" }, [
-    _c("h4", { staticClass: "font-20 mb-20" }, [_vm._v("Add Blog")]),
+    _c("h4", { staticClass: "font-20 mb-20" }, [_vm._v("Edit Blog")]),
     _vm._v(" "),
     _c(
       "form",
@@ -53460,7 +53697,55 @@ var render = function() {
                 _vm._v(" "),
                 _c("div", { staticClass: "form-group" }, [
                   _c("label", { staticClass: "font-14 bold mb-2" }, [
-                    _vm._v("Slug")
+                    _vm._v("Blog Category")
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "select",
+                    {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.data.blog_categories,
+                          expression: "data.blog_categories"
+                        }
+                      ],
+                      staticClass: "theme-input-style",
+                      on: {
+                        change: function($event) {
+                          var $$selectedVal = Array.prototype.filter
+                            .call($event.target.options, function(o) {
+                              return o.selected
+                            })
+                            .map(function(o) {
+                              var val = "_value" in o ? o._value : o.value
+                              return val
+                            })
+                          _vm.$set(
+                            _vm.data,
+                            "blog_categories",
+                            $event.target.multiple
+                              ? $$selectedVal
+                              : $$selectedVal[0]
+                          )
+                        }
+                      }
+                    },
+                    _vm._l(this.category, function(item, idx) {
+                      return _c(
+                        "option",
+                        { key: idx, domProps: { value: item.id } },
+                        [_vm._v(_vm._s(item.name))]
+                      )
+                    }),
+                    0
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", { staticClass: "font-14 bold mb-2" }, [
+                    _vm._v("Thumbnail")
                   ]),
                   _vm._v(" "),
                   _c("input", {
@@ -53468,19 +53753,47 @@ var render = function() {
                       {
                         name: "model",
                         rawName: "v-model",
-                        value: _vm.data.slug,
-                        expression: "data.slug"
+                        value: _vm.data.thumbnail,
+                        expression: "data.thumbnail"
                       }
                     ],
                     staticClass: "theme-input-style",
-                    attrs: { type: "text", placeholder: "Enter slug" },
-                    domProps: { value: _vm.data.slug },
+                    attrs: { type: "text", placeholder: "Enter Thumbnail" },
+                    domProps: { value: _vm.data.thumbnail },
                     on: {
                       input: function($event) {
                         if ($event.target.composing) {
                           return
                         }
-                        _vm.$set(_vm.data, "slug", $event.target.value)
+                        _vm.$set(_vm.data, "thumbnail", $event.target.value)
+                      }
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group" }, [
+                  _c("label", { staticClass: "font-14 bold mb-2" }, [
+                    _vm._v("Tag")
+                  ]),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.data.tag,
+                        expression: "data.tag"
+                      }
+                    ],
+                    staticClass: "theme-input-style",
+                    attrs: { type: "text", placeholder: "Enter Tag" },
+                    domProps: { value: _vm.data.tag },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(_vm.data, "tag", $event.target.value)
                       }
                     }
                   })
@@ -53644,6 +53957,18 @@ var render = function() {
                     _c("div", { staticClass: "name bold" }, [
                       _vm._v(
                         "\n                " +
+                          _vm._s(item.thumbnail) +
+                          "\n              "
+                      )
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(
+                        "\n                " +
                           _vm._s(item.title) +
                           "\n              "
                       )
@@ -53656,7 +53981,19 @@ var render = function() {
                     _c("div", { staticClass: "name bold" }, [
                       _vm._v(
                         "\n                " +
-                          _vm._s(item.slug) +
+                          _vm._s(item.name) +
+                          "\n              "
+                      )
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("div", { staticClass: "d-flex align-items-center" }, [
+                    _c("div", { staticClass: "name bold" }, [
+                      _vm._v(
+                        "\n                " +
+                          _vm._s(item.tag) +
                           "\n              "
                       )
                     ])
@@ -53667,6 +54004,7 @@ var render = function() {
                   _c("div", { staticClass: "d-flex align-items-center" }, [
                     _c("div", {
                       staticClass: "name bold",
+                      staticStyle: { height: "50px", width: "50px" },
                       domProps: { innerHTML: _vm._s(item.content) }
                     })
                   ])
@@ -53956,6 +54294,17 @@ var staticRenderFns = [
         ]),
         _vm._v(" "),
         _c("th", { staticClass: "text-center" }, [
+          _vm._v("\n            Thumbnail\n            "),
+          _c("img", {
+            staticClass: "svg",
+            attrs: {
+              src: "/backend/assets/img/svg/table-down-arrow.svg",
+              alt: ""
+            }
+          })
+        ]),
+        _vm._v(" "),
+        _c("th", { staticClass: "text-center" }, [
           _vm._v("\n            Title\n            "),
           _c("img", {
             staticClass: "svg",
@@ -53966,8 +54315,19 @@ var staticRenderFns = [
           })
         ]),
         _vm._v(" "),
-        _c("th", [
-          _vm._v("\n            Slug\n            "),
+        _c("th", { staticClass: "text-center" }, [
+          _vm._v("\n            Blog Category\n            "),
+          _c("img", {
+            staticClass: "svg",
+            attrs: {
+              src: "/backend/assets/img/svg/table-down-arrow.svg",
+              alt: ""
+            }
+          })
+        ]),
+        _vm._v(" "),
+        _c("th", { staticClass: "text-center" }, [
+          _vm._v("\n            Tag\n            "),
           _c("img", {
             staticClass: "svg",
             attrs: {
