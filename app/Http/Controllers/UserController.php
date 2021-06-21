@@ -182,9 +182,12 @@ class UserController extends Controller
     public function destroy($id)
     {
         try{
-            $user=User::find($id)->first();
-            bank::where('id',$user['bank_id'])->delete();
-            User::find($id)->delete();
+            $ids=explode('-',$id);
+            foreach($ids as $item){
+                $user=User::find($item)->first();
+                bank::where('id',$user['bank_id'])->delete();
+                User::find($item)->delete();
+            }
             return response()->json(['success'=>'User is deleted !!']);
         }catch(Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
