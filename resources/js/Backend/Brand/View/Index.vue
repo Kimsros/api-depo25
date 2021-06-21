@@ -198,7 +198,7 @@
             <td>{{ item.logo }}</td>
             <td class="actions">
               <span
-                @click="getId(item.id)"
+                @click="deleteData(item.id)"
                 data-toggle="modal"
                 data-target="#exampleModal"
 
@@ -211,7 +211,7 @@
               </span>
               <router-link :to="'/admin/edit_brand/' + item.id">
                 <span>
-                  <img
+                  <img  
                     src="/backend/assets/img/svg/c-edit.svg"
                     alt=""
                     class="svg"
@@ -222,45 +222,6 @@
           </tr>
         </tbody>
       </table>
-    </div>
-    <div
-      class="modal fade"
-      id="exampleModal"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body pull-center">
-            <h3>Are You Sure ?</h3>
-          </div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-dismiss="modal"
-            >
-              No
-            </button>
-            <button type="button" class="btn btn-primary" @click="deleteData()">
-              Yes
-            </button>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </template>
@@ -291,17 +252,39 @@ export default {
         }
       });
     },
-
-    deleteData() {
-      axios.delete("/api/brand/" + this.dataDelete).then((response) => {
-        if (response.data.success) {
-          exampleModal.click();
-          this.getData();
-        } else {
-          console.log(response.data.error);
-        }
-      });
-    },
+    deleteData(id) {
+            this.$swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            background:'#060818',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                     axios.delete("/api/brand/" + id).then((response) => {
+                        if(response.data.success){
+                            this.$swal.fire(
+                                {
+                                    toast:true,
+                                    position:'top-end',
+                                    // title: 'Success !',
+                                    title: response.data.success,
+                                    icon: 'success',
+                                    showConfirmButton:false,
+                                    timer:3000,
+                                    background:'#060818',
+                                    titleColor:"#FFF"
+                                }
+                            );
+                            this.getData();
+                        }
+                    });
+                }
+            });
+        },
     searchData() {
       if (this.search) {
         axios.get("/api/brand?search=" + this.search).then((response) => {
