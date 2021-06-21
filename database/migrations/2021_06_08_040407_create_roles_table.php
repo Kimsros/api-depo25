@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 
 class CreateRolesTable extends Migration
@@ -20,6 +21,27 @@ class CreateRolesTable extends Migration
             $table->bigInteger('updated_by');
             $table->timestamps();
         });
+        DB::table('roles')->insert(
+            [
+                [
+                    'name'=>'Admin',
+                    'updated_by'=>1,
+                    'created_at'=>now(),
+                    'updated_at'=>now()
+                ],
+                [
+                    'name'=>'Buyer',
+                    'updated_by'=>1,
+                    'created_at'=>now(),
+                    'updated_at'=>now()
+                ],[
+                    'name'=>'Seller',
+                    'updated_by'=>1,
+                    'created_at'=>now(),
+                    'updated_at'=>now()
+                ]
+            ]
+        );
     }
 
     /**

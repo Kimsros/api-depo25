@@ -20,13 +20,41 @@ class UserController extends Controller
      */
     public function index(Request $request)
     {
+        // dd($request->route()->getName());
         try{
             if(isset($request->per_page)){
                 $per_page=$request->per_page;
             }else{
                 $per_page=15;
             }
-            $user=DB::table('users as u')->join('banks as b','b.id','=','u.bank_id')->join('roles as r','r.id','=','u.role_id')->join('pricings as p','p.id','=','u.pricing_id')->select('u.id','u.first_name','u.last_name','u.email','u.telephone','u.password','p.name as price_name','b.bank_name','b.account_name','b.bank_account','r.name as role')->orderBy('u.id','DESC')->paginate($per_page);
+            if($request->user_type=='Admin'){
+                $user_type=[1];
+            }elseif($request->user_type=='Buyer'){
+                $user_type=[2];
+            }elseif($request->user_type=='Seller'){
+                $user_type=[3];
+            }else{
+                $user_type=[1,2,3];
+            }
+            if(isset($request->search)){
+                $search=$request->search;
+                $user=DB::table('users as u')
+                    ->join('banks as b','b.id','=','u.bank_id')
+                    ->join('roles as r','r.id','=','u.role_id')
+                    ->join('pricings as p','p.id','=','u.pricing_id')
+                    ->select('u.id','u.first_name','u.last_name','u.email','u.telephone','u.password','p.name as price_name','b.bank_name','b.account_name','b.bank_account','r.name as role')
+                    ->orWhere('u.first_name','like',"%{$search}%")->whereIn('role_id',$user_type)
+                    ->orWhere('u.last_name','like',"%{$search}%")->whereIn('role_id',$user_type)
+                    ->orWhere('u.email','like',"%{$search}%")->whereIn('role_id',$user_type)
+                    ->orWhere('u.telephone','like',"%{$search}%")->whereIn('role_id',$user_type)
+                    ->orWhere('u.password','like',"%{$search}%")->whereIn('role_id',$user_type)
+                    ->orWhere('b.bank_name','like',"%{$search}%")->whereIn('role_id',$user_type)
+                    ->orWhere('r.name','like',"%{$search}%")->whereIn('role_id',$user_type)
+                    ->orWhere('p.name','like',"%{$search}%")->whereIn('role_id',$user_type)
+                    ->orderBy('u.id','DESC')->paginate($per_page);
+            }else{
+                $user=DB::table('users as u')->join('banks as b','b.id','=','u.bank_id')->join('roles as r','r.id','=','u.role_id')->join('pricings as p','p.id','=','u.pricing_id')->select('u.id','u.first_name','u.last_name','u.email','u.telephone','u.password','p.name as price_name','b.bank_name','b.account_name','b.bank_account','r.name as role')->whereIn('role_id',$user_type)->orderBy('u.id','DESC')->paginate($per_page);
+            }
             return response()->json(['success'=>$user]);
         }catch(Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
@@ -117,7 +145,8 @@ class UserController extends Controller
     public function edit($id)
     {
         try{
-            $user=DB::table('users as u')->join('banks as b','b.id','=','u.bank_id')->join('roles as r','r.id','=','u.role_id')->join('pricings as p','p.id','=','u.pricing_id')->select('u.id','u.first_name','u.last_name','u.email','u.telephone','u.password','u.profile','p.name as price_name','b.bank_name','b.account_name','b.bank_account','r.name as role','u.role_id','u.pricing_id')->orderBy('u.id','DESC')->where('u.id',$id)->first();
+            $user=DB::table('users as u')->join('banks as b','b.id','=','u.bank_id')->join('roles as r','r.id','=','u.role_id')->join('pricings as p','p.id','=','u.pricing_id')
+            ->select('u.id','u.first_name','u.last_name','u.email','u.telephone','u.password','u.profile','p.name as price_name','b.bank_name','b.account_name','b.bank_account','r.name as role','u.role_id','u.pricing_id','u.description')->orderBy('u.id','DESC')->where('u.id',$id)->first();
             return response()->json(['success'=>$user]);
         }catch(Exception $e){
             return response()->json(['error'=>$e->getMessage()]);

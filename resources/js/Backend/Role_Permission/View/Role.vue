@@ -25,7 +25,7 @@
               </div>
               <div class="d-flex position-relative">
                 <a href="javascript:;" class="" @click="removeRole(role_item.id)">
-                    <img v-if="role_item.id!=1" src="/backend/assets/img/svg/delete.svg" alt="" class="svg">
+                    <img v-if="role_item.id>3" src="/backend/assets/img/svg/delete.svg" alt="" class="svg">
                 </a>
               </div>
             </div>

@@ -12,9 +12,9 @@
                 <!-- End Add New Contact Btn -->
 
                 <!-- Search Form -->
-                <form action="#" class="search-form flex-grow">
+                <form @submit.prevent="searchUser()" class="search-form flex-grow">
                     <div class="theme-input-group style--two">
-                    <input type="text" class="theme-input-style" placeholder="Search Here">
+                    <input type="text" v-model="search" class="theme-input-style" placeholder="Search Here" @keyup="SearchUserChange()">
 
                     <button type="submit"><img src="/backend/assets/img/svg/search-icon.svg" alt=""
                         class="svg"></button>
@@ -38,7 +38,7 @@
 
             <!-- Delete Mail -->
             <div class="delete_mail">
-                <a href="javascript:;" @click="MultiDeleteUser()"><img src="/backend/assets/img/svg/delete.svg" alt="" class="svg"></a>
+                <a href="javascript:;" @click="MultiDeleteUser()" v-show="btn_multi_delete"><img src="/backend/assets/img/svg/delete.svg" alt="" class="svg"></a>
             </div>
 
             <!-- End Delete Mail -->
@@ -168,7 +168,9 @@ export default {
         return{
             allUserList:[],
             check_all:false,
-            ids:[]
+            ids:[],
+            btn_multi_delete:false,
+            search:null
         }
     },
     created(){
@@ -189,9 +191,6 @@ export default {
                     }
                 });
             }
-        },
-        editAllUser(){
-
         },
         deleteSingleUser(id){
             this.$swal.fire({
@@ -234,13 +233,13 @@ export default {
             }else{
                 this.ids=[];
             }
-            console.log(this.ids);
+            this.CheckBtnDelete();
         },
         checkSingleUser($event,id){
              this.ids = $event.target.checked
-        ? [...this.ids, ...[id]]
-        : this.ids.filter((element) => element != id);
-        console.log(this.ids);
+            ? [...this.ids, ...[id]]
+            : this.ids.filter((element) => element != id);
+            this.CheckBtnDelete();
         },
         MultiDeleteUser(){
             this.$swal.fire({
@@ -275,7 +274,28 @@ export default {
                     });
                 }
             });
+            this.CheckBtnDelete();
 
+        },
+        CheckBtnDelete(){
+            if(this.ids.length>0){
+                this.btn_multi_delete=true;
+            }else{
+                this.btn_multi_delete=false;
+                this.check_all=false;
+            }
+        },
+        searchUser(){
+            axios.get('/api/user/?search='+this.search).then(response=>{
+                if(response.data.success){
+                    this.allUserList=response.data.success;
+                }
+            });
+        },
+        SearchUserChange(){
+            if(this.search==''){
+                this.getAllUserList();
+            }
         }
     }
 }

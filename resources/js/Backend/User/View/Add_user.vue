@@ -213,7 +213,6 @@ export default {
             axios.get('/api/user/'+id+'/edit').then(response=>{
                 if(response.data.success){
                     this.data_edit=response.data.success;
-                    console.log(this.data_edit);
                     this.fm_user.first_name=this.data_edit.first_name;
                     this.fm_user.last_name=this.data_edit.last_name;
                     this.fm_user.email=this.data_edit.email;
@@ -226,6 +225,7 @@ export default {
                     this.fm_user.description=this.data_edit.description;
                     this.fm_user.role_id=this.data_edit.role_id;
                     this.fm_user.pricing_id=this.data_edit.pricing_id;
+                    console.log(this.fm_user);
                 }
             });
         },

@@ -23,9 +23,9 @@
                      <ul class="nav sub-menu">
                         <li><a href="/admin/add_user">Add Users</a></li>
                         <li><a href="/admin/all_user">All Users</a></li>
-                        <li><a href="/admin/admin">Admin List</a></li>
-                        <li><a href="/admin/seller">Seller List</a></li>
-                        <li><a href="/admin/buyer">Buyer List</a></li>
+                        <li><a href="/admin/admin_user">Admin List</a></li>
+                        <li><a href="/admin/seller_user">Seller List</a></li>
+                        <li><a href="/admin/buyer_user">Buyer List</a></li>
                      </ul>
                   </li>
                   <li>

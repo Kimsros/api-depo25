@@ -12,9 +12,9 @@
                 <!-- End Add New Contact Btn -->
 
                 <!-- Search Form -->
-                <form action="#" class="search-form flex-grow">
+                <form @submit.prevent="searchUser()" class="search-form flex-grow">
                     <div class="theme-input-group style--two">
-                    <input type="text" class="theme-input-style" placeholder="Search Here">
+                    <input type="text" v-model="search" class="theme-input-style" placeholder="Search Here" @keyup="SearchUserChange()">
 
                     <button type="submit"><img src="/backend/assets/img/svg/search-icon.svg" alt=""
                         class="svg"></button>
@@ -38,8 +38,9 @@
 
             <!-- Delete Mail -->
             <div class="delete_mail">
-                <a href="#"><img src="/backend/assets/img/svg/delete.svg" alt="" class="svg"></a>
+                <a href="javascript:;" @click="MultiDeleteUser()" v-show="btn_multi_delete"><img src="/backend/assets/img/svg/delete.svg" alt="" class="svg"></a>
             </div>
+
             <!-- End Delete Mail -->
 
             <!-- Pagination -->
@@ -51,6 +52,15 @@
                 <li><a href="#" class="current">
                     <img src="/backend/assets/img/svg/right-angle.svg" alt="" class="svg">
                 </a></li>
+                <li>
+                    <a href="add_user" class="current">
+                        <div class="form-row">
+                            <div class="col-12 text-right">
+                                <button type="submit" class="btn long">Add More</button>
+                            </div>
+                        </div>
+                    </a>
+                </li>
                 </ul>
             </div>
             <!-- End Pagination -->
@@ -67,7 +77,7 @@
                         <th>
                             <!-- Custom Checkbox -->
                             <label class="custom-checkbox">
-                                <input type="checkbox">
+                                <input type="checkbox" v-model="check_all" @change="CheckAllUser()">
                                 <span class="checkmark"></span>
                             </label>
                             <!-- End Custom Checkbox -->
@@ -81,7 +91,7 @@
                         <th class="text-center">Name <img src="/backend/assets/img/svg/table-down-arrow.svg" alt="" class="svg"></th>
                         <th>Email</th>
                         <th>Phone</th>
-                        <th>telephone <img src="/backend/assets/img/svg/table-down-arrow.svg" alt="" class="svg"></th>
+                        <!-- <th>telephone <img src="/backend/assets/img/svg/table-down-arrow.svg" alt="" class="svg"></th> -->
                         <th>Role</th>
                         <th>Pricing <img src="/backend/assets/img/svg/table-down-arrow.svg" alt="" class="svg"></th>
                         <th>Bank<img src="/backend/assets/img/svg/table-down-arrow.svg" alt="" class="svg"></th>
@@ -89,11 +99,11 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
+                    <tr v-for="(item, idx) in allUserList.data" :key="idx">
                         <td>
                             <!-- Custom Checkbox -->
                             <label class="custom-checkbox">
-                                <input type="checkbox">
+                                <input type="checkbox" @change="checkSingleUser($event,item.id)">
                                 <span class="checkmark"></span>
                             </label>
                             <!-- End Custom Checkbox -->
@@ -110,28 +120,183 @@
                                     <img src="/backend/assets/img/avatar/m16.png" class="img-40" alt="">
                                 </div>
                                 <div class="name bold">
-                                    Arden Spencer
+                                    {{item.first_name}} {{item.last_name}}
                                 </div>
                             </div>
                         </td>
-                        <td>Evangeline62@yahoo.com</td>
-                        <td>(023) 708-6818 x4267</td>
-                        <td>28</td>
-                        <td>UX Researcher</td>
-                        <td>June 20, 2015</td>
-                        <td>$26253.0</td>
+                        <td>{{item.email}}</td>
+                        <td>{{item.telephone}}</td>
+                        <!-- <td>28</td> -->
+                        <td>{{item.role}}</td>
+                        <td>{{item.price_name}}</td>
+                        <td>{{item.bank_name}}</td>
                         <td class="actions">
-                            <span class="contact-edit" data-toggle="modal" data-target="#contactEditModal">
-                                <img src="/backend/assets/img/svg/c-edit.svg" alt="" class="svg">
-                            </span>
-                            <span class="contact-close">
+                            <router-link :to="'/admin/add_user/'+item.id">
+                                <span >
+                                    <img src="/backend/assets/img/svg/c-edit.svg" alt="" class="svg">
+                                </span>
+                           </router-link>
+                            <span class="contact-close" @click="deleteSingleUser(item.id)">
                                 <img src="/backend/assets/img/svg/c-close.svg" alt="" class="svg">
                             </span>
                         </td>
                     </tr>
                 </tbody>
+                <!-- <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                      <li  v-for="(item,idx) in allUserList.links" :key="idx" v-bind:class="{'page-item':true,'active':item.active }"><a class="page-link" @click="getAllUserList(item.url)" v-html="item.label"></a></li>
+
+                    </ul>
+                </nav> -->
             </table>
             <!-- End Invoice List Table -->
+
         </div>
+        <div style="margin-top:10px" class="col-md-12 text-right">
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                      <li  v-for="(item,idx) in allUserList.links" :key="idx" v-bind:class="{'page-item':true,'active':item.active }"><a class="page-link" @click="getAllUserList(item.url)" v-html="item.label"></a></li>
+
+                    </ul>
+                </nav>
+            </div>
     </div>
 </template>
+<script>
+export default {
+    data(){
+        return{
+            allUserList:[],
+            check_all:false,
+            ids:[],
+            btn_multi_delete:false,
+            search:null
+        }
+    },
+    created(){
+        this.getAllUserList();
+    },
+    methods:{
+        getAllUserList(url=null){
+            if(url!=null){
+                axios.get(url).then((response) => {
+                    if (response.data.success) {
+                        this.allUserList = response.data.success;
+                    }
+                });
+            }else{
+                axios.get('/api/user/?user_type=Seller').then((response) => {
+                    if (response.data.success) {
+                        this.allUserList = response.data.success;
+                    }
+                });
+            }
+        },
+        deleteSingleUser(id){
+            this.$swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            background:'#060818',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    axios.delete('/api/user/'+id).then(response=>{
+                        if(response.data.success){
+                            this.$swal.fire(
+                                {
+                                    toast:true,
+                                    position:'top-end',
+                                    // title: 'Success !',
+                                    title: response.data.success,
+                                    icon: 'success',
+                                    showConfirmButton:false,
+                                    timer:3000,
+                                    background:'#060818',
+                                    titleColor:"#FFF"
+                                }
+                            );
+                            this.getAllUserList();
+                        }
+                    });
+                }
+            });
+        },
+        CheckAllUser(){
+            if(this.check_all){
+                this.allUserList.data.forEach(element => {
+                    this.ids.push(element.id);
+                });
+            }else{
+                this.ids=[];
+            }
+            this.CheckBtnDelete();
+        },
+        checkSingleUser($event,id){
+             this.ids = $event.target.checked
+            ? [...this.ids, ...[id]]
+            : this.ids.filter((element) => element != id);
+            this.CheckBtnDelete();
+        },
+        MultiDeleteUser(){
+            this.$swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            background:'#060818',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    var id_delete=this.ids.join('-');
+                    axios.delete('/api/user/'+id_delete).then(response=>{
+                        if(response.data.success){
+                            this.$swal.fire(
+                                {
+                                    toast:true,
+                                    position:'top-end',
+                                    title: response.data.success,
+                                    icon: 'success',
+                                    showConfirmButton:false,
+                                    timer:3000,
+                                    background:'#060818',
+                                    titleColor:"#FFF"
+                                }
+                            );
+                            this.getAllUserList();
+                            this.check_all=false;
+                        }
+                    });
+                }
+            });
+            this.CheckBtnDelete();
+
+        },
+        CheckBtnDelete(){
+            if(this.ids.length>0){
+                this.btn_multi_delete=true;
+            }else{
+                this.btn_multi_delete=false;
+                this.check_all=false;
+            }
+        },
+        searchUser(){
+            axios.get('/api/user/?user_type=Seller&search='+this.search).then(response=>{
+                if(response.data.success){
+                    this.allUserList=response.data.success;
+                }
+            });
+        },
+        SearchUserChange(){
+            if(this.search==''){
+                this.getAllUserList();
+            }
+        }
+    }
+}
+</script>
