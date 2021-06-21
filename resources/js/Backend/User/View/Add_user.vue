@@ -108,10 +108,11 @@
           <div class="form-group">
             <label class="font-14 bold mb-2">Role <span class="text-danger">*</span></label>
             <select class="theme-input-style" v-model="fm_user.role_id">
-                <option v-for="(role_item,idx) in role_list.data" :key="idx"  :value="role_item.id">{{role_item.name}}</option>
+                <option v-for="(role_item,idx) in role_list.data" :key="idx"  :value="role_item.id" :selected="role_item.id==30">{{role_item.name}}</option>
             </select>
           </div>
           <!-- End Form Group -->
+
           <div class="form-group">
             <label class="font-14 bold mb-2">Bank Name <span class="text-danger">*</span></label>
             <input
@@ -185,6 +186,7 @@ export default {
                role_list:[],
                pricing_list:[],
                data_edit:[],
+            //    selected:'Kimsros'
         }
     },
     created(){
@@ -215,13 +217,15 @@ export default {
                     this.fm_user.first_name=this.data_edit.first_name;
                     this.fm_user.last_name=this.data_edit.last_name;
                     this.fm_user.email=this.data_edit.email;
-                    this,this.fm_user.password=this.data_edit.password;
+                    this.fm_user.password=this.data_edit.password;
                     this.fm_user.telephone=this.data_edit.telephone;
                     this.fm_user.profile=this.data_edit.profile;
                     this.fm_user.bank_name=this.data_edit.bank_name;
                     this.fm_user.bank_account=this.data_edit.bank_account;
                     this.fm_user.account_name=this.data_edit.account_name;
                     this.fm_user.description=this.data_edit.description;
+                    this.fm_user.role_id=this.data_edit.role_id;
+                    this.fm_user.pricing_id=this.data_edit.pricing_id;
                 }
             });
         },

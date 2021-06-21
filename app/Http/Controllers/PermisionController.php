@@ -58,7 +58,7 @@ class PermisionController extends Controller
                 'table_of_permission_id'=>'required|integer'
             ]);
             if($validation->fails()){
-                return response()->json(['success'=>$validation->getMessageBag()]);
+                return response()->json(['validation'=>$validation->getMessageBag()]);
             }
             $data=$request->all();
             $data['updated_by']=1;
@@ -117,7 +117,7 @@ class PermisionController extends Controller
                 'permission_type_id'=>'required|integer'
             ]);
             if($validation->fails()){
-                return response()->json(['success'=>$validation->getMessageBag()]);
+                return response()->json(['validation'=>$validation->getMessageBag()]);
             }
             $data=$request->all();
             $data['updated_by']=1;

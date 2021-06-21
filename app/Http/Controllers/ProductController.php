@@ -63,7 +63,7 @@ class ProductController extends Controller
                 'low_stock_qty_warning'=>'required|integer'
             ]);
             if($validation->fails()){
-                return response()->json(['success'=>$validation->getMessageBag()]);
+                return response()->json(['validation'=>$validation->getMessageBag()]);
             }
             $data=$request->all();
             $data['updated_by']=1;
@@ -127,7 +127,7 @@ class ProductController extends Controller
                 'low_stock_qty_warning'=>'required|integer'
             ]);
             if($validation->fails()){
-                return response()->json(['success'=>$validation->getMessageBag()]);
+                return response()->json(['validation'=>$validation->getMessageBag()]);
             }
             $data=$request->all();
             $data['updated_by']=1;

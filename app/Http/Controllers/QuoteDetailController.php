@@ -58,14 +58,14 @@ class QuoteDetailController extends Controller
                 'quote_id'=>'required|integer',
             ]);
             if($validation->fails()){
-                return response()->json(['error'=>$validation->getMessageBag()]);
+                return response()->json(['validation'=>$validation->getMessageBag()]);
             }
             $data=$request->all();
             $data['updated_by']=1;
             if(quote_detail::create($data)){
                 return response()->json(['success'=>'Quote detail is inserted !!']);
             }else{
-                return response()->json(['success'=>'Quote detail is not inserted !!']);
+                return response()->json(['error'=>'Quote detail is not inserted !!']);
             }
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
@@ -117,14 +117,14 @@ class QuoteDetailController extends Controller
                 'quote_id'=>'required|integer',
             ]);
             if($validation->fails()){
-                return response()->json(['error'=>$validation->getMessageBag()]);
+                return response()->json(['validation'=>$validation->getMessageBag()]);
             }
             $data=$request->all();
             $data['updated_by']=1;
             if(quote_detail::where('id',$quote_detail['id'])->update($data)){
                 return response()->json(['success'=>'Quote detail is updated !!']);
             }else{
-                return response()->json(['success'=>'Quote detail is not updated !!']);
+                return response()->json(['error'=>'Quote detail is not updated !!']);
             }
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);

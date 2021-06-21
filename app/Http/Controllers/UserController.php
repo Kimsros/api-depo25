@@ -117,7 +117,7 @@ class UserController extends Controller
     public function edit($id)
     {
         try{
-            $user=DB::table('users as u')->join('banks as b','b.id','=','u.bank_id')->join('roles as r','r.id','=','u.role_id')->join('pricings as p','p.id','=','u.pricing_id')->select('u.id','u.first_name','u.last_name','u.email','u.telephone','u.password','u.profile','p.name as price_name','b.bank_name','b.account_name','b.bank_account','r.name as role')->orderBy('u.id','DESC')->where('u.id',$id)->first();
+            $user=DB::table('users as u')->join('banks as b','b.id','=','u.bank_id')->join('roles as r','r.id','=','u.role_id')->join('pricings as p','p.id','=','u.pricing_id')->select('u.id','u.first_name','u.last_name','u.email','u.telephone','u.password','u.profile','p.name as price_name','b.bank_name','b.account_name','b.bank_account','r.name as role','u.role_id','u.pricing_id')->orderBy('u.id','DESC')->where('u.id',$id)->first();
             return response()->json(['success'=>$user]);
         }catch(Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
@@ -135,21 +135,21 @@ class UserController extends Controller
     {
         try{
             DB::beginTransaction();
-            // $validation=Validator($request->all(),[
-            //     'first_name'=>'required',
-            //     'last_name'=>'required',
-            //     'email'=>['required','email',ValidationRule::unique('users')->ignore($id)],
-            //     'telephone'=>'required',
-            //     'password'=>'required',
-            //     'role_id'=>'required|integer',
-            //     'pricing_id'=>'required|integer',
-            //     'bank_name'=>'required',
-            //     'account_name'=>'required',
-            //     'bank_account'=>'required',
-            // ]);
-            // if($validation->fails()){
-            //     return response()->json(['validation'=>$validation->getMessageBag()]);
-            // }
+            $validation=Validator($request->all(),[
+                'first_name'=>'required',
+                'last_name'=>'required',
+                'email'=>['required','email',ValidationRule::unique('users')->ignore($id)],
+                'telephone'=>'required',
+                'password'=>'required',
+                'role_id'=>'required|integer',
+                'pricing_id'=>'required|integer',
+                'bank_name'=>'required',
+                'account_name'=>'required',
+                'bank_account'=>'required',
+            ]);
+            if($validation->fails()){
+                return response()->json(['validation'=>$validation->getMessageBag()]);
+            }
             $data=$request->all();
             $data['updated_by']=1;
             $update_data=User::where('id',$id)->first();

@@ -7261,6 +7261,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -7286,7 +7287,8 @@ __webpack_require__.r(__webpack_exports__);
       validate: [],
       role_list: [],
       pricing_list: [],
-      data_edit: []
+      data_edit: [] //    selected:'Kimsros'
+
     };
   },
   created: function created() {
@@ -7324,13 +7326,15 @@ __webpack_require__.r(__webpack_exports__);
           _this3.fm_user.first_name = _this3.data_edit.first_name;
           _this3.fm_user.last_name = _this3.data_edit.last_name;
           _this3.fm_user.email = _this3.data_edit.email;
-          _this3, _this3.fm_user.password = _this3.data_edit.password;
+          _this3.fm_user.password = _this3.data_edit.password;
           _this3.fm_user.telephone = _this3.data_edit.telephone;
           _this3.fm_user.profile = _this3.data_edit.profile;
           _this3.fm_user.bank_name = _this3.data_edit.bank_name;
           _this3.fm_user.bank_account = _this3.data_edit.bank_account;
           _this3.fm_user.account_name = _this3.data_edit.account_name;
           _this3.fm_user.description = _this3.data_edit.description;
+          _this3.fm_user.role_id = _this3.data_edit.role_id;
+          _this3.fm_user.pricing_id = _this3.data_edit.pricing_id;
         }
       });
     },
@@ -71617,7 +71621,13 @@ var render = function() {
                 _vm._l(_vm.role_list.data, function(role_item, idx) {
                   return _c(
                     "option",
-                    { key: idx, domProps: { value: role_item.id } },
+                    {
+                      key: idx,
+                      domProps: {
+                        value: role_item.id,
+                        selected: role_item.id == 30
+                      }
+                    },
                     [_vm._v(_vm._s(role_item.name))]
                   )
                 }),
