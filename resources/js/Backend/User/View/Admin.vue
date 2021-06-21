@@ -46,10 +46,10 @@
             <!-- Pagination -->
             <div class="pagination style--two d-flex flex-column align-items-center ml-n2">
                 <ul class="list-inline d-inline-flex align-items-center">
-                <li><a href="#">
+                <li><a href="javascript:;" @click="getAllUserList(allUserList.prev_page_url)">
                     <img src="/backend/assets/img/svg/left-angle.svg" alt="" class="svg">
                 </a></li>
-                <li><a href="#" class="current">
+                <li><a href="javascript:;" class="current" @click="getAllUserList(allUserList.next_page_url)">
                     <img src="/backend/assets/img/svg/right-angle.svg" alt="" class="svg">
                 </a></li>
                 <li>
@@ -179,7 +179,8 @@ export default {
     methods:{
         getAllUserList(url=null){
             if(url!=null){
-                axios.get(url).then((response) => {
+                var urls=url.substr(url.length-1);
+                axios.get('/api/user/?user_type=Admin&page='+urls).then((response) => {
                     if (response.data.success) {
                         this.allUserList = response.data.success;
                     }

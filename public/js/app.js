@@ -7644,7 +7644,8 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       var url = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
 
       if (url != null) {
-        axios.get(url).then(function (response) {
+        var urls = url.substr(url.length - 1);
+        axios.get('/api/user/?user_type=Admin&page=' + urls).then(function (response) {
           if (response.data.success) {
             _this.allUserList = response.data.success;
           }
@@ -8320,7 +8321,8 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       var url = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
 
       if (url != null) {
-        axios.get(url).then(function (response) {
+        var urls = url.substr(url.length - 1);
+        axios.get('/api/user/?user_type=Buyer&page=' + urls).then(function (response) {
           if (response.data.success) {
             _this.allUserList = response.data.success;
           }
@@ -8658,7 +8660,8 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       var url = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
 
       if (url != null) {
-        axios.get(url).then(function (response) {
+        var urls = url.substr(url.length - 1);
+        axios.get('/api/user/?user_type=Seller&page=' + urls).then(function (response) {
           if (response.data.success) {
             _this.allUserList = response.data.success;
           }
@@ -60574,7 +60577,7 @@ var staticRenderFns = [
             _c("li", { staticClass: "nav-category" }, [_vm._v("Main")]),
             _vm._v(" "),
             _c("li", { staticClass: "active" }, [
-              _c("a", { attrs: { href: "index.html" } }, [
+              _c("a", { attrs: { href: "/admin" } }, [
                 _c("i", { staticClass: "icofont-pie-chart" }),
                 _vm._v(" "),
                 _c("span", { staticClass: "link-title" }, [_vm._v("Dashboard")])
@@ -73145,7 +73148,75 @@ var render = function() {
               )
             ]),
             _vm._v(" "),
-            _vm._m(4)
+            _c(
+              "div",
+              {
+                staticClass:
+                  "pagination style--two d-flex flex-column align-items-center ml-n2"
+              },
+              [
+                _c(
+                  "ul",
+                  {
+                    staticClass: "list-inline d-inline-flex align-items-center"
+                  },
+                  [
+                    _c("li", [
+                      _c(
+                        "a",
+                        {
+                          attrs: { href: "javascript:;" },
+                          on: {
+                            click: function($event) {
+                              return _vm.getAllUserList(
+                                _vm.allUserList.prev_page_url
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("img", {
+                            staticClass: "svg",
+                            attrs: {
+                              src: "/backend/assets/img/svg/left-angle.svg",
+                              alt: ""
+                            }
+                          })
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("li", [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "current",
+                          attrs: { href: "javascript:;" },
+                          on: {
+                            click: function($event) {
+                              return _vm.getAllUserList(
+                                _vm.allUserList.next_page_url
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("img", {
+                            staticClass: "svg",
+                            attrs: {
+                              src: "/backend/assets/img/svg/right-angle.svg",
+                              alt: ""
+                            }
+                          })
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _vm._m(4)
+                  ]
+                )
+              ]
+            )
           ]
         )
       ]
@@ -73427,58 +73498,19 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass:
-          "pagination style--two d-flex flex-column align-items-center ml-n2"
-      },
-      [
-        _c(
-          "ul",
-          { staticClass: "list-inline d-inline-flex align-items-center" },
-          [
-            _c("li", [
-              _c("a", { attrs: { href: "#" } }, [
-                _c("img", {
-                  staticClass: "svg",
-                  attrs: {
-                    src: "/backend/assets/img/svg/left-angle.svg",
-                    alt: ""
-                  }
-                })
-              ])
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("a", { staticClass: "current", attrs: { href: "#" } }, [
-                _c("img", {
-                  staticClass: "svg",
-                  attrs: {
-                    src: "/backend/assets/img/svg/right-angle.svg",
-                    alt: ""
-                  }
-                })
-              ])
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("a", { staticClass: "current", attrs: { href: "add_user" } }, [
-                _c("div", { staticClass: "form-row" }, [
-                  _c("div", { staticClass: "col-12 text-right" }, [
-                    _c(
-                      "button",
-                      { staticClass: "btn long", attrs: { type: "submit" } },
-                      [_vm._v("Add More")]
-                    )
-                  ])
-                ])
-              ])
-            ])
-          ]
-        )
-      ]
-    )
+    return _c("li", [
+      _c("a", { staticClass: "current", attrs: { href: "add_user" } }, [
+        _c("div", { staticClass: "form-row" }, [
+          _c("div", { staticClass: "col-12 text-right" }, [
+            _c(
+              "button",
+              { staticClass: "btn long", attrs: { type: "submit" } },
+              [_vm._v("Add More")]
+            )
+          ])
+        ])
+      ])
+    ])
   },
   function() {
     var _vm = this
@@ -73680,7 +73712,75 @@ var render = function() {
               )
             ]),
             _vm._v(" "),
-            _vm._m(4)
+            _c(
+              "div",
+              {
+                staticClass:
+                  "pagination style--two d-flex flex-column align-items-center ml-n2"
+              },
+              [
+                _c(
+                  "ul",
+                  {
+                    staticClass: "list-inline d-inline-flex align-items-center"
+                  },
+                  [
+                    _c("li", [
+                      _c(
+                        "a",
+                        {
+                          attrs: { href: "javascript:;" },
+                          on: {
+                            click: function($event) {
+                              return _vm.getAllUserList(
+                                _vm.allUserList.prev_page_url
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("img", {
+                            staticClass: "svg",
+                            attrs: {
+                              src: "/backend/assets/img/svg/left-angle.svg",
+                              alt: ""
+                            }
+                          })
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("li", [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "current",
+                          attrs: { href: "javascript:;" },
+                          on: {
+                            click: function($event) {
+                              return _vm.getAllUserList(
+                                _vm.allUserList.next_page_url
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("img", {
+                            staticClass: "svg",
+                            attrs: {
+                              src: "/backend/assets/img/svg/right-angle.svg",
+                              alt: ""
+                            }
+                          })
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _vm._m(4)
+                  ]
+                )
+              ]
+            )
           ]
         )
       ]
@@ -73962,58 +74062,19 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass:
-          "pagination style--two d-flex flex-column align-items-center ml-n2"
-      },
-      [
-        _c(
-          "ul",
-          { staticClass: "list-inline d-inline-flex align-items-center" },
-          [
-            _c("li", [
-              _c("a", { attrs: { href: "#" } }, [
-                _c("img", {
-                  staticClass: "svg",
-                  attrs: {
-                    src: "/backend/assets/img/svg/left-angle.svg",
-                    alt: ""
-                  }
-                })
-              ])
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("a", { staticClass: "current", attrs: { href: "#" } }, [
-                _c("img", {
-                  staticClass: "svg",
-                  attrs: {
-                    src: "/backend/assets/img/svg/right-angle.svg",
-                    alt: ""
-                  }
-                })
-              ])
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("a", { staticClass: "current", attrs: { href: "add_user" } }, [
-                _c("div", { staticClass: "form-row" }, [
-                  _c("div", { staticClass: "col-12 text-right" }, [
-                    _c(
-                      "button",
-                      { staticClass: "btn long", attrs: { type: "submit" } },
-                      [_vm._v("Add More")]
-                    )
-                  ])
-                ])
-              ])
-            ])
-          ]
-        )
-      ]
-    )
+    return _c("li", [
+      _c("a", { staticClass: "current", attrs: { href: "add_user" } }, [
+        _c("div", { staticClass: "form-row" }, [
+          _c("div", { staticClass: "col-12 text-right" }, [
+            _c(
+              "button",
+              { staticClass: "btn long", attrs: { type: "submit" } },
+              [_vm._v("Add More")]
+            )
+          ])
+        ])
+      ])
+    ])
   },
   function() {
     var _vm = this
@@ -74215,7 +74276,75 @@ var render = function() {
               )
             ]),
             _vm._v(" "),
-            _vm._m(4)
+            _c(
+              "div",
+              {
+                staticClass:
+                  "pagination style--two d-flex flex-column align-items-center ml-n2"
+              },
+              [
+                _c(
+                  "ul",
+                  {
+                    staticClass: "list-inline d-inline-flex align-items-center"
+                  },
+                  [
+                    _c("li", [
+                      _c(
+                        "a",
+                        {
+                          attrs: { href: "javascript:;" },
+                          on: {
+                            click: function($event) {
+                              return _vm.getAllUserList(
+                                _vm.allUserList.prev_page_url
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("img", {
+                            staticClass: "svg",
+                            attrs: {
+                              src: "/backend/assets/img/svg/left-angle.svg",
+                              alt: ""
+                            }
+                          })
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("li", [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "current",
+                          attrs: { href: "javascript:;" },
+                          on: {
+                            click: function($event) {
+                              return _vm.getAllUserList(
+                                _vm.allUserList.next_page_url
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("img", {
+                            staticClass: "svg",
+                            attrs: {
+                              src: "/backend/assets/img/svg/right-angle.svg",
+                              alt: ""
+                            }
+                          })
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _vm._m(4)
+                  ]
+                )
+              ]
+            )
           ]
         )
       ]
@@ -74497,58 +74626,19 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass:
-          "pagination style--two d-flex flex-column align-items-center ml-n2"
-      },
-      [
-        _c(
-          "ul",
-          { staticClass: "list-inline d-inline-flex align-items-center" },
-          [
-            _c("li", [
-              _c("a", { attrs: { href: "#" } }, [
-                _c("img", {
-                  staticClass: "svg",
-                  attrs: {
-                    src: "/backend/assets/img/svg/left-angle.svg",
-                    alt: ""
-                  }
-                })
-              ])
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("a", { staticClass: "current", attrs: { href: "#" } }, [
-                _c("img", {
-                  staticClass: "svg",
-                  attrs: {
-                    src: "/backend/assets/img/svg/right-angle.svg",
-                    alt: ""
-                  }
-                })
-              ])
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("a", { staticClass: "current", attrs: { href: "add_user" } }, [
-                _c("div", { staticClass: "form-row" }, [
-                  _c("div", { staticClass: "col-12 text-right" }, [
-                    _c(
-                      "button",
-                      { staticClass: "btn long", attrs: { type: "submit" } },
-                      [_vm._v("Add More")]
-                    )
-                  ])
-                ])
-              ])
-            ])
-          ]
-        )
-      ]
-    )
+    return _c("li", [
+      _c("a", { staticClass: "current", attrs: { href: "add_user" } }, [
+        _c("div", { staticClass: "form-row" }, [
+          _c("div", { staticClass: "col-12 text-right" }, [
+            _c(
+              "button",
+              { staticClass: "btn long", attrs: { type: "submit" } },
+              [_vm._v("Add More")]
+            )
+          ])
+        ])
+      ])
+    ])
   },
   function() {
     var _vm = this
@@ -74750,7 +74840,75 @@ var render = function() {
               )
             ]),
             _vm._v(" "),
-            _vm._m(4)
+            _c(
+              "div",
+              {
+                staticClass:
+                  "pagination style--two d-flex flex-column align-items-center ml-n2"
+              },
+              [
+                _c(
+                  "ul",
+                  {
+                    staticClass: "list-inline d-inline-flex align-items-center"
+                  },
+                  [
+                    _c("li", [
+                      _c(
+                        "a",
+                        {
+                          attrs: { href: "javascript:;" },
+                          on: {
+                            click: function($event) {
+                              return _vm.getAllUserList(
+                                _vm.allUserList.prev_page_url
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("img", {
+                            staticClass: "svg",
+                            attrs: {
+                              src: "/backend/assets/img/svg/left-angle.svg",
+                              alt: ""
+                            }
+                          })
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("li", [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "current",
+                          attrs: { href: "javascript:;" },
+                          on: {
+                            click: function($event) {
+                              return _vm.getAllUserList(
+                                _vm.allUserList.next_page_url
+                              )
+                            }
+                          }
+                        },
+                        [
+                          _c("img", {
+                            staticClass: "svg",
+                            attrs: {
+                              src: "/backend/assets/img/svg/right-angle.svg",
+                              alt: ""
+                            }
+                          })
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _vm._m(4)
+                  ]
+                )
+              ]
+            )
           ]
         )
       ]
@@ -75032,58 +75190,19 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass:
-          "pagination style--two d-flex flex-column align-items-center ml-n2"
-      },
-      [
-        _c(
-          "ul",
-          { staticClass: "list-inline d-inline-flex align-items-center" },
-          [
-            _c("li", [
-              _c("a", { attrs: { href: "#" } }, [
-                _c("img", {
-                  staticClass: "svg",
-                  attrs: {
-                    src: "/backend/assets/img/svg/left-angle.svg",
-                    alt: ""
-                  }
-                })
-              ])
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("a", { staticClass: "current", attrs: { href: "#" } }, [
-                _c("img", {
-                  staticClass: "svg",
-                  attrs: {
-                    src: "/backend/assets/img/svg/right-angle.svg",
-                    alt: ""
-                  }
-                })
-              ])
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c("a", { staticClass: "current", attrs: { href: "add_user" } }, [
-                _c("div", { staticClass: "form-row" }, [
-                  _c("div", { staticClass: "col-12 text-right" }, [
-                    _c(
-                      "button",
-                      { staticClass: "btn long", attrs: { type: "submit" } },
-                      [_vm._v("Add More")]
-                    )
-                  ])
-                ])
-              ])
-            ])
-          ]
-        )
-      ]
-    )
+    return _c("li", [
+      _c("a", { staticClass: "current", attrs: { href: "add_user" } }, [
+        _c("div", { staticClass: "form-row" }, [
+          _c("div", { staticClass: "col-12 text-right" }, [
+            _c(
+              "button",
+              { staticClass: "btn long", attrs: { type: "submit" } },
+              [_vm._v("Add More")]
+            )
+          ])
+        ])
+      ])
+    ])
   },
   function() {
     var _vm = this

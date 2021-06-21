@@ -9,7 +9,7 @@
                <ul class="nav">
                   <li class="nav-category">Main</li>
                   <li class="active">
-                     <a href="index.html">
+                     <a href="/admin">
                         <i class="icofont-pie-chart"></i>
                         <span class="link-title">Dashboard</span>
                      </a>

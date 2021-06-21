@@ -25,7 +25,7 @@ class UserController extends Controller
             if(isset($request->per_page)){
                 $per_page=$request->per_page;
             }else{
-                $per_page=15;
+                $per_page=2;
             }
             if($request->user_type=='Admin'){
                 $user_type=[1];
