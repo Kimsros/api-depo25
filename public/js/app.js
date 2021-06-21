@@ -1972,6 +1972,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
 
 /***/ }),
@@ -1994,6 +1996,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+//
 //
 //
 //
@@ -2199,6 +2202,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -2209,7 +2215,7 @@ __webpack_require__.r(__webpack_exports__);
         email: null,
         password: null,
         r_password: null,
-        phome: null,
+        phone: null,
         role_id: null,
         pricing_id: null,
         bank_id: null
@@ -2218,8 +2224,6 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     InsertRegister: function InsertRegister() {
-      var _this = this;
-
       if (this.register.f_name && this.register.l_name && this.register.u_name && this.register.email && this.register.password && this.register.r_password) {
         var RegisterData = {
           'name': this.register.u_name,
@@ -2227,22 +2231,18 @@ __webpack_require__.r(__webpack_exports__);
           'last_name': this.register.l_name,
           'email': this.register.email,
           'password': this.register.password,
-          'confirm_password': this.register.r_password,
-          'telephone': this.register.phome,
-          'role_id': 1,
-          'pricing_id': 1,
-          'bank_id': 1
-        }; // console.log(RegisterData);
-
+          'password_confirmation': this.register.r_password,
+          'telephone': this.register.phone
+        };
         axios.post('/api/register', RegisterData).then(function (response) {
           if (response.data.success) {
-            _this.$router.push("/admin/login");
+            window.location = "/admin/login";
           } else {
             console.log(response.data.error);
           }
         });
       } else {
-        alert("not date");
+        $(".requried_name").text('Please Enter Name');
       }
     }
   }
@@ -53316,14 +53316,12 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "mn-vh-100 d-flex align-items-center" }, [
+    return _c("div", {}, [
       _c("div", { staticClass: "container" }, [
         _c("div", { staticClass: "row justify-content-center" }, [
           _c("div", { staticClass: "col-xl-9" }, [
-            _c(
-              "div",
-              { staticClass: "card justify-content-center auth-card" },
-              [
+            _c("div", { staticClass: "card" }, [
+              _c("div", { staticClass: "card-body" }, [
                 _c("div", { staticClass: "row justify-content-center" }, [
                   _c("div", { staticClass: "col-xl-8 col-lg-10" }, [
                     _c("h4", { staticClass: "mb-5 font-20" }, [
@@ -53359,8 +53357,8 @@ var staticRenderFns = [
                     ])
                   ])
                 ])
-              ]
-            )
+              ])
+            ])
           ])
         ])
       ])
@@ -53389,108 +53387,110 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "mn-vh-100 d-flex align-items-center" }, [
+  return _c("div", {}, [
     _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "card justify-content-center auth-card" }, [
-        _c("div", { staticClass: "row justify-content-center" }, [
-          _c("div", { staticClass: "col-xl-7 col-lg-9" }, [
-            _c("h4", { staticClass: "mb-5 font-20" }, [_vm._v("Admin")]),
-            _vm._v(" "),
-            _c(
-              "form",
-              {
-                on: {
-                  submit: function($event) {
-                    $event.preventDefault()
-                    return _vm.InsertLogin()
+      _c("div", { staticClass: "card" }, [
+        _c("div", { staticClass: "card-body" }, [
+          _c("div", { staticClass: "row justify-content-center" }, [
+            _c("div", { staticClass: "col-xl-7 col-lg-9" }, [
+              _c("h4", { staticClass: "mb-5 font-20" }, [_vm._v("Admin")]),
+              _vm._v(" "),
+              _c(
+                "form",
+                {
+                  on: {
+                    submit: function($event) {
+                      $event.preventDefault()
+                      return _vm.InsertLogin()
+                    }
                   }
-                }
-              },
-              [
-                _c("div", { staticClass: "form-group mb-20" }, [
-                  _c(
-                    "label",
-                    {
-                      staticClass: "mb-2 font-14 bold",
-                      attrs: { for: "email" }
-                    },
-                    [_vm._v("Email Address")]
-                  ),
-                  _vm._v(" "),
-                  _c("input", {
-                    directives: [
+                },
+                [
+                  _c("div", { staticClass: "form-group mb-20" }, [
+                    _c(
+                      "label",
                       {
-                        name: "model",
-                        rawName: "v-model",
-                        value: _vm.login.email,
-                        expression: "login.email"
-                      }
-                    ],
-                    staticClass: "theme-input-style",
-                    attrs: {
-                      type: "email",
-                      id: "email",
-                      placeholder: "Email Address"
-                    },
-                    domProps: { value: _vm.login.email },
-                    on: {
-                      input: function($event) {
-                        if ($event.target.composing) {
-                          return
+                        staticClass: "mb-2 font-14 bold",
+                        attrs: { for: "email" }
+                      },
+                      [_vm._v("Email Address")]
+                    ),
+                    _vm._v(" "),
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.login.email,
+                          expression: "login.email"
                         }
-                        _vm.$set(_vm.login, "email", $event.target.value)
+                      ],
+                      staticClass: "theme-input-style",
+                      attrs: {
+                        type: "email",
+                        id: "email",
+                        placeholder: "Email Address"
+                      },
+                      domProps: { value: _vm.login.email },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.login, "email", $event.target.value)
+                        }
                       }
-                    }
-                  }),
+                    }),
+                    _vm._v(" "),
+                    _c("span", {
+                      staticClass: "invalid_email",
+                      staticStyle: { color: "red" }
+                    })
+                  ]),
                   _vm._v(" "),
-                  _c("span", {
-                    staticClass: "invalid_email",
-                    staticStyle: { color: "red" }
-                  })
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "form-group mb-20" }, [
-                  _c(
-                    "label",
-                    {
-                      staticClass: "mb-2 font-14 bold",
-                      attrs: { for: "password" }
-                    },
-                    [_vm._v("Password")]
-                  ),
-                  _vm._v(" "),
-                  _c("input", {
-                    directives: [
+                  _c("div", { staticClass: "form-group mb-20" }, [
+                    _c(
+                      "label",
                       {
-                        name: "model",
-                        rawName: "v-model",
-                        value: _vm.login.password,
-                        expression: "login.password"
-                      }
-                    ],
-                    staticClass: "theme-input-style",
-                    attrs: {
-                      type: "password",
-                      id: "password",
-                      placeholder: "password"
-                    },
-                    domProps: { value: _vm.login.password },
-                    on: {
-                      input: function($event) {
-                        if ($event.target.composing) {
-                          return
+                        staticClass: "mb-2 font-14 bold",
+                        attrs: { for: "password" }
+                      },
+                      [_vm._v("Password")]
+                    ),
+                    _vm._v(" "),
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.login.password,
+                          expression: "login.password"
                         }
-                        _vm.$set(_vm.login, "password", $event.target.value)
+                      ],
+                      staticClass: "theme-input-style",
+                      attrs: {
+                        type: "password",
+                        id: "password",
+                        placeholder: "password"
+                      },
+                      domProps: { value: _vm.login.password },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.login, "password", $event.target.value)
+                        }
                       }
-                    }
-                  })
-                ]),
-                _vm._v(" "),
-                _vm._m(0),
-                _vm._v(" "),
-                _vm._m(1)
-              ]
-            )
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _vm._m(0),
+                  _vm._v(" "),
+                  _vm._m(1)
+                ]
+              )
+            ])
           ])
         ])
       ])
@@ -53515,9 +53515,14 @@ var staticRenderFns = [
         ])
       ]),
       _vm._v(" "),
-      _c("a", { staticClass: "font-12 text_color", attrs: { href: "" } }, [
-        _vm._v("Forgot Password?")
-      ])
+      _c(
+        "a",
+        {
+          staticClass: "font-12 text_color",
+          attrs: { href: "/admin/forgot_password" }
+        },
+        [_vm._v("Forgot Password?")]
+      )
     ])
   },
   function() {
@@ -53562,322 +53567,337 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "mn-vh-100 d-flex align-items-center" }, [
+  return _c("div", {}, [
     _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "card justify-content-center auth-card" }, [
-        _c("div", { staticClass: "row justify-content-center" }, [
-          _c("div", { staticClass: "col-xl-10" }, [
-            _c("h4", { staticClass: "mb-5 font-20" }, [_vm._v("Register")]),
-            _vm._v(" "),
-            _c(
-              "form",
-              {
-                on: {
-                  submit: function($event) {
-                    $event.preventDefault()
-                    return _vm.InsertRegister()
+      _c("div", { staticClass: "card" }, [
+        _c("div", { staticClass: "card-body" }, [
+          _c("div", { staticClass: "row justify-content-center" }, [
+            _c("div", { staticClass: "col-xl-10" }, [
+              _c("h4", { staticClass: "mb-5 font-20" }, [_vm._v("Register")]),
+              _vm._v(" "),
+              _c(
+                "form",
+                {
+                  on: {
+                    submit: function($event) {
+                      $event.preventDefault()
+                      return _vm.InsertRegister()
+                    }
                   }
-                }
-              },
-              [
-                _c("div", { staticClass: "row" }, [
-                  _c("div", { staticClass: "col-lg-6" }, [
-                    _c("div", { staticClass: "form-group mb-20" }, [
-                      _c(
-                        "label",
-                        {
-                          staticClass: "mb-2 font-14 bold",
-                          attrs: { for: "f_name" }
-                        },
-                        [_vm._v("First Name")]
-                      ),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
+                },
+                [
+                  _c("div", { staticClass: "row" }, [
+                    _c("div", { staticClass: "col-lg-6" }, [
+                      _c("div", { staticClass: "form-group mb-20" }, [
+                        _c(
+                          "label",
                           {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.register.f_name,
-                            expression: "register.f_name"
-                          }
-                        ],
-                        staticClass: "theme-input-style",
-                        attrs: {
-                          type: "text",
-                          id: "f_name",
-                          placeholder: "First Name"
-                        },
-                        domProps: { value: _vm.register.f_name },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
+                            staticClass: "mb-2 font-14 bold",
+                            attrs: { for: "f_name" }
+                          },
+                          [_vm._v("First Name")]
+                        ),
+                        _vm._v(" "),
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.register.f_name,
+                              expression: "register.f_name"
                             }
-                            _vm.$set(
-                              _vm.register,
-                              "f_name",
-                              $event.target.value
-                            )
+                          ],
+                          staticClass: "theme-input-style",
+                          attrs: {
+                            type: "text",
+                            id: "f_name",
+                            placeholder: "First Name"
+                          },
+                          domProps: { value: _vm.register.f_name },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.$set(
+                                _vm.register,
+                                "f_name",
+                                $event.target.value
+                              )
+                            }
                           }
-                        }
-                      })
+                        }),
+                        _vm._v(" "),
+                        _c("span", {
+                          staticClass: "requried_name",
+                          staticStyle: { color: "red" }
+                        })
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-lg-6" }, [
+                      _c("div", { staticClass: "form-group mb-20" }, [
+                        _c(
+                          "label",
+                          {
+                            staticClass: "mb-2 font-14 bold",
+                            attrs: { for: "l_name" }
+                          },
+                          [_vm._v("Last Name")]
+                        ),
+                        _vm._v(" "),
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.register.l_name,
+                              expression: "register.l_name"
+                            }
+                          ],
+                          staticClass: "theme-input-style",
+                          attrs: {
+                            type: "text",
+                            id: "l_name",
+                            placeholder: "Last Name"
+                          },
+                          domProps: { value: _vm.register.l_name },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.$set(
+                                _vm.register,
+                                "l_name",
+                                $event.target.value
+                              )
+                            }
+                          }
+                        })
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-lg-6" }, [
+                      _c("div", { staticClass: "form-group mb-20" }, [
+                        _c(
+                          "label",
+                          {
+                            staticClass: "mb-2 font-14 bold",
+                            attrs: { for: "u_name" }
+                          },
+                          [_vm._v("User Name")]
+                        ),
+                        _vm._v(" "),
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.register.u_name,
+                              expression: "register.u_name"
+                            }
+                          ],
+                          staticClass: "theme-input-style",
+                          attrs: {
+                            type: "text",
+                            id: "u_name",
+                            placeholder: "User Name"
+                          },
+                          domProps: { value: _vm.register.u_name },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.$set(
+                                _vm.register,
+                                "u_name",
+                                $event.target.value
+                              )
+                            }
+                          }
+                        })
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-lg-6" }, [
+                      _c("div", { staticClass: "form-group mb-20" }, [
+                        _c(
+                          "label",
+                          {
+                            staticClass: "mb-2 font-14 bold",
+                            attrs: { for: "email" }
+                          },
+                          [_vm._v("Email Address")]
+                        ),
+                        _vm._v(" "),
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.register.email,
+                              expression: "register.email"
+                            }
+                          ],
+                          staticClass: "theme-input-style",
+                          attrs: {
+                            type: "email",
+                            id: "email",
+                            placeholder: "Email Address"
+                          },
+                          domProps: { value: _vm.register.email },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.$set(
+                                _vm.register,
+                                "email",
+                                $event.target.value
+                              )
+                            }
+                          }
+                        })
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-lg-6" }, [
+                      _c("div", { staticClass: "form-group mb-20" }, [
+                        _c(
+                          "label",
+                          {
+                            staticClass: "mb-2 font-14 bold",
+                            attrs: { for: "password" }
+                          },
+                          [_vm._v("Password")]
+                        ),
+                        _vm._v(" "),
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.register.password,
+                              expression: "register.password"
+                            }
+                          ],
+                          staticClass: "theme-input-style",
+                          attrs: {
+                            type: "password",
+                            id: "password",
+                            placeholder: "Password"
+                          },
+                          domProps: { value: _vm.register.password },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.$set(
+                                _vm.register,
+                                "password",
+                                $event.target.value
+                              )
+                            }
+                          }
+                        })
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-lg-6" }, [
+                      _c("div", { staticClass: "form-group mb-20" }, [
+                        _c(
+                          "label",
+                          {
+                            staticClass: "mb-2 font-14 bold",
+                            attrs: { for: "r_password" }
+                          },
+                          [_vm._v("Retype Password")]
+                        ),
+                        _vm._v(" "),
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.register.r_password,
+                              expression: "register.r_password"
+                            }
+                          ],
+                          staticClass: "theme-input-style",
+                          attrs: {
+                            type: "password",
+                            id: "r_password",
+                            placeholder: "Password"
+                          },
+                          domProps: { value: _vm.register.r_password },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.$set(
+                                _vm.register,
+                                "r_password",
+                                $event.target.value
+                              )
+                            }
+                          }
+                        })
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-lg-6" }, [
+                      _c("div", { staticClass: "form-group mb-20" }, [
+                        _c(
+                          "label",
+                          {
+                            staticClass: "mb-2 font-14 bold",
+                            attrs: { for: "number" }
+                          },
+                          [_vm._v("Phone")]
+                        ),
+                        _vm._v(" "),
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.register.phone,
+                              expression: "register.phone"
+                            }
+                          ],
+                          staticClass: "theme-input-style",
+                          attrs: {
+                            type: "number",
+                            id: "phone",
+                            placeholder: "phone"
+                          },
+                          domProps: { value: _vm.register.phone },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.$set(
+                                _vm.register,
+                                "phone",
+                                $event.target.value
+                              )
+                            }
+                          }
+                        })
+                      ])
                     ])
                   ]),
                   _vm._v(" "),
-                  _c("div", { staticClass: "col-lg-6" }, [
-                    _c("div", { staticClass: "form-group mb-20" }, [
-                      _c(
-                        "label",
-                        {
-                          staticClass: "mb-2 font-14 bold",
-                          attrs: { for: "l_name" }
-                        },
-                        [_vm._v("Last Name")]
-                      ),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.register.l_name,
-                            expression: "register.l_name"
-                          }
-                        ],
-                        staticClass: "theme-input-style",
-                        attrs: {
-                          type: "text",
-                          id: "l_name",
-                          placeholder: "Last Name"
-                        },
-                        domProps: { value: _vm.register.l_name },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.$set(
-                              _vm.register,
-                              "l_name",
-                              $event.target.value
-                            )
-                          }
-                        }
-                      })
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "col-lg-6" }, [
-                    _c("div", { staticClass: "form-group mb-20" }, [
-                      _c(
-                        "label",
-                        {
-                          staticClass: "mb-2 font-14 bold",
-                          attrs: { for: "u_name" }
-                        },
-                        [_vm._v("User Name")]
-                      ),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.register.u_name,
-                            expression: "register.u_name"
-                          }
-                        ],
-                        staticClass: "theme-input-style",
-                        attrs: {
-                          type: "text",
-                          id: "u_name",
-                          placeholder: "User Name"
-                        },
-                        domProps: { value: _vm.register.u_name },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.$set(
-                              _vm.register,
-                              "u_name",
-                              $event.target.value
-                            )
-                          }
-                        }
-                      })
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "col-lg-6" }, [
-                    _c("div", { staticClass: "form-group mb-20" }, [
-                      _c(
-                        "label",
-                        {
-                          staticClass: "mb-2 font-14 bold",
-                          attrs: { for: "email" }
-                        },
-                        [_vm._v("Email Address")]
-                      ),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.register.email,
-                            expression: "register.email"
-                          }
-                        ],
-                        staticClass: "theme-input-style",
-                        attrs: {
-                          type: "email",
-                          id: "email",
-                          placeholder: "Email Address"
-                        },
-                        domProps: { value: _vm.register.email },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.$set(_vm.register, "email", $event.target.value)
-                          }
-                        }
-                      })
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "col-lg-6" }, [
-                    _c("div", { staticClass: "form-group mb-20" }, [
-                      _c(
-                        "label",
-                        {
-                          staticClass: "mb-2 font-14 bold",
-                          attrs: { for: "password" }
-                        },
-                        [_vm._v("Password")]
-                      ),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.register.password,
-                            expression: "register.password"
-                          }
-                        ],
-                        staticClass: "theme-input-style",
-                        attrs: {
-                          type: "password",
-                          id: "password",
-                          placeholder: "Password"
-                        },
-                        domProps: { value: _vm.register.password },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.$set(
-                              _vm.register,
-                              "password",
-                              $event.target.value
-                            )
-                          }
-                        }
-                      })
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "col-lg-6" }, [
-                    _c("div", { staticClass: "form-group mb-20" }, [
-                      _c(
-                        "label",
-                        {
-                          staticClass: "mb-2 font-14 bold",
-                          attrs: { for: "r_password" }
-                        },
-                        [_vm._v("Retype Password")]
-                      ),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.register.r_password,
-                            expression: "register.r_password"
-                          }
-                        ],
-                        staticClass: "theme-input-style",
-                        attrs: {
-                          type: "password",
-                          id: "r_password",
-                          placeholder: "Password"
-                        },
-                        domProps: { value: _vm.register.r_password },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.$set(
-                              _vm.register,
-                              "r_password",
-                              $event.target.value
-                            )
-                          }
-                        }
-                      })
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "col-lg-6" }, [
-                    _c("div", { staticClass: "form-group mb-20" }, [
-                      _c(
-                        "label",
-                        {
-                          staticClass: "mb-2 font-14 bold",
-                          attrs: { for: "number" }
-                        },
-                        [_vm._v("Phone")]
-                      ),
-                      _vm._v(" "),
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.register.phome,
-                            expression: "register.phome"
-                          }
-                        ],
-                        staticClass: "theme-input-style",
-                        attrs: {
-                          type: "number",
-                          id: "phome",
-                          placeholder: "phone"
-                        },
-                        domProps: { value: _vm.register.phome },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.$set(_vm.register, "phome", $event.target.value)
-                          }
-                        }
-                      })
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _vm._m(0)
-              ]
-            )
+                  _vm._m(0)
+                ]
+              )
+            ])
           ])
         ])
       ])

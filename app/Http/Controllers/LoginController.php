@@ -102,7 +102,7 @@ class LoginController extends Controller
         $this->validate($request,[
             "name"=>"required",
             "email"=>"required|email|unique:users",
-            "password"=>"required|confirmed|min:8",
+            "password"=>"required|confirmed|min:8"
         ]);
         
         $user = new User();
@@ -119,13 +119,9 @@ class LoginController extends Controller
         $user->status                   = 1;
         $user->updated_by               = 1;
         $user->save();
-        $verifyUser = VerifyUser::create([
-            'user_id' => $user->id,
-            'token' => sha1(time())
-        ]);
         
-        \Mail::to($user->email)->send(new Verify($user));
-        return redirect()->intended('user-verification');
+        // \Mail::to($user->email)->send(new Verify($user));
+        return response()->json(['success'=>'User is inserted !!']);
     }
     public function reset_password(Request $request){
         
