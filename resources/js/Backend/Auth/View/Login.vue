@@ -12,13 +12,14 @@
                             <div class="form-group mb-20">
                                 <label for="email" class="mb-2 font-14 bold">Email Address</label>
                                 <input type="email" id="email" class="theme-input-style" v-model="login.email" placeholder="Email Address">
+                                <span class="invalid_email" style="color:red"></span>
                             </div>
                             <!-- End Form Group -->
                             
                             <!-- Form Group -->
                             <div class="form-group mb-20">
                                 <label for="password" class="mb-2 font-14 bold">Password</label>
-                                <input type="password" id="password" class="theme-input-style" v-model="login.password" placeholder="********">
+                                <input type="password" id="password" class="theme-input-style" v-model="login.password" placeholder="password">
                             </div>
                             <!-- End Form Group -->
 
@@ -34,12 +35,12 @@
                                     <label for="checkbox" class="font-14">Remember Me</label>
                                 </div>
 
-                                <a href="forget-pass.html" class="font-12 text_color">Forgot Password?</a>
+                                <a href="" class="font-12 text_color">Forgot Password?</a>
                             </div>
 
                             <div class="d-flex align-items-center">
                                 <button type="submit" class="btn long mr-20">Log In</button>
-                                <span class="font-12 d-block"><a href="register.html" class="bold">Sign Up</a>,If you have no account.</span>
+                                <span class="font-12 d-block"><a href="/admin/register" class="bold">Sign Up</a>,If you have no account.</span>
                             </div>
                         </form>
                     </div>                                    
@@ -77,9 +78,7 @@ import {
                 headers:{
                     'content-Type': 'aplication/json'
                 }
-            }).then(response=>{
-                console.log(response.date);
-            })
+            });
         },
         
         methods:{
@@ -96,12 +95,12 @@ import {
                     axios.get('/sanctum/csrf-cookie').then(response=>{
                         this.SignIn(dataLogin)
                             .then((response)=> {
-                                if(response == "error"){
-                                    console.log("error");
+                                if(response[0] == "success"){
+                                    window.location = "/admin";
                                 }else{
-                                    console.log("work");
+                                   $(".invalid_email").text("Invalid Email or Password","red");
                                 }
-                            })
+                            });
                     });
                 }else{
                     alert("not work");
