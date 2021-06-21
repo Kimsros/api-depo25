@@ -9,6 +9,7 @@
           <!-- Form Group -->
           <div class="form-group">
             <label class="font-14 bold mb-2">Title</label>
+             <span class="text-danger">*</span>
             <input
               v-model="blog.title"
               type="text"
@@ -21,6 +22,7 @@
           <!-- Form Group -->
           <div class="form-group">
             <label class="font-14 bold mb-2">Blog Category</label>
+             <span class="text-danger">*</span>
             <select v-model="blog.blog_categories" class="theme-input-style">
               <option
                 v-for="(item, idx) in this.category"
@@ -30,34 +32,29 @@
                 {{ item.name }}
               </option>
             </select>
-
-            <!-- <input v-model="blog.blog_categories"
-              type="text"
-              class="theme-input-style"
-              placeholder="Enter slug"
-            /> -->
           </div>
           <!-- End Form Group -->
 
-          <!-- Form Group -->
-          <div class="form-group">
-            <label class="font-14 bold mb-2">Thumbnail</label>
-              <input type="text" id="image1" class="form-control" name="image" aria-label="Image" aria-describedby="button-image">
-              <div class="input-group-append">
-                <button class="btn btn-outline-secondary" @click="thumbnail()" type="button" id="image1">Select</button>
-              </div>
-            <input
-              v-model="blog.thumbnail"
-              type="text"
-              class="theme-input-style"
-              placeholder="Enter Thumbnail"
-            />
-          </div>
+           <!-- Form Group -->
+           <div class="form-group">
+                <label for="">Thumbnail</label>
+                <span class="text-danger">*</span>
+                <div class="input-group">
+                    <span class="input-group-btn">
+                        <a id="lfm" data-input="thumbnail" data-preview="holder" @click="thumbnail()" class="btn btn-primary" style="border-radius: 10px 0px 0px 10px; height: 40px; line-height: 0.5;">
+                            <i class="fa fa-picture-o"></i> Choose
+                        </a>
+                    </span>
+                    <input id="thumbnail" v-model="blog.thumbnail" name="filepath" class="form-control" type="text"  >
+                </div>
+                 <img id="holder" style="margin-top:15px;max-height:100px;">
+            </div>
           <!-- End Form Group -->
 
           <!-- Form Group -->
           <div class="form-group">
             <label class="font-14 bold mb-2">Tag</label>
+             <span class="text-danger">*</span>
             <input
               v-model="blog.tag"
               type="text"
@@ -70,6 +67,7 @@
           <!-- Form Group -->
           <div class="form-group">
             <label class="font-14 bold mb-2">Content</label>
+             <span class="text-danger">*</span>
             <ckeditor v-model="blog.content" :config="editorConfig"></ckeditor>
             <!-- <input v-model="blog.content"
               type="text"
@@ -115,11 +113,14 @@ export default {
     axios.get("/api/blog-category").then((response) => {
       this.category = response.data.success.data;
     });
+    
   },
   methods: {
     thumbnail(){
-      window.open('/api/laravel-filemanager?type=Images');
+      window.open('/api/laravel-filemanager?type=Files?type=file','popup','width=600,height=600');
+       
     },
+
     insertData() {
       if (this.blog.title && this.blog.content) {
         var fd = new FormData();
@@ -141,10 +142,8 @@ export default {
         alert("data is empty");
       }
     },
+
   },
+
 };
 </script>
-
-
-
-

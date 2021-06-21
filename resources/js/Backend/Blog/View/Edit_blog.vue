@@ -27,15 +27,27 @@
           <!-- End Form Group -->
 
           <!-- Form Group -->
-          <div class="form-group">
+          <!-- <div class="form-group">
             <label class="font-14 bold mb-2">Thumbnail</label>
-
             <input v-model="data.thumbnail"
               type="text"
               class="theme-input-style"
               placeholder="Enter Thumbnail"
             />
-          </div>
+          </div> -->
+           <div class="form-group">
+                <label for="">Thumbnail</label>
+                <div class="input-group">
+                    <span class="input-group-btn">
+                        <a id="lfm" data-input="thumbnail" data-preview="holder" @click="thumbnail()" class="btn btn-primary" style="border-radius: 10px 0px 0px 10px; height: 40px; line-height: 0.5;">
+                            <i class="fa fa-picture-o"></i> Choose
+                        </a>
+                    </span>
+                    <input id="thumbnail" v-model="data.thumbnail" name="filepath" class="form-control" type="text"  >
+                </div>
+                 <img id="holder" style="margin-top:15px;max-height:100px;">
+            </div>
+          
           <!-- End Form Group -->
 
           <!-- Form Group -->
@@ -73,6 +85,12 @@
 export default {
     data(){
         return{
+            editorConfig: {
+              filebrowserImageBrowseUrl: "/api/laravel-filemanager?type=Images",
+              filebrowserImageUploadUrl: "/api/laravel-filemanager/upload?type=Images&_token=",
+              filebrowserBrowseUrl: "/api/laravel-filemanager?type=Files",
+              filebrowserUploadUrl:"/api/laravel-filemanager/upload?type=Files&_token=",
+            },
             id:this.$route.params.id,
             data:null,
             category:null,
@@ -96,8 +114,7 @@ export default {
               else{
                   console.log(response.data.error);
               }
-           })
-          
+           }) 
         },
         updateData(){
             if(this.data.title&&this.data.content){

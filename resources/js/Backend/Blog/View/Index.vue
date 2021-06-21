@@ -33,22 +33,11 @@
         <!-- End Add New Contact Btn -->
 
         <!-- Search Form -->
-        <form action="#" class="search-form flex-grow">
-          <div class="theme-input-group style--two">
-            <input
-              type="text"
-              class="theme-input-style"
-              placeholder="Search Here"
-            />
-
-            <button type="submit">
-              <img
-                src="/backend/assets/img/svg/search-icon.svg"
-                alt=""
-                class="svg"
-              />
-            </button>
-          </div>
+          <form @submit.prevent="searchData()" class="search-form flex-grow">
+            <div class="theme-input-group style--two">
+            <input type="text" class="theme-input-style" @keyup="search_null()" v-model="search" placeholder="Search Here">
+            <button type="submit" class="btn btn-info" >Search Information</button>
+            </div>
         </form>
         <!-- End Search Form -->
       </div>
@@ -83,7 +72,7 @@
 
         <!-- Delete Mail -->
         <div class="delete_mail">
-          <a href="#"
+          <a href="javascript:;" @click="checkdelete()"
             ><img src="/backend/assets/img/svg/delete.svg" alt="" class="svg"
           /></a>
         </div>
@@ -143,7 +132,7 @@
             <th>
               <!-- Custom Checkbox -->
               <label class="custom-checkbox">
-                <input type="checkbox" />
+                <input type="checkbox" @click='checkAll()' v-model='isCheckAll' />
                 <span class="checkmark"></span>
               </label>
               <!-- End Custom Checkbox -->
@@ -220,7 +209,7 @@
           <tr v-for="(item, idx) in data.data" :key="idx">
             <td>
               <label class="custom-checkbox"
-                ><input type="checkbox" /><span class="checkmark"></span>
+                ><input type="checkbox" v-model="checkboxfm" :value='item.id' :id="item.id"/><span class="checkmark"></span>
               </label>
               <div class="star">
                 <a href="#"
@@ -261,7 +250,7 @@
             </td>
              <td>
               <div class="d-flex align-items-center">
-                <div class="name bold" v-html="item.content" style="height: 50px; width: 50px;">
+                <div class="name bold" v-html="item.content" >
                 </div>
               </div>
             </td>
@@ -328,6 +317,10 @@ export default {
     return {
       data: [],
       dataDelete: 0,
+      search:null,
+      isCheckAll: false,
+      checkboxfm:[],
+      
     };
   },
   created() {
@@ -354,6 +347,7 @@ export default {
       }
     },
     deleteData() {
+      
       axios.delete("/api/blog/" + this.dataDelete).then((response) => {
         if (response.data.success) {
           exampleModal.click();
@@ -362,8 +356,53 @@ export default {
           console.log(response.data.error);
         }
       });
+      
+    },
+    checkAll(){
+      this.isCheckAll = !this.isCheckAll;
+      this.checkboxfm = [];
+						if(this.isCheckAll){
+							for (var key in this.data.data) {
+                this.checkboxfm.push(this.data.data[key]['id']);
+              }
+						}
+    },
+    checkdelete(){
+      console.log(this.checkboxfm);
+
+      axios.delete("/api/blog/" + this.checkboxfm).then((response) => {
+        if (response.data.success) {
+          exampleModal.click();
+          this.getData();
+        } else {
+          console.log(response.data.error);
+        }
+      });
+    },
+    searchData(){
+            if(this.search)
+            {
+                axios.get('/api/blog?search='+this.search).then(response=>{
+                    if(response.data.success){
+                    this.data=response.data.success;
+                    this.$router.push("/admin/blog");
+                    }
+                })
+
+            }
+        },
+    search_null(){
+        if(this.search==''){
+            this.getData();
+        }
     },
   },
 };
 </script>
+<style>
+.name p img{
+  height: 50px !important; 
+  width: 50px !important;
+}
+</style>
 

@@ -25,14 +25,15 @@ class BlogController extends Controller
                 $per_page=15;
             }
 
-            $data = DB::table('blogs')
-            ->join('blog_categories','blog_categories.id', '=', 'blogs.blog_categories')
-            ->select('blogs.*', 'blog_categories.name');
+            // $data = DB::table('blogs')
+            // ->join('blog_categories','blog_categories.id', '=', 'blogs.blog_categories')
+            // ->select('blogs.*', 'blog_categories.name');
+           
 
             if(isset($request->search)){
                 return response()->json(['success'=>SeachTable::getSearch('blogs',$request->search,array(),$per_page)]);
             }
-            return response()->json(['success'=>$data->orderBy('id','DESC')->paginate($per_page)]);
+            return response()->json(['success'=>blog::orderBy('id','DESC')->paginate($per_page)]);
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }
@@ -157,14 +158,17 @@ class BlogController extends Controller
      */
     public function destroy(Request $request,blog $blog)
     {
+        return($blog);
         try{
             if(is_array($request->id)){
+                dd("aa");
                 if(blog::whereIn('id',$request->id)->delete()){
                     return response()->json(['success'=>'Blog is deleted !!']);
                 }else{
                     return response()->json(['error'=>'Blog is not deleted !!']);
                 }
             }else{
+                dd("num");
                 if(blog::where('id',$blog['id'])->delete()){
                     return response()->json(['success'=>'Blog is deleted !!']);
                 }else{

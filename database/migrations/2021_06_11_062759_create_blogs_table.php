@@ -21,6 +21,7 @@ class CreateBlogsTable extends Migration
             $table->text('thumbnail');
             $table->text('tag');
             $table->text('content');
+            $table->text('status')->default(1);
             $table->bigInteger('updated_by');
             $table->timestamps();
         });
