@@ -102,10 +102,11 @@ class PreferenceController extends Controller
      */
     public function update(Request $request, Preference $preference)
     {
+        // return($request);
         try{
             DB::beginTransaction();
             foreach($request->all() as $key=>$item){
-                Preference::find($item->id)->update(['value'=>$item->value]);
+                Preference::find($item['id'])->update(['value'=>$item['value']]);
             }
             DB::commit();
             return response()->json(['success'=>'Preference is updated !!']);
