@@ -2083,17 +2083,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
           'email': this.login.email,
           'password': this.login.password
         };
-        axios.post('/sanctum/csrf-cookie').then(function (response) {
+        axios.get('/sanctum/csrf-cookie').then(function (response) {
           _this.SignIn(dataLogin).then(function (response) {
-            if (response[0] == "true") {
-              thisupdate.$Progress.finish();
-              thisupdate.loadding = false;
-              var url = '/loginSotre';
-
-              if (_this.$route.query.redirect) {
-                url = _this.$route.query.redirect;
-              }
-            } else {}
+            if (response == "error") {
+              console.log("error");
+            } else {
+              console.log("work");
+            }
           });
         });
       } else {
@@ -7465,17 +7461,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   router: [{
-    path: "admin/loginSotre",
-    beforeEnter: function beforeEnter(to, from, next) {
-      if (store.getters['auth/authenticated'] && store.getters['auth/getUser'].role == "admin" || store.getters['auth/authenticated'] && store.getters['auth/getUser'].role == "lecture") {
-        window.location = "/admin";
-      } else if (store.getters['auth/authenticated'] && store.getters['auth/getUser'].role == "student") {
-        window.location = "/my-course";
-      } else {
-        next();
-      }
-    }
-  }, {
     path: "/admin/login",
     component: _View_Login_vue__WEBPACK_IMPORTED_MODULE_0__.default
   }, {
@@ -8554,7 +8539,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   namespaced: true,
   state: {
-    user: false,
+    user: null,
     isLogin: false
   },
   getters: {

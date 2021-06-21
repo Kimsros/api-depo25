@@ -2,7 +2,7 @@ import axios from 'axios';
 export default {
     namespaced: true,
     state: {
-        user: false,
+        user: null,
         isLogin: false
     },
     getters: {

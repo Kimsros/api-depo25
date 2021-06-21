@@ -88,7 +88,7 @@ class LoginController extends Controller
         ]);
         $credentials = $request->only('email', 'password','remember_token');
         
-        if (Auth::attempt($credentials)&&Auth::user()->verified==1) {
+        if (Auth::attempt($credentials)) {
             return Auth::user();
         }
         return false;

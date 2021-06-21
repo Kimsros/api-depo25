@@ -93,18 +93,13 @@ import {
                         'password':this.login.password
                     };
 
-                    axios.post('/sanctum/csrf-cookie').then(response=>{
+                    axios.get('/sanctum/csrf-cookie').then(response=>{
                         this.SignIn(dataLogin)
                             .then((response)=> {
-                                if(response[0] == "true"){
-                                    thisupdate.$Progress.finish();
-                                    thisupdate.loadding = false;
-                                    var url='/loginSotre';
-                                    if(this.$route.query.redirect){
-                                        url=this.$route.query.redirect;
-                                    }
+                                if(response == "error"){
+                                    console.log("error");
                                 }else{
-                                    
+                                    console.log("work");
                                 }
                             })
                     });

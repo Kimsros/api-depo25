@@ -7,20 +7,6 @@ import ResetPassword from "./View/ResetPassword.vue";
 
 export default{
     router:[{
-        
-        path:"admin/loginSotre",
-        beforeEnter: (to, from, next) => {
-            if ((store.getters['auth/authenticated'] && store.getters['auth/getUser'].role == "admin") || (store.getters['auth/authenticated'] && store.getters['auth/getUser'].role == "lecture")) {
-                window.location = "/admin";
-            } else if ((store.getters['auth/authenticated'] && store.getters['auth/getUser'].role == "student")) {
-                window.location = "/my-course";
-            } else {
-                next();
-            }
-        
-        }
-    },
-    {
         path:"/admin/login",component:Login
     },
     {
