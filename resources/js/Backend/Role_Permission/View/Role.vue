@@ -4,7 +4,7 @@
       <div class="col-xl-4 col-md-6 grid-item">
         <div class="card todo-list mb-30" v-if="!reRender">
           <div class="single-row p-0 border-bottom">
-            <h4 class="font-20 py-3 pl-20 pr-20">Permission</h4>
+            <h4 class="font-20 py-3 pl-20 pr-20">Role</h4>
           </div>
           <div
             v-for="(role_item, idx) in role_list.data"
@@ -13,7 +13,7 @@
               'single-row level-urgent border-bottom pt-3 pb-3': true,
               activeBg: currentActive == role_item.id ? true : false,
             }"
-            @click="setActiveList(role_item.id)"
+            @click="setActiveList(role_item.id)" @dblclick="editRole(role_item)"
           >
             <div class="d-flex justify-content-between align-items-center">
               <div class="d-flex position-relative">
@@ -25,7 +25,7 @@
               </div>
               <div class="d-flex position-relative">
                 <a href="javascript:;" class="" @click="removeRole(role_item.id)">
-                    <img src="/backend/assets/img/svg/delete.svg" alt="" class="svg">
+                    <img v-if="role_item.id!=1" src="/backend/assets/img/svg/delete.svg" alt="" class="svg">
                 </a>
               </div>
             </div>
@@ -34,7 +34,7 @@
         <div class="text-center mb-30 mt-40">
           <form @submit.prevent="insertRoleData()">
             <div class="row">
-              <div class="col-8">
+              <div class="col-7">
                 <div class="form-group">
                   <input
                     v-model="role"
@@ -44,20 +44,26 @@
                   />
                 </div>
               </div>
-              <div class="col-4">
-                <input type="submit" value="Add Role" class="btn long" />
-                <!-- <a href="#" class="btn long">Add role</a> -->
+              <div class="col-5 text-right">
+                  <div class="row">
+                      <div class="col-6">
+                          <a v-if="btn_role=='Update'" href="javascript:;" class="btn long bg-danger" @click="cancelUpdateRole()">Cancel</a>
+                      </div>
+                      <div class="col-6">
+                          <input type="submit" :value="btn_role" class="btn long" />
+                      </div>
+
+                  </div>
               </div>
             </div>
           </form>
         </div>
       </div>
-
       <div class="col-xl-8 col-md-8 grid-item">
         <div class="col-12">
           <div class="card mb-30">
             <div class="card-body pt-30">
-              <h4 class="font-20">Basic Table</h4>
+              <h4 class="font-20">Permission</h4>
             </div>
             <div class="table-responsive">
               <!-- Invoice List Table -->
@@ -178,6 +184,8 @@ export default {
       role: null,
       currentActive: 1,
       reRender: false,
+      edit_role:0,
+      btn_role:'Add'
     };
   },
   created() {
@@ -221,30 +229,69 @@ export default {
     },
     insertRoleData() {
       if (this.role) {
-        axios.post("/api/role", { name: this.role }).then((response) => {
-          if (response.data.success) {
-            this.role = null;
-            this.getRoleData();
-            this.$swal.fire(
-                    {
-                        toast:true,
-                        position:'top-end',
-                        // title: 'Success !',
-                        title: 'Successfully inserted !!',
-                        icon: 'success',
-                        showConfirmButton:false,
-                        timer:3000,
-                        background:'##060818',
-                        titleColor:"#FFF"
-                    }
-                );
-          } else {
-            alert(response.data.error);
-          }
-        });
+        if(this.btn_role=='Add'){
+            axios.post("/api/role", { name: this.role }).then((response) => {
+                if (response.data.success) {
+                    this.role = null;
+                    this.getRoleData();
+                    this.$swal.fire(
+                            {
+                                toast:true,
+                                position:'top-end',
+                                // title: 'Success !',
+                                title: 'Successfully inserted !!',
+                                icon: 'success',
+                                showConfirmButton:false,
+                                timer:3000,
+                                background:'#060818',
+                                titleColor:"#FFF"
+                            }
+                        );
+                } else {
+                    alert(response.data.error);
+                }
+            });
+        }else{
+            axios.put("/api/role/"+this.edit_role, { name: this.role }).then((response) => {
+                if (response.data.success) {
+                    this.$swal.fire(
+                        {
+                            toast:true,
+                            position:'top-end',
+                            // title: 'Success !',
+                            title: 'Successfully inserted !!',
+                            icon: 'success',
+                            showConfirmButton:false,
+                            timer:3000,
+                            background:'#060818',
+                            titleColor:"#FFF"
+                        }
+                    );
+                    this.role=null;
+                    this.btn_role='Add';
+                    this.edit_role=0;
+                    this.currentActive=1;
+                    this.getPermissionData();
+                    this.getRoleData();
+                } else {
+                    alert(response.data.error);
+                }
+            });
+        }
+
       } else {
         alert("no");
       }
+    },
+    editRole(data_role){
+        this.role=data_role.name;
+        this.btn_role='Update';
+        this.edit_role=data_role.id;
+    },
+    cancelUpdateRole(){
+        this.role=null;
+        this.btn_role='Add';
+        this.edit_role=0;
     },
     removeRole(id){
         this.$swal.fire({
@@ -292,8 +339,19 @@ export default {
           })
           .then((response) => {
               if(response.data.success){
-
                  this.getPermissionData("/api/permission?role_id=" + id);
+                 this.$swal.fire(
+                    {
+                        toast:true,
+                        position:'top-end',
+                        title: response.data.success,
+                        icon: 'success',
+                        showConfirmButton:false,
+                        timer:3000,
+                        background:'#060818',
+                        titleColor:"#FFF"
+                    }
+                );
               }
 
           })
@@ -304,7 +362,18 @@ export default {
         var id = table_id + "-" + role_id + "-" + permission_type_id;
         axios.delete("/api/permission/" + id).then((response) => {
           if(response.data.success){
-
+              this.$swal.fire(
+                {
+                    toast:true,
+                    position:'top-end',
+                    title: response.data.success,
+                    icon: 'success',
+                    showConfirmButton:false,
+                    timer:3000,
+                    background:'#060818',
+                    titleColor:"#FFF"
+                }
+            );
           }
         });
       }

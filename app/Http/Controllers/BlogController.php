@@ -70,7 +70,7 @@ class BlogController extends Controller
                 'content'=>'required',
             ]);
             if($validation->fails()){
-                return response()->json(['error'=>$validation->getMessageBag()]);
+                return response()->json(['validation'=>$validation->getMessageBag()]);
             }
             $data=$request->all();
             $data['slug']=Str::slug($request->title,'-');
@@ -134,7 +134,7 @@ class BlogController extends Controller
                 'content'=>'required',
             ]);
             if($validation->fails()){
-                return response()->json(['error'=>$validation->getMessageBag()]);
+                return response()->json(['validation'=>$validation->getMessageBag()]);
             }
             $data=$request->all();
             $data['slug']=Str::slug($request->title,'-');

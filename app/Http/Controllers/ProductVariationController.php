@@ -60,14 +60,14 @@ class ProductVariationController extends Controller
                 'qty'=>'required|integer'
             ]);
             if($validation->fails()){
-                return response()->json(['success'=>$validation->getMessageBag()]);
+                return response()->json(['validation'=>$validation->getMessageBag()]);
             }
             $data=$request->all();
             $data['updated_by']=1;
             if(product_variation::creata($data)){
                 return response()->json(['success'=>'Product variation is inserted !!']);
             }else{
-                return response()->json(['success'=>'Product variation is not inserted !!']);
+                return response()->json(['error'=>'Product variation is not inserted !!']);
             }
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
@@ -121,14 +121,14 @@ class ProductVariationController extends Controller
                 'qty'=>'required|integer'
             ]);
             if($validation->fails()){
-                return response()->json(['success'=>$validation->getMessageBag()]);
+                return response()->json(['validation'=>$validation->getMessageBag()]);
             }
             $data=$request->all();
             $data['updated_by']=1;
             if(product_variation::where('id',$product_variation['id'])->update($data)){
                 return response()->json(['success'=>'Product variation is updated !!']);
             }else{
-                return response()->json(['success'=>'Product variation is not updated !!']);
+                return response()->json(['error'=>'Product variation is not updated !!']);
             }
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);

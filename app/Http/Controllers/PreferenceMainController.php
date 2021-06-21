@@ -45,7 +45,7 @@ class PreferenceMainController extends Controller
                 'name'=>'required'
             ]);
             if($validation->fails()){
-                return response()->json(['error'=>$validation->getMessageBag()]);
+                return response()->json(['validation'=>$validation->getMessageBag()]);
             }
             $data=$request->all();
             $data['updated_by']=1;
@@ -99,7 +99,7 @@ class PreferenceMainController extends Controller
                 'name'=>'required'
             ]);
             if($validation->fails()){
-                return response()->json(['error'=>$validation->getMessageBag()]);
+                return response()->json(['validation'=>$validation->getMessageBag()]);
             }
             $data=$request->all();
             $data['updated_by']=1;

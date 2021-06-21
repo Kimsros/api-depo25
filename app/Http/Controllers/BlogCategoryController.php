@@ -54,7 +54,7 @@ class BlogCategoryController extends Controller
                 'icon'=>'required'
             ]);
             if($validation->fails()){
-                return response()->json(['error'=>$validation->messages()]);
+                return response()->json(['validation'=>$validation->messages()]);
             }
             $data=$request->all();
             $data['updated_by']=1;
@@ -111,7 +111,7 @@ class BlogCategoryController extends Controller
                 'icon'=>'required'
             ]);
             if($validation->fails()){
-                return response()->json(['erroe'=>$validation->messages()]);
+                return response()->json(['validation'=>$validation->messages()]);
             }
             $data=$request->all();
             $data['updated_by']=1;
