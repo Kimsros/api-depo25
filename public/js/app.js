@@ -3361,12 +3361,19 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
       brand: {
         name: null,
-        logo: null
+        logo: null,
+        validate: []
       }
     };
   },
@@ -3380,16 +3387,47 @@ __webpack_require__.r(__webpack_exports__);
           'logo': this.brand.logo
         };
         axios.post('/api/brand', fd).then(function (response) {
-          if (response.data.success) {
+          if (response.data.validation) {
+            _this.validate = Object.values(response.data.validation);
+          } else if (response.data.success) {
+            _this.$swal.fire({
+              toast: true,
+              position: 'top-end',
+              // title: 'Success !',
+              title: response.data.success,
+              icon: 'success',
+              showConfirmButton: false,
+              timer: 3000,
+              background: '#060818',
+              titleColor: "#FFF"
+            });
+
             _this.$router.push("/admin/brand");
-          } else {
-            console.log(response.data.error);
-          }
+          } else {}
         });
       } else {
         console.log("data is empty");
       }
-    }
+    } // if(response.data.validation){
+    //     this.validate=Object.values(response.data.validation);
+    // }else if(response.data.success){
+    //     this.$swal.fire(
+    //         {
+    //             toast:true,
+    //             position:'top-end',
+    //             // title: 'Success !',
+    //             title:response.data.success,
+    //             icon: 'success',
+    //             showConfirmButton:false,
+    //             timer:3000,
+    //             background:'#060818',
+    //             titleColor:"#FFF"
+    //         }
+    //     );
+    //     this.$router.push("/admin/all_user");
+    // }else{
+    // }
+
   }
 });
 
@@ -3735,45 +3773,6 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -3802,16 +3801,37 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
         }
       });
     },
-    deleteData: function deleteData() {
+    deleteData: function deleteData(id) {
       var _this2 = this;
 
-      axios["delete"]("/api/brand/" + this.dataDelete).then(function (response) {
-        if (response.data.success) {
-          exampleModal.click();
+      this.$swal.fire({
+        title: 'Are you sure?',
+        text: "You won't be able to revert this!",
+        icon: 'warning',
+        background: '#060818',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!'
+      }).then(function (result) {
+        if (result.isConfirmed) {
+          axios["delete"]("/api/brand/" + id).then(function (response) {
+            if (response.data.success) {
+              _this2.$swal.fire({
+                toast: true,
+                position: 'top-end',
+                // title: 'Success !',
+                title: response.data.success,
+                icon: 'success',
+                showConfirmButton: false,
+                timer: 3000,
+                background: '#060818',
+                titleColor: "#FFF"
+              });
 
-          _this2.getData();
-        } else {
-          console.log(response.data.error);
+              _this2.getData();
+            }
+          });
         }
       });
     },
@@ -13760,7 +13780,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.activeBg[data-v-16d7bc20] {\n  background: #f15922;\n}\n\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.activeBg[data-v-16d7bc20] {\r\n  background: #f15922;\n}\r\n\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -55932,6 +55952,37 @@ var render = function() {
             }
           },
           [
+            _vm.validate.length > 0
+              ? _c(
+                  "div",
+                  {
+                    staticClass:
+                      "alert alert-danger alert-dismissible fade show"
+                  },
+                  [
+                    _vm._m(0),
+                    _vm._v(" "),
+                    _c("hr"),
+                    _vm._v(" "),
+                    _vm._l(_vm.validate, function(validation, idx) {
+                      return _c("p", { key: idx, staticClass: "mb-0" }, [
+                        _vm._v(_vm._s(validation[0]))
+                      ])
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "button",
+                      {
+                        staticClass: "close",
+                        attrs: { type: "button", "data-dismiss": "alert" }
+                      },
+                      [_vm._v("×")]
+                    )
+                  ],
+                  2
+                )
+              : _vm._e(),
+            _vm._v(" "),
             _c("div", { staticClass: "form-group" }, [
               _c("label", { staticClass: "font-14 bold mb-2" }, [
                 _vm._v("Brand Name")
@@ -55988,7 +56039,7 @@ var render = function() {
               })
             ]),
             _vm._v(" "),
-            _vm._m(0)
+            _vm._m(1)
           ]
         )
       ])
@@ -55996,6 +56047,15 @@ var render = function() {
   ])
 }
 var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("h4", { staticClass: "alert-heading" }, [
+      _c("i", { staticClass: "fa fa-warning" }),
+      _vm._v(" Warning!")
+    ])
+  },
   function() {
     var _vm = this
     var _h = _vm.$createElement
@@ -56403,7 +56463,7 @@ var render = function() {
                             },
                             on: {
                               click: function($event) {
-                                return _vm.getId(item.id)
+                                return _vm.deleteData(item.id)
                               }
                             }
                           },
@@ -56443,59 +56503,7 @@ var render = function() {
             : _vm._e()
         ]
       )
-    ]),
-    _vm._v(" "),
-    _c(
-      "div",
-      {
-        staticClass: "modal fade",
-        attrs: {
-          id: "exampleModal",
-          tabindex: "-1",
-          role: "dialog",
-          "aria-labelledby": "exampleModalLabel",
-          "aria-hidden": "true"
-        }
-      },
-      [
-        _c(
-          "div",
-          { staticClass: "modal-dialog", attrs: { role: "document" } },
-          [
-            _c("div", { staticClass: "modal-content" }, [
-              _vm._m(8),
-              _vm._v(" "),
-              _vm._m(9),
-              _vm._v(" "),
-              _c("div", { staticClass: "modal-footer" }, [
-                _c(
-                  "button",
-                  {
-                    staticClass: "btn btn-secondary",
-                    attrs: { type: "button", "data-dismiss": "modal" }
-                  },
-                  [_vm._v("\n            No\n          ")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "button",
-                  {
-                    staticClass: "btn btn-primary",
-                    attrs: { type: "button" },
-                    on: {
-                      click: function($event) {
-                        return _vm.deleteData()
-                      }
-                    }
-                  },
-                  [_vm._v("\n            Yes\n          ")]
-                )
-              ])
-            ])
-          ]
-        )
-      ]
-    )
+    ])
   ])
 }
 var staticRenderFns = [
@@ -56660,39 +56668,6 @@ var staticRenderFns = [
         staticClass: "img-40",
         attrs: { src: "/backend/assets/img/avatar/m16.png", alt: "" }
       })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "modal-header" }, [
-      _c(
-        "h5",
-        { staticClass: "modal-title", attrs: { id: "exampleModalLabel" } },
-        [_vm._v("Modal title")]
-      ),
-      _vm._v(" "),
-      _c(
-        "button",
-        {
-          staticClass: "close",
-          attrs: {
-            type: "button",
-            "data-dismiss": "modal",
-            "aria-label": "Close"
-          }
-        },
-        [_c("span", { attrs: { "aria-hidden": "true" } }, [_vm._v("×")])]
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "modal-body pull-center" }, [
-      _c("h3", [_vm._v("Are You Sure ?")])
     ])
   }
 ]
