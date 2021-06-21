@@ -87,8 +87,8 @@
                         <span class="link-title">Blog Category</span>
                      </a>
                      <ul class="nav sub-menu">
-                        <li><a href="/admin/list_blog_category">Add Blog Category</a></li>
-                        <li><a href="/admin/add_blog_category">All Category</a></li>
+                        <li><a href="/admin/list_blog_category">All Category</a></li>
+                        <li><a href="/admin/add_blog_category">Add Blog Category</a></li>
                      </ul>
                   </li>
                   <li>

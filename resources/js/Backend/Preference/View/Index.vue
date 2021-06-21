@@ -62,8 +62,6 @@ export default {
             preference_list: [],
             currentActive:1,
             reRender: false,
-            
-           
         };
     },
     methods:{
