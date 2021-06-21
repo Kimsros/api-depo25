@@ -36,8 +36,7 @@ export default {
             commit('SET_LOGIN', false);
         },
         async SignIn({ dispatch }, credentials) {
-            let response = await axios.post("api/login", credentials);
-            console.log(response);
+            let response = await axios.post("/api/login", credentials);
             if (response.data == "") {
                 return ["error", "Invalid Email or Password"];
             } else {

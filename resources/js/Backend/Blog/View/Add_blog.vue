@@ -88,6 +88,7 @@
     <!-- End Form -->
   </div>
 </template>
+<script src="/vendor/laravel-filemanager/js/stand-alone-button.js"></script>
 <script>
 export default {
   data() {

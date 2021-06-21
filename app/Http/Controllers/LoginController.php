@@ -91,15 +91,9 @@ class LoginController extends Controller
         if (Auth::attempt($credentials)) {
             return Auth::user();
         }
-        // return false;
-        $user = User::where('email', $request->email)->first();
-        $authToken = $user->createToken('auth_token')->plainTextToken;
-        
-        return response()->json([
-            'access_token' => $authToken,
-            'token_type'   => 'Bearer'
-        ]);
+        return false;
     }
+
     public function logout(){
         Auth::logout();
         return true;
@@ -115,6 +109,7 @@ class LoginController extends Controller
         $user->name                     = $request->name;
         $user->email                    = $request->email;
         $user->password                 = Hash::make($request->password);
+        $user->confirm_password         = Hash::make($request->r_password);
         $user->first_name               = $request->first_name;
         $user->last_name                = $request->last_name;
         $user->telephone                = $request->telephone;
@@ -124,14 +119,9 @@ class LoginController extends Controller
         $user->status                   = 1;
         $user->updated_by               = 1;
         $user->save();
-        // $verifyUser = VerifyUser::create([
-        //     'user_id' => $user->id,
-        //     'token' => sha1(time())
-        // ]);
-        $authToken = $user->createToken('auth_token')->plainTextToken;
-        return response()->json([
-            'access_token' => $authToken,
-            'token_type'   => 'Bearer'
+        $verifyUser = VerifyUser::create([
+            'user_id' => $user->id,
+            'token' => sha1(time())
         ]);
         
         \Mail::to($user->email)->send(new Verify($user));
