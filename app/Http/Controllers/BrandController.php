@@ -56,7 +56,7 @@ class BrandController extends Controller
                 'logo'=>'required'
             ]);
             if($validation->fails()){
-                return response()->json(['error'=>$validation->messages()]);
+                return response()->json(['validation'=>$validation->messages()]);
             }
             $data=$request->all();
             $data['updated_by']=1;
@@ -111,7 +111,7 @@ class BrandController extends Controller
                 'logo'=>'required'
             ]);
             if($validation->fails()){
-                return response()->json(['error'=>$validation->messages()]);
+                return response()->json(['validation'=>$validation->messages()]);
             }
             $data=$request->all();
             $data['updated_by']=1;
@@ -131,21 +131,15 @@ class BrandController extends Controller
      * @param  \App\Models\brand  $brand
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Request $request,brand $brand)
+    public function destroy($id)
     {
+
+
         try{
-            if(is_array($request->id)){
-                if(brand::whereIn('id',$request->id)->delete()){
-                    return response()->json(['success'=>'Brand is deleted !!']);
-                }else{
-                    return response()->json(['error'=>'Brand is not deleted !!']);
-                }
+            if(brand::whereIn('id',explode("-",$id))->delete()){
+                return response()->json(['success'=>'Brand is deleted !!']);
             }else{
-                if(brand::where('id',$brand['id'])->delete()){
-                    return response()->json(['success'=>'Brand is deleted !!']);
-                }else{
-                    return response()->json(['error'=>'Brand is not deleted !!']);
-                }
+                return response()->json(['error'=>'Brand is not deleted !!']);
             }
 
         }catch(\Exception $e){

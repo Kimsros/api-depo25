@@ -20,7 +20,6 @@
                 </form>
                 <!-- End Search Form -->
         </div>
-
         <div class="contact-header-right d-flex align-items-center justify-content-end mt-3 mt-sm-0">
             <!-- Grid -->
             <div class="grid">
@@ -35,8 +34,8 @@
             <!-- End Starred -->
 
             <!-- Delete Mail -->
-            <div class="delete_mail">
-                <a href="#"><img src="/backend/assets/img/svg/delete.svg" alt="" class="svg"></a>
+           <div class="delete_mail" v-if="ids.length>0">
+                <a href="#"  @click="mutipleDelete()"><img src="/backend/assets/img/svg/delete.svg" alt="" class="svg"></a>
             </div>
             <!-- End Delete Mail -->
 
@@ -73,7 +72,7 @@
                     <tr>
                         <th>
                             <label class="custom-checkbox">
-                                <input type="checkbox">
+                                <input type="checkbox" v-on:change="selectAll" v-model="allSelected">
                                 <span class="checkmark"></span>
                             </label>
                             <div class="star">
@@ -85,10 +84,11 @@
                         <th>Actions</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody v-if="!reRender">
                     <tr  v-for="(item,idx) in data.data" :key="idx">
                         <td>
-                            <label class="custom-checkbox"><input type="checkbox"><span class="checkmark"></span> </label>
+                            <label class="custom-checkbox">
+                                <input type="checkbox" v-model="userIds" v-on:change="getCheck($event,item.id)" :value="item.id" ><span class="checkmark"></span> </label>
                             <div class="star">
                                 <a href="#"><img src="/backend/assets/img/svg/star.svg" alt="" class="svg"></a>
                             </div>
@@ -139,8 +139,6 @@
             </div>
         </div>
     </div>
-
-
 </template>
 <script>
 export default {
@@ -149,6 +147,10 @@ export default {
             data:null,
             dataDelete:0,
             search:null,
+            ids:[],
+            reRender:false,
+            allSelected:null,
+            userIds:[]
         }
     },
     mounted(){
@@ -166,7 +168,6 @@ export default {
               }
            });
         },
-
        deleteData()        {
             axios.delete('/api/blog-category/'+ this.IDdelete).then(response=>{
                 if(response.data.success){
@@ -175,7 +176,6 @@ export default {
                 }else{
                     console.log(response.data.error);
                 }
-
             })
         },
            searchData(){
@@ -187,15 +187,49 @@ export default {
                     this.$router.push("/admin/list_blog_category");
                     }
                 })
-
             }
         },
         search_null(){
             if(this.search==''){
                 this.getData();
             }
-        }
-    }
+        },
+         getCheck($event, id)
+        {
+            this.ids=$event.target.checked?[...this.ids,...[id]]:this.ids.filter(element=> element!=id);
+            console.log(this.ids);
+        },
+        mutipleDelete(){
+            const data=this.ids.join("-");
+             axios.delete('/api/blog-category/'+data).then(response=>{
+                 if(response.data.success){
+                     this.getData();
+                    this.ids=[];
+                    this.reRender=true;
+                    this.$nextTick(()=>{});
+                    this.reRender=false;
+                    this.allSelected=false;
+                }else{
+                    console.log(response.data.error);
+                }
+            });
+        },
+        selectAll(){
+              this.userIds = [];
+                for( var item in this.data.data)
+                {
+                    this.userIds.push(this.data.data[item].id);
+                        if(this.allSelected==true)
+                        {
+                            this.ids=[...this.ids,...[this.data.data[item].id]];
+                        }else if(this.allSelected!=true)
+                        {
+                            this.ids=this.ids.filter(element=> element!=[this.data.data[item].id]);
+                        }
+                }
+                    console.log(this.ids);
+    },
+}
 }
 </script>
 

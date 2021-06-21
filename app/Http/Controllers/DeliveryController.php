@@ -59,7 +59,7 @@ class DeliveryController extends Controller
                 'price'=>'required|integer',
             ]);
             if($validation->fails()){
-                return response()->json(['error'=>$validation->getMessageBag()]);
+                return response()->json(['validation'=>$validation->getMessageBag()]);
             }
             $data=$request->all();
             $data['updated_by']=1;
@@ -119,7 +119,7 @@ class DeliveryController extends Controller
                 'price'=>'required|integer',
             ]);
             if($validation->fails()){
-                return response()->json(['error'=>$validation->getMessageBag()]);
+                return response()->json(['validation'=>$validation->getMessageBag()]);
             }
             $data=$request->all();
             $data['updated_by']=1;
@@ -139,21 +139,13 @@ class DeliveryController extends Controller
      * @param  \App\Models\delivery  $delivery
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Request $request,delivery $delivery)
+    public function destroy($id)
     {
         try{
-            if(is_array($request->id)){
-                if(delivery::whereIn('id',$request->id)->delete()){
-                    return response()->json(['success'=>'Delivery is deleted !!']);
-                }else{
-                    return response()->json(['error'=>'Delivery is not deleted !!']);
-                }
+            if(delivery::whereIn('id',explode('-',$id))->delete()){
+                return response()->json(['success'=>'Delivery is deleted !!']);
             }else{
-                if(delivery::where('id',$delivery['id'])->delete()){
-                    return response()->json(['success'=>'Delivery is deleted !!']);
-                }else{
-                    return response()->json(['error'=>'Delivery is not deleted !!']);
-                }
+                return response()->json(['error'=>'Delivery is not deleted !!']);
             }
 
         }catch(\Exception $e){

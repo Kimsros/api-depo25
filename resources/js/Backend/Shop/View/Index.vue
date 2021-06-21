@@ -35,8 +35,8 @@
             <!-- End Starred -->
 
             <!-- Delete Mail -->
-            <div class="delete_mail">
-                <a href="#"><img src="/backend/assets/img/svg/delete.svg" alt="" class="svg"></a>
+           <div class="delete_mail" v-if="ids.length>0">
+                <a href="#"  @click="mutipleDelete()"><img src="/backend/assets/img/svg/delete.svg" alt="" class="svg"></a>
             </div>
             <!-- End Delete Mail -->
 
@@ -76,7 +76,7 @@
                         <th>
                             <!-- Custom Checkbox -->
                             <label class="custom-checkbox">
-                                <input type="checkbox">
+                                <input type="checkbox" v-on:change="selectAll" v-model="allSelected">
                                 <span class="checkmark"></span>
                             </label>
                             <!-- End Custom Checkbox -->
@@ -97,21 +97,14 @@
                         <th>Actions</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody  v-if="!reRender">
                     <tr v-for="(item,idx) in data.data" :key="idx">
                         <td>
-                            <!-- Custom Checkbox -->
                             <label class="custom-checkbox">
-                                <input type="checkbox">
-                                <span class="checkmark"></span>
-                            </label>
-                            <!-- End Custom Checkbox -->
-
-                            <!-- Star -->
+                                <input type="checkbox" v-model="userIds" @change="getCheck($event,item.id)" :value="item.id"><span class="checkmark"></span> </label>
                             <div class="star">
                                 <a href="#"><img src="/backend/assets/img/svg/star.svg" alt="" class="svg"></a>
                             </div>
-                            <!-- End Star -->
                         </td>
                         <td>
                             <img src="/backend/assets/img/avatar/m16.png" class="img-40" alt="">
@@ -170,7 +163,12 @@ export default {
         return{
             data:[],
             dataDelete:0,
-            search:null
+            search:null,
+            ids:[],
+            reRender:false,
+            allSelected:null,
+            userIds:[]
+
         }
     },
  created(){
@@ -226,7 +224,45 @@ export default {
             if(this.search==''){
                 this.getData();
             }
-        }
+        },
+         getCheck($event, id)
+        {
+
+            this.ids=$event.target.checked?[...this.ids,...[id]]:this.ids.filter(element=> element!=id);
+            console.log(this.ids);
+
+        },
+        mutipleDelete(){
+            const data=this.ids.join("-");
+             axios.delete('/api/shop/'+data).then(response=>{
+                if(response.data.success){
+                    this.getData();
+                    this.ids=[];
+                    this.reRender=true;
+                    this.$nextTick(()=>{});
+                    this.reRender=false;
+                    this.allSelected=false;
+                }else{
+                    console.log(response.data.error);
+                }
+
+            });
+        },
+        selectAll(){
+              this.userIds = [];
+                for( var item in this.data.data)
+                {
+                    this.userIds.push(this.data.data[item].id);
+                        if(this.allSelected==true)
+                        {
+                            this.ids=[...this.ids,...[this.data.data[item].id]];
+                        }else if(this.allSelected!=true)
+                        {
+                            this.ids=this.ids.filter(element=> element!=[this.data.data[item].id]);
+                        }
+                }
+                    console.log(this.ids);
+    },
     }
 }
 </script>

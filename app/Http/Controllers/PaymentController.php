@@ -59,7 +59,7 @@ class PaymentController extends Controller
                 'amount'=>'required|numeric'
             ]);
             if($validation->fails()){
-                return response()->json(['error'=>$validation->getMessageBag()]);
+                return response()->json(['validation'=>$validation->getMessageBag()]);
             }
             $data=$request->all();
             $data['updated_by']=1;
@@ -119,7 +119,7 @@ class PaymentController extends Controller
                 'amount'=>'required|numeric'
             ]);
             if($validation->fails()){
-                return response()->json(['error'=>$validation->getMessageBag()]);
+                return response()->json(['validation'=>$validation->getMessageBag()]);
             }
             $data=$request->all();
             $data['updated_by']=1;
@@ -139,21 +139,13 @@ class PaymentController extends Controller
      * @param  \App\Models\payment  $payment
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Request $request,payment $payment)
+    public function destroy($id)
     {
         try{
-            if(is_array($request->id)){
-                if(payment::whereIn('id',$request->id)->delete()){
-                    return response()->json(['success'=>'Payment is deleted !!']);
-                }else{
-                    return response()->json(['error'=>'Payment is not deleted !!']);
-                }
+            if(payment::whereIn('id',explode('-',$id))->delete()){
+                return response()->json(['success'=>'Payment is deleted !!']);
             }else{
-                if(payment::where('id',$payment['id'])->delete()){
-                    return response()->json(['success'=>'Payment is deleted !!']);
-                }else{
-                    return response()->json(['error'=>'Payment is not deleted !!']);
-                }
+                return response()->json(['error'=>'Payment is not deleted !!']);
             }
 
         }catch(\Exception $e){

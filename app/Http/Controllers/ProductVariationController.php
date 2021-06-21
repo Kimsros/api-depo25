@@ -60,14 +60,14 @@ class ProductVariationController extends Controller
                 'qty'=>'required|integer'
             ]);
             if($validation->fails()){
-                return response()->json(['success'=>$validation->getMessageBag()]);
+                return response()->json(['validation'=>$validation->getMessageBag()]);
             }
             $data=$request->all();
             $data['updated_by']=1;
             if(product_variation::creata($data)){
                 return response()->json(['success'=>'Product variation is inserted !!']);
             }else{
-                return response()->json(['success'=>'Product variation is not inserted !!']);
+                return response()->json(['error'=>'Product variation is not inserted !!']);
             }
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
@@ -121,14 +121,14 @@ class ProductVariationController extends Controller
                 'qty'=>'required|integer'
             ]);
             if($validation->fails()){
-                return response()->json(['success'=>$validation->getMessageBag()]);
+                return response()->json(['validation'=>$validation->getMessageBag()]);
             }
             $data=$request->all();
             $data['updated_by']=1;
             if(product_variation::where('id',$product_variation['id'])->update($data)){
                 return response()->json(['success'=>'Product variation is updated !!']);
             }else{
-                return response()->json(['success'=>'Product variation is not updated !!']);
+                return response()->json(['error'=>'Product variation is not updated !!']);
             }
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
@@ -141,21 +141,13 @@ class ProductVariationController extends Controller
      * @param  \App\Models\product_variation  $product_variation
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Request $request,product_variation $product_variation)
+    public function destroy($id)
     {
         try{
-            if(is_array($request->id)){
-                if(product_variation::whereIn('id',$request->id)->delete()){
-                    return response()->json(['success'=>'Product Variation is deleted !!']);
-                }else{
-                    return response()->json(['success'=>'Product Variation is not deleted !!']);
-                }
+            if(product_variation::whereIn('id',explode('-',$id))->delete()){
+                return response()->json(['success'=>'Product Variation is deleted !!']);
             }else{
-                if(product_variation::where('id',$product_variation['id'])->delete()){
-                    return response()->json(['success'=>'Product Variation is deleted !!']);
-                }else{
-                    return response()->json(['success'=>'Product Variation is not deleted !!']);
-                }
+                return response()->json(['success'=>'Product Variation is not deleted !!']);
             }
 
         }catch(\Exception $e){

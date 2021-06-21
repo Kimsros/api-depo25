@@ -69,14 +69,14 @@ class ShopController extends Controller
                 'facebook'=>'required',
             ]);
             if($validation->fails()){
-                return response()->json(['error'=>$validation->getMessageBag()]);
+                return response()->json(['validation'=>$validation->getMessageBag()]);
             }
             $data=$request->all();
             $data['updated_by']=1;
             if(shop::create($data)){
                 return response()->json(['success'=>'Shop is inserted !!']);
             }else{
-                return response()->json(['success'=>'Shop is not inserted !!']);
+                return response()->json(['error'=>'Shop is not inserted !!']);
             }
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
@@ -139,14 +139,14 @@ class ShopController extends Controller
                 'facebook'=>'required',
             ]);
             if($validation->fails()){
-                return response()->json(['error'=>$validation->getMessageBag()]);
+                return response()->json(['validation'=>$validation->getMessageBag()]);
             }
             $data=$request->all();
             $data['updated_by']=1;
             if(shop::where('id',$shop['id'])->update($data)){
                 return response()->json(['success'=>'Shop is updated !!']);
             }else{
-                return response()->json(['success'=>'Shop is not updated !!']);
+                return response()->json(['error'=>'Shop is not updated !!']);
             }
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
@@ -159,21 +159,13 @@ class ShopController extends Controller
      * @param  \App\Models\shop  $shop
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Request $request,shop $shop)
+    public function destroy($id)
     {
         try{
-            if(is_array($request->id)){
-                if(shop::whereIn('id',$request->id)->delete()){
-                    return response()->json(['success'=>'Shop is deleted !!']);
-                }else{
-                    return response()->json(['error'=>'Shop is not deleted !!']);
-                }
+            if(shop::whereIn('id',explode('-',$id))->delete()){
+                return response()->json(['success'=>'Shop is deleted !!']);
             }else{
-                if(shop::where('id',$shop['id'])->delete()){
-                    return response()->json(['success'=>'Shop is deleted !!']);
-                }else{
-                    return response()->json(['error'=>'Shop is not deleted !!']);
-                }
+                return response()->json(['error'=>'Shop is not deleted !!']);
             }
 
         }catch(\Exception $e){

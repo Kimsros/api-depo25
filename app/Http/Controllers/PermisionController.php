@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\permision;
 use App\Models\SeachTable;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PermisionController extends Controller
 {
@@ -16,15 +17,13 @@ class PermisionController extends Controller
     public function index(Request $request)
     {
         try{
-            if(isset($request->per_page)){
-                $per_page=$request->per_page;
+            if(isset($request->role_id)){
+                $role_id=$request->role_id;
             }else{
-                $per_page=15;
+                $role_id=1;
             }
-            if(isset($request->search)){
-                return response()->json(['success'=>SeachTable::getSearch('permisions',$request->search,array(),$per_page)]);
-            }
-            return response()->json(['success'=>permision::orderBy('id','DESC')->paginate($per_page)]);
+            $permission=DB::select("SELECT top.id,top.name,(select count(*) from permisions where permission_type_id=1 and role_id=$role_id and table_of_permission_id=top.id) as _view,(select count(*) from permisions where permission_type_id=2 and role_id=$role_id and table_of_permission_id=top.id) as _add,(select count(*) from permisions where permission_type_id=3 and role_id=$role_id and table_of_permission_id=top.id) as _update,(select count(*) from permisions where permission_type_id=4 and role_id=$role_id and table_of_permission_id=top.id) as _delete FROM table_of_permissions top");
+            return response()->json(['success'=>$permission]);
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }
@@ -55,10 +54,11 @@ class PermisionController extends Controller
         try{
             $validation=\Validator($request->all(),[
                 'role_id'=>'required|integer',
-                'permission_type_id'=>'required|integer'
+                'permission_type_id'=>'required|integer',
+                'table_of_permission_id'=>'required|integer'
             ]);
             if($validation->fails()){
-                return response()->json(['success'=>$validation->getMessageBag()]);
+                return response()->json(['validation'=>$validation->getMessageBag()]);
             }
             $data=$request->all();
             $data['updated_by']=1;
@@ -117,7 +117,7 @@ class PermisionController extends Controller
                 'permission_type_id'=>'required|integer'
             ]);
             if($validation->fails()){
-                return response()->json(['success'=>$validation->getMessageBag()]);
+                return response()->json(['validation'=>$validation->getMessageBag()]);
             }
             $data=$request->all();
             $data['updated_by']=1;
@@ -137,23 +137,19 @@ class PermisionController extends Controller
      * @param  \App\Models\permision  $permision
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Request $request,permision $permision)
+    public function destroy($ids)
     {
         try{
-            if(is_array($request->id)){
-                if(permision::whereIn('id',$request->id)->delete()){
-                    return response()->json(['success'=>'Permision is deleted !!']);
-                }else{
-                    return response()->json(['success'=>'Permision is not deleted !!']);
-                }
+            $id=explode('-',$ids);
+            if(permision::where([
+                    ['table_of_permission_id',$id[0]],
+                    ['role_id',$id[1]],
+                    ['permission_type_id',$id['2']]
+                ])->delete()){
+                return response()->json(['success'=>'Permision is deleted !!']);
             }else{
-                if(permision::where('id',$permision['id'])->delete()){
-                    return response()->json(['success'=>'Permision is deleted !!']);
-                }else{
-                    return response()->json(['success'=>'Permision is not deleted !!']);
-                }
+                return response()->json(['success'=>'Permision is not deleted !!']);
             }
-
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
         }

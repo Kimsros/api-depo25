@@ -1,31 +1,30 @@
 <template>
-   <div>
-       <!-- Offcanval Overlay -->
-   <div class="offcanvas-overlay"></div>
-   <!-- Offcanval Overlay -->
+  <div>
+    <!-- Offcanval Overlay -->
+    <div class="offcanvas-overlay"></div>
+    <!-- Offcanval Overlay -->
 
-   <!-- Wrapper -->
-   <div class="wrapper">
-
-     <Header/>
+    <!-- Wrapper -->
+    <div class="wrapper">
+      <Header />
 
       <!-- Main Wrapper -->
       <div class="main-wrapper">
-         <!-- Sidebar -->
-        <Sidebar/>
-         <!-- End Sidebar -->
+        <!-- Sidebar -->
+        <Sidebar />
+        <!-- End Sidebar -->
 
-         <!-- Main Content -->
-         <div class="main-content">
-            <router-view></router-view>
-         </div>
-         <!-- End Main Content -->
+        <!-- Main Content -->
+        <div class="main-content">
+          <router-view></router-view>
+        </div>
+        <!-- End Main Content -->
       </div>
       <!-- End Main Wrapper -->
 
-        <Footer/>
-   </div>
-   </div>
+      <Footer />
+    </div>
+  </div>
 </template>
 
 <script>
@@ -45,7 +44,11 @@ export default {
     Sidebar,
   },
   mounted() {
-    setTimeout(() => {
+this.getRender();
+  },
+  methods:{
+      getRender(){
+          setTimeout(() => {
       let fileName = [
         "/backend/assets/js/jquery.min.js",
         "/backend/assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js",
@@ -64,6 +67,14 @@ export default {
       this.$nextTick(() => {});
       this.reRender = false;
     }, 50);
+      }
+  },
+  watch: {
+    $route(from, to) {
+      setTimeout(() => {
+       this.getRender();
+      }, 1000);
+    },
   },
 };
 </script>

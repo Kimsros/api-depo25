@@ -57,14 +57,14 @@ class ProductVideoTypeController extends Controller
                 'name'=>'required'
             ]);
             if($validation->fails()){
-                return response()->json(['error'=>$validation->getMessageBag()]);
+                return response()->json(['validation'=>$validation->getMessageBag()]);
             }
             $data=$request->all();
             $data['updated_by']=1;
             if(product_video_type::create($data)){
                 return response()->json(['success'=>'Product video type is inserted !!']);
             }else{
-                return response()->json(['success'=>'Product video type is not inserted !!']);
+                return response()->json(['error'=>'Product video type is not inserted !!']);
             }
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
@@ -115,14 +115,14 @@ class ProductVideoTypeController extends Controller
                 'name'=>'required'
             ]);
             if($validation->fails()){
-                return response()->json(['error'=>$validation->getMessageBag()]);
+                return response()->json(['validation'=>$validation->getMessageBag()]);
             }
             $data=$request->all();
             $data['updated_by']=1;
             if(product_video_type::where('id',$product_video_type['id'])->update($data)){
                 return response()->json(['success'=>'Product video type is updated !!']);
             }else{
-                return response()->json(['success'=>'Product video type is not updated !!']);
+                return response()->json(['error'=>'Product video type is not updated !!']);
             }
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
@@ -135,21 +135,13 @@ class ProductVideoTypeController extends Controller
      * @param  \App\Models\product_video_type  $product_video_type
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Request $request,product_video_type $product_video_type)
+    public function destroy($id)
     {
         try{
-            if(is_array($request->id)){
-                if(product_video_type::whereIn('id',$request->id)->delete()){
-                    return response()->json(['success'=>'Product video type is deleted !!']);
-                }else{
-                    return response()->json(['success'=>'Product video type is not deleted !!']);
-                }
+            if(product_video_type::whereIn('id',explode('-',$id))->delete()){
+                return response()->json(['success'=>'Product video type is deleted !!']);
             }else{
-                if(product_video_type::where('id',$product_video_type['id'])->delete()){
-                    return response()->json(['success'=>'Product video type is deleted !!']);
-                }else{
-                    return response()->json(['success'=>'Product video type is not deleted !!']);
-                }
+                return response()->json(['success'=>'Product video type is not deleted !!']);
             }
 
         }catch(\Exception $e){

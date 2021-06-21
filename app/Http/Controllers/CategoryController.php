@@ -56,7 +56,7 @@ class CategoryController extends Controller
                 'icon'=>'required'
             ]);
             if($validation->fails()){
-                return response()->json(['error'=>$validation->messages()]);
+                return response()->json(['validation'=>$validation->messages()]);
             }
             $data=$request->all();
             $data['updated_by']=1;
@@ -113,7 +113,7 @@ class CategoryController extends Controller
                 'icon'=>'required'
             ]);
             if($validation->fails()){
-                return response()->json(['erroe'=>$validation->messages()]);
+                return response()->json(['validation'=>$validation->messages()]);
             }
             $data=$request->all();
             $data['updated_by']=1;
@@ -134,21 +134,13 @@ class CategoryController extends Controller
      * @param  \App\Models\category  $category
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Request $request,category $category)
+    public function destroy($id)
     {
         try {
-            if(is_array($request->id)){
-                if(category::whereIn('id',$request->id)->delete()){
-                    return response()->json(['success'=>'Category is deleted !!']);
-                }else{
-                    return response()->json(['error'=>'Category is not deleted !!']);
-                }
+            if(category::whereIn('id',explode('-',$id))->delete()){
+                return response()->json(['success'=>'Category is deleted !!']);
             }else{
-                if(category::where('id',$category['id'])->delete()){
-                    return response()->json(['success'=>'Category is deleted !!']);
-                }else{
-                    return response()->json(['error'=>'Category is not deleted !!']);
-                }
+                return response()->json(['error'=>'Category is not deleted !!']);
             }
 
         } catch (\Exception $e) {

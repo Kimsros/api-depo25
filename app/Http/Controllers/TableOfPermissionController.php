@@ -59,14 +59,14 @@ class TableOfPermissionController extends Controller
                 'name'=>'required'
             ]);
             if($validation->fails()){
-                return response()->json(['error'=>$validation->getMessageBag()]);
+                return response()->json(['validation'=>$validation->getMessageBag()]);
             }
             $data=$request->all();
             $data['updated_by']=1;
             if(table_of_permission::create($data)){
                 return response()->json(['success'=>'Table of permission is inserted !!']);
             }else{
-                return response()->json(['success'=>'Table of permission is not inserted !!']);
+                return response()->json(['error'=>'Table of permission is not inserted !!']);
             }
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
@@ -117,14 +117,14 @@ class TableOfPermissionController extends Controller
                 'name'=>'required'
             ]);
             if($validation->fails()){
-                return response()->json(['error'=>$validation->getMessageBag()]);
+                return response()->json(['validation'=>$validation->getMessageBag()]);
             }
             $data=$request->all();
             $data['updated_by']=1;
             if(table_of_permission::where('id',$table_of_permission['id'])->update($data)){
                 return response()->json(['success'=>'Table of permission is updated !!']);
             }else{
-                return response()->json(['success'=>'Table of permission is not updated !!']);
+                return response()->json(['error'=>'Table of permission is not updated !!']);
             }
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);
@@ -137,21 +137,13 @@ class TableOfPermissionController extends Controller
      * @param  \App\Models\table_of_permission  $table_of_permission
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Request $request,table_of_permission $table_of_permission)
+    public function destroy($id)
     {
         try{
-            if(is_array($request->id)){
-                if(table_of_permission::whereIn('id',$request->id)->delete()){
-                    return response()->json(['success'=>'Table of permission is deleted !!']);
-                }else{
-                    return response()->json(['success'=>'Table of permission is not deleted !!']);
-                }
+            if(table_of_permission::whereIn('id',explode('-',$id))->delete()){
+                return response()->json(['success'=>'Table of permission is deleted !!']);
             }else{
-                if(table_of_permission::where('id',$table_of_permission['id'])->delete()){
-                    return response()->json(['success'=>'Table of permission is deleted !!']);
-                }else{
-                    return response()->json(['success'=>'Table of permission is not deleted !!']);
-                }
+                return response()->json(['success'=>'Table of permission is not deleted !!']);
             }
 
         }catch(\Exception $e){

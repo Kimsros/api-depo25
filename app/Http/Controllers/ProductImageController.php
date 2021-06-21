@@ -58,7 +58,7 @@ class ProductImageController extends Controller
                 'path'=>'required'
             ]);
             if($validation->fails()){
-                return response()->json(['error'=>$validation->getMessageBag()]);
+                return response()->json(['validation'=>$validation->getMessageBag()]);
             }
             $data=$request->all();
             $data['updated_by']=1;
@@ -117,7 +117,7 @@ class ProductImageController extends Controller
                 'path'=>'required'
             ]);
             if($validation->fails()){
-                return response()->json(['error'=>$validation->getMessageBag()]);
+                return response()->json(['validation'=>$validation->getMessageBag()]);
             }
             $data=$request->all();
             $data['updated_by']=1;
@@ -137,21 +137,13 @@ class ProductImageController extends Controller
      * @param  \App\Models\product_image  $product_image
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Request $request,product_image $product_image)
+    public function destroy($id)
     {
         try{
-            if(is_array($request->id)){
-                if(product_image::whereIn('id',$request->id)->delete()){
-                    return response()->json(['success'=>'Product image is deleted !!']);
-                }else{
-                    return response()->json(['error'=>'Product image is not deleted !!']);
-                }
+            if(product_image::whereIn('id',explode('-',$id))->delete()){
+                return response()->json(['success'=>'Product image is deleted !!']);
             }else{
-                if(product_image::where('id',$product_image['id'])->delete()){
-                    return response()->json(['success'=>'Product image is deleted !!']);
-                }else{
-                    return response()->json(['error'=>'Product image is not deleted !!']);
-                }
+                return response()->json(['error'=>'Product image is not deleted !!']);
             }
 
         }catch(\Exception $e){

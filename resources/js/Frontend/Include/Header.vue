@@ -30,10 +30,10 @@
                       <span class="divider"></span>
                       <a href="/contact" class="contact d-lg-show"><i class="d-icon-map"></i>Contact</a>
                       <a href="#" class="help d-lg-show"><i class="d-icon-info"></i> Need Help</a>
-                      <a class="login-link" href="ajax/login.html" data-toggle="login-modal"><i
+                      <a class="login-link" href="/login" data-toggle="login-modal"><i
                               class="d-icon-user"></i>Sign in</a>
                       <span class="delimiter">/</span>
-                      <a class="register-link ml-0" href="ajax/login.html" data-toggle="login-modal">Register</a>
+                      <a class="register-link ml-0" href="/register" data-toggle="login-modal">Register</a>
                       <!-- End of Login -->
                   </div>
               </div>
@@ -46,7 +46,7 @@
                           <i class="d-icon-bars2"></i>
                       </a>
                       <a href="/" class="logo">
-                          <img src="/frontend/images/logo.png" alt="logo" width="153" height="44" />
+                          <img src="/backend/assets/img/depot25.png" alt="logo" width="153" height="44" />
                       </a>
                       <!-- End Logo -->
 

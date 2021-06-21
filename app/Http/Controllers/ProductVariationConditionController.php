@@ -60,7 +60,7 @@ class ProductVariationConditionController extends Controller
                 'rice_in_unit'=>'required|numeric',
             ]);
             if($validation->fails()){
-                return response()->json(['error'=>$validation->getMessageBag()]);
+                return response()->json(['validation'=>$validation->getMessageBag()]);
             }
             $data=$request->all();
             $data['updated_by']=1;
@@ -121,7 +121,7 @@ class ProductVariationConditionController extends Controller
                 'rice_in_unit'=>'required|numeric',
             ]);
             if($validation->fails()){
-                return response()->json(['error'=>$validation->getMessageBag()]);
+                return response()->json(['validation'=>$validation->getMessageBag()]);
             }
             $data=$request->all();
             $data['updated_by']=1;
@@ -141,21 +141,13 @@ class ProductVariationConditionController extends Controller
      * @param  \App\Models\product_variation_condition  $product_variation_condition
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Request $request,product_variation_condition $product_variation_condition)
+    public function destroy($id)
     {
         try{
-            if(is_array($request->id)){
-                if(product_variation_condition::whereIn('id',$request->id)->delete()){
-                    return response()->json(['success'=>'Product variation codition is deleted !!']);
-                }else{
-                    return response()->json(['success'=>'Product variation codition is not deleted !!']);
-                }
+            if(product_variation_condition::whereIn('id',explode('-',$id))->delete()){
+                return response()->json(['success'=>'Product variation codition is deleted !!']);
             }else{
-                if(product_variation_condition::where('id',$product_variation_condition['id'])->delete()){
-                    return response()->json(['success'=>'Product variation codition is deleted !!']);
-                }else{
-                    return response()->json(['success'=>'Product variation codition is not deleted !!']);
-                }
+                return response()->json(['success'=>'Product variation codition is not deleted !!']);
             }
 
         }catch(\Exception $e){

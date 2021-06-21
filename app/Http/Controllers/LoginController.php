@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 
 use App\Http\Controllers\Controller;
@@ -10,11 +10,11 @@ use Socialite;
 use Auth;
 use Hash;
 use Str;
-use App\User;
+use App\Models\User;
 use App\Mail\ResetPassword;
 use App\Mail\Verify;
 use App\Mail\LoginInformation;
-use App\VerifyUser;
+use App\Models\VerifyUser;
 use Illuminate\Support\Carbon;
 
 class LoginController extends Controller
@@ -80,30 +80,24 @@ class LoginController extends Controller
         \Mail::to($user->email)->send(new Verify($user));
         return redirect()->intended('user-verification');
     }
+    
     public function login(Request $request){
         $this->validate($request,[
             'email'=>'required|email',
             'password'=>'required'
         ]);
         $credentials = $request->only('email', 'password','remember_token');
-        dd($credentials);exit();
+        
         if (Auth::attempt($credentials)) {
-            // return Auth::user();
-            return response()->json([
-                'message' => 'The given data was invalid.',
-                'errors' => [
-                    'password' => [
-                        'Invalid credentials'
-                    ],
-                ]
-            ], 422);
+            return Auth::user();
         }
         // return false;
         $user = User::where('email', $request->email)->first();
-        $authToken = $user->createToken('auth-token')->plainTextToken;
-        dd($authToken);
+        $authToken = $user->createToken('auth_token')->plainTextToken;
+        
         return response()->json([
             'access_token' => $authToken,
+            'token_type'   => 'Bearer'
         ]);
     }
     public function logout(){
@@ -114,35 +108,41 @@ class LoginController extends Controller
         $this->validate($request,[
             "name"=>"required",
             "email"=>"required|email|unique:users",
-            "password"=>"required|min:8|confirmed",
+            "password"=>"required|confirmed|min:8",
         ]);
         
         $user = new User();
-        $user->name         = $request->name;
-        $user->email        = $request->email;
-        $user->password     = Hash::make($request->password);
-        $user->first_name   = $request->first_name;
-        $user->last_name    = $request->last_name;
-        $user->telephone    = $request->telephone;
-        $user->role_id      = 1;
-        $user->pricing_id   = 1;
-        $user->bank_id      = 1;
-        $user->status       = 1;
-        $user->updated_by   = 1;
+        $user->name                     = $request->name;
+        $user->email                    = $request->email;
+        $user->password                 = Hash::make($request->password);
+        $user->first_name               = $request->first_name;
+        $user->last_name                = $request->last_name;
+        $user->telephone                = $request->telephone;
+        $user->role_id                  = 1;
+        $user->pricing_id               = 1;
+        $user->bank_id                  = 1;
+        $user->status                   = 1;
+        $user->updated_by               = 1;
         $user->save();
-        $verifyUser = VerifyUser::create([
-            'user_id' => $user->id,
-            'token' => sha1(time())
+        // $verifyUser = VerifyUser::create([
+        //     'user_id' => $user->id,
+        //     'token' => sha1(time())
+        // ]);
+        $authToken = $user->createToken('auth_token')->plainTextToken;
+        return response()->json([
+            'access_token' => $authToken,
+            'token_type'   => 'Bearer'
         ]);
+        
         \Mail::to($user->email)->send(new Verify($user));
         return redirect()->intended('user-verification');
     }
     public function reset_password(Request $request){
         
         $data=User::where('id',$request->user_id)->update(
-        [
-            "password"=>Hash::make($request->password)
-        ]
+            [
+                "password"=>Hash::make($request->password)
+            ]
         );
     
         $verifyUser = VerifyUser::where('token',$request->token)->delete();

@@ -57,7 +57,7 @@ class DeliveryLocationController extends Controller
                 'name'=>'required'
             ]);
             if($validation->fails()){
-                return response()->json(['error'=>$validation->getMessageBag()]);
+                return response()->json(['validation'=>$validation->getMessageBag()]);
             }
             $data=$request->all();
             $data['updated_by']=1;
@@ -115,7 +115,7 @@ class DeliveryLocationController extends Controller
                 'name'=>'required'
             ]);
             if($validation->fails()){
-                return response()->json(['error'=>$validation->getMessageBag()]);
+                return response()->json(['validation'=>$validation->getMessageBag()]);
             }
             $data=$request->all();
             $data['updated_by']=1;
@@ -135,21 +135,13 @@ class DeliveryLocationController extends Controller
      * @param  \App\Models\delivery_location  $delivery_location
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Request $request,delivery_location $delivery_location)
+    public function destroy($id)
     {
         try{
-            if(is_array($request->id)){
-                if(delivery_location::whereIn('id',$request->id)->delete()){
-                    return response()->json(['success'=>'Delivery location is deleted !!']);
-                }else{
-                    return response()->json(['error'=>'Delivery location is not deleted !!']);
-                }
+            if(delivery_location::whereIn('id',explode('-',$id))->delete()){
+                return response()->json(['success'=>'Delivery location is deleted !!']);
             }else{
-                if(delivery_location::where('id',$delivery_location['id'])->delete()){
-                    return response()->json(['success'=>'Delivery location is deleted !!']);
-                }else{
-                    return response()->json(['error'=>'Delivery location is not deleted !!']);
-                }
+                return response()->json(['error'=>'Delivery location is not deleted !!']);
             }
 
         }catch(\Exception $e){

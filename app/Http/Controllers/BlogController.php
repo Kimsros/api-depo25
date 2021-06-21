@@ -71,7 +71,7 @@ class BlogController extends Controller
                 'content'=>'required',
             ]);
             if($validation->fails()){
-                return response()->json(['error'=>$validation->getMessageBag()]);
+                return response()->json(['validation'=>$validation->getMessageBag()]);
             }
             $data=$request->all();
             $data['slug']=Str::slug($request->title,'-');
@@ -135,7 +135,7 @@ class BlogController extends Controller
                 'content'=>'required',
             ]);
             if($validation->fails()){
-                return response()->json(['error'=>$validation->getMessageBag()]);
+                return response()->json(['validation'=>$validation->getMessageBag()]);
             }
             $data=$request->all();
             $data['slug']=Str::slug($request->title,'-');
@@ -156,24 +156,14 @@ class BlogController extends Controller
      * @param  \App\Models\product  $product
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Request $request,blog $blog)
+    public function destroy($id)
     {
         return($blog);
         try{
-            if(is_array($request->id)){
-                dd("aa");
-                if(blog::whereIn('id',$request->id)->delete()){
-                    return response()->json(['success'=>'Blog is deleted !!']);
-                }else{
-                    return response()->json(['error'=>'Blog is not deleted !!']);
-                }
+            if(blog::whereIn('id',explode('-',$id))->delete()){
+                return response()->json(['success'=>'Blog is deleted !!']);
             }else{
-                dd("num");
-                if(blog::where('id',$blog['id'])->delete()){
-                    return response()->json(['success'=>'Blog is deleted !!']);
-                }else{
-                    return response()->json(['error'=>'Blog is not deleted !!']);
-                }
+                return response()->json(['error'=>'Blog is not deleted !!']);
             }
         }catch(\Exception $e){
             return response()->json(['error'=>$e->getMessage()]);

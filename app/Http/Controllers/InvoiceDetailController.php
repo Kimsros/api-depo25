@@ -62,7 +62,7 @@ class InvoiceDetailController extends Controller
                 'price'=>'required|numeric'
             ]);
             if($validation->fails()){
-                return response()->json(['error'=>$validation->getMessageBag()]);
+                return response()->json(['validation'=>$validation->getMessageBag()]);
             }
             $data=$request->all();
             $data['updated_by']=1;
@@ -125,7 +125,7 @@ class InvoiceDetailController extends Controller
                 'price'=>'required|numeric'
             ]);
             if($validation->fails()){
-                return response()->json(['error'=>$validation->getMessageBag()]);
+                return response()->json(['validation'=>$validation->getMessageBag()]);
             }
             $data=$request->all();
             $data['updated_by']=1;
@@ -145,21 +145,13 @@ class InvoiceDetailController extends Controller
      * @param  \App\Models\invoice_detail  $invoice_detail
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Request $request,invoice_detail $invoice_detail)
+    public function destroy($id)
     {
         try{
-            if(is_array($request->id)){
-                if(invoice_detail::whereIn('id',$request->id)->delete()){
-                    return response()->json(['success'=>'Invoice detail is deleted !!']);
-                }else{
-                    return response()->json(['error'=>'Invoice detail is not deleted !!']);
-                }
+            if(invoice_detail::whereIn('id',explode('-',$id))->delete()){
+                return response()->json(['success'=>'Invoice detail is deleted !!']);
             }else{
-                if(invoice_detail::where('id',$invoice_detail['id'])->delete()){
-                    return response()->json(['success'=>'Invoice detail is deleted !!']);
-                }else{
-                    return response()->json(['error'=>'Invoice detail is not deleted !!']);
-                }
+                return response()->json(['error'=>'Invoice detail is not deleted !!']);
             }
 
         }catch(\Exception $e){
