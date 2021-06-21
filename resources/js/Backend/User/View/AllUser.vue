@@ -38,7 +38,7 @@
 
             <!-- Delete Mail -->
             <div class="delete_mail">
-                <a href="#"><img src="/backend/assets/img/svg/delete.svg" alt="" class="svg"></a>
+                <a href="javascript:;" @click="MultiDeleteUser()"><img src="/backend/assets/img/svg/delete.svg" alt="" class="svg"></a>
             </div>
 
             <!-- End Delete Mail -->
@@ -77,7 +77,7 @@
                         <th>
                             <!-- Custom Checkbox -->
                             <label class="custom-checkbox">
-                                <input type="checkbox">
+                                <input type="checkbox" v-model="check_all" @change="CheckAllUser()">
                                 <span class="checkmark"></span>
                             </label>
                             <!-- End Custom Checkbox -->
@@ -103,7 +103,7 @@
                         <td>
                             <!-- Custom Checkbox -->
                             <label class="custom-checkbox">
-                                <input type="checkbox">
+                                <input type="checkbox" @change="checkSingleUser($event,item.id)">
                                 <span class="checkmark"></span>
                             </label>
                             <!-- End Custom Checkbox -->
@@ -167,6 +167,8 @@ export default {
     data(){
         return{
             allUserList:[],
+            check_all:false,
+            ids:[]
         }
     },
     created(){
@@ -223,6 +225,57 @@ export default {
                     });
                 }
             });
+        },
+        CheckAllUser(){
+            if(this.check_all){
+                this.allUserList.data.forEach(element => {
+                    this.ids.push(element.id);
+                });
+            }else{
+                this.ids=[];
+            }
+            console.log(this.ids);
+        },
+        checkSingleUser($event,id){
+             this.ids = $event.target.checked
+        ? [...this.ids, ...[id]]
+        : this.ids.filter((element) => element != id);
+        console.log(this.ids);
+        },
+        MultiDeleteUser(){
+            this.$swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            background:'#060818',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    var id_delete=this.ids.join('-');
+                    axios.delete('/api/user/'+id_delete).then(response=>{
+                        if(response.data.success){
+                            this.$swal.fire(
+                                {
+                                    toast:true,
+                                    position:'top-end',
+                                    title: response.data.success,
+                                    icon: 'success',
+                                    showConfirmButton:false,
+                                    timer:3000,
+                                    background:'#060818',
+                                    titleColor:"#FFF"
+                                }
+                            );
+                            this.getAllUserList();
+                            this.check_all=false;
+                        }
+                    });
+                }
+            });
+
         }
     }
 }

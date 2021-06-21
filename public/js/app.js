@@ -1888,7 +1888,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 
 
@@ -1905,26 +1904,40 @@ __webpack_require__.r(__webpack_exports__);
     Sidebar: _Include_Sidebar_vue__WEBPACK_IMPORTED_MODULE_2__.default
   },
   mounted: function mounted() {
-    var _this = this;
+    this.getRender();
+  },
+  methods: {
+    getRender: function getRender() {
+      var _this = this;
 
-    setTimeout(function () {
-      var fileName = ["/backend/assets/js/jquery.min.js", "/backend/assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js", "/backend/assets/js/script.js"];
-      fileName.forEach(function (element) {
-        var el = document.querySelector('script[src="' + element + '"]');
+      setTimeout(function () {
+        var fileName = ["/backend/assets/js/jquery.min.js", "/backend/assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js", "/backend/assets/js/script.js"];
+        fileName.forEach(function (element) {
+          var el = document.querySelector('script[src="' + element + '"]');
 
-        if (!el) {
-          var scripts = document.createElement("script");
-          scripts.src = element;
-          scripts.type = "text/javascript";
-          document.body.appendChild(scripts);
-        }
-      });
-      _this.reRender = true;
+          if (!el) {
+            var scripts = document.createElement("script");
+            scripts.src = element;
+            scripts.type = "text/javascript";
+            document.body.appendChild(scripts);
+          }
+        });
+        _this.reRender = true;
 
-      _this.$nextTick(function () {});
+        _this.$nextTick(function () {});
 
-      _this.reRender = false;
-    }, 50);
+        _this.reRender = false;
+      }, 50);
+    }
+  },
+  watch: {
+    $route: function $route(from, to) {
+      var _this2 = this;
+
+      setTimeout(function () {
+        _this2.getRender();
+      }, 1000);
+    }
   }
 });
 
@@ -7435,6 +7448,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
 //
 //
 //
@@ -7602,7 +7627,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
-      allUserList: []
+      allUserList: [],
+      check_all: false,
+      ids: []
     };
   },
   created: function created() {
@@ -7658,6 +7685,62 @@ __webpack_require__.r(__webpack_exports__);
               });
 
               _this2.getAllUserList();
+            }
+          });
+        }
+      });
+    },
+    CheckAllUser: function CheckAllUser() {
+      var _this3 = this;
+
+      if (this.check_all) {
+        this.allUserList.data.forEach(function (element) {
+          _this3.ids.push(element.id);
+        });
+      } else {
+        this.ids = [];
+      }
+
+      console.log(this.ids);
+    },
+    checkSingleUser: function checkSingleUser($event, id) {
+      this.ids = $event.target.checked ? [].concat(_toConsumableArray(this.ids), [id]) : this.ids.filter(function (element) {
+        return element != id;
+      });
+      console.log(this.ids);
+    },
+    MultiDeleteUser: function MultiDeleteUser() {
+      var _this4 = this;
+
+      this.$swal.fire({
+        title: 'Are you sure?',
+        text: "You won't be able to revert this!",
+        icon: 'warning',
+        background: '#060818',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!'
+      }).then(function (result) {
+        if (result.isConfirmed) {
+          var id_delete = _this4.ids.join('-');
+
+          axios["delete"]('/api/user/' + id_delete).then(function (response) {
+            if (response.data.success) {
+              _this4.$swal.fire({
+                toast: true,
+                position: 'top-end',
+                title: response.data.success,
+                icon: 'success',
+                showConfirmButton: false,
+                timer: 3000,
+                background: '#060818',
+                titleColor: "#FFF"
+              });
+
+              _this4.getAllUserList();
+
+              _this4.check_all = false;
             }
           });
         }
@@ -72226,24 +72309,153 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "card bg-transparent" }, [
-    _vm._m(0),
+    _c(
+      "div",
+      {
+        staticClass:
+          "contact-header d-flex align-items-sm-center media flex-column flex-sm-row card_color-bg mb-30"
+      },
+      [
+        _vm._m(0),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass:
+              "contact-header-right d-flex align-items-center justify-content-end mt-3 mt-sm-0"
+          },
+          [
+            _vm._m(1),
+            _vm._v(" "),
+            _vm._m(2),
+            _vm._v(" "),
+            _c("div", { staticClass: "delete_mail" }, [
+              _c(
+                "a",
+                {
+                  attrs: { href: "javascript:;" },
+                  on: {
+                    click: function($event) {
+                      return _vm.MultiDeleteUser()
+                    }
+                  }
+                },
+                [
+                  _c("img", {
+                    staticClass: "svg",
+                    attrs: {
+                      src: "/backend/assets/img/svg/delete.svg",
+                      alt: ""
+                    }
+                  })
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _vm._m(3)
+          ]
+        )
+      ]
+    ),
     _vm._v(" "),
     _c("div", { staticClass: "table-responsive" }, [
       _c(
         "table",
         { staticClass: "contact-list-table text-nowrap card_color-bg" },
         [
-          _vm._m(1),
+          _c("thead", [
+            _c("tr", [
+              _c("th", [
+                _c("label", { staticClass: "custom-checkbox" }, [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.check_all,
+                        expression: "check_all"
+                      }
+                    ],
+                    attrs: { type: "checkbox" },
+                    domProps: {
+                      checked: Array.isArray(_vm.check_all)
+                        ? _vm._i(_vm.check_all, null) > -1
+                        : _vm.check_all
+                    },
+                    on: {
+                      change: [
+                        function($event) {
+                          var $$a = _vm.check_all,
+                            $$el = $event.target,
+                            $$c = $$el.checked ? true : false
+                          if (Array.isArray($$a)) {
+                            var $$v = null,
+                              $$i = _vm._i($$a, $$v)
+                            if ($$el.checked) {
+                              $$i < 0 && (_vm.check_all = $$a.concat([$$v]))
+                            } else {
+                              $$i > -1 &&
+                                (_vm.check_all = $$a
+                                  .slice(0, $$i)
+                                  .concat($$a.slice($$i + 1)))
+                            }
+                          } else {
+                            _vm.check_all = $$c
+                          }
+                        },
+                        function($event) {
+                          return _vm.CheckAllUser()
+                        }
+                      ]
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "checkmark" })
+                ]),
+                _vm._v(" "),
+                _vm._m(4)
+              ]),
+              _vm._v(" "),
+              _vm._m(5),
+              _vm._v(" "),
+              _c("th", [_vm._v("Email")]),
+              _vm._v(" "),
+              _c("th", [_vm._v("Phone")]),
+              _vm._v(" "),
+              _c("th", [_vm._v("Role")]),
+              _vm._v(" "),
+              _vm._m(6),
+              _vm._v(" "),
+              _vm._m(7),
+              _vm._v(" "),
+              _c("th", [_vm._v("Actions")])
+            ])
+          ]),
           _vm._v(" "),
           _c(
             "tbody",
             _vm._l(_vm.allUserList.data, function(item, idx) {
               return _c("tr", { key: idx }, [
-                _vm._m(2, true),
+                _c("td", [
+                  _c("label", { staticClass: "custom-checkbox" }, [
+                    _c("input", {
+                      attrs: { type: "checkbox" },
+                      on: {
+                        change: function($event) {
+                          return _vm.checkSingleUser($event, item.id)
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "checkmark" })
+                  ]),
+                  _vm._v(" "),
+                  _vm._m(8, true)
+                ]),
                 _vm._v(" "),
                 _c("td", [
                   _c("div", { staticClass: "d-flex align-items-center" }, [
-                    _vm._m(3, true),
+                    _vm._m(9, true),
                     _vm._v(" "),
                     _c("div", { staticClass: "name bold" }, [
                       _vm._v(
@@ -72362,166 +72574,52 @@ var staticRenderFns = [
       "div",
       {
         staticClass:
-          "contact-header d-flex align-items-sm-center media flex-column flex-sm-row card_color-bg mb-30"
+          "contact-header-left media-body d-flex align-items-center mr-4"
       },
       [
-        _c(
-          "div",
-          {
-            staticClass:
-              "contact-header-left media-body d-flex align-items-center mr-4"
-          },
-          [
-            _c("div", { staticClass: "add-new-contact mr-20" }, [
-              _c(
-                "a",
-                {
-                  staticClass: "btn-circle",
-                  attrs: {
-                    href: "#",
-                    "data-toggle": "modal",
-                    "data-target": "#contactAddModal"
-                  }
-                },
-                [
-                  _c("img", {
-                    staticClass: "svg",
-                    attrs: {
-                      src: "/backend/backend/assets/img/svg/plus_white.svg",
-                      alt: ""
-                    }
-                  })
-                ]
-              )
-            ]),
-            _vm._v(" "),
-            _c(
-              "form",
-              { staticClass: "search-form flex-grow", attrs: { action: "#" } },
-              [
-                _c("div", { staticClass: "theme-input-group style--two" }, [
-                  _c("input", {
-                    staticClass: "theme-input-style",
-                    attrs: { type: "text", placeholder: "Search Here" }
-                  }),
-                  _vm._v(" "),
-                  _c("button", { attrs: { type: "submit" } }, [
-                    _c("img", {
-                      staticClass: "svg",
-                      attrs: {
-                        src: "/backend/assets/img/svg/search-icon.svg",
-                        alt: ""
-                      }
-                    })
-                  ])
-                ])
-              ]
-            )
-          ]
-        ),
+        _c("div", { staticClass: "add-new-contact mr-20" }, [
+          _c(
+            "a",
+            {
+              staticClass: "btn-circle",
+              attrs: {
+                href: "#",
+                "data-toggle": "modal",
+                "data-target": "#contactAddModal"
+              }
+            },
+            [
+              _c("img", {
+                staticClass: "svg",
+                attrs: {
+                  src: "/backend/backend/assets/img/svg/plus_white.svg",
+                  alt: ""
+                }
+              })
+            ]
+          )
+        ]),
         _vm._v(" "),
         _c(
-          "div",
-          {
-            staticClass:
-              "contact-header-right d-flex align-items-center justify-content-end mt-3 mt-sm-0"
-          },
+          "form",
+          { staticClass: "search-form flex-grow", attrs: { action: "#" } },
           [
-            _c("div", { staticClass: "grid" }, [
-              _c("a", { attrs: { href: "contact-grid.html" } }, [
+            _c("div", { staticClass: "theme-input-group style--two" }, [
+              _c("input", {
+                staticClass: "theme-input-style",
+                attrs: { type: "text", placeholder: "Search Here" }
+              }),
+              _vm._v(" "),
+              _c("button", { attrs: { type: "submit" } }, [
                 _c("img", {
                   staticClass: "svg",
                   attrs: {
-                    src: "/backend/assets/img/svg/grid-icon.svg",
+                    src: "/backend/assets/img/svg/search-icon.svg",
                     alt: ""
                   }
                 })
               ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "star" }, [
-              _c("a", { attrs: { href: "#" } }, [
-                _c("img", {
-                  staticClass: "svg",
-                  attrs: { src: "/backend/assets/img/svg/star.svg", alt: "" }
-                })
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "delete_mail" }, [
-              _c("a", { attrs: { href: "#" } }, [
-                _c("img", {
-                  staticClass: "svg",
-                  attrs: { src: "/backend/assets/img/svg/delete.svg", alt: "" }
-                })
-              ])
-            ]),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass:
-                  "pagination style--two d-flex flex-column align-items-center ml-n2"
-              },
-              [
-                _c(
-                  "ul",
-                  {
-                    staticClass: "list-inline d-inline-flex align-items-center"
-                  },
-                  [
-                    _c("li", [
-                      _c("a", { attrs: { href: "#" } }, [
-                        _c("img", {
-                          staticClass: "svg",
-                          attrs: {
-                            src: "/backend/assets/img/svg/left-angle.svg",
-                            alt: ""
-                          }
-                        })
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _c(
-                        "a",
-                        { staticClass: "current", attrs: { href: "#" } },
-                        [
-                          _c("img", {
-                            staticClass: "svg",
-                            attrs: {
-                              src: "/backend/assets/img/svg/right-angle.svg",
-                              alt: ""
-                            }
-                          })
-                        ]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _c(
-                        "a",
-                        { staticClass: "current", attrs: { href: "add_user" } },
-                        [
-                          _c("div", { staticClass: "form-row" }, [
-                            _c("div", { staticClass: "col-12 text-right" }, [
-                              _c(
-                                "button",
-                                {
-                                  staticClass: "btn long",
-                                  attrs: { type: "submit" }
-                                },
-                                [_vm._v("Add More")]
-                              )
-                            ])
-                          ])
-                        ]
-                      )
-                    ])
-                  ]
-                )
-              ]
-            )
+            ])
           ]
         )
       ]
@@ -72531,65 +72629,12 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("thead", [
-      _c("tr", [
-        _c("th", [
-          _c("label", { staticClass: "custom-checkbox" }, [
-            _c("input", { attrs: { type: "checkbox" } }),
-            _vm._v(" "),
-            _c("span", { staticClass: "checkmark" })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "star" }, [
-            _c("a", { attrs: { href: "#" } }, [
-              _c("img", {
-                staticClass: "svg",
-                attrs: { src: "/backend/assets/img/svg/star.svg", alt: "" }
-              })
-            ])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("th", { staticClass: "text-center" }, [
-          _vm._v("Name "),
-          _c("img", {
-            staticClass: "svg",
-            attrs: {
-              src: "/backend/assets/img/svg/table-down-arrow.svg",
-              alt: ""
-            }
-          })
-        ]),
-        _vm._v(" "),
-        _c("th", [_vm._v("Email")]),
-        _vm._v(" "),
-        _c("th", [_vm._v("Phone")]),
-        _vm._v(" "),
-        _c("th", [_vm._v("Role")]),
-        _vm._v(" "),
-        _c("th", [
-          _vm._v("Pricing "),
-          _c("img", {
-            staticClass: "svg",
-            attrs: {
-              src: "/backend/assets/img/svg/table-down-arrow.svg",
-              alt: ""
-            }
-          })
-        ]),
-        _vm._v(" "),
-        _c("th", [
-          _vm._v("Bank"),
-          _c("img", {
-            staticClass: "svg",
-            attrs: {
-              src: "/backend/assets/img/svg/table-down-arrow.svg",
-              alt: ""
-            }
-          })
-        ]),
-        _vm._v(" "),
-        _c("th", [_vm._v("Actions")])
+    return _c("div", { staticClass: "grid" }, [
+      _c("a", { attrs: { href: "contact-grid.html" } }, [
+        _c("img", {
+          staticClass: "svg",
+          attrs: { src: "/backend/assets/img/svg/grid-icon.svg", alt: "" }
+        })
       ])
     ])
   },
@@ -72597,20 +72642,131 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("td", [
-      _c("label", { staticClass: "custom-checkbox" }, [
-        _c("input", { attrs: { type: "checkbox" } }),
-        _vm._v(" "),
-        _c("span", { staticClass: "checkmark" })
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "star" }, [
-        _c("a", { attrs: { href: "#" } }, [
-          _c("img", {
-            staticClass: "svg",
-            attrs: { src: "/backend/assets/img/svg/star.svg", alt: "" }
-          })
-        ])
+    return _c("div", { staticClass: "star" }, [
+      _c("a", { attrs: { href: "#" } }, [
+        _c("img", {
+          staticClass: "svg",
+          attrs: { src: "/backend/assets/img/svg/star.svg", alt: "" }
+        })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass:
+          "pagination style--two d-flex flex-column align-items-center ml-n2"
+      },
+      [
+        _c(
+          "ul",
+          { staticClass: "list-inline d-inline-flex align-items-center" },
+          [
+            _c("li", [
+              _c("a", { attrs: { href: "#" } }, [
+                _c("img", {
+                  staticClass: "svg",
+                  attrs: {
+                    src: "/backend/assets/img/svg/left-angle.svg",
+                    alt: ""
+                  }
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c("a", { staticClass: "current", attrs: { href: "#" } }, [
+                _c("img", {
+                  staticClass: "svg",
+                  attrs: {
+                    src: "/backend/assets/img/svg/right-angle.svg",
+                    alt: ""
+                  }
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c("a", { staticClass: "current", attrs: { href: "add_user" } }, [
+                _c("div", { staticClass: "form-row" }, [
+                  _c("div", { staticClass: "col-12 text-right" }, [
+                    _c(
+                      "button",
+                      { staticClass: "btn long", attrs: { type: "submit" } },
+                      [_vm._v("Add More")]
+                    )
+                  ])
+                ])
+              ])
+            ])
+          ]
+        )
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "star" }, [
+      _c("a", { attrs: { href: "#" } }, [
+        _c("img", {
+          staticClass: "svg",
+          attrs: { src: "/backend/assets/img/svg/star.svg", alt: "" }
+        })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("th", { staticClass: "text-center" }, [
+      _vm._v("Name "),
+      _c("img", {
+        staticClass: "svg",
+        attrs: { src: "/backend/assets/img/svg/table-down-arrow.svg", alt: "" }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("th", [
+      _vm._v("Pricing "),
+      _c("img", {
+        staticClass: "svg",
+        attrs: { src: "/backend/assets/img/svg/table-down-arrow.svg", alt: "" }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("th", [
+      _vm._v("Bank"),
+      _c("img", {
+        staticClass: "svg",
+        attrs: { src: "/backend/assets/img/svg/table-down-arrow.svg", alt: "" }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "star" }, [
+      _c("a", { attrs: { href: "#" } }, [
+        _c("img", {
+          staticClass: "svg",
+          attrs: { src: "/backend/assets/img/svg/star.svg", alt: "" }
+        })
       ])
     ])
   },
